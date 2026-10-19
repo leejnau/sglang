@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "batch_id": "20261019T221447Z-h100",
+  "status": "preregistered",
+  "objective": "Compare default, v1 and v2 candidate selection through the SGLang startup wrapper with existing v1 persistence; separate selection quality from public eager/graph execution costs.",
+  "harness_baseline_commit": "7046babdd95ec95800b087e413ca4384733197f6",
+  "source_sha256": {
+    "test/manual/kernels/bench_flashinfer_autotune_selection.py": "b27a09d12ae2888f83a616368ff92bd5493888cf748ea6b07068f81d1e8d3c3b",
+    "test/manual/kernels/flashinfer_autotune_selection_worker.py": "7f8932844496f873ba3d7044a05662deab57dba139b01b8cc6b5d528c1d4ec69",
+    "python/sglang/srt/model_executor/runner/flashinfer_autotune.py": "64deff581665bd04830535baccfdfbdfa72794d919bc462fc469a4c42bdd68f5"
+  },
+  "flashinfer_tuner_sha256": "e222f35f8b5a59a99a45fad627a79db8fc45fadc52b667e63b70c0968509109d",
+  "source_commit_rule": "Execute the clean commit containing this plan; record that exact commit in the runtime manifest. Python harness/wrapper hashes must equal the audited baseline above.",
+  "container_image": "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
+  "expected_environment": {
+    "architecture": "amd64",
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "capability": [
+      9,
+      0
+    ],
+    "torch": "2.14.1+cu130",
+    "torch_cuda": "13.0",
+    "flashinfer": "0.7.2",
+    "gpu_count": 1,
+    "exclusive_node": true,
+    "clock_lock": false,
+    "driver": "580.159.04",
+    "physical_gpu_uuid": "bc979292-ef6c-5590-af89-44b70faefecc"
+  },
+  "case_order": [
+    "m128",
+    "m144"
+  ],
+  "cases": [
+    {
+      "name": "m128",
+      "m": 128,
+      "n": 1024,
+      "k": 1024
+    },
+    {
+      "name": "m144",
+      "m": 144,
+      "n": 1024,
+      "k": 1024
+    }
+  ],
+  "protocol": {
+    "trials": 3,
+    "seed": 17,
+    "trial_seeds": [
+      17,
+      18,
+      19
+    ],
+    "samples": 15,
+    "requested_iterations": 20,
+    "warmup_ms": 500,
+    "min_sample_ms": 20,
+    "max_iterations": 65536,
+    "worker_timeout_seconds": 600,
+    "oracle": true,
+    "arms": [
+      "default",
+      "v1",
+      "v2"
+    ],
+    "phases": [
+      "cold",
+      "warm"
+    ],
+    "workers_per_case": 18,
+    "expected_total_workers": 36,
+    "order": "seeded shuffle, rotate arm order across trials; cold then warm per arm; cases run sequentially",
+    "tactics": "isolated per case/trial/arm; cold and warm share only that tactic cache",
+    "compilation_caches": "shared within this batch; initial module setup occurs outside startup timing",
+    "measurement_policy": "unspecified; operation defaults retained"
+  },
+  "acceptance": [
+    "All worker exits and coordinator validation succeed.",
+    "Numerical eager and changed-input/restored-input CUDA Graph replay checks pass.",
+    "Cold v1/v2 enter actual profiling; v2 successfully profiles default -1 at the runtime bucket; v1 does not profile -1.",
+    "Default, warm and post-startup paths never profile.",
+    "Tuned natural winners are true bare/capture cache hits and survive fresh-process warm reuse with unchanged cache hashes.",
+    "Runtime tactic ordinals are eligible; forced-memory sweep confirms each intended selection.",
+    "Source, runtime/image, device, timer and measurement identities match throughout the batch.",
+    "All independent timings meet warmup/calibration protocol and raw-normalized consistency checks."
+  ],
+  "analysis_rules": [
+    "Use three paired trial ratios of worker medians; 15 samples within a worker are repeated observations, not 15 independent trials.",
+    "Keep shapes, cold/warm phases and eager/replay modes separate.",
+    "Compare natural v2/v1/default timings, startup instrumentation costs, winner frequencies and raw trial dispersion.",
+    "Group startup profiles by actual runtime input M; compare profile minima with selected candidates and independent same-worker forced-memory rankings.",
+    "Forced-memory selected-tactic diagnostic ratios use the forced measurement of that tactic divided by the best forced candidate under the same execution mode; do not mix natural file-loaded cost into that ranking.",
+    "Retain failures, retries, non-winning defaults, neutral results and regressions; no silent exclusions.",
+    "Investigate differences before claiming improvement; n=3 is exploratory and does not establish significance or model-serving performance."
+  ],
+  "limitations": [
+    "Single GPU, one dense FP8 cuBLAS operation with unit dequantization scales and reused/hot buffers; no full model, TP/EP, managed-store or MegaMoE comparison.",
+    "Tactic ordinals are shape-specific heuristic positions, not stable kernel identifiers; -1 may execute the same device algorithm as ordinal0.",
+    "The optional sweep forces memory-cache hits, including warm workers; natural warm lookup may use loaded-file configs. It is a diagnostic rather than an exact warm-path optimality oracle.",
+    "M144 tunes and serves144 and normalizes to bucket256; this batch does not test tuning256 then serving144.",
+    "Wall and event spans can include host submission gaps. Startup timing is instrumented wrapper tuning/warmup, not full server startup.",
+    "500ms warmup and before/after clock snapshots do not prove stable clocks; no global clock settings changed."
+  ],
+  "publication": {
+    "fork": "leejnau/sglang",
+    "branch": "experiment/flashinfer-candidate-selection",
+    "open_pr": false,
+    "retain": "plan, launcher, image/runtime provenance, exact commands, raw coordinator and per-worker JSON/logs/caches, analysis JSON and analysis script; narrative remains in the existing living Markdown record"
+  }
+}
