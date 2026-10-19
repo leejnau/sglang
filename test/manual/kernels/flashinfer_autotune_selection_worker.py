@@ -26,6 +26,15 @@ from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
 
+MAX_ITERATIONS = 65536
+
+
+def positive_float(value):
+    parsed = float(value)
+    if not math.isfinite(parsed) or parsed <= 0:
+        raise argparse.ArgumentTypeError("must be finite and positive")
+    return parsed
+
 
 def parse_args():
     parser = argparse.ArgumentParser(description=__doc__)
@@ -38,6 +47,8 @@ def parse_args():
     parser.add_argument("--k", type=int, required=True)
     parser.add_argument("--samples", type=int, required=True)
     parser.add_argument("--iterations", type=int, required=True)
+    parser.add_argument("--warmup-ms", type=positive_float, default=500)
+    parser.add_argument("--min-sample-ms", type=positive_float, default=20)
     parser.add_argument("--seed", type=int, required=True)
     parser.add_argument("--oracle", action="store_true")
     args = parser.parse_args()
@@ -45,6 +56,8 @@ def parse_args():
         parser.error("dimensions, samples and iterations must be positive")
     if any(d % 16 for d in (args.m, args.n, args.k)):
         parser.error("this FP8 experiment requires dimensions divisible by 16")
+    if args.iterations > MAX_ITERATIONS:
+        parser.error(f"--iterations must be at most {MAX_ITERATIONS}")
     return args
 
 
@@ -225,29 +238,73 @@ def run(args):
     def measure(call, execution):
         # No choose/search tracing here. The profiling guard stays installed but
         # is never called on a normal lookup path, adding no per-call hook cost.
-        for _ in range(10):
-            call()
-        torch.cuda.synchronize()
-        wall_samples, gpu_samples = [], []
         start_event = torch.cuda.Event(enable_timing=True)
         end_event = torch.cuda.Event(enable_timing=True)
+        # Materialize CUDA event resources before warmup and calibration.
         start_event.record()
         end_event.record()
         end_event.synchronize()
+
+        def wall_batch(iterations):
+            start = time.perf_counter()
+            for _ in range(iterations):
+                call()
+            torch.cuda.synchronize()
+            return (time.perf_counter() - start) * 1000
+
+        warmup_calls = 0
+        warmup_start = time.perf_counter()
+        while True:
+            wall_batch(args.iterations)
+            warmup_calls += args.iterations
+            warmup_actual_ms = (time.perf_counter() - warmup_start) * 1000
+            if warmup_actual_ms >= args.warmup_ms:
+                break
+
+        effective_iterations = args.iterations
+        calibration_batches = []
+        while True:
+            elapsed_ms = wall_batch(effective_iterations)
+            calibration_batches.append(
+                {"iterations": effective_iterations, "wall_ms": elapsed_ms}
+            )
+            if elapsed_ms >= args.min_sample_ms:
+                break
+            if effective_iterations == MAX_ITERATIONS:
+                raise RuntimeError(
+                    f"{execution} could not reach a {args.min_sample_ms:g} ms batch "
+                    f"within {MAX_ITERATIONS} iterations (last {elapsed_ms:g} ms)"
+                )
+            effective_iterations = min(effective_iterations * 2, MAX_ITERATIONS)
+
+        wall_samples, gpu_samples = [], []
+        wall_batches, gpu_batches = [], []
         for _ in range(args.samples):
             start = time.perf_counter()
             start_event.record()
-            for _ in range(args.iterations):
+            for _ in range(effective_iterations):
                 call()
             end_event.record()
             end_event.synchronize()
-            wall_samples.append((time.perf_counter() - start) * 1000 / args.iterations)
-            gpu_samples.append(start_event.elapsed_time(end_event) / args.iterations)
+            wall_ms = (time.perf_counter() - start) * 1000
+            gpu_ms = start_event.elapsed_time(end_event)
+            wall_batches.append(wall_ms)
+            gpu_batches.append(gpu_ms)
+            wall_samples.append(wall_ms / effective_iterations)
+            gpu_samples.append(gpu_ms / effective_iterations)
         return {
             "samples_ms": wall_samples,
             "gpu_event_samples_ms": gpu_samples,
+            "wall_batch_ms": wall_batches,
+            "gpu_event_batch_ms": gpu_batches,
             "median_ms": statistics.median(wall_samples),
-            "iterations_per_sample": args.iterations,
+            "requested_iterations": args.iterations,
+            "effective_iterations": effective_iterations,
+            "iterations_per_sample": effective_iterations,
+            "warmup_actual_ms": warmup_actual_ms,
+            "warmup_calls": warmup_calls,
+            "warmup_batches": warmup_calls // args.iterations,
+            "calibration_batches": calibration_batches,
             "scope": (
                 "public API eager dispatch; synchronized batched wall time per invocation"
                 if execution == "eager"
@@ -540,6 +597,12 @@ def run(args):
             "output_dtype": "bfloat16",
         },
         "setup_ms": setup_ms,
+        "timing_protocol": {
+            "warmup_ms": args.warmup_ms,
+            "min_sample_ms": args.min_sample_ms,
+            "requested_iterations": args.iterations,
+            "max_iterations": MAX_ITERATIONS,
+        },
         "startup_ms": startup_ms,
         "startup_scope": "instrumented wrapper tuning/warmup; initial FP8 module preparation excluded; lazy wrapper/profiler setup included",
         "profile_calls": profile_calls,

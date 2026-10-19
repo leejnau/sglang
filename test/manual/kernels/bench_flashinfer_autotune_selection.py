@@ -22,6 +22,7 @@ import time
 from pathlib import Path
 
 ARMS = ("default", "v1", "v2")
+MAX_ITERATIONS = 65536
 ENVIRONMENT_IDENTITY = (
     "sglang_commit",
     "torch",
@@ -61,6 +62,12 @@ def positive_float(value):
 
 def build_plan(args):
     output_dir = Path(args.output_dir).expanduser().resolve()
+    timing_protocol = {
+        "warmup_ms": args.warmup_ms,
+        "min_sample_ms": args.min_sample_ms,
+        "requested_iterations": args.iterations,
+        "max_iterations": MAX_ITERATIONS,
+    }
     # Rotate a seeded shuffle so each arm occupies each position every 3 trials.
     initial_order = list(ARMS)
     random.Random(args.seed).shuffle(initial_order)
@@ -94,6 +101,10 @@ def build_plan(args):
                     str(args.samples),
                     "--iterations",
                     str(args.iterations),
+                    "--warmup-ms",
+                    str(args.warmup_ms),
+                    "--min-sample-ms",
+                    str(args.min_sample_ms),
                     "--seed",
                     str(args.seed + trial),
                 ]
@@ -106,6 +117,7 @@ def build_plan(args):
                         "phase": phase,
                         "seed": args.seed + trial,
                         "shape": [args.m, args.n, args.k],
+                        "timing_protocol": timing_protocol,
                         "cache": str(cache),
                         "result_path": str(result_path),
                         "log_path": str(directory / f"{phase}.log"),
@@ -128,6 +140,7 @@ def build_plan(args):
         "seed": args.seed,
         "samples": args.samples,
         "iterations": args.iterations,
+        "timing_protocol": timing_protocol,
         "timeout_seconds": args.timeout,
         "oracle": args.oracle,
         "order": "seeded shuffle, rotated between trials; cold then warm per arm",
@@ -157,6 +170,78 @@ def _finite_number(value):
         and math.isfinite(value)
         and value >= 0
     )
+
+
+def _validate_measurement(measurement, protocol, samples):
+    if not isinstance(measurement, dict):
+        raise ValueError("measurement must be an object")
+    requested = protocol["requested_iterations"]
+    effective = measurement.get("effective_iterations")
+    if (
+        type(effective) is not int
+        or not requested <= effective <= MAX_ITERATIONS
+        or type(measurement.get("requested_iterations")) is not int
+        or type(measurement.get("iterations_per_sample")) is not int
+        or measurement.get("requested_iterations") != requested
+        or measurement.get("iterations_per_sample") != effective
+    ):
+        raise ValueError("measurement iteration counts do not match the protocol")
+    warmup = measurement.get("warmup_actual_ms")
+    calls, batches = measurement.get("warmup_calls"), measurement.get("warmup_batches")
+    if (
+        not _finite_number(warmup)
+        or warmup < protocol["warmup_ms"]
+        or type(calls) is not int
+        or type(batches) is not int
+        or batches < 1
+        or calls != requested * batches
+    ):
+        raise ValueError("measurement did not complete the requested warmup")
+    calibration = measurement.get("calibration_batches")
+    if not isinstance(calibration, list) or not calibration:
+        raise ValueError("measurement lacks batch calibration")
+    expected_iterations = requested
+    for index, batch in enumerate(calibration):
+        if (
+            not isinstance(batch, dict)
+            or type(batch.get("iterations")) is not int
+            or batch.get("iterations") != expected_iterations
+            or not _finite_number(batch.get("wall_ms"))
+        ):
+            raise ValueError("invalid calibration doubling sequence")
+        if index == len(calibration) - 1:
+            if (
+                expected_iterations != effective
+                or batch["wall_ms"] < protocol["min_sample_ms"]
+            ):
+                raise ValueError("calibration did not reach its minimum batch duration")
+        else:
+            if (
+                batch["wall_ms"] >= protocol["min_sample_ms"]
+                or expected_iterations == MAX_ITERATIONS
+            ):
+                raise ValueError("calibration continued after its stopping condition")
+            expected_iterations = min(expected_iterations * 2, MAX_ITERATIONS)
+    for normalized, raw in (
+        ("samples_ms", "wall_batch_ms"),
+        ("gpu_event_samples_ms", "gpu_event_batch_ms"),
+    ):
+        values, batches_ms = measurement.get(normalized), measurement.get(raw)
+        if (
+            not isinstance(values, list)
+            or not isinstance(batches_ms, list)
+            or len(values) != samples
+            or len(batches_ms) != samples
+            or not all(map(_finite_number, values + batches_ms))
+        ):
+            raise ValueError(f"measurement {normalized}/{raw} have invalid samples")
+        if not all(
+            math.isclose(value, batch / effective, rel_tol=1e-9, abs_tol=1e-12)
+            for value, batch in zip(values, batches_ms)
+        ):
+            raise ValueError(
+                f"measurement {normalized} is not normalized by its batch size"
+            )
 
 
 def validate_result(result, job, process_pid, samples):
@@ -236,19 +321,20 @@ def validate_result(result, job, process_pid, samples):
     measurements = result.get("measurements")
     if not isinstance(measurements, dict):
         raise ValueError("worker measurements must be an object")
-    for execution in ("eager", "cuda_graph"):
-        measurement = measurements.get(execution)
-        values = (
-            measurement.get("samples_ms") if isinstance(measurement, dict) else None
-        )
+    protocol = job["timing_protocol"]
+    if result.get("timing_protocol") != protocol:
+        raise ValueError("worker timing budgets do not match its command")
+    for budget in ("warmup_ms", "min_sample_ms"):
         if (
-            not isinstance(values, list)
-            or len(values) != samples
-            or not all(map(_finite_number, values))
+            not _finite_number(result["timing_protocol"][budget])
+            or result["timing_protocol"][budget] <= 0
         ):
-            raise ValueError(
-                f"worker {execution} samples_ms must contain {samples} finite nonnegative samples"
-            )
+            raise ValueError("worker timing budgets must be finite and positive")
+    for measurement_set in [measurements, *oracle]:
+        if not isinstance(measurement_set, dict):
+            raise ValueError("worker measurement/oracle entry must be an object")
+        for execution in ("eager", "cuda_graph"):
+            _validate_measurement(measurement_set.get(execution), protocol, samples)
 
 
 def _sha256(path):
@@ -368,11 +454,13 @@ def summarize(records):
 
 
 def render_summary(report):
+    protocol = report["plan"]["timing_protocol"]
     lines = [
         f"Study status: **{report['status']}**. Full results: `{Path(report['plan']['output_dir']) / 'results.json'}`.",
         "",
         "Startup is instrumented wrapper tuning/warmup; initial FP8 module preparation is excluded. It is not full server startup.",
         "Eager/graph values below are independently measured per-invocation/replay latencies (pooled samples, milliseconds).",
+        f"Warmup budget: {protocol['warmup_ms']:g} ms per callable; calibration batch target: {protocol['min_sample_ms']:g} ms. Effective iterations are fixed after calibration and recorded with raw batch times; no clock-stability claim.",
         "",
         "| Arm | Phase | Trials | Startup median | Eager median | Eager SD | Graph median | Graph SD |",
         "| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |",
@@ -545,6 +633,8 @@ def main(argv=None):
     parser.add_argument("--trials", type=positive_int, default=3)
     parser.add_argument("--samples", type=positive_int, default=15)
     parser.add_argument("--iterations", type=positive_int, default=20)
+    parser.add_argument("--warmup-ms", type=positive_float, default=500)
+    parser.add_argument("--min-sample-ms", type=positive_float, default=20)
     parser.add_argument("--seed", type=int, default=17)
     parser.add_argument("--timeout", type=positive_float, default=600)
     parser.add_argument(
@@ -561,6 +651,8 @@ def main(argv=None):
     args = parser.parse_args(argv)
     if any(size % 16 for size in (args.m, args.n, args.k)):
         parser.error("--m, --n and --k must be multiples of 16")
+    if args.iterations > MAX_ITERATIONS:
+        parser.error(f"--iterations must be at most {MAX_ITERATIONS}")
     plan = build_plan(args)
     if not args.run:
         print(json.dumps(plan, indent=2))
