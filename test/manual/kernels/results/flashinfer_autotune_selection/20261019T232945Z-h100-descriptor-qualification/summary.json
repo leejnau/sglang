@@ -1,0 +1,554 @@
+{
+  "allocation_released": true,
+  "analyzer_commit": "9294c7c5877b6551d9366972962daa2a1d77f43b",
+  "artifacts": {
+    "analysis": "analysis.json",
+    "provenance": "artifact-index.json",
+    "raw": "attempt01-raw.tar.gz",
+    "scheduler": "scheduler.json",
+    "validation": "validation.json"
+  },
+  "batch_id": "20261019T232945Z-h100-descriptor-qualification",
+  "comparisons": [
+    {
+      "comparison": "candidate_explicit_over_baseline_explicit",
+      "execution": "eager",
+      "independent_trial_count": 3,
+      "median_paired_ratio": 0.3533486562038198,
+      "paired_trials": [
+        {
+          "denominator_median_ms": 0.20489479647949338,
+          "numerator_median_ms": 0.0770215061493218,
+          "ratio": 0.37590757536407415,
+          "seed": 17
+        },
+        {
+          "denominator_median_ms": 0.20463350228965282,
+          "numerator_median_ms": 0.0721458112820983,
+          "ratio": 0.3525610932464909,
+          "seed": 18
+        },
+        {
+          "denominator_median_ms": 0.203136564232409,
+          "numerator_median_ms": 0.07177803199738264,
+          "ratio": 0.3533486562038198,
+          "seed": 19
+        }
+      ],
+      "ratio_direction": "latency numerator/denominator; smaller is faster"
+    },
+    {
+      "comparison": "candidate_explicit_over_baseline_explicit",
+      "execution": "cuda_graph",
+      "independent_trial_count": 3,
+      "median_paired_ratio": 0.9757168689329034,
+      "paired_trials": [
+        {
+          "denominator_median_ms": 0.004034010271425359,
+          "numerator_median_ms": 0.003936051871278323,
+          "ratio": 0.9757168689329034,
+          "seed": 17
+        },
+        {
+          "denominator_median_ms": 0.004158216324867681,
+          "numerator_median_ms": 0.0041586856241337955,
+          "ratio": 1.000112860714655,
+          "seed": 18
+        },
+        {
+          "denominator_median_ms": 0.004117287244298495,
+          "numerator_median_ms": 0.003934149935957976,
+          "ratio": 0.9555199097186812,
+          "seed": 19
+        }
+      ],
+      "ratio_direction": "latency numerator/denominator; smaller is faster"
+    },
+    {
+      "comparison": "candidate_default_over_baseline_default",
+      "execution": "eager",
+      "independent_trial_count": 3,
+      "median_paired_ratio": 1.0132884950984804,
+      "paired_trials": [
+        {
+          "denominator_median_ms": 0.07112256716936827,
+          "numerator_median_ms": 0.07490442367270589,
+          "ratio": 1.0531737907369354,
+          "seed": 17
+        },
+        {
+          "denominator_median_ms": 0.07028094842098653,
+          "numerator_median_ms": 0.07078269263729453,
+          "ratio": 1.0071391213064247,
+          "seed": 18
+        },
+        {
+          "denominator_median_ms": 0.06932402029633522,
+          "numerator_median_ms": 0.07024523220025003,
+          "ratio": 1.0132884950984804,
+          "seed": 19
+        }
+      ],
+      "ratio_direction": "latency numerator/denominator; smaller is faster"
+    },
+    {
+      "comparison": "candidate_default_over_baseline_default",
+      "execution": "cuda_graph",
+      "independent_trial_count": 3,
+      "median_paired_ratio": 0.9758582320028494,
+      "paired_trials": [
+        {
+          "denominator_median_ms": 0.004034500307170674,
+          "numerator_median_ms": 0.003937100336770527,
+          "ratio": 0.9758582320028494,
+          "seed": 17
+        },
+        {
+          "denominator_median_ms": 0.004158392403041944,
+          "numerator_median_ms": 0.004156740033067763,
+          "ratio": 0.9996026421236792,
+          "seed": 18
+        },
+        {
+          "denominator_median_ms": 0.00411774599342607,
+          "numerator_median_ms": 0.003931783794541843,
+          "ratio": 0.9548388367856802,
+          "seed": 19
+        }
+      ],
+      "ratio_direction": "latency numerator/denominator; smaller is faster"
+    },
+    {
+      "comparison": "baseline_explicit_over_default",
+      "execution": "eager",
+      "independent_trial_count": 3,
+      "median_paired_ratio": 2.911649698633654,
+      "paired_trials": [
+        {
+          "denominator_median_ms": 0.07112256716936827,
+          "numerator_median_ms": 0.20489479647949338,
+          "ratio": 2.8808689651424646,
+          "seed": 17
+        },
+        {
+          "denominator_median_ms": 0.07028094842098653,
+          "numerator_median_ms": 0.20463350228965282,
+          "ratio": 2.911649698633654,
+          "seed": 18
+        },
+        {
+          "denominator_median_ms": 0.06932402029633522,
+          "numerator_median_ms": 0.203136564232409,
+          "ratio": 2.9302478904724993,
+          "seed": 19
+        }
+      ],
+      "ratio_direction": "latency numerator/denominator; smaller is faster"
+    },
+    {
+      "comparison": "baseline_explicit_over_default",
+      "execution": "cuda_graph",
+      "independent_trial_count": 3,
+      "median_paired_ratio": 0.9998885921743821,
+      "paired_trials": [
+        {
+          "denominator_median_ms": 0.004034500307170674,
+          "numerator_median_ms": 0.004034010271425359,
+          "ratio": 0.9998785386769101,
+          "seed": 17
+        },
+        {
+          "denominator_median_ms": 0.004158392403041944,
+          "numerator_median_ms": 0.004158216324867681,
+          "ratio": 0.9999576571527655,
+          "seed": 18
+        },
+        {
+          "denominator_median_ms": 0.00411774599342607,
+          "numerator_median_ms": 0.004117287244298495,
+          "ratio": 0.9998885921743821,
+          "seed": 19
+        }
+      ],
+      "ratio_direction": "latency numerator/denominator; smaller is faster"
+    },
+    {
+      "comparison": "candidate_explicit_over_default",
+      "execution": "eager",
+      "independent_trial_count": 3,
+      "median_paired_ratio": 1.0218206951435937,
+      "paired_trials": [
+        {
+          "denominator_median_ms": 0.07490442367270589,
+          "numerator_median_ms": 0.0770215061493218,
+          "ratio": 1.0282637843375777,
+          "seed": 17
+        },
+        {
+          "denominator_median_ms": 0.07078269263729453,
+          "numerator_median_ms": 0.0721458112820983,
+          "ratio": 1.0192577958539761,
+          "seed": 18
+        },
+        {
+          "denominator_median_ms": 0.07024523220025003,
+          "numerator_median_ms": 0.07177803199738264,
+          "ratio": 1.0218206951435937,
+          "seed": 19
+        }
+      ],
+      "ratio_direction": "latency numerator/denominator; smaller is faster"
+    },
+    {
+      "comparison": "candidate_explicit_over_default",
+      "execution": "cuda_graph",
+      "independent_trial_count": 3,
+      "median_paired_ratio": 1.0004680569510134,
+      "paired_trials": [
+        {
+          "denominator_median_ms": 0.003937100336770527,
+          "numerator_median_ms": 0.003936051871278323,
+          "ratio": 0.999733696019273,
+          "seed": 17
+        },
+        {
+          "denominator_median_ms": 0.004156740033067763,
+          "numerator_median_ms": 0.0041586856241337955,
+          "ratio": 1.0004680569510134,
+          "seed": 18
+        },
+        {
+          "denominator_median_ms": 0.003931783794541843,
+          "numerator_median_ms": 0.003934149935957976,
+          "ratio": 1.0006017984558095,
+          "seed": 19
+        }
+      ],
+      "ratio_direction": "latency numerator/denominator; smaller is faster"
+    }
+  ],
+  "default_normalized_comparisons": [
+    {
+      "definition": "(candidate explicit / baseline explicit) / (candidate default / baseline default), separately per seed",
+      "execution": "eager",
+      "median_paired_ratio": 0.3500619584602783,
+      "paired_ratios": [
+        0.3569283423783657,
+        0.3500619584602783,
+        0.34871476180086125
+      ]
+    },
+    {
+      "definition": "(candidate explicit / baseline explicit) / (candidate default / baseline default), separately per seed",
+      "execution": "cuda_graph",
+      "median_paired_ratio": 1.0005104214109437,
+      "paired_ratios": [
+        0.9998551397474449,
+        1.0005104214109437,
+        1.0007132857470415
+      ]
+    }
+  ],
+  "execution_commit": "12a807084ac2deabe298641285baab75eeec5720",
+  "findings": [
+    "Matched explicit eager runtime fell203-205us to72-77us; median paired ratio0.3533486562 (64.665% reduction).",
+    "Default eager control median candidate/baseline ratio1.0132884951; explicit/default within candidate1.0218206951, so the explicit choice remains about2% more expensive than default.",
+    "Graph explicit ratio0.9757168689 tracks default control0.9758582320; per-seed default-normalized median1.0005104214 supports no graph benefit.",
+    "Candidate explicit first call performs one AlgoCheck and no heuristic; warmed eager/capture performs neither. Actual native descriptor-used returns1; no cached fallback accepted. Default still queries one heuristic per public invocation. Replay has no native setup calls.",
+    "Natural baseline-v2 winnerordinal0 and candidate-v1/v2 matched descriptor follow the actual finite runtime-profile minimum. Separate forced explicit persistence controls are not claimed as profiled winners.",
+    "All three fresh warm pairs preserve natural and forced explicit file bytes and consume winners in bare execution and graph capture without profiling.",
+    "This addresses recurring setup common to both v1/v2; it does not establish that v2 candidate selection generally outperforms v1."
+  ],
+  "image": {
+    "Architecture": "amd64",
+    "Created": "2026-10-19T00:48:17.586753916Z",
+    "Id": "sha256:2e152727f0a5ce999172ec48203b2b292d41b3cb370976827718870557899caa",
+    "Os": "linux",
+    "RepoDigests": [
+      "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0"
+    ],
+    "Size": 39141723315
+  },
+  "lifecycle": [
+    {
+      "cache_sha256": {
+        "explicit": "0d77974ae53e73899c15b6cc6f79eeead96dd15a7d1d7e4d8f1c9179de3ade81",
+        "natural": "d32a52c446c970781ce0ca8e48d14cfcd92cee857f25280a4e8700c25fd2beee"
+      },
+      "cold_profile_calls": 72,
+      "cold_startup_ms": 482.97848738729954,
+      "forced_persisted_control": 0,
+      "implementation": "baseline",
+      "natural_winner": 0,
+      "scope": "one pair per implementation/version; no startup performance conclusion",
+      "tuning_version": "v2",
+      "warm_profile_calls": 0,
+      "warm_startup_ms": 109.99967157840729
+    },
+    {
+      "cache_sha256": {
+        "explicit": "0b1a5c4e484b4a5c13761ea1dbc542f7c5152560ba21a35a1a3239c4003bdb5a",
+        "natural": "3ee732adeaefd59acde691d71adcf24bb69c78a0297c7e10a400083faf1f61ad"
+      },
+      "cold_profile_calls": 64,
+      "cold_startup_ms": 441.25340320169926,
+      "forced_persisted_control": [
+        253403070530,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "implementation": "candidate",
+      "natural_winner": [
+        253403070530,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "scope": "one pair per implementation/version; no startup performance conclusion",
+      "tuning_version": "v1",
+      "warm_profile_calls": 0,
+      "warm_startup_ms": 109.39311981201172
+    },
+    {
+      "cache_sha256": {
+        "explicit": "0b1a5c4e484b4a5c13761ea1dbc542f7c5152560ba21a35a1a3239c4003bdb5a",
+        "natural": "bd98a2a7b0ba5e75ea883783d557f9cbaddf0357a21734670aabecded99fa487"
+      },
+      "cold_profile_calls": 72,
+      "cold_startup_ms": 482.47900791466236,
+      "forced_persisted_control": [
+        253403070530,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "implementation": "candidate",
+      "natural_winner": [
+        253403070530,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "scope": "one pair per implementation/version; no startup performance conclusion",
+      "tuning_version": "v2",
+      "warm_profile_calls": 0,
+      "warm_startup_ms": 107.26380161941051
+    }
+  ],
+  "limits": [
+    "One FP8 shape on one H100; three paired worker trials, not 45 independent trials.",
+    "Forced explicit descriptors are a mechanism control, not a claim that startup always selects them.",
+    "Instrumented API durations are nested diagnostic boundaries and are excluded from performance estimates.",
+    "Matching descriptor bytes/configuration and kernel names corroborates this workload only; opaque bytes alone do not prove identical physical kernels.",
+    "No model-serving, broad backend, BF16, distributed, migration or clock-controlled qualification is established.",
+    "The candidate still has about2% extra eager API cost versus default in this shape; this study does not prove its selected explicit tactic is fastest for serving.",
+    "One cold/warm pair per source/tuning configuration is correctness evidence; startup intervals exclude initial native compilation/enumeration and are not a startup performance comparison.",
+    "The separate BF16 module, other shapes/hardware, distributed behavior and model-serving performance remain pending.",
+    "Raw tensors are not retained; independent numerical audits verify executed assertion records and input hashes, not a second recomputation from saved tensors."
+  ],
+  "measurements": {
+    "baseline": {
+      "default": {
+        "cuda_graph": [
+          {
+            "median_us": 4.034500307170674,
+            "seed": 17
+          },
+          {
+            "median_us": 4.158392403041944,
+            "seed": 18
+          },
+          {
+            "median_us": 4.11774599342607,
+            "seed": 19
+          }
+        ],
+        "eager": [
+          {
+            "median_us": 71.12256716936827,
+            "seed": 17
+          },
+          {
+            "median_us": 70.28094842098653,
+            "seed": 18
+          },
+          {
+            "median_us": 69.32402029633522,
+            "seed": 19
+          }
+        ]
+      },
+      "explicit": {
+        "cuda_graph": [
+          {
+            "median_us": 4.034010271425359,
+            "seed": 17
+          },
+          {
+            "median_us": 4.158216324867681,
+            "seed": 18
+          },
+          {
+            "median_us": 4.117287244298495,
+            "seed": 19
+          }
+        ],
+        "eager": [
+          {
+            "median_us": 204.89479647949338,
+            "seed": 17
+          },
+          {
+            "median_us": 204.63350228965282,
+            "seed": 18
+          },
+          {
+            "median_us": 203.136564232409,
+            "seed": 19
+          }
+        ]
+      }
+    },
+    "candidate": {
+      "default": {
+        "cuda_graph": [
+          {
+            "median_us": 3.937100336770527,
+            "seed": 17
+          },
+          {
+            "median_us": 4.156740033067763,
+            "seed": 18
+          },
+          {
+            "median_us": 3.9317837945418432,
+            "seed": 19
+          }
+        ],
+        "eager": [
+          {
+            "median_us": 74.90442367270589,
+            "seed": 17
+          },
+          {
+            "median_us": 70.78269263729453,
+            "seed": 18
+          },
+          {
+            "median_us": 70.24523220025003,
+            "seed": 19
+          }
+        ]
+      },
+      "explicit": {
+        "cuda_graph": [
+          {
+            "median_us": 3.9360518712783232,
+            "seed": 17
+          },
+          {
+            "median_us": 4.1586856241337955,
+            "seed": 18
+          },
+          {
+            "median_us": 3.9341499359579757,
+            "seed": 19
+          }
+        ],
+        "eager": [
+          {
+            "median_us": 77.0215061493218,
+            "seed": 17
+          },
+          {
+            "median_us": 72.1458112820983,
+            "seed": 18
+          },
+          {
+            "median_us": 71.77803199738264,
+            "seed": 19
+          }
+        ]
+      }
+    }
+  },
+  "schema_version": 1,
+  "source_comparison": "Exact original FlashInfer PR6148 diff at14c5c67a1eb9ad3a608b8d3da3bf6d8924037c5c cleanly applied to0.7.2 versus rebuilt0.7.2; not the entire PR branch head",
+  "status": "success",
+  "validation": {
+    "all_fresh_warm_profile_attempts": 0,
+    "clean_primary_workers": 6,
+    "cuda_launches_with_matching_signature": 40,
+    "independent_audits": {
+      "analyzer_cpu_positive_and_fault_controls": 32,
+      "native_trace_and_timing": 568,
+      "numerical_and_lifecycle": 286,
+      "source_and_build": 22
+    },
+    "lifecycle_workers": 6,
+    "manual_workers": 18,
+    "native_build_records_verified": 19,
+    "native_descriptor_acceptances": 38,
+    "numerical_guards": 209,
+    "observation_workers": 2,
+    "observed_launch_signature": {
+      "block": [
+        384,
+        1,
+        1
+      ],
+      "grid": [
+        8,
+        11,
+        1
+      ],
+      "kernel": "nvjet_sm90_qqtst_24x64_128x16_4x2_h_bz_TNN",
+      "registers_per_thread": 168,
+      "shared_memory_bytes": 197076
+    },
+    "observed_native_submissions_with_matching_descriptor_and_config": 28,
+    "qualification_workers": 4,
+    "scope": "14 selected serialization/persistence cases and5 selected FP8[cublas] GPU cases; minimal exact helper environment without global conftest or plugin autoload, not the full upstream suite",
+    "true_cache_lookups": 119,
+    "upstream_cases_passed": 19,
+    "upstream_cases_skipped_or_failed": 0,
+    "upstream_elapsed_seconds": 1.83
+  },
+  "workload": {
+    "batch": 1,
+    "measurement_policy": "unspecified",
+    "min_sample_ms": 20,
+    "native_build": "Both arms explicitly JIT built and loaded with separate workspaces",
+    "operation": "flashinfer.bmm_fp8 backend=cublas",
+    "paired_trials": 3,
+    "samples_per_worker_per_measurement": 15,
+    "seeds": [
+      17,
+      18,
+      19
+    ],
+    "shape_m_n_k": [
+      128,
+      1024,
+      1024
+    ],
+    "warmup_ms": 500
+  }
+}

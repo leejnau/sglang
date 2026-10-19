@@ -1,0 +1,2081 @@
+{
+  "checks": {
+    "analyzer_compile_and_help": "passed",
+    "applicable_repository_precommit": "passed",
+    "git_diff_check": "passed",
+    "prohibited_name_scan": "zero matches in new readable artifacts, decompressed raw/source archives and traces",
+    "python_compile": "passed",
+    "shell_syntax": "passed"
+  },
+  "reports": {
+    "analyzer_cpu_controls": {
+      "controls": [
+        {
+          "control": "valid_calibrated_timing",
+          "result": "passed"
+        },
+        {
+          "control": "invalid_timing_median_ms",
+          "result": "rejected_as_expected"
+        },
+        {
+          "control": "invalid_timing_effective_iterations",
+          "result": "rejected_as_expected"
+        },
+        {
+          "control": "invalid_timing_warmup_actual_ms",
+          "result": "rejected_as_expected"
+        },
+        {
+          "control": "invalid_timing_samples_ms",
+          "result": "rejected_as_expected"
+        },
+        {
+          "control": "invalid_timing_wall_batch_ms",
+          "result": "rejected_as_expected"
+        },
+        {
+          "control": "valid_worker",
+          "result": "passed"
+        },
+        {
+          "control": "worker_cache_miss",
+          "result": "rejected_as_expected"
+        },
+        {
+          "control": "worker_wrong_tactic",
+          "result": "rejected_as_expected"
+        },
+        {
+          "control": "worker_capture_state",
+          "result": "rejected_as_expected"
+        },
+        {
+          "control": "worker_native_fallback",
+          "result": "rejected_as_expected"
+        },
+        {
+          "control": "worker_source_hash",
+          "result": "rejected_as_expected"
+        },
+        {
+          "control": "worker_forbidden_profiling",
+          "result": "rejected_as_expected"
+        },
+        {
+          "control": "worker_profile_counter",
+          "result": "rejected_as_expected"
+        },
+        {
+          "control": "worker_malformed_descriptor",
+          "result": "rejected_as_expected"
+        },
+        {
+          "control": "valid_native_baseline",
+          "result": "passed"
+        },
+        {
+          "control": "valid_native_candidate",
+          "result": "passed"
+        },
+        {
+          "control": "native_descriptor_rejected",
+          "result": "rejected_as_expected"
+        },
+        {
+          "control": "native_descriptor_identity",
+          "result": "rejected_as_expected"
+        },
+        {
+          "control": "native_warm_query",
+          "result": "rejected_as_expected"
+        },
+        {
+          "control": "valid_trace_scopes",
+          "result": "passed"
+        },
+        {
+          "control": "trace_hash_mismatch",
+          "result": "rejected_as_expected"
+        },
+        {
+          "control": "valid_lifecycle_baseline_v2",
+          "result": "passed"
+        },
+        {
+          "control": "valid_lifecycle_candidate_v1",
+          "result": "passed"
+        },
+        {
+          "control": "valid_lifecycle_candidate_v2",
+          "result": "passed"
+        },
+        {
+          "control": "lifecycle_winner_lost",
+          "result": "rejected_as_expected"
+        },
+        {
+          "control": "lifecycle_warm_profile_attempt",
+          "result": "rejected_as_expected"
+        },
+        {
+          "control": "lifecycle_file_changed",
+          "result": "rejected_as_expected"
+        },
+        {
+          "control": "lifecycle_v2_default_omitted",
+          "result": "rejected_as_expected"
+        },
+        {
+          "control": "lifecycle_wrong_profile_winner",
+          "result": "rejected_as_expected"
+        },
+        {
+          "control": "lifecycle_policy_changed",
+          "result": "rejected_as_expected"
+        },
+        {
+          "control": "lifecycle_v1_default_raced",
+          "result": "rejected_as_expected"
+        }
+      ],
+      "status": "success"
+    },
+    "independent_native_trace_and_timing_audit": {
+      "all_checks": [
+        "reference_descriptor_64_bytes",
+        "all_18_manual_workers",
+        "qualification-baseline-17.json:success",
+        "qualification-baseline-17.json:matched_descriptor_bytes",
+        "qualification-baseline-17.json:descriptor_encoding",
+        "qualification-baseline-18.json:success",
+        "qualification-baseline-18.json:matched_descriptor_bytes",
+        "qualification-baseline-18.json:descriptor_encoding",
+        "qualification-baseline-19.json:success",
+        "qualification-baseline-19.json:matched_descriptor_bytes",
+        "qualification-baseline-19.json:descriptor_encoding",
+        "qualification-candidate-17.json:success",
+        "qualification-candidate-17.json:matched_descriptor_bytes",
+        "qualification-candidate-17.json:descriptor_encoding",
+        "benchmark-baseline-17.json:success",
+        "benchmark-baseline-17.json:matched_descriptor_bytes",
+        "benchmark-baseline-17.json:descriptor_encoding",
+        "benchmark-baseline-18.json:success",
+        "benchmark-baseline-18.json:matched_descriptor_bytes",
+        "benchmark-baseline-18.json:descriptor_encoding",
+        "benchmark-baseline-19.json:success",
+        "benchmark-baseline-19.json:matched_descriptor_bytes",
+        "benchmark-baseline-19.json:descriptor_encoding",
+        "benchmark-candidate-17.json:success",
+        "benchmark-candidate-17.json:matched_descriptor_bytes",
+        "benchmark-candidate-17.json:descriptor_encoding",
+        "benchmark-candidate-18.json:success",
+        "benchmark-candidate-18.json:matched_descriptor_bytes",
+        "benchmark-candidate-18.json:descriptor_encoding",
+        "benchmark-candidate-19.json:success",
+        "benchmark-candidate-19.json:matched_descriptor_bytes",
+        "benchmark-candidate-19.json:descriptor_encoding",
+        "observation-baseline.json:success",
+        "observation-baseline.json:matched_descriptor_bytes",
+        "observation-baseline.json:descriptor_encoding",
+        "observation-candidate.json:success",
+        "observation-candidate.json:matched_descriptor_bytes",
+        "observation-candidate.json:descriptor_encoding",
+        "lifecycle-baseline-v2-cold.json:success",
+        "lifecycle-baseline-v2-cold.json:matched_descriptor_bytes",
+        "lifecycle-baseline-v2-cold.json:descriptor_encoding",
+        "lifecycle-baseline-v2-warm.json:success",
+        "lifecycle-baseline-v2-warm.json:matched_descriptor_bytes",
+        "lifecycle-baseline-v2-warm.json:descriptor_encoding",
+        "lifecycle-candidate-v1-cold.json:success",
+        "lifecycle-candidate-v1-cold.json:matched_descriptor_bytes",
+        "lifecycle-candidate-v1-cold.json:descriptor_encoding",
+        "lifecycle-candidate-v1-warm.json:success",
+        "lifecycle-candidate-v1-warm.json:matched_descriptor_bytes",
+        "lifecycle-candidate-v1-warm.json:descriptor_encoding",
+        "lifecycle-candidate-v2-cold.json:success",
+        "lifecycle-candidate-v2-cold.json:matched_descriptor_bytes",
+        "lifecycle-candidate-v2-cold.json:descriptor_encoding",
+        "lifecycle-candidate-v2-warm.json:success",
+        "lifecycle-candidate-v2-warm.json:matched_descriptor_bytes",
+        "lifecycle-candidate-v2-warm.json:descriptor_encoding",
+        "baseline/17:uninstrumented",
+        "baseline/17:no_profiling",
+        "baseline/17/default/eager:15samples",
+        "baseline/17/default/eager:finite",
+        "baseline/17/default/eager:normalization",
+        "baseline/17/default/eager:median",
+        "baseline/17/default/cuda_graph:15samples",
+        "baseline/17/default/cuda_graph:finite",
+        "baseline/17/default/cuda_graph:normalization",
+        "baseline/17/default/cuda_graph:median",
+        "baseline/17/explicit/eager:15samples",
+        "baseline/17/explicit/eager:finite",
+        "baseline/17/explicit/eager:normalization",
+        "baseline/17/explicit/eager:median",
+        "baseline/17/explicit/cuda_graph:15samples",
+        "baseline/17/explicit/cuda_graph:finite",
+        "baseline/17/explicit/cuda_graph:normalization",
+        "baseline/17/explicit/cuda_graph:median",
+        "baseline/18:uninstrumented",
+        "baseline/18:no_profiling",
+        "baseline/18/explicit/eager:15samples",
+        "baseline/18/explicit/eager:finite",
+        "baseline/18/explicit/eager:normalization",
+        "baseline/18/explicit/eager:median",
+        "baseline/18/explicit/cuda_graph:15samples",
+        "baseline/18/explicit/cuda_graph:finite",
+        "baseline/18/explicit/cuda_graph:normalization",
+        "baseline/18/explicit/cuda_graph:median",
+        "baseline/18/default/eager:15samples",
+        "baseline/18/default/eager:finite",
+        "baseline/18/default/eager:normalization",
+        "baseline/18/default/eager:median",
+        "baseline/18/default/cuda_graph:15samples",
+        "baseline/18/default/cuda_graph:finite",
+        "baseline/18/default/cuda_graph:normalization",
+        "baseline/18/default/cuda_graph:median",
+        "baseline/19:uninstrumented",
+        "baseline/19:no_profiling",
+        "baseline/19/explicit/eager:15samples",
+        "baseline/19/explicit/eager:finite",
+        "baseline/19/explicit/eager:normalization",
+        "baseline/19/explicit/eager:median",
+        "baseline/19/explicit/cuda_graph:15samples",
+        "baseline/19/explicit/cuda_graph:finite",
+        "baseline/19/explicit/cuda_graph:normalization",
+        "baseline/19/explicit/cuda_graph:median",
+        "baseline/19/default/eager:15samples",
+        "baseline/19/default/eager:finite",
+        "baseline/19/default/eager:normalization",
+        "baseline/19/default/eager:median",
+        "baseline/19/default/cuda_graph:15samples",
+        "baseline/19/default/cuda_graph:finite",
+        "baseline/19/default/cuda_graph:normalization",
+        "baseline/19/default/cuda_graph:median",
+        "candidate/17:uninstrumented",
+        "candidate/17:no_profiling",
+        "candidate/17/default/eager:15samples",
+        "candidate/17/default/eager:finite",
+        "candidate/17/default/eager:normalization",
+        "candidate/17/default/eager:median",
+        "candidate/17/default/cuda_graph:15samples",
+        "candidate/17/default/cuda_graph:finite",
+        "candidate/17/default/cuda_graph:normalization",
+        "candidate/17/default/cuda_graph:median",
+        "candidate/17/explicit/eager:15samples",
+        "candidate/17/explicit/eager:finite",
+        "candidate/17/explicit/eager:normalization",
+        "candidate/17/explicit/eager:median",
+        "candidate/17/explicit/cuda_graph:15samples",
+        "candidate/17/explicit/cuda_graph:finite",
+        "candidate/17/explicit/cuda_graph:normalization",
+        "candidate/17/explicit/cuda_graph:median",
+        "candidate/18:uninstrumented",
+        "candidate/18:no_profiling",
+        "candidate/18/explicit/eager:15samples",
+        "candidate/18/explicit/eager:finite",
+        "candidate/18/explicit/eager:normalization",
+        "candidate/18/explicit/eager:median",
+        "candidate/18/explicit/cuda_graph:15samples",
+        "candidate/18/explicit/cuda_graph:finite",
+        "candidate/18/explicit/cuda_graph:normalization",
+        "candidate/18/explicit/cuda_graph:median",
+        "candidate/18/default/eager:15samples",
+        "candidate/18/default/eager:finite",
+        "candidate/18/default/eager:normalization",
+        "candidate/18/default/eager:median",
+        "candidate/18/default/cuda_graph:15samples",
+        "candidate/18/default/cuda_graph:finite",
+        "candidate/18/default/cuda_graph:normalization",
+        "candidate/18/default/cuda_graph:median",
+        "candidate/19:uninstrumented",
+        "candidate/19:no_profiling",
+        "candidate/19/explicit/eager:15samples",
+        "candidate/19/explicit/eager:finite",
+        "candidate/19/explicit/eager:normalization",
+        "candidate/19/explicit/eager:median",
+        "candidate/19/explicit/cuda_graph:15samples",
+        "candidate/19/explicit/cuda_graph:finite",
+        "candidate/19/explicit/cuda_graph:normalization",
+        "candidate/19/explicit/cuda_graph:median",
+        "candidate/19/default/eager:15samples",
+        "candidate/19/default/eager:finite",
+        "candidate/19/default/eager:normalization",
+        "candidate/19/default/eager:median",
+        "candidate/19/default/cuda_graph:15samples",
+        "candidate/19/default/cuda_graph:finite",
+        "candidate/19/default/cuda_graph:normalization",
+        "candidate/19/default/cuda_graph:median",
+        "baseline:8_native_phases",
+        "baseline/default_first_eager:phase_brackets",
+        "baseline/default_first_eager:algo_size",
+        "baseline/default_first_eager:no_native_failures",
+        "baseline/default_first_eager:matmul_count",
+        "baseline/default_first_eager:matmul_summary",
+        "baseline/default_first_eager:matmul_status",
+        "baseline/default_first_eager:heuristic_count",
+        "baseline/default_first_eager:heuristic_summary",
+        "baseline/default_first_eager:heuristic_status",
+        "baseline/default_first_eager:algo_check_count",
+        "baseline/default_first_eager:algo_check_summary",
+        "baseline/default_first_eager:algo_check_status",
+        "baseline/default_first_eager:actual_submitted_bytes",
+        "baseline/default_first_eager:all7_public_attributes",
+        "baseline/default_first_eager:query_size",
+        "baseline/default_first_eager:valid_heuristic",
+        "baseline/default_first_eager:heuristic_matches_submission",
+        "baseline/default_warm_eager:phase_brackets",
+        "baseline/default_warm_eager:algo_size",
+        "baseline/default_warm_eager:no_native_failures",
+        "baseline/default_warm_eager:matmul_count",
+        "baseline/default_warm_eager:matmul_summary",
+        "baseline/default_warm_eager:matmul_status",
+        "baseline/default_warm_eager:heuristic_count",
+        "baseline/default_warm_eager:heuristic_summary",
+        "baseline/default_warm_eager:heuristic_status",
+        "baseline/default_warm_eager:algo_check_count",
+        "baseline/default_warm_eager:algo_check_summary",
+        "baseline/default_warm_eager:algo_check_status",
+        "baseline/default_warm_eager:actual_submitted_bytes",
+        "baseline/default_warm_eager:all7_public_attributes",
+        "baseline/default_warm_eager:actual_submitted_bytes",
+        "baseline/default_warm_eager:all7_public_attributes",
+        "baseline/default_warm_eager:actual_submitted_bytes",
+        "baseline/default_warm_eager:all7_public_attributes",
+        "baseline/default_warm_eager:actual_submitted_bytes",
+        "baseline/default_warm_eager:all7_public_attributes",
+        "baseline/default_warm_eager:actual_submitted_bytes",
+        "baseline/default_warm_eager:all7_public_attributes",
+        "baseline/default_warm_eager:query_size",
+        "baseline/default_warm_eager:valid_heuristic",
+        "baseline/default_warm_eager:heuristic_matches_submission",
+        "baseline/default_warm_eager:query_size",
+        "baseline/default_warm_eager:valid_heuristic",
+        "baseline/default_warm_eager:heuristic_matches_submission",
+        "baseline/default_warm_eager:query_size",
+        "baseline/default_warm_eager:valid_heuristic",
+        "baseline/default_warm_eager:heuristic_matches_submission",
+        "baseline/default_warm_eager:query_size",
+        "baseline/default_warm_eager:valid_heuristic",
+        "baseline/default_warm_eager:heuristic_matches_submission",
+        "baseline/default_warm_eager:query_size",
+        "baseline/default_warm_eager:valid_heuristic",
+        "baseline/default_warm_eager:heuristic_matches_submission",
+        "baseline/default_capture:phase_brackets",
+        "baseline/default_capture:algo_size",
+        "baseline/default_capture:no_native_failures",
+        "baseline/default_capture:matmul_count",
+        "baseline/default_capture:matmul_summary",
+        "baseline/default_capture:matmul_status",
+        "baseline/default_capture:heuristic_count",
+        "baseline/default_capture:heuristic_summary",
+        "baseline/default_capture:heuristic_status",
+        "baseline/default_capture:algo_check_count",
+        "baseline/default_capture:algo_check_summary",
+        "baseline/default_capture:algo_check_status",
+        "baseline/default_capture:actual_submitted_bytes",
+        "baseline/default_capture:all7_public_attributes",
+        "baseline/default_capture:query_size",
+        "baseline/default_capture:valid_heuristic",
+        "baseline/default_capture:heuristic_matches_submission",
+        "baseline/default_graph_replay:phase_brackets",
+        "baseline/default_graph_replay:algo_size",
+        "baseline/default_graph_replay:no_native_failures",
+        "baseline/default_graph_replay:matmul_count",
+        "baseline/default_graph_replay:matmul_summary",
+        "baseline/default_graph_replay:matmul_status",
+        "baseline/default_graph_replay:heuristic_count",
+        "baseline/default_graph_replay:heuristic_summary",
+        "baseline/default_graph_replay:heuristic_status",
+        "baseline/default_graph_replay:algo_check_count",
+        "baseline/default_graph_replay:algo_check_summary",
+        "baseline/default_graph_replay:algo_check_status",
+        "baseline/explicit_first_eager:phase_brackets",
+        "baseline/explicit_first_eager:algo_size",
+        "baseline/explicit_first_eager:no_native_failures",
+        "baseline/explicit_first_eager:matmul_count",
+        "baseline/explicit_first_eager:matmul_summary",
+        "baseline/explicit_first_eager:matmul_status",
+        "baseline/explicit_first_eager:heuristic_count",
+        "baseline/explicit_first_eager:heuristic_summary",
+        "baseline/explicit_first_eager:heuristic_status",
+        "baseline/explicit_first_eager:algo_check_count",
+        "baseline/explicit_first_eager:algo_check_summary",
+        "baseline/explicit_first_eager:algo_check_status",
+        "baseline/explicit_first_eager:actual_submitted_bytes",
+        "baseline/explicit_first_eager:all7_public_attributes",
+        "baseline/explicit_first_eager:query_size",
+        "baseline/explicit_first_eager:valid_heuristic",
+        "baseline/explicit_first_eager:heuristic_matches_submission",
+        "baseline/explicit_warm_eager:phase_brackets",
+        "baseline/explicit_warm_eager:algo_size",
+        "baseline/explicit_warm_eager:no_native_failures",
+        "baseline/explicit_warm_eager:matmul_count",
+        "baseline/explicit_warm_eager:matmul_summary",
+        "baseline/explicit_warm_eager:matmul_status",
+        "baseline/explicit_warm_eager:heuristic_count",
+        "baseline/explicit_warm_eager:heuristic_summary",
+        "baseline/explicit_warm_eager:heuristic_status",
+        "baseline/explicit_warm_eager:algo_check_count",
+        "baseline/explicit_warm_eager:algo_check_summary",
+        "baseline/explicit_warm_eager:algo_check_status",
+        "baseline/explicit_warm_eager:actual_submitted_bytes",
+        "baseline/explicit_warm_eager:all7_public_attributes",
+        "baseline/explicit_warm_eager:actual_submitted_bytes",
+        "baseline/explicit_warm_eager:all7_public_attributes",
+        "baseline/explicit_warm_eager:actual_submitted_bytes",
+        "baseline/explicit_warm_eager:all7_public_attributes",
+        "baseline/explicit_warm_eager:actual_submitted_bytes",
+        "baseline/explicit_warm_eager:all7_public_attributes",
+        "baseline/explicit_warm_eager:actual_submitted_bytes",
+        "baseline/explicit_warm_eager:all7_public_attributes",
+        "baseline/explicit_warm_eager:query_size",
+        "baseline/explicit_warm_eager:valid_heuristic",
+        "baseline/explicit_warm_eager:heuristic_matches_submission",
+        "baseline/explicit_warm_eager:query_size",
+        "baseline/explicit_warm_eager:valid_heuristic",
+        "baseline/explicit_warm_eager:heuristic_matches_submission",
+        "baseline/explicit_warm_eager:query_size",
+        "baseline/explicit_warm_eager:valid_heuristic",
+        "baseline/explicit_warm_eager:heuristic_matches_submission",
+        "baseline/explicit_warm_eager:query_size",
+        "baseline/explicit_warm_eager:valid_heuristic",
+        "baseline/explicit_warm_eager:heuristic_matches_submission",
+        "baseline/explicit_warm_eager:query_size",
+        "baseline/explicit_warm_eager:valid_heuristic",
+        "baseline/explicit_warm_eager:heuristic_matches_submission",
+        "baseline/explicit_capture:phase_brackets",
+        "baseline/explicit_capture:algo_size",
+        "baseline/explicit_capture:no_native_failures",
+        "baseline/explicit_capture:matmul_count",
+        "baseline/explicit_capture:matmul_summary",
+        "baseline/explicit_capture:matmul_status",
+        "baseline/explicit_capture:heuristic_count",
+        "baseline/explicit_capture:heuristic_summary",
+        "baseline/explicit_capture:heuristic_status",
+        "baseline/explicit_capture:algo_check_count",
+        "baseline/explicit_capture:algo_check_summary",
+        "baseline/explicit_capture:algo_check_status",
+        "baseline/explicit_capture:actual_submitted_bytes",
+        "baseline/explicit_capture:all7_public_attributes",
+        "baseline/explicit_capture:query_size",
+        "baseline/explicit_capture:valid_heuristic",
+        "baseline/explicit_capture:heuristic_matches_submission",
+        "baseline/explicit_graph_replay:phase_brackets",
+        "baseline/explicit_graph_replay:algo_size",
+        "baseline/explicit_graph_replay:no_native_failures",
+        "baseline/explicit_graph_replay:matmul_count",
+        "baseline/explicit_graph_replay:matmul_summary",
+        "baseline/explicit_graph_replay:matmul_status",
+        "baseline/explicit_graph_replay:heuristic_count",
+        "baseline/explicit_graph_replay:heuristic_summary",
+        "baseline/explicit_graph_replay:heuristic_status",
+        "baseline/explicit_graph_replay:algo_check_count",
+        "baseline/explicit_graph_replay:algo_check_summary",
+        "baseline/explicit_graph_replay:algo_check_status",
+        "candidate:8_native_phases",
+        "candidate/default_first_eager:phase_brackets",
+        "candidate/default_first_eager:algo_size",
+        "candidate/default_first_eager:no_native_failures",
+        "candidate/default_first_eager:matmul_count",
+        "candidate/default_first_eager:matmul_summary",
+        "candidate/default_first_eager:matmul_status",
+        "candidate/default_first_eager:heuristic_count",
+        "candidate/default_first_eager:heuristic_summary",
+        "candidate/default_first_eager:heuristic_status",
+        "candidate/default_first_eager:algo_check_count",
+        "candidate/default_first_eager:algo_check_summary",
+        "candidate/default_first_eager:algo_check_status",
+        "candidate/default_first_eager:actual_submitted_bytes",
+        "candidate/default_first_eager:all7_public_attributes",
+        "candidate/default_first_eager:query_size",
+        "candidate/default_first_eager:valid_heuristic",
+        "candidate/default_first_eager:heuristic_matches_submission",
+        "candidate/default_warm_eager:phase_brackets",
+        "candidate/default_warm_eager:algo_size",
+        "candidate/default_warm_eager:no_native_failures",
+        "candidate/default_warm_eager:matmul_count",
+        "candidate/default_warm_eager:matmul_summary",
+        "candidate/default_warm_eager:matmul_status",
+        "candidate/default_warm_eager:heuristic_count",
+        "candidate/default_warm_eager:heuristic_summary",
+        "candidate/default_warm_eager:heuristic_status",
+        "candidate/default_warm_eager:algo_check_count",
+        "candidate/default_warm_eager:algo_check_summary",
+        "candidate/default_warm_eager:algo_check_status",
+        "candidate/default_warm_eager:actual_submitted_bytes",
+        "candidate/default_warm_eager:all7_public_attributes",
+        "candidate/default_warm_eager:actual_submitted_bytes",
+        "candidate/default_warm_eager:all7_public_attributes",
+        "candidate/default_warm_eager:actual_submitted_bytes",
+        "candidate/default_warm_eager:all7_public_attributes",
+        "candidate/default_warm_eager:actual_submitted_bytes",
+        "candidate/default_warm_eager:all7_public_attributes",
+        "candidate/default_warm_eager:actual_submitted_bytes",
+        "candidate/default_warm_eager:all7_public_attributes",
+        "candidate/default_warm_eager:query_size",
+        "candidate/default_warm_eager:valid_heuristic",
+        "candidate/default_warm_eager:heuristic_matches_submission",
+        "candidate/default_warm_eager:query_size",
+        "candidate/default_warm_eager:valid_heuristic",
+        "candidate/default_warm_eager:heuristic_matches_submission",
+        "candidate/default_warm_eager:query_size",
+        "candidate/default_warm_eager:valid_heuristic",
+        "candidate/default_warm_eager:heuristic_matches_submission",
+        "candidate/default_warm_eager:query_size",
+        "candidate/default_warm_eager:valid_heuristic",
+        "candidate/default_warm_eager:heuristic_matches_submission",
+        "candidate/default_warm_eager:query_size",
+        "candidate/default_warm_eager:valid_heuristic",
+        "candidate/default_warm_eager:heuristic_matches_submission",
+        "candidate/default_capture:phase_brackets",
+        "candidate/default_capture:algo_size",
+        "candidate/default_capture:no_native_failures",
+        "candidate/default_capture:matmul_count",
+        "candidate/default_capture:matmul_summary",
+        "candidate/default_capture:matmul_status",
+        "candidate/default_capture:heuristic_count",
+        "candidate/default_capture:heuristic_summary",
+        "candidate/default_capture:heuristic_status",
+        "candidate/default_capture:algo_check_count",
+        "candidate/default_capture:algo_check_summary",
+        "candidate/default_capture:algo_check_status",
+        "candidate/default_capture:actual_submitted_bytes",
+        "candidate/default_capture:all7_public_attributes",
+        "candidate/default_capture:query_size",
+        "candidate/default_capture:valid_heuristic",
+        "candidate/default_capture:heuristic_matches_submission",
+        "candidate/default_graph_replay:phase_brackets",
+        "candidate/default_graph_replay:algo_size",
+        "candidate/default_graph_replay:no_native_failures",
+        "candidate/default_graph_replay:matmul_count",
+        "candidate/default_graph_replay:matmul_summary",
+        "candidate/default_graph_replay:matmul_status",
+        "candidate/default_graph_replay:heuristic_count",
+        "candidate/default_graph_replay:heuristic_summary",
+        "candidate/default_graph_replay:heuristic_status",
+        "candidate/default_graph_replay:algo_check_count",
+        "candidate/default_graph_replay:algo_check_summary",
+        "candidate/default_graph_replay:algo_check_status",
+        "candidate/explicit_first_eager:phase_brackets",
+        "candidate/explicit_first_eager:algo_size",
+        "candidate/explicit_first_eager:no_native_failures",
+        "candidate/explicit_first_eager:matmul_count",
+        "candidate/explicit_first_eager:matmul_summary",
+        "candidate/explicit_first_eager:matmul_status",
+        "candidate/explicit_first_eager:heuristic_count",
+        "candidate/explicit_first_eager:heuristic_summary",
+        "candidate/explicit_first_eager:heuristic_status",
+        "candidate/explicit_first_eager:algo_check_count",
+        "candidate/explicit_first_eager:algo_check_summary",
+        "candidate/explicit_first_eager:algo_check_status",
+        "candidate/explicit_first_eager:actual_submitted_bytes",
+        "candidate/explicit_first_eager:all7_public_attributes",
+        "candidate/explicit_first_eager:accepted_descriptor",
+        "candidate/explicit_first_eager:checked_equals_submitted_descriptor",
+        "candidate/explicit_warm_eager:phase_brackets",
+        "candidate/explicit_warm_eager:algo_size",
+        "candidate/explicit_warm_eager:no_native_failures",
+        "candidate/explicit_warm_eager:matmul_count",
+        "candidate/explicit_warm_eager:matmul_summary",
+        "candidate/explicit_warm_eager:matmul_status",
+        "candidate/explicit_warm_eager:heuristic_count",
+        "candidate/explicit_warm_eager:heuristic_summary",
+        "candidate/explicit_warm_eager:heuristic_status",
+        "candidate/explicit_warm_eager:algo_check_count",
+        "candidate/explicit_warm_eager:algo_check_summary",
+        "candidate/explicit_warm_eager:algo_check_status",
+        "candidate/explicit_warm_eager:actual_submitted_bytes",
+        "candidate/explicit_warm_eager:all7_public_attributes",
+        "candidate/explicit_warm_eager:actual_submitted_bytes",
+        "candidate/explicit_warm_eager:all7_public_attributes",
+        "candidate/explicit_warm_eager:actual_submitted_bytes",
+        "candidate/explicit_warm_eager:all7_public_attributes",
+        "candidate/explicit_warm_eager:actual_submitted_bytes",
+        "candidate/explicit_warm_eager:all7_public_attributes",
+        "candidate/explicit_warm_eager:actual_submitted_bytes",
+        "candidate/explicit_warm_eager:all7_public_attributes",
+        "candidate/explicit_capture:phase_brackets",
+        "candidate/explicit_capture:algo_size",
+        "candidate/explicit_capture:no_native_failures",
+        "candidate/explicit_capture:matmul_count",
+        "candidate/explicit_capture:matmul_summary",
+        "candidate/explicit_capture:matmul_status",
+        "candidate/explicit_capture:heuristic_count",
+        "candidate/explicit_capture:heuristic_summary",
+        "candidate/explicit_capture:heuristic_status",
+        "candidate/explicit_capture:algo_check_count",
+        "candidate/explicit_capture:algo_check_summary",
+        "candidate/explicit_capture:algo_check_status",
+        "candidate/explicit_capture:actual_submitted_bytes",
+        "candidate/explicit_capture:all7_public_attributes",
+        "candidate/explicit_graph_replay:phase_brackets",
+        "candidate/explicit_graph_replay:algo_size",
+        "candidate/explicit_graph_replay:no_native_failures",
+        "candidate/explicit_graph_replay:matmul_count",
+        "candidate/explicit_graph_replay:matmul_summary",
+        "candidate/explicit_graph_replay:matmul_status",
+        "candidate/explicit_graph_replay:heuristic_count",
+        "candidate/explicit_graph_replay:heuristic_summary",
+        "candidate/explicit_graph_replay:heuristic_status",
+        "candidate/explicit_graph_replay:algo_check_count",
+        "candidate/explicit_graph_replay:algo_check_summary",
+        "candidate/explicit_graph_replay:algo_check_status",
+        "candidate/default_first_eager:default_uses_default_api",
+        "candidate/default_warm_eager:default_uses_default_api",
+        "candidate/default_capture:default_uses_default_api",
+        "candidate/default_after:default_uses_default_api",
+        "candidate/explicit_first_eager:native_used_descriptor_1",
+        "candidate/explicit_warm_eager:native_used_descriptor_1",
+        "candidate/explicit_capture:native_used_descriptor_1",
+        "candidate/explicit_after:native_used_descriptor_1",
+        "28_observed_matmul_submissions",
+        "all28_same7attributes",
+        "trace-baseline-default.json.gz:10kernels",
+        "trace-baseline-default.json.gz/eager:scope",
+        "trace-baseline-default.json.gz/eager:5scopedkernels",
+        "trace-baseline-default.json.gz/eager:positive_kernel_duration",
+        "trace-baseline-default.json.gz/eager:positive_kernel_duration",
+        "trace-baseline-default.json.gz/eager:positive_kernel_duration",
+        "trace-baseline-default.json.gz/eager:positive_kernel_duration",
+        "trace-baseline-default.json.gz/eager:positive_kernel_duration",
+        "trace-baseline-default.json.gz/eager:stable_launch_signature",
+        "trace-baseline-default.json.gz/graph_replay:scope",
+        "trace-baseline-default.json.gz/graph_replay:5scopedkernels",
+        "trace-baseline-default.json.gz/graph_replay:positive_kernel_duration",
+        "trace-baseline-default.json.gz/graph_replay:positive_kernel_duration",
+        "trace-baseline-default.json.gz/graph_replay:positive_kernel_duration",
+        "trace-baseline-default.json.gz/graph_replay:positive_kernel_duration",
+        "trace-baseline-default.json.gz/graph_replay:positive_kernel_duration",
+        "trace-baseline-default.json.gz/graph_replay:stable_launch_signature",
+        "trace-baseline-explicit.json.gz:10kernels",
+        "trace-baseline-explicit.json.gz/eager:scope",
+        "trace-baseline-explicit.json.gz/eager:5scopedkernels",
+        "trace-baseline-explicit.json.gz/eager:positive_kernel_duration",
+        "trace-baseline-explicit.json.gz/eager:positive_kernel_duration",
+        "trace-baseline-explicit.json.gz/eager:positive_kernel_duration",
+        "trace-baseline-explicit.json.gz/eager:positive_kernel_duration",
+        "trace-baseline-explicit.json.gz/eager:positive_kernel_duration",
+        "trace-baseline-explicit.json.gz/eager:stable_launch_signature",
+        "trace-baseline-explicit.json.gz/graph_replay:scope",
+        "trace-baseline-explicit.json.gz/graph_replay:5scopedkernels",
+        "trace-baseline-explicit.json.gz/graph_replay:positive_kernel_duration",
+        "trace-baseline-explicit.json.gz/graph_replay:positive_kernel_duration",
+        "trace-baseline-explicit.json.gz/graph_replay:positive_kernel_duration",
+        "trace-baseline-explicit.json.gz/graph_replay:positive_kernel_duration",
+        "trace-baseline-explicit.json.gz/graph_replay:positive_kernel_duration",
+        "trace-baseline-explicit.json.gz/graph_replay:stable_launch_signature",
+        "trace-candidate-default.json.gz:10kernels",
+        "trace-candidate-default.json.gz/eager:scope",
+        "trace-candidate-default.json.gz/eager:5scopedkernels",
+        "trace-candidate-default.json.gz/eager:positive_kernel_duration",
+        "trace-candidate-default.json.gz/eager:positive_kernel_duration",
+        "trace-candidate-default.json.gz/eager:positive_kernel_duration",
+        "trace-candidate-default.json.gz/eager:positive_kernel_duration",
+        "trace-candidate-default.json.gz/eager:positive_kernel_duration",
+        "trace-candidate-default.json.gz/eager:stable_launch_signature",
+        "trace-candidate-default.json.gz/graph_replay:scope",
+        "trace-candidate-default.json.gz/graph_replay:5scopedkernels",
+        "trace-candidate-default.json.gz/graph_replay:positive_kernel_duration",
+        "trace-candidate-default.json.gz/graph_replay:positive_kernel_duration",
+        "trace-candidate-default.json.gz/graph_replay:positive_kernel_duration",
+        "trace-candidate-default.json.gz/graph_replay:positive_kernel_duration",
+        "trace-candidate-default.json.gz/graph_replay:positive_kernel_duration",
+        "trace-candidate-default.json.gz/graph_replay:stable_launch_signature",
+        "trace-candidate-explicit.json.gz:10kernels",
+        "trace-candidate-explicit.json.gz/eager:scope",
+        "trace-candidate-explicit.json.gz/eager:5scopedkernels",
+        "trace-candidate-explicit.json.gz/eager:positive_kernel_duration",
+        "trace-candidate-explicit.json.gz/eager:positive_kernel_duration",
+        "trace-candidate-explicit.json.gz/eager:positive_kernel_duration",
+        "trace-candidate-explicit.json.gz/eager:positive_kernel_duration",
+        "trace-candidate-explicit.json.gz/eager:positive_kernel_duration",
+        "trace-candidate-explicit.json.gz/eager:stable_launch_signature",
+        "trace-candidate-explicit.json.gz/graph_replay:scope",
+        "trace-candidate-explicit.json.gz/graph_replay:5scopedkernels",
+        "trace-candidate-explicit.json.gz/graph_replay:positive_kernel_duration",
+        "trace-candidate-explicit.json.gz/graph_replay:positive_kernel_duration",
+        "trace-candidate-explicit.json.gz/graph_replay:positive_kernel_duration",
+        "trace-candidate-explicit.json.gz/graph_replay:positive_kernel_duration",
+        "trace-candidate-explicit.json.gz/graph_replay:positive_kernel_duration",
+        "trace-candidate-explicit.json.gz/graph_replay:stable_launch_signature",
+        "40_total_traced_kernel_launches",
+        "all40_same_full_observed_launch_signature",
+        "candidate_explicit_over_baseline_explicit/eager:independent_math_matches",
+        "candidate_explicit_over_baseline_explicit/cuda_graph:independent_math_matches",
+        "candidate_default_over_baseline_default/eager:independent_math_matches",
+        "candidate_default_over_baseline_default/cuda_graph:independent_math_matches",
+        "baseline_explicit_over_default/eager:independent_math_matches",
+        "baseline_explicit_over_default/cuda_graph:independent_math_matches",
+        "candidate_explicit_over_default/eager:independent_math_matches",
+        "candidate_explicit_over_default/cuda_graph:independent_math_matches",
+        "19_upstream_cases_no_skips"
+      ],
+      "checks_passed": 568,
+      "full_launch_signature": {
+        "block": [
+          384,
+          1,
+          1
+        ],
+        "blocks_per_sm": 0.6666666865348816,
+        "grid": [
+          8,
+          11,
+          1
+        ],
+        "name": "nvjet_sm90_qqtst_24x64_128x16_4x2_h_bz_TNN",
+        "occupancy": {
+          "activeBlocksPerMultiprocessor": 0,
+          "allocatedRegistersPerBlock": 64512,
+          "allocatedSharedMemPerBlock": 198144,
+          "blockLimitBarriers": 2147483647,
+          "blockLimitBlocks": 32,
+          "blockLimitRegs": 1,
+          "blockLimitSharedMem": 0,
+          "blockLimitWarps": 5,
+          "limitingFactors": "SMEM"
+        },
+        "registers_per_thread": 168,
+        "shared_memory_bytes": 197076,
+        "warps_per_sm": 8
+      },
+      "interpretation": [
+        "Candidate steady-state explicit submission avoids repeated heuristic enumeration and descriptor validation while preserving the observed submitted algorithm and launch configuration.",
+        "All28 native submissions share the exact64-byte descriptor and all7 queried public attributes; all40 traced kernel launches share name,grid,block,register,shared-memory and recorded occupancy metadata.",
+        "The default-normalized graph ratio is neutral for these three trials; raw graph differences co-move with the default control.",
+        "Candidate explicit remains slightly slower than its own default in eager timing; removing the old explicit-path enumeration cost does not establish a better winner or full serving benefit.",
+        "These are observed launch signatures; the audit does not claim instruction-level identity or isolate every remaining CPU setup component."
+      ],
+      "matched_algorithm": {
+        "public_attributes": {
+          "cta_swizzling": 0,
+          "custom_option": 2,
+          "id": 66,
+          "reduction_scheme": 0,
+          "split_k": 1,
+          "stages_id": 36,
+          "tile_id": 59
+        },
+        "raw_hex": "420000003b0000002400000001000000000000000000000002000000000007000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+        "same_observed_submissions": 28
+      },
+      "matched_trace_launch_count": 40,
+      "method": "Independent standard-library parsing/calculation; did not import or invoke the batch analyzer",
+      "native": {
+        "baseline": {
+          "explicit_used_descriptor_successes": 0,
+          "file_sha256": "292b2d40234a6f063acb7f2d546592b6ccd35c75a5562b4fdf1a72b5cff20cbd",
+          "phase_call_counts": {
+            "default_capture": {
+              "algo_check": 0,
+              "heuristic": 1,
+              "matmul": 1
+            },
+            "default_first_eager": {
+              "algo_check": 0,
+              "heuristic": 1,
+              "matmul": 1
+            },
+            "default_graph_replay": {
+              "algo_check": 0,
+              "heuristic": 0,
+              "matmul": 0
+            },
+            "default_warm_eager": {
+              "algo_check": 0,
+              "heuristic": 5,
+              "matmul": 5
+            },
+            "explicit_capture": {
+              "algo_check": 0,
+              "heuristic": 1,
+              "matmul": 1
+            },
+            "explicit_first_eager": {
+              "algo_check": 0,
+              "heuristic": 1,
+              "matmul": 1
+            },
+            "explicit_graph_replay": {
+              "algo_check": 0,
+              "heuristic": 0,
+              "matmul": 0
+            },
+            "explicit_warm_eager": {
+              "algo_check": 0,
+              "heuristic": 5,
+              "matmul": 5
+            }
+          }
+        },
+        "candidate": {
+          "explicit_used_descriptor_successes": 8,
+          "file_sha256": "cc55fcbe3bdd5956406ff0d1278ad0ee6a96173fe92ac0a4d50000d3648a8dcf",
+          "phase_call_counts": {
+            "default_capture": {
+              "algo_check": 0,
+              "heuristic": 1,
+              "matmul": 1
+            },
+            "default_first_eager": {
+              "algo_check": 0,
+              "heuristic": 1,
+              "matmul": 1
+            },
+            "default_graph_replay": {
+              "algo_check": 0,
+              "heuristic": 0,
+              "matmul": 0
+            },
+            "default_warm_eager": {
+              "algo_check": 0,
+              "heuristic": 5,
+              "matmul": 5
+            },
+            "explicit_capture": {
+              "algo_check": 0,
+              "heuristic": 0,
+              "matmul": 1
+            },
+            "explicit_first_eager": {
+              "algo_check": 1,
+              "heuristic": 0,
+              "matmul": 1
+            },
+            "explicit_graph_replay": {
+              "algo_check": 0,
+              "heuristic": 0,
+              "matmul": 0
+            },
+            "explicit_warm_eager": {
+              "algo_check": 0,
+              "heuristic": 0,
+              "matmul": 5
+            }
+          }
+        }
+      },
+      "scope": "One fixed M128,N=K1024 FP8 public operation on H100; no serving-performance or cross-workload claim",
+      "source_commit": "12a807084ac2deabe298641285baab75eeec5720",
+      "status": "success",
+      "timing": {
+        "absolute_us": {
+          "baseline": {
+            "default": {
+              "cuda_graph": {
+                "median_worker_median_us": 4.11774599342607,
+                "worker_medians_us": [
+                  4.034500307170674,
+                  4.158392403041944,
+                  4.11774599342607
+                ]
+              },
+              "eager": {
+                "median_worker_median_us": 70.28094842098653,
+                "worker_medians_us": [
+                  71.12256716936827,
+                  70.28094842098653,
+                  69.32402029633522
+                ]
+              }
+            },
+            "explicit": {
+              "cuda_graph": {
+                "median_worker_median_us": 4.117287244298495,
+                "worker_medians_us": [
+                  4.034010271425359,
+                  4.158216324867681,
+                  4.117287244298495
+                ]
+              },
+              "eager": {
+                "median_worker_median_us": 204.63350228965282,
+                "worker_medians_us": [
+                  204.89479647949338,
+                  204.63350228965282,
+                  203.136564232409
+                ]
+              }
+            }
+          },
+          "candidate": {
+            "default": {
+              "cuda_graph": {
+                "median_worker_median_us": 3.937100336770527,
+                "worker_medians_us": [
+                  3.937100336770527,
+                  4.156740033067763,
+                  3.9317837945418432
+                ]
+              },
+              "eager": {
+                "median_worker_median_us": 70.78269263729453,
+                "worker_medians_us": [
+                  74.90442367270589,
+                  70.78269263729453,
+                  70.24523220025003
+                ]
+              }
+            },
+            "explicit": {
+              "cuda_graph": {
+                "median_worker_median_us": 3.9360518712783232,
+                "worker_medians_us": [
+                  3.9360518712783232,
+                  4.1586856241337955,
+                  3.9341499359579757
+                ]
+              },
+              "eager": {
+                "median_worker_median_us": 72.1458112820983,
+                "worker_medians_us": [
+                  77.0215061493218,
+                  72.1458112820983,
+                  71.77803199738264
+                ]
+              }
+            }
+          }
+        },
+        "comparisons": [
+          {
+            "comparison": "candidate_explicit_over_baseline_explicit",
+            "execution": "eager",
+            "median_paired_ratio": 0.3533486562038198,
+            "paired_ratios": [
+              0.37590757536407415,
+              0.3525610932464909,
+              0.3533486562038198
+            ]
+          },
+          {
+            "comparison": "candidate_explicit_over_baseline_explicit",
+            "execution": "cuda_graph",
+            "median_paired_ratio": 0.9757168689329034,
+            "paired_ratios": [
+              0.9757168689329034,
+              1.000112860714655,
+              0.9555199097186812
+            ]
+          },
+          {
+            "comparison": "candidate_default_over_baseline_default",
+            "execution": "eager",
+            "median_paired_ratio": 1.0132884950984804,
+            "paired_ratios": [
+              1.0531737907369354,
+              1.0071391213064247,
+              1.0132884950984804
+            ]
+          },
+          {
+            "comparison": "candidate_default_over_baseline_default",
+            "execution": "cuda_graph",
+            "median_paired_ratio": 0.9758582320028494,
+            "paired_ratios": [
+              0.9758582320028494,
+              0.9996026421236792,
+              0.9548388367856802
+            ]
+          },
+          {
+            "comparison": "baseline_explicit_over_default",
+            "execution": "eager",
+            "median_paired_ratio": 2.911649698633654,
+            "paired_ratios": [
+              2.8808689651424646,
+              2.911649698633654,
+              2.9302478904724993
+            ]
+          },
+          {
+            "comparison": "baseline_explicit_over_default",
+            "execution": "cuda_graph",
+            "median_paired_ratio": 0.9998885921743821,
+            "paired_ratios": [
+              0.9998785386769101,
+              0.9999576571527655,
+              0.9998885921743821
+            ]
+          },
+          {
+            "comparison": "candidate_explicit_over_default",
+            "execution": "eager",
+            "median_paired_ratio": 1.0218206951435937,
+            "paired_ratios": [
+              1.0282637843375777,
+              1.0192577958539761,
+              1.0218206951435937
+            ]
+          },
+          {
+            "comparison": "candidate_explicit_over_default",
+            "execution": "cuda_graph",
+            "median_paired_ratio": 1.0004680569510134,
+            "paired_ratios": [
+              0.999733696019273,
+              1.0004680569510134,
+              1.0006017984558095
+            ]
+          }
+        ],
+        "default_normalized": [
+          {
+            "definition": "(candidate explicit / baseline explicit) / (candidate default / baseline default), separately for each paired seed",
+            "execution": "eager",
+            "median_paired_ratio": 0.3500619584602783,
+            "paired_ratios": [
+              0.3569283423783657,
+              0.3500619584602783,
+              0.34871476180086125
+            ]
+          },
+          {
+            "definition": "(candidate explicit / baseline explicit) / (candidate default / baseline default), separately for each paired seed",
+            "execution": "cuda_graph",
+            "median_paired_ratio": 1.0005104214109437,
+            "paired_ratios": [
+              0.9998551397474449,
+              1.0005104214109437,
+              1.0007132857470415
+            ]
+          }
+        ]
+      },
+      "traces": {
+        "trace-baseline-default.json.gz": {
+          "executions": {
+            "eager": {
+              "kernel_count": 5,
+              "signature": {
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "blocks_per_sm": 0.6666666865348816,
+                "grid": [
+                  8,
+                  11,
+                  1
+                ],
+                "name": "nvjet_sm90_qqtst_24x64_128x16_4x2_h_bz_TNN",
+                "occupancy": {
+                  "activeBlocksPerMultiprocessor": 0,
+                  "allocatedRegistersPerBlock": 64512,
+                  "allocatedSharedMemPerBlock": 198144,
+                  "blockLimitBarriers": 2147483647,
+                  "blockLimitBlocks": 32,
+                  "blockLimitRegs": 1,
+                  "blockLimitSharedMem": 0,
+                  "blockLimitWarps": 5,
+                  "limitingFactors": "SMEM"
+                },
+                "registers_per_thread": 168,
+                "shared_memory_bytes": 197076,
+                "warps_per_sm": 8
+              }
+            },
+            "graph_replay": {
+              "kernel_count": 5,
+              "signature": {
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "blocks_per_sm": 0.6666666865348816,
+                "grid": [
+                  8,
+                  11,
+                  1
+                ],
+                "name": "nvjet_sm90_qqtst_24x64_128x16_4x2_h_bz_TNN",
+                "occupancy": {
+                  "activeBlocksPerMultiprocessor": 0,
+                  "allocatedRegistersPerBlock": 64512,
+                  "allocatedSharedMemPerBlock": 198144,
+                  "blockLimitBarriers": 2147483647,
+                  "blockLimitBlocks": 32,
+                  "blockLimitRegs": 1,
+                  "blockLimitSharedMem": 0,
+                  "blockLimitWarps": 5,
+                  "limitingFactors": "SMEM"
+                },
+                "registers_per_thread": 168,
+                "shared_memory_bytes": 197076,
+                "warps_per_sm": 8
+              }
+            }
+          },
+          "sha256": "03d54971a9fcf23ee3fe31c4763643e7462d98f4449a7d4beab4de73b61eeded"
+        },
+        "trace-baseline-explicit.json.gz": {
+          "executions": {
+            "eager": {
+              "kernel_count": 5,
+              "signature": {
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "blocks_per_sm": 0.6666666865348816,
+                "grid": [
+                  8,
+                  11,
+                  1
+                ],
+                "name": "nvjet_sm90_qqtst_24x64_128x16_4x2_h_bz_TNN",
+                "occupancy": {
+                  "activeBlocksPerMultiprocessor": 0,
+                  "allocatedRegistersPerBlock": 64512,
+                  "allocatedSharedMemPerBlock": 198144,
+                  "blockLimitBarriers": 2147483647,
+                  "blockLimitBlocks": 32,
+                  "blockLimitRegs": 1,
+                  "blockLimitSharedMem": 0,
+                  "blockLimitWarps": 5,
+                  "limitingFactors": "SMEM"
+                },
+                "registers_per_thread": 168,
+                "shared_memory_bytes": 197076,
+                "warps_per_sm": 8
+              }
+            },
+            "graph_replay": {
+              "kernel_count": 5,
+              "signature": {
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "blocks_per_sm": 0.6666666865348816,
+                "grid": [
+                  8,
+                  11,
+                  1
+                ],
+                "name": "nvjet_sm90_qqtst_24x64_128x16_4x2_h_bz_TNN",
+                "occupancy": {
+                  "activeBlocksPerMultiprocessor": 0,
+                  "allocatedRegistersPerBlock": 64512,
+                  "allocatedSharedMemPerBlock": 198144,
+                  "blockLimitBarriers": 2147483647,
+                  "blockLimitBlocks": 32,
+                  "blockLimitRegs": 1,
+                  "blockLimitSharedMem": 0,
+                  "blockLimitWarps": 5,
+                  "limitingFactors": "SMEM"
+                },
+                "registers_per_thread": 168,
+                "shared_memory_bytes": 197076,
+                "warps_per_sm": 8
+              }
+            }
+          },
+          "sha256": "9acaa69654a7c2db31b211bcaf6790b5178cad5b3f27d5a8d75703533dc497bd"
+        },
+        "trace-candidate-default.json.gz": {
+          "executions": {
+            "eager": {
+              "kernel_count": 5,
+              "signature": {
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "blocks_per_sm": 0.6666666865348816,
+                "grid": [
+                  8,
+                  11,
+                  1
+                ],
+                "name": "nvjet_sm90_qqtst_24x64_128x16_4x2_h_bz_TNN",
+                "occupancy": {
+                  "activeBlocksPerMultiprocessor": 0,
+                  "allocatedRegistersPerBlock": 64512,
+                  "allocatedSharedMemPerBlock": 198144,
+                  "blockLimitBarriers": 2147483647,
+                  "blockLimitBlocks": 32,
+                  "blockLimitRegs": 1,
+                  "blockLimitSharedMem": 0,
+                  "blockLimitWarps": 5,
+                  "limitingFactors": "SMEM"
+                },
+                "registers_per_thread": 168,
+                "shared_memory_bytes": 197076,
+                "warps_per_sm": 8
+              }
+            },
+            "graph_replay": {
+              "kernel_count": 5,
+              "signature": {
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "blocks_per_sm": 0.6666666865348816,
+                "grid": [
+                  8,
+                  11,
+                  1
+                ],
+                "name": "nvjet_sm90_qqtst_24x64_128x16_4x2_h_bz_TNN",
+                "occupancy": {
+                  "activeBlocksPerMultiprocessor": 0,
+                  "allocatedRegistersPerBlock": 64512,
+                  "allocatedSharedMemPerBlock": 198144,
+                  "blockLimitBarriers": 2147483647,
+                  "blockLimitBlocks": 32,
+                  "blockLimitRegs": 1,
+                  "blockLimitSharedMem": 0,
+                  "blockLimitWarps": 5,
+                  "limitingFactors": "SMEM"
+                },
+                "registers_per_thread": 168,
+                "shared_memory_bytes": 197076,
+                "warps_per_sm": 8
+              }
+            }
+          },
+          "sha256": "e2d849f9d4b9c93c577d8862df1fc6ce086e3be3df58bdf18a20feb7df3f696e"
+        },
+        "trace-candidate-explicit.json.gz": {
+          "executions": {
+            "eager": {
+              "kernel_count": 5,
+              "signature": {
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "blocks_per_sm": 0.6666666865348816,
+                "grid": [
+                  8,
+                  11,
+                  1
+                ],
+                "name": "nvjet_sm90_qqtst_24x64_128x16_4x2_h_bz_TNN",
+                "occupancy": {
+                  "activeBlocksPerMultiprocessor": 0,
+                  "allocatedRegistersPerBlock": 64512,
+                  "allocatedSharedMemPerBlock": 198144,
+                  "blockLimitBarriers": 2147483647,
+                  "blockLimitBlocks": 32,
+                  "blockLimitRegs": 1,
+                  "blockLimitSharedMem": 0,
+                  "blockLimitWarps": 5,
+                  "limitingFactors": "SMEM"
+                },
+                "registers_per_thread": 168,
+                "shared_memory_bytes": 197076,
+                "warps_per_sm": 8
+              }
+            },
+            "graph_replay": {
+              "kernel_count": 5,
+              "signature": {
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "blocks_per_sm": 0.6666666865348816,
+                "grid": [
+                  8,
+                  11,
+                  1
+                ],
+                "name": "nvjet_sm90_qqtst_24x64_128x16_4x2_h_bz_TNN",
+                "occupancy": {
+                  "activeBlocksPerMultiprocessor": 0,
+                  "allocatedRegistersPerBlock": 64512,
+                  "allocatedSharedMemPerBlock": 198144,
+                  "blockLimitBarriers": 2147483647,
+                  "blockLimitBlocks": 32,
+                  "blockLimitRegs": 1,
+                  "blockLimitSharedMem": 0,
+                  "blockLimitWarps": 5,
+                  "limitingFactors": "SMEM"
+                },
+                "registers_per_thread": 168,
+                "shared_memory_bytes": 197076,
+                "warps_per_sm": 8
+              }
+            }
+          },
+          "sha256": "3a0cdf4b70dec0e9c10936b7322a83fc92ac38f3b2f1a10e11e4b68012b7e02c"
+        }
+      }
+    },
+    "independent_numerical_and_lifecycle_audit": {
+      "audit_method": "Independent stdlib assertions over original worker JSON, retained cache bytes and timing samples; no production GPU rerun and no reuse of the main analyzer logic. Numerical assertions are independently audited as executed recorded assertions; raw output tensors are not retained for recomputation.",
+      "candidate_native_acceptance_successes": 38,
+      "checks": [
+        "exactly 18 expected manual worker results",
+        "all 18 workers report success",
+        "all 18 worker exit codes are zero",
+        "all 18 manual workers used distinct container ids (container PID1 repetition is expected)",
+        "every worker hash matches frozen execution commit",
+        "every worker executed the frozen SGLang source commit",
+        "all 18 workers used the same physical GPU UUID",
+        "every attempted profile is recorded and no forbidden profile attempt occurred",
+        "all numerical assertions passed with the specified tolerances",
+        "qualification-baseline-17: recorded numerical errors are finite",
+        "qualification-baseline-17: changed-input graph controls return zero output",
+        "qualification-baseline-17: all observed public calls consume true tuner cache hits",
+        "qualification-baseline-17: no benchmark profiling",
+        "qualification-baseline-17: both tactics checked before, after, in eager measurements and graph measurements with changed/restored inputs",
+        "qualification-baseline-18: recorded numerical errors are finite",
+        "qualification-baseline-18: changed-input graph controls return zero output",
+        "qualification-baseline-18: all observed public calls consume true tuner cache hits",
+        "qualification-baseline-18: no benchmark profiling",
+        "qualification-baseline-18: both tactics checked before, after, in eager measurements and graph measurements with changed/restored inputs",
+        "qualification-baseline-19: recorded numerical errors are finite",
+        "qualification-baseline-19: changed-input graph controls return zero output",
+        "qualification-baseline-19: all observed public calls consume true tuner cache hits",
+        "qualification-baseline-19: no benchmark profiling",
+        "qualification-baseline-19: both tactics checked before, after, in eager measurements and graph measurements with changed/restored inputs",
+        "qualification-candidate-17: recorded numerical errors are finite",
+        "qualification-candidate-17: changed-input graph controls return zero output",
+        "qualification-candidate-17: all observed public calls consume true tuner cache hits",
+        "qualification-candidate-17: native acceptance exactly matches default_before",
+        "qualification-candidate-17: native acceptance exactly matches default_capture",
+        "qualification-candidate-17: native acceptance exactly matches default_after",
+        "qualification-candidate-17: native acceptance exactly matches explicit_before",
+        "qualification-candidate-17: native acceptance exactly matches explicit_capture",
+        "qualification-candidate-17: native acceptance exactly matches explicit_after",
+        "qualification-candidate-17: no benchmark profiling",
+        "qualification-candidate-17: both tactics checked before, after, in eager measurements and graph measurements with changed/restored inputs",
+        "benchmark-baseline-17: recorded numerical errors are finite",
+        "benchmark-baseline-17: changed-input graph controls return zero output",
+        "benchmark-baseline-17: all observed public calls consume true tuner cache hits",
+        "benchmark-baseline-17: no benchmark profiling",
+        "benchmark-baseline-17: both tactics checked before, after, in eager measurements and graph measurements with changed/restored inputs",
+        "benchmark-candidate-17: recorded numerical errors are finite",
+        "benchmark-candidate-17: changed-input graph controls return zero output",
+        "benchmark-candidate-17: all observed public calls consume true tuner cache hits",
+        "benchmark-candidate-17: native acceptance exactly matches default_before",
+        "benchmark-candidate-17: native acceptance exactly matches default_capture",
+        "benchmark-candidate-17: native acceptance exactly matches default_after",
+        "benchmark-candidate-17: native acceptance exactly matches explicit_before",
+        "benchmark-candidate-17: native acceptance exactly matches explicit_capture",
+        "benchmark-candidate-17: native acceptance exactly matches explicit_after",
+        "benchmark-candidate-17: no benchmark profiling",
+        "benchmark-candidate-17: both tactics checked before, after, in eager measurements and graph measurements with changed/restored inputs",
+        "benchmark-baseline-18: recorded numerical errors are finite",
+        "benchmark-baseline-18: changed-input graph controls return zero output",
+        "benchmark-baseline-18: all observed public calls consume true tuner cache hits",
+        "benchmark-baseline-18: no benchmark profiling",
+        "benchmark-baseline-18: both tactics checked before, after, in eager measurements and graph measurements with changed/restored inputs",
+        "benchmark-candidate-18: recorded numerical errors are finite",
+        "benchmark-candidate-18: changed-input graph controls return zero output",
+        "benchmark-candidate-18: all observed public calls consume true tuner cache hits",
+        "benchmark-candidate-18: native acceptance exactly matches explicit_before",
+        "benchmark-candidate-18: native acceptance exactly matches explicit_capture",
+        "benchmark-candidate-18: native acceptance exactly matches explicit_after",
+        "benchmark-candidate-18: native acceptance exactly matches default_before",
+        "benchmark-candidate-18: native acceptance exactly matches default_capture",
+        "benchmark-candidate-18: native acceptance exactly matches default_after",
+        "benchmark-candidate-18: no benchmark profiling",
+        "benchmark-candidate-18: both tactics checked before, after, in eager measurements and graph measurements with changed/restored inputs",
+        "benchmark-baseline-19: recorded numerical errors are finite",
+        "benchmark-baseline-19: changed-input graph controls return zero output",
+        "benchmark-baseline-19: all observed public calls consume true tuner cache hits",
+        "benchmark-baseline-19: no benchmark profiling",
+        "benchmark-baseline-19: both tactics checked before, after, in eager measurements and graph measurements with changed/restored inputs",
+        "benchmark-candidate-19: recorded numerical errors are finite",
+        "benchmark-candidate-19: changed-input graph controls return zero output",
+        "benchmark-candidate-19: all observed public calls consume true tuner cache hits",
+        "benchmark-candidate-19: native acceptance exactly matches explicit_before",
+        "benchmark-candidate-19: native acceptance exactly matches explicit_capture",
+        "benchmark-candidate-19: native acceptance exactly matches explicit_after",
+        "benchmark-candidate-19: native acceptance exactly matches default_before",
+        "benchmark-candidate-19: native acceptance exactly matches default_capture",
+        "benchmark-candidate-19: native acceptance exactly matches default_after",
+        "benchmark-candidate-19: no benchmark profiling",
+        "benchmark-candidate-19: both tactics checked before, after, in eager measurements and graph measurements with changed/restored inputs",
+        "observation-baseline: recorded numerical errors are finite",
+        "observation-baseline: changed-input graph controls return zero output",
+        "observation-baseline: all observed public calls consume true tuner cache hits",
+        "observation-baseline: no observation profiling",
+        "observation-baseline: all separate observation and graph controls checked",
+        "observation-candidate: recorded numerical errors are finite",
+        "observation-candidate: changed-input graph controls return zero output",
+        "observation-candidate: all observed public calls consume true tuner cache hits",
+        "observation-candidate: native acceptance exactly matches default_first_eager",
+        "observation-candidate: native acceptance exactly matches default_warm_eager",
+        "observation-candidate: native acceptance exactly matches default_capture",
+        "observation-candidate: native acceptance exactly matches default_after",
+        "observation-candidate: native acceptance exactly matches explicit_first_eager",
+        "observation-candidate: native acceptance exactly matches explicit_warm_eager",
+        "observation-candidate: native acceptance exactly matches explicit_capture",
+        "observation-candidate: native acceptance exactly matches explicit_after",
+        "observation-candidate: no observation profiling",
+        "observation-candidate: all separate observation and graph controls checked",
+        "lifecycle-baseline-v2-cold: recorded numerical errors are finite",
+        "lifecycle-baseline-v2-cold: changed-input graph controls return zero output",
+        "lifecycle-baseline-v2-cold: all observed public calls consume true tuner cache hits",
+        "lifecycle-baseline-v2-cold: both natural and forced persisted graph controls checked with changed/restored inputs",
+        "lifecycle-baseline-v2-cold: expected natural/forced bare and capture lookup counts",
+        "lifecycle-baseline-v2-warm: recorded numerical errors are finite",
+        "lifecycle-baseline-v2-warm: changed-input graph controls return zero output",
+        "lifecycle-baseline-v2-warm: all observed public calls consume true tuner cache hits",
+        "lifecycle-baseline-v2-warm: both natural and forced persisted graph controls checked with changed/restored inputs",
+        "lifecycle-baseline-v2-warm: expected natural/forced bare and capture lookup counts",
+        "lifecycle-candidate-v1-cold: recorded numerical errors are finite",
+        "lifecycle-candidate-v1-cold: changed-input graph controls return zero output",
+        "lifecycle-candidate-v1-cold: all observed public calls consume true tuner cache hits",
+        "lifecycle-candidate-v1-cold: native acceptance exactly matches natural_bare_after_context",
+        "lifecycle-candidate-v1-cold: native acceptance exactly matches natural_capture_after_context",
+        "lifecycle-candidate-v1-cold: native acceptance exactly matches explicit_before_save_reload",
+        "lifecycle-candidate-v1-cold: native acceptance exactly matches explicit_bare_after_reload",
+        "lifecycle-candidate-v1-cold: native acceptance exactly matches explicit_capture_after_reload",
+        "lifecycle-candidate-v1-cold: both natural and forced persisted graph controls checked with changed/restored inputs",
+        "lifecycle-candidate-v1-cold: expected natural/forced bare and capture lookup counts",
+        "lifecycle-candidate-v1-warm: recorded numerical errors are finite",
+        "lifecycle-candidate-v1-warm: changed-input graph controls return zero output",
+        "lifecycle-candidate-v1-warm: all observed public calls consume true tuner cache hits",
+        "lifecycle-candidate-v1-warm: native acceptance exactly matches natural_bare_after_context",
+        "lifecycle-candidate-v1-warm: native acceptance exactly matches natural_capture_after_context",
+        "lifecycle-candidate-v1-warm: native acceptance exactly matches explicit_bare_after_reload",
+        "lifecycle-candidate-v1-warm: native acceptance exactly matches explicit_capture_after_reload",
+        "lifecycle-candidate-v1-warm: both natural and forced persisted graph controls checked with changed/restored inputs",
+        "lifecycle-candidate-v1-warm: expected natural/forced bare and capture lookup counts",
+        "lifecycle-candidate-v2-cold: recorded numerical errors are finite",
+        "lifecycle-candidate-v2-cold: changed-input graph controls return zero output",
+        "lifecycle-candidate-v2-cold: all observed public calls consume true tuner cache hits",
+        "lifecycle-candidate-v2-cold: native acceptance exactly matches natural_bare_after_context",
+        "lifecycle-candidate-v2-cold: native acceptance exactly matches natural_capture_after_context",
+        "lifecycle-candidate-v2-cold: native acceptance exactly matches explicit_before_save_reload",
+        "lifecycle-candidate-v2-cold: native acceptance exactly matches explicit_bare_after_reload",
+        "lifecycle-candidate-v2-cold: native acceptance exactly matches explicit_capture_after_reload",
+        "lifecycle-candidate-v2-cold: both natural and forced persisted graph controls checked with changed/restored inputs",
+        "lifecycle-candidate-v2-cold: expected natural/forced bare and capture lookup counts",
+        "lifecycle-candidate-v2-warm: recorded numerical errors are finite",
+        "lifecycle-candidate-v2-warm: changed-input graph controls return zero output",
+        "lifecycle-candidate-v2-warm: all observed public calls consume true tuner cache hits",
+        "lifecycle-candidate-v2-warm: native acceptance exactly matches natural_bare_after_context",
+        "lifecycle-candidate-v2-warm: native acceptance exactly matches natural_capture_after_context",
+        "lifecycle-candidate-v2-warm: native acceptance exactly matches explicit_bare_after_reload",
+        "lifecycle-candidate-v2-warm: native acceptance exactly matches explicit_capture_after_reload",
+        "lifecycle-candidate-v2-warm: both natural and forced persisted graph controls checked with changed/restored inputs",
+        "lifecycle-candidate-v2-warm: expected natural/forced bare and capture lookup counts",
+        "seed17: exact 64-byte descriptors match reference and both primary arms",
+        "seed17: exact FP8 operand/scale bytes match all paired arms",
+        "seed17: candidate tactic is exactly the descriptor of baseline ordinal0",
+        "seed17/baseline: benchmark has no native preload",
+        "seed17/baseline/default/eager: all 15 samples are finite and positive",
+        "seed17/baseline/default/eager: median independently recomputed",
+        "seed17/baseline/default/eager: warmup and calibration durations meet protocol",
+        "seed17/baseline/default/cuda_graph: all 15 samples are finite and positive",
+        "seed17/baseline/default/cuda_graph: median independently recomputed",
+        "seed17/baseline/default/cuda_graph: warmup and calibration durations meet protocol",
+        "seed17/baseline/explicit/eager: all 15 samples are finite and positive",
+        "seed17/baseline/explicit/eager: median independently recomputed",
+        "seed17/baseline/explicit/eager: warmup and calibration durations meet protocol",
+        "seed17/baseline/explicit/cuda_graph: all 15 samples are finite and positive",
+        "seed17/baseline/explicit/cuda_graph: median independently recomputed",
+        "seed17/baseline/explicit/cuda_graph: warmup and calibration durations meet protocol",
+        "seed17/candidate: benchmark has no native preload",
+        "seed17/candidate/default/eager: all 15 samples are finite and positive",
+        "seed17/candidate/default/eager: median independently recomputed",
+        "seed17/candidate/default/eager: warmup and calibration durations meet protocol",
+        "seed17/candidate/default/cuda_graph: all 15 samples are finite and positive",
+        "seed17/candidate/default/cuda_graph: median independently recomputed",
+        "seed17/candidate/default/cuda_graph: warmup and calibration durations meet protocol",
+        "seed17/candidate/explicit/eager: all 15 samples are finite and positive",
+        "seed17/candidate/explicit/eager: median independently recomputed",
+        "seed17/candidate/explicit/eager: warmup and calibration durations meet protocol",
+        "seed17/candidate/explicit/cuda_graph: all 15 samples are finite and positive",
+        "seed17/candidate/explicit/cuda_graph: median independently recomputed",
+        "seed17/candidate/explicit/cuda_graph: warmup and calibration durations meet protocol",
+        "seed18: exact 64-byte descriptors match reference and both primary arms",
+        "seed18: exact FP8 operand/scale bytes match all paired arms",
+        "seed18: candidate tactic is exactly the descriptor of baseline ordinal0",
+        "seed18/baseline: benchmark has no native preload",
+        "seed18/baseline/explicit/eager: all 15 samples are finite and positive",
+        "seed18/baseline/explicit/eager: median independently recomputed",
+        "seed18/baseline/explicit/eager: warmup and calibration durations meet protocol",
+        "seed18/baseline/explicit/cuda_graph: all 15 samples are finite and positive",
+        "seed18/baseline/explicit/cuda_graph: median independently recomputed",
+        "seed18/baseline/explicit/cuda_graph: warmup and calibration durations meet protocol",
+        "seed18/baseline/default/eager: all 15 samples are finite and positive",
+        "seed18/baseline/default/eager: median independently recomputed",
+        "seed18/baseline/default/eager: warmup and calibration durations meet protocol",
+        "seed18/baseline/default/cuda_graph: all 15 samples are finite and positive",
+        "seed18/baseline/default/cuda_graph: median independently recomputed",
+        "seed18/baseline/default/cuda_graph: warmup and calibration durations meet protocol",
+        "seed18/candidate: benchmark has no native preload",
+        "seed18/candidate/explicit/eager: all 15 samples are finite and positive",
+        "seed18/candidate/explicit/eager: median independently recomputed",
+        "seed18/candidate/explicit/eager: warmup and calibration durations meet protocol",
+        "seed18/candidate/explicit/cuda_graph: all 15 samples are finite and positive",
+        "seed18/candidate/explicit/cuda_graph: median independently recomputed",
+        "seed18/candidate/explicit/cuda_graph: warmup and calibration durations meet protocol",
+        "seed18/candidate/default/eager: all 15 samples are finite and positive",
+        "seed18/candidate/default/eager: median independently recomputed",
+        "seed18/candidate/default/eager: warmup and calibration durations meet protocol",
+        "seed18/candidate/default/cuda_graph: all 15 samples are finite and positive",
+        "seed18/candidate/default/cuda_graph: median independently recomputed",
+        "seed18/candidate/default/cuda_graph: warmup and calibration durations meet protocol",
+        "seed19: exact 64-byte descriptors match reference and both primary arms",
+        "seed19: exact FP8 operand/scale bytes match all paired arms",
+        "seed19: candidate tactic is exactly the descriptor of baseline ordinal0",
+        "seed19/baseline: benchmark has no native preload",
+        "seed19/baseline/explicit/eager: all 15 samples are finite and positive",
+        "seed19/baseline/explicit/eager: median independently recomputed",
+        "seed19/baseline/explicit/eager: warmup and calibration durations meet protocol",
+        "seed19/baseline/explicit/cuda_graph: all 15 samples are finite and positive",
+        "seed19/baseline/explicit/cuda_graph: median independently recomputed",
+        "seed19/baseline/explicit/cuda_graph: warmup and calibration durations meet protocol",
+        "seed19/baseline/default/eager: all 15 samples are finite and positive",
+        "seed19/baseline/default/eager: median independently recomputed",
+        "seed19/baseline/default/eager: warmup and calibration durations meet protocol",
+        "seed19/baseline/default/cuda_graph: all 15 samples are finite and positive",
+        "seed19/baseline/default/cuda_graph: median independently recomputed",
+        "seed19/baseline/default/cuda_graph: warmup and calibration durations meet protocol",
+        "seed19/candidate: benchmark has no native preload",
+        "seed19/candidate/explicit/eager: all 15 samples are finite and positive",
+        "seed19/candidate/explicit/eager: median independently recomputed",
+        "seed19/candidate/explicit/eager: warmup and calibration durations meet protocol",
+        "seed19/candidate/explicit/cuda_graph: all 15 samples are finite and positive",
+        "seed19/candidate/explicit/cuda_graph: median independently recomputed",
+        "seed19/candidate/explicit/cuda_graph: warmup and calibration durations meet protocol",
+        "seed19/candidate/default/eager: all 15 samples are finite and positive",
+        "seed19/candidate/default/eager: median independently recomputed",
+        "seed19/candidate/default/eager: warmup and calibration durations meet protocol",
+        "seed19/candidate/default/cuda_graph: all 15 samples are finite and positive",
+        "seed19/candidate/default/cuda_graph: median independently recomputed",
+        "seed19/candidate/default/cuda_graph: warmup and calibration durations meet protocol",
+        "lifecycle-baseline-v2-warm: fresh warm startup and serving perform no profiling",
+        "lifecycle-baseline-v2-warm: natural cold winner survives fresh-process startup",
+        "lifecycle-baseline-v2-warm: forced explicit descriptor survives fresh-process reload",
+        "lifecycle-baseline-v2-warm: both cold files have identical hashes before and after warm reload",
+        "lifecycle-baseline-v2-warm: retained natural cache bytes match reported SHA256",
+        "lifecycle-baseline-v2-warm: natural file entry count",
+        "lifecycle-baseline-v2-warm: natural cache has exactly one actual runtime-bucket entry",
+        "lifecycle-baseline-v2-warm: natural runtime file entry encodes the expected winner",
+        "lifecycle-baseline-v2-warm: retained explicit cache bytes match reported SHA256",
+        "lifecycle-baseline-v2-warm: explicit file entry count",
+        "lifecycle-baseline-v2-warm: explicit cache has exactly one actual runtime-bucket entry",
+        "lifecycle-baseline-v2-warm: explicit runtime file entry encodes the expected winner",
+        "lifecycle-baseline-v2-cold: expected candidate participation",
+        "lifecycle-baseline-v2-cold: all actual runtime candidates have finite profiles",
+        "lifecycle-baseline-v2-cold: natural selected tactic matches independently recomputed runtime profile minimum",
+        "lifecycle-baseline-v2-cold: default candidate participates only in v2",
+        "lifecycle-candidate-v1-warm: fresh warm startup and serving perform no profiling",
+        "lifecycle-candidate-v1-warm: natural cold winner survives fresh-process startup",
+        "lifecycle-candidate-v1-warm: forced explicit descriptor survives fresh-process reload",
+        "lifecycle-candidate-v1-warm: both cold files have identical hashes before and after warm reload",
+        "lifecycle-candidate-v1-warm: retained natural cache bytes match reported SHA256",
+        "lifecycle-candidate-v1-warm: natural file entry count",
+        "lifecycle-candidate-v1-warm: natural cache has exactly one actual runtime-bucket entry",
+        "lifecycle-candidate-v1-warm: natural runtime file entry encodes the expected winner",
+        "lifecycle-candidate-v1-warm: retained explicit cache bytes match reported SHA256",
+        "lifecycle-candidate-v1-warm: explicit file entry count",
+        "lifecycle-candidate-v1-warm: explicit cache has exactly one actual runtime-bucket entry",
+        "lifecycle-candidate-v1-warm: explicit runtime file entry encodes the expected winner",
+        "lifecycle-candidate-v1-cold: expected candidate participation",
+        "lifecycle-candidate-v1-cold: all actual runtime candidates have finite profiles",
+        "lifecycle-candidate-v1-cold: natural selected tactic matches independently recomputed runtime profile minimum",
+        "lifecycle-candidate-v1-cold: default candidate participates only in v2",
+        "lifecycle-candidate-v2-warm: fresh warm startup and serving perform no profiling",
+        "lifecycle-candidate-v2-warm: natural cold winner survives fresh-process startup",
+        "lifecycle-candidate-v2-warm: forced explicit descriptor survives fresh-process reload",
+        "lifecycle-candidate-v2-warm: both cold files have identical hashes before and after warm reload",
+        "lifecycle-candidate-v2-warm: retained natural cache bytes match reported SHA256",
+        "lifecycle-candidate-v2-warm: natural file entry count",
+        "lifecycle-candidate-v2-warm: natural cache has exactly one actual runtime-bucket entry",
+        "lifecycle-candidate-v2-warm: natural runtime file entry encodes the expected winner",
+        "lifecycle-candidate-v2-warm: retained explicit cache bytes match reported SHA256",
+        "lifecycle-candidate-v2-warm: explicit file entry count",
+        "lifecycle-candidate-v2-warm: explicit cache has exactly one actual runtime-bucket entry",
+        "lifecycle-candidate-v2-warm: explicit runtime file entry encodes the expected winner",
+        "lifecycle-candidate-v2-cold: expected candidate participation",
+        "lifecycle-candidate-v2-cold: all actual runtime candidates have finite profiles",
+        "lifecycle-candidate-v2-cold: natural selected tactic matches independently recomputed runtime profile minimum",
+        "lifecycle-candidate-v2-cold: default candidate participates only in v2",
+        "upstream focused qualification reports 19 passes and no failed/skipped cases",
+        "every upstream case has an executed passing call report"
+      ],
+      "checks_passed": 286,
+      "correctness_checks": 209,
+      "frozen_execution_commit": "12a807084ac2deabe298641285baab75eeec5720",
+      "lifecycle": [
+        {
+          "cold_profile_attempts": 72,
+          "explicit_control": 0,
+          "files": {
+            "explicit": {
+              "entries": 1,
+              "runtime_entry": [
+                "CublasFp8GemmRunner",
+                0
+              ],
+              "sha256": "0d77974ae53e73899c15b6cc6f79eeead96dd15a7d1d7e4d8f1c9179de3ade81"
+            },
+            "natural": {
+              "entries": 8,
+              "runtime_entry": [
+                "CublasFp8GemmRunner",
+                0,
+                [
+                  "cuda_graph_profile_replays",
+                  null,
+                  "l2_cache_policy",
+                  "hot"
+                ]
+              ],
+              "sha256": "d32a52c446c970781ce0ca8e48d14cfcd92cee857f25280a4e8700c25fd2beee"
+            }
+          },
+          "implementation": "baseline",
+          "natural_winner": 0,
+          "runtime_profile_candidates": 9,
+          "runtime_profile_minimum_ms": 0.0130048006772995,
+          "tuning_version": "v2",
+          "warm_profile_attempts": 0
+        },
+        {
+          "cold_profile_attempts": 64,
+          "explicit_control": [
+            253403070530,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "files": {
+            "explicit": {
+              "entries": 1,
+              "runtime_entry": [
+                "CublasFp8GemmRunner",
+                [
+                  253403070530,
+                  4294967332,
+                  0,
+                  1970324836974594,
+                  558779540176897,
+                  120259084316,
+                  292058693646,
+                  0
+                ]
+              ],
+              "sha256": "0b1a5c4e484b4a5c13761ea1dbc542f7c5152560ba21a35a1a3239c4003bdb5a"
+            },
+            "natural": {
+              "entries": 8,
+              "runtime_entry": [
+                "CublasFp8GemmRunner",
+                [
+                  253403070530,
+                  4294967332,
+                  0,
+                  1970324836974594,
+                  558779540176897,
+                  120259084316,
+                  292058693646,
+                  0
+                ],
+                [
+                  "cuda_graph_profile_replays",
+                  null,
+                  "l2_cache_policy",
+                  "hot"
+                ]
+              ],
+              "sha256": "3ee732adeaefd59acde691d71adcf24bb69c78a0297c7e10a400083faf1f61ad"
+            }
+          },
+          "implementation": "candidate",
+          "natural_winner": [
+            253403070530,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "runtime_profile_candidates": 8,
+          "runtime_profile_minimum_ms": 0.01435520052909851,
+          "tuning_version": "v1",
+          "warm_profile_attempts": 0
+        },
+        {
+          "cold_profile_attempts": 72,
+          "explicit_control": [
+            253403070530,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "files": {
+            "explicit": {
+              "entries": 1,
+              "runtime_entry": [
+                "CublasFp8GemmRunner",
+                [
+                  253403070530,
+                  4294967332,
+                  0,
+                  1970324836974594,
+                  558779540176897,
+                  120259084316,
+                  292058693646,
+                  0
+                ]
+              ],
+              "sha256": "0b1a5c4e484b4a5c13761ea1dbc542f7c5152560ba21a35a1a3239c4003bdb5a"
+            },
+            "natural": {
+              "entries": 8,
+              "runtime_entry": [
+                "CublasFp8GemmRunner",
+                [
+                  253403070530,
+                  4294967332,
+                  0,
+                  1970324836974594,
+                  558779540176897,
+                  120259084316,
+                  292058693646,
+                  0
+                ],
+                [
+                  "cuda_graph_profile_replays",
+                  null,
+                  "l2_cache_policy",
+                  "hot"
+                ]
+              ],
+              "sha256": "bd98a2a7b0ba5e75ea883783d557f9cbaddf0357a21734670aabecded99fa487"
+            }
+          },
+          "implementation": "candidate",
+          "natural_winner": [
+            253403070530,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "runtime_profile_candidates": 9,
+          "runtime_profile_minimum_ms": 0.013603200018405915,
+          "tuning_version": "v2",
+          "warm_profile_attempts": 0
+        }
+      ],
+      "manual_workers": 18,
+      "median_paired_candidate_to_baseline_ratio": {
+        "cuda_graph": 0.9757168689329034,
+        "eager": 0.3533486562038198
+      },
+      "median_paired_default_normalized_ratio": {
+        "cuda_graph": 1.0005104214109437,
+        "eager": 0.3500619584602783
+      },
+      "paired_runtime": [
+        {
+          "candidate_to_baseline": {
+            "cuda_graph": 0.9757168689329034,
+            "eager": 0.37590757536407415
+          },
+          "default_normalized_ratio": {
+            "cuda_graph": 0.9998551397474449,
+            "eager": 0.3569283423783657
+          },
+          "medians_us": {
+            "cuda_graph": {
+              "baseline_default": 4.034500307170674,
+              "baseline_explicit": 4.034010271425359,
+              "candidate_default": 3.937100336770527,
+              "candidate_explicit": 3.9360518712783232
+            },
+            "eager": {
+              "baseline_default": 71.12256716936827,
+              "baseline_explicit": 204.89479647949338,
+              "candidate_default": 74.90442367270589,
+              "candidate_explicit": 77.0215061493218
+            }
+          },
+          "seed": 17
+        },
+        {
+          "candidate_to_baseline": {
+            "cuda_graph": 1.000112860714655,
+            "eager": 0.3525610932464909
+          },
+          "default_normalized_ratio": {
+            "cuda_graph": 1.0005104214109437,
+            "eager": 0.3500619584602783
+          },
+          "medians_us": {
+            "cuda_graph": {
+              "baseline_default": 4.158392403041944,
+              "baseline_explicit": 4.158216324867681,
+              "candidate_default": 4.156740033067763,
+              "candidate_explicit": 4.1586856241337955
+            },
+            "eager": {
+              "baseline_default": 70.28094842098653,
+              "baseline_explicit": 204.63350228965282,
+              "candidate_default": 70.78269263729453,
+              "candidate_explicit": 72.1458112820983
+            }
+          },
+          "seed": 18
+        },
+        {
+          "candidate_to_baseline": {
+            "cuda_graph": 0.9555199097186812,
+            "eager": 0.3533486562038198
+          },
+          "default_normalized_ratio": {
+            "cuda_graph": 1.0007132857470415,
+            "eager": 0.34871476180086125
+          },
+          "medians_us": {
+            "cuda_graph": {
+              "baseline_default": 4.11774599342607,
+              "baseline_explicit": 4.117287244298495,
+              "candidate_default": 3.9317837945418432,
+              "candidate_explicit": 3.9341499359579757
+            },
+            "eager": {
+              "baseline_default": 69.32402029633522,
+              "baseline_explicit": 203.136564232409,
+              "candidate_default": 70.24523220025003,
+              "candidate_explicit": 71.77803199738264
+            }
+          },
+          "seed": 19
+        }
+      ],
+      "scope_limits": [
+        "M128,N=K1024, FP8 cublas backend, one H100 and pinned software only.",
+        "Three primary trial units, not 45 independent trials.",
+        "Forced descriptor runtime measurement is separate from natural profiled-winner lifecycle qualification.",
+        "No full model serving measurement or BF16 backend execution.",
+        "Cold startup durations are diagnostic and not a clean cold-start comparison because explicit candidate enumeration precedes wrapper startup."
+      ],
+      "status": "success",
+      "true_cache_lookup_observations": 119,
+      "upstream_cases_failed_or_skipped": 0,
+      "upstream_cases_passed": 19,
+      "worker_sha256": "573c9af041fa9aa1300ea5a57b57e365c039df5dee734e5518274b5c8c12ba60"
+    },
+    "independent_source_and_build_audit": {
+      "checks": [
+        {
+          "check": "frozen inputs and image",
+          "detail": {
+            "expected_manual_workers": 18,
+            "source_runtime_files_per_arm": 7
+          },
+          "status": "passed"
+        },
+        {
+          "check": "worker qualification-baseline-17",
+          "detail": {
+            "native_library_sha256": "bcc37715bf2968107a2606f9ef55c3928f71deab865ed1be7e02360f16135336",
+            "sha256": "dbfaafb0a3856b14a5742bab089f3d2e204f6d263cffe213111ec29035eb34e9"
+          },
+          "status": "passed"
+        },
+        {
+          "check": "worker qualification-baseline-18",
+          "detail": {
+            "native_library_sha256": "bcc37715bf2968107a2606f9ef55c3928f71deab865ed1be7e02360f16135336",
+            "sha256": "6fdf65416af66461dfe675233a5e15ce48323c9d861bd53dcad64263d7d24ee4"
+          },
+          "status": "passed"
+        },
+        {
+          "check": "worker qualification-baseline-19",
+          "detail": {
+            "native_library_sha256": "bcc37715bf2968107a2606f9ef55c3928f71deab865ed1be7e02360f16135336",
+            "sha256": "362444806bfe0fac869287df09f20d848a964ed0de8f4cf96d8e591541487a61"
+          },
+          "status": "passed"
+        },
+        {
+          "check": "worker qualification-candidate-17",
+          "detail": {
+            "native_library_sha256": "66aede90cc076d17296005657bb2fb57d810ed1fc1956bd2dce864ef383b63d5",
+            "sha256": "cd88e1c27149d58d743cc36196ae6c61c4cd6a4013778c09d69c0af81cd88f5c"
+          },
+          "status": "passed"
+        },
+        {
+          "check": "worker benchmark-baseline-17",
+          "detail": {
+            "native_library_sha256": "bcc37715bf2968107a2606f9ef55c3928f71deab865ed1be7e02360f16135336",
+            "sha256": "cd017018e2a82baed804b0474ace2ab2578b10e4b2110ab74016dca1d51d589e"
+          },
+          "status": "passed"
+        },
+        {
+          "check": "worker benchmark-candidate-17",
+          "detail": {
+            "native_library_sha256": "66aede90cc076d17296005657bb2fb57d810ed1fc1956bd2dce864ef383b63d5",
+            "sha256": "0bce16cc067e1397c19b2f92ec8a1795e1583a30f106143ae8e8d5322d8e500b"
+          },
+          "status": "passed"
+        },
+        {
+          "check": "worker benchmark-baseline-18",
+          "detail": {
+            "native_library_sha256": "bcc37715bf2968107a2606f9ef55c3928f71deab865ed1be7e02360f16135336",
+            "sha256": "8e6a5a4a17224df426b01fce106feed81c966c1868667702631c9ed52184e429"
+          },
+          "status": "passed"
+        },
+        {
+          "check": "worker benchmark-candidate-18",
+          "detail": {
+            "native_library_sha256": "66aede90cc076d17296005657bb2fb57d810ed1fc1956bd2dce864ef383b63d5",
+            "sha256": "cfc508e2d40b731ec0fafd667195d100008ef8696e3454192acf907107e4dced"
+          },
+          "status": "passed"
+        },
+        {
+          "check": "worker benchmark-baseline-19",
+          "detail": {
+            "native_library_sha256": "bcc37715bf2968107a2606f9ef55c3928f71deab865ed1be7e02360f16135336",
+            "sha256": "926f8f4bfe99548c94e53f886bdbcc06b53f557992edcfc82f65416ad5de594a"
+          },
+          "status": "passed"
+        },
+        {
+          "check": "worker benchmark-candidate-19",
+          "detail": {
+            "native_library_sha256": "66aede90cc076d17296005657bb2fb57d810ed1fc1956bd2dce864ef383b63d5",
+            "sha256": "52d5725967e6cc56482b39c4a1c5a37f29d476c1146e089303d06260441cb008"
+          },
+          "status": "passed"
+        },
+        {
+          "check": "worker observation-baseline",
+          "detail": {
+            "native_library_sha256": "bcc37715bf2968107a2606f9ef55c3928f71deab865ed1be7e02360f16135336",
+            "sha256": "24fe24f6c9e630edf94c135d22eeb66b0daf18995ea0d9589445875f2fb2a788"
+          },
+          "status": "passed"
+        },
+        {
+          "check": "worker observation-candidate",
+          "detail": {
+            "native_library_sha256": "66aede90cc076d17296005657bb2fb57d810ed1fc1956bd2dce864ef383b63d5",
+            "sha256": "7ce20c904e3981af4c9b13849400af4be0a35a2713acf85458ff92bbba4ef3a8"
+          },
+          "status": "passed"
+        },
+        {
+          "check": "worker lifecycle-baseline-v2-cold",
+          "detail": {
+            "native_library_sha256": "bcc37715bf2968107a2606f9ef55c3928f71deab865ed1be7e02360f16135336",
+            "sha256": "8163d5f9d12b86a302548c5e7b57c41932e28a972c38df6d39961e67f799bf3d"
+          },
+          "status": "passed"
+        },
+        {
+          "check": "worker lifecycle-baseline-v2-warm",
+          "detail": {
+            "native_library_sha256": "bcc37715bf2968107a2606f9ef55c3928f71deab865ed1be7e02360f16135336",
+            "sha256": "82f3e4a43d824a6761f3aead1ffcc768cc4d0d2d0c1d808ef3c243474e5b2846"
+          },
+          "status": "passed"
+        },
+        {
+          "check": "worker lifecycle-candidate-v1-cold",
+          "detail": {
+            "native_library_sha256": "66aede90cc076d17296005657bb2fb57d810ed1fc1956bd2dce864ef383b63d5",
+            "sha256": "d4bd034d74eef1c209e42f0ef76e7ae4a0aad6e057e6c3f5de4c17387a317707"
+          },
+          "status": "passed"
+        },
+        {
+          "check": "worker lifecycle-candidate-v1-warm",
+          "detail": {
+            "native_library_sha256": "66aede90cc076d17296005657bb2fb57d810ed1fc1956bd2dce864ef383b63d5",
+            "sha256": "b5921d6ddc5e729f06abdd4ebe7f88c1a26b63d17572e46ee1c040b4c56c3d73"
+          },
+          "status": "passed"
+        },
+        {
+          "check": "worker lifecycle-candidate-v2-cold",
+          "detail": {
+            "native_library_sha256": "66aede90cc076d17296005657bb2fb57d810ed1fc1956bd2dce864ef383b63d5",
+            "sha256": "0a6b638afbe00d6cf7560fbc355f36c38f552ea101794cd0e21e5bce248525a6"
+          },
+          "status": "passed"
+        },
+        {
+          "check": "worker lifecycle-candidate-v2-warm",
+          "detail": {
+            "native_library_sha256": "66aede90cc076d17296005657bb2fb57d810ed1fc1956bd2dce864ef383b63d5",
+            "sha256": "a8b1d2ba5f11bd8e8472e79c887dc142d25ef63028c9889ddee5658d939b115b"
+          },
+          "status": "passed"
+        },
+        {
+          "check": "paired algorithm, inputs and persistence",
+          "detail": {
+            "fresh_process_pairs": 3,
+            "matched_workers": 18
+          },
+          "status": "passed"
+        },
+        {
+          "check": "all native translation units and retained build rules",
+          "detail": {
+            "arms": [
+              "baseline",
+              "candidate"
+            ],
+            "native_result_references": 19,
+            "translation_units_per_arm": 3
+          },
+          "status": "passed"
+        },
+        {
+          "check": "exact 19 selected upstream cases and sources",
+          "detail": {
+            "bf16_qualification": false,
+            "cpu_serialization_persistence_cases": 14,
+            "h100_fp8_cases": 5,
+            "skips": 0
+          },
+          "status": "passed"
+        }
+      ],
+      "errors": [],
+      "execution_commit": "12a807084ac2deabe298641285baab75eeec5720",
+      "schema_version": 1,
+      "scope": "Independent frozen-source/native provenance, paired descriptor/input identity, persistence-byte continuity and exact selected upstream case audit. Timing statistics and native trace interpretation require separate analysis.",
+      "status": "success"
+    }
+  },
+  "scope": "Audits of actual executed GPU results plus analyzer fault controls; no extra GPU measurements. Independent numerical audits verify executed assertion records and input hashes, not a second tensor computation.",
+  "status": "success"
+}

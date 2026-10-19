@@ -1,0 +1,3940 @@
+{
+  "status": "success",
+  "schema_version": 1,
+  "source_commit": "12a807084ac2deabe298641285baab75eeec5720",
+  "source_manifest_sha256": "3f4305fce604d3cd51e85047678c6efbf71e35bcf51037e9586d15bc20486895",
+  "analyzer_sha256": "3e8999ddaac6f918c5b6eb69838810b8648af7f5bb61f069b3c4f9e0b2de4a93",
+  "outer_provenance": {
+    "image": {
+      "Id": "sha256:2e152727f0a5ce999172ec48203b2b292d41b3cb370976827718870557899caa",
+      "RepoDigests": [
+        "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0"
+      ],
+      "Created": "2026-10-19T00:48:17.586753916Z",
+      "Architecture": "amd64",
+      "Os": "linux",
+      "Size": 39141723315
+    },
+    "plan_sha256": "d44a609994cde9ae2e77b3f9915f3321e913286b055ffeb2b19a8f5f6c6a1b62",
+    "launcher_manifest_sha256": "6b3bd8db937efa1615fcb296d2c0fa93eae6622c9448674555fd4d5f8dc6d7f0",
+    "probe_binary_sha256": "2dadadeebe075fc30c240d83e150e5f964d5856462ced750e421989706799723",
+    "gpu": {
+      "index": "0",
+      "name": "NVIDIA H100 80GB HBM3",
+      "uuid": "GPU-bc979292-ef6c-5590-af89-44b70faefecc",
+      "driver_version": "580.159.04",
+      "pstate": "P0",
+      "clocks.current.sm [MHz]": "345 MHz",
+      "clocks.current.memory [MHz]": "2619 MHz",
+      "power.limit [W]": "700.00 W",
+      "temperature.gpu": "31",
+      "memory.total [MiB]": "81559 MiB",
+      "memory.used [MiB]": "14 MiB"
+    }
+  },
+  "validated_workers": [
+    {
+      "file": "/private/tmp/sglang-descriptor-20261019T232945Z/raw/attempt01/benchmark-baseline-17.json",
+      "sha256": "cd017018e2a82baed804b0474ace2ab2578b10e4b2110ab74016dca1d51d589e",
+      "implementation": "baseline",
+      "mode": "benchmark",
+      "seed": 17,
+      "container_id": "9e1c78b36c2084e64f863c26968c72043ca1cdd96b06d57926216adf7341e2a6"
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-20261019T232945Z/raw/attempt01/benchmark-baseline-18.json",
+      "sha256": "8e6a5a4a17224df426b01fce106feed81c966c1868667702631c9ed52184e429",
+      "implementation": "baseline",
+      "mode": "benchmark",
+      "seed": 18,
+      "container_id": "b18dec2ba36825a3efa84a9f7e1ddb8264093338147231a48fbde2522b049248"
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-20261019T232945Z/raw/attempt01/benchmark-baseline-19.json",
+      "sha256": "926f8f4bfe99548c94e53f886bdbcc06b53f557992edcfc82f65416ad5de594a",
+      "implementation": "baseline",
+      "mode": "benchmark",
+      "seed": 19,
+      "container_id": "ba5b52a4a2500f8bb548566a3f942b37542600d29e1a592cddd299e2ebdbdeb8"
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-20261019T232945Z/raw/attempt01/benchmark-candidate-17.json",
+      "sha256": "0bce16cc067e1397c19b2f92ec8a1795e1583a30f106143ae8e8d5322d8e500b",
+      "implementation": "candidate",
+      "mode": "benchmark",
+      "seed": 17,
+      "container_id": "0de3b52deaffbdfe3ef3989acd93751e2472b0cefee9c01b2474768d1316dd3f"
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-20261019T232945Z/raw/attempt01/benchmark-candidate-18.json",
+      "sha256": "cfc508e2d40b731ec0fafd667195d100008ef8696e3454192acf907107e4dced",
+      "implementation": "candidate",
+      "mode": "benchmark",
+      "seed": 18,
+      "container_id": "ac08e77544734211d482c8ae454144a137e1d00374ac55cf6f94fea20846bd9c"
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-20261019T232945Z/raw/attempt01/benchmark-candidate-19.json",
+      "sha256": "52d5725967e6cc56482b39c4a1c5a37f29d476c1146e089303d06260441cb008",
+      "implementation": "candidate",
+      "mode": "benchmark",
+      "seed": 19,
+      "container_id": "77b9a86f14091a77cda0308e85db01828609889fd461644fc9a706f82b86e796"
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-20261019T232945Z/raw/attempt01/lifecycle-baseline-v2-cold.json",
+      "sha256": "8163d5f9d12b86a302548c5e7b57c41932e28a972c38df6d39961e67f799bf3d",
+      "implementation": "baseline",
+      "mode": "lifecycle-cold",
+      "seed": 17,
+      "container_id": "b8d60b2edf8e84136d04c6c5a869d703f595dc4f56a6c49ee21c58e9089434d8"
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-20261019T232945Z/raw/attempt01/lifecycle-baseline-v2-warm.json",
+      "sha256": "82f3e4a43d824a6761f3aead1ffcc768cc4d0d2d0c1d808ef3c243474e5b2846",
+      "implementation": "baseline",
+      "mode": "lifecycle-warm",
+      "seed": 17,
+      "container_id": "fe360c497b5712dd0720adb4d434acff1cd7337e01a2a0835a40e6ee8b52f315"
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-20261019T232945Z/raw/attempt01/lifecycle-candidate-v1-cold.json",
+      "sha256": "d4bd034d74eef1c209e42f0ef76e7ae4a0aad6e057e6c3f5de4c17387a317707",
+      "implementation": "candidate",
+      "mode": "lifecycle-cold",
+      "seed": 17,
+      "container_id": "5d946054a2f503a95a66cec8e9c2c41afc0c6af21a6983bf71b480c751f0a7f0"
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-20261019T232945Z/raw/attempt01/lifecycle-candidate-v1-warm.json",
+      "sha256": "b5921d6ddc5e729f06abdd4ebe7f88c1a26b63d17572e46ee1c040b4c56c3d73",
+      "implementation": "candidate",
+      "mode": "lifecycle-warm",
+      "seed": 17,
+      "container_id": "bc2e8f14648df81446444cd62c91f796063c5ee36950a0a49daae5db3b7ab763"
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-20261019T232945Z/raw/attempt01/lifecycle-candidate-v2-cold.json",
+      "sha256": "0a6b638afbe00d6cf7560fbc355f36c38f552ea101794cd0e21e5bce248525a6",
+      "implementation": "candidate",
+      "mode": "lifecycle-cold",
+      "seed": 17,
+      "container_id": "8f6059b9b6327b8810ecae9fdf1ca96d7f37bb4ff91fb7fc4d55e976652973d1"
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-20261019T232945Z/raw/attempt01/lifecycle-candidate-v2-warm.json",
+      "sha256": "a8b1d2ba5f11bd8e8472e79c887dc142d25ef63028c9889ddee5658d939b115b",
+      "implementation": "candidate",
+      "mode": "lifecycle-warm",
+      "seed": 17,
+      "container_id": "6e0d60a7ff4ec5d8ef3dadb5909796a85991680bef11568c535b9d1a4c45c7ab"
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-20261019T232945Z/raw/attempt01/observation-baseline.json",
+      "sha256": "24fe24f6c9e630edf94c135d22eeb66b0daf18995ea0d9589445875f2fb2a788",
+      "implementation": "baseline",
+      "mode": "observe",
+      "seed": 17,
+      "container_id": "710dd7e02c794f4e29ef50427b763a9c4ff84945e3b6c9f0a5ed2a7c9d853ba7"
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-20261019T232945Z/raw/attempt01/observation-candidate.json",
+      "sha256": "7ce20c904e3981af4c9b13849400af4be0a35a2713acf85458ff92bbba4ef3a8",
+      "implementation": "candidate",
+      "mode": "observe",
+      "seed": 17,
+      "container_id": "9b490a156d45e080661ad8d0fbf37740aa566fd40e5a5364aa527dc9a3804359"
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-20261019T232945Z/raw/attempt01/qualification-baseline-17.json",
+      "sha256": "dbfaafb0a3856b14a5742bab089f3d2e204f6d263cffe213111ec29035eb34e9",
+      "implementation": "baseline",
+      "mode": "benchmark",
+      "seed": 17,
+      "container_id": "d89a6465bfe40248984cc6ee0c93db9c171ee38291dc0bd85f1f6be9ebbb84a4"
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-20261019T232945Z/raw/attempt01/qualification-baseline-18.json",
+      "sha256": "6fdf65416af66461dfe675233a5e15ce48323c9d861bd53dcad64263d7d24ee4",
+      "implementation": "baseline",
+      "mode": "benchmark",
+      "seed": 18,
+      "container_id": "ec949012bf16d5e36f788dd5c6bea82979f5360f3c0e64353768f93523d29997"
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-20261019T232945Z/raw/attempt01/qualification-baseline-19.json",
+      "sha256": "362444806bfe0fac869287df09f20d848a964ed0de8f4cf96d8e591541487a61",
+      "implementation": "baseline",
+      "mode": "benchmark",
+      "seed": 19,
+      "container_id": "023c1636c46a14c2aa60aae2672903352d01c7d2239dfe124e1a54057038f5cc"
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-20261019T232945Z/raw/attempt01/qualification-candidate-17.json",
+      "sha256": "cd88e1c27149d58d743cc36196ae6c61c4cd6a4013778c09d69c0af81cd88f5c",
+      "implementation": "candidate",
+      "mode": "benchmark",
+      "seed": 17,
+      "container_id": "7e8a1259af6a4aba516551a36bb5bba589eb259a99fffd00f48b90bb9b6fe35c"
+    }
+  ],
+  "comparisons": [
+    {
+      "comparison": "candidate_explicit_over_baseline_explicit",
+      "execution": "eager",
+      "paired_trials": [
+        {
+          "seed": 17,
+          "numerator_median_ms": 0.0770215061493218,
+          "denominator_median_ms": 0.20489479647949338,
+          "ratio": 0.37590757536407415
+        },
+        {
+          "seed": 18,
+          "numerator_median_ms": 0.0721458112820983,
+          "denominator_median_ms": 0.20463350228965282,
+          "ratio": 0.3525610932464909
+        },
+        {
+          "seed": 19,
+          "numerator_median_ms": 0.07177803199738264,
+          "denominator_median_ms": 0.203136564232409,
+          "ratio": 0.3533486562038198
+        }
+      ],
+      "median_paired_ratio": 0.3533486562038198,
+      "independent_trial_count": 3,
+      "ratio_direction": "latency numerator/denominator; smaller is faster"
+    },
+    {
+      "comparison": "candidate_explicit_over_baseline_explicit",
+      "execution": "cuda_graph",
+      "paired_trials": [
+        {
+          "seed": 17,
+          "numerator_median_ms": 0.003936051871278323,
+          "denominator_median_ms": 0.004034010271425359,
+          "ratio": 0.9757168689329034
+        },
+        {
+          "seed": 18,
+          "numerator_median_ms": 0.0041586856241337955,
+          "denominator_median_ms": 0.004158216324867681,
+          "ratio": 1.000112860714655
+        },
+        {
+          "seed": 19,
+          "numerator_median_ms": 0.003934149935957976,
+          "denominator_median_ms": 0.004117287244298495,
+          "ratio": 0.9555199097186812
+        }
+      ],
+      "median_paired_ratio": 0.9757168689329034,
+      "independent_trial_count": 3,
+      "ratio_direction": "latency numerator/denominator; smaller is faster"
+    },
+    {
+      "comparison": "candidate_default_over_baseline_default",
+      "execution": "eager",
+      "paired_trials": [
+        {
+          "seed": 17,
+          "numerator_median_ms": 0.07490442367270589,
+          "denominator_median_ms": 0.07112256716936827,
+          "ratio": 1.0531737907369354
+        },
+        {
+          "seed": 18,
+          "numerator_median_ms": 0.07078269263729453,
+          "denominator_median_ms": 0.07028094842098653,
+          "ratio": 1.0071391213064247
+        },
+        {
+          "seed": 19,
+          "numerator_median_ms": 0.07024523220025003,
+          "denominator_median_ms": 0.06932402029633522,
+          "ratio": 1.0132884950984804
+        }
+      ],
+      "median_paired_ratio": 1.0132884950984804,
+      "independent_trial_count": 3,
+      "ratio_direction": "latency numerator/denominator; smaller is faster"
+    },
+    {
+      "comparison": "candidate_default_over_baseline_default",
+      "execution": "cuda_graph",
+      "paired_trials": [
+        {
+          "seed": 17,
+          "numerator_median_ms": 0.003937100336770527,
+          "denominator_median_ms": 0.004034500307170674,
+          "ratio": 0.9758582320028494
+        },
+        {
+          "seed": 18,
+          "numerator_median_ms": 0.004156740033067763,
+          "denominator_median_ms": 0.004158392403041944,
+          "ratio": 0.9996026421236792
+        },
+        {
+          "seed": 19,
+          "numerator_median_ms": 0.003931783794541843,
+          "denominator_median_ms": 0.00411774599342607,
+          "ratio": 0.9548388367856802
+        }
+      ],
+      "median_paired_ratio": 0.9758582320028494,
+      "independent_trial_count": 3,
+      "ratio_direction": "latency numerator/denominator; smaller is faster"
+    },
+    {
+      "comparison": "baseline_explicit_over_default",
+      "execution": "eager",
+      "paired_trials": [
+        {
+          "seed": 17,
+          "numerator_median_ms": 0.20489479647949338,
+          "denominator_median_ms": 0.07112256716936827,
+          "ratio": 2.8808689651424646
+        },
+        {
+          "seed": 18,
+          "numerator_median_ms": 0.20463350228965282,
+          "denominator_median_ms": 0.07028094842098653,
+          "ratio": 2.911649698633654
+        },
+        {
+          "seed": 19,
+          "numerator_median_ms": 0.203136564232409,
+          "denominator_median_ms": 0.06932402029633522,
+          "ratio": 2.9302478904724993
+        }
+      ],
+      "median_paired_ratio": 2.911649698633654,
+      "independent_trial_count": 3,
+      "ratio_direction": "latency numerator/denominator; smaller is faster"
+    },
+    {
+      "comparison": "baseline_explicit_over_default",
+      "execution": "cuda_graph",
+      "paired_trials": [
+        {
+          "seed": 17,
+          "numerator_median_ms": 0.004034010271425359,
+          "denominator_median_ms": 0.004034500307170674,
+          "ratio": 0.9998785386769101
+        },
+        {
+          "seed": 18,
+          "numerator_median_ms": 0.004158216324867681,
+          "denominator_median_ms": 0.004158392403041944,
+          "ratio": 0.9999576571527655
+        },
+        {
+          "seed": 19,
+          "numerator_median_ms": 0.004117287244298495,
+          "denominator_median_ms": 0.00411774599342607,
+          "ratio": 0.9998885921743821
+        }
+      ],
+      "median_paired_ratio": 0.9998885921743821,
+      "independent_trial_count": 3,
+      "ratio_direction": "latency numerator/denominator; smaller is faster"
+    },
+    {
+      "comparison": "candidate_explicit_over_default",
+      "execution": "eager",
+      "paired_trials": [
+        {
+          "seed": 17,
+          "numerator_median_ms": 0.0770215061493218,
+          "denominator_median_ms": 0.07490442367270589,
+          "ratio": 1.0282637843375777
+        },
+        {
+          "seed": 18,
+          "numerator_median_ms": 0.0721458112820983,
+          "denominator_median_ms": 0.07078269263729453,
+          "ratio": 1.0192577958539761
+        },
+        {
+          "seed": 19,
+          "numerator_median_ms": 0.07177803199738264,
+          "denominator_median_ms": 0.07024523220025003,
+          "ratio": 1.0218206951435937
+        }
+      ],
+      "median_paired_ratio": 1.0218206951435937,
+      "independent_trial_count": 3,
+      "ratio_direction": "latency numerator/denominator; smaller is faster"
+    },
+    {
+      "comparison": "candidate_explicit_over_default",
+      "execution": "cuda_graph",
+      "paired_trials": [
+        {
+          "seed": 17,
+          "numerator_median_ms": 0.003936051871278323,
+          "denominator_median_ms": 0.003937100336770527,
+          "ratio": 0.999733696019273
+        },
+        {
+          "seed": 18,
+          "numerator_median_ms": 0.0041586856241337955,
+          "denominator_median_ms": 0.004156740033067763,
+          "ratio": 1.0004680569510134
+        },
+        {
+          "seed": 19,
+          "numerator_median_ms": 0.003934149935957976,
+          "denominator_median_ms": 0.003931783794541843,
+          "ratio": 1.0006017984558095
+        }
+      ],
+      "median_paired_ratio": 1.0004680569510134,
+      "independent_trial_count": 3,
+      "ratio_direction": "latency numerator/denominator; smaller is faster"
+    }
+  ],
+  "native_observations": {
+    "baseline": {
+      "path": "/private/tmp/sglang-descriptor-20261019T232945Z/raw/attempt01/native-baseline.jsonl",
+      "sha256": "292b2d40234a6f063acb7f2d546592b6ccd35c75a5562b4fdf1a72b5cff20cbd",
+      "phases": {
+        "default_first_eager": {
+          "api_summary": {
+            "matmul_desc_create": {
+              "calls": 1,
+              "host_ns": 340,
+              "failures": 0
+            },
+            "matmul_desc_destroy": {
+              "calls": 1,
+              "host_ns": 100,
+              "failures": 0
+            },
+            "matmul_desc_set_attribute": {
+              "calls": 5,
+              "host_ns": 300,
+              "failures": 0
+            },
+            "matrix_layout_create": {
+              "calls": 3,
+              "host_ns": 178,
+              "failures": 0
+            },
+            "matrix_layout_destroy": {
+              "calls": 3,
+              "host_ns": 220,
+              "failures": 0
+            },
+            "matrix_layout_set_attribute": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "preference_create": {
+              "calls": 1,
+              "host_ns": 240,
+              "failures": 0
+            },
+            "preference_destroy": {
+              "calls": 1,
+              "host_ns": 160,
+              "failures": 0
+            },
+            "preference_set_attribute": {
+              "calls": 1,
+              "host_ns": 91,
+              "failures": 0
+            },
+            "heuristic": {
+              "calls": 1,
+              "host_ns": 7640,
+              "failures": 0
+            },
+            "algo_check": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matmul": {
+              "calls": 1,
+              "host_ns": 24680,
+              "failures": 0
+            }
+          },
+          "heuristic_requests": [
+            1
+          ],
+          "submitted_algorithms": [
+            {
+              "raw_hex": "420000003b0000002400000001000000000000000000000002000000000007000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 59
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 2
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            }
+          ],
+          "descriptor_checks": []
+        },
+        "default_warm_eager": {
+          "api_summary": {
+            "matmul_desc_create": {
+              "calls": 5,
+              "host_ns": 1330,
+              "failures": 0
+            },
+            "matmul_desc_destroy": {
+              "calls": 5,
+              "host_ns": 350,
+              "failures": 0
+            },
+            "matmul_desc_set_attribute": {
+              "calls": 25,
+              "host_ns": 1258,
+              "failures": 0
+            },
+            "matrix_layout_create": {
+              "calls": 15,
+              "host_ns": 780,
+              "failures": 0
+            },
+            "matrix_layout_destroy": {
+              "calls": 15,
+              "host_ns": 768,
+              "failures": 0
+            },
+            "matrix_layout_set_attribute": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "preference_create": {
+              "calls": 5,
+              "host_ns": 340,
+              "failures": 0
+            },
+            "preference_destroy": {
+              "calls": 5,
+              "host_ns": 560,
+              "failures": 0
+            },
+            "preference_set_attribute": {
+              "calls": 5,
+              "host_ns": 440,
+              "failures": 0
+            },
+            "heuristic": {
+              "calls": 5,
+              "host_ns": 14220,
+              "failures": 0
+            },
+            "algo_check": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matmul": {
+              "calls": 5,
+              "host_ns": 80381,
+              "failures": 0
+            }
+          },
+          "heuristic_requests": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "submitted_algorithms": [
+            {
+              "raw_hex": "420000003b0000002400000001000000000000000000000002000000000007000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 59
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 2
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            },
+            {
+              "raw_hex": "420000003b0000002400000001000000000000000000000002000000000007000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 59
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 2
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            },
+            {
+              "raw_hex": "420000003b0000002400000001000000000000000000000002000000000007000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 59
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 2
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            },
+            {
+              "raw_hex": "420000003b0000002400000001000000000000000000000002000000000007000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 59
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 2
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            },
+            {
+              "raw_hex": "420000003b0000002400000001000000000000000000000002000000000007000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 59
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 2
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            }
+          ],
+          "descriptor_checks": []
+        },
+        "default_capture": {
+          "api_summary": {
+            "matmul_desc_create": {
+              "calls": 1,
+              "host_ns": 400,
+              "failures": 0
+            },
+            "matmul_desc_destroy": {
+              "calls": 1,
+              "host_ns": 71,
+              "failures": 0
+            },
+            "matmul_desc_set_attribute": {
+              "calls": 5,
+              "host_ns": 280,
+              "failures": 0
+            },
+            "matrix_layout_create": {
+              "calls": 3,
+              "host_ns": 2120,
+              "failures": 0
+            },
+            "matrix_layout_destroy": {
+              "calls": 3,
+              "host_ns": 169,
+              "failures": 0
+            },
+            "matrix_layout_set_attribute": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "preference_create": {
+              "calls": 1,
+              "host_ns": 89,
+              "failures": 0
+            },
+            "preference_destroy": {
+              "calls": 1,
+              "host_ns": 189,
+              "failures": 0
+            },
+            "preference_set_attribute": {
+              "calls": 1,
+              "host_ns": 100,
+              "failures": 0
+            },
+            "heuristic": {
+              "calls": 1,
+              "host_ns": 3520,
+              "failures": 0
+            },
+            "algo_check": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matmul": {
+              "calls": 1,
+              "host_ns": 37460,
+              "failures": 0
+            }
+          },
+          "heuristic_requests": [
+            1
+          ],
+          "submitted_algorithms": [
+            {
+              "raw_hex": "420000003b0000002400000001000000000000000000000002000000000007000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 59
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 2
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            }
+          ],
+          "descriptor_checks": []
+        },
+        "default_graph_replay": {
+          "api_summary": {
+            "matmul_desc_create": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matmul_desc_destroy": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matmul_desc_set_attribute": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matrix_layout_create": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matrix_layout_destroy": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matrix_layout_set_attribute": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "preference_create": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "preference_destroy": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "preference_set_attribute": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "heuristic": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "algo_check": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matmul": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            }
+          },
+          "heuristic_requests": [],
+          "submitted_algorithms": [],
+          "descriptor_checks": []
+        },
+        "explicit_first_eager": {
+          "api_summary": {
+            "matmul_desc_create": {
+              "calls": 2,
+              "host_ns": 431,
+              "failures": 0
+            },
+            "matmul_desc_destroy": {
+              "calls": 2,
+              "host_ns": 170,
+              "failures": 0
+            },
+            "matmul_desc_set_attribute": {
+              "calls": 10,
+              "host_ns": 509,
+              "failures": 0
+            },
+            "matrix_layout_create": {
+              "calls": 6,
+              "host_ns": 329,
+              "failures": 0
+            },
+            "matrix_layout_destroy": {
+              "calls": 6,
+              "host_ns": 350,
+              "failures": 0
+            },
+            "matrix_layout_set_attribute": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "preference_create": {
+              "calls": 1,
+              "host_ns": 140,
+              "failures": 0
+            },
+            "preference_destroy": {
+              "calls": 1,
+              "host_ns": 140,
+              "failures": 0
+            },
+            "preference_set_attribute": {
+              "calls": 1,
+              "host_ns": 91,
+              "failures": 0
+            },
+            "heuristic": {
+              "calls": 1,
+              "host_ns": 151331,
+              "failures": 0
+            },
+            "algo_check": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matmul": {
+              "calls": 1,
+              "host_ns": 19240,
+              "failures": 0
+            }
+          },
+          "heuristic_requests": [
+            100
+          ],
+          "submitted_algorithms": [
+            {
+              "raw_hex": "420000003b0000002400000001000000000000000000000002000000000007000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 59
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 2
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            }
+          ],
+          "descriptor_checks": []
+        },
+        "explicit_warm_eager": {
+          "api_summary": {
+            "matmul_desc_create": {
+              "calls": 10,
+              "host_ns": 1839,
+              "failures": 0
+            },
+            "matmul_desc_destroy": {
+              "calls": 10,
+              "host_ns": 681,
+              "failures": 0
+            },
+            "matmul_desc_set_attribute": {
+              "calls": 50,
+              "host_ns": 2413,
+              "failures": 0
+            },
+            "matrix_layout_create": {
+              "calls": 30,
+              "host_ns": 1481,
+              "failures": 0
+            },
+            "matrix_layout_destroy": {
+              "calls": 30,
+              "host_ns": 1689,
+              "failures": 0
+            },
+            "matrix_layout_set_attribute": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "preference_create": {
+              "calls": 5,
+              "host_ns": 400,
+              "failures": 0
+            },
+            "preference_destroy": {
+              "calls": 5,
+              "host_ns": 590,
+              "failures": 0
+            },
+            "preference_set_attribute": {
+              "calls": 5,
+              "host_ns": 420,
+              "failures": 0
+            },
+            "heuristic": {
+              "calls": 5,
+              "host_ns": 581711,
+              "failures": 0
+            },
+            "algo_check": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matmul": {
+              "calls": 5,
+              "host_ns": 87870,
+              "failures": 0
+            }
+          },
+          "heuristic_requests": [
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "submitted_algorithms": [
+            {
+              "raw_hex": "420000003b0000002400000001000000000000000000000002000000000007000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 59
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 2
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            },
+            {
+              "raw_hex": "420000003b0000002400000001000000000000000000000002000000000007000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 59
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 2
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            },
+            {
+              "raw_hex": "420000003b0000002400000001000000000000000000000002000000000007000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 59
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 2
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            },
+            {
+              "raw_hex": "420000003b0000002400000001000000000000000000000002000000000007000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 59
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 2
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            },
+            {
+              "raw_hex": "420000003b0000002400000001000000000000000000000002000000000007000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 59
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 2
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            }
+          ],
+          "descriptor_checks": []
+        },
+        "explicit_capture": {
+          "api_summary": {
+            "matmul_desc_create": {
+              "calls": 2,
+              "host_ns": 449,
+              "failures": 0
+            },
+            "matmul_desc_destroy": {
+              "calls": 2,
+              "host_ns": 160,
+              "failures": 0
+            },
+            "matmul_desc_set_attribute": {
+              "calls": 10,
+              "host_ns": 542,
+              "failures": 0
+            },
+            "matrix_layout_create": {
+              "calls": 6,
+              "host_ns": 678,
+              "failures": 0
+            },
+            "matrix_layout_destroy": {
+              "calls": 6,
+              "host_ns": 300,
+              "failures": 0
+            },
+            "matrix_layout_set_attribute": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "preference_create": {
+              "calls": 1,
+              "host_ns": 180,
+              "failures": 0
+            },
+            "preference_destroy": {
+              "calls": 1,
+              "host_ns": 140,
+              "failures": 0
+            },
+            "preference_set_attribute": {
+              "calls": 1,
+              "host_ns": 100,
+              "failures": 0
+            },
+            "heuristic": {
+              "calls": 1,
+              "host_ns": 121231,
+              "failures": 0
+            },
+            "algo_check": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matmul": {
+              "calls": 1,
+              "host_ns": 13800,
+              "failures": 0
+            }
+          },
+          "heuristic_requests": [
+            100
+          ],
+          "submitted_algorithms": [
+            {
+              "raw_hex": "420000003b0000002400000001000000000000000000000002000000000007000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 59
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 2
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            }
+          ],
+          "descriptor_checks": []
+        },
+        "explicit_graph_replay": {
+          "api_summary": {
+            "matmul_desc_create": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matmul_desc_destroy": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matmul_desc_set_attribute": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matrix_layout_create": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matrix_layout_destroy": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matrix_layout_set_attribute": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "preference_create": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "preference_destroy": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "preference_set_attribute": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "heuristic": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "algo_check": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matmul": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            }
+          },
+          "heuristic_requests": [],
+          "submitted_algorithms": [],
+          "descriptor_checks": []
+        }
+      }
+    },
+    "candidate": {
+      "path": "/private/tmp/sglang-descriptor-20261019T232945Z/raw/attempt01/native-candidate.jsonl",
+      "sha256": "cc55fcbe3bdd5956406ff0d1278ad0ee6a96173fe92ac0a4d50000d3648a8dcf",
+      "phases": {
+        "default_first_eager": {
+          "api_summary": {
+            "matmul_desc_create": {
+              "calls": 1,
+              "host_ns": 360,
+              "failures": 0
+            },
+            "matmul_desc_destroy": {
+              "calls": 1,
+              "host_ns": 100,
+              "failures": 0
+            },
+            "matmul_desc_set_attribute": {
+              "calls": 5,
+              "host_ns": 310,
+              "failures": 0
+            },
+            "matrix_layout_create": {
+              "calls": 3,
+              "host_ns": 190,
+              "failures": 0
+            },
+            "matrix_layout_destroy": {
+              "calls": 3,
+              "host_ns": 231,
+              "failures": 0
+            },
+            "matrix_layout_set_attribute": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "preference_create": {
+              "calls": 1,
+              "host_ns": 210,
+              "failures": 0
+            },
+            "preference_destroy": {
+              "calls": 1,
+              "host_ns": 120,
+              "failures": 0
+            },
+            "preference_set_attribute": {
+              "calls": 1,
+              "host_ns": 100,
+              "failures": 0
+            },
+            "heuristic": {
+              "calls": 1,
+              "host_ns": 8020,
+              "failures": 0
+            },
+            "algo_check": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matmul": {
+              "calls": 1,
+              "host_ns": 24729,
+              "failures": 0
+            }
+          },
+          "heuristic_requests": [
+            1
+          ],
+          "submitted_algorithms": [
+            {
+              "raw_hex": "420000003b0000002400000001000000000000000000000002000000000007000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 59
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 2
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            }
+          ],
+          "descriptor_checks": []
+        },
+        "default_warm_eager": {
+          "api_summary": {
+            "matmul_desc_create": {
+              "calls": 5,
+              "host_ns": 1281,
+              "failures": 0
+            },
+            "matmul_desc_destroy": {
+              "calls": 5,
+              "host_ns": 368,
+              "failures": 0
+            },
+            "matmul_desc_set_attribute": {
+              "calls": 25,
+              "host_ns": 1354,
+              "failures": 0
+            },
+            "matrix_layout_create": {
+              "calls": 15,
+              "host_ns": 830,
+              "failures": 0
+            },
+            "matrix_layout_destroy": {
+              "calls": 15,
+              "host_ns": 708,
+              "failures": 0
+            },
+            "matrix_layout_set_attribute": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "preference_create": {
+              "calls": 5,
+              "host_ns": 400,
+              "failures": 0
+            },
+            "preference_destroy": {
+              "calls": 5,
+              "host_ns": 479,
+              "failures": 0
+            },
+            "preference_set_attribute": {
+              "calls": 5,
+              "host_ns": 388,
+              "failures": 0
+            },
+            "heuristic": {
+              "calls": 5,
+              "host_ns": 14250,
+              "failures": 0
+            },
+            "algo_check": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matmul": {
+              "calls": 5,
+              "host_ns": 78790,
+              "failures": 0
+            }
+          },
+          "heuristic_requests": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "submitted_algorithms": [
+            {
+              "raw_hex": "420000003b0000002400000001000000000000000000000002000000000007000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 59
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 2
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            },
+            {
+              "raw_hex": "420000003b0000002400000001000000000000000000000002000000000007000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 59
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 2
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            },
+            {
+              "raw_hex": "420000003b0000002400000001000000000000000000000002000000000007000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 59
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 2
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            },
+            {
+              "raw_hex": "420000003b0000002400000001000000000000000000000002000000000007000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 59
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 2
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            },
+            {
+              "raw_hex": "420000003b0000002400000001000000000000000000000002000000000007000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 59
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 2
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            }
+          ],
+          "descriptor_checks": []
+        },
+        "default_capture": {
+          "api_summary": {
+            "matmul_desc_create": {
+              "calls": 1,
+              "host_ns": 370,
+              "failures": 0
+            },
+            "matmul_desc_destroy": {
+              "calls": 1,
+              "host_ns": 90,
+              "failures": 0
+            },
+            "matmul_desc_set_attribute": {
+              "calls": 5,
+              "host_ns": 270,
+              "failures": 0
+            },
+            "matrix_layout_create": {
+              "calls": 3,
+              "host_ns": 190,
+              "failures": 0
+            },
+            "matrix_layout_destroy": {
+              "calls": 3,
+              "host_ns": 170,
+              "failures": 0
+            },
+            "matrix_layout_set_attribute": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "preference_create": {
+              "calls": 1,
+              "host_ns": 90,
+              "failures": 0
+            },
+            "preference_destroy": {
+              "calls": 1,
+              "host_ns": 130,
+              "failures": 0
+            },
+            "preference_set_attribute": {
+              "calls": 1,
+              "host_ns": 90,
+              "failures": 0
+            },
+            "heuristic": {
+              "calls": 1,
+              "host_ns": 3500,
+              "failures": 0
+            },
+            "algo_check": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matmul": {
+              "calls": 1,
+              "host_ns": 38640,
+              "failures": 0
+            }
+          },
+          "heuristic_requests": [
+            1
+          ],
+          "submitted_algorithms": [
+            {
+              "raw_hex": "420000003b0000002400000001000000000000000000000002000000000007000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 59
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 2
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            }
+          ],
+          "descriptor_checks": []
+        },
+        "default_graph_replay": {
+          "api_summary": {
+            "matmul_desc_create": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matmul_desc_destroy": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matmul_desc_set_attribute": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matrix_layout_create": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matrix_layout_destroy": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matrix_layout_set_attribute": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "preference_create": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "preference_destroy": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "preference_set_attribute": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "heuristic": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "algo_check": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matmul": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            }
+          },
+          "heuristic_requests": [],
+          "submitted_algorithms": [],
+          "descriptor_checks": []
+        },
+        "explicit_first_eager": {
+          "api_summary": {
+            "matmul_desc_create": {
+              "calls": 1,
+              "host_ns": 349,
+              "failures": 0
+            },
+            "matmul_desc_destroy": {
+              "calls": 1,
+              "host_ns": 90,
+              "failures": 0
+            },
+            "matmul_desc_set_attribute": {
+              "calls": 5,
+              "host_ns": 280,
+              "failures": 0
+            },
+            "matrix_layout_create": {
+              "calls": 3,
+              "host_ns": 167,
+              "failures": 0
+            },
+            "matrix_layout_destroy": {
+              "calls": 3,
+              "host_ns": 180,
+              "failures": 0
+            },
+            "matrix_layout_set_attribute": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "preference_create": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "preference_destroy": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "preference_set_attribute": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "heuristic": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "algo_check": {
+              "calls": 1,
+              "host_ns": 7289,
+              "failures": 0
+            },
+            "matmul": {
+              "calls": 1,
+              "host_ns": 18120,
+              "failures": 0
+            }
+          },
+          "heuristic_requests": [],
+          "submitted_algorithms": [
+            {
+              "raw_hex": "420000003b0000002400000001000000000000000000000002000000000007000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 59
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 2
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            }
+          ],
+          "descriptor_checks": [
+            {
+              "event": "algo_check",
+              "phase": "explicit_first_eager",
+              "pid": 1,
+              "host_ns": 7289,
+              "status": 0,
+              "result": {
+                "state": 0,
+                "workspace_bytes": 0
+              },
+              "algo": {
+                "raw_hex": "420000003b0000002400000001000000000000000000000002000000000007000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+                "raw_bytes": 64,
+                "config_scope": "selected_public_attributes",
+                "config": {
+                  "id": {
+                    "status": 0,
+                    "bytes": 4,
+                    "value": 66
+                  },
+                  "tile_id": {
+                    "status": 0,
+                    "bytes": 4,
+                    "value": 59
+                  },
+                  "split_k": {
+                    "status": 0,
+                    "bytes": 4,
+                    "value": 1
+                  },
+                  "reduction_scheme": {
+                    "status": 0,
+                    "bytes": 4,
+                    "value": 0
+                  },
+                  "cta_swizzling": {
+                    "status": 0,
+                    "bytes": 4,
+                    "value": 0
+                  },
+                  "custom_option": {
+                    "status": 0,
+                    "bytes": 4,
+                    "value": 2
+                  },
+                  "stages_id": {
+                    "status": 0,
+                    "bytes": 4,
+                    "value": 36
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "explicit_warm_eager": {
+          "api_summary": {
+            "matmul_desc_create": {
+              "calls": 5,
+              "host_ns": 1270,
+              "failures": 0
+            },
+            "matmul_desc_destroy": {
+              "calls": 5,
+              "host_ns": 360,
+              "failures": 0
+            },
+            "matmul_desc_set_attribute": {
+              "calls": 25,
+              "host_ns": 1286,
+              "failures": 0
+            },
+            "matrix_layout_create": {
+              "calls": 15,
+              "host_ns": 842,
+              "failures": 0
+            },
+            "matrix_layout_destroy": {
+              "calls": 15,
+              "host_ns": 820,
+              "failures": 0
+            },
+            "matrix_layout_set_attribute": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "preference_create": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "preference_destroy": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "preference_set_attribute": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "heuristic": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "algo_check": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matmul": {
+              "calls": 5,
+              "host_ns": 89641,
+              "failures": 0
+            }
+          },
+          "heuristic_requests": [],
+          "submitted_algorithms": [
+            {
+              "raw_hex": "420000003b0000002400000001000000000000000000000002000000000007000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 59
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 2
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            },
+            {
+              "raw_hex": "420000003b0000002400000001000000000000000000000002000000000007000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 59
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 2
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            },
+            {
+              "raw_hex": "420000003b0000002400000001000000000000000000000002000000000007000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 59
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 2
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            },
+            {
+              "raw_hex": "420000003b0000002400000001000000000000000000000002000000000007000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 59
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 2
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            },
+            {
+              "raw_hex": "420000003b0000002400000001000000000000000000000002000000000007000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 59
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 2
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            }
+          ],
+          "descriptor_checks": []
+        },
+        "explicit_capture": {
+          "api_summary": {
+            "matmul_desc_create": {
+              "calls": 1,
+              "host_ns": 360,
+              "failures": 0
+            },
+            "matmul_desc_destroy": {
+              "calls": 1,
+              "host_ns": 70,
+              "failures": 0
+            },
+            "matmul_desc_set_attribute": {
+              "calls": 5,
+              "host_ns": 290,
+              "failures": 0
+            },
+            "matrix_layout_create": {
+              "calls": 3,
+              "host_ns": 200,
+              "failures": 0
+            },
+            "matrix_layout_destroy": {
+              "calls": 3,
+              "host_ns": 200,
+              "failures": 0
+            },
+            "matrix_layout_set_attribute": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "preference_create": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "preference_destroy": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "preference_set_attribute": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "heuristic": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "algo_check": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matmul": {
+              "calls": 1,
+              "host_ns": 16510,
+              "failures": 0
+            }
+          },
+          "heuristic_requests": [],
+          "submitted_algorithms": [
+            {
+              "raw_hex": "420000003b0000002400000001000000000000000000000002000000000007000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 59
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 2
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            }
+          ],
+          "descriptor_checks": []
+        },
+        "explicit_graph_replay": {
+          "api_summary": {
+            "matmul_desc_create": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matmul_desc_destroy": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matmul_desc_set_attribute": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matrix_layout_create": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matrix_layout_destroy": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matrix_layout_set_attribute": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "preference_create": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "preference_destroy": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "preference_set_attribute": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "heuristic": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "algo_check": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            },
+            "matmul": {
+              "calls": 0,
+              "host_ns": 0,
+              "failures": 0
+            }
+          },
+          "heuristic_requests": [],
+          "submitted_algorithms": [],
+          "descriptor_checks": []
+        }
+      }
+    }
+  },
+  "trace_observations": {
+    "baseline": {
+      "default": {
+        "sha256": "03d54971a9fcf23ee3fe31c4763643e7462d98f4449a7d4beab4de73b61eeded",
+        "kernel_names_by_execution": {
+          "eager": {
+            "nvjet_sm90_qqtst_24x64_128x16_4x2_h_bz_TNN": 5
+          },
+          "graph_replay": {
+            "nvjet_sm90_qqtst_24x64_128x16_4x2_h_bz_TNN": 5
+          }
+        }
+      },
+      "explicit": {
+        "sha256": "9acaa69654a7c2db31b211bcaf6790b5178cad5b3f27d5a8d75703533dc497bd",
+        "kernel_names_by_execution": {
+          "eager": {
+            "nvjet_sm90_qqtst_24x64_128x16_4x2_h_bz_TNN": 5
+          },
+          "graph_replay": {
+            "nvjet_sm90_qqtst_24x64_128x16_4x2_h_bz_TNN": 5
+          }
+        }
+      }
+    },
+    "candidate": {
+      "default": {
+        "sha256": "e2d849f9d4b9c93c577d8862df1fc6ce086e3be3df58bdf18a20feb7df3f696e",
+        "kernel_names_by_execution": {
+          "eager": {
+            "nvjet_sm90_qqtst_24x64_128x16_4x2_h_bz_TNN": 5
+          },
+          "graph_replay": {
+            "nvjet_sm90_qqtst_24x64_128x16_4x2_h_bz_TNN": 5
+          }
+        }
+      },
+      "explicit": {
+        "sha256": "3a0cdf4b70dec0e9c10936b7322a83fc92ac38f3b2f1a10e11e4b68012b7e02c",
+        "kernel_names_by_execution": {
+          "eager": {
+            "nvjet_sm90_qqtst_24x64_128x16_4x2_h_bz_TNN": 5
+          },
+          "graph_replay": {
+            "nvjet_sm90_qqtst_24x64_128x16_4x2_h_bz_TNN": 5
+          }
+        }
+      }
+    }
+  },
+  "lifecycle": [
+    {
+      "implementation": "baseline",
+      "tuning_version": "v2",
+      "natural_winner": 0,
+      "forced_persisted_control": 0,
+      "cold_profile_calls": 72,
+      "warm_profile_calls": 0,
+      "runtime_profiles": [
+        {
+          "stage": "startup",
+          "tactic": -1,
+          "input_shapes": [
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              1,
+              1024,
+              1024
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              41943040
+            ]
+          ],
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "profiler_ms": 0.013107199966907502
+        },
+        {
+          "stage": "startup",
+          "tactic": 0,
+          "input_shapes": [
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              1,
+              1024,
+              1024
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              41943040
+            ]
+          ],
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "profiler_ms": 0.0130048006772995
+        },
+        {
+          "stage": "startup",
+          "tactic": 1,
+          "input_shapes": [
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              1,
+              1024,
+              1024
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              41943040
+            ]
+          ],
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "profiler_ms": 0.013683199882507324
+        },
+        {
+          "stage": "startup",
+          "tactic": 2,
+          "input_shapes": [
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              1,
+              1024,
+              1024
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              41943040
+            ]
+          ],
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "profiler_ms": 0.013651199638843536
+        },
+        {
+          "stage": "startup",
+          "tactic": 3,
+          "input_shapes": [
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              1,
+              1024,
+              1024
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              41943040
+            ]
+          ],
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "profiler_ms": 0.013948799669742584
+        },
+        {
+          "stage": "startup",
+          "tactic": 4,
+          "input_shapes": [
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              1,
+              1024,
+              1024
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              41943040
+            ]
+          ],
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "profiler_ms": 0.013660800457000733
+        },
+        {
+          "stage": "startup",
+          "tactic": 5,
+          "input_shapes": [
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              1,
+              1024,
+              1024
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              41943040
+            ]
+          ],
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "profiler_ms": 0.013942399621009826
+        },
+        {
+          "stage": "startup",
+          "tactic": 6,
+          "input_shapes": [
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              1,
+              1024,
+              1024
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              41943040
+            ]
+          ],
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "profiler_ms": 0.013519999384880067
+        },
+        {
+          "stage": "startup",
+          "tactic": 7,
+          "input_shapes": [
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              1,
+              1024,
+              1024
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              41943040
+            ]
+          ],
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "profiler_ms": 0.014310400187969207
+        }
+      ],
+      "cache_sha256": {
+        "natural": "d32a52c446c970781ce0ca8e48d14cfcd92cee857f25280a4e8700c25fd2beee",
+        "explicit": "0d77974ae53e73899c15b6cc6f79eeead96dd15a7d1d7e4d8f1c9179de3ade81"
+      },
+      "cold_startup_ms": 482.97848738729954,
+      "warm_startup_ms": 109.99967157840729,
+      "scope": "one pair per implementation/version; no startup performance conclusion"
+    },
+    {
+      "implementation": "candidate",
+      "tuning_version": "v1",
+      "natural_winner": [
+        253403070530,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "forced_persisted_control": [
+        253403070530,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "cold_profile_calls": 64,
+      "warm_profile_calls": 0,
+      "runtime_profiles": [
+        {
+          "stage": "startup",
+          "tactic": [
+            253403070530,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "input_shapes": [
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              1,
+              1024,
+              1024
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              41943040
+            ]
+          ],
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "profiler_ms": 0.01435520052909851
+        },
+        {
+          "stage": "startup",
+          "tactic": [
+            343597383746,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "input_shapes": [
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              1,
+              1024,
+              1024
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              41943040
+            ]
+          ],
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "profiler_ms": 0.014790399372577668
+        },
+        {
+          "stage": "startup",
+          "tactic": [
+            1344324763714,
+            4294967332,
+            0,
+            1970324836974595,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "input_shapes": [
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              1,
+              1024,
+              1024
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              41943040
+            ]
+          ],
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "profiler_ms": 0.014713600277900696
+        },
+        {
+          "stage": "startup",
+          "tactic": [
+            1348619731010,
+            4294967332,
+            0,
+            2533274790395907,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "input_shapes": [
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              1,
+              1024,
+              1024
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              41943040
+            ]
+          ],
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "profiler_ms": 0.01475519984960556
+        },
+        {
+          "stage": "startup",
+          "tactic": [
+            201863462978,
+            4294967332,
+            0,
+            844424930131968,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "input_shapes": [
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              1,
+              1024,
+              1024
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              41943040
+            ]
+          ],
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "profiler_ms": 0.014975999295711518
+        },
+        {
+          "stage": "startup",
+          "tactic": [
+            1340029796418,
+            4294967332,
+            0,
+            1407374883553283,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "input_shapes": [
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              1,
+              1024,
+              1024
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              41943040
+            ]
+          ],
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "profiler_ms": 0.014720000326633453
+        },
+        {
+          "stage": "startup",
+          "tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "input_shapes": [
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              1,
+              1024,
+              1024
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              41943040
+            ]
+          ],
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "profiler_ms": 0.014511999487876893
+        },
+        {
+          "stage": "startup",
+          "tactic": [
+            1687922147394,
+            4294967332,
+            0,
+            1407374883553283,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "input_shapes": [
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              1,
+              1024,
+              1024
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              41943040
+            ]
+          ],
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "profiler_ms": 0.014774399995803832
+        }
+      ],
+      "cache_sha256": {
+        "natural": "3ee732adeaefd59acde691d71adcf24bb69c78a0297c7e10a400083faf1f61ad",
+        "explicit": "0b1a5c4e484b4a5c13761ea1dbc542f7c5152560ba21a35a1a3239c4003bdb5a"
+      },
+      "cold_startup_ms": 441.25340320169926,
+      "warm_startup_ms": 109.39311981201172,
+      "scope": "one pair per implementation/version; no startup performance conclusion"
+    },
+    {
+      "implementation": "candidate",
+      "tuning_version": "v2",
+      "natural_winner": [
+        253403070530,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "forced_persisted_control": [
+        253403070530,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "cold_profile_calls": 72,
+      "warm_profile_calls": 0,
+      "runtime_profiles": [
+        {
+          "stage": "startup",
+          "tactic": -1,
+          "input_shapes": [
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              1,
+              1024,
+              1024
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              41943040
+            ]
+          ],
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "profiler_ms": 0.015199999511241912
+        },
+        {
+          "stage": "startup",
+          "tactic": [
+            253403070530,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "input_shapes": [
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              1,
+              1024,
+              1024
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              41943040
+            ]
+          ],
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "profiler_ms": 0.013603200018405915
+        },
+        {
+          "stage": "startup",
+          "tactic": [
+            343597383746,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "input_shapes": [
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              1,
+              1024,
+              1024
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              41943040
+            ]
+          ],
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "profiler_ms": 0.014591999351978302
+        },
+        {
+          "stage": "startup",
+          "tactic": [
+            1344324763714,
+            4294967332,
+            0,
+            1970324836974595,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "input_shapes": [
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              1,
+              1024,
+              1024
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              41943040
+            ]
+          ],
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "profiler_ms": 0.014300799369812012
+        },
+        {
+          "stage": "startup",
+          "tactic": [
+            1348619731010,
+            4294967332,
+            0,
+            2533274790395907,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "input_shapes": [
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              1,
+              1024,
+              1024
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              41943040
+            ]
+          ],
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "profiler_ms": 0.014217600226402283
+        },
+        {
+          "stage": "startup",
+          "tactic": [
+            201863462978,
+            4294967332,
+            0,
+            844424930131968,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "input_shapes": [
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              1,
+              1024,
+              1024
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              41943040
+            ]
+          ],
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "profiler_ms": 0.014326399564743042
+        },
+        {
+          "stage": "startup",
+          "tactic": [
+            1340029796418,
+            4294967332,
+            0,
+            1407374883553283,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "input_shapes": [
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              1,
+              1024,
+              1024
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              41943040
+            ]
+          ],
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "profiler_ms": 0.014019200205802917
+        },
+        {
+          "stage": "startup",
+          "tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "input_shapes": [
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              1,
+              1024,
+              1024
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              41943040
+            ]
+          ],
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "profiler_ms": 0.014368000626564025
+        },
+        {
+          "stage": "startup",
+          "tactic": [
+            1687922147394,
+            4294967332,
+            0,
+            1407374883553283,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "input_shapes": [
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              1,
+              1024,
+              1024
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1,
+              128,
+              1024
+            ],
+            [
+              41943040
+            ]
+          ],
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "profiler_ms": 0.014521600306034088
+        }
+      ],
+      "cache_sha256": {
+        "natural": "bd98a2a7b0ba5e75ea883783d557f9cbaddf0357a21734670aabecded99fa487",
+        "explicit": "0b1a5c4e484b4a5c13761ea1dbc542f7c5152560ba21a35a1a3239c4003bdb5a"
+      },
+      "cold_startup_ms": 482.47900791466236,
+      "warm_startup_ms": 107.26380161941051,
+      "scope": "one pair per implementation/version; no startup performance conclusion"
+    }
+  ],
+  "upstream_tests": {
+    "sha256": "1665c9721b3829ba20f8117abfaaab0da7b6cefaf377faee5bf798ecbea745b2",
+    "passed": 19,
+    "failed_or_skipped": 0,
+    "nodeids": [
+      "tests/autotuner/test_autotuner_cublaslt_tactics.py::test_descriptor_bytes_roundtrip",
+      "tests/autotuner/test_autotuner_cublaslt_tactics.py::test_descriptor_json_roundtrip",
+      "tests/autotuner/test_autotuner_cublaslt_tactics.py::test_non_descriptor_tactics_rejected[-1]",
+      "tests/autotuner/test_autotuner_cublaslt_tactics.py::test_non_descriptor_tactics_rejected[3]",
+      "tests/autotuner/test_autotuner_cublaslt_tactics.py::test_non_descriptor_tactics_rejected[tactic2]",
+      "tests/autotuner/test_autotuner_cublaslt_tactics.py::test_non_descriptor_tactics_rejected[tactic3]",
+      "tests/autotuner/test_autotuner_cublaslt_tactics.py::test_non_descriptor_tactics_rejected[tactic4]",
+      "tests/autotuner/test_autotuner_cublaslt_tactics.py::test_non_descriptor_tactics_rejected[tactic5]",
+      "tests/autotuner/test_autotuner_cublaslt_tactics.py::test_non_descriptor_tactics_rejected[tactic6]",
+      "tests/autotuner/test_autotuner_cublaslt_tactics.py::test_non_descriptor_tactics_rejected[tactic7]",
+      "tests/autotuner/test_autotuner_cublaslt_tactics.py::test_descriptor_config_file_roundtrip[winner0]",
+      "tests/autotuner/test_autotuner_cublaslt_tactics.py::test_descriptor_config_file_roundtrip[winner1]",
+      "tests/autotuner/test_autotuner_cublaslt_tactics.py::test_descriptor_managed_cache_roundtrip[winner0]",
+      "tests/autotuner/test_autotuner_cublaslt_tactics.py::test_descriptor_managed_cache_roundtrip[winner1]",
+      "tests/autotuner/test_autotuner_cublaslt_tactics.py::test_tuned_descriptor_reused_across_bucket[cublas]",
+      "tests/autotuner/test_autotuner_cublaslt_tactics.py::test_graph_capture_inside_outer_autotune[cublas]",
+      "tests/autotuner/test_autotuner_cublaslt_tactics.py::test_invalid_descriptor_runs_heuristic_default[cublas]",
+      "tests/autotuner/test_autotuner_cublaslt_tactics.py::test_index_tactics_rejected[cublas]",
+      "tests/autotuner/test_autotuner_cublaslt_tactics.py::test_tuned_descriptor_persists[cublas]"
+    ],
+    "native_library_sha256": "66aede90cc076d17296005657bb2fb57d810ed1fc1956bd2dce864ef383b63d5",
+    "test_source_sha256": {
+      "tests/__init__.py": "cfcc37c1f7dc5bcdf8fc067a61c08673de70330f278150ce02340a31bfd90278",
+      "tests/autotuner/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/utils_fp8.py": "32576b7d08473465b0d37e502f00fc9d0e46996cccd06f888a2abdf6f84930a2",
+      "tests/autotuner/utils.py": "65567282f6a5c87d319ed02284134de0a8b9eae3f08f83dd4e750bb8eaafdf44",
+      "tests/autotuner/test_autotuner_cublaslt_tactics.py": "2f8e6179d1e1510a7e2b5fd434f72262a9ddb0f26aab855d36b01d961c8b1e58"
+    }
+  },
+  "optional_upstream_logs": [],
+  "limitations": [
+    "One FP8 shape on one H100; three paired worker trials, not 45 independent trials.",
+    "Forced explicit descriptors are a mechanism control, not a claim that startup always selects them.",
+    "Instrumented API durations are nested diagnostic boundaries and are excluded from performance estimates.",
+    "Matching descriptor bytes/configuration and kernel names corroborates this workload only; opaque bytes alone do not prove identical physical kernels.",
+    "No model-serving, broad backend, BF16, distributed, migration or clock-controlled qualification is established."
+  ]
+}

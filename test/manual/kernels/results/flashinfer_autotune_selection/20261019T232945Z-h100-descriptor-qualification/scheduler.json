@@ -1,0 +1,265 @@
+{
+  "elapsed": "00:06:32",
+  "end_utc": "2026-10-19T23:44:43Z",
+  "experiment_containers_remaining": [],
+  "final_queue_empty": true,
+  "final_sacct": "2675913|CANCELLED by 150381|0:0|2026-10-19T23:38:11|2026-10-19T23:44:43|00:06:32|ipp2-0037\n",
+  "job_id": 2675913,
+  "jobs": [
+    {
+      "AllocTRES": "billing=48,cpu=48,gres/gpu=1,mem=244722M,node=1",
+      "Elapsed": "00:06:32",
+      "ExitCode": "0:0",
+      "JobID": "2675913",
+      "JobName": "fi-descriptor-qual",
+      "NodeList": "ipp2-0037",
+      "State": "CANCELLED by 150381"
+    },
+    {
+      "AllocTRES": "billing=48,cpu=48,gres/gpu=1,mem=244722M,node=1",
+      "Elapsed": "00:06:32",
+      "ExitCode": "0:0",
+      "JobID": "2675913.extern",
+      "JobName": "extern",
+      "NodeList": "ipp2-0037",
+      "State": "COMPLETED"
+    },
+    {
+      "AllocTRES": "cpu=48,mem=244722M,node=1",
+      "Elapsed": "00:05:44",
+      "ExitCode": "0:0",
+      "JobID": "2675913.0",
+      "JobName": "bash",
+      "NodeList": "ipp2-0037",
+      "State": "COMPLETED"
+    },
+    {
+      "AllocTRES": "cpu=48,mem=244722M,node=1",
+      "Elapsed": "00:00:01",
+      "ExitCode": "1:0",
+      "JobID": "2675913.1",
+      "JobName": "bash",
+      "NodeList": "ipp2-0037",
+      "State": "FAILED"
+    },
+    {
+      "AllocTRES": "cpu=48,mem=244722M,node=1",
+      "Elapsed": "00:00:01",
+      "ExitCode": "0:0",
+      "JobID": "2675913.2",
+      "JobName": "bash",
+      "NodeList": "ipp2-0037",
+      "State": "COMPLETED"
+    },
+    {
+      "AllocTRES": "cpu=48,mem=244722M,node=1",
+      "Elapsed": "00:00:00",
+      "ExitCode": "0:0",
+      "JobID": "2675913.3",
+      "JobName": "bash",
+      "NodeList": "ipp2-0037",
+      "State": "COMPLETED"
+    },
+    {
+      "AllocTRES": "cpu=48,mem=244722M,node=1",
+      "Elapsed": "00:00:00",
+      "ExitCode": "0:0",
+      "JobID": "2675913.4",
+      "JobName": "bash",
+      "NodeList": "ipp2-0037",
+      "State": "COMPLETED"
+    },
+    {
+      "AllocTRES": "cpu=48,mem=244722M,node=1",
+      "Elapsed": "00:00:00",
+      "ExitCode": "0:0",
+      "JobID": "2675913.5",
+      "JobName": "bash",
+      "NodeList": "ipp2-0037",
+      "State": "COMPLETED"
+    },
+    {
+      "AllocTRES": "cpu=48,mem=244722M,node=1",
+      "Elapsed": "00:00:00",
+      "ExitCode": "0:0",
+      "JobID": "2675913.6",
+      "JobName": "bash",
+      "NodeList": "ipp2-0037",
+      "State": "COMPLETED"
+    },
+    {
+      "AllocTRES": "cpu=48,mem=244722M,node=1",
+      "Elapsed": "00:00:00",
+      "ExitCode": "0:0",
+      "JobID": "2675913.7",
+      "JobName": "tar",
+      "NodeList": "ipp2-0037",
+      "State": "COMPLETED"
+    },
+    {
+      "AllocTRES": "cpu=48,mem=244722M,node=1",
+      "Elapsed": "00:00:01",
+      "ExitCode": "0:0",
+      "JobID": "2675913.8",
+      "JobName": "bash",
+      "NodeList": "ipp2-0037",
+      "State": "COMPLETED"
+    },
+    {
+      "AllocTRES": "cpu=48,mem=244722M,node=1",
+      "Elapsed": "00:00:01",
+      "ExitCode": "0:0",
+      "JobID": "2675913.9",
+      "JobName": "tar",
+      "NodeList": "ipp2-0037",
+      "State": "COMPLETED"
+    },
+    {
+      "AllocTRES": "cpu=48,mem=244722M,node=1",
+      "Elapsed": "00:00:00",
+      "ExitCode": "0:0",
+      "JobID": "2675913.10",
+      "JobName": "bash",
+      "NodeList": "ipp2-0037",
+      "State": "COMPLETED"
+    },
+    {
+      "AllocTRES": "cpu=48,mem=244722M,node=1",
+      "Elapsed": "00:00:00",
+      "ExitCode": "0:0",
+      "JobID": "2675913.11",
+      "JobName": "bash",
+      "NodeList": "ipp2-0037",
+      "State": "COMPLETED"
+    },
+    {
+      "AllocTRES": "cpu=48,mem=244722M,node=1",
+      "Elapsed": "00:00:00",
+      "ExitCode": "0:0",
+      "JobID": "2675913.12",
+      "JobName": "bash",
+      "NodeList": "ipp2-0037",
+      "State": "COMPLETED"
+    },
+    {
+      "AllocTRES": "cpu=48,mem=244722M,node=1",
+      "Elapsed": "00:00:01",
+      "ExitCode": "0:0",
+      "JobID": "2675913.13",
+      "JobName": "bash",
+      "NodeList": "ipp2-0037",
+      "State": "COMPLETED"
+    },
+    {
+      "AllocTRES": "cpu=48,mem=244722M,node=1",
+      "Elapsed": "00:00:01",
+      "ExitCode": "0:0",
+      "JobID": "2675913.14",
+      "JobName": "bash",
+      "NodeList": "ipp2-0037",
+      "State": "COMPLETED"
+    },
+    {
+      "AllocTRES": "cpu=48,mem=244722M,node=1",
+      "Elapsed": "00:00:00",
+      "ExitCode": "0:0",
+      "JobID": "2675913.15",
+      "JobName": "tar",
+      "NodeList": "ipp2-0037",
+      "State": "COMPLETED"
+    },
+    {
+      "AllocTRES": "cpu=48,mem=244722M,node=1",
+      "Elapsed": "00:00:00",
+      "ExitCode": "0:0",
+      "JobID": "2675913.16",
+      "JobName": "bash",
+      "NodeList": "ipp2-0037",
+      "State": "COMPLETED"
+    },
+    {
+      "AllocTRES": "cpu=48,mem=244722M,node=1",
+      "Elapsed": "00:00:00",
+      "ExitCode": "0:0",
+      "JobID": "2675913.17",
+      "JobName": "bash",
+      "NodeList": "ipp2-0037",
+      "State": "COMPLETED"
+    },
+    {
+      "AllocTRES": "cpu=48,mem=244722M,node=1",
+      "Elapsed": "00:00:00",
+      "ExitCode": "0:0",
+      "JobID": "2675913.18",
+      "JobName": "tar",
+      "NodeList": "ipp2-0037",
+      "State": "COMPLETED"
+    },
+    {
+      "AllocTRES": "cpu=48,mem=244722M,node=1",
+      "Elapsed": "00:00:00",
+      "ExitCode": "0:0",
+      "JobID": "2675913.19",
+      "JobName": "bash",
+      "NodeList": "ipp2-0037",
+      "State": "COMPLETED"
+    },
+    {
+      "AllocTRES": "cpu=48,mem=244722M,node=1",
+      "Elapsed": "00:00:00",
+      "ExitCode": "0:0",
+      "JobID": "2675913.20",
+      "JobName": "bash",
+      "NodeList": "ipp2-0037",
+      "State": "COMPLETED"
+    },
+    {
+      "AllocTRES": "cpu=48,mem=244722M,node=1",
+      "Elapsed": "00:00:00",
+      "ExitCode": "0:0",
+      "JobID": "2675913.21",
+      "JobName": "tar",
+      "NodeList": "ipp2-0037",
+      "State": "COMPLETED"
+    },
+    {
+      "AllocTRES": "cpu=48,mem=244722M,node=1",
+      "Elapsed": "00:00:00",
+      "ExitCode": "0:0",
+      "JobID": "2675913.22",
+      "JobName": "bash",
+      "NodeList": "ipp2-0037",
+      "State": "COMPLETED"
+    },
+    {
+      "AllocTRES": "cpu=48,mem=244722M,node=1",
+      "Elapsed": "00:00:00",
+      "ExitCode": "0:0",
+      "JobID": "2675913.23",
+      "JobName": "bash",
+      "NodeList": "ipp2-0037",
+      "State": "COMPLETED"
+    },
+    {
+      "AllocTRES": "cpu=48,mem=244722M,node=1",
+      "Elapsed": "00:00:00",
+      "ExitCode": "0:0",
+      "JobID": "2675913.24",
+      "JobName": "bash",
+      "NodeList": "ipp2-0037",
+      "State": "COMPLETED"
+    }
+  ],
+  "main_experiment_step": "2675913.0",
+  "main_step_elapsed": "00:05:44",
+  "main_step_exit_code": "0:0",
+  "preexisting_container": "DCGM exporter left untouched",
+  "private_full_archive": {
+    "download_hash_verified": true,
+    "path": "/home/lnau/flashinfer-autotune-study/20261019T232945Z-h100-descriptor-qualification-attempt01-full-raw.tgz",
+    "sha256": "e1500852f25073338fbdc3aa8aa95e07aee9d3f455976d4dc931f62d5b98f0fc"
+  },
+  "released": true,
+  "start_utc": "2026-10-19T23:38:11Z",
+  "state_explanation": "Allocation CANCELLED is the explicit release after successful experiment and verified durable backup. Main step completed0:0. A separate initial polling helper2675913.1 failed before the launcher log/results existed; it did not execute or modify an experiment worker. No experimental retries or omitted failures."
+}
