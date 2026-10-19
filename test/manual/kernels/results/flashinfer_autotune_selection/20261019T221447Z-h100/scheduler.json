@@ -1,0 +1,301 @@
+{
+  "accounting": [
+    {
+      "Elapsed": "00:27:18",
+      "End": "2026-10-19T22:46:22",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2674847",
+      "JobName": "fi-autotune-study",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T22:19:04",
+      "State": "CANCELLED by 150381"
+    },
+    {
+      "Elapsed": "00:27:18",
+      "End": "2026-10-19T22:46:22",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2674847.extern",
+      "JobName": "extern",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T22:19:04",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:25:21",
+      "End": "2026-10-19T22:45:03",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2674847.0",
+      "JobName": "bash",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T22:19:42",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:00",
+      "End": "2026-10-19T22:20:51",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2674847.1",
+      "JobName": "bash",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T22:20:51",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:00",
+      "End": "2026-10-19T22:22:36",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2674847.2",
+      "JobName": "python3",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T22:22:36",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:00",
+      "End": "2026-10-19T22:24:08",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2674847.3",
+      "JobName": "python3",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T22:24:08",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:00",
+      "End": "2026-10-19T22:27:17",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2674847.4",
+      "JobName": "python3",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T22:27:17",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:00",
+      "End": "2026-10-19T22:28:31",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2674847.5",
+      "JobName": "python3",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T22:28:31",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:01",
+      "End": "2026-10-19T22:30:56",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2674847.6",
+      "JobName": "python3",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T22:30:55",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:00",
+      "End": "2026-10-19T22:32:30",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2674847.7",
+      "JobName": "python3",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T22:32:30",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:00",
+      "End": "2026-10-19T22:33:23",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2674847.8",
+      "JobName": "python3",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T22:33:23",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:00",
+      "End": "2026-10-19T22:33:38",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2674847.9",
+      "JobName": "bash",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T22:33:38",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:00",
+      "End": "2026-10-19T22:34:59",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2674847.10",
+      "JobName": "python3",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T22:34:59",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:00",
+      "End": "2026-10-19T22:37:12",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2674847.11",
+      "JobName": "python3",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T22:37:12",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:00",
+      "End": "2026-10-19T22:37:40",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2674847.12",
+      "JobName": "python3",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T22:37:40",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:01",
+      "End": "2026-10-19T22:38:37",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2674847.13",
+      "JobName": "python3",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T22:38:36",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:00",
+      "End": "2026-10-19T22:39:22",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2674847.14",
+      "JobName": "python3",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T22:39:22",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:00",
+      "End": "2026-10-19T22:40:22",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2674847.15",
+      "JobName": "python3",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T22:40:22",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:01",
+      "End": "2026-10-19T22:41:24",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2674847.16",
+      "JobName": "python3",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T22:41:23",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:00",
+      "End": "2026-10-19T22:42:15",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2674847.17",
+      "JobName": "python3",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T22:42:15",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:01",
+      "End": "2026-10-19T22:42:57",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2674847.18",
+      "JobName": "python3",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T22:42:56",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:00",
+      "End": "2026-10-19T22:43:39",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2674847.19",
+      "JobName": "python3",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T22:43:39",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:00",
+      "End": "2026-10-19T22:44:16",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2674847.20",
+      "JobName": "python3",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T22:44:16",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:00",
+      "End": "2026-10-19T22:44:59",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2674847.21",
+      "JobName": "python3",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T22:44:59",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:00",
+      "End": "2026-10-19T22:45:49",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2674847.22",
+      "JobName": "python3",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T22:45:49",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:01",
+      "End": "2026-10-19T22:45:57",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2674847.23",
+      "JobName": "bash",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T22:45:56",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:01",
+      "End": "2026-10-19T22:46:12",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2674847.24",
+      "JobName": "bash",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T22:46:11",
+      "State": "COMPLETED"
+    }
+  ],
+  "allocation_release_verified": true,
+  "allocation_request": {
+    "AllocTRES": "cpu=48,mem=244722M,node=1,billing=48,gres/gpu=1",
+    "JobId": "2674847",
+    "JobName": "fi-autotune-study",
+    "NodeList": "ipp2-0037",
+    "NumCPUs": "48",
+    "NumNodes": "1",
+    "Partition": "general",
+    "StartTime": "2026-10-19T22:19:04",
+    "TimeLimit": "01:00:00"
+  },
+  "allocation_state_explanation": "CANCELLED is the expected result of explicitly releasing the completed interactive allocation; experiment launcher step 2674847.0 completed with exit 0:0.",
+  "checked_at_utc": "2026-10-19T22:46:37.820894+00:00",
+  "durable_backup": {
+    "bytes_verified_before_release": true,
+    "path": "/home/lnau/flashinfer-autotune-study/20261019T221447Z-h100-raw.tgz",
+    "post_release_download_sha256": "6ed86cd990f952ea2a534616d5cc49cd55f53cf612f14a2cbbdf024a432d903d",
+    "post_release_read_verified": true,
+    "post_release_verified_route": "existing dlcluster login host",
+    "sha256": "6ed86cd990f952ea2a534616d5cc49cd55f53cf612f14a2cbbdf024a432d903d"
+  },
+  "experiment_containers_remaining_before_release": [],
+  "job_id": 2674847,
+  "release_reason": "All 36 experiment workers and both coordinators completed successfully; local archives and durable backup were saved before scancel.",
+  "release_requested": true,
+  "squeue_stdout": ""
+}

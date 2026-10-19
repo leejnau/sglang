@@ -1,0 +1,1165 @@
+{
+  "allocation_released": true,
+  "artifacts": {
+    "analysis": "analysis.json",
+    "provenance": "artifact-index.json",
+    "raw": [
+      "m128-raw.tar.gz",
+      "m144-raw.tar.gz"
+    ],
+    "source_facts": "source-observations.json"
+  },
+  "batch_id": "20261019T221447Z-h100",
+  "cache_file_pairs": 18,
+  "cases": [
+    {
+      "cache_file_pairs": 9,
+      "case": "m128",
+      "cold_profiles_by_arm": {
+        "default": 0,
+        "v1": 192,
+        "v2": 216
+      },
+      "cold_v2_default_profiles": 24,
+      "cold_winners_in_trial_order": {
+        "default": [
+          -1,
+          -1,
+          -1
+        ],
+        "v1": [
+          5,
+          0,
+          0
+        ],
+        "v2": [
+          0,
+          0,
+          0
+        ]
+      },
+      "empty_default_cache_pairs": 3,
+      "errors": [],
+      "forced_memory_diagnostics": {
+        "cuda_graph": {
+          "aggregation": "Descriptive min/median/max across listed workers, pooling cold/warm partners; not additional independent trial replicates. Ordinal0/default uses all18 workers, selected/best and default/best use six v2 workers.",
+          "default_rank_one_workers": 6,
+          "ordinal_zero_to_default_ratio": {
+            "max": 1.0395947818942932,
+            "median": 1.000079966149064,
+            "min": 0.9974542806556114
+          },
+          "v2_default_to_best_ratio": {
+            "max": 1.0110048586083873,
+            "median": 1.0000368959853887,
+            "min": 1.0
+          },
+          "v2_selected_rank": {
+            "max": 4,
+            "median": 2.5,
+            "min": 1
+          },
+          "v2_selected_to_best_ratio": {
+            "max": 1.0394415806560253,
+            "median": 1.0021784994617144,
+            "min": 1.0
+          },
+          "v2_workers": 6,
+          "workers": 18
+        },
+        "eager": {
+          "aggregation": "Descriptive min/median/max across listed workers, pooling cold/warm partners; not additional independent trial replicates. Ordinal0/default uses all18 workers, selected/best and default/best use six v2 workers.",
+          "default_rank_one_workers": 18,
+          "ordinal_zero_to_default_ratio": {
+            "max": 2.918609833423039,
+            "median": 2.8989014677280425,
+            "min": 2.7159676120190834
+          },
+          "v2_default_to_best_ratio": {
+            "max": 1.0,
+            "median": 1.0,
+            "min": 1.0
+          },
+          "v2_selected_rank": {
+            "max": 9,
+            "median": 4.5,
+            "min": 3
+          },
+          "v2_selected_to_best_ratio": {
+            "max": 2.9181610040666364,
+            "median": 2.883306790039645,
+            "min": 2.841628332283559
+          },
+          "v2_workers": 6,
+          "workers": 18
+        }
+      },
+      "natural_warm_distributions_ms": [
+        {
+          "across_trial_distribution": {
+            "count": 3,
+            "max": 0.08760712225921452,
+            "mean": 0.08642810086409251,
+            "median": 0.08640431333333254,
+            "min": 0.08527286699973047,
+            "sample_stdev": 0.0011673094230202987
+          },
+          "arm": "default",
+          "metric": "eager_wall_ms",
+          "phase": "warm",
+          "trial_values": [
+            {
+              "trial": 1,
+              "value": 0.08760712225921452
+            },
+            {
+              "trial": 2,
+              "value": 0.08527286699973047
+            },
+            {
+              "trial": 3,
+              "value": 0.08640431333333254
+            }
+          ]
+        },
+        {
+          "across_trial_distribution": {
+            "count": 3,
+            "max": 0.0041292769310530275,
+            "mean": 0.004086737802329783,
+            "median": 0.004066524707013741,
+            "min": 0.004064411768922582,
+            "sample_stdev": 3.6855111331317414e-05
+          },
+          "arm": "default",
+          "metric": "cuda_graph_wall_ms",
+          "phase": "warm",
+          "trial_values": [
+            {
+              "trial": 1,
+              "value": 0.0041292769310530275
+            },
+            {
+              "trial": 2,
+              "value": 0.004066524707013741
+            },
+            {
+              "trial": 3,
+              "value": 0.004064411768922582
+            }
+          ]
+        },
+        {
+          "across_trial_distribution": {
+            "count": 3,
+            "max": 0.2092144568450749,
+            "mean": 0.20749577088281512,
+            "median": 0.20724277710542083,
+            "min": 0.20603007869794965,
+            "sample_stdev": 0.0016071933407410498
+          },
+          "arm": "v1",
+          "metric": "eager_wall_ms",
+          "phase": "warm",
+          "trial_values": [
+            {
+              "trial": 1,
+              "value": 0.2092144568450749
+            },
+            {
+              "trial": 2,
+              "value": 0.20603007869794965
+            },
+            {
+              "trial": 3,
+              "value": 0.20724277710542083
+            }
+          ]
+        },
+        {
+          "across_trial_distribution": {
+            "count": 3,
+            "max": 0.004137817813898437,
+            "mean": 0.004036230408625367,
+            "median": 0.004035329766338691,
+            "min": 0.0039355436456389725,
+            "sample_stdev": 0.00010114009172262461
+          },
+          "arm": "v1",
+          "metric": "cuda_graph_wall_ms",
+          "phase": "warm",
+          "trial_values": [
+            {
+              "trial": 1,
+              "value": 0.004035329766338691
+            },
+            {
+              "trial": 2,
+              "value": 0.0039355436456389725
+            },
+            {
+              "trial": 3,
+              "value": 0.004137817813898437
+            }
+          ]
+        },
+        {
+          "across_trial_distribution": {
+            "count": 3,
+            "max": 0.2092918730340898,
+            "mean": 0.20759671460837126,
+            "median": 0.2078596386127174,
+            "min": 0.20563863217830658,
+            "sample_stdev": 0.0018407577139963286
+          },
+          "arm": "v2",
+          "metric": "eager_wall_ms",
+          "phase": "warm",
+          "trial_values": [
+            {
+              "trial": 1,
+              "value": 0.20563863217830658
+            },
+            {
+              "trial": 2,
+              "value": 0.2092918730340898
+            },
+            {
+              "trial": 3,
+              "value": 0.2078596386127174
+            }
+          ]
+        },
+        {
+          "across_trial_distribution": {
+            "count": 3,
+            "max": 0.004034386438434012,
+            "mean": 0.003998653482994996,
+            "median": 0.004025944872410037,
+            "min": 0.003935629138140939,
+            "sample_stdev": 5.474363928756103e-05
+          },
+          "arm": "v2",
+          "metric": "cuda_graph_wall_ms",
+          "phase": "warm",
+          "trial_values": [
+            {
+              "trial": 1,
+              "value": 0.004034386438434012
+            },
+            {
+              "trial": 2,
+              "value": 0.003935629138140939
+            },
+            {
+              "trial": 3,
+              "value": 0.004025944872410037
+            }
+          ]
+        }
+      ],
+      "paired_natural_warm_over_untuned_default_ratios": [
+        {
+          "across_pair_distribution": {
+            "count": 3,
+            "max": 2.4161270278223537,
+            "mean": 2.4009164212827105,
+            "median": 2.3985235124306223,
+            "min": 2.388098723595155,
+            "sample_stdev": 0.01416654400493992
+          },
+          "denominator": "default",
+          "metric": "eager_wall_ms",
+          "numerator": "v1",
+          "paired_trial_ratios": [
+            {
+              "ratio": 2.388098723595155,
+              "trial": 1
+            },
+            {
+              "ratio": 2.4161270278223537,
+              "trial": 2
+            },
+            {
+              "ratio": 2.3985235124306223,
+              "trial": 3
+            }
+          ],
+          "phase": "warm"
+        },
+        {
+          "across_pair_distribution": {
+            "count": 3,
+            "max": 1.0180606811389372,
+            "mean": 0.9876998727574884,
+            "median": 0.9772485192243141,
+            "min": 0.9677904179092139,
+            "sample_stdev": 0.0267151255715365
+          },
+          "denominator": "default",
+          "metric": "cuda_graph_wall_ms",
+          "numerator": "v1",
+          "paired_trial_ratios": [
+            {
+              "ratio": 0.9772485192243141,
+              "trial": 1
+            },
+            {
+              "ratio": 0.9677904179092139,
+              "trial": 2
+            },
+            {
+              "ratio": 1.0180606811389372,
+              "trial": 3
+            }
+          ],
+          "phase": "warm"
+        },
+        {
+          "across_pair_distribution": {
+            "count": 3,
+            "max": 2.4543782846512165,
+            "mean": 2.402441055774439,
+            "median": 2.405662756798167,
+            "min": 2.3472821258739325,
+            "sample_stdev": 0.05362071730522662
+          },
+          "denominator": "default",
+          "metric": "eager_wall_ms",
+          "numerator": "v2",
+          "paired_trial_ratios": [
+            {
+              "ratio": 2.3472821258739325,
+              "trial": 1
+            },
+            {
+              "ratio": 2.4543782846512165,
+              "trial": 2
+            },
+            {
+              "ratio": 2.405662756798167,
+              "trial": 3
+            }
+          ],
+          "phase": "warm"
+        },
+        {
+          "across_pair_distribution": {
+            "count": 3,
+            "max": 0.9905356792816435,
+            "mean": 0.9784557304018856,
+            "median": 0.9770200705345241,
+            "min": 0.9678114413894893,
+            "sample_stdev": 0.01142994253642027
+          },
+          "denominator": "default",
+          "metric": "cuda_graph_wall_ms",
+          "numerator": "v2",
+          "paired_trial_ratios": [
+            {
+              "ratio": 0.9770200705345241,
+              "trial": 1
+            },
+            {
+              "ratio": 0.9678114413894893,
+              "trial": 2
+            },
+            {
+              "ratio": 0.9905356792816435,
+              "trial": 3
+            }
+          ],
+          "phase": "warm"
+        }
+      ],
+      "paired_v2_over_v1_ratios": [
+        {
+          "across_pair_distribution": {
+            "count": 3,
+            "max": 1.0957560503745498,
+            "mean": 1.0919190709929099,
+            "median": 1.0921277536069989,
+            "min": 1.0878734089971809,
+            "sample_stdev": 0.003945461962320697
+          },
+          "denominator": "v1",
+          "metric": "startup_ms",
+          "numerator": "v2",
+          "paired_trial_ratios": [
+            {
+              "ratio": 1.0878734089971809,
+              "trial": 1
+            },
+            {
+              "ratio": 1.0957560503745498,
+              "trial": 2
+            },
+            {
+              "ratio": 1.0921277536069989,
+              "trial": 3
+            }
+          ],
+          "phase": "cold"
+        },
+        {
+          "across_pair_distribution": {
+            "count": 3,
+            "max": 1.0017426805108356,
+            "mean": 0.9961381966963807,
+            "median": 0.9978685287194319,
+            "min": 0.9888033808588748,
+            "sample_stdev": 0.006640926558343016
+          },
+          "denominator": "v1",
+          "metric": "eager_wall_ms",
+          "numerator": "v2",
+          "paired_trial_ratios": [
+            {
+              "ratio": 0.9978685287194319,
+              "trial": 1
+            },
+            {
+              "ratio": 1.0017426805108356,
+              "trial": 2
+            },
+            {
+              "ratio": 0.9888033808588748,
+              "trial": 3
+            }
+          ],
+          "phase": "cold"
+        },
+        {
+          "across_pair_distribution": {
+            "count": 3,
+            "max": 1.0198249590999977,
+            "mean": 1.0033658403181034,
+            "median": 1.0144543431416708,
+            "min": 0.9758182187126418,
+            "sample_stdev": 0.02400759194569981
+          },
+          "denominator": "v1",
+          "metric": "cuda_graph_wall_ms",
+          "numerator": "v2",
+          "paired_trial_ratios": [
+            {
+              "ratio": 1.0198249590999977,
+              "trial": 1
+            },
+            {
+              "ratio": 1.0144543431416708,
+              "trial": 2
+            },
+            {
+              "ratio": 0.9758182187126418,
+              "trial": 3
+            }
+          ],
+          "phase": "cold"
+        },
+        {
+          "across_pair_distribution": {
+            "count": 3,
+            "max": 1.0037990202749292,
+            "mean": 0.990271879933663,
+            "median": 0.9937499497257009,
+            "min": 0.9732666698003589,
+            "sample_stdev": 0.01556048950014788
+          },
+          "denominator": "v1",
+          "metric": "startup_ms",
+          "numerator": "v2",
+          "paired_trial_ratios": [
+            {
+              "ratio": 0.9732666698003589,
+              "trial": 1
+            },
+            {
+              "ratio": 1.0037990202749292,
+              "trial": 2
+            },
+            {
+              "ratio": 0.9937499497257009,
+              "trial": 3
+            }
+          ],
+          "phase": "warm"
+        },
+        {
+          "across_pair_distribution": {
+            "count": 3,
+            "max": 1.015831641461061,
+            "mean": 1.000572162255737,
+            "median": 1.0029765163153685,
+            "min": 0.9829083289907817,
+            "sample_stdev": 0.016592824197133007
+          },
+          "denominator": "v1",
+          "metric": "eager_wall_ms",
+          "numerator": "v2",
+          "paired_trial_ratios": [
+            {
+              "ratio": 0.9829083289907817,
+              "trial": 1
+            },
+            {
+              "ratio": 1.015831641461061,
+              "trial": 2
+            },
+            {
+              "ratio": 1.0029765163153685,
+              "trial": 3
+            }
+          ],
+          "phase": "warm"
+        },
+        {
+          "across_pair_distribution": {
+            "count": 3,
+            "max": 1.0000217231746524,
+            "mean": 0.9909170851019272,
+            "median": 0.999766232759328,
+            "min": 0.9729632993718011,
+            "sample_stdev": 0.015548959301848422
+          },
+          "denominator": "v1",
+          "metric": "cuda_graph_wall_ms",
+          "numerator": "v2",
+          "paired_trial_ratios": [
+            {
+              "ratio": 0.999766232759328,
+              "trial": 1
+            },
+            {
+              "ratio": 1.0000217231746524,
+              "trial": 2
+            },
+            {
+              "ratio": 0.9729632993718011,
+              "trial": 3
+            }
+          ],
+          "phase": "warm"
+        }
+      ],
+      "persisted_tuned_winner_pairs": 6,
+      "seeds": [
+        17,
+        18,
+        19
+      ],
+      "shape": [
+        128,
+        1024,
+        1024
+      ],
+      "warm_profile_calls": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "warm_workers": 9,
+      "warnings": [],
+      "workers_passed": 18
+    },
+    {
+      "cache_file_pairs": 9,
+      "case": "m144",
+      "cold_profiles_by_arm": {
+        "default": 0,
+        "v1": 216,
+        "v2": 243
+      },
+      "cold_v2_default_profiles": 27,
+      "cold_winners_in_trial_order": {
+        "default": [
+          -1,
+          -1,
+          -1
+        ],
+        "v1": [
+          2,
+          2,
+          1
+        ],
+        "v2": [
+          3,
+          3,
+          2
+        ]
+      },
+      "empty_default_cache_pairs": 3,
+      "errors": [],
+      "forced_memory_diagnostics": {
+        "cuda_graph": {
+          "aggregation": "Descriptive min/median/max across listed workers, pooling cold/warm partners; not additional independent trial replicates. Ordinal0/default uses all18 workers, selected/best and default/best use six v2 workers.",
+          "default_rank_one_workers": 0,
+          "ordinal_zero_to_default_ratio": {
+            "max": 1.0505831267214434,
+            "median": 1.0000752099317143,
+            "min": 0.9949528316894204
+          },
+          "v2_default_to_best_ratio": {
+            "max": 1.041100778001871,
+            "median": 1.0241284509300834,
+            "min": 1.0050612218143915
+          },
+          "v2_selected_rank": {
+            "max": 6,
+            "median": 3.0,
+            "min": 1
+          },
+          "v2_selected_to_best_ratio": {
+            "max": 1.0353821805134638,
+            "median": 1.0120827027580024,
+            "min": 1.0
+          },
+          "v2_workers": 6,
+          "workers": 18
+        },
+        "eager": {
+          "aggregation": "Descriptive min/median/max across listed workers, pooling cold/warm partners; not additional independent trial replicates. Ordinal0/default uses all18 workers, selected/best and default/best use six v2 workers.",
+          "default_rank_one_workers": 18,
+          "ordinal_zero_to_default_ratio": {
+            "max": 3.0880830134176924,
+            "median": 3.012528529744716,
+            "min": 2.7673559384868947
+          },
+          "v2_default_to_best_ratio": {
+            "max": 1.0,
+            "median": 1.0,
+            "min": 1.0
+          },
+          "v2_selected_rank": {
+            "max": 8,
+            "median": 7.0,
+            "min": 4
+          },
+          "v2_selected_to_best_ratio": {
+            "max": 3.0300915005486004,
+            "median": 3.0003294897384363,
+            "min": 2.979494884769207
+          },
+          "v2_workers": 6,
+          "workers": 18
+        }
+      },
+      "natural_warm_distributions_ms": [
+        {
+          "across_trial_distribution": {
+            "count": 3,
+            "max": 0.08543570875190198,
+            "mean": 0.08516150992363691,
+            "median": 0.08533570799045265,
+            "min": 0.08471311302855611,
+            "sample_stdev": 0.00039152888745428674
+          },
+          "arm": "default",
+          "metric": "eager_wall_ms",
+          "phase": "warm",
+          "trial_values": [
+            {
+              "trial": 1,
+              "value": 0.08543570875190198
+            },
+            {
+              "trial": 2,
+              "value": 0.08533570799045265
+            },
+            {
+              "trial": 3,
+              "value": 0.08471311302855611
+            }
+          ]
+        },
+        {
+          "across_trial_distribution": {
+            "count": 3,
+            "max": 0.004193493805360049,
+            "mean": 0.004158676650452738,
+            "median": 0.004182503107585944,
+            "min": 0.004100033038412221,
+            "sample_stdev": 5.108330240166009e-05
+          },
+          "arm": "default",
+          "metric": "cuda_graph_wall_ms",
+          "phase": "warm",
+          "trial_values": [
+            {
+              "trial": 1,
+              "value": 0.004182503107585944
+            },
+            {
+              "trial": 2,
+              "value": 0.004193493805360049
+            },
+            {
+              "trial": 3,
+              "value": 0.004100033038412221
+            }
+          ]
+        },
+        {
+          "across_trial_distribution": {
+            "count": 3,
+            "max": 0.21780371898785233,
+            "mean": 0.2163177744174997,
+            "median": 0.21611560368910432,
+            "min": 0.21503400057554245,
+            "sample_stdev": 0.0013958831517849326
+          },
+          "arm": "v1",
+          "metric": "eager_wall_ms",
+          "phase": "warm",
+          "trial_values": [
+            {
+              "trial": 1,
+              "value": 0.21611560368910432
+            },
+            {
+              "trial": 2,
+              "value": 0.21503400057554245
+            },
+            {
+              "trial": 3,
+              "value": 0.21780371898785233
+            }
+          ]
+        },
+        {
+          "across_trial_distribution": {
+            "count": 3,
+            "max": 0.004210711631458253,
+            "mean": 0.004103684477740899,
+            "median": 0.004069750139024109,
+            "min": 0.004030591662740335,
+            "sample_stdev": 9.473360169889721e-05
+          },
+          "arm": "v1",
+          "metric": "cuda_graph_wall_ms",
+          "phase": "warm",
+          "trial_values": [
+            {
+              "trial": 1,
+              "value": 0.004030591662740335
+            },
+            {
+              "trial": 2,
+              "value": 0.004210711631458253
+            },
+            {
+              "trial": 3,
+              "value": 0.004069750139024109
+            }
+          ]
+        },
+        {
+          "across_trial_distribution": {
+            "count": 3,
+            "max": 0.22425787756219506,
+            "mean": 0.21825523969406882,
+            "median": 0.2154521644115448,
+            "min": 0.21505567710846663,
+            "sample_stdev": 0.005202215545060858
+          },
+          "arm": "v2",
+          "metric": "eager_wall_ms",
+          "phase": "warm",
+          "trial_values": [
+            {
+              "trial": 1,
+              "value": 0.22425787756219506
+            },
+            {
+              "trial": 2,
+              "value": 0.2154521644115448
+            },
+            {
+              "trial": 3,
+              "value": 0.21505567710846663
+            }
+          ]
+        },
+        {
+          "across_trial_distribution": {
+            "count": 3,
+            "max": 0.004199577233521268,
+            "mean": 0.0040998681167063,
+            "median": 0.004090878792339936,
+            "min": 0.004009148324257694,
+            "sample_stdev": 9.553218481355567e-05
+          },
+          "arm": "v2",
+          "metric": "cuda_graph_wall_ms",
+          "phase": "warm",
+          "trial_values": [
+            {
+              "trial": 1,
+              "value": 0.004090878792339936
+            },
+            {
+              "trial": 2,
+              "value": 0.004199577233521268
+            },
+            {
+              "trial": 3,
+              "value": 0.004009148324257694
+            }
+          ]
+        }
+      ],
+      "paired_natural_warm_over_untuned_default_ratios": [
+        {
+          "across_pair_distribution": {
+            "count": 3,
+            "max": 2.5710744322951804,
+            "mean": 2.540167993097643,
+            "median": 2.5295699754383216,
+            "min": 2.5198595715594276,
+            "sample_stdev": 0.027202554545044236
+          },
+          "denominator": "default",
+          "metric": "eager_wall_ms",
+          "numerator": "v1",
+          "paired_trial_ratios": [
+            {
+              "ratio": 2.5295699754383216,
+              "trial": 1
+            },
+            {
+              "ratio": 2.5198595715594276,
+              "trial": 2
+            },
+            {
+              "ratio": 2.5710744322951804,
+              "trial": 3
+            }
+          ],
+          "phase": "warm"
+        },
+        {
+          "across_pair_distribution": {
+            "count": 3,
+            "max": 1.004105842740532,
+            "mean": 0.986799709408754,
+            "median": 0.992613986496109,
+            "min": 0.9636792989896211,
+            "sample_stdev": 0.020831003899175964
+          },
+          "denominator": "default",
+          "metric": "cuda_graph_wall_ms",
+          "numerator": "v1",
+          "paired_trial_ratios": [
+            {
+              "ratio": 0.9636792989896211,
+              "trial": 1
+            },
+            {
+              "ratio": 1.004105842740532,
+              "trial": 2
+            },
+            {
+              "ratio": 0.992613986496109,
+              "trial": 3
+            }
+          ],
+          "phase": "warm"
+        },
+        {
+          "across_pair_distribution": {
+            "count": 3,
+            "max": 2.624872911318859,
+            "mean": 2.5627559147610426,
+            "median": 2.5386350403151057,
+            "min": 2.5247597926491636,
+            "sample_stdev": 0.05424040533099488
+          },
+          "denominator": "default",
+          "metric": "eager_wall_ms",
+          "numerator": "v2",
+          "paired_trial_ratios": [
+            {
+              "ratio": 2.624872911318859,
+              "trial": 1
+            },
+            {
+              "ratio": 2.5247597926491636,
+              "trial": 2
+            },
+            {
+              "ratio": 2.5386350403151057,
+              "trial": 3
+            }
+          ],
+          "phase": "warm"
+        },
+        {
+          "across_pair_distribution": {
+            "count": 3,
+            "max": 1.0014506825200131,
+            "mean": 0.985792427784364,
+            "median": 0.9780934256618181,
+            "min": 0.9778331751712609,
+            "sample_stdev": 0.013561070702725372
+          },
+          "denominator": "default",
+          "metric": "cuda_graph_wall_ms",
+          "numerator": "v2",
+          "paired_trial_ratios": [
+            {
+              "ratio": 0.9780934256618181,
+              "trial": 1
+            },
+            {
+              "ratio": 1.0014506825200131,
+              "trial": 2
+            },
+            {
+              "ratio": 0.9778331751712609,
+              "trial": 3
+            }
+          ],
+          "phase": "warm"
+        }
+      ],
+      "paired_v2_over_v1_ratios": [
+        {
+          "across_pair_distribution": {
+            "count": 3,
+            "max": 1.0971494594763787,
+            "mean": 1.0960837704097848,
+            "median": 1.0958984251690314,
+            "min": 1.0952034265839445,
+            "sample_stdev": 0.000986167150290126
+          },
+          "denominator": "v1",
+          "metric": "startup_ms",
+          "numerator": "v2",
+          "paired_trial_ratios": [
+            {
+              "ratio": 1.0952034265839445,
+              "trial": 1
+            },
+            {
+              "ratio": 1.0958984251690314,
+              "trial": 2
+            },
+            {
+              "ratio": 1.0971494594763787,
+              "trial": 3
+            }
+          ],
+          "phase": "cold"
+        },
+        {
+          "across_pair_distribution": {
+            "count": 3,
+            "max": 0.997759091359995,
+            "mean": 0.9946998270524056,
+            "median": 0.9960595925482079,
+            "min": 0.9902807972490137,
+            "sample_stdev": 0.003920196724051617
+          },
+          "denominator": "v1",
+          "metric": "eager_wall_ms",
+          "numerator": "v2",
+          "paired_trial_ratios": [
+            {
+              "ratio": 0.997759091359995,
+              "trial": 1
+            },
+            {
+              "ratio": 0.9960595925482079,
+              "trial": 2
+            },
+            {
+              "ratio": 0.9902807972490137,
+              "trial": 3
+            }
+          ],
+          "phase": "cold"
+        },
+        {
+          "across_pair_distribution": {
+            "count": 3,
+            "max": 1.0383128387136145,
+            "mean": 1.0163342003812397,
+            "median": 1.0108601652638343,
+            "min": 0.9998295971662706,
+            "sample_stdev": 0.019817006972490683
+          },
+          "denominator": "v1",
+          "metric": "cuda_graph_wall_ms",
+          "numerator": "v2",
+          "paired_trial_ratios": [
+            {
+              "ratio": 1.0108601652638343,
+              "trial": 1
+            },
+            {
+              "ratio": 1.0383128387136145,
+              "trial": 2
+            },
+            {
+              "ratio": 0.9998295971662706,
+              "trial": 3
+            }
+          ],
+          "phase": "cold"
+        },
+        {
+          "across_pair_distribution": {
+            "count": 3,
+            "max": 1.0073137920051218,
+            "mean": 0.9991452191147876,
+            "median": 0.9962600012998891,
+            "min": 0.9938618640393517,
+            "sample_stdev": 0.007175092534498943
+          },
+          "denominator": "v1",
+          "metric": "startup_ms",
+          "numerator": "v2",
+          "paired_trial_ratios": [
+            {
+              "ratio": 1.0073137920051218,
+              "trial": 1
+            },
+            {
+              "ratio": 0.9938618640393517,
+              "trial": 2
+            },
+            {
+              "ratio": 0.9962600012998891,
+              "trial": 3
+            }
+          ],
+          "phase": "warm"
+        },
+        {
+          "across_pair_distribution": {
+            "count": 3,
+            "max": 1.0376755483366389,
+            "mean": 1.009001044049043,
+            "median": 1.0019446405446726,
+            "min": 0.9873829432658173,
+            "sample_stdev": 0.02587819843062446
+          },
+          "denominator": "v1",
+          "metric": "eager_wall_ms",
+          "numerator": "v2",
+          "paired_trial_ratios": [
+            {
+              "ratio": 1.0376755483366389,
+              "trial": 1
+            },
+            {
+              "ratio": 1.0019446405446726,
+              "trial": 2
+            },
+            {
+              "ratio": 0.9873829432658173,
+              "trial": 3
+            }
+          ],
+          "phase": "warm"
+        },
+        {
+          "across_pair_distribution": {
+            "count": 3,
+            "max": 1.014957389545785,
+            "mean": 0.9991407638269093,
+            "median": 0.9973556968722816,
+            "min": 0.9851092050626611,
+            "sample_stdev": 0.01500394538976427
+          },
+          "denominator": "v1",
+          "metric": "cuda_graph_wall_ms",
+          "numerator": "v2",
+          "paired_trial_ratios": [
+            {
+              "ratio": 1.014957389545785,
+              "trial": 1
+            },
+            {
+              "ratio": 0.9973556968722816,
+              "trial": 2
+            },
+            {
+              "ratio": 0.9851092050626611,
+              "trial": 3
+            }
+          ],
+          "phase": "warm"
+        }
+      ],
+      "persisted_tuned_winner_pairs": 6,
+      "seeds": [
+        17,
+        18,
+        19
+      ],
+      "shape": [
+        144,
+        1024,
+        1024
+      ],
+      "warm_profile_calls": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "warm_workers": 9,
+      "warnings": [],
+      "workers_passed": 18
+    }
+  ],
+  "cold_profiles": 867,
+  "empty_default_cache_pairs": 6,
+  "limits": [
+    "3 trial pairs provide descriptive evidence only; no significance or full-model serving claim.",
+    "Natural FILE-loaded warm lookup and forced-memory oracle lookup have different dispatch paths; oracle regret is diagnostic, not exact warm-path optimality.",
+    "Ordinal identities are shape-specific; -1 may execute the same underlying algorithm as an explicit ordinal.",
+    "M144 in this batch tunes and serves M144; it is not a cross-shape transfer test.",
+    "Compilation caches may be shared; warmup budgets do not establish clock stability.",
+    "Image metadata accompanies the runs; worker payloads do not independently attest the container digest.",
+    "Public eager API cost and retained-runner startup profiling cover different CPU setup costs. Rank disagreement is not proof that the selection engine ignored its measured objective.",
+    "Quantized-input matrix multiplication correctness does not qualify quantizer or full-model accuracy.",
+    "No clock locking, explicit CPU affinity, causal CPU/API trace, full-model serving benchmark or stable algorithm descriptor identification was performed."
+  ],
+  "natural_v2_default_wins": 0,
+  "next_investigation": "Establish actual cuBLAS algorithm identity, then use a CPU/API trace or controlled setup decomposition to test how fresh-runner enumeration contributes to the public eager gap. Preserve graph replay and numerical controls; do not prescribe a measurement policy or production fix before that evidence.",
+  "observations": [
+    "All 36 workers passed numerical, changed-input/restored-input graph replay, cache, source and timing validations; all 18 warm workers performed no profiling. All 12 tuned winner pairs survived persistence with unchanged cache files; six default cache pairs contained no tactic records.",
+    "V2 successfully profiled default -1 but selected explicit ordinals in all six cold trials. Every cold v1/v2 runtime winner matched its own finite profiling minimum; warm workers reused that winner without profiling. Earlier single-trial qualification had a natural -1 winner; this batch did not reproduce it.",
+    "Warm natural v2/v1 paired latency ratios straddle 1 for both cases in eager and graph modes. These three-trial results establish no consistent latency benefit and do not establish equivalence.",
+    "Median paired instrumented cold startup ratios were 1.092128 for M128 and 1.095898 for M144. V2 profiled eight or nine extra default candidates per cold worker. This is wrapper tuning cost, not full-server startup.",
+    "Default -1 had the lowest public-API eager median in all 36 forced-memory candidate sweeps. V2-selected explicit tactics took 2.842\u20132.918 times the best forced eager candidate for M128 and 2.979\u20133.030 times for M144; graph differences were much smaller.",
+    "Source identifies different setup costs between prepared retained-runner profiling and fresh-runner public eager calls. Repeated algorithm enumeration is a hypothesis for the observed gap, not a measured causal attribution or a proof of identical underlying algorithms."
+  ],
+  "operation": "flashinfer.bmm_fp8 backend=cublas, BF16 output, unit dequantization scales",
+  "persisted_tuned_winner_pairs": 12,
+  "ratio_interpretation": "For paired natural timing fields: numerator latency divided by denominator latency; below 1 means lower observed latency. The reported median uses three paired trial ratios of worker medians, not pooled timing samples. Forced-memory diagnostic bounds summarize the listed workers descriptively and do not count cold/warm partners as independent trial replicates.",
+  "schema_version": 1,
+  "source_identity": {
+    "coordinator_sha256": "b27a09d12ae2888f83a616368ff92bd5493888cf748ea6b07068f81d1e8d3c3b",
+    "flashinfer_tuner_sha256": "e222f35f8b5a59a99a45fad627a79db8fc45fadc52b667e63b70c0968509109d",
+    "source_commit": "b2e486f842e2c56d4f2f2577f490201eb625a50f",
+    "worker_sha256": "7f8932844496f873ba3d7044a05662deab57dba139b01b8cc6b5d528c1d4ec69",
+    "wrapper_sha256": "64deff581665bd04830535baccfdfbdfa72794d919bc462fc469a4c42bdd68f5"
+  },
+  "status": "success",
+  "v2_default_profiles": 51,
+  "validated_workers": 36
+}
