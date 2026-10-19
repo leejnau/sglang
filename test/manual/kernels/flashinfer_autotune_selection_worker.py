@@ -152,6 +152,8 @@ def run(args):
     stage = "setup"
     profile_calls = 0
     disallow_profiling = False
+    eager_measurement_checks = 0
+    changed_input_graph_checks = 0
 
     def profile_hook(r, inputs, tactic, config, *more, **kwargs):
         nonlocal profile_calls
@@ -237,6 +239,40 @@ def run(args):
             "l2_condition": "reused hot buffers; no explicit L2 flush",
         }
 
+    def measure_checked(call, execution):
+        nonlocal max_error, eager_measurement_checks
+        # Keep correctness work outside all timing windows, and check before a
+        # subsequent execution mode can overwrite a bad or unwritten output.
+        out.fill_(float("nan"))
+        measurement = measure(call, execution)
+        torch.cuda.synchronize()
+        max_error = max(max_error, check_output())
+        if execution == "eager":
+            eager_measurement_checks += 1
+        return measurement
+
+    def check_graph_inputs(graph):
+        nonlocal reference, changed_input_graph_checks
+        saved_a = a.clone()
+        saved_reference = reference
+        try:
+            # A captured graph must read updated tensor contents, not merely
+            # rewrite an answer previously produced during warmup/capture.
+            a.zero_()
+            reference = torch.zeros_like(saved_reference)
+            out.fill_(float("nan"))
+            graph.replay()
+            torch.cuda.synchronize()
+            changed_error = check_output()
+            changed_input_graph_checks += 1
+        finally:
+            a.copy_(saved_a)
+            reference = saved_reference
+        out.fill_(float("nan"))
+        graph.replay()
+        torch.cuda.synchronize()
+        return max(changed_error, check_output())
+
     with contextlib.ExitStack() as stack:
         stack.enter_context(
             get_context().override_server_args(
@@ -301,12 +337,25 @@ def run(args):
         if args.arm != "default" and args.phase == "cold" and not profile_calls:
             raise RuntimeError("cold tuned arm failed to enter the real profiler")
         if args.arm == "v2" and args.phase == "cold":
-            if not any(p["tactic"] == -1 for p in profiles):
-                raise RuntimeError("v2 default candidate did not participate")
+            runtime_shapes = tuple(tuple(t.shape) for t in captured["inputs"])
+            probe_a_shape = list(
+                tuner._find_nearest_profile(runtime_shapes, captured["config"])[0]
+            )
+            if not any(
+                p["tactic"] == -1
+                and p["input_shapes"][0] == probe_a_shape
+                and p.get("profiler_ms") is not None
+                for p in profiles
+            ):
+                raise RuntimeError(
+                    "v2 default candidate lacked a finite successful profile "
+                    f"at runtime bucket {probe_a_shape}"
+                )
         if args.arm == "v1" and any(p["tactic"] == -1 for p in profiles):
             raise RuntimeError("v1 control unexpectedly profiled the default candidate")
 
         stage = "bare"
+        out.fill_(float("nan"))
         operation()
         torch.cuda.synchronize()
         natural = selections[-1]
@@ -346,17 +395,11 @@ def run(args):
             raise RuntimeError("graph capture fell back instead of consuming a winner")
         trace.close()
         stage = "measure"
-        out.fill_(float("nan"))
-        graph.replay()
-        torch.cuda.synchronize()
-        max_error = max(max_error, check_output())
+        max_error = max(max_error, check_graph_inputs(graph))
         measurements = {
-            "eager": measure(operation, "eager"),
-            "cuda_graph": measure(graph.replay, "cuda_graph"),
+            "eager": measure_checked(operation, "eager"),
+            "cuda_graph": measure_checked(graph.replay, "cuda_graph"),
         }
-        graph.replay()
-        torch.cuda.synchronize()
-        max_error = max(max_error, check_output())
 
         oracle = []
         if args.oracle:
@@ -387,6 +430,7 @@ def run(args):
                             patch.object(tuner, "search_cache", search_hook)
                         )
                         stage = "oracle_check"
+                        out.fill_(float("nan"))
                         operation()
                         observed = selections[-1]
                         if not observed["cache_hit"] or observed["tactic"] != tactic:
@@ -398,21 +442,17 @@ def run(args):
                         with torch.cuda.graph(candidate_graph):
                             operation()
                     stage = "oracle_measure"
-                    out.fill_(float("nan"))
-                    candidate_graph.replay()
-                    torch.cuda.synchronize()
-                    max_error = max(max_error, check_output())
+                    max_error = max(max_error, check_graph_inputs(candidate_graph))
                     oracle.append(
                         {
                             "runner": type(selected_runner).__name__,
                             "tactic": tactic,
-                            "eager": measure(operation, "eager"),
-                            "cuda_graph": measure(candidate_graph.replay, "cuda_graph"),
+                            "eager": measure_checked(operation, "eager"),
+                            "cuda_graph": measure_checked(
+                                candidate_graph.replay, "cuda_graph"
+                            ),
                         }
                     )
-                    candidate_graph.replay()
-                    torch.cuda.synchronize()
-                    max_error = max(max_error, check_output())
             finally:
                 winners.clear()
                 winners.update(saved)
@@ -422,6 +462,10 @@ def run(args):
                 )
         if profile_calls != startup_profile_calls:
             raise RuntimeError("profiling was attempted after startup")
+        if eager_measurement_checks != 1 + len(
+            oracle
+        ) or changed_input_graph_checks != 1 + len(oracle):
+            raise RuntimeError("not every natural/oracle execution was checked")
 
     props = torch.cuda.get_device_properties(device)
     return {
@@ -444,6 +488,11 @@ def run(args):
             "flashinfer": flashinfer.__version__,
             "gpu": props.name,
             "capability": list(torch.cuda.get_device_capability()),
+            "CUDA_VISIBLE_DEVICES": os.environ.get("CUDA_VISIBLE_DEVICES"),
+            "selected_device_ordinal": torch.cuda.current_device(),
+            "physical_gpu_uuid": (
+                str(props.uuid) if getattr(props, "uuid", None) is not None else None
+            ),
             "gpu_memory_bytes": props.total_memory,
             "backend": "cublas",
             "gpu_status_before": initial_gpu_status,
@@ -482,6 +531,8 @@ def run(args):
             "max_abs_error": max_error,
             "rtol": 0.02,
             "atol": 0.125,
+            "eager_checks_after_measurement": eager_measurement_checks,
+            "changed_input_graph_checks": changed_input_graph_checks,
         },
         "cache_path": str(args.cache),
         "cache_before_sha256": before_hash,

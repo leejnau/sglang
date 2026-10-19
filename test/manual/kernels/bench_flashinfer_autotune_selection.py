@@ -30,7 +30,17 @@ ENVIRONMENT_IDENTITY = (
     "gpu",
     "capability",
     "backend",
+    "sglang_wrapper_sha256",
+    "flashinfer_tuner_sha256",
+    "timer_env",
+    "global_timer_enabled",
+    "startup_timing_config",
+    "measurement_policy",
+    "CUDA_VISIBLE_DEVICES",
+    "selected_device_ordinal",
+    "physical_gpu_uuid",
 )
+OPTIONAL_ENVIRONMENT_VALUES = {"timer_env", "CUDA_VISIBLE_DEVICES", "physical_gpu_uuid"}
 CHECKOUT = Path(__file__).resolve().parents[3]
 WORKER = Path(__file__).with_name("flashinfer_autotune_selection_worker.py").resolve()
 
@@ -167,7 +177,10 @@ def validate_result(result, job, process_pid, samples):
     if not isinstance(result.get("environment"), dict) or not result["environment"]:
         raise ValueError("worker environment must be a nonempty object")
     for field in ENVIRONMENT_IDENTITY:
-        if field not in result["environment"] or result["environment"][field] is None:
+        if field not in result["environment"] or (
+            result["environment"][field] is None
+            and field not in OPTIONAL_ENVIRONMENT_VALUES
+        ):
             raise ValueError(f"missing worker environment identity: {field}")
     if result.get("instrumentation_sha256") != _sha256(WORKER):
         raise ValueError("worker instrumentation SHA256 does not match its source")
@@ -188,6 +201,15 @@ def validate_result(result, job, process_pid, samples):
         or result["correctness"].get("passed") is not True
     ):
         raise ValueError("worker correctness.passed must be true")
+    oracle = result.get("oracle", [])
+    if not isinstance(oracle, list):
+        raise ValueError("worker oracle must be a list")
+    for field in ("eager_checks_after_measurement", "changed_input_graph_checks"):
+        count = result["correctness"].get(field)
+        if type(count) is not int or count != 1 + len(oracle):
+            raise ValueError(
+                f"worker correctness.{field} must cover natural/oracle paths"
+            )
     if not isinstance(result.get("candidate_profiles"), list):
         raise ValueError("worker candidate_profiles must be a list")
     selections = result.get("selections")
@@ -402,7 +424,7 @@ def run_plan(plan, args):
     result_path = output_dir / "results.json"
     _write_report(result_path, report)
     cold_runs = {}
-    trial_environments = {}
+    study_environment = None
     for job in plan["jobs"]:
         pair = (job["trial"], job["arm"])
         cold = cold_runs.get(pair)
@@ -481,11 +503,12 @@ def run_plan(plan, args):
                     field: record["result"]["environment"][field]
                     for field in ENVIRONMENT_IDENTITY
                 }
-                expected = trial_environments.setdefault(job["trial"], identity)
-                if identity != expected:
+                if study_environment is None:
+                    study_environment = identity
+                elif identity != study_environment:
                     record["status"] = "error"
                     record["errors"] = [
-                        "worker environment differs between cold/warm or arms within trial"
+                        "worker static environment differs within the study"
                     ]
         report["runs"].append(record)
         if job["phase"] == "cold":
