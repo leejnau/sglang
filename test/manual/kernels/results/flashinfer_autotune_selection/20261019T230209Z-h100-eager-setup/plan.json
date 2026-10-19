@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "batch_id": "20261019T230209Z-h100-eager-setup",
+  "status": "preregistered",
+  "objective": "Investigate recurring public FP8 eager setup and identify observed cuBLAS algorithm configurations and CUDA kernels, without changing production code, persistence or measurement policy.",
+  "baseline_commit": "e8fd6105c29a10e129e0401bb828a9e2812c0855",
+  "execution_commit_rule": "Run a clean committed checkout containing this plan and diagnostics; record exact source hashes per attempt. Qualification failures and fixes remain separate attempts. All three primary workers must use the same frozen execution commit.",
+  "container_image": "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
+  "expected_environment": {
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "physical_gpu_uuid": "bc979292-ef6c-5590-af89-44b70faefecc",
+    "capability": [9, 0],
+    "torch": "2.14.1+cu130",
+    "torch_cuda": "13.0",
+    "flashinfer": "0.7.2",
+    "driver": "580.159.04",
+    "exclusive_node": true,
+    "clock_lock": false,
+    "flashinfer_tuner_sha256": "e222f35f8b5a59a99a45fad627a79db8fc45fadc52b667e63b70c0968509109d",
+    "sglang_wrapper_sha256": "64deff581665bd04830535baccfdfbdfa72794d919bc462fc469a4c42bdd68f5"
+  },
+  "workload": {
+    "api": "flashinfer.bmm_fp8",
+    "backend": "cublas",
+    "shape_m_n_k": [128, 1024, 1024],
+    "batch": 1,
+    "inputs": "seeded FP8 e4m3fn tensors; fixed exact pointers/layouts within each worker; unit FP32 dequantization scales",
+    "output": "BF16",
+    "lookup": "actual tuner in-memory winner lookup forced to -1 or ordinal0, with verified hits; zero profiling permitted",
+    "persistence": "unchanged production v1 path; no managed attachment; no new startup tuning in this focused mechanism experiment",
+    "measurement_policy": "unspecified"
+  },
+  "variants": [
+    "public_cached_default",
+    "public_cached_ordinal0",
+    "retained_runner_default",
+    "retained_runner_ordinal0",
+    "public_seeded_algorithms_default",
+    "public_seeded_algorithms_ordinal0"
+  ],
+  "protocol": {
+    "qualification": "one clean unpreloaded benchmark worker, seed17, two samples, same warmup/calibration; must pass before primary workers",
+    "primary_seeds": [17, 18, 19],
+    "primary_workers": 3,
+    "primary_instrumentation": "none: no LD_PRELOAD, boundary hooks or Torch profiler",
+    "samples": 15,
+    "requested_iterations": 20,
+    "warmup_ms": 500,
+    "min_sample_ms": 20,
+    "max_iterations": 65536,
+    "variant_order": "deterministic seeded shuffle in each fresh worker; record complete order",
+    "execution_modes": ["eager", "cuda_graph"],
+    "observation": "one separate fresh seed17 worker with native preload and CPU boundary hooks; five eager calls, one capture, five replays per variant; separate CPU/CUDA traces with native recording disabled",
+    "timeout_seconds_per_worker": 600,
+    "compilation_caches": "shared within batch; initial kernel and donor setup excluded from timing"
+  },
+  "acceptance": [
+    "Actual CUDA-header probe build and all required workers exit successfully; retain failed attempts separately.",
+    "Exact pinned source/package/image/GPU provenance and immutable input/donor hashes pass.",
+    "All public variants consume the intended real cached winner; retained variants bypass tuner intentionally; zero profiling throughout.",
+    "All eager and poisoned-output/changed-input/restored-input graph checks pass.",
+    "Each primary timing has15 finite positive wall/event samples, at least500ms warmup and a calibrated batch of at least20ms; normalization matches raw batches.",
+    "Native interception is proven: unseeded public ordinal0 requests100 heuristic results, default requests1, seeded public ordinal0 and prepared retained ordinal0 avoid enumeration; graph replay has no native setup calls.",
+    "Record actual submitted algorithm bytes and supported configuration attributes, plus GPU kernel trace evidence; missing interception/activity is pending evidence rather than an inferred identity."
+  ],
+  "analysis": [
+    "Use three paired worker-median ratios per execution mode; timing samples and variants are not independent trial replications.",
+    "Primary causal contrast is seeded-public ordinal0 versus unmodified public ordinal0. Seeded-public default is the intervention-overhead control.",
+    "The intervention preserves fresh runner construction and dispatch, replacing enumeration with an already-valid CPU list only for the fixed exact workload. Attribute its total effect to avoided list setup/allocation/query, not one native API in isolation.",
+    "Retained-runner comparisons remove multiple public/lookup/setup layers and do not alone isolate enumeration.",
+    "Native and Python host durations are perturbed nested observations; never add them together or treat them as uninstrumented latency.",
+    "Compare observed algorithm configurations and actual traced kernel names. Equal selected attributes/opaque bytes are not a universal proof of identical device behavior; raw-byte differences alone do not prove different algorithms.",
+    "The three-arm natural startup/performance comparison remains the separate preceding batch. This experiment diagnoses its mechanism rather than measuring a production optimization."
+  ],
+  "publication": {
+    "fork": "leejnau/sglang",
+    "branch": "experiment/flashinfer-candidate-selection",
+    "open_pr": false,
+    "retain": "source, plan, launcher, probe build log/hash, exact commands, all JSON/logs/native events/compressed traces, failed attempts, independent analysis and checksummed byte-preserving raw archive; narrative in the existing single working record"
+  }
+}
