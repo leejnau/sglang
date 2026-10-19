@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-19T23:30:37.034079+00:00",
+  "description": "Exact original FlashInfer PR diff applied without conflict or manual edits to the v0.7.2 release source. Overlay, not the entire PR branch head.",
+  "upstream_pr": {
+    "url": "https://github.com/flashinfer-ai/flashinfer/pull/6148",
+    "number": 6148,
+    "state": "open",
+    "head_commit": "14c5c67a1eb9ad3a608b8d3da3bf6d8924037c5c",
+    "head_branch": "fix-cublaslt-bucketed-tactics",
+    "api_current_base_commit": "a9d3d64fee145fa2be06e08063de7d6ca1c45095",
+    "patch_base_commit": "1ce02e5774605399a8ddb8f47ea22749afb4c93f",
+    "updated_at": "2026-10-06T21:23:33Z",
+    "commits": 2
+  },
+  "baseline": {
+    "tag": "v0.7.2",
+    "tag_object": "ca0f620c9eca61759dc488e343e9e1e6ba9e43c3",
+    "peeled_commit": "d84335d8c54e0c8f9f7e22faa15c7e34a58abf94"
+  },
+  "original_diff_sha256": "372bec1c66223a2d7c7d475de65be3306723b05b03508ba854f54bf219d25d89",
+  "original_patch_sha256": "2869c4b65f08c6847c48466e6ad0594fd922a800eb109dab78bfe638134aa8de",
+  "clean_git_apply_check": true,
+  "manual_resolution": false,
+  "autotuner_doc_materialization": "The unchanged runtime engine file is omitted from the archive. Copy the installed 0.7.2 file after verifying baseline_sha256; apply autotuner-doc-only.diff for candidate, then verify candidate_sha256. This PR changes only its metadata docstring.",
+  "autotuner_doc_diff_sha256": "a4aade1057760b258e80d9e875d9379c617ec86e774a8137d137ed7fb6ba234d",
+  "files": [
+    {
+      "repository_path": "csrc/bmm_fp8.cu",
+      "installed_package_path": "flashinfer/data/csrc/bmm_fp8.cu",
+      "baseline_sha256": "f16abfac20f7d2d976b1ae0626f0da360f60f99cf619fec1bae910addf0b2fa1",
+      "candidate_sha256": "ac00c1cdba76e653ead25a77d2b1ca9d07f35a89f65221334fbbab1a695a4709",
+      "baseline_size": 7167,
+      "candidate_size": 7955,
+      "runtime_overlay": true,
+      "archive_payload": true,
+      "upstream_pr_head_sha256": "ac00c1cdba76e653ead25a77d2b1ca9d07f35a89f65221334fbbab1a695a4709",
+      "overlay_matches_entire_pr_head_file": true
+    },
+    {
+      "repository_path": "csrc/flashinfer_gemm_binding.cu",
+      "installed_package_path": "flashinfer/data/csrc/flashinfer_gemm_binding.cu",
+      "baseline_sha256": "73f3b51058dbd25cdc94a61c15aa3223a7a2b7f9c62a2584b239f32216a56e60",
+      "candidate_sha256": "4cfdde4e2d7928ffa442d4a386c8f545de61d68820a6d01e4bf78c1b4a490e8e",
+      "baseline_size": 1750,
+      "candidate_size": 1826,
+      "runtime_overlay": true,
+      "archive_payload": true,
+      "upstream_pr_head_sha256": "4cfdde4e2d7928ffa442d4a386c8f545de61d68820a6d01e4bf78c1b4a490e8e",
+      "overlay_matches_entire_pr_head_file": true
+    },
+    {
+      "repository_path": "csrc/mm_bf16_cublaslt.cu",
+      "installed_package_path": "flashinfer/data/csrc/mm_bf16_cublaslt.cu",
+      "baseline_sha256": "28be5dee7b76ae5a986e47b4f52030dde44ae1e78360cfac29a8d3c29ce6b940",
+      "candidate_sha256": "d2a7bcfc19155af2ee88f3d33c5854435019fba7dae230dca6a5b3a958047122",
+      "baseline_size": 5669,
+      "candidate_size": 6292,
+      "runtime_overlay": true,
+      "archive_payload": true,
+      "upstream_pr_head_sha256": "d2a7bcfc19155af2ee88f3d33c5854435019fba7dae230dca6a5b3a958047122",
+      "overlay_matches_entire_pr_head_file": true
+    },
+    {
+      "repository_path": "flashinfer/autotuner/autotuner.py",
+      "installed_package_path": "flashinfer/autotuner/autotuner.py",
+      "baseline_sha256": "e222f35f8b5a59a99a45fad627a79db8fc45fadc52b667e63b70c0968509109d",
+      "candidate_sha256": "0fdeadb0a5fe8db8454fa7b98a46570288da07f6d02533edc0676f8d2af11ada",
+      "baseline_size": 180327,
+      "candidate_size": 180475,
+      "runtime_overlay": true,
+      "archive_payload": false,
+      "upstream_pr_head_sha256": "0fdeadb0a5fe8db8454fa7b98a46570288da07f6d02533edc0676f8d2af11ada",
+      "overlay_matches_entire_pr_head_file": true
+    },
+    {
+      "repository_path": "flashinfer/gemm/gemm_base.py",
+      "installed_package_path": "flashinfer/gemm/gemm_base.py",
+      "baseline_sha256": "ac5fa19277c00e4082858ed943882973399fdf2cd5fa83045df8821f95ba6e2a",
+      "candidate_sha256": "c7c03473d2c8e5344b91ca255dc5cabd1dec5fb5caec13322c8c370617559a83",
+      "baseline_size": 445440,
+      "candidate_size": 447846,
+      "runtime_overlay": true,
+      "archive_payload": true,
+      "upstream_pr_head_sha256": "3ceae9e93dd23201077767ef558e88c5fb1fc56081ce583c24638450a46d28aa",
+      "overlay_matches_entire_pr_head_file": false
+    },
+    {
+      "repository_path": "include/flashinfer/gemm/bmm_fp8.cuh",
+      "installed_package_path": "flashinfer/data/include/flashinfer/gemm/bmm_fp8.cuh",
+      "baseline_sha256": "6f55c25e7bd0d10f02a7fe983ba41dc643ff766ef50bded82f473e41262b8b4b",
+      "candidate_sha256": "5a35da070efbc028e565721110e059c5b143d6a49697995e3c70fdae258eae72",
+      "baseline_size": 13062,
+      "candidate_size": 18238,
+      "runtime_overlay": true,
+      "archive_payload": true,
+      "upstream_pr_head_sha256": "5a35da070efbc028e565721110e059c5b143d6a49697995e3c70fdae258eae72",
+      "overlay_matches_entire_pr_head_file": true
+    },
+    {
+      "repository_path": "include/flashinfer/gemm/mm_bf16_cublaslt.cuh",
+      "installed_package_path": "flashinfer/data/include/flashinfer/gemm/mm_bf16_cublaslt.cuh",
+      "baseline_sha256": "86c650b9da11c96bcb9a851247ca5babf8822ef54b0579d8c99d7bc0f4de23dc",
+      "candidate_sha256": "ac2e32860b609f508ab7f6536346e855ef50e6b3b8eba69e17edc964672c6913",
+      "baseline_size": 5621,
+      "candidate_size": 6627,
+      "runtime_overlay": true,
+      "archive_payload": true,
+      "upstream_pr_head_sha256": "ac2e32860b609f508ab7f6536346e855ef50e6b3b8eba69e17edc964672c6913",
+      "overlay_matches_entire_pr_head_file": true
+    },
+    {
+      "repository_path": "tests/autotuner/test_autotuner_bmm_fp8.py",
+      "installed_package_path": null,
+      "baseline_sha256": "66e2dafe6214ae023181f4966ab319ea3190232c6d6366cab0fb8f25ed927541",
+      "candidate_sha256": "e8c179f4445d6ba63b0d6592f1fdcf22d53496ab38e6202ac8b9cf230d170748",
+      "baseline_size": 8866,
+      "candidate_size": 8730,
+      "runtime_overlay": false,
+      "archive_payload": true,
+      "upstream_pr_head_sha256": "e8c179f4445d6ba63b0d6592f1fdcf22d53496ab38e6202ac8b9cf230d170748",
+      "overlay_matches_entire_pr_head_file": true
+    },
+    {
+      "repository_path": "tests/autotuner/test_autotuner_cublaslt_tactics.py",
+      "installed_package_path": null,
+      "baseline_sha256": null,
+      "candidate_sha256": "2f8e6179d1e1510a7e2b5fd434f72262a9ddb0f26aab855d36b01d961c8b1e58",
+      "baseline_size": null,
+      "candidate_size": 13850,
+      "runtime_overlay": false,
+      "archive_payload": true,
+      "upstream_pr_head_sha256": "2f8e6179d1e1510a7e2b5fd434f72262a9ddb0f26aab855d36b01d961c8b1e58",
+      "overlay_matches_entire_pr_head_file": true
+    },
+    {
+      "repository_path": "tests/gemm/test_mm_bf16.py",
+      "installed_package_path": null,
+      "baseline_sha256": "b8d34c99cdf44df4e75428b0122aac04ae61fbcf799c6e375e878e7bd2363a2b",
+      "candidate_sha256": "2fdc2ea66fd018c1e87531dc0940a2618f87bbc1620124b55d4451aec8ea616c",
+      "baseline_size": 12554,
+      "candidate_size": 12437,
+      "runtime_overlay": false,
+      "archive_payload": true,
+      "upstream_pr_head_sha256": "2fdc2ea66fd018c1e87531dc0940a2618f87bbc1620124b55d4451aec8ea616c",
+      "overlay_matches_entire_pr_head_file": true
+    }
+  ],
+  "build_requirements": {
+    "candidate_cpp_rebuild_required": true,
+    "baseline_cpp_rebuild_required_for_matched_source_control": true,
+    "reason": "The default JitSpec build_and_load first uses installed AOT artifacts and can silently ignore edited C++ sources. The gemm module name alone does not identify source contents.",
+    "method": "Create gen_gemm_module() JitSpec after package overlay. Explicitly call spec.build(), then spec.load(); use native module in the public runner. Do not use build_and_load for this module until the exact loaded artifact is verified.",
+    "isolated_workspace_per_arm": true,
+    "expected_candidate_native_exports": [
+      "bmm_fp8",
+      "bmm_fp8_get_algos",
+      "bmm_fp8_run_with_descriptor"
+    ],
+    "expected_baseline_native_exports": [
+      "bmm_fp8",
+      "bmm_fp8_get_algos",
+      "bmm_fp8_run_with_algo"
+    ],
+    "required_provenance": [
+      "source file SHA256 values before import",
+      "native shared object path and SHA256",
+      "build.ninja and source/header include paths",
+      "loaded process maps or native module path",
+      "candidate descriptor actual-use return flag and native AlgoCheck/heuristic/matmul observations"
+    ]
+  }
+}

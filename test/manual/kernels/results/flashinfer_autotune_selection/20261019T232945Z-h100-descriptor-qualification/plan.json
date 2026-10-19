@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "batch_id": "20261019T232945Z-h100-descriptor-qualification",
+  "status": "preregistered",
+  "objective": "Qualify the existing upstream descriptor-tactic patch on H100: matched public execution, native query elimination, numerical/graph correctness and actual SGLang startup/v1 persistence.",
+  "sglang_baseline_commit": "21bc4538da56ce0f7f9dcde605c1e14128f5c458",
+  "source_arms": {
+    "baseline": "FlashInfer v0.7.2 release source, explicitly JIT built",
+    "candidate": "Exact original PR6148 diff at14c5c67a1eb9ad3a608b8d3da3bf6d8924037c5c applied cleanly to v0.7.2; not the full PR branch head",
+    "original_diff_sha256": "372bec1c66223a2d7c7d475de65be3306723b05b03508ba854f54bf219d25d89",
+    "source_overlay_archive_sha256": "c62f09dad18dbe0ce326177077360fe716095f209dc023b25c5552dcc12f666f",
+    "source_manifest_sha256": "3f4305fce604d3cd51e85047678c6efbf71e35bcf51037e9586d15bc20486895",
+    "test_support_archive_sha256": "114e8facdedb3b7abee864ea91231aab470e4b195869f7975141635a7ac79db5",
+    "packaging": "Copy the pinned image package/vendors into isolated per-arm node-local directories, validate all seven original runtime source hashes, apply exact six source replacements plus doc-only engine diff, and validate all seven resulting hashes.",
+    "native_loading": "Explicit JitSpec.build then load for both arms; identical one-time module adapter, separate workspaces. Record library/build.ninja hashes and exports. Installed AOT providers cannot substitute for the rebuilt GEMM module.",
+    "cuda_arch_list": "9.0"
+  },
+  "execution_commit_rule": "Execute a clean committed SGLang checkout containing this plan and diagnostics. Record its exact SHA and all source hashes per attempt; all primary comparison workers use one frozen revision.",
+  "container_image": "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
+  "environment": {
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "physical_gpu_uuid": "bc979292-ef6c-5590-af89-44b70faefecc",
+    "driver": "580.159.04",
+    "torch": "2.14.1+cu130",
+    "torch_cuda": "13.0",
+    "flashinfer_base_version": "0.7.2",
+    "exclusive_node": true,
+    "clock_lock": false,
+    "sglang_wrapper_sha256": "64deff581665bd04830535baccfdfbdfa72794d919bc462fc469a4c42bdd68f5"
+  },
+  "workload": {
+    "api": "flashinfer.bmm_fp8 backend=cublas",
+    "shape_m_n_k": [128, 1024, 1024],
+    "batch": 1,
+    "inputs": "same seeded FP8 e4m3fn input bytes and unit FP32 dequantization scales per paired trial; BF16 output",
+    "explicit_match": "Each candidate uses the exact64-byte descriptor enumerated for ordinal0 by its same-seed baseline reference; verify native actual descriptor use, not fallback.",
+    "runtime_choices": ["default-1", "matched explicit algorithm"],
+    "measurement_policy": "unspecified",
+    "persistence": "existing v1 JSON, managed stores disabled in SGLang wrapper"
+  },
+  "protocol": {
+    "qualification": "baseline reference workers atseeds17/18/19 plus candidate17, two samples, same warmup/calibration; all must pass before primary",
+    "primary_seeds": [17, 18, 19],
+    "primary_source_order": {"17": ["baseline", "candidate"], "18": ["candidate", "baseline"], "19": ["baseline", "candidate"]},
+    "primary_workers": 6,
+    "samples": 15,
+    "requested_iterations": 20,
+    "warmup_ms": 500,
+    "min_sample_ms": 20,
+    "max_iterations": 65536,
+    "primary_instrumentation": "none; no native preload, profiler or Python timing hooks",
+    "observations": "one separate seed17 worker per arm; native first-explicit/warm/capture/replay counts and algorithm descriptors plus separate CPU/CUDA traces",
+    "lifecycle_pairs": ["baseline-v2", "candidate-v1", "candidate-v2"],
+    "lifecycle": "fresh cold then fresh warm per pair, real startup wrapper and actual v1 files; preserve natural winner and independently persist/reload matched explicit tactic; prohibit warm/post-startup profiling",
+    "upstream_tests": "19 exact upstream cases:14 serialization/persistence and5 FP8[cublas] GPU cases; dedicated bootstrap with exact source helpers, no upstream global conftest/plugin environment; require no skips",
+    "expected_manual_workers": 18,
+    "timeout_seconds_per_worker": 900,
+    "compilation_caches": "shared within each arm only; initial module build, candidate enumeration and setup excluded from runtime measurements"
+  },
+  "acceptance": [
+    "Exact image/GPU/package/source/hash and clean execution-commit provenance passes.",
+    "Both rebuilt native libraries expose their arm's distinct APIs and are the loaded JIT paths; retain compiler/build provenance.",
+    "All qualification and primary workers pass with matched input bytes and exact paired algorithm descriptors.",
+    "All public eager and poisoned/changed/restored-input graph numerical checks pass; cache hits and descriptor used=1 are observed outside timed windows.",
+    "All primary timing blocks have15 finite positive samples,500ms warmup and20ms calibrated batches; raw normalization is consistent.",
+    "Candidate warmed explicit calls avoid both repeated heuristic enumeration and AlgoCheck; actual descriptor use=1 prevents accepting cached fallback. Default behavior is recorded separately.",
+    "Fresh warm startup and bare/capture consume persisted natural and forced explicit winners with identical cache hashes and zero profiling attempts.",
+    "Native/CUDA activity establishes observed algorithm/launch correspondence; differences are reported, not silently treated as matched performance.",
+    "All19 selected upstream cases pass without skips, or retain and classify exact failures and pending coverage."
+  ],
+  "analysis": [
+    "Use three paired worker-median ratios per choice and execution mode; do not pool45samples into independent trials.",
+    "Compare candidate explicit versus baseline explicit, candidate default versus baseline default, and within-arm explicit/default controls.",
+    "Separate natural startup selection and persistence from forced matched-algorithm latency; no startup-time optimization claim.",
+    "Instrumented native/Python host spans are diagnostic only and are not summed or substituted for clean timings.",
+    "This is the exact patch over0.7.2 on H100, not an evaluation of the entire PR head, other architectures, full models or all BF16 changes.",
+    "Record failures/retries and partial findings without exclusions; explicit policy and managed-store migration remain outside scope."
+  ],
+  "publication": {"fork": "leejnau/sglang", "branch": "experiment/flashinfer-candidate-selection", "open_pr": false, "record": "all raw logs/cache/native traces, exact source inputs, source/build provenance, independent analysis and checksums; narrative stays in the single existing working record"}
+}
