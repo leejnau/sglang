@@ -125,6 +125,7 @@ def run(args):
     runner = SimpleNamespace(
         device="cuda", forward_stream=torch.cuda.Stream(), is_draft_worker=False
     )
+    caller_stream = torch.cuda.current_stream()
 
     # Unit dequantization scales deliberately isolate tactic selection from the
     # quantizer. Both arms get exactly the same already-quantized operands.
@@ -188,6 +189,20 @@ def run(args):
         if op != "fp8_gemm":
             raise RuntimeError(f"unexpected tuned operation {op}")
         captured.update(op=op, runners=runners, config=config, inputs=inputs)
+        current_stream = torch.cuda.current_stream()
+        on_forward_stream = current_stream == runner.forward_stream
+        on_caller_stream = current_stream == caller_stream
+        capturing = torch.cuda.is_current_stream_capturing()
+        if stage == "startup" and (not on_forward_stream or capturing):
+            raise RuntimeError(
+                "startup selection must use the forward stream outside capture"
+            )
+        if stage == "bare" and (not on_caller_stream or capturing):
+            raise RuntimeError(
+                "bare selection must use the caller stream outside capture"
+            )
+        if stage in ("capture", "oracle_capture") and not capturing:
+            raise RuntimeError("capture selection must run inside CUDA Graph capture")
         selections.append(
             {
                 "stage": stage,
@@ -195,6 +210,9 @@ def run(args):
                 "runner": type(selected).__name__,
                 "tactic": int(tactic),
                 "cache_hit": captured["last_hit"],
+                "on_forward_stream": on_forward_stream,
+                "on_caller_stream": on_caller_stream,
+                "capturing": capturing,
             }
         )
         return selected, tactic
@@ -337,19 +355,23 @@ def run(args):
         if args.arm != "default" and args.phase == "cold" and not profile_calls:
             raise RuntimeError("cold tuned arm failed to enter the real profiler")
         if args.arm == "v2" and args.phase == "cold":
-            runtime_shapes = tuple(tuple(t.shape) for t in captured["inputs"])
-            probe_a_shape = list(
-                tuner._find_nearest_profile(runtime_shapes, captured["config"])[0]
-            )
+
+            def normalized_profile(shapes):
+                return tuner._find_nearest_profile(
+                    tuple(tuple(s) if s is not None else (0,) for s in shapes),
+                    captured["config"],
+                )
+
+            runtime_key = normalized_profile(shape_list(captured["inputs"]))
             if not any(
                 p["tactic"] == -1
-                and p["input_shapes"][0] == probe_a_shape
+                and normalized_profile(p["input_shapes"]) == runtime_key
                 and p.get("profiler_ms") is not None
                 for p in profiles
             ):
                 raise RuntimeError(
                     "v2 default candidate lacked a finite successful profile "
-                    f"at runtime bucket {probe_a_shape}"
+                    f"at runtime bucket {runtime_key[0]}"
                 )
         if args.arm == "v1" and any(p["tactic"] == -1 for p in profiles):
             raise RuntimeError("v1 control unexpectedly profiled the default candidate")
@@ -439,6 +461,7 @@ def run(args):
                             )
                         max_error = max(max_error, check_output())
                         candidate_graph = torch.cuda.CUDAGraph()
+                        stage = "oracle_capture"
                         with torch.cuda.graph(candidate_graph):
                             operation()
                     stage = "oracle_measure"
