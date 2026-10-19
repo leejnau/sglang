@@ -1,0 +1,148 @@
+{
+  "accounting": [
+    {
+      "Elapsed": "00:04:21",
+      "End": "2026-10-19T23:10:47",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2675388",
+      "JobName": "fi-eager-setup",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T23:06:26",
+      "State": "CANCELLED by 150381"
+    },
+    {
+      "Elapsed": "00:04:21",
+      "End": "2026-10-19T23:10:47",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2675388.extern",
+      "JobName": "extern",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T23:06:26",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:01:58",
+      "End": "2026-10-19T23:08:52",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2675388.0",
+      "JobName": "bash",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T23:06:54",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:00",
+      "End": "2026-10-19T23:07:08",
+      "ExitCode": "1:0",
+      "JobIDRaw": "2675388.1",
+      "JobName": "python3",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T23:07:08",
+      "State": "FAILED"
+    },
+    {
+      "Elapsed": "00:00:00",
+      "End": "2026-10-19T23:07:21",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2675388.2",
+      "JobName": "python3",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T23:07:21",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:00",
+      "End": "2026-10-19T23:07:55",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2675388.3",
+      "JobName": "python3",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T23:07:55",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:01",
+      "End": "2026-10-19T23:08:42",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2675388.4",
+      "JobName": "python3",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T23:08:41",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:01",
+      "End": "2026-10-19T23:09:05",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2675388.5",
+      "JobName": "tar",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T23:09:04",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:00",
+      "End": "2026-10-19T23:09:05",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2675388.6",
+      "JobName": "bash",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T23:09:05",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:01",
+      "End": "2026-10-19T23:09:10",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2675388.7",
+      "JobName": "python3",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T23:09:09",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:00",
+      "End": "2026-10-19T23:09:42",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2675388.8",
+      "JobName": "bash",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T23:09:42",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:01",
+      "End": "2026-10-19T23:10:30",
+      "ExitCode": "0:0",
+      "JobIDRaw": "2675388.9",
+      "JobName": "bash",
+      "NodeList": "ipp2-0037",
+      "Start": "2026-10-19T23:10:29",
+      "State": "COMPLETED"
+    }
+  ],
+  "allocation_release_verified": true,
+  "allocation_request": {
+    "AllocTRES": "cpu=48,mem=244722M,node=1,billing=48,gres/gpu=1",
+    "JobId": "2675388",
+    "JobName": "fi-eager-setup",
+    "NodeList": "ipp2-0037",
+    "NumCPUs": "48",
+    "NumNodes": "1",
+    "Partition": "general",
+    "TimeLimit": "00:45:00"
+  },
+  "checked_at_utc": "2026-10-19T23:11:32.687380+00:00",
+  "durable_backup": {
+    "contains_probe_binary": true,
+    "path": "/home/lnau/flashinfer-autotune-study/20261019T230209Z-h100-eager-setup-raw.tgz",
+    "post_release_read_checksum_verified": true,
+    "sha256": "787049a897373a7f45cdc14627303f12c48cafe75833a5db3c8c6452c31263e4"
+  },
+  "experiment_containers_remaining_before_release": [],
+  "experiment_launcher_completed": true,
+  "job_id": 2675388,
+  "release_requested": true,
+  "squeue_stdout": "",
+  "state_explanation": "The allocation CANCELLED state is expected explicit cleanup after all experiment workers completed. A separate zero-duration poll helper failed once on a Python syntax typo; it did not run or alter experiment workers."
+}

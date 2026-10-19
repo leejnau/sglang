@@ -1,0 +1,284 @@
+{
+  "allocation": {
+    "job_id": 2675388,
+    "released": true,
+    "scheduler_record": "scheduler.json"
+  },
+  "artifacts": [
+    {
+      "bytes": 86493,
+      "path": "analysis.json",
+      "sha256": "e83ca3eaadbf0952143224990787bb4db92f00a7fe10a82b7510afbf6aebba15"
+    },
+    {
+      "bytes": 27786,
+      "path": "analyze.py",
+      "sha256": "a723b92896a8d31d55089b4c1c87afada095c457b72c8fc1a3cb47ed8b6a61e2"
+    },
+    {
+      "bytes": 64770,
+      "path": "attempt01-raw.tar.gz",
+      "sha256": "5969733ec86a56b99a0be0b1a8a3fa7d06eff3cd294746fdacabb5bd4ff653b1"
+    },
+    {
+      "bytes": 5942,
+      "path": "launch.sh",
+      "sha256": "6a49768e2922b80abfe87cd2d91eecac8c97750acd43fd70dd27fbb673ff163e"
+    },
+    {
+      "bytes": 5704,
+      "path": "plan.json",
+      "sha256": "94ef9fc3ee1783dfc36a74ad8a503c84ce9e95cbad363458897b83f924187063"
+    },
+    {
+      "bytes": 4199,
+      "path": "scheduler.json",
+      "sha256": "888f0f2396bafa7f1ea1463c490e2f2361757305afe8428de7cde5e3d1ce4883"
+    },
+    {
+      "bytes": 20227,
+      "path": "summary.json",
+      "sha256": "666c42fe0553f066737ab6ab2987a847fb6a89a0760ffe622fb1e8972c781631"
+    }
+  ],
+  "batch_id": "20261019T230209Z-h100-eager-setup",
+  "execution_commit": "5ce613c43ee00101e56853649efa45a21867d2d9",
+  "provenance": {
+    "analyzer_sha256": "a723b92896a8d31d55089b4c1c87afada095c457b72c8fc1a3cb47ed8b6a61e2",
+    "image_metadata_sha256": "e725c7ec8a88be13b6a6ab7e942f08c1e21e67b5688aeb28b4d99415fd492bdc",
+    "manifest_sha256": "4b18acb0ad0801dffa236f62559d170c4ac28468450b5128dddbd260dcccf5ab",
+    "native_probe_binary_sha256": "26d59e8f9cc7b760cb6205554e208b1179295aa6a1ba63d13e8444cf7c50e9c1",
+    "plan_sha256": "94ef9fc3ee1783dfc36a74ad8a503c84ce9e95cbad363458897b83f924187063",
+    "plan_source_manifest_binding_verified": true,
+    "runtime_image": "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
+    "source_sha256": {
+      "python/sglang/srt/model_executor/runner/flashinfer_autotune.py": "64deff581665bd04830535baccfdfbdfa72794d919bc462fc469a4c42bdd68f5",
+      "test/manual/kernels/build_flashinfer_autotune_eager_setup_probe.sh": "00f68ed89e7f41c0392b671b4e00432e05436f951a38b2c8d01925abca368b08",
+      "test/manual/kernels/flashinfer_autotune_eager_setup.py": "eab998110006ae0e9698e55f62a03268ec30d44b418c4a62b15bc73f4e7fe253",
+      "test/manual/kernels/flashinfer_autotune_eager_setup_native.cpp": "9c61836829fdd4245a90d9a26a2f6ed4591a7c072e572e9f99a5a89c33c15911"
+    }
+  },
+  "raw_archive": {
+    "bytes": 64770,
+    "exclusion": "Generated probe.so is omitted from the public archive; exact binary hash and source/build command are retained, and the durable full archive preserves that binary.",
+    "file_count": 34,
+    "member_bytes_match_analyzed_inputs": true,
+    "members": [
+      {
+        "bytes": 2,
+        "path": "attempt01/benchmark-17.exit-code",
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      {
+        "bytes": 50615,
+        "path": "attempt01/benchmark-17.json",
+        "sha256": "54d232bde59962d5a9aa2075b9244d58cdd97098729100cf076ab09e74f4de12"
+      },
+      {
+        "bytes": 0,
+        "path": "attempt01/benchmark-17.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 2,
+        "path": "attempt01/benchmark-18.exit-code",
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      {
+        "bytes": 50602,
+        "path": "attempt01/benchmark-18.json",
+        "sha256": "a7bcc56eb8a8e71b41c44839cf916253b991153c436d407b8efcb5a4082e25c3"
+      },
+      {
+        "bytes": 0,
+        "path": "attempt01/benchmark-18.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 2,
+        "path": "attempt01/benchmark-19.exit-code",
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      {
+        "bytes": 50574,
+        "path": "attempt01/benchmark-19.json",
+        "sha256": "e4f804b1fdae6094e380b9792e6d6b61d6f9b9a328a0a98a25955282955fd4af"
+      },
+      {
+        "bytes": 0,
+        "path": "attempt01/benchmark-19.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 2,
+        "path": "attempt01/build.exit-code",
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      {
+        "bytes": 274,
+        "path": "attempt01/build.log",
+        "sha256": "e0edcd38609e7fde6ce17943a4ed6d159f76b4e774fc95fccb4c93d30ebf9dcd"
+      },
+      {
+        "bytes": 25035,
+        "path": "attempt01/docker-events.jsonl",
+        "sha256": "30480a4856498ac1927fd38ed76bda917726fe5a16afc65082c27cabd5ba232b"
+      },
+      {
+        "bytes": 41,
+        "path": "attempt01/execution-commit.txt",
+        "sha256": "31a9eaa8ef8e9e7192f240c7da1b0f9ecaf80cd430186c9c95c96c33427ecedd"
+      },
+      {
+        "bytes": 305,
+        "path": "attempt01/gpu-after.csv",
+        "sha256": "3b36edba92fd85493882b0b401addc1278c6ddd595a0d7a593743c2fc92769fa"
+      },
+      {
+        "bytes": 304,
+        "path": "attempt01/gpu-before.csv",
+        "sha256": "c7b2ebe2941ffdbe276637c2c6589302a444e6e4876fc77421383324ae1ae5f9"
+      },
+      {
+        "bytes": 0,
+        "path": "attempt01/gpu-processes-before.csv",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 4616,
+        "path": "attempt01/host_cpu.json",
+        "sha256": "5d6024ea3b27d10639ddeb81803bfedd54c9c80c3911aff3ef8324de60e07766"
+      },
+      {
+        "bytes": 318,
+        "path": "attempt01/image.json",
+        "sha256": "e725c7ec8a88be13b6a6ab7e942f08c1e21e67b5688aeb28b4d99415fd492bdc"
+      },
+      {
+        "bytes": 2,
+        "path": "attempt01/launcher.exit-code",
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      {
+        "bytes": 0,
+        "path": "attempt01/launcher.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 1159,
+        "path": "attempt01/manifest.json",
+        "sha256": "4b18acb0ad0801dffa236f62559d170c4ac28468450b5128dddbd260dcccf5ab"
+      },
+      {
+        "bytes": 81761,
+        "path": "attempt01/native-events.jsonl",
+        "sha256": "ef4195b2943bc95f1944f2702eec0e59b4e08a03cb7327de77cae9fe418a54d9"
+      },
+      {
+        "bytes": 2,
+        "path": "attempt01/observation.exit-code",
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      {
+        "bytes": 32163,
+        "path": "attempt01/observation.json",
+        "sha256": "6a701f765efb6be36d1af3f7fc46fc11052d0656eb5b51a18434aa562285261f"
+      },
+      {
+        "bytes": 954,
+        "path": "attempt01/observation.log",
+        "sha256": "a87225e3ce2c8a77a7db0403e464c2fa7f2be82f8cea05e7c23260190814b05a"
+      },
+      {
+        "bytes": 2,
+        "path": "attempt01/qualification.exit-code",
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      {
+        "bytes": 31531,
+        "path": "attempt01/qualification.json",
+        "sha256": "6c43ddd7a6a86e8a64c21b68ed632ad2a2f039ea2b0027d8ba52f5129f959f1e"
+      },
+      {
+        "bytes": 0,
+        "path": "attempt01/qualification.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 2285,
+        "path": "attempt01/torch-trace-public_cached_default.json.gz",
+        "sha256": "841e70f2ab213a6ff128cdb0c67d09351c8ea0f4866f452ac1cf34a18524422c"
+      },
+      {
+        "bytes": 2478,
+        "path": "attempt01/torch-trace-public_cached_ordinal0.json.gz",
+        "sha256": "e5bb965e21493f956ad386092a0a665f6e238901010f3904d171934649035081"
+      },
+      {
+        "bytes": 2304,
+        "path": "attempt01/torch-trace-public_seeded_algorithms_default.json.gz",
+        "sha256": "e638f82157ef9effdfb41140b8761a312db1e5906b81ae13319b6b9436845e4f"
+      },
+      {
+        "bytes": 2302,
+        "path": "attempt01/torch-trace-public_seeded_algorithms_ordinal0.json.gz",
+        "sha256": "fb2f93acda24e8b549e338da2ef704ccc49f83f40b09e4cd013d5bf5c1cdc3d0"
+      },
+      {
+        "bytes": 2278,
+        "path": "attempt01/torch-trace-retained_runner_default.json.gz",
+        "sha256": "dea205d54903fb72bdd00e3539a0641fd3851a9faf9747c101708c301c9d981e"
+      },
+      {
+        "bytes": 2274,
+        "path": "attempt01/torch-trace-retained_runner_ordinal0.json.gz",
+        "sha256": "5fabde8bfc9de5d38de0536b230c906bb2090dc6cea057435270b4af5eafe362"
+      }
+    ],
+    "path": "attempt01-raw.tar.gz",
+    "sha256": "5969733ec86a56b99a0be0b1a8a3fa7d06eff3cd294746fdacabb5bd4ff653b1"
+  },
+  "reproduction": {
+    "analyzer_argv": [
+      "python3",
+      "${BATCH_DIR}/analyze.py",
+      "--benchmark",
+      "raw/attempt01/benchmark-17.json",
+      "--benchmark",
+      "raw/attempt01/benchmark-18.json",
+      "--benchmark",
+      "raw/attempt01/benchmark-19.json",
+      "--observe",
+      "raw/attempt01/observation.json",
+      "--native",
+      "raw/attempt01/native-events.jsonl",
+      "--containers",
+      "raw/attempt01/docker-events.jsonl",
+      "--trace-root",
+      "raw/attempt01",
+      "--source-root",
+      "${SOURCE_ROOT}",
+      "--expected-source-commit",
+      "5ce613c43ee00101e56853649efa45a21867d2d9",
+      "--output",
+      "${OUTPUT_DIR}/analysis.json"
+    ],
+    "extract_argv": [
+      "tar",
+      "-xzf",
+      "${BATCH_DIR}/attempt01-raw.tar.gz",
+      "-C",
+      "raw"
+    ],
+    "note": "Create raw/ and OUTPUT_DIR first. Relative input paths preserve the analysis input-key names. Compare regenerated analysis.json with the committed file.",
+    "variables": {
+      "BATCH_DIR": "absolute path to this committed batch directory",
+      "OUTPUT_DIR": "fresh directory for regenerated output",
+      "SOURCE_ROOT": "SGLang checkout containing the frozen execution commit"
+    },
+    "working_directory": "a fresh scratch directory containing raw/"
+  },
+  "schema_version": 1,
+  "scope": "Original diagnostic source and measured artifacts only; no production changes or PR. The Git commit anchors this index; its own hash is excluded.",
+  "status": "success"
+}
