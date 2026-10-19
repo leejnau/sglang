@@ -1,0 +1,425 @@
+{
+  "schema_version": 1,
+  "flashinfer_tag": "v0.7.2",
+  "flashinfer_commit": "ca0f620c9eca61759dc488e343e9e1e6ba9e43c3",
+  "audit_method": "Read-only git show v0.7.2:<path> against the exact tagged source; the newer working-tree source was not used.",
+  "scope": "Public bmm_fp8 backend=cublas and shared autotuner; interpretation aid only, no batch-result or performance conclusion.",
+  "facts": [
+    {
+      "id": "public_call_runner_lifetime",
+      "fact": "bmm_fp8 with backend=cublas obtains the cached workspace/module, enters fp8_gemm_sm100, constructs a new CublasFp8GemmRunner, calls choose_one, then executes the chosen runner. The module factory is cached; the runner instance is not.",
+      "sources": [
+        {
+          "path": "flashinfer/gemm/gemm_base.py",
+          "lines": [
+            213,
+            220
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/flashinfer/gemm/gemm_base.py#L213-L220"
+        },
+        {
+          "path": "flashinfer/gemm/gemm_base.py",
+          "lines": [
+            2777,
+            2809
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/flashinfer/gemm/gemm_base.py#L2777-L2809"
+        },
+        {
+          "path": "flashinfer/gemm/gemm_base.py",
+          "lines": [
+            9627,
+            9654
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/flashinfer/gemm/gemm_base.py#L9627-L9654"
+        }
+      ]
+    },
+    {
+      "id": "ordinal_algorithm_cache",
+      "fact": "Each runner starts with an empty _algo_cache. _get_algos caches by full A/B shapes and A/B/output dtypes. On a miss it allocates a CPU uint8 algorithm buffer, invokes native enumeration, and stores the resulting buffer/count. get_valid_tactics returns ordinal indexes range(count).",
+      "sources": [
+        {
+          "path": "flashinfer/gemm/gemm_base.py",
+          "lines": [
+            219,
+            266
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/flashinfer/gemm/gemm_base.py#L219-L266"
+        }
+      ]
+    },
+    {
+      "id": "runner_hash_vs_algorithm_cache",
+      "fact": "TunableRunner.__hash__ skips attributes ending in _cache. The per-instance algorithm cache therefore does not by itself change runner hash identity when populated. This is separate from the autotuner winner cache.",
+      "sources": [
+        {
+          "path": "flashinfer/autotuner/autotuner.py",
+          "lines": [
+            818,
+            831
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/flashinfer/autotuner/autotuner.py#L818-L831"
+        }
+      ]
+    },
+    {
+      "id": "ordinal_and_default_dispatch",
+      "fact": "A nonnegative tactic reuses or fills _algo_cache, dispatching module.bmm_fp8_run_with_algo only when the ordinal is in range. Tactic -1, and out-of-range explicit ordinals, use module.bmm_fp8. A logged ordinal alone does not prove an explicit algorithm executed unless runtime eligibility is also checked.",
+      "sources": [
+        {
+          "path": "flashinfer/gemm/gemm_base.py",
+          "lines": [
+            268,
+            295
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/flashinfer/gemm/gemm_base.py#L268-L295"
+        }
+      ]
+    },
+    {
+      "id": "native_enumeration",
+      "fact": "Native enumeration constructs cuBLASLt descriptors/preferences, requests up to 100 heuristic algorithms, and copies their algorithm structures into the CPU buffer. The explicit execution helper constructs descriptors and dispatches cublasLtMatmul with the selected structure; it performs no additional heuristic query inside that helper.",
+      "sources": [
+        {
+          "path": "include/flashinfer/gemm/bmm_fp8.cuh",
+          "lines": [
+            142,
+            143
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/include/flashinfer/gemm/bmm_fp8.cuh#L142-L143"
+        },
+        {
+          "path": "include/flashinfer/gemm/bmm_fp8.cuh",
+          "lines": [
+            192,
+            240
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/include/flashinfer/gemm/bmm_fp8.cuh#L192-L240"
+        },
+        {
+          "path": "csrc/bmm_fp8.cu",
+          "lines": [
+            92,
+            129
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/csrc/bmm_fp8.cu#L92-L129"
+        },
+        {
+          "path": "csrc/bmm_fp8.cu",
+          "lines": [
+            132,
+            172
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/csrc/bmm_fp8.cu#L132-L172"
+        }
+      ]
+    },
+    {
+      "id": "default_is_not_heuristic_free",
+      "fact": "The native default helper constructs descriptors/preferences and requests exactly one heuristic result before calling cublasLtMatmul. Thus -1 bypasses Python multi-result enumeration, but does not bypass all CPU heuristic work. Code alone does not establish that its selected algorithm is identical to ordinal 0 from a multi-result query.",
+      "sources": [
+        {
+          "path": "include/flashinfer/gemm/bmm_fp8.cuh",
+          "lines": [
+            243,
+            300
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/include/flashinfer/gemm/bmm_fp8.cuh#L243-L300"
+        }
+      ]
+    },
+    {
+      "id": "handle_lifetime",
+      "fact": "The native bindings reuse thread-local cuBLASLt handles by device. Per-call descriptor/query work and per-runner algorithm-list caching must not be confused with handle creation on every invocation.",
+      "sources": [
+        {
+          "path": "csrc/bmm_fp8.cu",
+          "lines": [
+            24,
+            45
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/csrc/bmm_fp8.cu#L24-L45"
+        },
+        {
+          "path": "csrc/bmm_fp8.cu",
+          "lines": [
+            73,
+            83
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/csrc/bmm_fp8.cu#L73-L83"
+        },
+        {
+          "path": "csrc/bmm_fp8.cu",
+          "lines": [
+            115,
+            124
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/csrc/bmm_fp8.cu#L115-L124"
+        },
+        {
+          "path": "csrc/bmm_fp8.cu",
+          "lines": [
+            160,
+            170
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/csrc/bmm_fp8.cu#L160-L170"
+        }
+      ]
+    },
+    {
+      "id": "profile_setup_boundary",
+      "fact": "On a profile-cache miss, choose_one synthesizes inputs, enumerates valid tactics, and performs precompilation/preparation before entering the per-tactic _profile_single_kernel loop. For this runner, enumeration primes its retained algorithm cache. The generic preparation call uses tactic=-1 and do_preparation=True, so v1 can execute the default path without profiling it as a competing candidate.",
+      "sources": [
+        {
+          "path": "flashinfer/autotuner/autotuner.py",
+          "lines": [
+            2354,
+            2382
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/flashinfer/autotuner/autotuner.py#L2354-L2382"
+        },
+        {
+          "path": "flashinfer/autotuner/autotuner.py",
+          "lines": [
+            2411,
+            2438
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/flashinfer/autotuner/autotuner.py#L2411-L2438"
+        },
+        {
+          "path": "flashinfer/autotuner/autotuner.py",
+          "lines": [
+            2453,
+            2462
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/flashinfer/autotuner/autotuner.py#L2453-L2462"
+        },
+        {
+          "path": "flashinfer/gemm/gemm_base.py",
+          "lines": [
+            260,
+            295
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/flashinfer/gemm/gemm_base.py#L260-L295"
+        }
+      ]
+    },
+    {
+      "id": "v2_candidate_scope",
+      "fact": "Inside v2, choose_one prepends -1 for the first runner if it is absent. It checks the profile cache before candidate enumeration. This adds a measured candidate on misses; it does not force already-cached winners to be compared again.",
+      "sources": [
+        {
+          "path": "flashinfer/autotuner/autotuner.py",
+          "lines": [
+            2321,
+            2362
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/flashinfer/autotuner/autotuner.py#L2321-L2362"
+        },
+        {
+          "path": "flashinfer/autotuner/autotuner.py",
+          "lines": [
+            2414,
+            2423
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/flashinfer/autotuner/autotuner.py#L2414-L2423"
+        }
+      ]
+    },
+    {
+      "id": "operation_measurement_defaults",
+      "fact": "The FP8 GEMM config specifies shape bucketing/constraints but no timing overrides. TuningConfig defaults use_cuda_graph=False and use_cold_l2_cache=False. With no measurement policy or other override, this operation uses the hot/eager profiling route. These source defaults should be cross-checked against the recorded effective config.",
+      "sources": [
+        {
+          "path": "flashinfer/gemm/gemm_base.py",
+          "lines": [
+            1929,
+            1950
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/flashinfer/gemm/gemm_base.py#L1929-L1950"
+        },
+        {
+          "path": "flashinfer/autotuner/autotuner.py",
+          "lines": [
+            530,
+            537
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/flashinfer/autotuner/autotuner.py#L530-L537"
+        },
+        {
+          "path": "flashinfer/autotune_cache.py",
+          "lines": [
+            699,
+            704
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/flashinfer/autotune_cache.py#L699-L704"
+        },
+        {
+          "path": "flashinfer/autotune_cache.py",
+          "lines": [
+            725,
+            734
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/flashinfer/autotune_cache.py#L725-L734"
+        }
+      ]
+    },
+    {
+      "id": "profiling_timer_domain",
+      "fact": "The tuner defaults to three warmup calls, ten profiling repeats, and a 5000-us stream delay for the non-graph route. Warmup is outside timing. The hot route records GPU events or device globaltimer timestamps around repeated retained-runner calls and divides GPU elapsed time by repeat count. A stream delay is inserted before the start marker unless events_no_delay is explicitly selected; its stated purpose is to hide host submission overhead. This is not public-API end-to-end wall timing, and delayed GPU timing is not an unconditional proof that no host submission gap remains.",
+      "sources": [
+        {
+          "path": "flashinfer/autotuner/autotuner.py",
+          "lines": [
+            1523,
+            1538
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/flashinfer/autotuner/autotuner.py#L1523-L1538"
+        },
+        {
+          "path": "flashinfer/autotuner/autotuner.py",
+          "lines": [
+            1670,
+            1697
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/flashinfer/autotuner/autotuner.py#L1670-L1697"
+        },
+        {
+          "path": "flashinfer/autotuner/autotuner.py",
+          "lines": [
+            2918,
+            2951
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/flashinfer/autotuner/autotuner.py#L2918-L2951"
+        },
+        {
+          "path": "flashinfer/autotuner/autotuner.py",
+          "lines": [
+            2970,
+            3008
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/flashinfer/autotuner/autotuner.py#L2970-L3008"
+        },
+        {
+          "path": "flashinfer/autotuner/autotuner.py",
+          "lines": [
+            3076,
+            3085
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/flashinfer/autotuner/autotuner.py#L3076-L3085"
+        }
+      ]
+    },
+    {
+      "id": "graph_replay_boundary",
+      "fact": "When graph profiling is enabled, runner calls are captured before the timing markers, then the timed section replays the graph. Likewise, a public-call graph captured by a framework does not reconstruct the Python runner or re-enumerate algorithms on each replay. Host capture/setup cost must be distinguished from replay cost.",
+      "sources": [
+        {
+          "path": "flashinfer/autotuner/autotuner.py",
+          "lines": [
+            2945,
+            2968
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/flashinfer/autotuner/autotuner.py#L2945-L2968"
+        },
+        {
+          "path": "flashinfer/autotuner/autotuner.py",
+          "lines": [
+            2997,
+            3008
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/flashinfer/autotuner/autotuner.py#L2997-L3008"
+        },
+        {
+          "path": "flashinfer/gemm/gemm_base.py",
+          "lines": [
+            2777,
+            2809
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/flashinfer/gemm/gemm_base.py#L2777-L2809"
+        }
+      ]
+    },
+    {
+      "id": "shape_bucket_and_ordinal_identity",
+      "fact": "FP8 dynamic M uses the hybrid bucket mapper; output-M and workspace dimensions are wildcarded in the normalized cache key. Algorithm-list enumeration itself uses actual A/B shapes. Consequently normalized cache-key equality or an in-range ordinal is not evidence that a cuBLAS algorithm descriptor is identical across two actual M values.",
+      "sources": [
+        {
+          "path": "flashinfer/gemm/gemm_base.py",
+          "lines": [
+            230,
+            234
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/flashinfer/gemm/gemm_base.py#L230-L234"
+        },
+        {
+          "path": "flashinfer/gemm/gemm_base.py",
+          "lines": [
+            1929,
+            1950
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/flashinfer/gemm/gemm_base.py#L1929-L1950"
+        },
+        {
+          "path": "flashinfer/autotuner/autotuner.py",
+          "lines": [
+            3332,
+            3380
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/flashinfer/autotuner/autotuner.py#L3332-L3380"
+        },
+        {
+          "path": "flashinfer/fused_moe/utils.py",
+          "lines": [
+            309,
+            324
+          ],
+          "url": "https://github.com/flashinfer-ai/flashinfer/blob/v0.7.2/flashinfer/fused_moe/utils.py#L309-L324"
+        }
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "eager_dispatch_cost",
+      "status": "unmeasured_hypothesis",
+      "hypothesis": "Repeated runner construction, CPU algorithm-buffer allocation, multi-result querying and descriptor work may contribute to eager public-call differences between an explicit ordinal and -1. The retained, pre-enumerated profiling runner does not reproduce that complete eager path.",
+      "basis": [
+        "public_call_runner_lifetime",
+        "ordinal_algorithm_cache",
+        "native_enumeration",
+        "default_is_not_heuristic_free",
+        "profile_setup_boundary"
+      ],
+      "confirmation_needed": "A separate CPU/API trace or controlled decomposition; GPU events spanning queued public calls may also contain host submission gaps."
+    },
+    {
+      "id": "different_rankings_by_execution",
+      "status": "unmeasured_hypothesis",
+      "hypothesis": "A profiling winner, an eager public-call winner and a graph-replay winner may differ because their execution/timing boundaries differ. Source establishes the different boundaries, not their size or which candidate wins.",
+      "basis": [
+        "profile_setup_boundary",
+        "profiling_timer_domain",
+        "graph_replay_boundary"
+      ],
+      "confirmation_needed": "Independent eager and graph samples plus the actual selected runner/tactic, with matched inputs/cache provenance."
+    },
+    {
+      "id": "off_bucket_transfer",
+      "status": "unmeasured_hypothesis",
+      "hypothesis": "For an off-bucket runtime M, a persisted ordinal may select a different descriptor or have different timing than the profile probe. Runtime eligibility checks prevent known out-of-range fallback but do not establish descriptor identity.",
+      "basis": [
+        "ordinal_and_default_dispatch",
+        "shape_bucket_and_ordinal_identity"
+      ],
+      "confirmation_needed": "Descriptor identity evidence or direct runtime candidate measurements; do not infer equivalence from ordinal equality alone."
+    }
+  ],
+  "limits": [
+    "No GPU, remote, CI, analyzer, worker or repository-source changes were performed for this audit.",
+    "Source inspection does not establish actual heuristic count, kernel identity, latency, throughput, clock stability or universal v2 advantage.",
+    "Default -1 is a heuristic dispatch path, not a stable named cuBLAS algorithm.",
+    "Effective timer/config/source hashes in experiment results remain the authority for how a particular worker ran."
+  ]
+}
