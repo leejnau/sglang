@@ -1,0 +1,590 @@
+{
+  "status": "checkpoint_passed",
+  "case": {
+    "m": 128,
+    "n": 1024,
+    "k": 1024,
+    "batch": 1,
+    "api": "flashinfer.bmm_fp8",
+    "backend": "cublas",
+    "input": "FP8 e4m3fn with unit FP32 dequantization scales",
+    "output": "BF16",
+    "model_server": false
+  },
+  "hardware": {
+    "gpu": "NVIDIA H100 NVL",
+    "gpu_uuid": "240958a2-e8e1-3bac-b767-365c9e0b97bd",
+    "driver": "580.159.04",
+    "power_limit_watts": 310,
+    "exclusive_node": true,
+    "locked_clocks": false,
+    "absolute_comparison_to_prior_HBM3_batches": false
+  },
+  "source": {
+    "execution_commit": "b206224f74aae4883d5c38ee9278bbeaf815fc03",
+    "flashinfer_base": "0.7.2",
+    "overlay_pr": 6148,
+    "overlay_head": "14c5c67a1eb9ad3a608b8d3da3bf6d8924037c5c",
+    "overlay_method": "exact original diff applied cleanly to0.7.2; not the full branch head",
+    "torch": "2.14.1+cu130",
+    "torch_cuda": "13.0",
+    "image_digest": "sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
+    "measurement_policy": "unspecified",
+    "persistence": "existing v1 JSON; managed stores disabled"
+  },
+  "protocol": {
+    "seeds": [
+      17,
+      18,
+      19
+    ],
+    "independent_trials_per_paired_comparison": 3,
+    "workers": 18,
+    "samples_per_timing_block": 15,
+    "warmup_ms": 500,
+    "minimum_calibrated_batch_ms": 20,
+    "accepted_candidates_per_oracle": 9,
+    "ratios": "latency numerator/denominator; lower is faster"
+  },
+  "validation": {
+    "automatic_checkpoint": "passed",
+    "frozen_analyzer_rerun": "passed",
+    "independent_audit_checks": 2446,
+    "explicit_native_acceptance_checks": 464,
+    "numerical_checks": 1116,
+    "warm_profiling_attempts": 0,
+    "natural_files": 9,
+    "warm_oracle_files": 81,
+    "excluded_candidates": 0,
+    "archive_sha256": "76f1e33054774a1e2beaf6290239f63e9e6fd45b5524e2ad582a559079633882"
+  },
+  "natural_latency_ratios": [
+    {
+      "comparison": "v2_over_v1",
+      "phase": "cold",
+      "execution": "eager",
+      "paired_seed_ratios": {
+        "17": 0.9918545073154434,
+        "18": 0.9983365809130609,
+        "19": 0.9735040174673136
+      },
+      "median_ratio": 0.9918545073154434,
+      "range": [
+        0.9735040174673136,
+        0.9983365809130609
+      ]
+    },
+    {
+      "comparison": "v2_over_default",
+      "phase": "cold",
+      "execution": "eager",
+      "paired_seed_ratios": {
+        "17": 0.8277457614582576,
+        "18": 0.8155195621965009,
+        "19": 0.8000678534181761
+      },
+      "median_ratio": 0.8155195621965009,
+      "range": [
+        0.8000678534181761,
+        0.8277457614582576
+      ]
+    },
+    {
+      "comparison": "v1_over_default",
+      "phase": "cold",
+      "execution": "eager",
+      "paired_seed_ratios": {
+        "17": 0.8345435296741625,
+        "18": 0.8168783732743131,
+        "19": 0.8218434018378761
+      },
+      "median_ratio": 0.8218434018378761,
+      "range": [
+        0.8168783732743131,
+        0.8345435296741625
+      ]
+    },
+    {
+      "comparison": "v2_over_v1",
+      "phase": "cold",
+      "execution": "cuda_graph",
+      "paired_seed_ratios": {
+        "17": 1.0030113843508597,
+        "18": 1.0318542620690265,
+        "19": 0.9999522561957844
+      },
+      "median_ratio": 1.0030113843508597,
+      "range": [
+        0.9999522561957844,
+        1.0318542620690265
+      ]
+    },
+    {
+      "comparison": "v2_over_default",
+      "phase": "cold",
+      "execution": "cuda_graph",
+      "paired_seed_ratios": {
+        "17": 1.052330955813115,
+        "18": 1.0822072118202468,
+        "19": 1.0365267494946644
+      },
+      "median_ratio": 1.052330955813115,
+      "range": [
+        1.0365267494946644,
+        1.0822072118202468
+      ]
+    },
+    {
+      "comparison": "v1_over_default",
+      "phase": "cold",
+      "execution": "cuda_graph",
+      "paired_seed_ratios": {
+        "17": 1.0491714971851238,
+        "18": 1.048798509249024,
+        "19": 1.0365762395877018
+      },
+      "median_ratio": 1.048798509249024,
+      "range": [
+        1.0365762395877018,
+        1.0491714971851238
+      ]
+    },
+    {
+      "comparison": "v2_over_v1",
+      "phase": "warm",
+      "execution": "eager",
+      "paired_seed_ratios": {
+        "17": 0.9640257571325251,
+        "18": 1.0046496067833774,
+        "19": 0.9902773854189744
+      },
+      "median_ratio": 0.9902773854189744,
+      "range": [
+        0.9640257571325251,
+        1.0046496067833774
+      ]
+    },
+    {
+      "comparison": "v2_over_default",
+      "phase": "warm",
+      "execution": "eager",
+      "paired_seed_ratios": {
+        "17": 0.8348584363049628,
+        "18": 0.8498494165501091,
+        "19": 0.8521781638989611
+      },
+      "median_ratio": 0.8498494165501091,
+      "range": [
+        0.8348584363049628,
+        0.8521781638989611
+      ]
+    },
+    {
+      "comparison": "v1_over_default",
+      "phase": "warm",
+      "execution": "eager",
+      "paired_seed_ratios": {
+        "17": 0.866012583302994,
+        "18": 0.8459162386686262,
+        "19": 0.8605449103923694
+      },
+      "median_ratio": 0.8605449103923694,
+      "range": [
+        0.8459162386686262,
+        0.866012583302994
+      ]
+    },
+    {
+      "comparison": "v2_over_v1",
+      "phase": "warm",
+      "execution": "cuda_graph",
+      "paired_seed_ratios": {
+        "17": 1.0142401094145443,
+        "18": 1.0105078870220132,
+        "19": 1.0367169286594633
+      },
+      "median_ratio": 1.0142401094145443,
+      "range": [
+        1.0105078870220132,
+        1.0367169286594633
+      ]
+    },
+    {
+      "comparison": "v2_over_default",
+      "phase": "warm",
+      "execution": "cuda_graph",
+      "paired_seed_ratios": {
+        "17": 0.9935007169906327,
+        "18": 1.0034708603978695,
+        "19": 1.0111587090167076
+      },
+      "median_ratio": 1.0034708603978695,
+      "range": [
+        0.9935007169906327,
+        1.0111587090167076
+      ]
+    },
+    {
+      "comparison": "v1_over_default",
+      "phase": "warm",
+      "execution": "cuda_graph",
+      "paired_seed_ratios": {
+        "17": 0.979551792291193,
+        "18": 0.9930361487381539,
+        "19": 0.9753469641169996
+      },
+      "median_ratio": 0.979551792291193,
+      "range": [
+        0.9753469641169996,
+        0.9930361487381539
+      ]
+    }
+  ],
+  "natural_latency_us": [
+    {
+      "arm": "default",
+      "phase": "cold",
+      "lookup_tier": "miss",
+      "eager_worker_medians_us": [
+        49.36367186019197,
+        49.46946864947677,
+        50.1881746458821
+      ],
+      "eager_median_worker_median_us": 49.46946864947677,
+      "cuda_graph_worker_medians_us": [
+        4.45400601165602,
+        4.396076292323414,
+        4.575949787977152
+      ],
+      "cuda_graph_median_worker_median_us": 4.45400601165602
+    },
+    {
+      "arm": "default",
+      "phase": "warm",
+      "lookup_tier": "miss",
+      "eager_worker_medians_us": [
+        49.72650058334693,
+        49.51867158524692,
+        50.09614251321182
+      ],
+      "eager_median_worker_median_us": 49.72650058334693,
+      "cuda_graph_worker_medians_us": [
+        4.51341056759702,
+        4.6192973968572915,
+        4.566908864944708
+      ],
+      "cuda_graph_median_worker_median_us": 4.566908864944708
+    },
+    {
+      "arm": "v1",
+      "phase": "cold",
+      "lookup_tier": "memory",
+      "eager_worker_medians_us": [
+        41.19613295188174,
+        40.410539077129215,
+        41.246820183005184
+      ],
+      "eager_median_worker_median_us": 41.19613295188174,
+      "cuda_graph_worker_medians_us": [
+        4.673016155720688,
+        4.610598261933774,
+        4.743320823763497
+      ],
+      "cuda_graph_median_worker_median_us": 4.673016155720688
+    },
+    {
+      "arm": "v1",
+      "phase": "warm",
+      "lookup_tier": "file",
+      "eager_worker_medians_us": [
+        43.063775228802115,
+        41.888648411259055,
+        43.109980470035225
+      ],
+      "eager_median_worker_median_us": 43.063775228802115,
+      "cuda_graph_worker_medians_us": [
+        4.421119410835672,
+        4.587129296851344,
+        4.454320696822833
+      ],
+      "cuda_graph_median_worker_median_us": 4.454320696822833
+    },
+    {
+      "arm": "v2",
+      "phase": "cold",
+      "lookup_tier": "memory",
+      "eager_worker_medians_us": [
+        40.860570152290165,
+        40.34331941511482,
+        40.15394515590742
+      ],
+      "eager_median_worker_median_us": 40.34331941511482,
+      "cuda_graph_worker_medians_us": [
+        4.68708840344334,
+        4.75746546726441,
+        4.743094359582756
+      ],
+      "cuda_graph_median_worker_median_us": 4.743094359582756
+    },
+    {
+      "arm": "v2",
+      "phase": "warm",
+      "lookup_tier": "file",
+      "eager_worker_medians_us": [
+        41.51458851993084,
+        42.08341415505856,
+        42.69083874532953
+      ],
+      "eager_median_worker_median_us": 42.08341415505856,
+      "cuda_graph_worker_medians_us": [
+        4.484076634980738,
+        4.635330333258025,
+        4.617869672074448
+      ],
+      "cuda_graph_median_worker_median_us": 4.617869672074448
+    }
+  ],
+  "cold_natural_winners": [
+    {
+      "arm": "v1",
+      "seed": 17,
+      "tactic": [
+        253403070530,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "kind": "descriptor",
+      "descriptor_index_in_this_worker": 0,
+      "fresh_warm_same_winner": true
+    },
+    {
+      "arm": "v1",
+      "seed": 18,
+      "tactic": [
+        1340029796418,
+        4294967332,
+        0,
+        1407374883553283,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "kind": "descriptor",
+      "descriptor_index_in_this_worker": 5,
+      "fresh_warm_same_winner": true
+    },
+    {
+      "arm": "v1",
+      "seed": 19,
+      "tactic": [
+        253403070530,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "kind": "descriptor",
+      "descriptor_index_in_this_worker": 0,
+      "fresh_warm_same_winner": true
+    },
+    {
+      "arm": "v2",
+      "seed": 17,
+      "tactic": [
+        253403070530,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "kind": "descriptor",
+      "descriptor_index_in_this_worker": 0,
+      "fresh_warm_same_winner": true
+    },
+    {
+      "arm": "v2",
+      "seed": 18,
+      "tactic": -1,
+      "kind": "default",
+      "descriptor_index_in_this_worker": null,
+      "fresh_warm_same_winner": true
+    },
+    {
+      "arm": "v2",
+      "seed": 19,
+      "tactic": -1,
+      "kind": "default",
+      "descriptor_index_in_this_worker": null,
+      "fresh_warm_same_winner": true
+    }
+  ],
+  "same_oracle_selected_to_best_regret": {
+    "definition": "selected tactic's median within one oracle sweep divided by best accepted tactic's median in that same sweep/tier; optimum1",
+    "results": [
+      {
+        "arm": "v1",
+        "phase": "cold",
+        "execution": "eager",
+        "lookup_tier": "memory",
+        "paired_seed_ratios": {
+          "17": 1.0116286138834139,
+          "18": 1.0151243145454831,
+          "19": 1.026162404103036
+        },
+        "median_ratio": 1.0151243145454831,
+        "range": [
+          1.0116286138834139,
+          1.026162404103036
+        ]
+      },
+      {
+        "arm": "v1",
+        "phase": "cold",
+        "execution": "cuda_graph",
+        "lookup_tier": "memory",
+        "paired_seed_ratios": {
+          "17": 1.002630495152511,
+          "18": 1.0130466737965382,
+          "19": 1.0055992531253075
+        },
+        "median_ratio": 1.0055992531253075,
+        "range": [
+          1.002630495152511,
+          1.0130466737965382
+        ]
+      },
+      {
+        "arm": "v1",
+        "phase": "warm",
+        "execution": "eager",
+        "lookup_tier": "file",
+        "paired_seed_ratios": {
+          "17": 1.0045476697508253,
+          "18": 1.0040244188531897,
+          "19": 1.0181427348337222
+        },
+        "median_ratio": 1.0045476697508253,
+        "range": [
+          1.0040244188531897,
+          1.0181427348337222
+        ]
+      },
+      {
+        "arm": "v1",
+        "phase": "warm",
+        "execution": "cuda_graph",
+        "lookup_tier": "file",
+        "paired_seed_ratios": {
+          "17": 1.0008334546789097,
+          "18": 1.0091059620207394,
+          "19": 1.0024603414253455
+        },
+        "median_ratio": 1.0024603414253455,
+        "range": [
+          1.0008334546789097,
+          1.0091059620207394
+        ]
+      },
+      {
+        "arm": "v2",
+        "phase": "cold",
+        "execution": "eager",
+        "lookup_tier": "memory",
+        "paired_seed_ratios": {
+          "17": 1.0108442105531847,
+          "18": 1.0,
+          "19": 1.013069079217105
+        },
+        "median_ratio": 1.0108442105531847,
+        "range": [
+          1.0,
+          1.013069079217105
+        ]
+      },
+      {
+        "arm": "v2",
+        "phase": "cold",
+        "execution": "cuda_graph",
+        "lookup_tier": "memory",
+        "paired_seed_ratios": {
+          "17": 1.005809117002272,
+          "18": 1.0,
+          "19": 1.033464915454112
+        },
+        "median_ratio": 1.005809117002272,
+        "range": [
+          1.0,
+          1.033464915454112
+        ]
+      },
+      {
+        "arm": "v2",
+        "phase": "warm",
+        "execution": "eager",
+        "lookup_tier": "file",
+        "paired_seed_ratios": {
+          "17": 1.0195849395406746,
+          "18": 1.0200070984364933,
+          "19": 1.0205073704546639
+        },
+        "median_ratio": 1.0200070984364933,
+        "range": [
+          1.0195849395406746,
+          1.0205073704546639
+        ]
+      },
+      {
+        "arm": "v2",
+        "phase": "warm",
+        "execution": "cuda_graph",
+        "lookup_tier": "file",
+        "paired_seed_ratios": {
+          "17": 1.008453283286713,
+          "18": 1.0016834731480029,
+          "19": 1.0026494613856232
+        },
+        "median_ratio": 1.0026494613856232,
+        "range": [
+          1.0016834731480029,
+          1.008453283286713
+        ]
+      }
+    ]
+  },
+  "findings": [
+    "Default -1 participated in v2 profiling, won seeds18/19, and survived each corresponding fresh warm file reload as a genuine hit.",
+    "Natural warm v2/v1 median paired latency ratios are0.9902773854189744 eager and1.0142401094145443 graph; results do not establish uniform v2 superiority.",
+    "Measured warm eager selected-to-best oracle ratios have median1.0045476697508253 for v1 and1.0200070984364933 for v2. Natural latency and candidate-quality measurements answer different questions.",
+    "Untuned natural default is a true lookup miss, whereas tuned cold/warm winners use memory/file hits. The roughly49.5us untuned eager versus40\u201343us cached eager gap includes lookup/dispatch path differences and cannot be attributed solely to different GPU algorithms.",
+    "Cold startup remains a secondary diagnostic; no model startup or serving-throughput claim is made."
+  ],
+  "limits": [
+    "Three fresh-worker trials, not45 independent trials; fifteen samples estimate each worker's latency.",
+    "Taking the minimum of nine noisy candidate estimates makes the measured oracle optimistic. Small apparent regret includes minimum-selection noise, execution order, clock and sampling variation; no confidence interval or significance claim is established.",
+    "Regret uses selected-versus-best within the same sweep and tier. Natural-versus-oracle timing compares separate windows and may be below1; it is not pure selection regret.",
+    "Default natural miss timing is deliberately separate from cached-default oracle timing.",
+    "This tests one shape on an experimental source overlay and one H100 NVL, with no distributed, BF16, managed-store, explicit-policy or full-model qualification.",
+    "M144 is still pending; no result-dependent change to its preregistered execution is proposed."
+  ],
+  "next_decision": {
+    "action": "continue the preregistered M144 case",
+    "reason": "M128 passed correctness/provenance/completeness; improvement is not an acceptance criterion",
+    "after_M144": "Record the combined observations and candidate rankings, then decide whether targeted repetitions or measurement-policy investigation are justified; no production change is implied."
+  },
+  "derived_from": {
+    "checkpoint_analysis_sha256": "5877eb79ec99b50ef7509947d3f923e58b5647a4f6fff2124ff56592f7de4945",
+    "independent_audit_sha256": "8ff1558f9217bff7e74adf7c9356e0dd996cc4f92855470545f1765144f36ecf"
+  }
+}
