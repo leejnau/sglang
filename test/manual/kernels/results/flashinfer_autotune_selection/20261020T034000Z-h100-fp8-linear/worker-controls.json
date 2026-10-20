@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "worker_sha256": "3512bcb15ed9806ad6ce0b8e144943a0d92a384bd1b735210c7346836adf14e8",
+  "fixture_manifest_sha256": "e13a86fab5db5796b22d8dab0f84080b8057b036ca7aef2c7be8832e76505bf1",
+  "checks": [
+    "captured output binding survives subsequent eager allocations",
+    "actual facade receives correct scalar order and returned allocation is retained",
+    "CLI protocol defaults match frozen seed, sample, warmup, calibration, and no-oracle design",
+    "invalid sample, iteration, trial, and seed are rejected before heavy imports",
+    "timing uses raw graph replay and one actual facade call without output copies",
+    "actual public fixture schema and six pinned runtime source hashes match worker assumptions"
+  ],
+  "scope": "CPU parser, allocation binding, source and fixture-manifest controls only; CUDA execution pending"
+}

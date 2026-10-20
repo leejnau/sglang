@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "final": true,
+  "script_sha256": "33f9330355ec34a5016e72bcc448a20bae75b60c0923070dfc1b03d8fd6b8cda",
+  "checks": [
+    "complete original-slice equality passes",
+    "reject corrupted Q projection byte",
+    "reject corrupted K boundary byte",
+    "reject corrupted V boundary byte",
+    "reject wrong revision path",
+    "reject truncated checkpoint",
+    "restricted-token scan passes"
+  ],
+  "device_or_model_actions": false,
+  "note": "Positive fixture-derived synthetic checkpoint is a CPU parser/control check only; actual checkpoint attribution must run against the independently downloaded pinned checkpoint."
+}

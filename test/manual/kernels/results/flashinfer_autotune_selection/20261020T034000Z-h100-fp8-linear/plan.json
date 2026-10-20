@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "batch_id": "20261020T034000Z-h100-fp8-linear",
-  "status": "preregistered_before_fixture_capture",
+  "status": "preregistered_frozen_fixture_before_comparison",
   "objective": "Compare untuned default, v1 and v2 through one actual SGLang static per-tensor FP8 fused-QKV linear layer with fixed captured model activations and weights.",
   "landed_main_commit": "1897575ce11301b6b5ce647f0ad4fa2e777ee2bd",
   "source_baseline_commit": "4eb4cbbc2a9ea0d12f8246875cc60dc9624bff6f",
@@ -48,7 +48,13 @@
     "measurement_policy": "unspecified",
     "persistence": "Existing real SGLang wrapper and v1 JSON save/load; managed store disabled.",
     "shape_limit": "One representative captured prefill projection, not full-model output accuracy or traffic distribution. Dense BF16 checkpoint adapted to static per-tensor FP8 for this experiment; no production calibration claim.",
-    "path": "Actual SGLang static quantizer, normal custom-op dispatch/fast path and allocation, FlashInfer cublas FP8 implementation; no replacement or output copy in timed calls."
+    "path": "Actual SGLang static quantizer, normal custom-op dispatch/fast path and allocation, FlashInfer cublas FP8 implementation; no replacement or output copy in timed calls.",
+    "profiling_input_limit": "Actual serving and startup calls use captured BF16 inputs quantized by SGLang. FlashInfer retains its existing synthesized dynamic FP8 activation profiles; static real QKV weights and scales are reused. Reset RNG19 does not mean synthesized profiling activations equal captured serving activations. No activation-domain fidelity or profiling-policy change is claimed.",
+    "shape": [
+      144,
+      4096,
+      1024
+    ]
   },
   "protocol": {
     "trials": [
@@ -135,5 +141,16 @@
     "open_pr": false,
     "records": "Preserve every attempt, exact raw bytes, numerical/cache/native build evidence, timing samples, neutral/regressive outcomes; one living Markdown for narrative/history."
   },
-  "resource_policy": "One exclusive H100 allocation for at most1hour. Verify node/durable/downloaded full archive before release; retain binary privately, exact build/source/hash publicly. No CI triggered."
+  "resource_policy": "One exclusive H100 allocation for at most1hour. Verify node/durable/downloaded full archive before release; retain binary privately, exact build/source/hash publicly. No CI triggered.",
+  "fixture": {
+    "manifest_sha256": "e13a86fab5db5796b22d8dab0f84080b8057b036ca7aef2c7be8832e76505bf1",
+    "tensor_file_sha256": "c30aa761eba827bb0b4eb6de0e99d9b8dda8243dd16d00146f9718d2abb05e8b",
+    "tensor_file_size_bytes": 12879616,
+    "capture_commit": "a29b31850c7b68cafde022614b00ab01d6ff5cde",
+    "capture_script_sha256": "c3c88dbf3df9fe0dc73d89a5acb9038e5b09fb1efc6316bc36917d06251f92a4",
+    "manifest_path": "fixture-manifest.json",
+    "private_capture_archive": "/home/lnau/flashinfer-autotune-study/20261020T034000Z-h100-fp8-linear-capture-full-raw.tgz",
+    "private_capture_archive_sha256": "9f87e468d7b6c1f665f187ff6c9b009da82a5f534ffb67e37c24fd6ad017fec1",
+    "public_tensor_publication": false
+  }
 }

@@ -1,0 +1,94 @@
+{
+  "status": "success",
+  "final": true,
+  "checks": [
+    {
+      "name": "frozen capture, public/private manifest and production QKV source order",
+      "status": "passed",
+      "detail": {
+        "commit": "a29b31850c7b68cafde022614b00ab01d6ff5cde",
+        "script_sha256": "c3c88dbf3df9fe0dc73d89a5acb9038e5b09fb1efc6316bc36917d06251f92a4",
+        "production_sources": 6,
+        "manifest_sha256": "e13a86fab5db5796b22d8dab0f84080b8057b036ca7aef2c7be8832e76505bf1"
+      }
+    },
+    {
+      "name": "complete safetensors header, contiguous slices and all six tensor hashes",
+      "status": "passed",
+      "detail": {
+        "tensor_file_sha256": "c30aa761eba827bb0b4eb6de0e99d9b8dda8243dd16d00146f9718d2abb05e8b",
+        "size_bytes": 12879616,
+        "tensor_count": 6,
+        "header_bytes": 624
+      }
+    },
+    {
+      "name": "captured layer geometry, execution, token IDs and checkpoint provenance",
+      "status": "passed",
+      "detail": {
+        "input_ids": 144,
+        "checkpoint_files": 7,
+        "projection_rows": [
+          2048,
+          1024,
+          1024
+        ],
+        "checkpoint_file_bytes_locally_rehashed": false
+      }
+    },
+    {
+      "name": "independent BF16 byte decoding and exact FP32 static calibration",
+      "status": "passed",
+      "detail": {
+        "input_bf16": {
+          "absmax": 2.796875,
+          "scale": 0.0062430244870483875
+        },
+        "weight_bf16_rowmajor": {
+          "absmax": 0.64453125,
+          "scale": 0.0014386858092620969
+        }
+      }
+    },
+    {
+      "name": "every FP8 weight independently reconstructed with FP32 division and RN-even rounding",
+      "status": "passed",
+      "detail": {
+        "quantized_values_verified": 4194304,
+        "fp8_sha256": "10a5bab88ff22484e35bdbf143c20e26b28f2bb88fb173728007c80448556d36",
+        "projection_slices": [
+          {
+            "projection": "q_proj",
+            "rows": 2048,
+            "original_bf16_slice_sha256": "7592f6e783c400f502653f77d9b483cb03e96c3061af16f538da0d695d21bc53"
+          },
+          {
+            "projection": "k_proj",
+            "rows": 1024,
+            "original_bf16_slice_sha256": "68dd761a149b0ff707ad0c1ac6d61dfed75d6fedfbbdbfedde4889f5ca0706f4"
+          },
+          {
+            "projection": "v_proj",
+            "rows": 1024,
+            "original_bf16_slice_sha256": "89e87de8f53f9777cd9a2096a7b715688a17193bd5da8ec3776c4b3e675a40e2"
+          }
+        ]
+      }
+    },
+    {
+      "name": "independent captured activation FP32 reciprocal/multiply/clamp/RN-even FP8 reference",
+      "status": "passed",
+      "detail": {
+        "quantized_values_verified": 147456,
+        "fp8_sha256": "879f7986dc7a53da6a9ad1c813773267997fbcc0c3d257fdcd612ca4152c57c3"
+      }
+    }
+  ],
+  "errors": [],
+  "scope_limits": [
+    "No GPU or third-party tensor library used by this audit.",
+    "Original full checkpoint file bytes are not local; their recorded hashes and pinned revision are provenance, not an independent local rehash.",
+    "Checkpoint-to-fused-QKV ordering is proved by frozen capture/source AST and reported projection sizes; the retained BF16 slices provide exact future checkpoint-comparison targets.",
+    "This fixture audit establishes capture and quantization integrity, not full-model FP8 accuracy or serving performance."
+  ]
+}

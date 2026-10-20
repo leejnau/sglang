@@ -1,0 +1,78 @@
+{
+  "status": "success",
+  "schema_version": 1,
+  "model_id": "Qwen/Qwen3-0.6B",
+  "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "fixture_manifest_sha256": "e13a86fab5db5796b22d8dab0f84080b8057b036ca7aef2c7be8832e76505bf1",
+  "fixture_tensor_file_sha256": "c30aa761eba827bb0b4eb6de0e99d9b8dda8243dd16d00146f9718d2abb05e8b",
+  "checkpoint": {
+    "logical_path": "/tmp/fi-linear-2679896/model-cache/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca/model.safetensors",
+    "size_bytes": 1503300328,
+    "header_sha256": "399d16f500e925c7e923fe05966c6df6862ab64da60916843119e802f1801bca",
+    "recorded_full_file_sha256": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b",
+    "full_file_hash_recomputed": false
+  },
+  "fixture_header_sha256": "eb8136971a85cceb9f7650bbe0a03d17367286cb2596186a8ff057fe8a3cb0f2",
+  "projections": [
+    {
+      "checkpoint_key": "model.layers.0.self_attn.q_proj.weight",
+      "dtype": "BF16",
+      "shape": [
+        2048,
+        1024
+      ],
+      "checkpoint_data_offsets": [
+        647500288,
+        651694592
+      ],
+      "fixture_row_range": [
+        0,
+        2048
+      ],
+      "checkpoint_slice_sha256": "7592f6e783c400f502653f77d9b483cb03e96c3061af16f538da0d695d21bc53",
+      "fixture_slice_sha256": "7592f6e783c400f502653f77d9b483cb03e96c3061af16f538da0d695d21bc53",
+      "matches": true
+    },
+    {
+      "checkpoint_key": "model.layers.0.self_attn.k_proj.weight",
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "checkpoint_data_offsets": [
+        641208576,
+        643305728
+      ],
+      "fixture_row_range": [
+        2048,
+        3072
+      ],
+      "checkpoint_slice_sha256": "68dd761a149b0ff707ad0c1ac6d61dfed75d6fedfbbdbfedde4889f5ca0706f4",
+      "fixture_slice_sha256": "68dd761a149b0ff707ad0c1ac6d61dfed75d6fedfbbdbfedde4889f5ca0706f4",
+      "matches": true
+    },
+    {
+      "checkpoint_key": "model.layers.0.self_attn.v_proj.weight",
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "checkpoint_data_offsets": [
+        651694592,
+        653791744
+      ],
+      "fixture_row_range": [
+        3072,
+        4096
+      ],
+      "checkpoint_slice_sha256": "89e87de8f53f9777cd9a2096a7b715688a17193bd5da8ec3776c4b3e675a40e2",
+      "fixture_slice_sha256": "89e87de8f53f9777cd9a2096a7b715688a17193bd5da8ec3776c4b3e675a40e2",
+      "matches": true
+    }
+  ],
+  "concatenated_checkpoint_sha256": "63e3c4278e121c311023bd1e204bb19d61b28f049427ad2c58b81a48eeb6a2b3",
+  "total_compared_bf16_values": 4194304,
+  "scope": "Standard-library byte comparison only. Hashes the three original BF16 checkpoint tensor slices and the exact corresponding frozen fused-QKV rows; no model load, CUDA access, or full checkpoint copy."
+}

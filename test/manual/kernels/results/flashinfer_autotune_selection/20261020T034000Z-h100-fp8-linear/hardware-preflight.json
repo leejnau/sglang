@@ -1,0 +1,31 @@
+{
+  "status": "success",
+  "job_id": 2679896,
+  "host": "1u1g-gen-0100",
+  "gpu": {
+    "index": "0",
+    "name": "NVIDIA H100 NVL",
+    "uuid": "GPU-240958a2-e8e1-3bac-b767-365c9e0b97bd",
+    "driver_version": "580.159.04",
+    "power.limit [W]": "310.00 W",
+    "memory.total [MiB]": "95830 MiB",
+    "memory.used [MiB]": "0 MiB"
+  },
+  "image": {
+    "Id": "sha256:2e152727f0a5ce999172ec48203b2b292d41b3cb370976827718870557899caa",
+    "RepoDigests": [
+      "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0"
+    ],
+    "Architecture": "amd64",
+    "Os": "linux",
+    "Created": "2026-10-19T00:48:17.586753916Z"
+  },
+  "gpu_compute_processes_after_capture": [],
+  "hardware_probe_sha256": "8c60b560e5e10432e054a7a58e2356723c141316c8af103b1df1679d330d3289",
+  "image_probe_sha256": "c6ac5ace0f3dd31549a6ef8b8e3fd3d6f2fc314af14b882ebeecc3bd552b300f",
+  "allocation_start": "JobId=2679896 JobName=fi-fp8-linear UserId=lnau(150381) GroupId=dip(30) MCS_label=N/A Priority=480 Nice=0 Account=dl_frameworks QOS=normal JobState=RUNNING Reason=None Dependency=(null) Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:20 TimeLimit=01:00:00 TimeMin=N/A SubmitTime=2026-10-20T03:39:54 EligibleTime=2026-10-20T03:39:54 AccrueTime=2026-10-20T03:39:54 StartTime=2026-10-20T03:40:18 EndTime=2026-10-20T04:40:19 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-20T03:40:18 Scheduler=Backfill Partition=general AllocNode:Sid=ipp2-2176.ipp2u1.colossus.nvidia.com:2883564 ReqNodeList=1u1g-gen-0100 ExcNodeList=(null) NodeList=1u1g-gen-0100 BatchHost=1u1g-gen-0100 NumNodes=1 NumCPUs=32 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=1,mem=52050M,node=1,billing=1,gres/gpu=1 AllocTRES=cpu=32,mem=52050M,node=1,billing=32,gres/gpu=1 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=1 MinMemoryTRES=52050M MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null) Command=(null) WorkDir=/home/lnau StdErr=/home/lnau/flashinfer-autotune-study/slurm-2679896.log StdIn=/dev/null StdOut=/home/lnau/flashinfer-autotune-study/slurm-2679896.log CpusPerTres=gpu:8 MemPerTres=gpu:52050 TresPerNode=gres/gpu:H100:1",
+  "capture_exit_code": 0,
+  "capture_archive_sha256": "9f87e468d7b6c1f665f187ff6c9b009da82a5f534ffb67e37c24fd6ad017fec1",
+  "capture_archive_verified_node_durable_download": true,
+  "scope": "Physical source/image preflight plus frozen model acquisition. No autotuning or comparison worker ran before final execution freeze."
+}

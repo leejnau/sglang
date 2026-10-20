@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "final": true,
+  "source_commit": "a29b31850c7b68cafde022614b00ab01d6ff5cde",
+  "checks": [
+    "isolated CPU-only help",
+    "refuse existing output before heavy imports",
+    "accept audited Q/K/V loader layout",
+    "reject changed Q/K/V order",
+    "reject changed QKV shard offsets",
+    "real merged production Q/K/V layout",
+    "capture source excludes restricted project token"
+  ],
+  "script_sha256": "c3c88dbf3df9fe0dc73d89a5acb9038e5b09fb1efc6316bc36917d06251f92a4",
+  "heavy_model_actions_performed": false
+}

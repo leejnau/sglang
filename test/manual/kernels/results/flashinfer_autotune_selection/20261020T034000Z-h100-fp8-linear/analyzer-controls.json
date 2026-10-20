@@ -1,0 +1,423 @@
+{
+  "status": "success",
+  "synthetic_only": true,
+  "scope": "CPU controls only; fabricated timings are never experiment evidence",
+  "analyzer_sha256": "e551c7508890045395074d7532c7a2b621cc91fbfe9b4b8c23a7e9e7070027d5",
+  "controls": [
+    {
+      "name": "six_whole_trial_bootstrap_equals_literal46656_resamples",
+      "passed": true
+    },
+    {
+      "name": "one_trial_checkpoint_interval_absent",
+      "passed": true
+    },
+    {
+      "name": "duplicate_trial_is_not_independent",
+      "passed": true,
+      "rejected": "trial pooled or repeated"
+    },
+    {
+      "name": "three_pairwise_contrasts_both_phases_modes_channels",
+      "passed": true
+    },
+    {
+      "name": "paired_ratio_cold_eager_wall_v2_over_v1",
+      "passed": true
+    },
+    {
+      "name": "paired_ratio_cold_eager_wall_v1_over_default",
+      "passed": true
+    },
+    {
+      "name": "paired_ratio_cold_eager_wall_v2_over_default",
+      "passed": true
+    },
+    {
+      "name": "paired_ratio_cold_eager_gpu_event_v2_over_v1",
+      "passed": true
+    },
+    {
+      "name": "paired_ratio_cold_eager_gpu_event_v1_over_default",
+      "passed": true
+    },
+    {
+      "name": "paired_ratio_cold_eager_gpu_event_v2_over_default",
+      "passed": true
+    },
+    {
+      "name": "paired_ratio_cold_cuda_graph_wall_v2_over_v1",
+      "passed": true
+    },
+    {
+      "name": "paired_ratio_cold_cuda_graph_wall_v1_over_default",
+      "passed": true
+    },
+    {
+      "name": "paired_ratio_cold_cuda_graph_wall_v2_over_default",
+      "passed": true
+    },
+    {
+      "name": "paired_ratio_cold_cuda_graph_gpu_event_v2_over_v1",
+      "passed": true
+    },
+    {
+      "name": "paired_ratio_cold_cuda_graph_gpu_event_v1_over_default",
+      "passed": true
+    },
+    {
+      "name": "paired_ratio_cold_cuda_graph_gpu_event_v2_over_default",
+      "passed": true
+    },
+    {
+      "name": "paired_ratio_warm_eager_wall_v2_over_v1",
+      "passed": true
+    },
+    {
+      "name": "paired_ratio_warm_eager_wall_v1_over_default",
+      "passed": true
+    },
+    {
+      "name": "paired_ratio_warm_eager_wall_v2_over_default",
+      "passed": true
+    },
+    {
+      "name": "paired_ratio_warm_eager_gpu_event_v2_over_v1",
+      "passed": true
+    },
+    {
+      "name": "paired_ratio_warm_eager_gpu_event_v1_over_default",
+      "passed": true
+    },
+    {
+      "name": "paired_ratio_warm_eager_gpu_event_v2_over_default",
+      "passed": true
+    },
+    {
+      "name": "paired_ratio_warm_cuda_graph_wall_v2_over_v1",
+      "passed": true
+    },
+    {
+      "name": "paired_ratio_warm_cuda_graph_wall_v1_over_default",
+      "passed": true
+    },
+    {
+      "name": "paired_ratio_warm_cuda_graph_wall_v2_over_default",
+      "passed": true
+    },
+    {
+      "name": "paired_ratio_warm_cuda_graph_gpu_event_v2_over_v1",
+      "passed": true
+    },
+    {
+      "name": "paired_ratio_warm_cuda_graph_gpu_event_v1_over_default",
+      "passed": true
+    },
+    {
+      "name": "paired_ratio_warm_cuda_graph_gpu_event_v2_over_default",
+      "passed": true
+    },
+    {
+      "name": "primary_eager_wall_graph_gpu_event",
+      "passed": true
+    },
+    {
+      "name": "default_miss_is_explicit_in_comparison",
+      "passed": true
+    },
+    {
+      "name": "overflow_numeric_literal_rejected",
+      "passed": true,
+      "rejected": "nonfinite JSON numeric literal: 1e999"
+    },
+    {
+      "name": "actual_prior_natural_timing_schema",
+      "passed": true
+    },
+    {
+      "name": "raw_batch_normalization_fault",
+      "passed": true,
+      "rejected": "control: inconsistent normalization"
+    },
+    {
+      "name": "false_reported_median_fault",
+      "passed": true,
+      "rejected": "control: incorrect median"
+    },
+    {
+      "name": "calibration_target_not_reached",
+      "passed": true,
+      "rejected": "control: calibration end"
+    },
+    {
+      "name": "sample_count_fault",
+      "passed": true,
+      "rejected": "control: sample count"
+    },
+    {
+      "name": "actual_fixture_manifest_and_pinned_capture_source",
+      "passed": true
+    },
+    {
+      "name": "retained_real_private_fixture_exact_file_sha",
+      "passed": true
+    },
+    {
+      "name": "fixture_revision",
+      "passed": true,
+      "rejected": "checkpoint revision"
+    },
+    {
+      "name": "fixture_capture_hook",
+      "passed": true,
+      "rejected": "captured model-layer provenance"
+    },
+    {
+      "name": "fixture_qkv_order",
+      "passed": true,
+      "rejected": "captured model-layer provenance"
+    },
+    {
+      "name": "fixture_original_shape",
+      "passed": true,
+      "rejected": "captured model-layer provenance"
+    },
+    {
+      "name": "fixture_weight_dtype",
+      "passed": true,
+      "rejected": "fixture tensor metadata: weight_fp8_rowmajor"
+    },
+    {
+      "name": "fixture_scale_shape",
+      "passed": true,
+      "rejected": "fixture tensor metadata: input_scale"
+    },
+    {
+      "name": "fixture_input_tensor_hash",
+      "passed": true,
+      "rejected": "fixture tensor metadata: input_bf16"
+    },
+    {
+      "name": "fixture_quantizer_rule",
+      "passed": true,
+      "rejected": "fixture quantization provenance"
+    },
+    {
+      "name": "fixture_token_padding",
+      "passed": true,
+      "rejected": "fixed tokenization"
+    },
+    {
+      "name": "fixture_source_hash",
+      "passed": true,
+      "rejected": "capture script changed after fixture capture"
+    },
+    {
+      "name": "fixture_checkpoint_provenance",
+      "passed": true,
+      "rejected": "checkpoint file provenance"
+    },
+    {
+      "name": "complete_default_cold_synthetic_worker",
+      "passed": true
+    },
+    {
+      "name": "complete_default_warm_synthetic_worker",
+      "passed": true
+    },
+    {
+      "name": "complete_v1_cold_synthetic_worker",
+      "passed": true
+    },
+    {
+      "name": "complete_v1_warm_synthetic_worker",
+      "passed": true
+    },
+    {
+      "name": "complete_v2_cold_synthetic_worker",
+      "passed": true
+    },
+    {
+      "name": "complete_v2_warm_synthetic_worker",
+      "passed": true
+    },
+    {
+      "name": "wrong_fixture_file_hash",
+      "passed": true,
+      "rejected": "v1-warm.json: loaded fixture hashes"
+    },
+    {
+      "name": "mutated_actual_BF16_activation",
+      "passed": true,
+      "rejected": "v1-warm.json: actual operand bytes differ from fixture"
+    },
+    {
+      "name": "prequantized_path_substitution",
+      "passed": true,
+      "rejected": "v1-warm.json: actual operation path"
+    },
+    {
+      "name": "TF32_enabled",
+      "passed": true,
+      "rejected": "v1-warm.json: normal uninstrumented inference path"
+    },
+    {
+      "name": "inference_mode_lost",
+      "passed": true,
+      "rejected": "v1-warm.json: normal uninstrumented inference path"
+    },
+    {
+      "name": "instrumented_dispatch_mode",
+      "passed": true,
+      "rejected": "v1-warm.json: normal uninstrumented inference path"
+    },
+    {
+      "name": "custom_op_fast_path_replaced",
+      "passed": true,
+      "rejected": "v1-warm.json: normal uninstrumented inference path"
+    },
+    {
+      "name": "quantized_bytes_differ",
+      "passed": true,
+      "rejected": "v1-warm.json: actual static quantization bytes/reference"
+    },
+    {
+      "name": "observed_native_weight_content_differs",
+      "passed": true,
+      "rejected": "v1-warm.json: native bytes/fixture binding"
+    },
+    {
+      "name": "observed_backend_differs",
+      "passed": true,
+      "rejected": "v1-warm.json: observed capture/backend"
+    },
+    {
+      "name": "observed_weight_layout_differs",
+      "passed": true,
+      "rejected": "v1-warm.json: actual operand layout/workspace"
+    },
+    {
+      "name": "hash_read_inside_capture",
+      "passed": true,
+      "rejected": "v1-warm.json: byte read during capture/zero-input/startup"
+    },
+    {
+      "name": "actual_allocated_output_not_poisoned",
+      "passed": true,
+      "rejected": "v1-warm.json: wrong allocated output poison/capture boundary"
+    },
+    {
+      "name": "graph_binding_replaced_by_eager_result",
+      "passed": true,
+      "rejected": "v1-warm.json: actual graph output binding"
+    },
+    {
+      "name": "zero_input_graph_check_missing",
+      "passed": true,
+      "rejected": "v1-warm.json: eager/graph correctness coverage"
+    },
+    {
+      "name": "zero_input_eager_check_not_exact",
+      "passed": true,
+      "rejected": "v1-warm.json: changed-input zero gate"
+    },
+    {
+      "name": "quantized_reference_gate_failed",
+      "passed": true,
+      "rejected": "v1-warm.json: quantized correctness/BF16 diagnostic roles"
+    },
+    {
+      "name": "BF16_error_misrepresented_as_accuracy_gate",
+      "passed": true,
+      "rejected": "v1-warm.json: quantized correctness/BF16 diagnostic roles"
+    },
+    {
+      "name": "silent_native_fallback",
+      "passed": true,
+      "rejected": "v1-warm.json: native guard natural_eager_changed_input: native acceptance evidence"
+    },
+    {
+      "name": "warm_profile_attempt",
+      "passed": true,
+      "rejected": "v1-warm.json: profiling attempt accounting"
+    },
+    {
+      "name": "swallowed_forbidden_profile",
+      "passed": true,
+      "rejected": "v1-warm.json: forbidden profiling attempted"
+    },
+    {
+      "name": "lost_file_hit",
+      "passed": true,
+      "rejected": "v1-warm.json: wrong selected tactic/source/capture"
+    },
+    {
+      "name": "warm_memory_promotion",
+      "passed": true,
+      "rejected": "v1-warm.json: natural lookup source"
+    },
+    {
+      "name": "original_cache_bytes_changed",
+      "passed": true,
+      "rejected": "v1-warm.json: persisted bytes changed"
+    },
+    {
+      "name": "finite_BF16_approximation_diagnostic_not_accuracy_gate",
+      "passed": true
+    },
+    {
+      "name": "quantized_normalized_error_exceeds_tolerance",
+      "passed": true,
+      "rejected": "v1-warm.json: quantized numerical gate"
+    },
+    {
+      "name": "actual_function_source_changed",
+      "passed": true,
+      "rejected": "v1-warm.json: actual function source"
+    },
+    {
+      "name": "untuned_default_must_remain_genuine_miss",
+      "passed": true,
+      "rejected": "default-warm.json: natural lookup source"
+    },
+    {
+      "name": "exact_existing_persistence_pair",
+      "passed": true
+    },
+    {
+      "name": "warm_restart_bytes_must_match_cold",
+      "passed": true,
+      "rejected": "persisted bytes changed across fresh restart"
+    },
+    {
+      "name": "warm_restart_winner_must_match_cold",
+      "passed": true,
+      "rejected": "persisted natural winner lost"
+    },
+    {
+      "name": "invalid_persisted_generation",
+      "passed": true,
+      "rejected": "v1-warm.json: natural cache: invalid persisted generation"
+    },
+    {
+      "name": "reported_startup_minimum_wrong",
+      "passed": true,
+      "rejected": "v2-cold.json: reported profiler minimum"
+    },
+    {
+      "name": "v2_default_participation_removed",
+      "passed": true,
+      "rejected": "v2-cold.json: v2 default participation"
+    }
+  ],
+  "passed": 89,
+  "report_status": "FINAL; immutable after readiness",
+  "independent_review": "Read-only schema, source, cache, numerical and statistical review passed.",
+  "control_driver_sha256": "19a9aee3cba93a052b983ee9a1f0c04678ac8862bb51176317febaf90fc3fec9",
+  "checks": {
+    "compile": true,
+    "help_without_torch": true,
+    "applicable_pre_commit_hooks": true,
+    "direct_ruff_and_isort": true
+  }
+}
