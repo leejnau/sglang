@@ -1,0 +1,3004 @@
+{
+  "status": "success",
+  "schema_version": 1,
+  "source_commit": "7f2fd651209c4bba62dc96416008783c42e5ecdb",
+  "source_manifest_sha256": "3f4305fce604d3cd51e85047678c6efbf71e35bcf51037e9586d15bc20486895",
+  "analyzer_sha256": "8e341d5f1851161dee5a6c8d1b32ef775b6af0f28605c3a387dfb4f4401afc7d",
+  "trials": [
+    0
+  ],
+  "input_seed": 19,
+  "independent_trial_pairs": 1,
+  "outer_provenance": {
+    "plan_sha256": "9c174b72add6f01cb50b196e57fb5f1d56734529679c83d6326ca7566d975dc7",
+    "launcher_manifest_sha256": "57a79695f86b3197dc4f785c053606d5cc35c9f6198daed16d5d9959059f7fbe",
+    "image": {
+      "Id": "sha256:2e152727f0a5ce999172ec48203b2b292d41b3cb370976827718870557899caa",
+      "RepoDigests": [
+        "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0"
+      ],
+      "Created": "2026-10-19T00:48:17.586753916Z",
+      "Architecture": "amd64",
+      "Os": "linux",
+      "Size": 39141723315
+    },
+    "plan": {
+      "schema_version": 1,
+      "batch_id": "20261020T030300Z-h100-m144-stability",
+      "status": "preregistered",
+      "objective": "Test M144 tuning repeatability and warm candidate ranking with identical inputs, randomized balanced interleaving and existing v1 file persistence.",
+      "source_baseline_commit": "ec0ae6193ef0b76e91f761fa9e6e5ab0f2878f25",
+      "flashinfer_source": {
+        "base_release": "0.7.2",
+        "base_commit": "d84335d8c54e0c8f9f7e22faa15c7e34a58abf94",
+        "upstream_pr": 6148,
+        "patch_head": "14c5c67a1eb9ad3a608b8d3da3bf6d8924037c5c",
+        "implementation": "Exact original diff applied cleanly to0.7.2, not full PR head; candidate source only for every arm.",
+        "input_batch": "test/manual/kernels/results/flashinfer_autotune_selection/20261019T232945Z-h100-descriptor-qualification",
+        "source_overlay_archive_sha256": "c62f09dad18dbe0ce326177077360fe716095f209dc023b25c5552dcc12f666f",
+        "source_manifest_sha256": "3f4305fce604d3cd51e85047678c6efbf71e35bcf51037e9586d15bc20486895",
+        "native_loading": "Reuse audited prepare_native(candidate): explicit JitSpec.build/load, identical module bootstrap in every arm; reject AOT substitution. One isolated candidate build workspace, fresh process/container per worker."
+      },
+      "container_image": "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
+      "environment": {
+        "gpu": "NVIDIA H100 NVL",
+        "physical_gpu_uuid": "240958a2-e8e1-3bac-b767-365c9e0b97bd",
+        "driver": "580.159.04",
+        "torch": "2.14.1+cu130",
+        "torch_cuda": "13.0",
+        "exclusive_node": true,
+        "clock_lock": false,
+        "cuda_arch_list": "9.0",
+        "sglang_wrapper_sha256": "64deff581665bd04830535baccfdfbdfa72794d919bc462fc469a4c42bdd68f5",
+        "host": "1u1g-gen-0100",
+        "power_limit_watts": 310,
+        "hardware_change": "Reuse prior H100NVL physical GPU if available; no comparisons to earlier HBM3 absolute timings. Hardware preflight must match this frozen expected model/UUID/driver before workers."
+      },
+      "workload": {
+        "api": "flashinfer.bmm_fp8 backend=cublas through actual SGLang startup wrapper",
+        "shape": [
+          144,
+          1024,
+          1024
+        ],
+        "batch": 1,
+        "input_seed": 19,
+        "input_seed_scope": "Identical model inputs and reset Torch RNG across every fresh worker. Trial ID and schedule seed are separate from data seed. Profiling synthetic-input generation remains the unmodified operation behavior.",
+        "reference_operand_sha256": {
+          "a": "b242c1b61a72df344f0b75775a3afe4d9228482664cd87bc5e4334069a64dbe6",
+          "b": "a83d6412ff89c06e01d941a30b0b491ef6b4c65595d16bc16e94ec1ae2af5e06",
+          "scale_a": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c",
+          "scale_b": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+        },
+        "measurement_policy": "unspecified; retain operation defaults and record actual profiler flags, tuner delay/repeat/warmup/global-timer state",
+        "persistence": "actual SGLang wrapper and existing v1 save/load; managed stores disabled",
+        "arms": [
+          "v1",
+          "v2"
+        ],
+        "m144_scope": "Startup and serving both144; normalized cache key256. No independent tune256-to-serve144 transfer.",
+        "profiling_input_limit": "Serving operands are verified byte-identical by hash. Torch/CUDA RNG is reset to19, and the default synthesis is retained, but synthetic profiling tensors are not individually hashed. Dynamic profiling A is generated from uniform[-5,5] then cast; serving A came from Gaussian FP8 quantization. Do not claim identical profiling/serving data domains or bit-verified synthetic inputs."
+      },
+      "protocol": {
+        "trials": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "phases": [
+          "cold",
+          "warm"
+        ],
+        "workers_total": 24,
+        "trial_order": "Ascending0..5; arm order v1/v2 on even trials and v2/v1 on odd trials; cold then warm for each arm.",
+        "schedule_seed_rule": "3000+trial, identical in paired arms",
+        "natural_samples": 15,
+        "blocks": 24,
+        "requested_iterations": 20,
+        "warmup_ms": 500,
+        "rewarm_ms": 20,
+        "min_sample_ms": 20,
+        "max_iterations": 65536,
+        "candidate_manifest": "candidates.json",
+        "candidate_manifest_sha256": "1de565fcf51769d7ed45c290ab114f1e210b4265cc41bb757d5f4f860bb53333",
+        "candidate_pool": "Fixed three candidates plus own natural winner if distinct, maximum4. Deduplicate by actual eight-word descriptor or default-1. Preserve source labels.",
+        "interleaving": "Warm workers only. For3candidates use all6permutations repeated4times; for4use all24permutations once; shuffle complete block list with schedule seed. Position and pair-order balanced. Each candidate occurs once per block in both execution modes.",
+        "iterations": "Calibrate each accepted candidate outside measurement, common iterations per execution=max candidate count; min20ms target, max65536. Normalize each raw block with actual common iteration count.",
+        "cache_switch": "Materialize unique actual v1 control file per candidate with unrelated natural entries/policies preserved. Reload outside every timed batch, assert no memory promotion and true file hit; >=20ms candidate rewarm outside batch.",
+        "graphs": "Capture once per candidate outside primary timings; check poisoned-output changed/restored-input replay. Each replay graph remains tied to its capture-selected candidate.",
+        "instrumentation": "No native/choose/search/binding hooks inside timed windows. Dormant profiling-attempt guard remains; count all attempts before errors. Native acceptance and cache tracing occur outside windows.",
+        "startup_scope": "Cold startup diagnostic; no complete-server startup measurement. Explicit native load/build and initial public API preparation excluded.",
+        "timeout_seconds_per_worker": 900,
+        "checkpoint": "Validate first complete trial (4workers) before remaining20. Acceptance requires numerical/cache/source/timing validity, never a required speedup.",
+        "execution_mode_order": "Per block: eager then graph on even blocks, graph then eager on odd blocks. Candidate permutation shuffles use order_seed for eager and order_seed+1 for graph."
+      },
+      "acceptance": [
+        "Pinned image, exact qualified descriptor overlay, clean frozen Git/source/native hashes and physical GPU/driver match.",
+        "All24fresh containers use identical quantized operand bytes matching original seed19 reference.",
+        "Cold actual profiles use retained flags/config and natural selected tactic equals a finite runtime-bucket minimum; v2 includes finite-1 and v1 excludes it.",
+        "All warm or post-startup profile attempts are zero; original natural cache bytes remain unchanged and cold/warm natural choices match.",
+        "Fixed pool plus own natural selection is retained. If any fixed descriptor or actual natural winner is rejected, preserve explicit reason/partial evidence and stop the batch as an error; do not accept a two-candidate replacement pool or silently remove a worker.",
+        "All candidate control files use actual v1 save/load, preserve unrelated entries/content generations, and are consumed from file-only state.",
+        "All measured explicit candidates accepted natively with used_descriptor1; eager and changed/restored graph numerical checks pass.",
+        "Interleaving, common iterations, >=20ms rewarm and raw positive wall/event sample normalization are recorded and independently checked.",
+        "Original natural tuner state/file bytes and serving winner restored after diagnostics."
+      ],
+      "analysis": {
+        "independent_unit": "Six fresh tuning/warm repetitions on one fixed input seed; no input-distribution or cross-device generalization.",
+        "within_worker": "For each candidate/default contrast compute per-block paired latency ratios and a median of those ratios; retain all24blockvalues. Eager primary wall, graph primary event replay span including host submission gaps.",
+        "between_workers": "Natural v2/v1 paired by trial; summarize6paired ratios with range, win counts and deterministic exploratory cluster bootstrap over trial pairs. Candidate results remain per-worker and per-arm; if using both arms for a shared candidate contrast, cluster by trial.",
+        "ranking": "Report ranks/regret only within accepted preregistered shortlist plus own winner; never global optimum. Preserve pool and minimum-selection noise caveat.",
+        "objectives": "Compare actual startup profiler margins/winner frequencies with independent eager/graph shortlist ranks. Different timer/execution conditions or synthesized inputs can explain disagreements; no causal GPU-kernel identity claim without separate observation.",
+        "scope_limits": "No policy override, managed-store adoption, new SGLang production behavior, BF16, multi-GPU, model server, serving-throughput or universal v2 benefit.",
+        "natural_channels": "Natural eager primary=wall, graph primary=GPU-event replay span including host gaps; retain both channels as secondary diagnostics."
+      },
+      "publication": {
+        "fork": "leejnau/sglang",
+        "branch": "experiment/flashinfer-candidate-selection",
+        "open_pr": false,
+        "records": "Preserve every attempt, exact raw bytes, numerical/cache/native build evidence, timing samples, neutral/regressive outcomes; one living Markdown for narrative/history."
+      },
+      "resource_policy": "One exclusive H100 allocation for at most1hour. Verify node/durable/downloaded full archive before release; retain binary privately, exact build/source/hash publicly. No CI triggered."
+    },
+    "gpu": {
+      "index": "0",
+      "name": "NVIDIA H100 NVL",
+      "uuid": "GPU-240958a2-e8e1-3bac-b767-365c9e0b97bd",
+      "driver_version": "580.159.04",
+      "pstate": "P0",
+      "clocks.current.sm [MHz]": "345 MHz",
+      "clocks.current.memory [MHz]": "2619 MHz",
+      "power.limit [W]": "310.00 W",
+      "temperature.gpu": "38",
+      "memory.total [MiB]": "95830 MiB",
+      "memory.used [MiB]": "0 MiB"
+    },
+    "environment": {
+      "gpu": "NVIDIA H100 NVL",
+      "physical_gpu_uuid": "240958a2-e8e1-3bac-b767-365c9e0b97bd",
+      "driver": "580.159.04",
+      "torch": "2.14.1+cu130",
+      "torch_cuda": "13.0",
+      "exclusive_node": true,
+      "clock_lock": false,
+      "cuda_arch_list": "9.0",
+      "sglang_wrapper_sha256": "64deff581665bd04830535baccfdfbdfa72794d919bc462fc469a4c42bdd68f5",
+      "host": "1u1g-gen-0100",
+      "power_limit_watts": 310,
+      "hardware_change": "Reuse prior H100NVL physical GPU if available; no comparisons to earlier HBM3 absolute timings. Hardware preflight must match this frozen expected model/UUID/driver before workers."
+    },
+    "candidate_manifest": {
+      "schema_version": 1,
+      "scope": "Preregistered shortlist from the prior M144 input-seed19 v2 warm worker. Add own newly selected natural tactic if absent; this is not a global candidate oracle.",
+      "reference_commit": "ec0ae6193ef0b76e91f761fa9e6e5ab0f2878f25",
+      "reference_worker": "m144-seed19-v2-warm.json",
+      "reference_worker_sha256": "866e4fd0276f170fc648d3d29c93e2ff92555ffd6fe32e252dbb18cae31727f2",
+      "reference_operand_sha256": {
+        "a": "b242c1b61a72df344f0b75775a3afe4d9228482664cd87bc5e4334069a64dbe6",
+        "b": "a83d6412ff89c06e01d941a30b0b491ef6b4c65595d16bc16e94ec1ae2af5e06",
+        "scale_a": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c",
+        "scale_b": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "candidates": [
+        {
+          "id": "default",
+          "tactic": -1,
+          "source": "Heuristic default; measured through the same real warm file cache as every other shortlisted tactic."
+        },
+        {
+          "id": "old_selected",
+          "tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "source": "Previous natural v2 seed19 explicit winner."
+        },
+        {
+          "id": "prior_graph_leader",
+          "tactic": [
+            55834574914,
+            4294967332,
+            0,
+            1407374883553283,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "source": "Lowest median graph-event replay span in previous seed19 v2 warm shortlist; selection from noisy historical data is disclosed."
+        }
+      ]
+    }
+  },
+  "validated_workers": [
+    {
+      "file": "/private/tmp/sglang-m144-stability-20261020T030300Z/trial0-raw/attempt01/m144-trial0-seed19-v1-cold.json",
+      "sha256": "54c3a7c6ceaac25b25a08e554d8b45a2974d2679cf54477f5ade5cd2dfb2e8cf",
+      "container_id": "5844ef7b6d77b1c06ee4fa816c83754ffd6a64f9a49d6fff02966a84cd501f87",
+      "trial": 0,
+      "arm": "v1",
+      "phase": "cold",
+      "profile_attempts": 72,
+      "numerical_checks": 8
+    },
+    {
+      "file": "/private/tmp/sglang-m144-stability-20261020T030300Z/trial0-raw/attempt01/m144-trial0-seed19-v1-warm.json",
+      "sha256": "fb1e99371f927bea5fa81b96fa44ee502e05f704e1eb93b9a33975fedb75edf6",
+      "container_id": "9cb31672409116922fb916cb29c2cd73649e837514b4e80ed6db476d669d62bb",
+      "trial": 0,
+      "arm": "v1",
+      "phase": "warm",
+      "profile_attempts": 0,
+      "numerical_checks": 458
+    },
+    {
+      "file": "/private/tmp/sglang-m144-stability-20261020T030300Z/trial0-raw/attempt01/m144-trial0-seed19-v2-cold.json",
+      "sha256": "f900228e1ef049cf5ff8379519bd85ed2ab3c3f0d022d87c125abb1e2302c77b",
+      "container_id": "e41b793297310059711bbdcc4341f4c75a6382ebe8cfd60b673eebd198eb93b2",
+      "trial": 0,
+      "arm": "v2",
+      "phase": "cold",
+      "profile_attempts": 81,
+      "numerical_checks": 8
+    },
+    {
+      "file": "/private/tmp/sglang-m144-stability-20261020T030300Z/trial0-raw/attempt01/m144-trial0-seed19-v2-warm.json",
+      "sha256": "ad408ec940faeea891d0ebad302cf7a0ee530df9d334515c0399624d47820b5e",
+      "container_id": "1933b0c9f6330429061999f527c6cfc47a9fda7056359186a7e8a710226f7169",
+      "trial": 0,
+      "arm": "v2",
+      "phase": "warm",
+      "profile_attempts": 0,
+      "numerical_checks": 458
+    }
+  ],
+  "analysis": {
+    "natural_latency_comparisons": [
+      {
+        "phase": "cold",
+        "execution": "eager",
+        "channel": "wall",
+        "primary": true,
+        "comparison": "v2_over_v1",
+        "lookup_tier": "memory",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "v1_ms": 0.040096954035107046,
+            "v2_ms": 0.03894806141033769,
+            "ratio": 0.9713471346535838
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 0.9713471346535838,
+        "min_ratio": 0.9713471346535838,
+        "max_ratio": 0.9713471346535838,
+        "ratios_below_one": 1,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "phase": "cold",
+        "execution": "eager",
+        "channel": "gpu_event",
+        "primary": false,
+        "comparison": "v2_over_v1",
+        "lookup_tier": "memory",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "v1_ms": 0.040069800615310666,
+            "v2_ms": 0.03890590071678161,
+            "ratio": 0.970953189667624
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 0.970953189667624,
+        "min_ratio": 0.970953189667624,
+        "max_ratio": 0.970953189667624,
+        "ratios_below_one": 1,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "phase": "cold",
+        "execution": "cuda_graph",
+        "channel": "wall",
+        "primary": false,
+        "comparison": "v2_over_v1",
+        "lookup_tier": "memory",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "v1_ms": 0.0049931759349419735,
+            "v2_ms": 0.004863302638113964,
+            "ratio": 0.9739898416318233
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 0.9739898416318233,
+        "min_ratio": 0.9739898416318233,
+        "max_ratio": 0.9739898416318233,
+        "ratios_below_one": 1,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "phase": "cold",
+        "execution": "cuda_graph",
+        "channel": "gpu_event",
+        "primary": true,
+        "comparison": "v2_over_v1",
+        "lookup_tier": "memory",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "v1_ms": 0.004989774897694588,
+            "v2_ms": 0.004860406368970871,
+            "ratio": 0.9740732735692167
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 0.9740732735692167,
+        "min_ratio": 0.9740732735692167,
+        "max_ratio": 0.9740732735692167,
+        "ratios_below_one": 1,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "phase": "warm",
+        "execution": "eager",
+        "channel": "wall",
+        "primary": true,
+        "comparison": "v2_over_v1",
+        "lookup_tier": "file",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "v1_ms": 0.04389699024613947,
+            "v2_ms": 0.043897896830458194,
+            "ratio": 1.0000206525393573
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.0000206525393573,
+        "min_ratio": 1.0000206525393573,
+        "max_ratio": 1.0000206525393573,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "phase": "warm",
+        "execution": "eager",
+        "channel": "gpu_event",
+        "primary": false,
+        "comparison": "v2_over_v1",
+        "lookup_tier": "file",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "v1_ms": 0.04387049973011017,
+            "v2_ms": 0.043871650099754335,
+            "ratio": 1.0000262219407403
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.0000262219407403,
+        "min_ratio": 1.0000262219407403,
+        "max_ratio": 1.0000262219407403,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "phase": "warm",
+        "execution": "cuda_graph",
+        "channel": "wall",
+        "primary": false,
+        "comparison": "v2_over_v1",
+        "lookup_tier": "file",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "v1_ms": 0.004948775676894002,
+            "v2_ms": 0.004585437091009226,
+            "ratio": 0.926580105947979
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 0.926580105947979,
+        "min_ratio": 0.926580105947979,
+        "max_ratio": 0.926580105947979,
+        "ratios_below_one": 1,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "phase": "warm",
+        "execution": "cuda_graph",
+        "channel": "gpu_event",
+        "primary": true,
+        "comparison": "v2_over_v1",
+        "lookup_tier": "file",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "v1_ms": 0.0049453873187303545,
+            "v2_ms": 0.004577524960041046,
+            "ratio": 0.9256150560147125
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 0.9256150560147125,
+        "min_ratio": 0.9256150560147125,
+        "max_ratio": 0.9256150560147125,
+        "ratios_below_one": 1,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null
+      }
+    ],
+    "within_worker_paired_contrasts": [
+      {
+        "trial": 0,
+        "arm": "v1",
+        "execution": "eager",
+        "channel": "wall",
+        "primary": true,
+        "lookup_tier": "file",
+        "blocks": 24,
+        "candidate_count": 3,
+        "contrasts": [
+          {
+            "candidate_id": "default",
+            "roles": [
+              "default"
+            ],
+            "tactic": -1,
+            "same_block_ratios": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "median_paired_ratio": 1.0,
+            "candidate_median_ms": 0.04315988771850243,
+            "default_median_ms": 0.04315988771850243
+          },
+          {
+            "candidate_id": "old_selected",
+            "roles": [
+              "old_selected",
+              "actual_selected"
+            ],
+            "tactic": [
+              446676598850,
+              4294967332,
+              0,
+              1970324836974594,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "same_block_ratios": [
+              1.0140838578412432,
+              1.0315964986883828,
+              1.0314813244359886,
+              1.024060415757866,
+              1.0240001226210682,
+              1.0220995715215788,
+              1.0157183325157895,
+              1.0236564732837503,
+              1.0283832213404707,
+              1.020456863207061,
+              1.0145656549449356,
+              1.0141568409292139,
+              1.0224239031066522,
+              1.0264906006770198,
+              1.0234357233012037,
+              1.0321443512871857,
+              1.0318911260030859,
+              1.0230688099500058,
+              1.0208072373682384,
+              1.031336627611401,
+              1.0250353156382637,
+              1.0242360638536143,
+              1.0358295069746273,
+              1.0134721856880846
+            ],
+            "median_paired_ratio": 1.0238282979524094,
+            "candidate_median_ms": 0.04416205338202417,
+            "default_median_ms": 0.04315988771850243
+          },
+          {
+            "candidate_id": "prior_graph_leader",
+            "roles": [
+              "prior_graph_leader"
+            ],
+            "tactic": [
+              55834574914,
+              4294967332,
+              0,
+              1407374883553283,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "same_block_ratios": [
+              1.005932958325179,
+              1.0317818117088535,
+              1.0247526375439298,
+              15.142783323529319,
+              1.0115457328119792,
+              1.0254306447225754,
+              1.0188507517933467,
+              1.0204302300994232,
+              1.0320452586162328,
+              1.0226189506390466,
+              1.0095572795031664,
+              1.006599371669179,
+              1.0146855323693742,
+              1.0395251860963104,
+              1.0195766355851592,
+              1.020782831520247,
+              1.0220891120307063,
+              1.0159913649507974,
+              1.0226305856563291,
+              1.0131536628117261,
+              1.0214140726037444,
+              1.0270298934598425,
+              1.0267046740982013,
+              0.9969169170604425
+            ],
+            "median_paired_ratio": 1.0210984520619957,
+            "candidate_median_ms": 0.044004865776514634,
+            "default_median_ms": 0.04315988771850243
+          }
+        ],
+        "ranked_candidate_ids": [
+          "default",
+          "prior_graph_leader",
+          "old_selected"
+        ],
+        "selected_candidate_id": "old_selected",
+        "best_shortlist_candidate_id": "default",
+        "selected_rank": 3,
+        "selected_to_best_score_ratio": 1.0238282979524094,
+        "same_block_selected_to_best_median_ratio": 1.0238282979524094,
+        "ranking_scope": "median paired candidate/default ratios within this accepted 3/4-candidate shortlist; selected/best score ratio is not a global optimality bound"
+      },
+      {
+        "trial": 0,
+        "arm": "v1",
+        "execution": "eager",
+        "channel": "gpu_event",
+        "primary": false,
+        "lookup_tier": "file",
+        "blocks": 24,
+        "candidate_count": 3,
+        "contrasts": [
+          {
+            "candidate_id": "default",
+            "roles": [
+              "default"
+            ],
+            "tactic": -1,
+            "same_block_ratios": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "median_paired_ratio": 1.0,
+            "candidate_median_ms": 0.04311777502298356,
+            "default_median_ms": 0.04311777502298356
+          },
+          {
+            "candidate_id": "old_selected",
+            "roles": [
+              "old_selected",
+              "actual_selected"
+            ],
+            "tactic": [
+              446676598850,
+              4294967332,
+              0,
+              1970324836974594,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "same_block_ratios": [
+              1.0140441674197418,
+              1.031758654846574,
+              1.03165021724951,
+              1.024071924695068,
+              1.02407118779747,
+              1.0220563028824778,
+              1.0157413158655222,
+              1.023620984510459,
+              1.0283159725540414,
+              1.020358822990517,
+              1.0148223154655358,
+              1.0141201091110221,
+              1.022599448170765,
+              1.0263895263457385,
+              1.023564647495058,
+              1.032264636946101,
+              1.0319674421050442,
+              1.0230370467470726,
+              1.0207874722543653,
+              1.0313347081132294,
+              1.0251270945153894,
+              1.0241137031085499,
+              1.036080133596556,
+              1.0133208167548184
+            ],
+            "median_paired_ratio": 1.0238460861539644,
+            "candidate_median_ms": 0.04411630034446716,
+            "default_median_ms": 0.04311777502298356
+          },
+          {
+            "candidate_id": "prior_graph_leader",
+            "roles": [
+              "prior_graph_leader"
+            ],
+            "tactic": [
+              55834574914,
+              4294967332,
+              0,
+              1407374883553283,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "same_block_ratios": [
+              1.0058950826206323,
+              1.0317867333378714,
+              1.0247330745141725,
+              15.158365655734888,
+              1.0116525991146839,
+              1.0254465075703716,
+              1.0189570659380771,
+              1.0203154994266144,
+              1.0320997478849967,
+              1.0226178037174571,
+              1.0096682659970775,
+              1.0065936971206269,
+              1.015023023746179,
+              1.0395309689496204,
+              1.019611126701267,
+              1.0209543489350534,
+              1.0221505847556198,
+              1.0160056961720483,
+              1.0226443515480517,
+              1.012996689245357,
+              1.021385925234726,
+              1.0270130077021111,
+              1.02687323621768,
+              0.9968650640501798
+            ],
+            "median_paired_ratio": 1.0211701370848898,
+            "candidate_median_ms": 0.04396024942398071,
+            "default_median_ms": 0.04311777502298356
+          }
+        ],
+        "ranked_candidate_ids": [
+          "default",
+          "prior_graph_leader",
+          "old_selected"
+        ],
+        "selected_candidate_id": "old_selected",
+        "best_shortlist_candidate_id": "default",
+        "selected_rank": 3,
+        "selected_to_best_score_ratio": 1.0238460861539644,
+        "same_block_selected_to_best_median_ratio": 1.0238460861539644,
+        "ranking_scope": "median paired candidate/default ratios within this accepted 3/4-candidate shortlist; selected/best score ratio is not a global optimality bound"
+      },
+      {
+        "trial": 0,
+        "arm": "v1",
+        "execution": "cuda_graph",
+        "channel": "wall",
+        "primary": false,
+        "lookup_tier": "file",
+        "blocks": 24,
+        "candidate_count": 3,
+        "contrasts": [
+          {
+            "candidate_id": "default",
+            "roles": [
+              "default"
+            ],
+            "tactic": -1,
+            "same_block_ratios": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "median_paired_ratio": 1.0,
+            "candidate_median_ms": 0.004617394279193832,
+            "default_median_ms": 0.004617394279193832
+          },
+          {
+            "candidate_id": "old_selected",
+            "roles": [
+              "old_selected",
+              "actual_selected"
+            ],
+            "tactic": [
+              446676598850,
+              4294967332,
+              0,
+              1970324836974594,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "same_block_ratios": [
+              1.0726468549213741,
+              1.0731462566368444,
+              1.0729158771791532,
+              1.0724848739769728,
+              1.0747339299817693,
+              1.072778785966087,
+              1.0743591031720283,
+              1.0737656687984851,
+              1.0703874013226273,
+              1.0739437599224497,
+              1.0736924784125752,
+              1.07187980750146,
+              1.0738688502045715,
+              1.072836640861974,
+              1.0755964602887784,
+              1.0734388043980438,
+              1.0741490256758248,
+              1.0733191446915271,
+              1.0737190720050234,
+              1.0733856883077408,
+              1.0747182318890294,
+              1.073177788634204,
+              1.0730420908672302,
+              1.0732576827165945
+            ],
+            "median_paired_ratio": 1.073352416499634,
+            "candidate_median_ms": 0.004955411350238137,
+            "default_median_ms": 0.004617394279193832
+          },
+          {
+            "candidate_id": "prior_graph_leader",
+            "roles": [
+              "prior_graph_leader"
+            ],
+            "tactic": [
+              55834574914,
+              4294967332,
+              0,
+              1407374883553283,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "same_block_ratios": [
+              0.9976651406060149,
+              0.9972763810753409,
+              0.9968731365301489,
+              0.9962833942951574,
+              0.9992830953108743,
+              0.995524479679793,
+              0.9986046480240623,
+              0.9972150695493122,
+              0.9949232929446686,
+              0.9975934893503385,
+              0.9974459881371448,
+              0.9960746651609597,
+              0.9984056463984473,
+              0.997329769349206,
+              0.999668529551378,
+              0.9967456460879405,
+              0.9972005103699496,
+              0.9983401542502657,
+              0.9975694089368641,
+              0.9970588911868383,
+              0.9977374057374017,
+              0.9972498103867637,
+              0.9954990531257644,
+              0.9972280169700477
+            ],
+            "median_paired_ratio": 0.9972630957310523,
+            "candidate_median_ms": 0.004604319019563263,
+            "default_median_ms": 0.004617394279193832
+          }
+        ],
+        "ranked_candidate_ids": [
+          "prior_graph_leader",
+          "default",
+          "old_selected"
+        ],
+        "selected_candidate_id": "old_selected",
+        "best_shortlist_candidate_id": "prior_graph_leader",
+        "selected_rank": 3,
+        "selected_to_best_score_ratio": 1.0762981414777049,
+        "same_block_selected_to_best_median_ratio": 1.076261133128514,
+        "ranking_scope": "median paired candidate/default ratios within this accepted 3/4-candidate shortlist; selected/best score ratio is not a global optimality bound"
+      },
+      {
+        "trial": 0,
+        "arm": "v1",
+        "execution": "cuda_graph",
+        "channel": "gpu_event",
+        "primary": true,
+        "lookup_tier": "file",
+        "blocks": 24,
+        "candidate_count": 3,
+        "contrasts": [
+          {
+            "candidate_id": "default",
+            "roles": [
+              "default"
+            ],
+            "tactic": -1,
+            "same_block_ratios": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "median_paired_ratio": 1.0,
+            "candidate_median_ms": 0.004611734487116336,
+            "default_median_ms": 0.004611734487116336
+          },
+          {
+            "candidate_id": "old_selected",
+            "roles": [
+              "old_selected",
+              "actual_selected"
+            ],
+            "tactic": [
+              446676598850,
+              4294967332,
+              0,
+              1970324836974594,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "same_block_ratios": [
+              1.072802421302222,
+              1.0733836849427865,
+              1.0730231826749836,
+              1.073206995134783,
+              1.074097663461306,
+              1.072930382115286,
+              1.0744574457971696,
+              1.0739090918621708,
+              1.0703591796936882,
+              1.074116787248243,
+              1.0738250098111526,
+              1.0720331200184434,
+              1.0738320151514489,
+              1.0730931427283157,
+              1.0754049497955323,
+              1.0734325394873638,
+              1.0742649595391909,
+              1.0734126004910856,
+              1.073689005946917,
+              1.0734838216718268,
+              1.0748218809718766,
+              1.0734295511616263,
+              1.0733079290236807,
+              1.073077129376579
+            ],
+            "median_paired_ratio": 1.073431045324495,
+            "candidate_median_ms": 0.0049500780180096625,
+            "default_median_ms": 0.004611734487116336
+          },
+          {
+            "candidate_id": "prior_graph_leader",
+            "roles": [
+              "prior_graph_leader"
+            ],
+            "tactic": [
+              55834574914,
+              4294967332,
+              0,
+              1407374883553283,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "same_block_ratios": [
+              0.9977109334048936,
+              0.9974462551205572,
+              0.996770457602049,
+              0.9969348066077008,
+              0.99912311127692,
+              0.9956008764564497,
+              0.9984525670873171,
+              0.997101852501494,
+              0.9948221927126613,
+              0.997543351563567,
+              0.9975975923500272,
+              0.9961416014209413,
+              0.9982604592827452,
+              0.9975158740358391,
+              0.9996510330215669,
+              0.9967426260985646,
+              0.9972621179550034,
+              0.9982397072387506,
+              0.9976702007169409,
+              0.9971337678987326,
+              0.9977637864920379,
+              0.9974670746768293,
+              0.9957619362207066,
+              0.9971823940990544
+            ],
+            "median_paired_ratio": 0.9974566648986932,
+            "candidate_median_ms": 0.0045993968844413756,
+            "default_median_ms": 0.004611734487116336
+          }
+        ],
+        "ranked_candidate_ids": [
+          "prior_graph_leader",
+          "default",
+          "old_selected"
+        ],
+        "selected_candidate_id": "old_selected",
+        "best_shortlist_candidate_id": "prior_graph_leader",
+        "selected_rank": 3,
+        "selected_to_best_score_ratio": 1.0761681014317732,
+        "same_block_selected_to_best_median_ratio": 1.0761908999476397,
+        "ranking_scope": "median paired candidate/default ratios within this accepted 3/4-candidate shortlist; selected/best score ratio is not a global optimality bound"
+      },
+      {
+        "trial": 0,
+        "arm": "v2",
+        "execution": "eager",
+        "channel": "wall",
+        "primary": true,
+        "lookup_tier": "file",
+        "blocks": 24,
+        "candidate_count": 3,
+        "contrasts": [
+          {
+            "candidate_id": "default",
+            "roles": [
+              "default",
+              "actual_selected"
+            ],
+            "tactic": -1,
+            "same_block_ratios": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "median_paired_ratio": 1.0,
+            "candidate_median_ms": 0.043435160478111356,
+            "default_median_ms": 0.043435160478111356
+          },
+          {
+            "candidate_id": "old_selected",
+            "roles": [
+              "old_selected"
+            ],
+            "tactic": [
+              446676598850,
+              4294967332,
+              0,
+              1970324836974594,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "same_block_ratios": [
+              1.016569949897627,
+              1.0024426919533374,
+              1.0207352205011977,
+              1.01032856140809,
+              1.0012688502664178,
+              1.0087928046834704,
+              1.0147106940081498,
+              1.0084669820572594,
+              1.008820677396228,
+              1.009511368578535,
+              1.0087025734580106,
+              1.0145874039451221,
+              1.0173211840923981,
+              1.013205515442258,
+              1.008276624883591,
+              1.0349808119441093,
+              1.0151384931319922,
+              1.0164586592530023,
+              1.0218287630689746,
+              1.0187902467150947,
+              1.0171646999262594,
+              1.019377852503004,
+              1.0084128968937034,
+              1.0158588711289385
+            ],
+            "median_paired_ratio": 1.014649048976636,
+            "candidate_median_ms": 0.044075802725274116,
+            "default_median_ms": 0.043435160478111356
+          },
+          {
+            "candidate_id": "prior_graph_leader",
+            "roles": [
+              "prior_graph_leader"
+            ],
+            "tactic": [
+              55834574914,
+              4294967332,
+              0,
+              1407374883553283,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "same_block_ratios": [
+              1.0247664383869337,
+              1.00419427530937,
+              1.0334166142307724,
+              1.0111958279016073,
+              1.0040988624943703,
+              0.9990110604876798,
+              1.017872714964065,
+              1.0519722714381152,
+              0.9967733479192834,
+              1.0106401116235144,
+              1.024579165709435,
+              1.0115683867639194,
+              1.0189436764665996,
+              1.0528581707973177,
+              1.0267633886444874,
+              1.0231913379730724,
+              1.0178203698368822,
+              1.0192727494538887,
+              1.0346123971725036,
+              1.0114464365747011,
+              1.0000453304330783,
+              1.0060703761230254,
+              1.0044141786699914,
+              1.0226026686367284
+            ],
+            "median_paired_ratio": 1.0178465424004735,
+            "candidate_median_ms": 0.044034490565536544,
+            "default_median_ms": 0.043435160478111356
+          }
+        ],
+        "ranked_candidate_ids": [
+          "default",
+          "old_selected",
+          "prior_graph_leader"
+        ],
+        "selected_candidate_id": "default",
+        "best_shortlist_candidate_id": "default",
+        "selected_rank": 1,
+        "selected_to_best_score_ratio": 1.0,
+        "same_block_selected_to_best_median_ratio": 1.0,
+        "ranking_scope": "median paired candidate/default ratios within this accepted 3/4-candidate shortlist; selected/best score ratio is not a global optimality bound"
+      },
+      {
+        "trial": 0,
+        "arm": "v2",
+        "execution": "eager",
+        "channel": "gpu_event",
+        "primary": false,
+        "lookup_tier": "file",
+        "blocks": 24,
+        "candidate_count": 3,
+        "contrasts": [
+          {
+            "candidate_id": "default",
+            "roles": [
+              "default",
+              "actual_selected"
+            ],
+            "tactic": -1,
+            "same_block_ratios": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "median_paired_ratio": 1.0,
+            "candidate_median_ms": 0.043389900028705596,
+            "default_median_ms": 0.043389900028705596
+          },
+          {
+            "candidate_id": "old_selected",
+            "roles": [
+              "old_selected"
+            ],
+            "tactic": [
+              446676598850,
+              4294967332,
+              0,
+              1970324836974594,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "same_block_ratios": [
+              1.0166180120459163,
+              1.0024135396777796,
+              1.0207248353143885,
+              1.0099487889311163,
+              1.0013092863142226,
+              1.008784618940702,
+              1.0147151273326132,
+              1.008503616889997,
+              1.008782853256668,
+              1.009534685854755,
+              1.008675250629726,
+              1.014614401714686,
+              1.0173164969373285,
+              1.0132094816626305,
+              1.0082619239660338,
+              1.0351905885968098,
+              1.0150556429641626,
+              1.016459356968532,
+              1.021537442563575,
+              1.0187249347719731,
+              1.0172702783043055,
+              1.0194438958988337,
+              1.0083148505462178,
+              1.0158553932743843
+            ],
+            "median_paired_ratio": 1.0146647645236495,
+            "candidate_median_ms": 0.044031201303005224,
+            "default_median_ms": 0.043389900028705596
+          },
+          {
+            "candidate_id": "prior_graph_leader",
+            "roles": [
+              "prior_graph_leader"
+            ],
+            "tactic": [
+              55834574914,
+              4294967332,
+              0,
+              1407374883553283,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "same_block_ratios": [
+              1.0248542271493817,
+              1.004097114829166,
+              1.033188813539405,
+              1.0112789314883373,
+              1.0040896418941168,
+              0.9990429974270127,
+              1.0178904518153982,
+              1.0518687139936067,
+              0.9967486429010626,
+              1.010634828779072,
+              1.0245870451257866,
+              1.0116154184356239,
+              1.0189054475255273,
+              1.0526436918669873,
+              1.0267446227342347,
+              1.0233272341257647,
+              1.0177723241763572,
+              1.019271702004736,
+              1.0346185671859986,
+              1.011500547682719,
+              1.0000713806689205,
+              1.0061381447746758,
+              1.004344841253235,
+              1.0226127357418002
+            ],
+            "median_paired_ratio": 1.0178313879958778,
+            "candidate_median_ms": 0.04398792386054993,
+            "default_median_ms": 0.043389900028705596
+          }
+        ],
+        "ranked_candidate_ids": [
+          "default",
+          "old_selected",
+          "prior_graph_leader"
+        ],
+        "selected_candidate_id": "default",
+        "best_shortlist_candidate_id": "default",
+        "selected_rank": 1,
+        "selected_to_best_score_ratio": 1.0,
+        "same_block_selected_to_best_median_ratio": 1.0,
+        "ranking_scope": "median paired candidate/default ratios within this accepted 3/4-candidate shortlist; selected/best score ratio is not a global optimality bound"
+      },
+      {
+        "trial": 0,
+        "arm": "v2",
+        "execution": "cuda_graph",
+        "channel": "wall",
+        "primary": false,
+        "lookup_tier": "file",
+        "blocks": 24,
+        "candidate_count": 3,
+        "contrasts": [
+          {
+            "candidate_id": "default",
+            "roles": [
+              "default",
+              "actual_selected"
+            ],
+            "tactic": -1,
+            "same_block_ratios": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "median_paired_ratio": 1.0,
+            "candidate_median_ms": 0.004588330648402916,
+            "default_median_ms": 0.004588330648402916
+          },
+          {
+            "candidate_id": "old_selected",
+            "roles": [
+              "old_selected"
+            ],
+            "tactic": [
+              446676598850,
+              4294967332,
+              0,
+              1970324836974594,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "same_block_ratios": [
+              1.0462136933326123,
+              1.0514401823543895,
+              1.0399657116084133,
+              1.0437001547228402,
+              1.04958169843567,
+              1.0448839872996223,
+              1.052559270756433,
+              1.047072496893461,
+              1.0491371938483398,
+              1.048380297161665,
+              1.0469053738475345,
+              1.0489691700863117,
+              1.047706527084096,
+              1.0449080588008592,
+              1.0500943165941203,
+              1.0461904331242937,
+              1.0534098076469922,
+              1.0486560434493413,
+              1.045014863357103,
+              1.0476752855703537,
+              1.0527451923714006,
+              1.051854128953185,
+              1.0478008552956266,
+              1.0430139632838198
+            ],
+            "median_paired_ratio": 1.0477536911898613,
+            "candidate_median_ms": 0.004806852575711673,
+            "default_median_ms": 0.004588330648402916
+          },
+          {
+            "candidate_id": "prior_graph_leader",
+            "roles": [
+              "prior_graph_leader"
+            ],
+            "tactic": [
+              55834574914,
+              4294967332,
+              0,
+              1407374883553283,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "same_block_ratios": [
+              0.9775508797990861,
+              0.9767615238195431,
+              0.9747358208433918,
+              0.9762115763983314,
+              0.979207819640285,
+              0.9780839055924034,
+              0.9771191607019926,
+              0.9773739148506284,
+              0.9778268354711731,
+              0.9789925417357241,
+              0.9760688301290317,
+              0.9768475443310525,
+              0.9770304302236879,
+              0.9783486880149372,
+              0.9797140483865933,
+              0.9791874665434193,
+              0.9778731222071257,
+              0.9793072837427373,
+              0.9768771237618498,
+              0.977163601952044,
+              0.9777639366339581,
+              0.9770503328602638,
+              0.9754903375636096,
+              0.9752686288192579
+            ],
+            "median_paired_ratio": 0.9772687584013362,
+            "candidate_median_ms": 0.004484096098167356,
+            "default_median_ms": 0.004588330648402916
+          }
+        ],
+        "ranked_candidate_ids": [
+          "prior_graph_leader",
+          "default",
+          "old_selected"
+        ],
+        "selected_candidate_id": "default",
+        "best_shortlist_candidate_id": "prior_graph_leader",
+        "selected_rank": 2,
+        "selected_to_best_score_ratio": 1.0232599695869218,
+        "same_block_selected_to_best_median_ratio": 1.0232599814345054,
+        "ranking_scope": "median paired candidate/default ratios within this accepted 3/4-candidate shortlist; selected/best score ratio is not a global optimality bound"
+      },
+      {
+        "trial": 0,
+        "arm": "v2",
+        "execution": "cuda_graph",
+        "channel": "gpu_event",
+        "primary": true,
+        "lookup_tier": "file",
+        "blocks": 24,
+        "candidate_count": 3,
+        "contrasts": [
+          {
+            "candidate_id": "default",
+            "roles": [
+              "default",
+              "actual_selected"
+            ],
+            "tactic": -1,
+            "same_block_ratios": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "median_paired_ratio": 1.0,
+            "candidate_median_ms": 0.004582537524402142,
+            "default_median_ms": 0.004582537524402142
+          },
+          {
+            "candidate_id": "old_selected",
+            "roles": [
+              "old_selected"
+            ],
+            "tactic": [
+              446676598850,
+              4294967332,
+              0,
+              1970324836974594,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "same_block_ratios": [
+              1.047008799025539,
+              1.051746316428834,
+              1.0401317147962494,
+              1.043586413294937,
+              1.0495941827691968,
+              1.0448540835417108,
+              1.0526236415082597,
+              1.0468409544469814,
+              1.0491413995837002,
+              1.0484138318725646,
+              1.046929470639339,
+              1.049019924805556,
+              1.0477334394011346,
+              1.0449542964936753,
+              1.0501059008362943,
+              1.0462262057682474,
+              1.0534544214886457,
+              1.0486517646655331,
+              1.044908334780098,
+              1.0476144375956076,
+              1.0528625695386176,
+              1.051938290473807,
+              1.0479128912096916,
+              1.0430760721382337
+            ],
+            "median_paired_ratio": 1.047823165305413,
+            "candidate_median_ms": 0.004801031202077866,
+            "default_median_ms": 0.004582537524402142
+          },
+          {
+            "candidate_id": "prior_graph_leader",
+            "roles": [
+              "prior_graph_leader"
+            ],
+            "tactic": [
+              55834574914,
+              4294967332,
+              0,
+              1407374883553283,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "same_block_ratios": [
+              0.9782321014968716,
+              0.9769507661131032,
+              0.9748098907227324,
+              0.9762596680686976,
+              0.979173529918866,
+              0.9780844912199204,
+              0.9771804705004797,
+              0.9772936303134769,
+              0.9777113982181684,
+              0.9784335316051966,
+              0.9760733471511357,
+              0.9768984712542579,
+              0.977012911921555,
+              0.9777893702086411,
+              0.9796559476952154,
+              0.9790881701482897,
+              0.9777514346131284,
+              0.9793385961363398,
+              0.9769124832388177,
+              0.9770157922115471,
+              0.9777767671763975,
+              0.9770085798693707,
+              0.9754155004462467,
+              0.9752501483285474
+            ],
+            "median_paired_ratio": 0.9772370504069783,
+            "candidate_median_ms": 0.004478753171861171,
+            "default_median_ms": 0.004582537524402142
+          }
+        ],
+        "ranked_candidate_ids": [
+          "prior_graph_leader",
+          "default",
+          "old_selected"
+        ],
+        "selected_candidate_id": "default",
+        "best_shortlist_candidate_id": "prior_graph_leader",
+        "selected_rank": 2,
+        "selected_to_best_score_ratio": 1.0232931708673365,
+        "same_block_selected_to_best_median_ratio": 1.023293174297578,
+        "ranking_scope": "median paired candidate/default ratios within this accepted 3/4-candidate shortlist; selected/best score ratio is not a global optimality bound"
+      }
+    ],
+    "candidate_over_default_trial_summaries": [
+      {
+        "arm": "v1",
+        "execution": "eager",
+        "channel": "wall",
+        "primary": true,
+        "role": "old_selected",
+        "comparison": "same_block_candidate_over_cached_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 1.0238282979524094,
+            "candidate_id": "old_selected",
+            "tactic": [
+              446676598850,
+              4294967332,
+              0,
+              1970324836974594,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ]
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.0238282979524094,
+        "min_ratio": 1.0238282979524094,
+        "max_ratio": 1.0238282979524094,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "arm": "v1",
+        "execution": "eager",
+        "channel": "wall",
+        "primary": true,
+        "role": "prior_graph_leader",
+        "comparison": "same_block_candidate_over_cached_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 1.0210984520619957,
+            "candidate_id": "prior_graph_leader",
+            "tactic": [
+              55834574914,
+              4294967332,
+              0,
+              1407374883553283,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ]
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.0210984520619957,
+        "min_ratio": 1.0210984520619957,
+        "max_ratio": 1.0210984520619957,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "arm": "v1",
+        "execution": "eager",
+        "channel": "wall",
+        "primary": true,
+        "role": "actual_selected",
+        "comparison": "same_block_candidate_over_cached_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 1.0238282979524094,
+            "candidate_id": "old_selected",
+            "tactic": [
+              446676598850,
+              4294967332,
+              0,
+              1970324836974594,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ]
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.0238282979524094,
+        "min_ratio": 1.0238282979524094,
+        "max_ratio": 1.0238282979524094,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "arm": "v2",
+        "execution": "eager",
+        "channel": "wall",
+        "primary": true,
+        "role": "old_selected",
+        "comparison": "same_block_candidate_over_cached_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 1.014649048976636,
+            "candidate_id": "old_selected",
+            "tactic": [
+              446676598850,
+              4294967332,
+              0,
+              1970324836974594,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ]
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.014649048976636,
+        "min_ratio": 1.014649048976636,
+        "max_ratio": 1.014649048976636,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "arm": "v2",
+        "execution": "eager",
+        "channel": "wall",
+        "primary": true,
+        "role": "prior_graph_leader",
+        "comparison": "same_block_candidate_over_cached_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 1.0178465424004735,
+            "candidate_id": "prior_graph_leader",
+            "tactic": [
+              55834574914,
+              4294967332,
+              0,
+              1407374883553283,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ]
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.0178465424004735,
+        "min_ratio": 1.0178465424004735,
+        "max_ratio": 1.0178465424004735,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "arm": "v2",
+        "execution": "eager",
+        "channel": "wall",
+        "primary": true,
+        "role": "actual_selected",
+        "comparison": "same_block_candidate_over_cached_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 1.0,
+            "candidate_id": "default",
+            "tactic": -1
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.0,
+        "min_ratio": 1.0,
+        "max_ratio": 1.0,
+        "ratios_below_one": 0,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "arm": "v1",
+        "execution": "eager",
+        "channel": "gpu_event",
+        "primary": false,
+        "role": "old_selected",
+        "comparison": "same_block_candidate_over_cached_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 1.0238460861539644,
+            "candidate_id": "old_selected",
+            "tactic": [
+              446676598850,
+              4294967332,
+              0,
+              1970324836974594,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ]
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.0238460861539644,
+        "min_ratio": 1.0238460861539644,
+        "max_ratio": 1.0238460861539644,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "arm": "v1",
+        "execution": "eager",
+        "channel": "gpu_event",
+        "primary": false,
+        "role": "prior_graph_leader",
+        "comparison": "same_block_candidate_over_cached_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 1.0211701370848898,
+            "candidate_id": "prior_graph_leader",
+            "tactic": [
+              55834574914,
+              4294967332,
+              0,
+              1407374883553283,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ]
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.0211701370848898,
+        "min_ratio": 1.0211701370848898,
+        "max_ratio": 1.0211701370848898,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "arm": "v1",
+        "execution": "eager",
+        "channel": "gpu_event",
+        "primary": false,
+        "role": "actual_selected",
+        "comparison": "same_block_candidate_over_cached_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 1.0238460861539644,
+            "candidate_id": "old_selected",
+            "tactic": [
+              446676598850,
+              4294967332,
+              0,
+              1970324836974594,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ]
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.0238460861539644,
+        "min_ratio": 1.0238460861539644,
+        "max_ratio": 1.0238460861539644,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "arm": "v2",
+        "execution": "eager",
+        "channel": "gpu_event",
+        "primary": false,
+        "role": "old_selected",
+        "comparison": "same_block_candidate_over_cached_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 1.0146647645236495,
+            "candidate_id": "old_selected",
+            "tactic": [
+              446676598850,
+              4294967332,
+              0,
+              1970324836974594,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ]
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.0146647645236495,
+        "min_ratio": 1.0146647645236495,
+        "max_ratio": 1.0146647645236495,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "arm": "v2",
+        "execution": "eager",
+        "channel": "gpu_event",
+        "primary": false,
+        "role": "prior_graph_leader",
+        "comparison": "same_block_candidate_over_cached_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 1.0178313879958778,
+            "candidate_id": "prior_graph_leader",
+            "tactic": [
+              55834574914,
+              4294967332,
+              0,
+              1407374883553283,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ]
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.0178313879958778,
+        "min_ratio": 1.0178313879958778,
+        "max_ratio": 1.0178313879958778,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "arm": "v2",
+        "execution": "eager",
+        "channel": "gpu_event",
+        "primary": false,
+        "role": "actual_selected",
+        "comparison": "same_block_candidate_over_cached_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 1.0,
+            "candidate_id": "default",
+            "tactic": -1
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.0,
+        "min_ratio": 1.0,
+        "max_ratio": 1.0,
+        "ratios_below_one": 0,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "arm": "v1",
+        "execution": "cuda_graph",
+        "channel": "wall",
+        "primary": false,
+        "role": "old_selected",
+        "comparison": "same_block_candidate_over_cached_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 1.073352416499634,
+            "candidate_id": "old_selected",
+            "tactic": [
+              446676598850,
+              4294967332,
+              0,
+              1970324836974594,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ]
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.073352416499634,
+        "min_ratio": 1.073352416499634,
+        "max_ratio": 1.073352416499634,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "arm": "v1",
+        "execution": "cuda_graph",
+        "channel": "wall",
+        "primary": false,
+        "role": "prior_graph_leader",
+        "comparison": "same_block_candidate_over_cached_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 0.9972630957310523,
+            "candidate_id": "prior_graph_leader",
+            "tactic": [
+              55834574914,
+              4294967332,
+              0,
+              1407374883553283,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ]
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 0.9972630957310523,
+        "min_ratio": 0.9972630957310523,
+        "max_ratio": 0.9972630957310523,
+        "ratios_below_one": 1,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "arm": "v1",
+        "execution": "cuda_graph",
+        "channel": "wall",
+        "primary": false,
+        "role": "actual_selected",
+        "comparison": "same_block_candidate_over_cached_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 1.073352416499634,
+            "candidate_id": "old_selected",
+            "tactic": [
+              446676598850,
+              4294967332,
+              0,
+              1970324836974594,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ]
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.073352416499634,
+        "min_ratio": 1.073352416499634,
+        "max_ratio": 1.073352416499634,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "arm": "v2",
+        "execution": "cuda_graph",
+        "channel": "wall",
+        "primary": false,
+        "role": "old_selected",
+        "comparison": "same_block_candidate_over_cached_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 1.0477536911898613,
+            "candidate_id": "old_selected",
+            "tactic": [
+              446676598850,
+              4294967332,
+              0,
+              1970324836974594,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ]
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.0477536911898613,
+        "min_ratio": 1.0477536911898613,
+        "max_ratio": 1.0477536911898613,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "arm": "v2",
+        "execution": "cuda_graph",
+        "channel": "wall",
+        "primary": false,
+        "role": "prior_graph_leader",
+        "comparison": "same_block_candidate_over_cached_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 0.9772687584013362,
+            "candidate_id": "prior_graph_leader",
+            "tactic": [
+              55834574914,
+              4294967332,
+              0,
+              1407374883553283,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ]
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 0.9772687584013362,
+        "min_ratio": 0.9772687584013362,
+        "max_ratio": 0.9772687584013362,
+        "ratios_below_one": 1,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "arm": "v2",
+        "execution": "cuda_graph",
+        "channel": "wall",
+        "primary": false,
+        "role": "actual_selected",
+        "comparison": "same_block_candidate_over_cached_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 1.0,
+            "candidate_id": "default",
+            "tactic": -1
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.0,
+        "min_ratio": 1.0,
+        "max_ratio": 1.0,
+        "ratios_below_one": 0,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "arm": "v1",
+        "execution": "cuda_graph",
+        "channel": "gpu_event",
+        "primary": true,
+        "role": "old_selected",
+        "comparison": "same_block_candidate_over_cached_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 1.073431045324495,
+            "candidate_id": "old_selected",
+            "tactic": [
+              446676598850,
+              4294967332,
+              0,
+              1970324836974594,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ]
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.073431045324495,
+        "min_ratio": 1.073431045324495,
+        "max_ratio": 1.073431045324495,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "arm": "v1",
+        "execution": "cuda_graph",
+        "channel": "gpu_event",
+        "primary": true,
+        "role": "prior_graph_leader",
+        "comparison": "same_block_candidate_over_cached_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 0.9974566648986932,
+            "candidate_id": "prior_graph_leader",
+            "tactic": [
+              55834574914,
+              4294967332,
+              0,
+              1407374883553283,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ]
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 0.9974566648986932,
+        "min_ratio": 0.9974566648986932,
+        "max_ratio": 0.9974566648986932,
+        "ratios_below_one": 1,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "arm": "v1",
+        "execution": "cuda_graph",
+        "channel": "gpu_event",
+        "primary": true,
+        "role": "actual_selected",
+        "comparison": "same_block_candidate_over_cached_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 1.073431045324495,
+            "candidate_id": "old_selected",
+            "tactic": [
+              446676598850,
+              4294967332,
+              0,
+              1970324836974594,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ]
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.073431045324495,
+        "min_ratio": 1.073431045324495,
+        "max_ratio": 1.073431045324495,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "arm": "v2",
+        "execution": "cuda_graph",
+        "channel": "gpu_event",
+        "primary": true,
+        "role": "old_selected",
+        "comparison": "same_block_candidate_over_cached_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 1.047823165305413,
+            "candidate_id": "old_selected",
+            "tactic": [
+              446676598850,
+              4294967332,
+              0,
+              1970324836974594,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ]
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.047823165305413,
+        "min_ratio": 1.047823165305413,
+        "max_ratio": 1.047823165305413,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "arm": "v2",
+        "execution": "cuda_graph",
+        "channel": "gpu_event",
+        "primary": true,
+        "role": "prior_graph_leader",
+        "comparison": "same_block_candidate_over_cached_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 0.9772370504069783,
+            "candidate_id": "prior_graph_leader",
+            "tactic": [
+              55834574914,
+              4294967332,
+              0,
+              1407374883553283,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ]
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 0.9772370504069783,
+        "min_ratio": 0.9772370504069783,
+        "max_ratio": 0.9772370504069783,
+        "ratios_below_one": 1,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "arm": "v2",
+        "execution": "cuda_graph",
+        "channel": "gpu_event",
+        "primary": true,
+        "role": "actual_selected",
+        "comparison": "same_block_candidate_over_cached_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 1.0,
+            "candidate_id": "default",
+            "tactic": -1
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.0,
+        "min_ratio": 1.0,
+        "max_ratio": 1.0,
+        "ratios_below_one": 0,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null
+      }
+    ],
+    "default_normalized_cross_arm_comparisons": [
+      {
+        "execution": "eager",
+        "channel": "wall",
+        "primary": true,
+        "comparison": "v2_selected_over_default_divided_by_v1_selected_over_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "v1_selected_over_default": 1.0238282979524094,
+            "v2_selected_over_default": 1.0,
+            "ratio": 0.9767262752943394
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 0.9767262752943394,
+        "min_ratio": 0.9767262752943394,
+        "max_ratio": 0.9767262752943394,
+        "ratios_below_one": 1,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "execution": "eager",
+        "channel": "gpu_event",
+        "primary": false,
+        "comparison": "v2_selected_over_default_divided_by_v1_selected_over_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "v1_selected_over_default": 1.0238460861539644,
+            "v2_selected_over_default": 1.0,
+            "ratio": 0.9767093057477602
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 0.9767093057477602,
+        "min_ratio": 0.9767093057477602,
+        "max_ratio": 0.9767093057477602,
+        "ratios_below_one": 1,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "execution": "cuda_graph",
+        "channel": "wall",
+        "primary": false,
+        "comparison": "v2_selected_over_default_divided_by_v1_selected_over_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "v1_selected_over_default": 1.073352416499634,
+            "v2_selected_over_default": 1.0,
+            "ratio": 0.9316604543185849
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 0.9316604543185849,
+        "min_ratio": 0.9316604543185849,
+        "max_ratio": 0.9316604543185849,
+        "ratios_below_one": 1,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "execution": "cuda_graph",
+        "channel": "gpu_event",
+        "primary": true,
+        "comparison": "v2_selected_over_default_divided_by_v1_selected_over_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "v1_selected_over_default": 1.073431045324495,
+            "v2_selected_over_default": 1.0,
+            "ratio": 0.9315922101896195
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 0.9315922101896195,
+        "min_ratio": 0.9315922101896195,
+        "max_ratio": 0.9315922101896195,
+        "ratios_below_one": 1,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null
+      }
+    ],
+    "startup_profiler_rankings": [
+      {
+        "trial": 0,
+        "arm": "v1",
+        "selected_tactic": [
+          446676598850,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        "finite_candidates": 8,
+        "profile_order": [
+          [
+            395136991298,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          [
+            51539607618,
+            4294967332,
+            0,
+            844424930131968,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          [
+            55834574914,
+            4294967332,
+            0,
+            1407374883553283,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          [
+            343597383746,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          [
+            1352914698306,
+            4294967332,
+            0,
+            1970324836974595,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          [
+            532575944770,
+            4294967332,
+            0,
+            2533274790395906,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          [
+            1348619731010,
+            4294967332,
+            0,
+            1125899906842625,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ]
+        ],
+        "ranked_profiles": [
+          {
+            "tactic": [
+              446676598850,
+              4294967332,
+              0,
+              1970324836974594,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.00963200032711029
+          },
+          {
+            "tactic": [
+              343597383746,
+              4294967332,
+              0,
+              1970324836974594,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.009679999947547913
+          },
+          {
+            "tactic": [
+              1348619731010,
+              4294967332,
+              0,
+              1125899906842625,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.010092800110578537
+          },
+          {
+            "tactic": [
+              55834574914,
+              4294967332,
+              0,
+              1407374883553283,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.010156799852848054
+          },
+          {
+            "tactic": [
+              532575944770,
+              4294967332,
+              0,
+              2533274790395906,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.010294400155544281
+          },
+          {
+            "tactic": [
+              51539607618,
+              4294967332,
+              0,
+              844424930131968,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.010332799702882766
+          },
+          {
+            "tactic": [
+              1352914698306,
+              4294967332,
+              0,
+              1970324836974595,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.01067200005054474
+          },
+          {
+            "tactic": [
+              395136991298,
+              4294967332,
+              0,
+              1970324836974594,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.011360000073909759
+          }
+        ],
+        "runner_up_fractional_margin": 0.004983349128687475,
+        "default_profile": null,
+        "actual_input_m_values": [
+          144
+        ],
+        "normalized_m": 256,
+        "autotuner_settings": {
+          "warmup": 3,
+          "repeat": 10,
+          "stream_delay_micro_secs": 5000,
+          "cuda_graph_delay_micro_secs": 100,
+          "use_global_timer": false,
+          "effective_measure_policy": null,
+          "effective_policy_timer": null,
+          "config": {
+            "use_cuda_graph": false,
+            "use_cold_l2_cache": false,
+            "cuda_graph_profile_replays": 1,
+            "profiling_repeat": null,
+            "effective_profiling_repeat": 10
+          }
+        }
+      },
+      {
+        "trial": 0,
+        "arm": "v2",
+        "selected_tactic": -1,
+        "finite_candidates": 9,
+        "profile_order": [
+          -1,
+          [
+            395136991298,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          [
+            51539607618,
+            4294967332,
+            0,
+            844424930131968,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          [
+            55834574914,
+            4294967332,
+            0,
+            1407374883553283,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          [
+            343597383746,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          [
+            1352914698306,
+            4294967332,
+            0,
+            1970324836974595,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          [
+            532575944770,
+            4294967332,
+            0,
+            2533274790395906,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          [
+            1348619731010,
+            4294967332,
+            0,
+            1125899906842625,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ]
+        ],
+        "ranked_profiles": [
+          {
+            "tactic": -1,
+            "profiler_ms": 0.009344000369310379
+          },
+          {
+            "tactic": [
+              343597383746,
+              4294967332,
+              0,
+              1970324836974594,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.009571199864149093
+          },
+          {
+            "tactic": [
+              446676598850,
+              4294967332,
+              0,
+              1970324836974594,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.009728000313043595
+          },
+          {
+            "tactic": [
+              532575944770,
+              4294967332,
+              0,
+              2533274790395906,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.00976639986038208
+          },
+          {
+            "tactic": [
+              1348619731010,
+              4294967332,
+              0,
+              1125899906842625,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.009862399846315383
+          },
+          {
+            "tactic": [
+              55834574914,
+              4294967332,
+              0,
+              1407374883553283,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.009913600236177444
+          },
+          {
+            "tactic": [
+              1352914698306,
+              4294967332,
+              0,
+              1970324836974595,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.009932799637317658
+          },
+          {
+            "tactic": [
+              395136991298,
+              4294967332,
+              0,
+              1970324836974594,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.010134399682283402
+          },
+          {
+            "tactic": [
+              51539607618,
+              4294967332,
+              0,
+              844424930131968,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.010470400005578995
+          }
+        ],
+        "runner_up_fractional_margin": 0.024315013469491387,
+        "default_profile": {
+          "profiler_ms": 0.009344000369310379,
+          "error": null
+        },
+        "actual_input_m_values": [
+          144
+        ],
+        "normalized_m": 256,
+        "autotuner_settings": {
+          "warmup": 3,
+          "repeat": 10,
+          "stream_delay_micro_secs": 5000,
+          "cuda_graph_delay_micro_secs": 100,
+          "use_global_timer": false,
+          "effective_measure_policy": null,
+          "effective_policy_timer": null,
+          "config": {
+            "use_cuda_graph": false,
+            "use_cold_l2_cache": false,
+            "cuda_graph_profile_replays": 1,
+            "profiling_repeat": null,
+            "effective_profiling_repeat": 10
+          }
+        }
+      }
+    ],
+    "cold_winner_frequencies": [
+      {
+        "arm": "v1",
+        "fresh_trials": 1,
+        "winners": [
+          {
+            "tactic": [
+              446676598850,
+              4294967332,
+              0,
+              1970324836974594,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "count": 1
+          }
+        ]
+      },
+      {
+        "arm": "v2",
+        "fresh_trials": 1,
+        "winners": [
+          {
+            "tactic": -1,
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "startup_diagnostics": [
+      {
+        "phase": "cold",
+        "comparison": "v2_over_v1_startup",
+        "scope": "wrapper startup excludes explicit binary build/load and initial public API call; secondary diagnostic",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 1.1003271113277329
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.1003271113277329,
+        "min_ratio": 1.1003271113277329,
+        "max_ratio": 1.1003271113277329,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null
+      },
+      {
+        "phase": "warm",
+        "comparison": "v2_over_v1_startup",
+        "scope": "wrapper startup excludes explicit binary build/load and initial public API call; secondary diagnostic",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 0.985692706381846
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 0.985692706381846,
+        "min_ratio": 0.985692706381846,
+        "max_ratio": 0.985692706381846,
+        "ratios_below_one": 1,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null
+      }
+    ]
+  },
+  "limitations": [
+    "Six fresh paired tuning/serving repetitions on one H100 and one identical input seed; within-worker blocks are dependent subsamples, not independent trials.",
+    "Bootstrap intervals resample whole trial pairs, are exploratory and unadjusted for multiple contrasts; a one-trial checkpoint has no interval.",
+    "Natural samples are sequential windows; balanced interleaved candidate/default contrasts reduce order effects but are separate measurements from natural timing.",
+    "Eager primary latency is wall time; graph primary is GPU-event replay span including host submission gaps. Both channels remain available.",
+    "Ranking and regret scores cover only the three preregistered candidates plus each own selected winner; union pools depend on that selection and do not establish a global optimum.",
+    "The historical graph leader was chosen from noisy previous measurements; a measured shortlist rank is exploratory, not a universal tactic-quality claim.",
+    "Startup profiler uses actual operation eager/hot-L2 defaults and its own delays/repeats; synthetic input generation and runtime measurement conditions differ without a policy override.",
+    "Exact descriptor overlay over0.7.2 is experimental; no physical-kernel causality, model serving-throughput, broader backend, distributed, or managed-store claim."
+  ]
+}
