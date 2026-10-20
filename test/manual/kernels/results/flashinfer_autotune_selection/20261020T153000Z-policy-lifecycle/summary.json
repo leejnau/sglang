@@ -1,0 +1,59 @@
+{
+  "status": "success",
+  "execution_commit": "5f64a0cefab2e7bc310581a20eb5e859d1306a9b",
+  "results_sha256": "226b3adb3ec4798fccf9da8d0989b695ffb1683a77b083a2cf7893e63d53b742",
+  "fresh_cpu_processes_per_run": 5,
+  "proof_assertions_per_run": 191,
+  "independent_runs": 2,
+  "independent_audit_assertions": [
+    64,
+    246
+  ],
+  "stages": [
+    {
+      "name": "seed",
+      "checks": 44,
+      "controlled_profiles": 6
+    },
+    {
+      "name": "plain_reload",
+      "checks": 30,
+      "controlled_profiles": 3
+    },
+    {
+      "name": "bridge_reload",
+      "checks": 48,
+      "controlled_profiles": 0
+    },
+    {
+      "name": "file_order",
+      "checks": 21,
+      "controlled_profiles": 0
+    },
+    {
+      "name": "controls",
+      "checks": 48,
+      "controlled_profiles": 6
+    }
+  ],
+  "findings": [
+    "Unspecified-policy legacy winner0 remains available after context exit and through real v1 save/load.",
+    "Explicit graph-policy winner1 is reachable inside its memory-only scope; plain v1 saving omits it and bare lookup returns legacy0 or fallback on a graph-only process.",
+    "Replay can accept wrong-policy legacy file0. Graph tuning rejects mismatched provenance and profiles1; replay must not be confused with a nested outer active tuning context.",
+    "Loading phase files into the same singleton is last-wins for overlapping keys; separate filenames alone do not isolate identities.",
+    "Guarded detached export and isolated file-bank activation preserve winner1 after fresh-process reload with zero profiling while bare legacy lookup keeps0.",
+    "Wrong-policy, modified cache bytes, existing export paths and shadowing live graph memory are rejected; normal/exceptional activation preserves recorded live banks and original file-map identities.",
+    "V1 per-entry provenance omits full timer identity, and a unique fresh output filename does not force an existing memory winner to retune."
+  ],
+  "production_pr_ready": false,
+  "next_decision": "Choose and review the supported persistence API boundary before implementing production phase routing. A subsequent current-objective versus graph-objective GPU qualification must change only that objective and carry the proven lifecycle; do not change profiling inputs simultaneously.",
+  "limits": [
+    "No GPU, actual CUDA Graph capture/replay, timing, correctness of native kernels or serving-performance evidence.",
+    "CPU runner output checks only validate the selected fixture tactic.",
+    "Private-field bridge is research machinery with single-thread single-process activation; not a public supported production adapter.",
+    "No distributed, target/draft runtime, mixed prefill-tail, graph-pool, stream, real MegaMoE or managed-store qualification.",
+    "Existing eager/default behavior remains unspecified policy and v1 persistence.",
+    "Production graph policy routing and a supported policy-aware persistence API remain design work.",
+    "Injected export failure occurs before actual save_configs and proves live-state preservation only, not atomic disk failure recovery."
+  ]
+}

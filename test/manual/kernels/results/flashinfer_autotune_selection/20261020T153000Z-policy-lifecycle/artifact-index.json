@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "execution_commit": "5f64a0cefab2e7bc310581a20eb5e859d1306a9b",
+  "files": [
+    {
+      "path": "attempt01-raw.tar.gz",
+      "sha256": "f701429d333764532373e811cef7643c2ac4a06ef5541845e23499134d64b5c3",
+      "size_bytes": 22582
+    },
+    {
+      "path": "independent-audit-sources.tar.gz",
+      "sha256": "732c90679e47048df125e4b64306734a742490a9f314fc376eea83735b0a42af",
+      "size_bytes": 6539
+    },
+    {
+      "path": "plan.json",
+      "sha256": "206219ef8b0538d103d0df0e2f1279e80a029eec8d8e381fce8afa2e3662916b",
+      "size_bytes": 6008
+    },
+    {
+      "path": "raw-member-index.json",
+      "sha256": "b9d4fa33ad74839ca06f5f5b07d35ff06d23f4178f5a24d5917d5e0af68f9106",
+      "size_bytes": 14962
+    },
+    {
+      "path": "results.json",
+      "sha256": "226b3adb3ec4798fccf9da8d0989b695ffb1683a77b083a2cf7893e63d53b742",
+      "size_bytes": 38832
+    },
+    {
+      "path": "summary.json",
+      "sha256": "f1cde1d4eedec4235e8d8743afff481fa714fcb172c45f571bc7cfa23cd73a5d",
+      "size_bytes": 3094
+    },
+    {
+      "path": "validation.json",
+      "sha256": "5b3966286b3903142cab2b874f75d389027f82c57d43ece5702f609079a3ac02",
+      "size_bytes": 12698
+    }
+  ],
+  "repository_checks": {
+    "status": "passed",
+    "applicable_pre_commit_output": "check for broken symlinks..............................(no files to check)Skipped\ndetect destroyed symlinks..................................................Passed\ntrim trailing whitespace...................................................Passed\nfix end of files...........................................................Passed\ncheck yaml.............................................(no files to check)Skipped\ncheck toml.............................................(no files to check)Skipped\ncheck python ast...........................................................Passed\ncheck for added large files................................................Passed\ncheck for merge conflicts..................................................Passed\ncheck that scripts with shebangs are executable............................Passed\ndetect private key.........................................................Passed\ndebug statements (python)..................................................Passed\ndon't commit to branch.....................................................Passed\nisort......................................................................Passed\nruff (legacy alias)........................................................Passed\nruff format................................................................Passed\ncodespell..................................................................Passed\nclang-format...........................................(no files to check)Skipped\nnbstripout.............................................(no files to check)Skipped\nforbid docs_new/ (renamed to docs/)....................(no files to check)Skipped\ncheck chinese characters in multimodal_gen.............(no files to check)Skipped\nsort CI_PERMISSIONS.json...............................(no files to check)Skipped\ncheck for duplicate workflow job names.................(no files to check)Skipped\ncheck rust-ext cache key prefix defaults match.........(no files to check)Skipped\nreject bare pytest.main calls in __main__ blocks...........................Passed\nvalidate registered test CI registries.................(no files to check)Skipped\nreject CI-registered tests inside the sglang package...(no files to check)Skipped\nrustfmt sgl-model-gateway (nightly)....................(no files to check)Skipped\nrustfmt experimental/sgl-router........................(no files to check)Skipped\nclippy rust/ workspace (auto-fix)......................(no files to check)Skipped\nrustfmt rust/ workspace................................(no files to check)Skipped\n",
+    "whitespace_check_passed": true,
+    "archive_content_payload_and_token_scans_passed": true
+  },
+  "gpu_experiments_or_ci_launched": false,
+  "production_source_changed": false
+}

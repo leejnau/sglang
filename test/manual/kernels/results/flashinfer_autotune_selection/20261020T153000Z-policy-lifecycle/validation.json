@@ -1,0 +1,216 @@
+{
+  "status": "success",
+  "execution_commit": "5f64a0cefab2e7bc310581a20eb5e859d1306a9b",
+  "worker_sha256": "62eeaadb792d6b9bc506afcfe41968495f36adff27ee24ee13fb81cebce05859",
+  "plan_sha256": "206219ef8b0538d103d0df0e2f1279e80a029eec8d8e381fce8afa2e3662916b",
+  "actual_proof": {
+    "sha256": "226b3adb3ec4798fccf9da8d0989b695ffb1683a77b083a2cf7893e63d53b742",
+    "size_bytes": 38832
+  },
+  "independent_proof": {
+    "sha256": "cad9e8f61445bb73c04c89f7cb43dca34012792d3c3ac17830ed538b4d01bdf8",
+    "size_bytes": 38832
+  },
+  "independent_audits": [
+    {
+      "report": {
+        "status": "passed",
+        "state": "FINAL_IMMUTABLE",
+        "execution_commit": "5f64a0cefab2e7bc310581a20eb5e859d1306a9b",
+        "worker_sha256": "62eeaadb792d6b9bc506afcfe41968495f36adff27ee24ee13fb81cebce05859",
+        "manifest_sha256": "206219ef8b0538d103d0df0e2f1279e80a029eec8d8e381fce8afa2e3662916b",
+        "audit_source_sha256": "d0581a31d352ab0da27bd6dfaab44547ccecb780b248e8ff213b1779ab9fe1a8",
+        "audit_assertions": 64,
+        "proof_assertions": 191,
+        "fresh_processes": 5,
+        "distinct_pids": [
+          30217,
+          30222,
+          30238,
+          30249,
+          30252
+        ],
+        "controlled_profile_counts": {
+          "seed": 6,
+          "plain_reload": 3,
+          "bridge_reload": 0,
+          "file_order": 0,
+          "controls": 6
+        },
+        "total_controlled_profiles": 15,
+        "fresh_bridge_profiling_attempts": 0,
+        "real_v1_cache_generations_verified": 5,
+        "persisted_caches": {
+          "legacy.json": {
+            "sha256": "f2279f4d16232d3b1fd82da263b334ac3c123e4cddaa9e2cfea687cda8fe44e1",
+            "generation": "6f8dea5836677125c43ba133972511c4af8d14d159112b83b133bd9df91d7dc6",
+            "tactics": [
+              0
+            ]
+          },
+          "plain-save-after-graph.json": {
+            "sha256": "f2279f4d16232d3b1fd82da263b334ac3c123e4cddaa9e2cfea687cda8fe44e1",
+            "generation": "6f8dea5836677125c43ba133972511c4af8d14d159112b83b133bd9df91d7dc6",
+            "tactics": [
+              0
+            ]
+          },
+          "10a52175d4b31e3f6dd57ad79e0f641b492d126797835b711a0dace66eff1778.json": {
+            "sha256": "08d2f371ddd3f5bafdc070c06e132cad5b72bfd137bc25d3348b263b1cbb7726",
+            "generation": "b9e0970dcb2265e6689d322d7bd2301f38408c5082ee0e77d7f47d9c43561ad1",
+            "tactics": [
+              1
+            ]
+          },
+          "graph-only-plain-save.json": {
+            "sha256": "4b0ce5fa67802ab37e72c216756fdc0271d6ff1e0de665f5defba7d749168e90",
+            "generation": "ddd333d05f17371625b72c3fb85cb3c6cbd71bda8a52da41642addf5e9097681",
+            "tactics": []
+          },
+          "empty-policy.json": {
+            "sha256": "f2279f4d16232d3b1fd82da263b334ac3c123e4cddaa9e2cfea687cda8fe44e1",
+            "generation": "6f8dea5836677125c43ba133972511c4af8d14d159112b83b133bd9df91d7dc6",
+            "tactics": [
+              0
+            ]
+          }
+        },
+        "result_sha256": "cad9e8f61445bb73c04c89f7cb43dca34012792d3c3ac17830ed538b4d01bdf8",
+        "raw_output": "/private/tmp/fi-policy-lifecycle-final-independent/attempt01",
+        "finding": "Explicit graph-policy winners are isolated from legacy bare lookup and v1 serialization. A hash/policy-guarded detached manual phase bank restores the desired file choice only inside its explicit replay scope.",
+        "limits": [
+          "No GPU, actual CUDA Graph capture/replay, timing, correctness of native kernels or serving-performance evidence.",
+          "CPU runner output checks only validate the selected fixture tactic.",
+          "Private-field bridge is research machinery with single-thread single-process activation; not a public supported production adapter.",
+          "No distributed, target/draft runtime, mixed prefill-tail, graph-pool, stream, real MegaMoE or managed-store qualification.",
+          "Existing eager/default behavior remains unspecified policy and v1 persistence.",
+          "Production graph policy routing and a supported policy-aware persistence API remain design work.",
+          "Injected export failure occurs before actual save_configs and proves live-state preservation only, not atomic disk failure recovery."
+        ],
+        "errors": []
+      },
+      "sha256": "dab392fe5fab240c15a2ec69e6951816617352281e645187739813360440d7b5",
+      "size_bytes": 3316
+    },
+    {
+      "report": {
+        "status": "success",
+        "audit_checks_passed": 246,
+        "execution_commit": "5f64a0cefab2e7bc310581a20eb5e859d1306a9b",
+        "auditor_sha256": "ff6f48a1e223aa9651d9cbc04a9fad504ee9ae4bb4b0f352b77682e0cf5a5f98",
+        "proof_worker_sha256": "62eeaadb792d6b9bc506afcfe41968495f36adff27ee24ee13fb81cebce05859",
+        "plan_sha256": "206219ef8b0538d103d0df0e2f1279e80a029eec8d8e381fce8afa2e3662916b",
+        "actual_result_sha256": "226b3adb3ec4798fccf9da8d0989b695ffb1683a77b083a2cf7893e63d53b742",
+        "proof_fresh_cpu_processes": 5,
+        "proof_assertions_passed": 191,
+        "stage_reports": [
+          {
+            "stage": "seed",
+            "pid": 30021,
+            "sha256": "e8e602fb762e5e2667ddd7418e8f3c51c45254d9bdf8f4fb6b7ec1985e584888",
+            "checks": 44
+          },
+          {
+            "stage": "plain_reload",
+            "pid": 30024,
+            "sha256": "fac239e5f71d079ec8620b8848ced3de56ef944cfa8feda4c0496267b2e80986",
+            "checks": 30
+          },
+          {
+            "stage": "bridge_reload",
+            "pid": 30032,
+            "sha256": "4353c4b22220f351bec12c6d1cc610617d04569010351de96957473381957853",
+            "checks": 48
+          },
+          {
+            "stage": "file_order",
+            "pid": 30033,
+            "sha256": "7f18097ad0e63da757c0b7dfb0657df2ef1fa806c848f13a2457fd3335873231",
+            "checks": 21
+          },
+          {
+            "stage": "controls",
+            "pid": 30035,
+            "sha256": "94a9075977db306113f2272389a2cb4a033629a7571e368f8f050ce641d34f74",
+            "checks": 48
+          }
+        ],
+        "controlled_profile_counts": {
+          "seed": 6,
+          "plain_reload": 3,
+          "bridge_reload": 0,
+          "file_order": 0,
+          "controls": 6
+        },
+        "readiness": {
+          "cpu_policy_lifecycle_proof_complete": true,
+          "production_policy_integration_ready": false,
+          "gpu_objective_comparison_qualified": false,
+          "next_decision": "Review a supported policy-aware persistence and lookup API boundary before production phase routing; retain unspecified-policy eager behavior and separate explicit graph winners."
+        },
+        "claim_limits": [
+          "Whole hash-checked tuner/cache modules execute on CPU with declared import, metadata and profiling controls.",
+          "Synthetic CPU winner outputs and controlled profiler values do not qualify native kernels, CUDA Graph capture, serving performance, distributed behavior or target/draft behavior.",
+          "Detached private serializer and file-bank activation are manual single-thread proof machinery; export failure was injected before actual save.",
+          "Current production code is source-reviewed here; production phase routing is not executed by this proof."
+        ]
+      },
+      "sha256": "7c723eb589e01950628624c75a87c42dcd91abfd98f79c0d6d0b70ae64b2e848",
+      "size_bytes": 2496
+    }
+  ],
+  "retained_exact_audit_sources": {
+    "archive": "independent-audit-sources.tar.gz",
+    "sha256": "732c90679e47048df125e4b64306734a742490a9f314fc376eea83735b0a42af",
+    "size_bytes": 6539,
+    "members": [
+      {
+        "path": "audit_policy_lifecycle_final.py",
+        "sha256": "d0581a31d352ab0da27bd6dfaab44547ccecb780b248e8ff213b1779ab9fe1a8",
+        "size_bytes": 7614
+      },
+      {
+        "path": "sglang-policy-lifecycle-readiness-audit.py",
+        "sha256": "ff6f48a1e223aa9651d9cbc04a9fad504ee9ae4bb4b0f352b77682e0cf5a5f98",
+        "size_bytes": 6602
+      },
+      {
+        "path": "package_results.py",
+        "sha256": "9958ab49d8d9e1dafc741a09143a4927f2b6e04ea92483d035ffe584162f821e",
+        "size_bytes": 5641
+      }
+    ]
+  },
+  "raw_archive": {
+    "sha256": "f701429d333764532373e811cef7643c2ac4a06ef5541845e23499134d64b5c3",
+    "size_bytes": 22582
+  },
+  "raw_original_byte_comparison_passed": true,
+  "commands": {
+    "execution_commit": "5f64a0cefab2e7bc310581a20eb5e859d1306a9b",
+    "command": [
+      "/private/tmp/sglang-policy-lifecycle-venv/bin/python",
+      "test/manual/kernels/flashinfer_autotune_policy_lifecycle.py",
+      "--flashinfer-source",
+      "/private/tmp/fi-descriptor-source/repo",
+      "--manifest",
+      "test/manual/kernels/results/flashinfer_autotune_selection/20261020T153000Z-policy-lifecycle/plan.json",
+      "--output-dir",
+      "/private/tmp/sglang-policy-lifecycle-final/attempt01"
+    ],
+    "exit_code": 0,
+    "source_dirty_after_run": false,
+    "requirements": "filelock==4.2.4\nfsspec==2026.9.0\njinja2==3.1.6\nmarkupsafe==3.0.4\nmpmath==1.3.0\nnetworkx==3.7\nsetuptools==84.2.0\nsympy==1.14.0\ntorch==2.14.1\ntqdm==4.67.1\ntyping-extensions==4.16.0\n",
+    "working_directory": "/private/tmp/sglang-autotune-selection-study",
+    "worker_script_sha256": "62eeaadb792d6b9bc506afcfe41968495f36adff27ee24ee13fb81cebce05859",
+    "preflight": {
+      "attempt01": "Failed at import-boundary confidential-compute detection; set CPU capability toFalse.",
+      "attempt02": "Failed full bank restoration because lazy lookup added an empty policy partition; fixed finally cleanup before source freeze.",
+      "attempt03": "Passed184 checks on reviewed prefreeze source.",
+      "attempt04": "Passed191 checks after adding shadowing and provenance controls; final commit freezes exact bytes."
+    },
+    "scope": "CPU-only deterministic full-module validation. No CUDA allocation, cluster job, CI, production change or PR."
+  },
+  "source_repository_checks": "check for broken symlinks..............................(no files to check)Skipped\ndetect destroyed symlinks..................................................Passed\ntrim trailing whitespace...................................................Passed\nfix end of files...........................................................Passed\ncheck yaml.............................................(no files to check)Skipped\ncheck toml.............................................(no files to check)Skipped\ncheck python ast...........................................................Passed\ncheck for added large files................................................Passed\ncheck for merge conflicts..................................................Passed\ncheck that scripts with shebangs are executable............................Passed\ndetect private key.........................................................Passed\ndebug statements (python)..................................................Passed\ndon't commit to branch.....................................................Passed\nisort......................................................................Passed\nruff (legacy alias)........................................................Passed\nruff format................................................................Passed\ncodespell..................................................................Passed\nclang-format...........................................(no files to check)Skipped\nnbstripout.............................................(no files to check)Skipped\nforbid docs_new/ (renamed to docs/)....................(no files to check)Skipped\ncheck chinese characters in multimodal_gen.............(no files to check)Skipped\nsort CI_PERMISSIONS.json...............................(no files to check)Skipped\ncheck for duplicate workflow job names.................(no files to check)Skipped\ncheck rust-ext cache key prefix defaults match.........(no files to check)Skipped\nreject bare pytest.main calls in __main__ blocks...........................Passed\nvalidate registered test CI registries.................(no files to check)Skipped\nreject CI-registered tests inside the sglang package...(no files to check)Skipped\nrustfmt sgl-model-gateway (nightly)....................(no files to check)Skipped\nrustfmt experimental/sgl-router........................(no files to check)Skipped\nclippy rust/ workspace (auto-fix)......................(no files to check)Skipped\nrustfmt rust/ workspace................................(no files to check)Skipped\n",
+  "scope": "Manual deterministic CPU proof; no GPU job, CI trigger, new registered test, production policy or PR."
+}

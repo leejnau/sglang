@@ -1,0 +1,1232 @@
+{
+  "status": "success",
+  "sglang_execution_commit": "5f64a0cefab2e7bc310581a20eb5e859d1306a9b",
+  "worker_sha256": "62eeaadb792d6b9bc506afcfe41968495f36adff27ee24ee13fb81cebce05859",
+  "manifest_sha256": "206219ef8b0538d103d0df0e2f1279e80a029eec8d8e381fce8afa2e3662916b",
+  "fresh_processes": 5,
+  "assertions_passed": 191,
+  "reports": [
+    {
+      "status": "success",
+      "stage": "seed",
+      "pid": 30021,
+      "python": "3.12.12 (main, Feb  4 2026, 01:57:59) [Clang 21.1.4 ]",
+      "torch": "2.14.1",
+      "cuda_available": false,
+      "source_commit": "d84335d8c54e0c8f9f7e22faa15c7e34a58abf94",
+      "source_sha256": {
+        "flashinfer/autotune_cache.py": "7be4f83162ce3afada8593f5acd863769356da74102e6762ece133548a4d8bda",
+        "flashinfer/autotuner/autotuner.py": "0fdeadb0a5fe8db8454fa7b98a46570288da07f6d02533edc0676f8d2af11ada",
+        "flashinfer/autotuner/__init__.py": "79d067053b016e29a10d196edc186b027084685bc6d952e2466b878cb03ce5f6",
+        "flashinfer/autotuner/initializers.py": "4c10d847cf9d4e6404ae3f88c6ddc3acf9fd993d18ff140d3f48e6e78b6c80d2",
+        "flashinfer/tactics_blocklist.py": "6f652b3d93a8311fa09392e4ccf24af0cbdd5bab57f1fdba8fb4fc1d6eb7e3b0",
+        "flashinfer/version.py": "a7dde55794323d8d61edf7153a66275b571f039322772ae0ec125d3099607001"
+      },
+      "checks": [
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "all tuning contexts exited",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "tuning mode restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "v2 state restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "measurement policy restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "no managed store attached",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "graph profiling overrides actual config",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "export requires graph scope",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "detached export preserves all live banks",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "export requires graph scope",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "existing export rejection preserves live banks",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "export requires graph scope",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "failed export preserves all live banks",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "all tuning contexts exited",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "tuning mode restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "v2 state restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "measurement policy restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "no managed store attached",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "plain v1 save omits graph winner",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "graph-bank export leaves legacy disk bytes unchanged",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "all tuning contexts exited",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "tuning mode restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "v2 state restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "measurement policy restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "no managed store attached",
+          "passed": true,
+          "detail": null
+        }
+      ],
+      "profiles": [
+        {
+          "tactic": -1,
+          "time_fixture": 4.0,
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "identity": "None"
+        },
+        {
+          "tactic": 0,
+          "time_fixture": 1.0,
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "identity": "None"
+        },
+        {
+          "tactic": 1,
+          "time_fixture": 2.0,
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "identity": "None"
+        },
+        {
+          "tactic": -1,
+          "time_fixture": 4.0,
+          "use_cuda_graph": true,
+          "use_cold_l2_cache": false,
+          "identity": "('__policy__', ('measure_execution_mode', 'cuda_graph'))"
+        },
+        {
+          "tactic": 0,
+          "time_fixture": 2.0,
+          "use_cuda_graph": true,
+          "use_cold_l2_cache": false,
+          "identity": "('__policy__', ('measure_execution_mode', 'cuda_graph'))"
+        },
+        {
+          "tactic": 1,
+          "time_fixture": 1.0,
+          "use_cuda_graph": true,
+          "use_cold_l2_cache": false,
+          "identity": "('__policy__', ('measure_execution_mode', 'cuda_graph'))"
+        }
+      ],
+      "seams": [
+        "Whole FlashInfer autotuner, cache, initializer, blocklist, version and autotuner-export modules loaded from hash-checked exact source, no method extraction.",
+        "Top-level GPU package initialization bypassed with namespace shells; JIT logger supplied; unneeded GPU leaf functions fail if reached.",
+        "Pure next-positive-power-of-two import boundary supplied; no changes to choose_one, policy identity, search_cache, save_configs or load_configs.",
+        "Real CPU Torch2.14.1; CUDA stream capture probe returnsFalse; actual GPU profiling replaced by finite controlled times whose winners differ by effective use_cuda_graph.",
+        "Deployment metadata collector replaced by an explicit CPU fixture stamp; CUDA environment compatibility is not validated.",
+        "Manual bridge projects private policy winner/provenance into a detached actual AutoTuner serializer, then activates an isolated real v1 file bank in a matching replay context; no production integration.",
+        "Confidential-compute device capability probe fixedFalse on CPU; no GPU timing backend executed.",
+        "Fresh workers pin cuda_event constructor mode, disable bundled tactic imports, remove external blocklist, reject CUDA availability and require Torch2.14.1."
+      ]
+    },
+    {
+      "status": "success",
+      "stage": "plain_reload",
+      "pid": 30024,
+      "python": "3.12.12 (main, Feb  4 2026, 01:57:59) [Clang 21.1.4 ]",
+      "torch": "2.14.1",
+      "cuda_available": false,
+      "source_commit": "d84335d8c54e0c8f9f7e22faa15c7e34a58abf94",
+      "source_sha256": {
+        "flashinfer/autotune_cache.py": "7be4f83162ce3afada8593f5acd863769356da74102e6762ece133548a4d8bda",
+        "flashinfer/autotuner/autotuner.py": "0fdeadb0a5fe8db8454fa7b98a46570288da07f6d02533edc0676f8d2af11ada",
+        "flashinfer/autotuner/__init__.py": "79d067053b016e29a10d196edc186b027084685bc6d952e2466b878cb03ce5f6",
+        "flashinfer/autotuner/initializers.py": "4c10d847cf9d4e6404ae3f88c6ddc3acf9fd993d18ff140d3f48e6e78b6c80d2",
+        "flashinfer/tactics_blocklist.py": "6f652b3d93a8311fa09392e4ccf24af0cbdd5bab57f1fdba8fb4fc1d6eb7e3b0",
+        "flashinfer/version.py": "a7dde55794323d8d61edf7153a66275b571f039322772ae0ec125d3099607001"
+      },
+      "checks": [
+        {
+          "name": "real legacy load succeeds",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "replay does not enable tuning",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "wrong graph replay caused no profiling",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "tuning rejects mismatched file provenance",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "all tuning contexts exited",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "tuning mode restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "v2 state restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "measurement policy restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "no managed store attached",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "all tuning contexts exited",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "tuning mode restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "v2 state restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "measurement policy restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "no managed store attached",
+          "passed": true,
+          "detail": null
+        }
+      ],
+      "profiles": [
+        {
+          "tactic": -1,
+          "time_fixture": 4.0,
+          "use_cuda_graph": true,
+          "use_cold_l2_cache": false,
+          "identity": "('__policy__', ('measure_execution_mode', 'cuda_graph'))"
+        },
+        {
+          "tactic": 0,
+          "time_fixture": 2.0,
+          "use_cuda_graph": true,
+          "use_cold_l2_cache": false,
+          "identity": "('__policy__', ('measure_execution_mode', 'cuda_graph'))"
+        },
+        {
+          "tactic": 1,
+          "time_fixture": 1.0,
+          "use_cuda_graph": true,
+          "use_cold_l2_cache": false,
+          "identity": "('__policy__', ('measure_execution_mode', 'cuda_graph'))"
+        }
+      ],
+      "seams": [
+        "Whole FlashInfer autotuner, cache, initializer, blocklist, version and autotuner-export modules loaded from hash-checked exact source, no method extraction.",
+        "Top-level GPU package initialization bypassed with namespace shells; JIT logger supplied; unneeded GPU leaf functions fail if reached.",
+        "Pure next-positive-power-of-two import boundary supplied; no changes to choose_one, policy identity, search_cache, save_configs or load_configs.",
+        "Real CPU Torch2.14.1; CUDA stream capture probe returnsFalse; actual GPU profiling replaced by finite controlled times whose winners differ by effective use_cuda_graph.",
+        "Deployment metadata collector replaced by an explicit CPU fixture stamp; CUDA environment compatibility is not validated.",
+        "Manual bridge projects private policy winner/provenance into a detached actual AutoTuner serializer, then activates an isolated real v1 file bank in a matching replay context; no production integration.",
+        "Confidential-compute device capability probe fixedFalse on CPU; no GPU timing backend executed.",
+        "Fresh workers pin cuda_event constructor mode, disable bundled tactic imports, remove external blocklist, reject CUDA availability and require Torch2.14.1."
+      ]
+    },
+    {
+      "status": "success",
+      "stage": "bridge_reload",
+      "pid": 30032,
+      "python": "3.12.12 (main, Feb  4 2026, 01:57:59) [Clang 21.1.4 ]",
+      "torch": "2.14.1",
+      "cuda_available": false,
+      "source_commit": "d84335d8c54e0c8f9f7e22faa15c7e34a58abf94",
+      "source_sha256": {
+        "flashinfer/autotune_cache.py": "7be4f83162ce3afada8593f5acd863769356da74102e6762ece133548a4d8bda",
+        "flashinfer/autotuner/autotuner.py": "0fdeadb0a5fe8db8454fa7b98a46570288da07f6d02533edc0676f8d2af11ada",
+        "flashinfer/autotuner/__init__.py": "79d067053b016e29a10d196edc186b027084685bc6d952e2466b878cb03ce5f6",
+        "flashinfer/autotuner/initializers.py": "4c10d847cf9d4e6404ae3f88c6ddc3acf9fd993d18ff140d3f48e6e78b6c80d2",
+        "flashinfer/tactics_blocklist.py": "6f652b3d93a8311fa09392e4ccf24af0cbdd5bab57f1fdba8fb4fc1d6eb7e3b0",
+        "flashinfer/version.py": "a7dde55794323d8d61edf7153a66275b571f039322772ae0ec125d3099607001"
+      },
+      "checks": [
+        {
+          "name": "real legacy load succeeds",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "isolated load preserves live state",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "rejected tampered bank leaves live state unchanged",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "loaded graph winner remains file-sourced",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "all tuning contexts exited",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "tuning mode restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "v2 state restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "measurement policy restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "no managed store attached",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "original file-map identities restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "all live banks restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "loaded graph winner remains file-sourced",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "all tuning contexts exited",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "tuning mode restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "v2 state restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "measurement policy restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "no managed store attached",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "original file-map identities restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "all live banks restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "fresh-process bridge performs zero profiling",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "shadowing memory winner rejected",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "shadow rejection preserves existing banks",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "negative fixture removed exactly",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "all tuning contexts exited",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "tuning mode restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "v2 state restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "measurement policy restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "no managed store attached",
+          "passed": true,
+          "detail": null
+        }
+      ],
+      "profiles": [],
+      "seams": [
+        "Whole FlashInfer autotuner, cache, initializer, blocklist, version and autotuner-export modules loaded from hash-checked exact source, no method extraction.",
+        "Top-level GPU package initialization bypassed with namespace shells; JIT logger supplied; unneeded GPU leaf functions fail if reached.",
+        "Pure next-positive-power-of-two import boundary supplied; no changes to choose_one, policy identity, search_cache, save_configs or load_configs.",
+        "Real CPU Torch2.14.1; CUDA stream capture probe returnsFalse; actual GPU profiling replaced by finite controlled times whose winners differ by effective use_cuda_graph.",
+        "Deployment metadata collector replaced by an explicit CPU fixture stamp; CUDA environment compatibility is not validated.",
+        "Manual bridge projects private policy winner/provenance into a detached actual AutoTuner serializer, then activates an isolated real v1 file bank in a matching replay context; no production integration.",
+        "Confidential-compute device capability probe fixedFalse on CPU; no GPU timing backend executed.",
+        "Fresh workers pin cuda_event constructor mode, disable bundled tactic imports, remove external blocklist, reject CUDA availability and require Torch2.14.1."
+      ]
+    },
+    {
+      "status": "success",
+      "stage": "file_order",
+      "pid": 30033,
+      "python": "3.12.12 (main, Feb  4 2026, 01:57:59) [Clang 21.1.4 ]",
+      "torch": "2.14.1",
+      "cuda_available": false,
+      "source_commit": "d84335d8c54e0c8f9f7e22faa15c7e34a58abf94",
+      "source_sha256": {
+        "flashinfer/autotune_cache.py": "7be4f83162ce3afada8593f5acd863769356da74102e6762ece133548a4d8bda",
+        "flashinfer/autotuner/autotuner.py": "0fdeadb0a5fe8db8454fa7b98a46570288da07f6d02533edc0676f8d2af11ada",
+        "flashinfer/autotuner/__init__.py": "79d067053b016e29a10d196edc186b027084685bc6d952e2466b878cb03ce5f6",
+        "flashinfer/autotuner/initializers.py": "4c10d847cf9d4e6404ae3f88c6ddc3acf9fd993d18ff140d3f48e6e78b6c80d2",
+        "flashinfer/tactics_blocklist.py": "6f652b3d93a8311fa09392e4ccf24af0cbdd5bab57f1fdba8fb4fc1d6eb7e3b0",
+        "flashinfer/version.py": "a7dde55794323d8d61edf7153a66275b571f039322772ae0ec125d3099607001"
+      },
+      "checks": [
+        {
+          "name": "first legacy load succeeds",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "second graph load succeeds",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "last legacy reload succeeds",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "file collisions reproduce with zero profiling",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "all tuning contexts exited",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "tuning mode restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "v2 state restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "measurement policy restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "no managed store attached",
+          "passed": true,
+          "detail": null
+        }
+      ],
+      "profiles": [],
+      "seams": [
+        "Whole FlashInfer autotuner, cache, initializer, blocklist, version and autotuner-export modules loaded from hash-checked exact source, no method extraction.",
+        "Top-level GPU package initialization bypassed with namespace shells; JIT logger supplied; unneeded GPU leaf functions fail if reached.",
+        "Pure next-positive-power-of-two import boundary supplied; no changes to choose_one, policy identity, search_cache, save_configs or load_configs.",
+        "Real CPU Torch2.14.1; CUDA stream capture probe returnsFalse; actual GPU profiling replaced by finite controlled times whose winners differ by effective use_cuda_graph.",
+        "Deployment metadata collector replaced by an explicit CPU fixture stamp; CUDA environment compatibility is not validated.",
+        "Manual bridge projects private policy winner/provenance into a detached actual AutoTuner serializer, then activates an isolated real v1 file bank in a matching replay context; no production integration.",
+        "Confidential-compute device capability probe fixedFalse on CPU; no GPU timing backend executed.",
+        "Fresh workers pin cuda_event constructor mode, disable bundled tactic imports, remove external blocklist, reject CUDA availability and require Torch2.14.1."
+      ]
+    },
+    {
+      "status": "success",
+      "stage": "controls",
+      "pid": 30035,
+      "python": "3.12.12 (main, Feb  4 2026, 01:57:59) [Clang 21.1.4 ]",
+      "torch": "2.14.1",
+      "cuda_available": false,
+      "source_commit": "d84335d8c54e0c8f9f7e22faa15c7e34a58abf94",
+      "source_sha256": {
+        "flashinfer/autotune_cache.py": "7be4f83162ce3afada8593f5acd863769356da74102e6762ece133548a4d8bda",
+        "flashinfer/autotuner/autotuner.py": "0fdeadb0a5fe8db8454fa7b98a46570288da07f6d02533edc0676f8d2af11ada",
+        "flashinfer/autotuner/__init__.py": "79d067053b016e29a10d196edc186b027084685bc6d952e2466b878cb03ce5f6",
+        "flashinfer/autotuner/initializers.py": "4c10d847cf9d4e6404ae3f88c6ddc3acf9fd993d18ff140d3f48e6e78b6c80d2",
+        "flashinfer/tactics_blocklist.py": "6f652b3d93a8311fa09392e4ccf24af0cbdd5bab57f1fdba8fb4fc1d6eb7e3b0",
+        "flashinfer/version.py": "a7dde55794323d8d61edf7153a66275b571f039322772ae0ec125d3099607001"
+      },
+      "checks": [
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": -1
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "graph-only plain save contains no tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "inner replay retains outer v1 tuning",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "warm nested scope performs no profiling",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "nested v2 is explicitly rejected",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "all tuning contexts exited",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "tuning mode restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "v2 state restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "measurement policy restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "no managed store attached",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": -1
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "skip prevents profiling",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "unique output path does not force existing policy winner to retune",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "all tuning contexts exited",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "tuning mode restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "v2 state restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "measurement policy restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "no managed store attached",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "timer manifests differ",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "v1 provenance does not encode complete policy",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "all tuning contexts exited",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "tuning mode restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "v2 state restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "measurement policy restored",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "no managed store attached",
+          "passed": true,
+          "detail": null
+        }
+      ],
+      "profiles": [
+        {
+          "tactic": -1,
+          "time_fixture": 4.0,
+          "use_cuda_graph": true,
+          "use_cold_l2_cache": false,
+          "identity": "('__policy__', ('measure_execution_mode', 'cuda_graph'))"
+        },
+        {
+          "tactic": 0,
+          "time_fixture": 2.0,
+          "use_cuda_graph": true,
+          "use_cold_l2_cache": false,
+          "identity": "('__policy__', ('measure_execution_mode', 'cuda_graph'))"
+        },
+        {
+          "tactic": 1,
+          "time_fixture": 1.0,
+          "use_cuda_graph": true,
+          "use_cold_l2_cache": false,
+          "identity": "('__policy__', ('measure_execution_mode', 'cuda_graph'))"
+        },
+        {
+          "tactic": -1,
+          "time_fixture": 4.0,
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "identity": "None"
+        },
+        {
+          "tactic": 0,
+          "time_fixture": 1.0,
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "identity": "None"
+        },
+        {
+          "tactic": 1,
+          "time_fixture": 2.0,
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "identity": "None"
+        }
+      ],
+      "seams": [
+        "Whole FlashInfer autotuner, cache, initializer, blocklist, version and autotuner-export modules loaded from hash-checked exact source, no method extraction.",
+        "Top-level GPU package initialization bypassed with namespace shells; JIT logger supplied; unneeded GPU leaf functions fail if reached.",
+        "Pure next-positive-power-of-two import boundary supplied; no changes to choose_one, policy identity, search_cache, save_configs or load_configs.",
+        "Real CPU Torch2.14.1; CUDA stream capture probe returnsFalse; actual GPU profiling replaced by finite controlled times whose winners differ by effective use_cuda_graph.",
+        "Deployment metadata collector replaced by an explicit CPU fixture stamp; CUDA environment compatibility is not validated.",
+        "Manual bridge projects private policy winner/provenance into a detached actual AutoTuner serializer, then activates an isolated real v1 file bank in a matching replay context; no production integration.",
+        "Confidential-compute device capability probe fixedFalse on CPU; no GPU timing backend executed.",
+        "Fresh workers pin cuda_event constructor mode, disable bundled tactic imports, remove external blocklist, reject CUDA availability and require Torch2.14.1."
+      ]
+    }
+  ],
+  "limits": [
+    "No GPU, actual CUDA Graph capture/replay, timing, correctness of native kernels or serving-performance evidence.",
+    "CPU runner output checks only validate the selected fixture tactic.",
+    "Private-field bridge is research machinery with single-thread single-process activation; not a public supported production adapter.",
+    "No distributed, target/draft runtime, mixed prefill-tail, graph-pool, stream, real MegaMoE or managed-store qualification.",
+    "Existing eager/default behavior remains unspecified policy and v1 persistence.",
+    "Production graph policy routing and a supported policy-aware persistence API remain design work.",
+    "Injected export failure occurs before actual save_configs and proves live-state preservation only, not atomic disk failure recovery."
+  ]
+}
