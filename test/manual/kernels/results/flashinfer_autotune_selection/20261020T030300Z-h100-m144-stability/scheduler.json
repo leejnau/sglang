@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "status": "released",
+  "job_id": 2679505,
+  "remaining_queue_entries": 0,
+  "reason": "Own hold allocation intentionally cancelled after all24workers/main experiment completed0 and node/durable/download archive hashes matched. No unrelated jobs or containers touched.",
+  "archive_sha256_before_release": "d896bb37918bc81f66b54e2b8c7d1c4936be2270d70e6bcb342ec239876f0f0c",
+  "accounting": [
+    {
+      "job_id": "2679505",
+      "job_name": "fi-m144-stability",
+      "state": "CANCELLED by 150381",
+      "exit_code": "0:0",
+      "start": "2026-10-20T03:04:54",
+      "end": "2026-10-20T03:28:24",
+      "elapsed": "00:23:30",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2679505.batch",
+      "job_name": "batch",
+      "state": "CANCELLED",
+      "exit_code": "0:15",
+      "start": "2026-10-20T03:04:54",
+      "end": "2026-10-20T03:28:25",
+      "elapsed": "00:23:31",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2679505.extern",
+      "job_name": "extern",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T03:04:54",
+      "end": "2026-10-20T03:28:26",
+      "elapsed": "00:23:32",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2679505.0",
+      "job_name": "python3",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T03:05:46",
+      "end": "2026-10-20T03:05:50",
+      "elapsed": "00:00:04",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2679505.1",
+      "job_name": "cat",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T03:06:50",
+      "end": "2026-10-20T03:06:53",
+      "elapsed": "00:00:03",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2679505.2",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T03:09:27",
+      "end": "2026-10-20T03:09:40",
+      "elapsed": "00:00:13",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2679505.3",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T03:12:13",
+      "end": "2026-10-20T03:24:33",
+      "elapsed": "00:12:20",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2679505.4",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T03:13:11",
+      "end": "2026-10-20T03:13:14",
+      "elapsed": "00:00:03",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2679505.5",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T03:13:52",
+      "end": "2026-10-20T03:13:54",
+      "elapsed": "00:00:02",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2679505.6",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T03:15:38",
+      "end": "2026-10-20T03:15:40",
+      "elapsed": "00:00:02",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2679505.7",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T03:15:52",
+      "end": "2026-10-20T03:15:56",
+      "elapsed": "00:00:04",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2679505.8",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T03:17:15",
+      "end": "2026-10-20T03:17:18",
+      "elapsed": "00:00:03",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2679505.9",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T03:18:43",
+      "end": "2026-10-20T03:18:45",
+      "elapsed": "00:00:02",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2679505.10",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T03:20:18",
+      "end": "2026-10-20T03:20:21",
+      "elapsed": "00:00:03",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2679505.11",
+      "job_name": "python3",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T03:21:22",
+      "end": "2026-10-20T03:21:24",
+      "elapsed": "00:00:02",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2679505.12",
+      "job_name": "python3",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T03:23:13",
+      "end": "2026-10-20T03:23:15",
+      "elapsed": "00:00:02",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2679505.13",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T03:27:45",
+      "end": "2026-10-20T03:27:50",
+      "elapsed": "00:00:05",
+      "node": "1u1g-gen-0100"
+    }
+  ],
+  "observations": [
+    {
+      "checked_utc": "2026-10-20T03:29:05.975132+00:00",
+      "commands": {
+        "accounting": [
+          "sacct",
+          "-j",
+          "2679505",
+          "--noheader",
+          "--parsable2",
+          "--format=JobIDRaw,JobName,State,ExitCode,Start,End,Elapsed,NodeList"
+        ],
+        "queue": [
+          "squeue",
+          "--noheader",
+          "--jobs=2679505",
+          "--format=%i|%T|%N"
+        ]
+      },
+      "results": {
+        "accounting": {
+          "returncode": 0,
+          "stdout": "2679505|fi-m144-stability|CANCELLED by 150381|0:0|2026-10-20T03:04:54|2026-10-20T03:28:24|00:23:30|1u1g-gen-0100\n2679505.batch|batch|CANCELLED|0:15|2026-10-20T03:04:54|2026-10-20T03:28:25|00:23:31|1u1g-gen-0100\n2679505.extern|extern|COMPLETED|0:0|2026-10-20T03:04:54|2026-10-20T03:28:26|00:23:32|1u1g-gen-0100\n2679505.0|python3|COMPLETED|0:0|2026-10-20T03:05:46|2026-10-20T03:05:50|00:00:04|1u1g-gen-0100\n2679505.1|cat|COMPLETED|0:0|2026-10-20T03:06:50|2026-10-20T03:06:53|00:00:03|1u1g-gen-0100\n2679505.2|bash|COMPLETED|0:0|2026-10-20T03:09:27|2026-10-20T03:09:40|00:00:13|1u1g-gen-0100\n2679505.3|bash|COMPLETED|0:0|2026-10-20T03:12:13|2026-10-20T03:24:33|00:12:20|1u1g-gen-0100\n2679505.4|bash|COMPLETED|0:0|2026-10-20T03:13:11|2026-10-20T03:13:14|00:00:03|1u1g-gen-0100\n2679505.5|bash|COMPLETED|0:0|2026-10-20T03:13:52|2026-10-20T03:13:54|00:00:02|1u1g-gen-0100\n2679505.6|bash|COMPLETED|0:0|2026-10-20T03:15:38|2026-10-20T03:15:40|00:00:02|1u1g-gen-0100\n2679505.7|bash|COMPLETED|0:0|2026-10-20T03:15:52|2026-10-20T03:15:56|00:00:04|1u1g-gen-0100\n2679505.8|bash|COMPLETED|0:0|2026-10-20T03:17:15|2026-10-20T03:17:18|00:00:03|1u1g-gen-0100\n2679505.9|bash|COMPLETED|0:0|2026-10-20T03:18:43|2026-10-20T03:18:45|00:00:02|1u1g-gen-0100\n2679505.10|bash|COMPLETED|0:0|2026-10-20T03:20:18|2026-10-20T03:20:21|00:00:03|1u1g-gen-0100\n2679505.11|python3|COMPLETED|0:0|2026-10-20T03:21:22|2026-10-20T03:21:24|00:00:02|1u1g-gen-0100\n2679505.12|python3|COMPLETED|0:0|2026-10-20T03:23:13|2026-10-20T03:23:15|00:00:02|1u1g-gen-0100\n2679505.13|bash|COMPLETED|0:0|2026-10-20T03:27:45|2026-10-20T03:27:50|00:00:05|1u1g-gen-0100\n",
+          "stderr": ""
+        },
+        "queue": {
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      }
+    }
+  ]
+}

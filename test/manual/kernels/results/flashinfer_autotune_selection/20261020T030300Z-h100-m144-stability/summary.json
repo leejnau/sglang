@@ -1,0 +1,905 @@
+{
+  "status": "success",
+  "report_status": "FINAL; immutable after publication readiness",
+  "source_commit": "7f2fd651209c4bba62dc96416008783c42e5ecdb",
+  "analyzer_sha256": "8e341d5f1851161dee5a6c8d1b32ef775b6af0f28605c3a387dfb4f4401afc7d",
+  "source_manifest_sha256": "3f4305fce604d3cd51e85047678c6efbf71e35bcf51037e9586d15bc20486895",
+  "analysis_sha256": "4abc4761aab2121efb1a93a8619b18c1fef445dd371d0ceb9f28a8a192864187",
+  "audit_report_sha256": "d0ae04682f4f07cbdd8afecd8c588a87ec4e34f626ce9a7b5114ec19be1812b5",
+  "experimental_scope": {
+    "hardware": {
+      "gpu": "NVIDIA H100 NVL",
+      "physical_gpu_uuid": "240958a2-e8e1-3bac-b767-365c9e0b97bd",
+      "driver": "580.159.04",
+      "torch": "2.14.1+cu130",
+      "torch_cuda": "13.0",
+      "exclusive_node": true,
+      "clock_lock": false,
+      "cuda_arch_list": "9.0",
+      "sglang_wrapper_sha256": "64deff581665bd04830535baccfdfbdfa72794d919bc462fc469a4c42bdd68f5",
+      "host": "1u1g-gen-0100",
+      "power_limit_watts": 310,
+      "hardware_change": "Reuse prior H100NVL physical GPU if available; no comparisons to earlier HBM3 absolute timings. Hardware preflight must match this frozen expected model/UUID/driver before workers."
+    },
+    "image": "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
+    "flashinfer": "0.7.2 plus exact descriptor PR6148 diff at14c5c67a1eb9ad3a608b8d3da3bf6d8924037c5c; experimental overlay, not a released package",
+    "workload": "Public cublas FP8 E4M3 GEMM through real SGLang startup wrapper; batch1 M144 N=K1024, BF16 output",
+    "independent_unit": "Six paired fresh tuning/serving repetitions; all24 workers have the same serving operand bytes and input/RNG seed19",
+    "startup_and_serving_m": 144,
+    "normalized_runtime_key_m": 256,
+    "actual_profiling": "Actual synthetic tensors M144; operation eager/hot-L2 defaults, no explicit measurement policy",
+    "actual_tuner_settings": {
+      "warmup": 3,
+      "repeat": 10,
+      "stream_delay_micro_secs": 5000,
+      "cuda_graph_delay_micro_secs": 100,
+      "use_global_timer": false,
+      "effective_measure_policy": null,
+      "effective_policy_timer": null,
+      "config": {
+        "use_cuda_graph": false,
+        "use_cold_l2_cache": false,
+        "cuda_graph_profile_replays": 1,
+        "profiling_repeat": null,
+        "effective_profiling_repeat": 10
+      }
+    },
+    "warm_measurement": "Actual existing v1 file-cache controls, no memory promotion; fixed3 candidates union own winner, n3/4;24 full-permutation balanced interleaved blocks per eager/graph mode",
+    "primary_channels": {
+      "eager": "wall per public call",
+      "cuda_graph": "GPU-event replay span including host submission gaps"
+    },
+    "uncertainty": "Exact46,656 ordered resamples of six paired trial units; exploratory unadjusted percentile95% intervals; no pooling blocks as independent trials"
+  },
+  "validation": {
+    "workers": 24,
+    "distinct_fresh_containers": 24,
+    "cold_profiles": 918,
+    "v1_profiles": 432,
+    "v2_profiles": 486,
+    "finite_profiles": 918,
+    "profile_errors": 0,
+    "warm_profile_attempts": 0,
+    "forbidden_profile_attempts": 0,
+    "numerical_checks": 6342,
+    "warm_n3_workers": 7,
+    "warm_n4_workers": 5,
+    "independent_actual_data_checks": 20562,
+    "root_and_independent_frozen_analysis_byte_identical": true,
+    "persisted_winner_reuse": "All12 cold/warm pairs preserved exact original natural file bytes, actual winner and true file hit",
+    "native_acceptance": "Every observed explicit native descriptor returned1; no accepted fallback, no rejected fixed candidate",
+    "source_and_binary": "Frozen Git/helper/overlay and common retained .so/Ninja hashes independently checked"
+  },
+  "candidate_aliases": {
+    "default": -1,
+    "old_selected": [
+      446676598850,
+      4294967332,
+      0,
+      1970324836974594,
+      558779540176897,
+      120259084316,
+      292058693646,
+      0
+    ],
+    "prior_graph_leader": [
+      55834574914,
+      4294967332,
+      0,
+      1407374883553283,
+      558779540176897,
+      120259084316,
+      292058693646,
+      0
+    ],
+    "new_selected": [
+      343597383746,
+      4294967332,
+      0,
+      1970324836974594,
+      558779540176897,
+      120259084316,
+      292058693646,
+      0
+    ]
+  },
+  "selection_frequency": [
+    {
+      "arm": "v1",
+      "fresh_trials": 6,
+      "winners": [
+        {
+          "id": "old_selected",
+          "count": 2
+        },
+        {
+          "id": "new_selected",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "arm": "v2",
+      "fresh_trials": 6,
+      "winners": [
+        {
+          "id": "default",
+          "count": 5
+        },
+        {
+          "id": "new_selected",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "profiler_minimum_and_margin": [
+    {
+      "arm": "v1",
+      "winner_by_trial": [
+        "old_selected",
+        "new_selected",
+        "old_selected",
+        "new_selected",
+        "new_selected",
+        "new_selected"
+      ],
+      "runner_up_fractional_margins_by_trial": [
+        0.004983349128687475,
+        0.037779297347076746,
+        0.040266218784714036,
+        0.021739142104989728,
+        0.009671178141781978,
+        0.011126101971500768
+      ],
+      "runner_up_margin_median": 0.016432622038245248,
+      "runner_up_margin_range": [
+        0.004983349128687475,
+        0.040266218784714036
+      ],
+      "profile_minimum_ms_by_trial": [
+        0.00963200032711029,
+        0.00974079966545105,
+        0.009616000205278396,
+        0.00971520021557808,
+        0.009926400333642959,
+        0.009491200000047684
+      ]
+    },
+    {
+      "arm": "v2",
+      "winner_by_trial": [
+        "default",
+        "new_selected",
+        "default",
+        "default",
+        "default",
+        "default"
+      ],
+      "runner_up_fractional_margins_by_trial": [
+        0.024315013469491387,
+        0.017473094409146572,
+        0.029194617737022144,
+        0.016601536742826717,
+        0.002010065616123269,
+        0.016729307305373586
+      ],
+      "runner_up_margin_median": 0.01710120085726008,
+      "runner_up_margin_range": [
+        0.002010065616123269,
+        0.029194617737022144
+      ],
+      "profile_minimum_ms_by_trial": [
+        0.009344000369310379,
+        0.009523200243711472,
+        0.009536000341176987,
+        0.009830400347709656,
+        0.00955199971795082,
+        0.009372799843549728
+      ]
+    }
+  ],
+  "natural_v2_over_v1_primary": [
+    {
+      "phase": "cold",
+      "execution": "eager",
+      "channel": "wall",
+      "primary": true,
+      "comparison": "v2_over_v1",
+      "median_paired_ratio": 0.9805086733136152,
+      "trial_ratios": [
+        0.9713471346535838,
+        0.9896702119736466,
+        0.9649264535239408,
+        0.9926552080385036,
+        0.9548359890672898,
+        1.0090581721514333
+      ],
+      "range": [
+        0.9548359890672898,
+        1.0090581721514333
+      ],
+      "ratios_below_one": 5,
+      "ratios_above_one": 1,
+      "exploratory_95_percent_trial_bootstrap": [
+        0.9598812212956154,
+        1.0008566900949685
+      ]
+    },
+    {
+      "phase": "cold",
+      "execution": "cuda_graph",
+      "channel": "gpu_event",
+      "primary": true,
+      "comparison": "v2_over_v1",
+      "median_paired_ratio": 0.966532634239302,
+      "trial_ratios": [
+        0.9740732735692167,
+        0.9959068222978814,
+        0.943785896855376,
+        0.9589919949093874,
+        0.9777922129407832,
+        0.940058149881617
+      ],
+      "range": [
+        0.940058149881617,
+        0.9959068222978814
+      ],
+      "ratios_below_one": 6,
+      "ratios_above_one": 0,
+      "exploratory_95_percent_trial_bootstrap": [
+        0.9419220233684964,
+        0.9868495176193324
+      ]
+    },
+    {
+      "phase": "warm",
+      "execution": "eager",
+      "channel": "wall",
+      "primary": true,
+      "comparison": "v2_over_v1",
+      "median_paired_ratio": 1.0018613541969479,
+      "trial_ratios": [
+        1.0000206525393573,
+        1.0093227441132302,
+        1.0179918447406615,
+        1.0037020558545384,
+        0.9866669028148288,
+        0.9625966088369462
+      ],
+      "range": [
+        0.9625966088369462,
+        1.0179918447406615
+      ],
+      "ratios_below_one": 2,
+      "ratios_above_one": 4,
+      "exploratory_95_percent_trial_bootstrap": [
+        0.9746317558258875,
+        1.0136572944269457
+      ]
+    },
+    {
+      "phase": "warm",
+      "execution": "cuda_graph",
+      "channel": "gpu_event",
+      "primary": true,
+      "comparison": "v2_over_v1",
+      "median_paired_ratio": 0.9478369178773481,
+      "trial_ratios": [
+        0.9256150560147125,
+        1.0158808623154403,
+        0.9561073952214012,
+        0.9426527653498321,
+        0.9530210704048642,
+        0.9224940762517679
+      ],
+      "range": [
+        0.9224940762517679,
+        1.0158808623154403
+      ],
+      "ratios_below_one": 5,
+      "ratios_above_one": 1,
+      "exploratory_95_percent_trial_bootstrap": [
+        0.9240545661332402,
+        0.9859941287684207
+      ]
+    }
+  ],
+  "interleaved_candidate_over_cached_default_primary": [
+    {
+      "arm": "v1",
+      "execution": "eager",
+      "channel": "wall",
+      "primary": true,
+      "role": "old_selected",
+      "comparison": "same_block_candidate_over_cached_default",
+      "median_paired_ratio": 1.0190016529382606,
+      "trial_ratios": [
+        1.0238282979524094,
+        1.0165685972497402,
+        1.0203729316005048,
+        1.0268157853274178,
+        1.016977646657055,
+        1.0176303742760164
+      ],
+      "range": [
+        1.0165685972497402,
+        1.0268157853274178
+      ],
+      "ratios_below_one": 0,
+      "ratios_above_one": 6,
+      "exploratory_95_percent_trial_bootstrap": [
+        1.0167731219533978,
+        1.0253220416399136
+      ]
+    },
+    {
+      "arm": "v1",
+      "execution": "eager",
+      "channel": "wall",
+      "primary": true,
+      "role": "prior_graph_leader",
+      "comparison": "same_block_candidate_over_cached_default",
+      "median_paired_ratio": 1.016539495906207,
+      "trial_ratios": [
+        1.0210984520619957,
+        1.0109579093623,
+        1.0211560154152997,
+        1.0209789238735565,
+        1.0121000679388577,
+        1.011058054558287
+      ],
+      "range": [
+        1.0109579093623,
+        1.0211560154152997
+      ],
+      "ratios_below_one": 0,
+      "ratios_above_one": 6,
+      "exploratory_95_percent_trial_bootstrap": [
+        1.0110079819602935,
+        1.0211272337386477
+      ]
+    },
+    {
+      "arm": "v1",
+      "execution": "eager",
+      "channel": "wall",
+      "primary": true,
+      "role": "actual_selected",
+      "comparison": "same_block_candidate_over_cached_default",
+      "median_paired_ratio": 1.0187113129499612,
+      "trial_ratios": [
+        1.0238282979524094,
+        1.0170496942994174,
+        1.0203729316005048,
+        1.029741662378263,
+        1.0154248294442327,
+        1.0163812276473283
+      ],
+      "range": [
+        1.0154248294442327,
+        1.029741662378263
+      ],
+      "ratios_below_one": 0,
+      "ratios_above_one": 6,
+      "exploratory_95_percent_trial_bootstrap": [
+        1.0159030285457806,
+        1.0267849801653361
+      ]
+    },
+    {
+      "arm": "v2",
+      "execution": "eager",
+      "channel": "wall",
+      "primary": true,
+      "role": "old_selected",
+      "comparison": "same_block_candidate_over_cached_default",
+      "median_paired_ratio": 1.0205839675926707,
+      "trial_ratios": [
+        1.014649048976636,
+        1.0254927547903094,
+        1.0221451519819766,
+        1.0190227832033645,
+        1.0175847817830699,
+        1.0275325925649603
+      ],
+      "range": [
+        1.014649048976636,
+        1.0275325925649603
+      ],
+      "ratios_below_one": 0,
+      "ratios_above_one": 6,
+      "exploratory_95_percent_trial_bootstrap": [
+        1.016116915379853,
+        1.0265126736776349
+      ]
+    },
+    {
+      "arm": "v2",
+      "execution": "eager",
+      "channel": "wall",
+      "primary": true,
+      "role": "prior_graph_leader",
+      "comparison": "same_block_candidate_over_cached_default",
+      "median_paired_ratio": 1.0173350751586039,
+      "trial_ratios": [
+        1.0178465424004735,
+        1.0180275859925052,
+        1.0151817769378728,
+        1.0126038714826497,
+        1.017054464178941,
+        1.0176156861382668
+      ],
+      "range": [
+        1.0126038714826497,
+        1.0180275859925052
+      ],
+      "ratios_below_one": 0,
+      "ratios_above_one": 6,
+      "exploratory_95_percent_trial_bootstrap": [
+        1.0138928242102612,
+        1.0179370641964893
+      ]
+    },
+    {
+      "arm": "v2",
+      "execution": "eager",
+      "channel": "wall",
+      "primary": true,
+      "role": "actual_selected",
+      "comparison": "same_block_candidate_over_cached_default",
+      "median_paired_ratio": 1.0,
+      "trial_ratios": [
+        1.0,
+        1.0217255130876302,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "range": [
+        1.0,
+        1.0217255130876302
+      ],
+      "ratios_below_one": 0,
+      "ratios_above_one": 1,
+      "exploratory_95_percent_trial_bootstrap": [
+        1.0,
+        1.010862756543815
+      ]
+    },
+    {
+      "arm": "v1",
+      "execution": "cuda_graph",
+      "channel": "gpu_event",
+      "primary": true,
+      "role": "old_selected",
+      "comparison": "same_block_candidate_over_cached_default",
+      "median_paired_ratio": 1.052661277343371,
+      "trial_ratios": [
+        1.073431045324495,
+        1.0523332695195324,
+        1.057346533634824,
+        1.04897768559564,
+        1.0529892851672096,
+        1.0506332875722373
+      ],
+      "range": [
+        1.04897768559564,
+        1.073431045324495
+      ],
+      "ratios_below_one": 0,
+      "ratios_above_one": 6,
+      "exploratory_95_percent_trial_bootstrap": [
+        1.0498054865839386,
+        1.0653887894796594
+      ]
+    },
+    {
+      "arm": "v1",
+      "execution": "cuda_graph",
+      "channel": "gpu_event",
+      "primary": true,
+      "role": "prior_graph_leader",
+      "comparison": "same_block_candidate_over_cached_default",
+      "median_paired_ratio": 0.9976833429905796,
+      "trial_ratios": [
+        0.9974566648986932,
+        0.9792356964902582,
+        0.9982484047091587,
+        0.9980511631930029,
+        0.9848888776926729,
+        0.997910021082466
+      ],
+      "range": [
+        0.9792356964902582,
+        0.9982484047091587
+      ],
+      "ratios_below_one": 6,
+      "ratios_above_one": 0,
+      "exploratory_95_percent_trial_bootstrap": [
+        0.9820622870914655,
+        0.9981497839510808
+      ]
+    },
+    {
+      "arm": "v1",
+      "execution": "cuda_graph",
+      "channel": "gpu_event",
+      "primary": true,
+      "role": "actual_selected",
+      "comparison": "same_block_candidate_over_cached_default",
+      "median_paired_ratio": 1.0197514607837483,
+      "trial_ratios": [
+        1.073431045324495,
+        1.0202384551326384,
+        1.057346533634824,
+        1.0111497265729648,
+        1.009901636173294,
+        1.019264466434858
+      ],
+      "range": [
+        1.009901636173294,
+        1.073431045324495
+      ],
+      "ratios_below_one": 0,
+      "ratios_above_one": 6,
+      "exploratory_95_percent_trial_bootstrap": [
+        1.0105256813731294,
+        1.0653887894796594
+      ]
+    },
+    {
+      "arm": "v2",
+      "execution": "cuda_graph",
+      "channel": "gpu_event",
+      "primary": true,
+      "role": "old_selected",
+      "comparison": "same_block_candidate_over_cached_default",
+      "median_paired_ratio": 1.069289461762344,
+      "trial_ratios": [
+        1.047823165305413,
+        1.0775983492063355,
+        1.0908182983595018,
+        1.0710854021472418,
+        1.0576481422858666,
+        1.0674935213774464
+      ],
+      "range": [
+        1.047823165305413,
+        1.0908182983595018
+      ],
+      "ratios_below_one": 0,
+      "ratios_above_one": 6,
+      "exploratory_95_percent_trial_bootstrap": [
+        1.0527356537956398,
+        1.0842083237829185
+      ]
+    },
+    {
+      "arm": "v2",
+      "execution": "cuda_graph",
+      "channel": "gpu_event",
+      "primary": true,
+      "role": "prior_graph_leader",
+      "comparison": "same_block_candidate_over_cached_default",
+      "median_paired_ratio": 0.9979401803716181,
+      "trial_ratios": [
+        0.9772370504069783,
+        1.0065848849770522,
+        0.9977811031433701,
+        1.0004409351363122,
+        0.9980992575998662,
+        0.9955121571986556
+      ],
+      "range": [
+        0.9772370504069783,
+        1.0065848849770522
+      ],
+      "ratios_below_one": 4,
+      "ratios_above_one": 2,
+      "exploratory_95_percent_trial_bootstrap": [
+        0.9863746038028169,
+        1.0035129100566822
+      ]
+    },
+    {
+      "arm": "v2",
+      "execution": "cuda_graph",
+      "channel": "gpu_event",
+      "primary": true,
+      "role": "actual_selected",
+      "comparison": "same_block_candidate_over_cached_default",
+      "median_paired_ratio": 1.0,
+      "trial_ratios": [
+        1.0,
+        1.0407436965471872,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "range": [
+        1.0,
+        1.0407436965471872
+      ],
+      "ratios_below_one": 0,
+      "ratios_above_one": 1,
+      "exploratory_95_percent_trial_bootstrap": [
+        1.0,
+        1.0203718482735935
+      ]
+    }
+  ],
+  "interleaved_default_normalized_v2_over_v1_primary": [
+    {
+      "execution": "eager",
+      "channel": "wall",
+      "primary": true,
+      "comparison": "v2_selected_over_default_divided_by_v1_selected_over_default",
+      "median_paired_ratio": 0.9819583148325262,
+      "trial_ratios": [
+        0.9767262752943394,
+        1.0045974339448906,
+        0.9800338376591892,
+        0.9711173554835371,
+        0.9848094817095667,
+        0.983882792005863
+      ],
+      "range": [
+        0.9711173554835371,
+        1.0045974339448906
+      ],
+      "ratios_below_one": 5,
+      "ratios_above_one": 1,
+      "exploratory_95_percent_trial_bootstrap": [
+        0.9739218153889382,
+        0.9947034578272287
+      ]
+    },
+    {
+      "execution": "cuda_graph",
+      "channel": "gpu_event",
+      "primary": true,
+      "comparison": "v2_selected_over_default_divided_by_v1_selected_over_default",
+      "median_paired_ratio": 0.9850364289782001,
+      "trial_ratios": [
+        0.9315922101896195,
+        1.020098479244132,
+        0.9457637285311896,
+        0.9889732190199428,
+        0.9901954449635183,
+        0.9810996389364574
+      ],
+      "range": [
+        0.9315922101896195,
+        1.020098479244132
+      ],
+      "ratios_below_one": 5,
+      "ratios_above_one": 1,
+      "exploratory_95_percent_trial_bootstrap": [
+        0.9386779693604046,
+        1.0051469621038251
+      ]
+    }
+  ],
+  "shortlist_rank_and_regret": [
+    {
+      "arm": "v1",
+      "execution": "eager",
+      "primary_channel": "wall",
+      "selected_rank_by_trial": [
+        3,
+        4,
+        2,
+        4,
+        3,
+        3
+      ],
+      "best_shortlist_id_by_trial": [
+        "default",
+        "default",
+        "default",
+        "default",
+        "default",
+        "default"
+      ],
+      "selected_to_best_score_ratio_by_trial": [
+        1.0238282979524094,
+        1.0170496942994174,
+        1.0203729316005048,
+        1.029741662378263,
+        1.0154248294442327,
+        1.0163812276473283
+      ],
+      "selected_to_best_score_ratio_median": 1.0187113129499612,
+      "selected_to_best_score_ratio_range": [
+        1.0154248294442327,
+        1.029741662378263
+      ],
+      "definition": "Score is median same-block candidate/default ratio; selected/best divides these scores within one worker shortlist. It is not a global-optimum claim."
+    },
+    {
+      "arm": "v1",
+      "execution": "cuda_graph",
+      "primary_channel": "gpu_event",
+      "selected_rank_by_trial": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "best_shortlist_id_by_trial": [
+        "prior_graph_leader",
+        "prior_graph_leader",
+        "prior_graph_leader",
+        "prior_graph_leader",
+        "prior_graph_leader",
+        "prior_graph_leader"
+      ],
+      "selected_to_best_score_ratio_by_trial": [
+        1.0761681014317732,
+        1.0418722058329173,
+        1.0592018265662881,
+        1.0131241401874194,
+        1.0253965285294107,
+        1.0213991691647992
+      ],
+      "selected_to_best_score_ratio_median": 1.0336343671811639,
+      "selected_to_best_score_ratio_range": [
+        1.0131241401874194,
+        1.0761681014317732
+      ],
+      "definition": "Score is median same-block candidate/default ratio; selected/best divides these scores within one worker shortlist. It is not a global-optimum claim."
+    },
+    {
+      "arm": "v2",
+      "execution": "eager",
+      "primary_channel": "wall",
+      "selected_rank_by_trial": [
+        1,
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      "best_shortlist_id_by_trial": [
+        "default",
+        "default",
+        "default",
+        "default",
+        "default",
+        "default"
+      ],
+      "selected_to_best_score_ratio_by_trial": [
+        1.0,
+        1.0217255130876302,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_to_best_score_ratio_median": 1.0,
+      "selected_to_best_score_ratio_range": [
+        1.0,
+        1.0217255130876302
+      ],
+      "definition": "Score is median same-block candidate/default ratio; selected/best divides these scores within one worker shortlist. It is not a global-optimum claim."
+    },
+    {
+      "arm": "v2",
+      "execution": "cuda_graph",
+      "primary_channel": "gpu_event",
+      "selected_rank_by_trial": [
+        2,
+        3,
+        2,
+        1,
+        2,
+        2
+      ],
+      "best_shortlist_id_by_trial": [
+        "prior_graph_leader",
+        "default",
+        "prior_graph_leader",
+        "default",
+        "prior_graph_leader",
+        "prior_graph_leader"
+      ],
+      "selected_to_best_score_ratio_by_trial": [
+        1.0232931708673365,
+        1.0407436965471872,
+        1.002223831308931,
+        1.0,
+        1.0019043621019261,
+        1.0045080743302754
+      ],
+      "selected_to_best_score_ratio_median": 1.0033659528196033,
+      "selected_to_best_score_ratio_range": [
+        1.0,
+        1.0407436965471872
+      ],
+      "definition": "Score is median same-block candidate/default ratio; selected/best divides these scores within one worker shortlist. It is not a global-optimum claim."
+    }
+  ],
+  "secondary_startup_diagnostics": [
+    {
+      "phase": "cold",
+      "comparison": "v2_over_v1_startup",
+      "median_paired_ratio": 1.0980968188886553,
+      "trial_ratios": [
+        1.1003271113277329,
+        1.0998129832187578,
+        1.0954745799685794,
+        1.1001499461000919,
+        1.0963806545585528,
+        1.092634644802137
+      ],
+      "range": [
+        1.092634644802137,
+        1.1003271113277329
+      ],
+      "ratios_below_one": 0,
+      "ratios_above_one": 6,
+      "exploratory_95_percent_trial_bootstrap": [
+        1.0940546123853583,
+        1.1002385287139123
+      ],
+      "v1_median_startup_ms": 465.2152042835951,
+      "v2_median_startup_ms": 510.73225028812885
+    },
+    {
+      "phase": "warm",
+      "comparison": "v2_over_v1_startup",
+      "median_paired_ratio": 0.9836102298970737,
+      "trial_ratios": [
+        0.985692706381846,
+        0.9997501514377057,
+        0.9818686421043746,
+        0.9808402572504592,
+        0.9732272593413314,
+        0.9853518176897726
+      ],
+      "range": [
+        0.9732272593413314,
+        0.9997501514377057
+      ],
+      "ratios_below_one": 6,
+      "ratios_above_one": 0,
+      "exploratory_95_percent_trial_bootstrap": [
+        0.9770337582958952,
+        0.9927214289097759
+      ],
+      "v1_median_startup_ms": 91.1170830950141,
+      "v2_median_startup_ms": 89.6942843683064
+    }
+  ],
+  "interpretation": [
+    "V2 selected the default in5/6 fresh tunings and an explicit descriptor in1/6. V1 alternated between two explicit descriptors (2/6 historical selection,4/6 new selection). Every selected result persisted and served correctly.",
+    "Default had the lowest measured eager-wall shortlist score in all12 warm workers. The v1 selected tactic was1.54\u20132.97% slower than cached default; v2 selected default in5/6 workers, while its one explicit selection was2.17% slower. These are public-call path measurements, not GPU-kernel identity evidence.",
+    "The default-normalized selected-tactic comparison favors v2 for eager execution: median ratio0.981958, exploratory95% interval[0.973922,0.994703]. Separate natural eager windows are neutral: warm v2/v1 median1.001861, interval[0.974632,1.013657]. Different windows/process state can obscure the smaller candidate difference; no serving gain follows.",
+    "Natural warm graph median v2/v1 is0.947837, with5/6 ratios below1 and one1.015881 regression; exploratory interval[0.924055,0.985994]. Default-normalized graph comparison is closer to neutral:0.985036, interval[0.938678,1.005147]. Preserve both estimands.",
+    "The historical graph leader beat default in all6 v1 workers but only4/6 v2 workers, usually by small margins. V2 selected/best graph shortlist score has median1.003366 and maximum1.040744; v1 median1.033634 and maximum1.076168. V2 improves coverage here but is not uniformly the measured best graph choice.",
+    "Fresh profiler minimum margins are small (v1 median1.64%, v2 median1.71%; combined range0.20\u20134.03%). The operation profiler uses eager/hot-L2 event timing with legacy delays, while serving measurement includes public-call wall cost or graph replay. Synthetic profiling activations also differ from serving inputs. Repetition establishes observed ranking variability; it does not isolate noise, data distribution or objective mismatch as a sole cause.",
+    "Cold operation-wrapper tuning costs about9.81% more under v2 (median465.2ms versus510.7ms). This excludes binary build/load and is secondary to correctness and warm execution."
+  ],
+  "limits": [
+    "One fixed shape, one input seed, one H100 NVL and six fresh repetitions; no input-distribution or cross-device generalization.",
+    "Intervals are exploratory and unadjusted across multiple contrasts; within-worker samples/blocks are not independent trials.",
+    "Shortlist includes only three preregistered candidates plus each own selected winner; selection-dependent pools and historical leader selection limit optimality conclusions.",
+    "Only serving operands are hashed. Synthetic profiling input bytes were not hashed; differing candidate sets can change process/RNG history.",
+    "No current native observation trace in this batch; native acceptance does not identify physical GPU kernels or prove a causal kernel change.",
+    "No measurement-policy adoption, managed-store migration, BF16/distributed/model-server validation or serving-throughput claim."
+  ],
+  "next_recommendation": {
+    "action": "Propose one bounded real SGLang static per-tensor FP8 linear-layer experiment before more isolated-GEMM repeats.",
+    "target": "apply_fp8_linear_bmm_flashinfer in python/sglang/srt/layers/quantization/fp8_utils.py, using captured representative model inputs/weights and verified cublas runner selection.",
+    "scope": "Retain the exact qualified overlay and current policy/persistence. Compare untuned default, v1 and v2 through the actual quantization/linear/custom-op path, with cold/warm correctness and eager/graph paired timing on one supported layer configuration.",
+    "reason": "The fixed-workload repeatability question is sufficiently bounded: default is consistently best eager shortlist member, v2 usually selects it, and graph outcomes remain objective-dependent. The next useful evidence is whether this matters inside an affected SGLang layer.",
+    "conditional_native_observation": "If the next question instead requires proving physical kernel identity or explaining a particular descriptor, run one separate native/trace observation pass; never infer identity from these timing ratios.",
+    "launch_status": "Recommendation only; no new experiment is authorized or launched by this report."
+  }
+}
