@@ -1,0 +1,1149 @@
+{
+  "schema_version": 1,
+  "status": "success",
+  "execution_commit": "e7abea4796b7f5314905888e20728f5e5c59138d",
+  "timing_workers": 12,
+  "separate_observers": 2,
+  "all_actual_worker_exit_codes": 0,
+  "source_changes_during_run": false,
+  "source_build_audit": {
+    "report": {
+      "status": "success",
+      "checks": 276,
+      "execution_commit": "e7abea4796b7f5314905888e20728f5e5c59138d",
+      "workers": 14,
+      "library_sha256": [
+        "66aede90cc076d17296005657bb2fb57d810ed1fc1956bd2dce864ef383b63d5"
+      ],
+      "ninja_sha256": [
+        "bea9639085253fd21cb766f1d275d0c0526b736ab726df0a233a79bedcb6a492"
+      ],
+      "private_binaries_verified": true,
+      "scope": "Independent stdlib source/build/fixture provenance audit; no numerical/performance conclusion."
+    },
+    "sha256": "11aa5429428115838a3eba762b9c914aa245d595740d83fe66572618dc9f825e",
+    "size_bytes": 466
+  },
+  "numerical_cache_audit": {
+    "report": {
+      "status": "passed",
+      "immutable_raw": true,
+      "complete_batch": true,
+      "source_commit": "e7abea4796b7f5314905888e20728f5e5c59138d",
+      "trials": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "workers": 14,
+      "worker_sha256": "74349bc22955d65442045a11754a8015d566efe54efc45f533b45d1825cb12b4",
+      "plan_sha256": "b7ecd33863b668c989842125ca9277c8776e25925eaf8b4e17ebc7c064ab71c9",
+      "fixture_manifest_sha256": "e13a86fab5db5796b22d8dab0f84080b8057b036ca7aef2c7be8832e76505bf1",
+      "assertions": 12364,
+      "error_count": 0,
+      "errors": [],
+      "counts": {
+        "profiles": 1071,
+        "finite_profiles": 1071,
+        "retained_graphs": 42,
+        "cache_generation_checks": 14,
+        "native_acceptance_checks": 130,
+        "public_operand_byte_guards": 102,
+        "numerical_checks": 1168,
+        "graph_owned_numerical_guards": 1066,
+        "exact_zero_byte_checks": 42,
+        "balanced_replay_batches": 864,
+        "observed_native_captures": 6
+      },
+      "forbidden_profile_attempts": 0,
+      "winner_tactics": {
+        "v1/timing": [
+          [
+            893353197634,
+            4294967332,
+            0,
+            2533274790395907,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          [
+            893353197634,
+            4294967332,
+            0,
+            2533274790395907,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          [
+            785979015234,
+            4294967332,
+            0,
+            2533274790395906,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          [
+            785979015234,
+            4294967332,
+            0,
+            2533274790395906,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          [
+            785979015234,
+            4294967332,
+            0,
+            2533274790395906,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          [
+            579820585026,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ]
+        ],
+        "v2/timing": [
+          [
+            893353197634,
+            4294967332,
+            0,
+            2533274790395907,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          -1,
+          -1,
+          [
+            120259084354,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          -1,
+          -1
+        ],
+        "v1/observe": [
+          [
+            893353197634,
+            4294967332,
+            0,
+            2533274790395907,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ]
+        ],
+        "v2/observe": [
+          [
+            841813590082,
+            4294967332,
+            0,
+            2533274790395906,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ]
+        ]
+      },
+      "observer_native_algorithms": {
+        "v1": {
+          "pre_default": {
+            "raw_hex": "420000003d0100002400000001000000000000000000000001000000000003000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+            "raw_bytes": 64,
+            "config_scope": "selected_public_attributes",
+            "config": {
+              "id": {
+                "status": 0,
+                "bytes": 4,
+                "value": 66
+              },
+              "tile_id": {
+                "status": 0,
+                "bytes": 4,
+                "value": 317
+              },
+              "split_k": {
+                "status": 0,
+                "bytes": 4,
+                "value": 1
+              },
+              "reduction_scheme": {
+                "status": 0,
+                "bytes": 4,
+                "value": 0
+              },
+              "cta_swizzling": {
+                "status": 0,
+                "bytes": 4,
+                "value": 0
+              },
+              "custom_option": {
+                "status": 0,
+                "bytes": 4,
+                "value": 1
+              },
+              "stages_id": {
+                "status": 0,
+                "bytes": 4,
+                "value": 36
+              }
+            }
+          },
+          "post_hit": {
+            "raw_hex": "42000000d00000002400000001000000000000000000000003000000000009000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+            "raw_bytes": 64,
+            "config_scope": "selected_public_attributes",
+            "config": {
+              "id": {
+                "status": 0,
+                "bytes": 4,
+                "value": 66
+              },
+              "tile_id": {
+                "status": 0,
+                "bytes": 4,
+                "value": 208
+              },
+              "split_k": {
+                "status": 0,
+                "bytes": 4,
+                "value": 1
+              },
+              "reduction_scheme": {
+                "status": 0,
+                "bytes": 4,
+                "value": 0
+              },
+              "cta_swizzling": {
+                "status": 0,
+                "bytes": 4,
+                "value": 0
+              },
+              "custom_option": {
+                "status": 0,
+                "bytes": 4,
+                "value": 3
+              },
+              "stages_id": {
+                "status": 0,
+                "bytes": 4,
+                "value": 36
+              }
+            }
+          },
+          "post_miss": {
+            "raw_hex": "420000003d0100002400000001000000000000000000000001000000000003000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+            "raw_bytes": 64,
+            "config_scope": "selected_public_attributes",
+            "config": {
+              "id": {
+                "status": 0,
+                "bytes": 4,
+                "value": 66
+              },
+              "tile_id": {
+                "status": 0,
+                "bytes": 4,
+                "value": 317
+              },
+              "split_k": {
+                "status": 0,
+                "bytes": 4,
+                "value": 1
+              },
+              "reduction_scheme": {
+                "status": 0,
+                "bytes": 4,
+                "value": 0
+              },
+              "cta_swizzling": {
+                "status": 0,
+                "bytes": 4,
+                "value": 0
+              },
+              "custom_option": {
+                "status": 0,
+                "bytes": 4,
+                "value": 1
+              },
+              "stages_id": {
+                "status": 0,
+                "bytes": 4,
+                "value": 36
+              }
+            }
+          }
+        },
+        "v2": {
+          "pre_default": {
+            "raw_hex": "420000003d0100002400000001000000000000000000000001000000000003000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+            "raw_bytes": 64,
+            "config_scope": "selected_public_attributes",
+            "config": {
+              "id": {
+                "status": 0,
+                "bytes": 4,
+                "value": 66
+              },
+              "tile_id": {
+                "status": 0,
+                "bytes": 4,
+                "value": 317
+              },
+              "split_k": {
+                "status": 0,
+                "bytes": 4,
+                "value": 1
+              },
+              "reduction_scheme": {
+                "status": 0,
+                "bytes": 4,
+                "value": 0
+              },
+              "cta_swizzling": {
+                "status": 0,
+                "bytes": 4,
+                "value": 0
+              },
+              "custom_option": {
+                "status": 0,
+                "bytes": 4,
+                "value": 1
+              },
+              "stages_id": {
+                "status": 0,
+                "bytes": 4,
+                "value": 36
+              }
+            }
+          },
+          "post_hit": {
+            "raw_hex": "42000000c40000002400000001000000000000000000000002000000000009000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+            "raw_bytes": 64,
+            "config_scope": "selected_public_attributes",
+            "config": {
+              "id": {
+                "status": 0,
+                "bytes": 4,
+                "value": 66
+              },
+              "tile_id": {
+                "status": 0,
+                "bytes": 4,
+                "value": 196
+              },
+              "split_k": {
+                "status": 0,
+                "bytes": 4,
+                "value": 1
+              },
+              "reduction_scheme": {
+                "status": 0,
+                "bytes": 4,
+                "value": 0
+              },
+              "cta_swizzling": {
+                "status": 0,
+                "bytes": 4,
+                "value": 0
+              },
+              "custom_option": {
+                "status": 0,
+                "bytes": 4,
+                "value": 2
+              },
+              "stages_id": {
+                "status": 0,
+                "bytes": 4,
+                "value": 36
+              }
+            }
+          },
+          "post_miss": {
+            "raw_hex": "420000003d0100002400000001000000000000000000000001000000000003000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+            "raw_bytes": 64,
+            "config_scope": "selected_public_attributes",
+            "config": {
+              "id": {
+                "status": 0,
+                "bytes": 4,
+                "value": 66
+              },
+              "tile_id": {
+                "status": 0,
+                "bytes": 4,
+                "value": 317
+              },
+              "split_k": {
+                "status": 0,
+                "bytes": 4,
+                "value": 1
+              },
+              "reduction_scheme": {
+                "status": 0,
+                "bytes": 4,
+                "value": 0
+              },
+              "cta_swizzling": {
+                "status": 0,
+                "bytes": 4,
+                "value": 0
+              },
+              "custom_option": {
+                "status": 0,
+                "bytes": 4,
+                "value": 1
+              },
+              "stages_id": {
+                "status": 0,
+                "bytes": 4,
+                "value": 36
+              }
+            }
+          }
+        }
+      },
+      "scope": "Independent stdlib raw/source numerical-evidence, graph-ownership, cache and replay-protocol audit; no analyzer/worker import and no GPU recomputation. Original nonzero output tensors were not retained."
+    },
+    "sha256": "0d6fdbc7f588e627b0e0fdd324ca0ae18316082ccdc3abbbd5a21619ba4f43aa",
+    "size_bytes": 9576
+  },
+  "analysis_audit": {
+    "report": {
+      "status": "success",
+      "state": "FINAL_IMMUTABLE",
+      "source_commit": "e7abea4796b7f5314905888e20728f5e5c59138d",
+      "audit_script_sha256": "6b94151df1d68098e8c905203e0f6d1ad924006f2c153adafe2901d3d050f927",
+      "summary_script_sha256": "0ebe16d24ad26a58b7e99c529be950478dfd75268bbba3c0f56f7885fae54150",
+      "raw_root": "/private/tmp/sglang-graph-controls-20261020T143705Z/raw/attempt01",
+      "original_analysis_sha256": "d848ef77de776ce9bc1f79ea253d3f414e5d88bea34e386732a27de07be2c620",
+      "local_frozen_rerun_sha256": "ddf4ec42633554734ed8f8c047c914cc05be042e2aba426d1462ee124f376443",
+      "frozen_rerun_byte_identical": false,
+      "frozen_rerun_identical_after_only14_raw_path_relocations": true,
+      "assertions_passed": 11217,
+      "assertion_groups": {
+        "frozen rerun equality after14 path relocations": 1,
+        "frozen original source": 1,
+        "frozen analyzer SHA": 1,
+        "worker source/status": 14,
+        "worker actual exit": 14,
+        "actual shape/input seed": 14,
+        "profiles startup-only attempt count": 14,
+        "source-order finite runtime minimum": 14,
+        "v2 default participates finite": 14,
+        "actual default profiling objective": 1071,
+        "finite profiler row": 1071,
+        "actual retained cache path": 14,
+        "natural JSON bytes restored": 14,
+        "real JSON winner persisted": 14,
+        "three distinct retained actual outputs": 14,
+        "actual miss default choices": 14,
+        "actual miss tiers": 14,
+        "actual natural memory winner": 14,
+        "effective maps removed and entire state restored": 14,
+        "all state and unrelated winners preserved": 42,
+        "worker numerical acceptance": 14,
+        "quantized FP32 reference": 1168,
+        "BF16 approximation is diagnostic": 1168,
+        "exact retained graph output ownership": 1066,
+        "changed input exact zero": 42,
+        "actual native acceptance no descriptor fallback": 130,
+        "uninstrumented timing cohort": 12,
+        "exact balanced seeded schedule": 12,
+        "24 paired dependent block groups": 12,
+        "actual block order": 288,
+        "common replay count and rewarm": 864,
+        "block raw per-call normalization": 864,
+        "block wall clock raw span": 864,
+        "sequential calibration/warmup": 60,
+        "15 dependent sequential samples": 120,
+        "sequential raw normalization": 1800,
+        "observers excluded from latency inference": 2,
+        "unique retained path": 6,
+        "native one accepted capture matmul": 6,
+        "actual64-byte algorithm": 6,
+        "all7 native public attributes": 6,
+        "actual one-result default heuristic": 4,
+        "default heuristic submitted identity": 4,
+        "actual descriptor submitted exact identity": 2,
+        "actual graph replay no CPU native selection": 22,
+        "observer same defaults raw64 and7 attrs": 2,
+        "original trace hash": 2,
+        "actual retained replay scope": 6,
+        "actual3 replay launches per retained scope": 6,
+        "actual quantizer plus matrix CUDA launches": 18,
+        "actual launch scoped lifetime": 18,
+        "three repeated full ordered launch signatures": 6,
+        "three distinct retained native graph identities": 2,
+        "observer matching default full launch signatures": 2,
+        "14 fresh distinct containers": 1,
+        "private actual fixture raw hash": 1,
+        "retained actual native artifact": 2,
+        "independent actual paired/history/sequential effect": 192,
+        "six whole-trial bootstrap units": 32,
+        "coordinator error preserved outside actual worker cohort": 1,
+        "all final trial gates0": 1
+      },
+      "cohort": {
+        "timing_workers": 12,
+        "separate_observers": 2,
+        "fresh_containers": 14,
+        "numeric_checks": 1168,
+        "finite_profiles_including_observers": 1071,
+        "interleaved_observations": 864,
+        "sequential_dependent_samples": 900
+      },
+      "native": [
+        {
+          "arm": "v1",
+          "winner": [
+            893353197634,
+            4294967332,
+            0,
+            2533274790395907,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "captures": {
+            "pre_default": {
+              "raw_hex": "420000003d0100002400000001000000000000000000000001000000000003000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 317
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            },
+            "post_hit": {
+              "raw_hex": "42000000d00000002400000001000000000000000000000003000000000009000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 208
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 3
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            },
+            "post_miss": {
+              "raw_hex": "420000003d0100002400000001000000000000000000000001000000000003000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 317
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            }
+          }
+        },
+        {
+          "arm": "v2",
+          "winner": [
+            841813590082,
+            4294967332,
+            0,
+            2533274790395906,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "captures": {
+            "pre_default": {
+              "raw_hex": "420000003d0100002400000001000000000000000000000001000000000003000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 317
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            },
+            "post_hit": {
+              "raw_hex": "42000000c40000002400000001000000000000000000000002000000000009000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 196
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 2
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            },
+            "post_miss": {
+              "raw_hex": "420000003d0100002400000001000000000000000000000001000000000003000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+              "raw_bytes": 64,
+              "config_scope": "selected_public_attributes",
+              "config": {
+                "id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 66
+                },
+                "tile_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 317
+                },
+                "split_k": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "reduction_scheme": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "cta_swizzling": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 0
+                },
+                "custom_option": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 1
+                },
+                "stages_id": {
+                  "status": 0,
+                  "bytes": 4,
+                  "value": 36
+                }
+              }
+            }
+          }
+        }
+      ],
+      "trace": [
+        {
+          "arm": "v1",
+          "graphs": {
+            "pre_default": {
+              "signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    128,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 25,
+                  "shared memory": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+                  "grid": [
+                    2,
+                    64,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 225652
+                }
+              ],
+              "graph_ids": [
+                2
+              ]
+            },
+            "post_hit": {
+              "signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    128,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 25,
+                  "shared memory": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_192x64_128x6_2x4_h_bz_TNT",
+                  "grid": [
+                    8,
+                    11,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 213220
+                }
+              ],
+              "graph_ids": [
+                5
+              ]
+            },
+            "post_miss": {
+              "signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    128,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 25,
+                  "shared memory": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+                  "grid": [
+                    2,
+                    64,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 225652
+                }
+              ],
+              "graph_ids": [
+                8
+              ]
+            }
+          }
+        },
+        {
+          "arm": "v2",
+          "graphs": {
+            "pre_default": {
+              "signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    128,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 25,
+                  "shared memory": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+                  "grid": [
+                    2,
+                    64,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 225652
+                }
+              ],
+              "graph_ids": [
+                2
+              ]
+            },
+            "post_hit": {
+              "signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    128,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 25,
+                  "shared memory": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_168x64_128x7_2x4_h_bz_TNN",
+                  "grid": [
+                    8,
+                    13,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 224508
+                }
+              ],
+              "graph_ids": [
+                5
+              ]
+            },
+            "post_miss": {
+              "signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    128,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 25,
+                  "shared memory": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+                  "grid": [
+                    2,
+                    64,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 225652
+                }
+              ],
+              "graph_ids": [
+                8
+              ]
+            }
+          }
+        }
+      ],
+      "limits": [
+        "No AlgoCheck interception in actual reused probe.",
+        "Native/trace identity is observed only in separate diagnostic processes, never identifies timing-worker physical launches.",
+        "Before/after chronology cannot uniquely attribute effects to tuning.",
+        "Different retained/interleaved protocol cannot retrospectively identify the earlier4% gap as noise.",
+        "Conditional same-default winner subgroup has n4, not all6.",
+        "Exact exploratory bootstrap resamples six trial units, not replay blocks."
+      ]
+    },
+    "sha256": "526e28d8c1a7a720b8308cd8887bfca670dc81267717a451c0b483b9fc8d89fe",
+    "size_bytes": 16828
+  },
+  "root_frozen_analyzer_rerun": {
+    "sha256": "ddf4ec42633554734ed8f8c047c914cc05be042e2aba426d1462ee124f376443",
+    "size_bytes": 251379
+  },
+  "independent_frozen_rerun": {
+    "sha256": "ddf4ec42633554734ed8f8c047c914cc05be042e2aba426d1462ee124f376443",
+    "size_bytes": 251379
+  },
+  "path_relocation_difference": "Only 14 validated_workers.file paths differ after download; all other analysis values match.",
+  "analysis": {
+    "sha256": "d848ef77de776ce9bc1f79ea253d3f414e5d88bea34e386732a27de07be2c620",
+    "size_bytes": 251323
+  },
+  "summary": {
+    "sha256": "bb10af25c18552992ceab922423d2d5457db5b5ec56bfc06bb3e7d07ff37a348",
+    "size_bytes": 81672
+  },
+  "raw_public_archive": {
+    "sha256": "2238137513a61720b7a39686551b8ed9de33ccdd57313ddbbb88863cc3faa1f1",
+    "size_bytes": 396897
+  },
+  "raw_public_index": {
+    "sha256": "ccd6cb7c9a5ed183cc9c60efb07dff622e4793dd7fcd3332d96b0906e1d0abe3",
+    "size_bytes": 22701
+  },
+  "audit_source_archive": {
+    "members": [
+      {
+        "path": "sglang-graph-controls-source-audit.py",
+        "sha256": "d61473d152991f646e8add1c37bec820ed802e6e03b86fc852dd36627df3ba40",
+        "size_bytes": 7826
+      },
+      {
+        "path": "fi-graph-controls-numerical-audit.py",
+        "sha256": "a9b77c14b51b68e0dfe4047823cb34058ae38139760fceb265f8a7234096cf8c",
+        "size_bytes": 21816
+      },
+      {
+        "path": "fi-graph-controls-independent-audit.py",
+        "sha256": "6b94151df1d68098e8c905203e0f6d1ad924006f2c153adafe2901d3d050f927",
+        "size_bytes": 14573
+      },
+      {
+        "path": "fi-graph-controls-final-summary.py",
+        "sha256": "0ebe16d24ad26a58b7e99c529be950478dfd75268bbba3c0f56f7885fae54150",
+        "size_bytes": 16026
+      },
+      {
+        "path": "fi-graph-controls-preserve.py",
+        "sha256": "c5e309b4cb969767784d1b530e7b61c49908ea8de613bb20c160eb869581adf2",
+        "size_bytes": 2075
+      },
+      {
+        "path": "package_public.py",
+        "sha256": "7457970ddca2cae49f108eade2499b8be1dd9408244cc45edc6cc3b223ae9f8d",
+        "size_bytes": 1630
+      },
+      {
+        "path": "finalize_results.py",
+        "sha256": "5342ec6c38f39d92631fa235498f643ad23ff1a688f8f9c4ba752e9c3dd58b73",
+        "size_bytes": 7133
+      }
+    ],
+    "sha256": "3165d0776040e7f960cc3e04cebcaac11ab8c446de45f50012bb128bef2cca61",
+    "size_bytes": 21120
+  },
+  "full_private_archive": {
+    "retained_path": "/home/lnau/flashinfer-autotune-study/20261020T143705Z-h100-graph-controls-attempt01-full-raw.tgz",
+    "sha256": "6aa2b4e6db0f2d88bf2c65e087998d4d0adc54d98076501b2bd7291f15467365",
+    "size_bytes": 11055754,
+    "node_durable_client_sha256_match": true,
+    "indexed_original_members_verified": 136,
+    "private_tensors_and_shared_objects_excluded_from_git": true
+  },
+  "scope": "One real static-FP8 QKV linear layer on H100 NVL; unchanged v1 persistence and unspecified policy; separate observers excluded from timing.",
+  "limits": [
+    "One fixed actual static-FP8 layer and six fresh trials per arm; replay blocks and15 sequential samples are not independent trials.",
+    "Exploratory unadjusted bootstrap resamples whole trial estimates, never individual replay blocks.",
+    "Chronological same-graph before/after changes confound process, elapsed-time and workload history; no matched untuned process identifies tuning as their unique cause.",
+    "This retained/interleaved protocol differs from the prior separate-process natural-layer protocol. A vanished gap does not retroactively prove the old result was measurement noise.",
+    "Public cache source is resolved at capture and does not recur during replay. Same public-1 alone does not prove identical native or physical GPU launches.",
+    "Native/trace observations are separate instrumented processes and cannot establish the kernel identity of actual latency-worker graphs.",
+    "Snapshots and order/time correlations are descriptive and cannot establish clocks or order as a cause.",
+    "No explicit-policy, managed-store, full-model accuracy or serving-throughput claim.",
+    "A public-default subgroup is conditional on observed natural selection, with its actual n reported; no all-six default assumption.",
+    "Cross-arm contextual ratios compare fresh processes and different natural winners. They do not isolate cache lookup during graph replay.",
+    "Preserved coordinator staging errors are outside the timing-worker cohort only when they are not actual timing/observe worker results.",
+    "An absent current stable gap would not prove the earlier separate-process4% runtime regression was noise."
+  ],
+  "next_checkpoint_readiness": {
+    "production_policy_pr_ready": false,
+    "action": "First recheck exact policy/cache APIs and prove tune-to-capture/eager-to-save-to-fresh-load winner identity with deterministic controls. Then review one bounded objective qualification before launch.",
+    "constraint": "A nonempty policy partitions winners. Bare post-context lookup and current v1 serialization may use the legacy partition, so retaining existing v1 persistence is an unproven requirement of the proposed policy experiment, not an achieved capability.",
+    "inference": "Eager profiling objective and synthesized dynamic inputs are separate mismatch hypotheses; neither is an isolated root cause."
+  }
+}

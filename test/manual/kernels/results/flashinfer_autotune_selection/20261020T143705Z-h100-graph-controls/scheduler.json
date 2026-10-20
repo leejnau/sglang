@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "allocation": "2690410",
+  "exclusive_node": "1u1g-gen-0100",
+  "execution_commit": "e7abea4796b7f5314905888e20728f5e5c59138d",
+  "release_utc": "2026-10-20T15:20:19Z",
+  "empty_queue_confirmed_utc": "2026-10-20T15:20:47Z",
+  "queue_empty": true,
+  "own_containers_remaining_before_release": 0,
+  "accounting": [
+    {
+      "JobID": "2690410",
+      "JobName": "fi-graph-controls",
+      "State": "CANCELLED by 150381",
+      "ExitCode": "0:0",
+      "Start": "2026-10-20T14:52:51",
+      "End": "2026-10-20T15:20:19",
+      "Elapsed": "00:27:28",
+      "NodeList": "1u1g-gen-0100"
+    },
+    {
+      "JobID": "2690410.batch",
+      "JobName": "batch",
+      "State": "CANCELLED",
+      "ExitCode": "0:0",
+      "Start": "2026-10-20T14:52:51",
+      "End": "2026-10-20T15:20:19",
+      "Elapsed": "00:27:28",
+      "NodeList": "1u1g-gen-0100"
+    },
+    {
+      "JobID": "2690410.extern",
+      "JobName": "extern",
+      "State": "CANCELLED",
+      "ExitCode": "0:0",
+      "Start": "2026-10-20T14:52:51",
+      "End": "2026-10-20T15:20:19",
+      "Elapsed": "00:27:28",
+      "NodeList": "1u1g-gen-0100"
+    },
+    {
+      "JobID": "2690410.0",
+      "JobName": "bash",
+      "State": "CANCELLED by 150381",
+      "ExitCode": "0:9",
+      "Start": "2026-10-20T14:52:58",
+      "End": "2026-10-20T14:55:58",
+      "Elapsed": "00:03:00",
+      "NodeList": "1u1g-gen-0100"
+    },
+    {
+      "JobID": "2690410.1",
+      "JobName": "bash",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Start": "2026-10-20T14:54:25",
+      "End": "2026-10-20T14:54:27",
+      "Elapsed": "00:00:02",
+      "NodeList": "1u1g-gen-0100"
+    },
+    {
+      "JobID": "2690410.2",
+      "JobName": "bash",
+      "State": "CANCELLED by 150381",
+      "ExitCode": "0:9",
+      "Start": "2026-10-20T14:56:08",
+      "End": "2026-10-20T15:00:05",
+      "Elapsed": "00:03:57",
+      "NodeList": "1u1g-gen-0100"
+    },
+    {
+      "JobID": "2690410.3",
+      "JobName": "bash",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Start": "2026-10-20T14:58:53",
+      "End": "2026-10-20T14:58:55",
+      "Elapsed": "00:00:02",
+      "NodeList": "1u1g-gen-0100"
+    },
+    {
+      "JobID": "2690410.4",
+      "JobName": "bash",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Start": "2026-10-20T15:00:26",
+      "End": "2026-10-20T15:00:38",
+      "Elapsed": "00:00:12",
+      "NodeList": "1u1g-gen-0100"
+    },
+    {
+      "JobID": "2690410.5",
+      "JobName": "bash",
+      "State": "FAILED",
+      "ExitCode": "1:0",
+      "Start": "2026-10-20T15:01:08",
+      "End": "2026-10-20T15:02:50",
+      "Elapsed": "00:01:42",
+      "NodeList": "1u1g-gen-0100"
+    },
+    {
+      "JobID": "2690410.6",
+      "JobName": "bash",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Start": "2026-10-20T15:01:59",
+      "End": "2026-10-20T15:02:00",
+      "Elapsed": "00:00:01",
+      "NodeList": "1u1g-gen-0100"
+    },
+    {
+      "JobID": "2690410.7",
+      "JobName": "bash",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Start": "2026-10-20T15:03:30",
+      "End": "2026-10-20T15:03:32",
+      "Elapsed": "00:00:02",
+      "NodeList": "1u1g-gen-0100"
+    },
+    {
+      "JobID": "2690410.8",
+      "JobName": "bash",
+      "State": "FAILED",
+      "ExitCode": "1:0",
+      "Start": "2026-10-20T15:04:58",
+      "End": "2026-10-20T15:05:00",
+      "Elapsed": "00:00:02",
+      "NodeList": "1u1g-gen-0100"
+    },
+    {
+      "JobID": "2690410.9",
+      "JobName": "bash",
+      "State": "FAILED",
+      "ExitCode": "1:0",
+      "Start": "2026-10-20T15:05:44",
+      "End": "2026-10-20T15:05:50",
+      "Elapsed": "00:00:06",
+      "NodeList": "1u1g-gen-0100"
+    },
+    {
+      "JobID": "2690410.10",
+      "JobName": "bash",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Start": "2026-10-20T15:07:20",
+      "End": "2026-10-20T15:07:25",
+      "Elapsed": "00:00:05",
+      "NodeList": "1u1g-gen-0100"
+    },
+    {
+      "JobID": "2690410.11",
+      "JobName": "bash",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Start": "2026-10-20T15:08:03",
+      "End": "2026-10-20T15:14:44",
+      "Elapsed": "00:06:41",
+      "NodeList": "1u1g-gen-0100"
+    },
+    {
+      "JobID": "2690410.12",
+      "JobName": "bash",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Start": "2026-10-20T15:08:56",
+      "End": "2026-10-20T15:08:58",
+      "Elapsed": "00:00:02",
+      "NodeList": "1u1g-gen-0100"
+    },
+    {
+      "JobID": "2690410.13",
+      "JobName": "bash",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Start": "2026-10-20T15:11:24",
+      "End": "2026-10-20T15:11:25",
+      "Elapsed": "00:00:01",
+      "NodeList": "1u1g-gen-0100"
+    },
+    {
+      "JobID": "2690410.14",
+      "JobName": "bash",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Start": "2026-10-20T15:13:37",
+      "End": "2026-10-20T15:13:39",
+      "Elapsed": "00:00:02",
+      "NodeList": "1u1g-gen-0100"
+    },
+    {
+      "JobID": "2690410.15",
+      "JobName": "bash",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Start": "2026-10-20T15:16:31",
+      "End": "2026-10-20T15:16:39",
+      "Elapsed": "00:00:08",
+      "NodeList": "1u1g-gen-0100"
+    }
+  ],
+  "release_accounting_raw": "2026-10-20T15:20:19Z\n           2690410   general fi-graph     lnau CG      27:28      1 1u1g-gen-0100\nJobID|JobName|State|ExitCode|Start|End|Elapsed|NodeList\n2690410|fi-graph-controls|CANCELLED by 150381|0:0|2026-10-20T14:52:51|2026-10-20T15:20:19|00:27:28|1u1g-gen-0100\n2690410.batch|batch|CANCELLED|0:0|2026-10-20T14:52:51|2026-10-20T15:20:19|00:27:28|1u1g-gen-0100\n2690410.extern|extern|CANCELLED|0:0|2026-10-20T14:52:51|2026-10-20T15:20:19|00:27:28|1u1g-gen-0100\n2690410.0|bash|CANCELLED by 150381|0:9|2026-10-20T14:52:58|2026-10-20T14:55:58|00:03:00|1u1g-gen-0100\n2690410.1|bash|COMPLETED|0:0|2026-10-20T14:54:25|2026-10-20T14:54:27|00:00:02|1u1g-gen-0100\n2690410.2|bash|CANCELLED by 150381|0:9|2026-10-20T14:56:08|2026-10-20T15:00:05|00:03:57|1u1g-gen-0100\n2690410.3|bash|COMPLETED|0:0|2026-10-20T14:58:53|2026-10-20T14:58:55|00:00:02|1u1g-gen-0100\n2690410.4|bash|COMPLETED|0:0|2026-10-20T15:00:26|2026-10-20T15:00:38|00:00:12|1u1g-gen-0100\n2690410.5|bash|FAILED|1:0|2026-10-20T15:01:08|2026-10-20T15:02:50|00:01:42|1u1g-gen-0100\n2690410.6|bash|COMPLETED|0:0|2026-10-20T15:01:59|2026-10-20T15:02:00|00:00:01|1u1g-gen-0100\n2690410.7|bash|COMPLETED|0:0|2026-10-20T15:03:30|2026-10-20T15:03:32|00:00:02|1u1g-gen-0100\n2690410.8|bash|FAILED|1:0|2026-10-20T15:04:58|2026-10-20T15:05:00|00:00:02|1u1g-gen-0100\n2690410.9|bash|FAILED|1:0|2026-10-20T15:05:44|2026-10-20T15:05:50|00:00:06|1u1g-gen-0100\n2690410.10|bash|COMPLETED|0:0|2026-10-20T15:07:20|2026-10-20T15:07:25|00:00:05|1u1g-gen-0100\n2690410.11|bash|COMPLETED|0:0|2026-10-20T15:08:03|2026-10-20T15:14:44|00:06:41|1u1g-gen-0100\n2690410.12|bash|COMPLETED|0:0|2026-10-20T15:08:56|2026-10-20T15:08:58|00:00:02|1u1g-gen-0100\n2690410.13|bash|COMPLETED|0:0|2026-10-20T15:11:24|2026-10-20T15:11:25|00:00:01|1u1g-gen-0100\n2690410.14|bash|COMPLETED|0:0|2026-10-20T15:13:37|2026-10-20T15:13:39|00:00:02|1u1g-gen-0100\n2690410.15|bash|COMPLETED|0:0|2026-10-20T15:16:31|2026-10-20T15:16:39|00:00:08|1u1g-gen-0100\n",
+  "release_confirmation_raw": "2026-10-20T15:20:47Z\nJobID|State|ExitCode|Start|End|Elapsed|NodeList\n2690410|CANCELLED by 150381|0:0|2026-10-20T14:52:51|2026-10-20T15:20:19|00:27:28|1u1g-gen-0100\n",
+  "preparation": {
+    "schema_version": 1,
+    "execution_commit": "e7abea4796b7f5314905888e20728f5e5c59138d",
+    "files": {
+      "stage.sh": {
+        "sha256": "81a58bc5119d5f90c5d95d8e4178a6cc2f0a148e370b26694ecc0571de105ed2",
+        "size_bytes": 1432
+      },
+      "stage-copy.sh": {
+        "sha256": "f4f248b33d07e2206c9028d73ce4a2054c9e6690f78264d364d25e50fe322c53",
+        "size_bytes": 1481
+      },
+      "stage-snapshot.sh": {
+        "sha256": "434ac7cdd2e30a341a2fea973e2484bf879186fb52869366606135480f727ca5",
+        "size_bytes": 2285
+      },
+      "resume.sh": {
+        "sha256": "136040e12e5631758db4aed65f6cd19e1e069764e7d0a13e7fa149d1fa9c6f3c",
+        "size_bytes": 7146
+      },
+      "source.bundle": {
+        "sha256": "884fda8e653bb471e24a2e2b85eb5446cab170928f426da7b5f30ee16fc57e57",
+        "size_bytes": 5933632
+      },
+      "snapshot.pack": {
+        "sha256": "7913046cc19e3fc4f5a40b4f33f0a6191b692376e3d0a2f3fc876582b4d0256f",
+        "size_bytes": 23186030
+      },
+      "hydrated-history.pack": {
+        "sha256": "46f8a9085edf1b620947e318f70f29c662ae99eb73935ed117b0d11a9b48edf8",
+        "size_bytes": 10970754
+      },
+      "prerequisite-commits.pack": {
+        "sha256": "6321a8f8214f8a434c8b02b3f2e8acb931fcf9a99e474ed19cbe2471fb8cf1cd",
+        "size_bytes": 1100
+      }
+    },
+    "source_files_changed_during_recovery": false,
+    "timing_workers_retried": 0,
+    "initial_gate_failure": "Sparse source snapshot omitted historical fixture-capture commit; original coordinator stopped after two successful timing workers. Preserved initial-missing-history-*; same frozen analyzer revalidated the same pair after self-contained historical object import.",
+    "cancelled_staging_steps": [
+      "2690410.0",
+      "2690410.2"
+    ],
+    "metadata_import_failures": [
+      "Prerequisite commits present but not connected to shallow history",
+      "Thin bundle lacked an older delta base; fixed on client using its real object store, then installed self-contained historical pack."
+    ]
+  },
+  "classification": {
+    "allocation_cancelled": "Intentional resource release after successful experiment and preservation; not a worker failure.",
+    "2690410.0_and_2690410.2": "Cancelled slow source staging; no timing workers had run.",
+    "2690410.5": "First coordinator provenance gate failed after two successful timing workers because historical fixture-capture Git object was absent.",
+    "2690410.8_and_2690410.9": "Historical Git metadata import attempts; fixed by client-resolved self-contained object pack. No runtime source or worker rerun.",
+    "2690410.11": "Unchanged first-pair gate passed; resume ran only missing ten timing workers and two observers; final frozen analyzer passed.",
+    "2690410.15": "Full raw/private fixture/native preservation completed successfully."
+  },
+  "actual_timing_worker_retries": 0,
+  "actual_worker_exclusions": 0
+}
