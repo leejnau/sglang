@@ -1,0 +1,3346 @@
+{
+  "status": "success",
+  "schema_version": 1,
+  "source_commit": "b206224f74aae4883d5c38ee9278bbeaf815fc03",
+  "source_manifest_sha256": "3f4305fce604d3cd51e85047678c6efbf71e35bcf51037e9586d15bc20486895",
+  "analyzer_sha256": "fe25091790283feb17243d89c9a6c707d5efa70f4072960925cfea240968abb4",
+  "outer_provenance": {
+    "plan_sha256": "4f528e2ed8f77b948ac6df72d6263efb50deb703e7430b1bf9af52554364374c",
+    "launcher_manifest_sha256": "43c205855cb6c1d1c4a850bea2fb24a78662cbc45c7857f0c34b8710a53123b9",
+    "image": {
+      "Id": "sha256:2e152727f0a5ce999172ec48203b2b292d41b3cb370976827718870557899caa",
+      "RepoDigests": [
+        "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0"
+      ],
+      "Created": "2026-10-19T00:48:17.586753916Z",
+      "Architecture": "amd64",
+      "Os": "linux",
+      "Size": 39141723315
+    },
+    "gpu": {
+      "index": "0",
+      "name": "NVIDIA H100 NVL",
+      "uuid": "GPU-240958a2-e8e1-3bac-b767-365c9e0b97bd",
+      "driver_version": "580.159.04",
+      "pstate": "P0",
+      "clocks.current.sm [MHz]": "345 MHz",
+      "clocks.current.memory [MHz]": "2619 MHz",
+      "power.limit [W]": "310.00 W",
+      "temperature.gpu": "38",
+      "memory.total [MiB]": "95830 MiB",
+      "memory.used [MiB]": "0 MiB"
+    },
+    "environment": {
+      "gpu": "NVIDIA H100 NVL",
+      "physical_gpu_uuid": "240958a2-e8e1-3bac-b767-365c9e0b97bd",
+      "driver": "580.159.04",
+      "torch": "2.14.1+cu130",
+      "torch_cuda": "13.0",
+      "exclusive_node": true,
+      "clock_lock": false,
+      "cuda_arch_list": "9.0",
+      "sglang_wrapper_sha256": "64deff581665bd04830535baccfdfbdfa72794d919bc462fc469a4c42bdd68f5",
+      "host": "1u1g-gen-0100",
+      "power_limit_watts": 310,
+      "hardware_change": "Original H10080GBHBM3 host ipp2-0037 is occupied. All new comparisons use one exclusive H100NVL host with the same580.159.04driver and pinned image; do not compare absolute timings against earlier HBM3 batches."
+    }
+  },
+  "validated_workers": [
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m128-seed17-default-cold.json",
+      "sha256": "1471558abb592b17e6ee642ce0fc04af32ff1d09d8abb38ae25cf0c4d3dc3c72",
+      "container_id": "10acd1d6c666997b7990416e75e33210e414977adfddbe266c17f2394e97d559",
+      "seed": 17,
+      "arm": "default",
+      "phase": "cold",
+      "m": 128
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m128-seed17-default-warm.json",
+      "sha256": "6b62ac990a97c2f4cfcffae10e3e786d1b2b0329db0f7bbae04613c3a5b2075e",
+      "container_id": "6022bd26895ddf5697af3b9d4e1d5f89818b469d1d77136589b5db7a7ffc9978",
+      "seed": 17,
+      "arm": "default",
+      "phase": "warm",
+      "m": 128
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m128-seed17-v1-cold.json",
+      "sha256": "fc52cf6b71ce4d0feafb3a732a7e7aacba8800597f31874cd9d3145f65c260f9",
+      "container_id": "87778fd6f4d13b4145e34e4ede7b5db56edf997a90cb1f9286bc8c5510c15575",
+      "seed": 17,
+      "arm": "v1",
+      "phase": "cold",
+      "m": 128
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m128-seed17-v1-warm.json",
+      "sha256": "8d3e03dabba3946d02b49849a3d340ce94df0039368cc951bf875d4ed509177a",
+      "container_id": "ff14fae06673c46955d916e3f6f385251044f25cb3ff9b249bba8d0889b07fff",
+      "seed": 17,
+      "arm": "v1",
+      "phase": "warm",
+      "m": 128
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m128-seed17-v2-cold.json",
+      "sha256": "8cbf0c6999a8b96c22f8922e5208e16d545cb1046f8c3278d6324e70484c10e5",
+      "container_id": "53fc54362444b381f2ee48ef5722cfe82d22aa9834972afa5a3f5c1e8479789c",
+      "seed": 17,
+      "arm": "v2",
+      "phase": "cold",
+      "m": 128
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m128-seed17-v2-warm.json",
+      "sha256": "75279e85f9926464182d12cadd996184693d882267da5d1a434e17bda041b242",
+      "container_id": "5d0057495d296c71471eb8b2eaba909613d774d3f95bfaf753a22625615e62aa",
+      "seed": 17,
+      "arm": "v2",
+      "phase": "warm",
+      "m": 128
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m128-seed18-default-cold.json",
+      "sha256": "c4a09ac74f150c9fd2b7c4417ca8aacd150caa8e0de93f861e6a6ff7eaa9f5bf",
+      "container_id": "6f6bb6855a3a3099a51cbdf8ca0571c5264b4704d4f8b97e69df8dbf014ce7a9",
+      "seed": 18,
+      "arm": "default",
+      "phase": "cold",
+      "m": 128
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m128-seed18-default-warm.json",
+      "sha256": "1d23ff645ee7044f6a9aea325fcddbeaea3728cc5eb8aaa92ea6726318d0caec",
+      "container_id": "bb829540d6b8066d84e856014a0ac589ffe2d102eecb185484e9df7cdd2aa620",
+      "seed": 18,
+      "arm": "default",
+      "phase": "warm",
+      "m": 128
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m128-seed18-v1-cold.json",
+      "sha256": "814ce23632ced6054229fb15ff4ec264f673be0e012cada52150e62d3823dea7",
+      "container_id": "006fe80ecb4a3dae3a163847ed5d6f511e37a9ab1380a7d6cb660731494fdb7e",
+      "seed": 18,
+      "arm": "v1",
+      "phase": "cold",
+      "m": 128
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m128-seed18-v1-warm.json",
+      "sha256": "2f31cc5eac7fb9ad46989225ed2bf220976c1dee767a0af820bc3ea8355a8d57",
+      "container_id": "bed04fcb86f1a47c1b1375137bcdbac8d379798d182e0b47edf67a374d03b338",
+      "seed": 18,
+      "arm": "v1",
+      "phase": "warm",
+      "m": 128
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m128-seed18-v2-cold.json",
+      "sha256": "dcbc904a57ebe3931c2e2dabed44fe1dfb892a682bf993522be6aa2160870ac9",
+      "container_id": "b0228d0e48fb1f254fb7248f7d6a097fd02562a8ad26180e35287570292ad284",
+      "seed": 18,
+      "arm": "v2",
+      "phase": "cold",
+      "m": 128
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m128-seed18-v2-warm.json",
+      "sha256": "b876af706a156a3becb2cdeea1e6d2332312a057827275a988aacc8aa28b2aa1",
+      "container_id": "ced979767a599d98853e3a72b0444aaa86cb7df6380c3ab495b93bf0c360038d",
+      "seed": 18,
+      "arm": "v2",
+      "phase": "warm",
+      "m": 128
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m128-seed19-default-cold.json",
+      "sha256": "82c2d367dfb89186077461d929acb1dd3405a6d28e4bf38bccf318937055eca7",
+      "container_id": "649a0db97bded0d3189f7992256b39e962f11c35aa40a5dc6f2417137c716f1a",
+      "seed": 19,
+      "arm": "default",
+      "phase": "cold",
+      "m": 128
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m128-seed19-default-warm.json",
+      "sha256": "c6ac51c0ce751b4d0710c1fd3bfed85e04361c51cb9e8346eb9d0d8788e44177",
+      "container_id": "ca09fe6473e3d2a8f820aec64ab92090497432102dfbb328afa379e2184f3ffa",
+      "seed": 19,
+      "arm": "default",
+      "phase": "warm",
+      "m": 128
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m128-seed19-v1-cold.json",
+      "sha256": "f7708296cd762c087ec9721eeb229e0873fd8802bf98a0468e7b94d5ab4fe276",
+      "container_id": "75588da06dcc0f5cf7e460449fd29ac3fefc3b89d6574e92ed84a401942d97e7",
+      "seed": 19,
+      "arm": "v1",
+      "phase": "cold",
+      "m": 128
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m128-seed19-v1-warm.json",
+      "sha256": "5dd0b64eb7fac7ac83d479b5b7bdb700f3578aa4cc4d84c5335904dde58cfca9",
+      "container_id": "39e0053a46742dd316599bb15a6ebb82a69ba78853e0ea1b3ab079cbe69b4e3e",
+      "seed": 19,
+      "arm": "v1",
+      "phase": "warm",
+      "m": 128
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m128-seed19-v2-cold.json",
+      "sha256": "a7815b704a8502722720950b61215b61e806d13ccb994e94c961031322980bc3",
+      "container_id": "17577d274d92cac971a18b499e3caf2856fd2cd98c11a0d048e626f1ca48ce16",
+      "seed": 19,
+      "arm": "v2",
+      "phase": "cold",
+      "m": 128
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m128-seed19-v2-warm.json",
+      "sha256": "373e4a6644448794b7e08935567926fbaffaf322a88d9aa43d897507e07e6c6f",
+      "container_id": "db1c778e2d4dee296297d5d93918e13983c1da34e89fd2d0038a5584881dd4aa",
+      "seed": 19,
+      "arm": "v2",
+      "phase": "warm",
+      "m": 128
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m144-seed17-default-cold.json",
+      "sha256": "9788c08b3cd11d80d953f3e37226c1f44a68a609eb5fac1bda1283fc30ccfe32",
+      "container_id": "28fcff577aed5c68c3e43cf1e16e9dcb71d8b9dc5ee000ede8678c6e69c71392",
+      "seed": 17,
+      "arm": "default",
+      "phase": "cold",
+      "m": 144
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m144-seed17-default-warm.json",
+      "sha256": "c3c39ab1001f7195dd235763a2b29534b0c883605f4d096c6bc521a9fe89d65e",
+      "container_id": "81f7d3f1db8c52de7b8dbe298ba8b4a1b13b2064be9e5873f2dfa2b54be9266c",
+      "seed": 17,
+      "arm": "default",
+      "phase": "warm",
+      "m": 144
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m144-seed17-v1-cold.json",
+      "sha256": "3067c5f1b9be55b17f25e224f703e8f03885364523aeb89425792559aa720646",
+      "container_id": "14e74f25f85ada828f3d29960d1e1099d67a4cc953a2d003cc02ceb9a05a4ed5",
+      "seed": 17,
+      "arm": "v1",
+      "phase": "cold",
+      "m": 144
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m144-seed17-v1-warm.json",
+      "sha256": "5d701de7fdee99bb8c40b80a765dffc240e99bf2a7fde615f3113126cacfce45",
+      "container_id": "1398230f79416caeeee4548a9b0aa18993072435f2295791f99339eee303d50b",
+      "seed": 17,
+      "arm": "v1",
+      "phase": "warm",
+      "m": 144
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m144-seed17-v2-cold.json",
+      "sha256": "9815583c78f10085284896a9eced0f991f9b4d2188824090b1dbe15d2f0d6fe5",
+      "container_id": "6bc94a3aefaa7bc28b699efd9c6268e2d53f81d35db1391c1a0c6c0817f1594d",
+      "seed": 17,
+      "arm": "v2",
+      "phase": "cold",
+      "m": 144
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m144-seed17-v2-warm.json",
+      "sha256": "53f1db2e42a233f043ec183430dec86b84073d49047a3cd634b107477571fd8f",
+      "container_id": "8d328440b07a0ccda9ac5c6941f51162dbe9784c3c8c5f7995d8a698dcdd5801",
+      "seed": 17,
+      "arm": "v2",
+      "phase": "warm",
+      "m": 144
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m144-seed18-default-cold.json",
+      "sha256": "4e0dadfd7d41c214e66b21a5d255646a25b525a7e28064ac7aab6936592a4fc6",
+      "container_id": "0afbbb7ff08bf3fc3e93b31178522a549aa4b3b3e2df0c0030395461f4783b9b",
+      "seed": 18,
+      "arm": "default",
+      "phase": "cold",
+      "m": 144
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m144-seed18-default-warm.json",
+      "sha256": "0ac49ba03f992744e5b5eb634b2f9472e00c5328083d0ef4fe41ae778cc0b8f6",
+      "container_id": "421a07530e9b3c21fad5151fbf614ecc32457d581f9a8c6604f26fdb0bedfe0a",
+      "seed": 18,
+      "arm": "default",
+      "phase": "warm",
+      "m": 144
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m144-seed18-v1-cold.json",
+      "sha256": "616f8440b2ee09d9a8ec33f730e7ea54c421fff1dcc48a8dd12920901b2de3f9",
+      "container_id": "fc01baeab97671fb5486a665def2d72b96df7ca1f223cc9b4a763f8b623da35f",
+      "seed": 18,
+      "arm": "v1",
+      "phase": "cold",
+      "m": 144
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m144-seed18-v1-warm.json",
+      "sha256": "96cf492be37d71e607fc58a9dba29d6de8710b3f59b8e92a69ffb9593a52b9ac",
+      "container_id": "0fbe805ff0149af4e15f12291deff7782f1fa369bf2a765f23b04fb600d11265",
+      "seed": 18,
+      "arm": "v1",
+      "phase": "warm",
+      "m": 144
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m144-seed18-v2-cold.json",
+      "sha256": "bf4f90b59f54d3017a66f197c6642b2f252971314d59c49240cb47149a99cd2f",
+      "container_id": "ec4a5e696e6b1166104ef96bc46e15762b1ea3d3515b17e0e3ab2f10ce51f0e7",
+      "seed": 18,
+      "arm": "v2",
+      "phase": "cold",
+      "m": 144
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m144-seed18-v2-warm.json",
+      "sha256": "96156bd5ac7d7e09b838d5da436d9d6b7b306fd6eb2d4626ee5b655dac9256de",
+      "container_id": "c2d1768c24c987fd103c1c561b960641a5f8b3ebbe072cb67c73b8f43f8c8069",
+      "seed": 18,
+      "arm": "v2",
+      "phase": "warm",
+      "m": 144
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m144-seed19-default-cold.json",
+      "sha256": "188c4e3541303843b4639f9ea441d664c5c280b9e62ae43660ba41f56813dc69",
+      "container_id": "92667fe1009ceea4e068aa2e57086d026f624397c57a6e72a079d564d89ac9d4",
+      "seed": 19,
+      "arm": "default",
+      "phase": "cold",
+      "m": 144
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m144-seed19-default-warm.json",
+      "sha256": "f0c3ca543c9bc18a78b315685afc3b569b8685e52c8866054430133047e08eec",
+      "container_id": "4d4ccdb0a4b8757829479452c3b7a82f9bf36413a137045338249a3a49d07a3e",
+      "seed": 19,
+      "arm": "default",
+      "phase": "warm",
+      "m": 144
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m144-seed19-v1-cold.json",
+      "sha256": "fd22aa3c6c7b5160d936e6d1c48d4b7e84e85752780a3ea21eaefc33821fb31c",
+      "container_id": "a1ed0ceb1fa2b3fc78a052572ef8e09703b767cb827fc3474a9112846c38ca0b",
+      "seed": 19,
+      "arm": "v1",
+      "phase": "cold",
+      "m": 144
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m144-seed19-v1-warm.json",
+      "sha256": "e0fef1451c6dd0280b97cf7828e4898c48729028c4164870bac87c2a051ff47a",
+      "container_id": "5d9e7756307707e2114742239c3bd6b6826d6af8db58f3bca9ad934e979689a2",
+      "seed": 19,
+      "arm": "v1",
+      "phase": "warm",
+      "m": 144
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m144-seed19-v2-cold.json",
+      "sha256": "b11aaa93a706a123ae43ab6f0a65f51ff4fa62aa953710f8664c164bfe72a4a0",
+      "container_id": "7ae87e54ad645ce364fe1d7fb159b01773d652e189f36778b49ae511c2e8ee37",
+      "seed": 19,
+      "arm": "v2",
+      "phase": "cold",
+      "m": 144
+    },
+    {
+      "file": "/private/tmp/sglang-descriptor-selection-20261019T235600Z/raw/attempt01/m144-seed19-v2-warm.json",
+      "sha256": "866e4fd0276f170fc648d3d29c93e2ff92555ffd6fe32e252dbb18cae31727f2",
+      "container_id": "cd7eabd0adf9a6436ad5a0e9622ccc3f7eedee680d045e13e167ea6c1ab166e3",
+      "seed": 19,
+      "arm": "v2",
+      "phase": "warm",
+      "m": 144
+    }
+  ],
+  "cases": [
+    {
+      "m": 128,
+      "natural_latency_comparisons": [
+        {
+          "phase": "cold",
+          "execution": "eager",
+          "comparison": "v2_over_v1",
+          "paired_trials": [
+            {
+              "seed": 17,
+              "numerator_ms": 0.040860570152290165,
+              "denominator_ms": 0.041196132951881737,
+              "ratio": 0.9918545073154434
+            },
+            {
+              "seed": 18,
+              "numerator_ms": 0.04034331941511482,
+              "denominator_ms": 0.040410539077129215,
+              "ratio": 0.9983365809130609
+            },
+            {
+              "seed": 19,
+              "numerator_ms": 0.04015394515590742,
+              "denominator_ms": 0.041246820183005184,
+              "ratio": 0.9735040174673136
+            }
+          ],
+          "median_paired_ratio": 0.9918545073154434,
+          "independent_trials": 3,
+          "scope": "natural public operation; default uses its genuine uncached fallback path"
+        },
+        {
+          "phase": "cold",
+          "execution": "eager",
+          "comparison": "v2_over_default",
+          "paired_trials": [
+            {
+              "seed": 17,
+              "numerator_ms": 0.040860570152290165,
+              "denominator_ms": 0.04936367186019197,
+              "ratio": 0.8277457614582576
+            },
+            {
+              "seed": 18,
+              "numerator_ms": 0.04034331941511482,
+              "denominator_ms": 0.04946946864947677,
+              "ratio": 0.8155195621965009
+            },
+            {
+              "seed": 19,
+              "numerator_ms": 0.04015394515590742,
+              "denominator_ms": 0.0501881746458821,
+              "ratio": 0.8000678534181761
+            }
+          ],
+          "median_paired_ratio": 0.8155195621965009,
+          "independent_trials": 3,
+          "scope": "natural public operation; default uses its genuine uncached fallback path"
+        },
+        {
+          "phase": "cold",
+          "execution": "eager",
+          "comparison": "v1_over_default",
+          "paired_trials": [
+            {
+              "seed": 17,
+              "numerator_ms": 0.041196132951881737,
+              "denominator_ms": 0.04936367186019197,
+              "ratio": 0.8345435296741625
+            },
+            {
+              "seed": 18,
+              "numerator_ms": 0.040410539077129215,
+              "denominator_ms": 0.04946946864947677,
+              "ratio": 0.8168783732743131
+            },
+            {
+              "seed": 19,
+              "numerator_ms": 0.041246820183005184,
+              "denominator_ms": 0.0501881746458821,
+              "ratio": 0.8218434018378761
+            }
+          ],
+          "median_paired_ratio": 0.8218434018378761,
+          "independent_trials": 3,
+          "scope": "natural public operation; default uses its genuine uncached fallback path"
+        },
+        {
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "comparison": "v2_over_v1",
+          "paired_trials": [
+            {
+              "seed": 17,
+              "numerator_ms": 0.00468708840344334,
+              "denominator_ms": 0.004673016155720688,
+              "ratio": 1.0030113843508597
+            },
+            {
+              "seed": 18,
+              "numerator_ms": 0.00475746546726441,
+              "denominator_ms": 0.004610598261933774,
+              "ratio": 1.0318542620690265
+            },
+            {
+              "seed": 19,
+              "numerator_ms": 0.004743094359582756,
+              "denominator_ms": 0.004743320823763497,
+              "ratio": 0.9999522561957844
+            }
+          ],
+          "median_paired_ratio": 1.0030113843508597,
+          "independent_trials": 3,
+          "scope": "natural public operation; default uses its genuine uncached fallback path"
+        },
+        {
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "comparison": "v2_over_default",
+          "paired_trials": [
+            {
+              "seed": 17,
+              "numerator_ms": 0.00468708840344334,
+              "denominator_ms": 0.00445400601165602,
+              "ratio": 1.052330955813115
+            },
+            {
+              "seed": 18,
+              "numerator_ms": 0.00475746546726441,
+              "denominator_ms": 0.004396076292323414,
+              "ratio": 1.0822072118202468
+            },
+            {
+              "seed": 19,
+              "numerator_ms": 0.004743094359582756,
+              "denominator_ms": 0.004575949787977152,
+              "ratio": 1.0365267494946644
+            }
+          ],
+          "median_paired_ratio": 1.052330955813115,
+          "independent_trials": 3,
+          "scope": "natural public operation; default uses its genuine uncached fallback path"
+        },
+        {
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "comparison": "v1_over_default",
+          "paired_trials": [
+            {
+              "seed": 17,
+              "numerator_ms": 0.004673016155720688,
+              "denominator_ms": 0.00445400601165602,
+              "ratio": 1.0491714971851238
+            },
+            {
+              "seed": 18,
+              "numerator_ms": 0.004610598261933774,
+              "denominator_ms": 0.004396076292323414,
+              "ratio": 1.048798509249024
+            },
+            {
+              "seed": 19,
+              "numerator_ms": 0.004743320823763497,
+              "denominator_ms": 0.004575949787977152,
+              "ratio": 1.0365762395877018
+            }
+          ],
+          "median_paired_ratio": 1.048798509249024,
+          "independent_trials": 3,
+          "scope": "natural public operation; default uses its genuine uncached fallback path"
+        },
+        {
+          "phase": "warm",
+          "execution": "eager",
+          "comparison": "v2_over_v1",
+          "paired_trials": [
+            {
+              "seed": 17,
+              "numerator_ms": 0.04151458851993084,
+              "denominator_ms": 0.043063775228802115,
+              "ratio": 0.9640257571325251
+            },
+            {
+              "seed": 18,
+              "numerator_ms": 0.04208341415505856,
+              "denominator_ms": 0.041888648411259055,
+              "ratio": 1.0046496067833774
+            },
+            {
+              "seed": 19,
+              "numerator_ms": 0.04269083874532953,
+              "denominator_ms": 0.043109980470035225,
+              "ratio": 0.9902773854189744
+            }
+          ],
+          "median_paired_ratio": 0.9902773854189744,
+          "independent_trials": 3,
+          "scope": "natural public operation; default uses its genuine uncached fallback path"
+        },
+        {
+          "phase": "warm",
+          "execution": "eager",
+          "comparison": "v2_over_default",
+          "paired_trials": [
+            {
+              "seed": 17,
+              "numerator_ms": 0.04151458851993084,
+              "denominator_ms": 0.04972650058334693,
+              "ratio": 0.8348584363049628
+            },
+            {
+              "seed": 18,
+              "numerator_ms": 0.04208341415505856,
+              "denominator_ms": 0.04951867158524692,
+              "ratio": 0.8498494165501091
+            },
+            {
+              "seed": 19,
+              "numerator_ms": 0.04269083874532953,
+              "denominator_ms": 0.05009614251321182,
+              "ratio": 0.8521781638989611
+            }
+          ],
+          "median_paired_ratio": 0.8498494165501091,
+          "independent_trials": 3,
+          "scope": "natural public operation; default uses its genuine uncached fallback path"
+        },
+        {
+          "phase": "warm",
+          "execution": "eager",
+          "comparison": "v1_over_default",
+          "paired_trials": [
+            {
+              "seed": 17,
+              "numerator_ms": 0.043063775228802115,
+              "denominator_ms": 0.04972650058334693,
+              "ratio": 0.866012583302994
+            },
+            {
+              "seed": 18,
+              "numerator_ms": 0.041888648411259055,
+              "denominator_ms": 0.04951867158524692,
+              "ratio": 0.8459162386686262
+            },
+            {
+              "seed": 19,
+              "numerator_ms": 0.043109980470035225,
+              "denominator_ms": 0.05009614251321182,
+              "ratio": 0.8605449103923694
+            }
+          ],
+          "median_paired_ratio": 0.8605449103923694,
+          "independent_trials": 3,
+          "scope": "natural public operation; default uses its genuine uncached fallback path"
+        },
+        {
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "comparison": "v2_over_v1",
+          "paired_trials": [
+            {
+              "seed": 17,
+              "numerator_ms": 0.004484076634980738,
+              "denominator_ms": 0.004421119410835672,
+              "ratio": 1.0142401094145443
+            },
+            {
+              "seed": 18,
+              "numerator_ms": 0.004635330333258025,
+              "denominator_ms": 0.004587129296851344,
+              "ratio": 1.0105078870220132
+            },
+            {
+              "seed": 19,
+              "numerator_ms": 0.004617869672074448,
+              "denominator_ms": 0.004454320696822833,
+              "ratio": 1.0367169286594633
+            }
+          ],
+          "median_paired_ratio": 1.0142401094145443,
+          "independent_trials": 3,
+          "scope": "natural public operation; default uses its genuine uncached fallback path"
+        },
+        {
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "comparison": "v2_over_default",
+          "paired_trials": [
+            {
+              "seed": 17,
+              "numerator_ms": 0.004484076634980738,
+              "denominator_ms": 0.00451341056759702,
+              "ratio": 0.9935007169906327
+            },
+            {
+              "seed": 18,
+              "numerator_ms": 0.004635330333258025,
+              "denominator_ms": 0.0046192973968572915,
+              "ratio": 1.0034708603978695
+            },
+            {
+              "seed": 19,
+              "numerator_ms": 0.004617869672074448,
+              "denominator_ms": 0.004566908864944708,
+              "ratio": 1.0111587090167076
+            }
+          ],
+          "median_paired_ratio": 1.0034708603978695,
+          "independent_trials": 3,
+          "scope": "natural public operation; default uses its genuine uncached fallback path"
+        },
+        {
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "comparison": "v1_over_default",
+          "paired_trials": [
+            {
+              "seed": 17,
+              "numerator_ms": 0.004421119410835672,
+              "denominator_ms": 0.00451341056759702,
+              "ratio": 0.979551792291193
+            },
+            {
+              "seed": 18,
+              "numerator_ms": 0.004587129296851344,
+              "denominator_ms": 0.0046192973968572915,
+              "ratio": 0.9930361487381539
+            },
+            {
+              "seed": 19,
+              "numerator_ms": 0.004454320696822833,
+              "denominator_ms": 0.004566908864944708,
+              "ratio": 0.9753469641169996
+            }
+          ],
+          "median_paired_ratio": 0.979551792291193,
+          "independent_trials": 3,
+          "scope": "natural public operation; default uses its genuine uncached fallback path"
+        }
+      ],
+      "selected_tactic_regret": [
+        {
+          "seed": 17,
+          "arm": "v1",
+          "phase": "cold",
+          "execution": "eager",
+          "lookup_tier": "memory",
+          "selected_tactic": [
+            253403070530,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": -1,
+          "selected_oracle_median_ms": 0.041044071258511394,
+          "best_oracle_median_ms": 0.04057227197336033,
+          "selected_to_best_ratio": 1.0116286138834139,
+          "fractional_regret": 0.011628613883413852,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 17,
+          "arm": "v1",
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "lookup_tier": "memory",
+          "selected_tactic": [
+            253403070530,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": [
+            343597383746,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.004671449823945295,
+          "best_oracle_median_ms": 0.004659193837142084,
+          "selected_to_best_ratio": 1.002630495152511,
+          "fractional_regret": 0.0026304951525109033,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 17,
+          "arm": "v1",
+          "phase": "warm",
+          "execution": "eager",
+          "lookup_tier": "file",
+          "selected_tactic": [
+            253403070530,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": -1,
+          "selected_oracle_median_ms": 0.04293235397199169,
+          "best_oracle_median_ms": 0.042737995681818575,
+          "selected_to_best_ratio": 1.0045476697508253,
+          "fractional_regret": 0.004547669750825323,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 17,
+          "arm": "v1",
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "lookup_tier": "file",
+          "selected_tactic": [
+            253403070530,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": [
+            343597383746,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.004420781442604493,
+          "best_oracle_median_ms": 0.004417099989950657,
+          "selected_to_best_ratio": 1.0008334546789097,
+          "fractional_regret": 0.0008334546789097175,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 17,
+          "arm": "v2",
+          "phase": "cold",
+          "execution": "eager",
+          "lookup_tier": "memory",
+          "selected_tactic": [
+            253403070530,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": [
+            1340029796418,
+            4294967332,
+            0,
+            1407374883553283,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.040915665158536285,
+          "best_oracle_median_ms": 0.04047672700835392,
+          "selected_to_best_ratio": 1.0108442105531847,
+          "fractional_regret": 0.010844210553184741,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 17,
+          "arm": "v2",
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "lookup_tier": "memory",
+          "selected_tactic": [
+            253403070530,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": [
+            343597383746,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.004687399086833466,
+          "best_oracle_median_ms": 0.004660326703742612,
+          "selected_to_best_ratio": 1.005809117002272,
+          "fractional_regret": 0.005809117002272046,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 17,
+          "arm": "v2",
+          "phase": "warm",
+          "execution": "eager",
+          "lookup_tier": "file",
+          "selected_tactic": [
+            253403070530,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": -1,
+          "selected_oracle_median_ms": 0.04137780633755028,
+          "best_oracle_median_ms": 0.040582990914117545,
+          "selected_to_best_ratio": 1.0195849395406746,
+          "fractional_regret": 0.01958493954067464,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 17,
+          "arm": "v2",
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "lookup_tier": "file",
+          "selected_tactic": [
+            253403070530,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": [
+            343597383746,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.004483900920604356,
+          "best_oracle_median_ms": 0.004446314960659947,
+          "selected_to_best_ratio": 1.008453283286713,
+          "fractional_regret": 0.00845328328671302,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 18,
+          "arm": "v1",
+          "phase": "cold",
+          "execution": "eager",
+          "lookup_tier": "memory",
+          "selected_tactic": [
+            1340029796418,
+            4294967332,
+            0,
+            1407374883553283,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": [
+            1348619731010,
+            4294967332,
+            0,
+            2533274790395907,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.0400090852053836,
+          "best_oracle_median_ms": 0.03941299073630944,
+          "selected_to_best_ratio": 1.0151243145454831,
+          "fractional_regret": 0.01512431454548313,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 18,
+          "arm": "v1",
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "lookup_tier": "memory",
+          "selected_tactic": [
+            1340029796418,
+            4294967332,
+            0,
+            1407374883553283,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": -1,
+          "selected_oracle_median_ms": 0.004609728784998879,
+          "best_oracle_median_ms": 0.004550361700239591,
+          "selected_to_best_ratio": 1.0130466737965382,
+          "fractional_regret": 0.013046673796538233,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 18,
+          "arm": "v1",
+          "phase": "warm",
+          "execution": "eager",
+          "lookup_tier": "file",
+          "selected_tactic": [
+            1340029796418,
+            4294967332,
+            0,
+            1407374883553283,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": [
+            343597383746,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.04203850985504687,
+          "best_oracle_median_ms": 0.04187000740785152,
+          "selected_to_best_ratio": 1.0040244188531897,
+          "fractional_regret": 0.004024418853189715,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 18,
+          "arm": "v1",
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "lookup_tier": "file",
+          "selected_tactic": [
+            1340029796418,
+            4294967332,
+            0,
+            1407374883553283,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": [
+            343597383746,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.00458660379081266,
+          "best_oracle_median_ms": 0.004545215233520139,
+          "selected_to_best_ratio": 1.0091059620207394,
+          "fractional_regret": 0.009105962020739433,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 18,
+          "arm": "v2",
+          "phase": "cold",
+          "execution": "eager",
+          "lookup_tier": "memory",
+          "selected_tactic": -1,
+          "best_tactic": -1,
+          "selected_oracle_median_ms": 0.040631304727867246,
+          "best_oracle_median_ms": 0.040631304727867246,
+          "selected_to_best_ratio": 1.0,
+          "fractional_regret": 0.0,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 18,
+          "arm": "v2",
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "lookup_tier": "memory",
+          "selected_tactic": -1,
+          "best_tactic": -1,
+          "selected_oracle_median_ms": 0.00472841456939932,
+          "best_oracle_median_ms": 0.00472841456939932,
+          "selected_to_best_ratio": 1.0,
+          "fractional_regret": 0.0,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 18,
+          "arm": "v2",
+          "phase": "warm",
+          "execution": "eager",
+          "lookup_tier": "file",
+          "selected_tactic": -1,
+          "best_tactic": [
+            343597383746,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.04170353931840509,
+          "best_oracle_median_ms": 0.040885538328439,
+          "selected_to_best_ratio": 1.0200070984364933,
+          "fractional_regret": 0.020007098436493287,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 18,
+          "arm": "v2",
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "lookup_tier": "file",
+          "selected_tactic": -1,
+          "best_tactic": [
+            1340029796418,
+            4294967332,
+            0,
+            1407374883553283,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.004643789361580275,
+          "best_oracle_median_ms": 0.004635984805645421,
+          "selected_to_best_ratio": 1.0016834731480029,
+          "fractional_regret": 0.0016834731480028786,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 19,
+          "arm": "v1",
+          "phase": "cold",
+          "execution": "eager",
+          "lookup_tier": "memory",
+          "selected_tactic": [
+            253403070530,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": -1,
+          "selected_oracle_median_ms": 0.0416240727645345,
+          "best_oracle_median_ms": 0.040562851063441485,
+          "selected_to_best_ratio": 1.026162404103036,
+          "fractional_regret": 0.02616240410303594,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 19,
+          "arm": "v1",
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "lookup_tier": "memory",
+          "selected_tactic": [
+            253403070530,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": [
+            343597383746,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.004757141141453758,
+          "best_oracle_median_ms": 0.004730653017759323,
+          "selected_to_best_ratio": 1.0055992531253075,
+          "fractional_regret": 0.005599253125307513,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 19,
+          "arm": "v1",
+          "phase": "warm",
+          "execution": "eager",
+          "lookup_tier": "file",
+          "selected_tactic": [
+            253403070530,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": [
+            1344324763714,
+            4294967332,
+            0,
+            1970324836974595,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.04336116689955816,
+          "best_oracle_median_ms": 0.042588495125528425,
+          "selected_to_best_ratio": 1.0181427348337222,
+          "fractional_regret": 0.018142734833722196,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 19,
+          "arm": "v1",
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "lookup_tier": "file",
+          "selected_tactic": [
+            253403070530,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": [
+            343597383746,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.004462051219888963,
+          "best_oracle_median_ms": 0.004451099994184915,
+          "selected_to_best_ratio": 1.0024603414253455,
+          "fractional_regret": 0.002460341425345458,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 19,
+          "arm": "v2",
+          "phase": "cold",
+          "execution": "eager",
+          "lookup_tier": "memory",
+          "selected_tactic": -1,
+          "best_tactic": [
+            1344324763714,
+            4294967332,
+            0,
+            1970324836974595,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.040738539246376604,
+          "best_oracle_median_ms": 0.040212992462329566,
+          "selected_to_best_ratio": 1.013069079217105,
+          "fractional_regret": 0.013069079217105095,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 19,
+          "arm": "v2",
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "lookup_tier": "memory",
+          "selected_tactic": -1,
+          "best_tactic": [
+            343597383746,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.004829967656405643,
+          "best_oracle_median_ms": 0.0046735671276110224,
+          "selected_to_best_ratio": 1.033464915454112,
+          "fractional_regret": 0.03346491545411201,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 19,
+          "arm": "v2",
+          "phase": "warm",
+          "execution": "eager",
+          "lookup_tier": "file",
+          "selected_tactic": -1,
+          "best_tactic": [
+            1340029796418,
+            4294967332,
+            0,
+            1407374883553283,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.04318743449402973,
+          "best_oracle_median_ms": 0.04231957136653364,
+          "selected_to_best_ratio": 1.0205073704546639,
+          "fractional_regret": 0.020507370454663887,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 19,
+          "arm": "v2",
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "lookup_tier": "file",
+          "selected_tactic": -1,
+          "best_tactic": [
+            343597383746,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.004610699761542492,
+          "best_oracle_median_ms": 0.0045985161705175415,
+          "selected_to_best_ratio": 1.0026494613856232,
+          "fractional_regret": 0.002649461385623164,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        }
+      ],
+      "cross_window_natural_diagnostics": [
+        {
+          "seed": 17,
+          "arm": "v1",
+          "phase": "cold",
+          "execution": "eager",
+          "natural_median_ms": 0.041196132951881737,
+          "selected_oracle_median_ms": 0.041044071258511394,
+          "natural_to_selected_oracle_ratio": 1.0037048394252266,
+          "natural_to_best_oracle_ratio": 1.0153765354558166,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 17,
+          "arm": "v1",
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "natural_median_ms": 0.004673016155720688,
+          "selected_oracle_median_ms": 0.004671449823945295,
+          "natural_to_selected_oracle_ratio": 1.0003352988546221,
+          "natural_to_best_oracle_ratio": 1.0029666760091447,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 17,
+          "arm": "v1",
+          "phase": "warm",
+          "execution": "eager",
+          "natural_median_ms": 0.043063775228802115,
+          "selected_oracle_median_ms": 0.04293235397199169,
+          "natural_to_selected_oracle_ratio": 1.0030611239462006,
+          "natural_to_best_oracle_ratio": 1.0076227146777996,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 17,
+          "arm": "v1",
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "natural_median_ms": 0.004421119410835672,
+          "selected_oracle_median_ms": 0.004420781442604493,
+          "natural_to_selected_oracle_ratio": 1.0000764498846113,
+          "natural_to_best_oracle_ratio": 1.000909968281035,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 17,
+          "arm": "v2",
+          "phase": "cold",
+          "execution": "eager",
+          "natural_median_ms": 0.040860570152290165,
+          "selected_oracle_median_ms": 0.040915665158536285,
+          "natural_to_selected_oracle_ratio": 0.9986534495765218,
+          "natural_to_best_oracle_ratio": 1.0094830578533938,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 17,
+          "arm": "v2",
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "natural_median_ms": 0.00468708840344334,
+          "selected_oracle_median_ms": 0.004687399086833466,
+          "natural_to_selected_oracle_ratio": 0.9999337194498761,
+          "natural_to_best_oracle_ratio": 1.0057424514206774,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 17,
+          "arm": "v2",
+          "phase": "warm",
+          "execution": "eager",
+          "natural_median_ms": 0.04151458851993084,
+          "selected_oracle_median_ms": 0.04137780633755028,
+          "natural_to_selected_oracle_ratio": 1.003305689558908,
+          "natural_to_best_oracle_ratio": 1.022955370829734,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 17,
+          "arm": "v2",
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "natural_median_ms": 0.004484076634980738,
+          "selected_oracle_median_ms": 0.004483900920604356,
+          "natural_to_selected_oracle_ratio": 1.00003918783655,
+          "natural_to_best_oracle_ratio": 1.0084928023891466,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 18,
+          "arm": "v1",
+          "phase": "cold",
+          "execution": "eager",
+          "natural_median_ms": 0.040410539077129215,
+          "selected_oracle_median_ms": 0.0400090852053836,
+          "natural_to_selected_oracle_ratio": 1.0100340677544808,
+          "natural_to_best_oracle_ratio": 1.0253101406968534,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 18,
+          "arm": "v1",
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "natural_median_ms": 0.004610598261933774,
+          "selected_oracle_median_ms": 0.004609728784998879,
+          "natural_to_selected_oracle_ratio": 1.0001886178071309,
+          "natural_to_best_oracle_ratio": 1.013237752438671,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 18,
+          "arm": "v1",
+          "phase": "warm",
+          "execution": "eager",
+          "natural_median_ms": 0.041888648411259055,
+          "selected_oracle_median_ms": 0.04203850985504687,
+          "natural_to_selected_oracle_ratio": 0.9964351390117169,
+          "natural_to_best_oracle_ratio": 1.0004452113711364,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 18,
+          "arm": "v1",
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "natural_median_ms": 0.004587129296851344,
+          "selected_oracle_median_ms": 0.00458660379081266,
+          "natural_to_selected_oracle_ratio": 1.0001145741081314,
+          "natural_to_best_oracle_ratio": 1.0092215794363482,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 18,
+          "arm": "v2",
+          "phase": "cold",
+          "execution": "eager",
+          "natural_median_ms": 0.04034331941511482,
+          "selected_oracle_median_ms": 0.040631304727867246,
+          "natural_to_selected_oracle_ratio": 0.9929122307373283,
+          "natural_to_best_oracle_ratio": 0.9929122307373283,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 18,
+          "arm": "v2",
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "natural_median_ms": 0.00475746546726441,
+          "selected_oracle_median_ms": 0.00472841456939932,
+          "natural_to_selected_oracle_ratio": 1.0061438982218476,
+          "natural_to_best_oracle_ratio": 1.0061438982218476,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 18,
+          "arm": "v2",
+          "phase": "warm",
+          "execution": "eager",
+          "natural_median_ms": 0.04208341415505856,
+          "selected_oracle_median_ms": 0.04170353931840509,
+          "natural_to_selected_oracle_ratio": 1.0091089351854081,
+          "natural_to_best_oracle_ratio": 1.0292982769848074,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 18,
+          "arm": "v2",
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "natural_median_ms": 0.004635330333258025,
+          "selected_oracle_median_ms": 0.004643789361580275,
+          "natural_to_selected_oracle_ratio": 0.9981784211850274,
+          "natural_to_best_oracle_ratio": 0.9998588277540085,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 19,
+          "arm": "v1",
+          "phase": "cold",
+          "execution": "eager",
+          "natural_median_ms": 0.041246820183005184,
+          "selected_oracle_median_ms": 0.0416240727645345,
+          "natural_to_selected_oracle_ratio": 0.9909366730242035,
+          "natural_to_best_oracle_ratio": 1.0168619587043808,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 19,
+          "arm": "v1",
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "natural_median_ms": 0.004743320823763497,
+          "selected_oracle_median_ms": 0.004757141141453758,
+          "natural_to_selected_oracle_ratio": 0.9970948270653922,
+          "natural_to_best_oracle_ratio": 1.0026778133920662,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 19,
+          "arm": "v1",
+          "phase": "warm",
+          "execution": "eager",
+          "natural_median_ms": 0.043109980470035225,
+          "selected_oracle_median_ms": 0.04336116689955816,
+          "natural_to_selected_oracle_ratio": 0.9942071109362721,
+          "natural_to_best_oracle_ratio": 1.01224474691979,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 19,
+          "arm": "v1",
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "natural_median_ms": 0.004454320696822833,
+          "selected_oracle_median_ms": 0.004462051219888963,
+          "natural_to_selected_oracle_ratio": 0.9982674956684334,
+          "natural_to_best_oracle_ratio": 1.0007235745416023,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 19,
+          "arm": "v2",
+          "phase": "cold",
+          "execution": "eager",
+          "natural_median_ms": 0.04015394515590742,
+          "selected_oracle_median_ms": 0.040738539246376604,
+          "natural_to_selected_oracle_ratio": 0.985650096903728,
+          "natural_to_best_oracle_ratio": 0.9985316361005101,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 19,
+          "arm": "v2",
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "natural_median_ms": 0.004743094359582756,
+          "selected_oracle_median_ms": 0.004829967656405643,
+          "natural_to_selected_oracle_ratio": 0.9820136897381345,
+          "natural_to_best_oracle_ratio": 1.0148766948400019,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 19,
+          "arm": "v2",
+          "phase": "warm",
+          "execution": "eager",
+          "natural_median_ms": 0.04269083874532953,
+          "selected_oracle_median_ms": 0.04318743449402973,
+          "natural_to_selected_oracle_ratio": 0.9885013834575228,
+          "natural_to_best_oracle_ratio": 1.008772947523034,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 19,
+          "arm": "v2",
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "natural_median_ms": 0.004617869672074448,
+          "selected_oracle_median_ms": 0.004610699761542492,
+          "natural_to_selected_oracle_ratio": 1.0015550590805675,
+          "natural_to_best_oracle_ratio": 1.0042086405351769,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        }
+      ],
+      "startup_diagnostics": [
+        {
+          "phase": "cold",
+          "paired_v2_over_v1": [
+            1.0979006596504541,
+            1.0945570363595538,
+            1.0993500616192333
+          ],
+          "median_paired_ratio": 1.0979006596504541,
+          "scope": "instrumented operation wrapper startup; no full-server startup measurement"
+        },
+        {
+          "phase": "warm",
+          "paired_v2_over_v1": [
+            0.9962317599044411,
+            1.002185485922101,
+            1.000272287173367
+          ],
+          "median_paired_ratio": 1.000272287173367,
+          "scope": "instrumented operation wrapper startup; no full-server startup measurement"
+        }
+      ],
+      "natural_winners": [
+        {
+          "seed": 17,
+          "arm": "default",
+          "phase": "cold",
+          "tactic": -1,
+          "lookup_tier": "miss"
+        },
+        {
+          "seed": 17,
+          "arm": "default",
+          "phase": "warm",
+          "tactic": -1,
+          "lookup_tier": "miss"
+        },
+        {
+          "seed": 17,
+          "arm": "v1",
+          "phase": "cold",
+          "tactic": [
+            253403070530,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "lookup_tier": "memory"
+        },
+        {
+          "seed": 17,
+          "arm": "v1",
+          "phase": "warm",
+          "tactic": [
+            253403070530,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "lookup_tier": "file"
+        },
+        {
+          "seed": 17,
+          "arm": "v2",
+          "phase": "cold",
+          "tactic": [
+            253403070530,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "lookup_tier": "memory"
+        },
+        {
+          "seed": 17,
+          "arm": "v2",
+          "phase": "warm",
+          "tactic": [
+            253403070530,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "lookup_tier": "file"
+        },
+        {
+          "seed": 18,
+          "arm": "default",
+          "phase": "cold",
+          "tactic": -1,
+          "lookup_tier": "miss"
+        },
+        {
+          "seed": 18,
+          "arm": "default",
+          "phase": "warm",
+          "tactic": -1,
+          "lookup_tier": "miss"
+        },
+        {
+          "seed": 18,
+          "arm": "v1",
+          "phase": "cold",
+          "tactic": [
+            1340029796418,
+            4294967332,
+            0,
+            1407374883553283,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "lookup_tier": "memory"
+        },
+        {
+          "seed": 18,
+          "arm": "v1",
+          "phase": "warm",
+          "tactic": [
+            1340029796418,
+            4294967332,
+            0,
+            1407374883553283,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "lookup_tier": "file"
+        },
+        {
+          "seed": 18,
+          "arm": "v2",
+          "phase": "cold",
+          "tactic": -1,
+          "lookup_tier": "memory"
+        },
+        {
+          "seed": 18,
+          "arm": "v2",
+          "phase": "warm",
+          "tactic": -1,
+          "lookup_tier": "file"
+        },
+        {
+          "seed": 19,
+          "arm": "default",
+          "phase": "cold",
+          "tactic": -1,
+          "lookup_tier": "miss"
+        },
+        {
+          "seed": 19,
+          "arm": "default",
+          "phase": "warm",
+          "tactic": -1,
+          "lookup_tier": "miss"
+        },
+        {
+          "seed": 19,
+          "arm": "v1",
+          "phase": "cold",
+          "tactic": [
+            253403070530,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "lookup_tier": "memory"
+        },
+        {
+          "seed": 19,
+          "arm": "v1",
+          "phase": "warm",
+          "tactic": [
+            253403070530,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "lookup_tier": "file"
+        },
+        {
+          "seed": 19,
+          "arm": "v2",
+          "phase": "cold",
+          "tactic": -1,
+          "lookup_tier": "memory"
+        },
+        {
+          "seed": 19,
+          "arm": "v2",
+          "phase": "warm",
+          "tactic": -1,
+          "lookup_tier": "file"
+        }
+      ],
+      "candidate_exclusions": []
+    },
+    {
+      "m": 144,
+      "natural_latency_comparisons": [
+        {
+          "phase": "cold",
+          "execution": "eager",
+          "comparison": "v2_over_v1",
+          "paired_trials": [
+            {
+              "seed": 17,
+              "numerator_ms": 0.040623101813253015,
+              "denominator_ms": 0.041534351476002485,
+              "ratio": 0.9780603372782655
+            },
+            {
+              "seed": 18,
+              "numerator_ms": 0.04025545931654051,
+              "denominator_ms": 0.04059074126416817,
+              "ratio": 0.9917399402625929
+            },
+            {
+              "seed": 19,
+              "numerator_ms": 0.041669304482638836,
+              "denominator_ms": 0.04154391208430752,
+              "ratio": 1.0030183098326622
+            }
+          ],
+          "median_paired_ratio": 0.9917399402625929,
+          "independent_trials": 3,
+          "scope": "natural public operation; default uses its genuine uncached fallback path"
+        },
+        {
+          "phase": "cold",
+          "execution": "eager",
+          "comparison": "v2_over_default",
+          "paired_trials": [
+            {
+              "seed": 17,
+              "numerator_ms": 0.040623101813253015,
+              "denominator_ms": 0.0486096236272715,
+              "ratio": 0.8357008094681523
+            },
+            {
+              "seed": 18,
+              "numerator_ms": 0.04025545931654051,
+              "denominator_ms": 0.04812898259842768,
+              "ratio": 0.8364078595306855
+            },
+            {
+              "seed": 19,
+              "numerator_ms": 0.041669304482638836,
+              "denominator_ms": 0.04881827917415649,
+              "ratio": 0.8535594696811397
+            }
+          ],
+          "median_paired_ratio": 0.8364078595306855,
+          "independent_trials": 3,
+          "scope": "natural public operation; default uses its genuine uncached fallback path"
+        },
+        {
+          "phase": "cold",
+          "execution": "eager",
+          "comparison": "v1_over_default",
+          "paired_trials": [
+            {
+              "seed": 17,
+              "numerator_ms": 0.041534351476002485,
+              "denominator_ms": 0.0486096236272715,
+              "ratio": 0.8544470904461072
+            },
+            {
+              "seed": 18,
+              "numerator_ms": 0.04059074126416817,
+              "denominator_ms": 0.04812898259842768,
+              "ratio": 0.84337418064379
+            },
+            {
+              "seed": 19,
+              "numerator_ms": 0.04154391208430752,
+              "denominator_ms": 0.04881827917415649,
+              "ratio": 0.8509909154335804
+            }
+          ],
+          "median_paired_ratio": 0.8509909154335804,
+          "independent_trials": 3,
+          "scope": "natural public operation; default uses its genuine uncached fallback path"
+        },
+        {
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "comparison": "v2_over_v1",
+          "paired_trials": [
+            {
+              "seed": 17,
+              "numerator_ms": 0.004873125908488873,
+              "denominator_ms": 0.005137024345458485,
+              "ratio": 0.9486281513921736
+            },
+            {
+              "seed": 18,
+              "numerator_ms": 0.00469428559881635,
+              "denominator_ms": 0.004929854367219377,
+              "ratio": 0.9522158768077571
+            },
+            {
+              "seed": 19,
+              "numerator_ms": 0.005099903137306683,
+              "denominator_ms": 0.004921070831187535,
+              "ratio": 1.0363401203221438
+            }
+          ],
+          "median_paired_ratio": 0.9522158768077571,
+          "independent_trials": 3,
+          "scope": "natural public operation; default uses its genuine uncached fallback path"
+        },
+        {
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "comparison": "v2_over_default",
+          "paired_trials": [
+            {
+              "seed": 17,
+              "numerator_ms": 0.004873125908488873,
+              "denominator_ms": 0.00463549677078845,
+              "ratio": 1.0512629281068413
+            },
+            {
+              "seed": 18,
+              "numerator_ms": 0.00469428559881635,
+              "denominator_ms": 0.004743844328913838,
+              "ratio": 0.9895530446065808
+            },
+            {
+              "seed": 19,
+              "numerator_ms": 0.005099903137306683,
+              "denominator_ms": 0.004491586150834337,
+              "ratio": 1.1354347809535719
+            }
+          ],
+          "median_paired_ratio": 1.0512629281068413,
+          "independent_trials": 3,
+          "scope": "natural public operation; default uses its genuine uncached fallback path"
+        },
+        {
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "comparison": "v1_over_default",
+          "paired_trials": [
+            {
+              "seed": 17,
+              "numerator_ms": 0.005137024345458485,
+              "denominator_ms": 0.00463549677078845,
+              "ratio": 1.1081928430692727
+            },
+            {
+              "seed": 18,
+              "numerator_ms": 0.004929854367219377,
+              "denominator_ms": 0.004743844328913838,
+              "ratio": 1.0392108225752275
+            },
+            {
+              "seed": 19,
+              "numerator_ms": 0.004921070831187535,
+              "denominator_ms": 0.004491586150834337,
+              "ratio": 1.0956198246967652
+            }
+          ],
+          "median_paired_ratio": 1.0956198246967652,
+          "independent_trials": 3,
+          "scope": "natural public operation; default uses its genuine uncached fallback path"
+        },
+        {
+          "phase": "warm",
+          "execution": "eager",
+          "comparison": "v2_over_v1",
+          "paired_trials": [
+            {
+              "seed": 17,
+              "numerator_ms": 0.04447065002750605,
+              "denominator_ms": 0.04321086889831349,
+              "ratio": 1.0291542651492882
+            },
+            {
+              "seed": 18,
+              "numerator_ms": 0.04328139912104234,
+              "denominator_ms": 0.04261555732227862,
+              "ratio": 1.0156243832206233
+            },
+            {
+              "seed": 19,
+              "numerator_ms": 0.043781977728940547,
+              "denominator_ms": 0.04334621044108644,
+              "ratio": 1.0100531807375959
+            }
+          ],
+          "median_paired_ratio": 1.0156243832206233,
+          "independent_trials": 3,
+          "scope": "natural public operation; default uses its genuine uncached fallback path"
+        },
+        {
+          "phase": "warm",
+          "execution": "eager",
+          "comparison": "v2_over_default",
+          "paired_trials": [
+            {
+              "seed": 17,
+              "numerator_ms": 0.04447065002750605,
+              "denominator_ms": 0.049556203885003924,
+              "ratio": 0.897378058470762
+            },
+            {
+              "seed": 18,
+              "numerator_ms": 0.04328139912104234,
+              "denominator_ms": 0.0501658272696659,
+              "ratio": 0.8627665779013992
+            },
+            {
+              "seed": 19,
+              "numerator_ms": 0.043781977728940547,
+              "denominator_ms": 0.05008998268749565,
+              "ratio": 0.874066537457003
+            }
+          ],
+          "median_paired_ratio": 0.874066537457003,
+          "independent_trials": 3,
+          "scope": "natural public operation; default uses its genuine uncached fallback path"
+        },
+        {
+          "phase": "warm",
+          "execution": "eager",
+          "comparison": "v1_over_default",
+          "paired_trials": [
+            {
+              "seed": 17,
+              "numerator_ms": 0.04321086889831349,
+              "denominator_ms": 0.049556203885003924,
+              "ratio": 0.8719567987609604
+            },
+            {
+              "seed": 18,
+              "numerator_ms": 0.04261555732227862,
+              "denominator_ms": 0.0501658272696659,
+              "ratio": 0.8494937618231455
+            },
+            {
+              "seed": 19,
+              "numerator_ms": 0.04334621044108644,
+              "denominator_ms": 0.05008998268749565,
+              "ratio": 0.8653668481284441
+            }
+          ],
+          "median_paired_ratio": 0.8653668481284441,
+          "independent_trials": 3,
+          "scope": "natural public operation; default uses its genuine uncached fallback path"
+        },
+        {
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "comparison": "v2_over_v1",
+          "paired_trials": [
+            {
+              "seed": 17,
+              "numerator_ms": 0.0046026565541978925,
+              "denominator_ms": 0.004998817530577071,
+              "ratio": 0.9207490623620652
+            },
+            {
+              "seed": 18,
+              "numerator_ms": 0.004548785545921419,
+              "denominator_ms": 0.0049626765758148395,
+              "ratio": 0.91659923358486
+            },
+            {
+              "seed": 19,
+              "numerator_ms": 0.004963977153238375,
+              "denominator_ms": 0.004904174420516938,
+              "ratio": 1.0121942507736366
+            }
+          ],
+          "median_paired_ratio": 0.9207490623620652,
+          "independent_trials": 3,
+          "scope": "natural public operation; default uses its genuine uncached fallback path"
+        },
+        {
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "comparison": "v2_over_default",
+          "paired_trials": [
+            {
+              "seed": 17,
+              "numerator_ms": 0.0046026565541978925,
+              "denominator_ms": 0.0045502289140131325,
+              "ratio": 1.011521978602725
+            },
+            {
+              "seed": 18,
+              "numerator_ms": 0.004548785545921419,
+              "denominator_ms": 0.004687297405325808,
+              "ratio": 0.9704495261497577
+            },
+            {
+              "seed": 19,
+              "numerator_ms": 0.004963977153238375,
+              "denominator_ms": 0.004643592183128931,
+              "ratio": 1.0689950705131825
+            }
+          ],
+          "median_paired_ratio": 1.011521978602725,
+          "independent_trials": 3,
+          "scope": "natural public operation; default uses its genuine uncached fallback path"
+        },
+        {
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "comparison": "v1_over_default",
+          "paired_trials": [
+            {
+              "seed": 17,
+              "numerator_ms": 0.004998817530577071,
+              "denominator_ms": 0.0045502289140131325,
+              "ratio": 1.0985859448043243
+            },
+            {
+              "seed": 18,
+              "numerator_ms": 0.0049626765758148395,
+              "denominator_ms": 0.004687297405325808,
+              "ratio": 1.0587500955617068
+            },
+            {
+              "seed": 19,
+              "numerator_ms": 0.004904174420516938,
+              "denominator_ms": 0.004643592183128931,
+              "ratio": 1.056116520812218
+            }
+          ],
+          "median_paired_ratio": 1.0587500955617068,
+          "independent_trials": 3,
+          "scope": "natural public operation; default uses its genuine uncached fallback path"
+        }
+      ],
+      "selected_tactic_regret": [
+        {
+          "seed": 17,
+          "arm": "v1",
+          "phase": "cold",
+          "execution": "eager",
+          "lookup_tier": "memory",
+          "selected_tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": -1,
+          "selected_oracle_median_ms": 0.04135839844821021,
+          "best_oracle_median_ms": 0.0401846002205275,
+          "selected_to_best_ratio": 1.0292101506856126,
+          "fractional_regret": 0.029210150685612613,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 17,
+          "arm": "v1",
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "lookup_tier": "memory",
+          "selected_tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": [
+            55834574914,
+            4294967332,
+            0,
+            1407374883553283,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.005125928691995796,
+          "best_oracle_median_ms": 0.004710885332315229,
+          "selected_to_best_ratio": 1.088103048663379,
+          "fractional_regret": 0.08810304866337892,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 17,
+          "arm": "v1",
+          "phase": "warm",
+          "execution": "eager",
+          "lookup_tier": "file",
+          "selected_tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": -1,
+          "selected_oracle_median_ms": 0.04376907309051603,
+          "best_oracle_median_ms": 0.04193575878161937,
+          "selected_to_best_ratio": 1.0437172084674478,
+          "fractional_regret": 0.043717208467447755,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 17,
+          "arm": "v1",
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "lookup_tier": "file",
+          "selected_tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": [
+            51539607618,
+            4294967332,
+            0,
+            844424930131968,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.004996512507204898,
+          "best_oracle_median_ms": 0.004599324711307418,
+          "selected_to_best_ratio": 1.086357850516837,
+          "fractional_regret": 0.08635785051683698,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 17,
+          "arm": "v2",
+          "phase": "cold",
+          "execution": "eager",
+          "lookup_tier": "memory",
+          "selected_tactic": -1,
+          "best_tactic": [
+            51539607618,
+            4294967332,
+            0,
+            844424930131968,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.04111094312975183,
+          "best_oracle_median_ms": 0.041057117050513625,
+          "selected_to_best_ratio": 1.0013110048416693,
+          "fractional_regret": 0.0013110048416693498,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 17,
+          "arm": "v2",
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "lookup_tier": "memory",
+          "selected_tactic": -1,
+          "best_tactic": [
+            55834574914,
+            4294967332,
+            0,
+            1407374883553283,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.004871881719736848,
+          "best_oracle_median_ms": 0.0047992994950618595,
+          "selected_to_best_ratio": 1.0151235039091997,
+          "fractional_regret": 0.015123503909199698,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 17,
+          "arm": "v2",
+          "phase": "warm",
+          "execution": "eager",
+          "lookup_tier": "file",
+          "selected_tactic": -1,
+          "best_tactic": -1,
+          "selected_oracle_median_ms": 0.041928507562261075,
+          "best_oracle_median_ms": 0.041928507562261075,
+          "selected_to_best_ratio": 1.0,
+          "fractional_regret": 0.0,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 17,
+          "arm": "v2",
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "lookup_tier": "file",
+          "selected_tactic": -1,
+          "best_tactic": [
+            55834574914,
+            4294967332,
+            0,
+            1407374883553283,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.004602635090122931,
+          "best_oracle_median_ms": 0.004600197644322179,
+          "selected_to_best_ratio": 1.000529856755994,
+          "fractional_regret": 0.0005298567559939293,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 18,
+          "arm": "v1",
+          "phase": "cold",
+          "execution": "eager",
+          "lookup_tier": "memory",
+          "selected_tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": -1,
+          "selected_oracle_median_ms": 0.040783477015793324,
+          "best_oracle_median_ms": 0.03973089769715443,
+          "selected_to_best_ratio": 1.0264927142261444,
+          "fractional_regret": 0.02649271422614441,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 18,
+          "arm": "v1",
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "lookup_tier": "memory",
+          "selected_tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": [
+            51539607618,
+            4294967332,
+            0,
+            844424930131968,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.005080256778455805,
+          "best_oracle_median_ms": 0.004607570554071572,
+          "selected_to_best_ratio": 1.1025890366380902,
+          "fractional_regret": 0.10258903663809016,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 18,
+          "arm": "v1",
+          "phase": "warm",
+          "execution": "eager",
+          "lookup_tier": "file",
+          "selected_tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": [
+            1352914698306,
+            4294967332,
+            0,
+            1970324836974595,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.04305180627852678,
+          "best_oracle_median_ms": 0.042100538848899305,
+          "selected_to_best_ratio": 1.0225951366808301,
+          "fractional_regret": 0.02259513668083013,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 18,
+          "arm": "v1",
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "lookup_tier": "file",
+          "selected_tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": [
+            1352914698306,
+            4294967332,
+            0,
+            1970324836974595,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.005067785969004035,
+          "best_oracle_median_ms": 0.004594896927301306,
+          "selected_to_best_ratio": 1.1029161370069007,
+          "fractional_regret": 0.10291613700690072,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 18,
+          "arm": "v2",
+          "phase": "cold",
+          "execution": "eager",
+          "lookup_tier": "memory",
+          "selected_tactic": -1,
+          "best_tactic": -1,
+          "selected_oracle_median_ms": 0.040454584814142436,
+          "best_oracle_median_ms": 0.040454584814142436,
+          "selected_to_best_ratio": 1.0,
+          "fractional_regret": 0.0,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 18,
+          "arm": "v2",
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "lookup_tier": "memory",
+          "selected_tactic": -1,
+          "best_tactic": [
+            51539607618,
+            4294967332,
+            0,
+            844424930131968,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.004693967093771789,
+          "best_oracle_median_ms": 0.004674779665947426,
+          "selected_to_best_ratio": 1.004104456080386,
+          "fractional_regret": 0.00410445608038601,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 18,
+          "arm": "v2",
+          "phase": "warm",
+          "execution": "eager",
+          "lookup_tier": "file",
+          "selected_tactic": -1,
+          "best_tactic": -1,
+          "selected_oracle_median_ms": 0.04317627608543262,
+          "best_oracle_median_ms": 0.04317627608543262,
+          "selected_to_best_ratio": 1.0,
+          "fractional_regret": 0.0,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 18,
+          "arm": "v2",
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "lookup_tier": "file",
+          "selected_tactic": -1,
+          "best_tactic": [
+            55834574914,
+            4294967332,
+            0,
+            1407374883553283,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.004549320692603942,
+          "best_oracle_median_ms": 0.004486922262003645,
+          "selected_to_best_ratio": 1.0139067331584284,
+          "fractional_regret": 0.013906733158428386,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 19,
+          "arm": "v1",
+          "phase": "cold",
+          "execution": "eager",
+          "lookup_tier": "memory",
+          "selected_tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": -1,
+          "selected_oracle_median_ms": 0.04201255505904555,
+          "best_oracle_median_ms": 0.04060225619468838,
+          "selected_to_best_ratio": 1.0347344949895092,
+          "fractional_regret": 0.0347344949895092,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 19,
+          "arm": "v1",
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "lookup_tier": "memory",
+          "selected_tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": [
+            55834574914,
+            4294967332,
+            0,
+            1407374883553283,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.004920387436868623,
+          "best_oracle_median_ms": 0.0046099650717223994,
+          "selected_to_best_ratio": 1.0673372488330464,
+          "fractional_regret": 0.06733724883304637,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 19,
+          "arm": "v1",
+          "phase": "warm",
+          "execution": "eager",
+          "lookup_tier": "file",
+          "selected_tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": [
+            1348619731010,
+            4294967332,
+            0,
+            1125899906842625,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.04356516437837854,
+          "best_oracle_median_ms": 0.04250349156791344,
+          "selected_to_best_ratio": 1.0249784846209333,
+          "fractional_regret": 0.024978484620933328,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 19,
+          "arm": "v1",
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "lookup_tier": "file",
+          "selected_tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": [
+            55834574914,
+            4294967332,
+            0,
+            1407374883553283,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.004902033833786845,
+          "best_oracle_median_ms": 0.004597433871822432,
+          "selected_to_best_ratio": 1.066254343282956,
+          "fractional_regret": 0.0662543432829561,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 19,
+          "arm": "v2",
+          "phase": "cold",
+          "execution": "eager",
+          "lookup_tier": "memory",
+          "selected_tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": -1,
+          "selected_oracle_median_ms": 0.04380903992569074,
+          "best_oracle_median_ms": 0.04052742733620107,
+          "selected_to_best_ratio": 1.0809726352049585,
+          "fractional_regret": 0.08097263520495845,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 19,
+          "arm": "v2",
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "lookup_tier": "memory",
+          "selected_tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": [
+            55834574914,
+            4294967332,
+            0,
+            1407374883553283,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.005074594446341507,
+          "best_oracle_median_ms": 0.00473075415357016,
+          "selected_to_best_ratio": 1.0726819195438133,
+          "fractional_regret": 0.07268191954381331,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 19,
+          "arm": "v2",
+          "phase": "warm",
+          "execution": "eager",
+          "lookup_tier": "file",
+          "selected_tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": -1,
+          "selected_oracle_median_ms": 0.04360996244940907,
+          "best_oracle_median_ms": 0.04266185133019462,
+          "selected_to_best_ratio": 1.0222238625294586,
+          "fractional_regret": 0.022223862529458627,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        },
+        {
+          "seed": 19,
+          "arm": "v2",
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "lookup_tier": "file",
+          "selected_tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_tactic": [
+            55834574914,
+            4294967332,
+            0,
+            1407374883553283,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "selected_oracle_median_ms": 0.004964350046066102,
+          "best_oracle_median_ms": 0.004599414569383953,
+          "selected_to_best_ratio": 1.079343897180164,
+          "fractional_regret": 0.0793438971801641,
+          "accepted_candidates": 9,
+          "excluded_candidates": 0
+        }
+      ],
+      "cross_window_natural_diagnostics": [
+        {
+          "seed": 17,
+          "arm": "v1",
+          "phase": "cold",
+          "execution": "eager",
+          "natural_median_ms": 0.041534351476002485,
+          "selected_oracle_median_ms": 0.04135839844821021,
+          "natural_to_selected_oracle_ratio": 1.004254348195146,
+          "natural_to_best_oracle_ratio": 1.033588769032608,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 17,
+          "arm": "v1",
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "natural_median_ms": 0.005137024345458485,
+          "selected_oracle_median_ms": 0.005125928691995796,
+          "natural_to_selected_oracle_ratio": 1.0021646133080266,
+          "natural_to_best_oracle_ratio": 1.09045837100302,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 17,
+          "arm": "v1",
+          "phase": "warm",
+          "execution": "eager",
+          "natural_median_ms": 0.04321086889831349,
+          "selected_oracle_median_ms": 0.04376907309051603,
+          "natural_to_selected_oracle_ratio": 0.9872466069581105,
+          "natural_to_best_oracle_ratio": 1.0304062726832788,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 17,
+          "arm": "v1",
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "natural_median_ms": 0.004998817530577071,
+          "selected_oracle_median_ms": 0.004996512507204898,
+          "natural_to_selected_oracle_ratio": 1.0004613264489681,
+          "natural_to_best_oracle_ratio": 1.0868590161263245,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 17,
+          "arm": "v2",
+          "phase": "cold",
+          "execution": "eager",
+          "natural_median_ms": 0.040623101813253015,
+          "selected_oracle_median_ms": 0.04111094312975183,
+          "natural_to_selected_oracle_ratio": 0.9881335411119341,
+          "natural_to_best_oracle_ratio": 0.9894289889685477,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 17,
+          "arm": "v2",
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "natural_median_ms": 0.004873125908488873,
+          "selected_oracle_median_ms": 0.004871881719736848,
+          "natural_to_selected_oracle_ratio": 1.0002553815596518,
+          "natural_to_best_oracle_ratio": 1.0153827477328672,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 17,
+          "arm": "v2",
+          "phase": "warm",
+          "execution": "eager",
+          "natural_median_ms": 0.04447065002750605,
+          "selected_oracle_median_ms": 0.041928507562261075,
+          "natural_to_selected_oracle_ratio": 1.0606304066861922,
+          "natural_to_best_oracle_ratio": 1.0606304066861922,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 17,
+          "arm": "v2",
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "natural_median_ms": 0.0046026565541978925,
+          "selected_oracle_median_ms": 0.004602635090122931,
+          "natural_to_selected_oracle_ratio": 1.0000046634318258,
+          "natural_to_best_oracle_ratio": 1.0005345226587705,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 18,
+          "arm": "v1",
+          "phase": "cold",
+          "execution": "eager",
+          "natural_median_ms": 0.04059074126416817,
+          "selected_oracle_median_ms": 0.040783477015793324,
+          "natural_to_selected_oracle_ratio": 0.9952741706757736,
+          "natural_to_best_oracle_ratio": 1.0216416848561498,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 18,
+          "arm": "v1",
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "natural_median_ms": 0.004929854367219377,
+          "selected_oracle_median_ms": 0.005080256778455805,
+          "natural_to_selected_oracle_ratio": 0.9703947225907459,
+          "natural_to_best_oracle_ratio": 1.0699465823400172,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 18,
+          "arm": "v1",
+          "phase": "warm",
+          "execution": "eager",
+          "natural_median_ms": 0.04261555732227862,
+          "selected_oracle_median_ms": 0.04305180627852678,
+          "natural_to_selected_oracle_ratio": 0.9898668837858784,
+          "natural_to_best_oracle_ratio": 1.0122330613208477,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 18,
+          "arm": "v1",
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "natural_median_ms": 0.0049626765758148395,
+          "selected_oracle_median_ms": 0.005067785969004035,
+          "natural_to_selected_oracle_ratio": 0.9792593069573038,
+          "natural_to_best_oracle_ratio": 1.0800408919574043,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 18,
+          "arm": "v2",
+          "phase": "cold",
+          "execution": "eager",
+          "natural_median_ms": 0.04025545931654051,
+          "selected_oracle_median_ms": 0.040454584814142436,
+          "natural_to_selected_oracle_ratio": 0.9950778014774653,
+          "natural_to_best_oracle_ratio": 0.9950778014774653,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 18,
+          "arm": "v2",
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "natural_median_ms": 0.00469428559881635,
+          "selected_oracle_median_ms": 0.004693967093771789,
+          "natural_to_selected_oracle_ratio": 1.0000678541281176,
+          "natural_to_best_oracle_ratio": 1.0041725887127926,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 18,
+          "arm": "v2",
+          "phase": "warm",
+          "execution": "eager",
+          "natural_median_ms": 0.04328139912104234,
+          "selected_oracle_median_ms": 0.04317627608543262,
+          "natural_to_selected_oracle_ratio": 1.002434740675683,
+          "natural_to_best_oracle_ratio": 1.002434740675683,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 18,
+          "arm": "v2",
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "natural_median_ms": 0.004548785545921419,
+          "selected_oracle_median_ms": 0.004549320692603942,
+          "natural_to_selected_oracle_ratio": 0.9998823677822068,
+          "natural_to_best_oracle_ratio": 1.0137874650607717,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 19,
+          "arm": "v1",
+          "phase": "cold",
+          "execution": "eager",
+          "natural_median_ms": 0.04154391208430752,
+          "selected_oracle_median_ms": 0.04201255505904555,
+          "natural_to_selected_oracle_ratio": 0.988845168448351,
+          "natural_to_best_oracle_ratio": 1.0231922059972207,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 19,
+          "arm": "v1",
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "natural_median_ms": 0.004921070831187535,
+          "selected_oracle_median_ms": 0.004920387436868623,
+          "natural_to_selected_oracle_ratio": 1.0001388903470876,
+          "natural_to_best_oracle_ratio": 1.0674854916739962,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 19,
+          "arm": "v1",
+          "phase": "warm",
+          "execution": "eager",
+          "natural_median_ms": 0.04334621044108644,
+          "selected_oracle_median_ms": 0.04356516437837854,
+          "natural_to_selected_oracle_ratio": 0.9949741051040136,
+          "natural_to_best_oracle_ratio": 1.0198270504865812,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 19,
+          "arm": "v1",
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "natural_median_ms": 0.004904174420516938,
+          "selected_oracle_median_ms": 0.004902033833786845,
+          "natural_to_selected_oracle_ratio": 1.0004366731855947,
+          "natural_to_best_oracle_ratio": 1.0667199479636917,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 19,
+          "arm": "v2",
+          "phase": "cold",
+          "execution": "eager",
+          "natural_median_ms": 0.041669304482638836,
+          "selected_oracle_median_ms": 0.04380903992569074,
+          "natural_to_selected_oracle_ratio": 0.951157673240926,
+          "natural_to_best_oracle_ratio": 1.0281754165386605,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 19,
+          "arm": "v2",
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "natural_median_ms": 0.005099903137306683,
+          "selected_oracle_median_ms": 0.005074594446341507,
+          "natural_to_selected_oracle_ratio": 1.0049873327283172,
+          "natural_to_best_oracle_ratio": 1.0780317411882283,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 19,
+          "arm": "v2",
+          "phase": "warm",
+          "execution": "eager",
+          "natural_median_ms": 0.043781977728940547,
+          "selected_oracle_median_ms": 0.04360996244940907,
+          "natural_to_selected_oracle_ratio": 1.0039444032938811,
+          "natural_to_best_oracle_ratio": 1.0262559256999035,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        },
+        {
+          "seed": 19,
+          "arm": "v2",
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "natural_median_ms": 0.004963977153238375,
+          "selected_oracle_median_ms": 0.004964350046066102,
+          "natural_to_selected_oracle_ratio": 0.9999248858714098,
+          "natural_to_best_oracle_ratio": 1.0792628232038783,
+          "scope": "separate measurement windows; ratios may be below one and are not selected-tactic regret"
+        }
+      ],
+      "startup_diagnostics": [
+        {
+          "phase": "cold",
+          "paired_v2_over_v1": [
+            1.0993410853339058,
+            1.1009133345592095,
+            1.099145554005118
+          ],
+          "median_paired_ratio": 1.0993410853339058,
+          "scope": "instrumented operation wrapper startup; no full-server startup measurement"
+        },
+        {
+          "phase": "warm",
+          "paired_v2_over_v1": [
+            0.9879115912754978,
+            0.9905153846062448,
+            1.0059429622775744
+          ],
+          "median_paired_ratio": 0.9905153846062448,
+          "scope": "instrumented operation wrapper startup; no full-server startup measurement"
+        }
+      ],
+      "natural_winners": [
+        {
+          "seed": 17,
+          "arm": "default",
+          "phase": "cold",
+          "tactic": -1,
+          "lookup_tier": "miss"
+        },
+        {
+          "seed": 17,
+          "arm": "default",
+          "phase": "warm",
+          "tactic": -1,
+          "lookup_tier": "miss"
+        },
+        {
+          "seed": 17,
+          "arm": "v1",
+          "phase": "cold",
+          "tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "lookup_tier": "memory"
+        },
+        {
+          "seed": 17,
+          "arm": "v1",
+          "phase": "warm",
+          "tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "lookup_tier": "file"
+        },
+        {
+          "seed": 17,
+          "arm": "v2",
+          "phase": "cold",
+          "tactic": -1,
+          "lookup_tier": "memory"
+        },
+        {
+          "seed": 17,
+          "arm": "v2",
+          "phase": "warm",
+          "tactic": -1,
+          "lookup_tier": "file"
+        },
+        {
+          "seed": 18,
+          "arm": "default",
+          "phase": "cold",
+          "tactic": -1,
+          "lookup_tier": "miss"
+        },
+        {
+          "seed": 18,
+          "arm": "default",
+          "phase": "warm",
+          "tactic": -1,
+          "lookup_tier": "miss"
+        },
+        {
+          "seed": 18,
+          "arm": "v1",
+          "phase": "cold",
+          "tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "lookup_tier": "memory"
+        },
+        {
+          "seed": 18,
+          "arm": "v1",
+          "phase": "warm",
+          "tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "lookup_tier": "file"
+        },
+        {
+          "seed": 18,
+          "arm": "v2",
+          "phase": "cold",
+          "tactic": -1,
+          "lookup_tier": "memory"
+        },
+        {
+          "seed": 18,
+          "arm": "v2",
+          "phase": "warm",
+          "tactic": -1,
+          "lookup_tier": "file"
+        },
+        {
+          "seed": 19,
+          "arm": "default",
+          "phase": "cold",
+          "tactic": -1,
+          "lookup_tier": "miss"
+        },
+        {
+          "seed": 19,
+          "arm": "default",
+          "phase": "warm",
+          "tactic": -1,
+          "lookup_tier": "miss"
+        },
+        {
+          "seed": 19,
+          "arm": "v1",
+          "phase": "cold",
+          "tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "lookup_tier": "memory"
+        },
+        {
+          "seed": 19,
+          "arm": "v1",
+          "phase": "warm",
+          "tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "lookup_tier": "file"
+        },
+        {
+          "seed": 19,
+          "arm": "v2",
+          "phase": "cold",
+          "tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "lookup_tier": "memory"
+        },
+        {
+          "seed": 19,
+          "arm": "v2",
+          "phase": "warm",
+          "tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "lookup_tier": "file"
+        }
+      ],
+      "candidate_exclusions": []
+    }
+  ],
+  "limitations": [
+    "One H100 and three paired fresh-worker trials per case; 15 within-worker samples are not 15 independent trials.",
+    "Candidate source is the exact descriptor patch over 0.7.2, not a released package or the entire upstream branch.",
+    "Selected-tactic regret uses the selected candidate and best accepted candidate within the same oracle sweep and lookup tier.",
+    "Natural/oracle cross-window ratios can be below one and are reported separately from regret.",
+    "Default natural execution is a genuine cache miss; cached default oracle measurements use memory or file tier according to phase.",
+    "Matching lookup tiers does not establish identical cache occupancy, process history or thermal state.",
+    "Unsupported candidates retain explicit exclusion reasons; the best accepted sample is not a statistical guarantee of optimality.",
+    "No serving-performance, broad backend, BF16, distributed, managed-store or measurement-policy adoption claim."
+  ]
+}

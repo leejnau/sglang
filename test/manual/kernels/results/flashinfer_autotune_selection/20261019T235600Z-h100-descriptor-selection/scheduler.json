@@ -1,0 +1,415 @@
+{
+  "schema_version": 1,
+  "status": "released",
+  "experimental_job_id": 2676374,
+  "probe_only_job_id": 2676346,
+  "remaining_queue_entries": 0,
+  "reason": "Explicitly released own allocations after completed workers and verified node/durable/downloaded full archive hashes. The hold allocation is intentionally CANCELLED; experimental srun step2676374.5 and all36 workers completed0. First query showed COMPLETING; final query is empty.",
+  "archive_sha256_before_release": "14878da88071339a7eb611e74ed91ad9caaf35c25eeb8a401d48598e28067b87",
+  "accounting": [
+    {
+      "job_id": "2676346",
+      "job_name": "fi-descriptor-selection",
+      "state": "CANCELLED by 150381",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:02:43",
+      "end": "2026-10-20T00:03:46",
+      "elapsed": "00:01:03",
+      "node": "ipp2-1588"
+    },
+    {
+      "job_id": "2676346.extern",
+      "job_name": "extern",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:02:43",
+      "end": "2026-10-20T00:03:46",
+      "elapsed": "00:01:03",
+      "node": "ipp2-1588"
+    },
+    {
+      "job_id": "2676346.0",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:03:04",
+      "end": "2026-10-20T00:03:04",
+      "elapsed": "00:00:00",
+      "node": "ipp2-1588"
+    },
+    {
+      "job_id": "2676346.1",
+      "job_name": "tar",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:03:46",
+      "end": "2026-10-20T00:03:46",
+      "elapsed": "00:00:00",
+      "node": "ipp2-1588"
+    },
+    {
+      "job_id": "2676374",
+      "job_name": "fi-selection-probe",
+      "state": "CANCELLED by 150381",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:04:13",
+      "end": "2026-10-20T00:34:31",
+      "elapsed": "00:30:18",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2676374.extern",
+      "job_name": "extern",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:04:13",
+      "end": "2026-10-20T00:34:32",
+      "elapsed": "00:30:19",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2676374.0",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:04:42",
+      "end": "2026-10-20T00:04:49",
+      "elapsed": "00:00:07",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2676374.1",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:05:17",
+      "end": "2026-10-20T00:08:51",
+      "elapsed": "00:03:34",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2676374.2",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:06:33",
+      "end": "2026-10-20T00:06:44",
+      "elapsed": "00:00:11",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2676374.3",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:07:14",
+      "end": "2026-10-20T00:07:16",
+      "elapsed": "00:00:02",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2676374.4",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:08:46",
+      "end": "2026-10-20T00:08:48",
+      "elapsed": "00:00:02",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2676374.5",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:09:07",
+      "end": "2026-10-20T00:33:38",
+      "elapsed": "00:24:31",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2676374.6",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:09:22",
+      "end": "2026-10-20T00:09:24",
+      "elapsed": "00:00:02",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2676374.7",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:10:37",
+      "end": "2026-10-20T00:10:39",
+      "elapsed": "00:00:02",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2676374.8",
+      "job_name": "tar",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:10:59",
+      "end": "2026-10-20T00:11:01",
+      "elapsed": "00:00:02",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2676374.9",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:11:50",
+      "end": "2026-10-20T00:11:53",
+      "elapsed": "00:00:03",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2676374.10",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:12:36",
+      "end": "2026-10-20T00:12:38",
+      "elapsed": "00:00:02",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2676374.11",
+      "job_name": "tar",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:12:39",
+      "end": "2026-10-20T00:12:41",
+      "elapsed": "00:00:02",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2676374.12",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:13:55",
+      "end": "2026-10-20T00:13:58",
+      "elapsed": "00:00:03",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2676374.13",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:15:03",
+      "end": "2026-10-20T00:15:06",
+      "elapsed": "00:00:03",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2676374.14",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:16:39",
+      "end": "2026-10-20T00:16:42",
+      "elapsed": "00:00:03",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2676374.15",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:18:16",
+      "end": "2026-10-20T00:18:20",
+      "elapsed": "00:00:04",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2676374.16",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:19:45",
+      "end": "2026-10-20T00:19:47",
+      "elapsed": "00:00:02",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2676374.17",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:21:18",
+      "end": "2026-10-20T00:21:20",
+      "elapsed": "00:00:02",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2676374.18",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:22:12",
+      "end": "2026-10-20T00:22:14",
+      "elapsed": "00:00:02",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2676374.19",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:22:40",
+      "end": "2026-10-20T00:22:44",
+      "elapsed": "00:00:04",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2676374.20",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:25:10",
+      "end": "2026-10-20T00:25:12",
+      "elapsed": "00:00:02",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2676374.21",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:26:03",
+      "end": "2026-10-20T00:26:05",
+      "elapsed": "00:00:02",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2676374.22",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:27:17",
+      "end": "2026-10-20T00:27:19",
+      "elapsed": "00:00:02",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2676374.23",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:29:23",
+      "end": "2026-10-20T00:29:25",
+      "elapsed": "00:00:02",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2676374.24",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:30:21",
+      "end": "2026-10-20T00:30:23",
+      "elapsed": "00:00:02",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2676374.25",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:31:27",
+      "end": "2026-10-20T00:31:29",
+      "elapsed": "00:00:02",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2676374.26",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:32:27",
+      "end": "2026-10-20T00:32:29",
+      "elapsed": "00:00:02",
+      "node": "1u1g-gen-0100"
+    },
+    {
+      "job_id": "2676374.27",
+      "job_name": "bash",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "start": "2026-10-20T00:33:45",
+      "end": "2026-10-20T00:33:50",
+      "elapsed": "00:00:05",
+      "node": "1u1g-gen-0100"
+    }
+  ],
+  "observations": [
+    {
+      "checked_utc": "2026-10-20T00:34:50.111772+00:00",
+      "commands": {
+        "accounting": [
+          "sacct",
+          "-j",
+          "2676374,2676346",
+          "--noheader",
+          "--parsable2",
+          "--format=JobIDRaw,JobName,State,ExitCode,Start,End,Elapsed,NodeList"
+        ],
+        "queue": [
+          "squeue",
+          "--noheader",
+          "--jobs=2676374,2676346",
+          "--format=%i|%T|%N"
+        ]
+      },
+      "results": {
+        "accounting": {
+          "returncode": 0,
+          "stdout": "2676346|fi-descriptor-selection|CANCELLED by 150381|0:0|2026-10-20T00:02:43|2026-10-20T00:03:46|00:01:03|ipp2-1588\n2676346.extern|extern|COMPLETED|0:0|2026-10-20T00:02:43|2026-10-20T00:03:46|00:01:03|ipp2-1588\n2676346.0|bash|COMPLETED|0:0|2026-10-20T00:03:04|2026-10-20T00:03:04|00:00:00|ipp2-1588\n2676346.1|tar|COMPLETED|0:0|2026-10-20T00:03:46|2026-10-20T00:03:46|00:00:00|ipp2-1588\n2676374|fi-selection-probe|CANCELLED by 150381|0:0|2026-10-20T00:04:13|2026-10-20T00:34:31|00:30:18|1u1g-gen-0100\n2676374.extern|extern|COMPLETED|0:0|2026-10-20T00:04:13|2026-10-20T00:34:32|00:30:19|1u1g-gen-0100\n2676374.0|bash|COMPLETED|0:0|2026-10-20T00:04:42|2026-10-20T00:04:49|00:00:07|1u1g-gen-0100\n2676374.1|bash|COMPLETED|0:0|2026-10-20T00:05:17|2026-10-20T00:08:51|00:03:34|1u1g-gen-0100\n2676374.2|bash|COMPLETED|0:0|2026-10-20T00:06:33|2026-10-20T00:06:44|00:00:11|1u1g-gen-0100\n2676374.3|bash|COMPLETED|0:0|2026-10-20T00:07:14|2026-10-20T00:07:16|00:00:02|1u1g-gen-0100\n2676374.4|bash|COMPLETED|0:0|2026-10-20T00:08:46|2026-10-20T00:08:48|00:00:02|1u1g-gen-0100\n2676374.5|bash|COMPLETED|0:0|2026-10-20T00:09:07|2026-10-20T00:33:38|00:24:31|1u1g-gen-0100\n2676374.6|bash|COMPLETED|0:0|2026-10-20T00:09:22|2026-10-20T00:09:24|00:00:02|1u1g-gen-0100\n2676374.7|bash|COMPLETED|0:0|2026-10-20T00:10:37|2026-10-20T00:10:39|00:00:02|1u1g-gen-0100\n2676374.8|tar|COMPLETED|0:0|2026-10-20T00:10:59|2026-10-20T00:11:01|00:00:02|1u1g-gen-0100\n2676374.9|bash|COMPLETED|0:0|2026-10-20T00:11:50|2026-10-20T00:11:53|00:00:03|1u1g-gen-0100\n2676374.10|bash|COMPLETED|0:0|2026-10-20T00:12:36|2026-10-20T00:12:38|00:00:02|1u1g-gen-0100\n2676374.11|tar|COMPLETED|0:0|2026-10-20T00:12:39|2026-10-20T00:12:41|00:00:02|1u1g-gen-0100\n2676374.12|bash|COMPLETED|0:0|2026-10-20T00:13:55|2026-10-20T00:13:58|00:00:03|1u1g-gen-0100\n2676374.13|bash|COMPLETED|0:0|2026-10-20T00:15:03|2026-10-20T00:15:06|00:00:03|1u1g-gen-0100\n2676374.14|bash|COMPLETED|0:0|2026-10-20T00:16:39|2026-10-20T00:16:42|00:00:03|1u1g-gen-0100\n2676374.15|bash|COMPLETED|0:0|2026-10-20T00:18:16|2026-10-20T00:18:20|00:00:04|1u1g-gen-0100\n2676374.16|bash|COMPLETED|0:0|2026-10-20T00:19:45|2026-10-20T00:19:47|00:00:02|1u1g-gen-0100\n2676374.17|bash|COMPLETED|0:0|2026-10-20T00:21:18|2026-10-20T00:21:20|00:00:02|1u1g-gen-0100\n2676374.18|bash|COMPLETED|0:0|2026-10-20T00:22:12|2026-10-20T00:22:14|00:00:02|1u1g-gen-0100\n2676374.19|bash|COMPLETED|0:0|2026-10-20T00:22:40|2026-10-20T00:22:44|00:00:04|1u1g-gen-0100\n2676374.20|bash|COMPLETED|0:0|2026-10-20T00:25:10|2026-10-20T00:25:12|00:00:02|1u1g-gen-0100\n2676374.21|bash|COMPLETED|0:0|2026-10-20T00:26:03|2026-10-20T00:26:05|00:00:02|1u1g-gen-0100\n2676374.22|bash|COMPLETED|0:0|2026-10-20T00:27:17|2026-10-20T00:27:19|00:00:02|1u1g-gen-0100\n2676374.23|bash|COMPLETED|0:0|2026-10-20T00:29:23|2026-10-20T00:29:25|00:00:02|1u1g-gen-0100\n2676374.24|bash|COMPLETED|0:0|2026-10-20T00:30:21|2026-10-20T00:30:23|00:00:02|1u1g-gen-0100\n2676374.25|bash|COMPLETED|0:0|2026-10-20T00:31:27|2026-10-20T00:31:29|00:00:02|1u1g-gen-0100\n2676374.26|bash|COMPLETED|0:0|2026-10-20T00:32:27|2026-10-20T00:32:29|00:00:02|1u1g-gen-0100\n2676374.27|bash|COMPLETED|0:0|2026-10-20T00:33:45|2026-10-20T00:33:50|00:00:05|1u1g-gen-0100\n",
+          "stderr": ""
+        },
+        "queue": {
+          "returncode": 0,
+          "stdout": "2676374|COMPLETING|1u1g-gen-0100\n",
+          "stderr": ""
+        }
+      }
+    },
+    {
+      "checked_utc": "2026-10-20T00:35:20.281435+00:00",
+      "commands": {
+        "accounting": [
+          "sacct",
+          "-j",
+          "2676374,2676346",
+          "--noheader",
+          "--parsable2",
+          "--format=JobIDRaw,JobName,State,ExitCode,Start,End,Elapsed,NodeList"
+        ],
+        "queue": [
+          "squeue",
+          "--noheader",
+          "--jobs=2676374,2676346",
+          "--format=%i|%T|%N"
+        ]
+      },
+      "results": {
+        "accounting": {
+          "returncode": 0,
+          "stdout": "2676346|fi-descriptor-selection|CANCELLED by 150381|0:0|2026-10-20T00:02:43|2026-10-20T00:03:46|00:01:03|ipp2-1588\n2676346.extern|extern|COMPLETED|0:0|2026-10-20T00:02:43|2026-10-20T00:03:46|00:01:03|ipp2-1588\n2676346.0|bash|COMPLETED|0:0|2026-10-20T00:03:04|2026-10-20T00:03:04|00:00:00|ipp2-1588\n2676346.1|tar|COMPLETED|0:0|2026-10-20T00:03:46|2026-10-20T00:03:46|00:00:00|ipp2-1588\n2676374|fi-selection-probe|CANCELLED by 150381|0:0|2026-10-20T00:04:13|2026-10-20T00:34:31|00:30:18|1u1g-gen-0100\n2676374.extern|extern|COMPLETED|0:0|2026-10-20T00:04:13|2026-10-20T00:34:32|00:30:19|1u1g-gen-0100\n2676374.0|bash|COMPLETED|0:0|2026-10-20T00:04:42|2026-10-20T00:04:49|00:00:07|1u1g-gen-0100\n2676374.1|bash|COMPLETED|0:0|2026-10-20T00:05:17|2026-10-20T00:08:51|00:03:34|1u1g-gen-0100\n2676374.2|bash|COMPLETED|0:0|2026-10-20T00:06:33|2026-10-20T00:06:44|00:00:11|1u1g-gen-0100\n2676374.3|bash|COMPLETED|0:0|2026-10-20T00:07:14|2026-10-20T00:07:16|00:00:02|1u1g-gen-0100\n2676374.4|bash|COMPLETED|0:0|2026-10-20T00:08:46|2026-10-20T00:08:48|00:00:02|1u1g-gen-0100\n2676374.5|bash|COMPLETED|0:0|2026-10-20T00:09:07|2026-10-20T00:33:38|00:24:31|1u1g-gen-0100\n2676374.6|bash|COMPLETED|0:0|2026-10-20T00:09:22|2026-10-20T00:09:24|00:00:02|1u1g-gen-0100\n2676374.7|bash|COMPLETED|0:0|2026-10-20T00:10:37|2026-10-20T00:10:39|00:00:02|1u1g-gen-0100\n2676374.8|tar|COMPLETED|0:0|2026-10-20T00:10:59|2026-10-20T00:11:01|00:00:02|1u1g-gen-0100\n2676374.9|bash|COMPLETED|0:0|2026-10-20T00:11:50|2026-10-20T00:11:53|00:00:03|1u1g-gen-0100\n2676374.10|bash|COMPLETED|0:0|2026-10-20T00:12:36|2026-10-20T00:12:38|00:00:02|1u1g-gen-0100\n2676374.11|tar|COMPLETED|0:0|2026-10-20T00:12:39|2026-10-20T00:12:41|00:00:02|1u1g-gen-0100\n2676374.12|bash|COMPLETED|0:0|2026-10-20T00:13:55|2026-10-20T00:13:58|00:00:03|1u1g-gen-0100\n2676374.13|bash|COMPLETED|0:0|2026-10-20T00:15:03|2026-10-20T00:15:06|00:00:03|1u1g-gen-0100\n2676374.14|bash|COMPLETED|0:0|2026-10-20T00:16:39|2026-10-20T00:16:42|00:00:03|1u1g-gen-0100\n2676374.15|bash|COMPLETED|0:0|2026-10-20T00:18:16|2026-10-20T00:18:20|00:00:04|1u1g-gen-0100\n2676374.16|bash|COMPLETED|0:0|2026-10-20T00:19:45|2026-10-20T00:19:47|00:00:02|1u1g-gen-0100\n2676374.17|bash|COMPLETED|0:0|2026-10-20T00:21:18|2026-10-20T00:21:20|00:00:02|1u1g-gen-0100\n2676374.18|bash|COMPLETED|0:0|2026-10-20T00:22:12|2026-10-20T00:22:14|00:00:02|1u1g-gen-0100\n2676374.19|bash|COMPLETED|0:0|2026-10-20T00:22:40|2026-10-20T00:22:44|00:00:04|1u1g-gen-0100\n2676374.20|bash|COMPLETED|0:0|2026-10-20T00:25:10|2026-10-20T00:25:12|00:00:02|1u1g-gen-0100\n2676374.21|bash|COMPLETED|0:0|2026-10-20T00:26:03|2026-10-20T00:26:05|00:00:02|1u1g-gen-0100\n2676374.22|bash|COMPLETED|0:0|2026-10-20T00:27:17|2026-10-20T00:27:19|00:00:02|1u1g-gen-0100\n2676374.23|bash|COMPLETED|0:0|2026-10-20T00:29:23|2026-10-20T00:29:25|00:00:02|1u1g-gen-0100\n2676374.24|bash|COMPLETED|0:0|2026-10-20T00:30:21|2026-10-20T00:30:23|00:00:02|1u1g-gen-0100\n2676374.25|bash|COMPLETED|0:0|2026-10-20T00:31:27|2026-10-20T00:31:29|00:00:02|1u1g-gen-0100\n2676374.26|bash|COMPLETED|0:0|2026-10-20T00:32:27|2026-10-20T00:32:29|00:00:02|1u1g-gen-0100\n2676374.27|bash|COMPLETED|0:0|2026-10-20T00:33:45|2026-10-20T00:33:50|00:00:05|1u1g-gen-0100\n",
+          "stderr": ""
+        },
+        "queue": {
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      }
+    }
+  ]
+}

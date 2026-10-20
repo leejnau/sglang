@@ -1,0 +1,1315 @@
+{
+  "status": "completed_all_required_workers_and_checks",
+  "scope": {
+    "api": "flashinfer.bmm_fp8",
+    "backend": "cublas",
+    "shapes_m_n_k": [
+      [
+        128,
+        1024,
+        1024
+      ],
+      [
+        144,
+        1024,
+        1024
+      ]
+    ],
+    "batch": 1,
+    "input": "identical seeded FP8 e4m3fn operands per paired shape/seed with unit FP32 dequantization scales",
+    "output": "BF16",
+    "runtime_modes": [
+      "eager",
+      "CUDA Graph replay"
+    ],
+    "model_or_server_benchmark": false,
+    "arms": "all arms use the same qualified descriptor overlay; default disables tuning, v1 omits v2 candidate selection, v2 uses the current startup wrapper",
+    "lookup_sources": "untuned natural default remains a real miss; tuned cold memory and fresh warm loaded-file winners; oracle follows phase-matched memory/file tier",
+    "m144_scope": "startup and serving both use144; candidate enumeration uses bucket256, while actual runtime-bucket profiling tensors have M144; this is not a separate tune256-then-serve144 experiment"
+  },
+  "hardware": {
+    "gpu": "NVIDIA H100 NVL",
+    "gpu_uuid": "240958a2-e8e1-3bac-b767-365c9e0b97bd",
+    "host": "1u1g-gen-0100",
+    "driver": "580.159.04",
+    "power_limit_watts": 310,
+    "exclusive_node": true,
+    "locked_clocks": false,
+    "absolute_comparison_to_prior_HBM3_batches": false
+  },
+  "source": {
+    "execution_commit": "b206224f74aae4883d5c38ee9278bbeaf815fc03",
+    "flashinfer_base": "0.7.2",
+    "overlay_pr": 6148,
+    "overlay_head": "14c5c67a1eb9ad3a608b8d3da3bf6d8924037c5c",
+    "overlay_method": "exact original diff cleanly applied to0.7.2, not the full branch head",
+    "torch": "2.14.1+cu130",
+    "torch_cuda": "13.0",
+    "image_digest": "sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
+    "measurement_policy": "unspecified; operation defaults retained",
+    "persistence": "existing v1 JSON; managed stores disabled",
+    "observed_profiler_config": {
+      "use_cuda_graph": false,
+      "use_cold_l2_cache": false,
+      "profile_rows_checked": 867,
+      "scope": "actual recorded operation defaults; measurement policy unspecified; no graph or cold-L2 profiling override"
+    }
+  },
+  "protocol": {
+    "seeds": [
+      17,
+      18,
+      19
+    ],
+    "independent_trials_per_paired_comparison": 3,
+    "fresh_workers": 36,
+    "samples_per_timing_block": 15,
+    "timing_blocks": 720,
+    "warmup_ms": 500,
+    "minimum_calibrated_batch_ms": 20,
+    "accepted_candidates_per_oracle": 9,
+    "ratios": "latency numerator/denominator; lower is faster",
+    "candidate_quality": "within-sweep selected-versus-best ratio, not natural-versus-oracle timing across separate windows",
+    "observed_profile_flags": {
+      "use_cuda_graph": false,
+      "use_cold_l2_cache": false,
+      "recorded_profiles": 867,
+      "scope": "All retained profile rows use the existing eager/hot-L2 operation defaults. Separate CUDA Graph oracle measurements test graph execution; no explicit policy override."
+    }
+  },
+  "validation": {
+    "automatic_shape_checkpoints": "both passed",
+    "frozen_full_analyzer_rerun": "passed with identical case results",
+    "independent_analysis_audit_checks": 5085,
+    "native_descriptor_used_1_checks": 928,
+    "native_acceptance_guards": 1116,
+    "numerical_checks": 2232,
+    "accepted_oracle_candidates": 324,
+    "excluded_candidates": 0,
+    "warm_workers": 18,
+    "warm_profiling_attempts": 0,
+    "tuned_warm_restarts": 12,
+    "untuned_warm_controls": 6,
+    "natural_cache_files": 18,
+    "warm_oracle_files": 162,
+    "persisted_natural_winners_and_bytes": "preserved",
+    "raw_full_archive_sha256": "14878da88071339a7eb611e74ed91ad9caaf35c25eeb8a401d48598e28067b87",
+    "public_raw_archive_sha256": "304c4565588c7cc2f4f9966e21cfb28666aaf30a67773f1795118f2accd69b3b",
+    "profile_attempts": {
+      "total": 867,
+      "v1": 408,
+      "v2": 459
+    }
+  },
+  "headline_warm_results": [
+    {
+      "m": 128,
+      "execution": "eager",
+      "warm_v2_over_v1_median_latency_ratio": 0.9902773854189744,
+      "per_seed_range": [
+        0.9640257571325251,
+        1.0046496067833774
+      ]
+    },
+    {
+      "m": 128,
+      "execution": "cuda_graph",
+      "warm_v2_over_v1_median_latency_ratio": 1.0142401094145443,
+      "per_seed_range": [
+        1.0105078870220132,
+        1.0367169286594633
+      ]
+    },
+    {
+      "m": 144,
+      "execution": "eager",
+      "warm_v2_over_v1_median_latency_ratio": 1.0156243832206233,
+      "per_seed_range": [
+        1.0100531807375959,
+        1.0291542651492882
+      ]
+    },
+    {
+      "m": 144,
+      "execution": "cuda_graph",
+      "warm_v2_over_v1_median_latency_ratio": 0.9207490623620652,
+      "per_seed_range": [
+        0.91659923358486,
+        1.0121942507736366
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "m": 128,
+      "runtime_profile_actual_m": 128,
+      "normalized_tuning_key_m": 128,
+      "natural_latency_ratios": [
+        {
+          "comparison": "v2_over_v1",
+          "phase": "cold",
+          "execution": "eager",
+          "paired_seed_ratios": {
+            "17": 0.9918545073154434,
+            "18": 0.9983365809130609,
+            "19": 0.9735040174673136
+          },
+          "median_ratio": 0.9918545073154434,
+          "range": [
+            0.9735040174673136,
+            0.9983365809130609
+          ]
+        },
+        {
+          "comparison": "v2_over_default",
+          "phase": "cold",
+          "execution": "eager",
+          "paired_seed_ratios": {
+            "17": 0.8277457614582576,
+            "18": 0.8155195621965009,
+            "19": 0.8000678534181761
+          },
+          "median_ratio": 0.8155195621965009,
+          "range": [
+            0.8000678534181761,
+            0.8277457614582576
+          ]
+        },
+        {
+          "comparison": "v1_over_default",
+          "phase": "cold",
+          "execution": "eager",
+          "paired_seed_ratios": {
+            "17": 0.8345435296741625,
+            "18": 0.8168783732743131,
+            "19": 0.8218434018378761
+          },
+          "median_ratio": 0.8218434018378761,
+          "range": [
+            0.8168783732743131,
+            0.8345435296741625
+          ]
+        },
+        {
+          "comparison": "v2_over_v1",
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "paired_seed_ratios": {
+            "17": 1.0030113843508597,
+            "18": 1.0318542620690265,
+            "19": 0.9999522561957844
+          },
+          "median_ratio": 1.0030113843508597,
+          "range": [
+            0.9999522561957844,
+            1.0318542620690265
+          ]
+        },
+        {
+          "comparison": "v2_over_default",
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "paired_seed_ratios": {
+            "17": 1.052330955813115,
+            "18": 1.0822072118202468,
+            "19": 1.0365267494946644
+          },
+          "median_ratio": 1.052330955813115,
+          "range": [
+            1.0365267494946644,
+            1.0822072118202468
+          ]
+        },
+        {
+          "comparison": "v1_over_default",
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "paired_seed_ratios": {
+            "17": 1.0491714971851238,
+            "18": 1.048798509249024,
+            "19": 1.0365762395877018
+          },
+          "median_ratio": 1.048798509249024,
+          "range": [
+            1.0365762395877018,
+            1.0491714971851238
+          ]
+        },
+        {
+          "comparison": "v2_over_v1",
+          "phase": "warm",
+          "execution": "eager",
+          "paired_seed_ratios": {
+            "17": 0.9640257571325251,
+            "18": 1.0046496067833774,
+            "19": 0.9902773854189744
+          },
+          "median_ratio": 0.9902773854189744,
+          "range": [
+            0.9640257571325251,
+            1.0046496067833774
+          ]
+        },
+        {
+          "comparison": "v2_over_default",
+          "phase": "warm",
+          "execution": "eager",
+          "paired_seed_ratios": {
+            "17": 0.8348584363049628,
+            "18": 0.8498494165501091,
+            "19": 0.8521781638989611
+          },
+          "median_ratio": 0.8498494165501091,
+          "range": [
+            0.8348584363049628,
+            0.8521781638989611
+          ]
+        },
+        {
+          "comparison": "v1_over_default",
+          "phase": "warm",
+          "execution": "eager",
+          "paired_seed_ratios": {
+            "17": 0.866012583302994,
+            "18": 0.8459162386686262,
+            "19": 0.8605449103923694
+          },
+          "median_ratio": 0.8605449103923694,
+          "range": [
+            0.8459162386686262,
+            0.866012583302994
+          ]
+        },
+        {
+          "comparison": "v2_over_v1",
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "paired_seed_ratios": {
+            "17": 1.0142401094145443,
+            "18": 1.0105078870220132,
+            "19": 1.0367169286594633
+          },
+          "median_ratio": 1.0142401094145443,
+          "range": [
+            1.0105078870220132,
+            1.0367169286594633
+          ]
+        },
+        {
+          "comparison": "v2_over_default",
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "paired_seed_ratios": {
+            "17": 0.9935007169906327,
+            "18": 1.0034708603978695,
+            "19": 1.0111587090167076
+          },
+          "median_ratio": 1.0034708603978695,
+          "range": [
+            0.9935007169906327,
+            1.0111587090167076
+          ]
+        },
+        {
+          "comparison": "v1_over_default",
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "paired_seed_ratios": {
+            "17": 0.979551792291193,
+            "18": 0.9930361487381539,
+            "19": 0.9753469641169996
+          },
+          "median_ratio": 0.979551792291193,
+          "range": [
+            0.9753469641169996,
+            0.9930361487381539
+          ]
+        }
+      ],
+      "natural_latency_us": [
+        {
+          "arm": "default",
+          "phase": "cold",
+          "lookup_tier": "miss",
+          "eager_worker_medians_us": [
+            49.36367186019197,
+            49.46946864947677,
+            50.1881746458821
+          ],
+          "eager_median_worker_median_us": 49.46946864947677,
+          "cuda_graph_worker_medians_us": [
+            4.45400601165602,
+            4.396076292323414,
+            4.575949787977152
+          ],
+          "cuda_graph_median_worker_median_us": 4.45400601165602
+        },
+        {
+          "arm": "default",
+          "phase": "warm",
+          "lookup_tier": "miss",
+          "eager_worker_medians_us": [
+            49.72650058334693,
+            49.51867158524692,
+            50.09614251321182
+          ],
+          "eager_median_worker_median_us": 49.72650058334693,
+          "cuda_graph_worker_medians_us": [
+            4.51341056759702,
+            4.6192973968572915,
+            4.566908864944708
+          ],
+          "cuda_graph_median_worker_median_us": 4.566908864944708
+        },
+        {
+          "arm": "v1",
+          "phase": "cold",
+          "lookup_tier": "memory",
+          "eager_worker_medians_us": [
+            41.19613295188174,
+            40.410539077129215,
+            41.246820183005184
+          ],
+          "eager_median_worker_median_us": 41.19613295188174,
+          "cuda_graph_worker_medians_us": [
+            4.673016155720688,
+            4.610598261933774,
+            4.743320823763497
+          ],
+          "cuda_graph_median_worker_median_us": 4.673016155720688
+        },
+        {
+          "arm": "v1",
+          "phase": "warm",
+          "lookup_tier": "file",
+          "eager_worker_medians_us": [
+            43.063775228802115,
+            41.888648411259055,
+            43.109980470035225
+          ],
+          "eager_median_worker_median_us": 43.063775228802115,
+          "cuda_graph_worker_medians_us": [
+            4.421119410835672,
+            4.587129296851344,
+            4.454320696822833
+          ],
+          "cuda_graph_median_worker_median_us": 4.454320696822833
+        },
+        {
+          "arm": "v2",
+          "phase": "cold",
+          "lookup_tier": "memory",
+          "eager_worker_medians_us": [
+            40.860570152290165,
+            40.34331941511482,
+            40.15394515590742
+          ],
+          "eager_median_worker_median_us": 40.34331941511482,
+          "cuda_graph_worker_medians_us": [
+            4.68708840344334,
+            4.75746546726441,
+            4.743094359582756
+          ],
+          "cuda_graph_median_worker_median_us": 4.743094359582756
+        },
+        {
+          "arm": "v2",
+          "phase": "warm",
+          "lookup_tier": "file",
+          "eager_worker_medians_us": [
+            41.51458851993084,
+            42.08341415505856,
+            42.69083874532953
+          ],
+          "eager_median_worker_median_us": 42.08341415505856,
+          "cuda_graph_worker_medians_us": [
+            4.484076634980738,
+            4.635330333258025,
+            4.617869672074448
+          ],
+          "cuda_graph_median_worker_median_us": 4.617869672074448
+        }
+      ],
+      "cold_natural_winners": [
+        {
+          "arm": "v1",
+          "seed": 17,
+          "tactic": [
+            253403070530,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "kind": "descriptor",
+          "runtime_enumeration_index_in_this_worker": 0,
+          "fresh_warm_same_winner": true
+        },
+        {
+          "arm": "v1",
+          "seed": 18,
+          "tactic": [
+            1340029796418,
+            4294967332,
+            0,
+            1407374883553283,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "kind": "descriptor",
+          "runtime_enumeration_index_in_this_worker": 5,
+          "fresh_warm_same_winner": true
+        },
+        {
+          "arm": "v1",
+          "seed": 19,
+          "tactic": [
+            253403070530,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "kind": "descriptor",
+          "runtime_enumeration_index_in_this_worker": 0,
+          "fresh_warm_same_winner": true
+        },
+        {
+          "arm": "v2",
+          "seed": 17,
+          "tactic": [
+            253403070530,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "kind": "descriptor",
+          "runtime_enumeration_index_in_this_worker": 0,
+          "fresh_warm_same_winner": true
+        },
+        {
+          "arm": "v2",
+          "seed": 18,
+          "tactic": -1,
+          "kind": "default",
+          "runtime_enumeration_index_in_this_worker": null,
+          "fresh_warm_same_winner": true
+        },
+        {
+          "arm": "v2",
+          "seed": 19,
+          "tactic": -1,
+          "kind": "default",
+          "runtime_enumeration_index_in_this_worker": null,
+          "fresh_warm_same_winner": true
+        }
+      ],
+      "same_oracle_selected_to_best_regret": {
+        "definition": "selected tactic's median in one oracle sweep divided by the minimum accepted candidate median in that same sweep and lookup tier; optimum1",
+        "results": [
+          {
+            "arm": "v1",
+            "phase": "cold",
+            "execution": "eager",
+            "lookup_tier": "memory",
+            "paired_seed_ratios": {
+              "17": 1.0116286138834139,
+              "18": 1.0151243145454831,
+              "19": 1.026162404103036
+            },
+            "median_ratio": 1.0151243145454831,
+            "range": [
+              1.0116286138834139,
+              1.026162404103036
+            ]
+          },
+          {
+            "arm": "v1",
+            "phase": "cold",
+            "execution": "cuda_graph",
+            "lookup_tier": "memory",
+            "paired_seed_ratios": {
+              "17": 1.002630495152511,
+              "18": 1.0130466737965382,
+              "19": 1.0055992531253075
+            },
+            "median_ratio": 1.0055992531253075,
+            "range": [
+              1.002630495152511,
+              1.0130466737965382
+            ]
+          },
+          {
+            "arm": "v1",
+            "phase": "warm",
+            "execution": "eager",
+            "lookup_tier": "file",
+            "paired_seed_ratios": {
+              "17": 1.0045476697508253,
+              "18": 1.0040244188531897,
+              "19": 1.0181427348337222
+            },
+            "median_ratio": 1.0045476697508253,
+            "range": [
+              1.0040244188531897,
+              1.0181427348337222
+            ]
+          },
+          {
+            "arm": "v1",
+            "phase": "warm",
+            "execution": "cuda_graph",
+            "lookup_tier": "file",
+            "paired_seed_ratios": {
+              "17": 1.0008334546789097,
+              "18": 1.0091059620207394,
+              "19": 1.0024603414253455
+            },
+            "median_ratio": 1.0024603414253455,
+            "range": [
+              1.0008334546789097,
+              1.0091059620207394
+            ]
+          },
+          {
+            "arm": "v2",
+            "phase": "cold",
+            "execution": "eager",
+            "lookup_tier": "memory",
+            "paired_seed_ratios": {
+              "17": 1.0108442105531847,
+              "18": 1.0,
+              "19": 1.013069079217105
+            },
+            "median_ratio": 1.0108442105531847,
+            "range": [
+              1.0,
+              1.013069079217105
+            ]
+          },
+          {
+            "arm": "v2",
+            "phase": "cold",
+            "execution": "cuda_graph",
+            "lookup_tier": "memory",
+            "paired_seed_ratios": {
+              "17": 1.005809117002272,
+              "18": 1.0,
+              "19": 1.033464915454112
+            },
+            "median_ratio": 1.005809117002272,
+            "range": [
+              1.0,
+              1.033464915454112
+            ]
+          },
+          {
+            "arm": "v2",
+            "phase": "warm",
+            "execution": "eager",
+            "lookup_tier": "file",
+            "paired_seed_ratios": {
+              "17": 1.0195849395406746,
+              "18": 1.0200070984364933,
+              "19": 1.0205073704546639
+            },
+            "median_ratio": 1.0200070984364933,
+            "range": [
+              1.0195849395406746,
+              1.0205073704546639
+            ]
+          },
+          {
+            "arm": "v2",
+            "phase": "warm",
+            "execution": "cuda_graph",
+            "lookup_tier": "file",
+            "paired_seed_ratios": {
+              "17": 1.008453283286713,
+              "18": 1.0016834731480029,
+              "19": 1.0026494613856232
+            },
+            "median_ratio": 1.0026494613856232,
+            "range": [
+              1.0016834731480029,
+              1.008453283286713
+            ]
+          }
+        ]
+      },
+      "v2_profiler_winner_runner_up_margins": [
+        {
+          "seed": 17,
+          "selected_tactic": [
+            253403070530,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_us": 9.305600076913834,
+          "runner_up_us": 9.452799707651138,
+          "runner_up_over_best": 1.015818392099451
+        },
+        {
+          "seed": 18,
+          "selected_tactic": -1,
+          "best_us": 9.350399672985077,
+          "runner_up_us": 9.561599791049957,
+          "runner_up_over_best": 1.0225872824105129
+        },
+        {
+          "seed": 19,
+          "selected_tactic": -1,
+          "best_us": 9.50080007314682,
+          "runner_up_us": 9.619200229644775,
+          "runner_up_over_best": 1.0124621248301606
+        }
+      ],
+      "startup_diagnostic_only": [
+        {
+          "phase": "cold",
+          "paired_v2_over_v1": [
+            1.0979006596504541,
+            1.0945570363595538,
+            1.0993500616192333
+          ],
+          "median_paired_ratio": 1.0979006596504541,
+          "scope": "instrumented operation wrapper startup; no full-server startup measurement"
+        },
+        {
+          "phase": "warm",
+          "paired_v2_over_v1": [
+            0.9962317599044411,
+            1.002185485922101,
+            1.000272287173367
+          ],
+          "median_paired_ratio": 1.000272287173367,
+          "scope": "instrumented operation wrapper startup; no full-server startup measurement"
+        }
+      ],
+      "excluded_candidates": 0
+    },
+    {
+      "m": 144,
+      "runtime_profile_actual_m": 144,
+      "normalized_tuning_key_m": 256,
+      "natural_latency_ratios": [
+        {
+          "comparison": "v2_over_v1",
+          "phase": "cold",
+          "execution": "eager",
+          "paired_seed_ratios": {
+            "17": 0.9780603372782655,
+            "18": 0.9917399402625929,
+            "19": 1.0030183098326622
+          },
+          "median_ratio": 0.9917399402625929,
+          "range": [
+            0.9780603372782655,
+            1.0030183098326622
+          ]
+        },
+        {
+          "comparison": "v2_over_default",
+          "phase": "cold",
+          "execution": "eager",
+          "paired_seed_ratios": {
+            "17": 0.8357008094681523,
+            "18": 0.8364078595306855,
+            "19": 0.8535594696811397
+          },
+          "median_ratio": 0.8364078595306855,
+          "range": [
+            0.8357008094681523,
+            0.8535594696811397
+          ]
+        },
+        {
+          "comparison": "v1_over_default",
+          "phase": "cold",
+          "execution": "eager",
+          "paired_seed_ratios": {
+            "17": 0.8544470904461072,
+            "18": 0.84337418064379,
+            "19": 0.8509909154335804
+          },
+          "median_ratio": 0.8509909154335804,
+          "range": [
+            0.84337418064379,
+            0.8544470904461072
+          ]
+        },
+        {
+          "comparison": "v2_over_v1",
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "paired_seed_ratios": {
+            "17": 0.9486281513921736,
+            "18": 0.9522158768077571,
+            "19": 1.0363401203221438
+          },
+          "median_ratio": 0.9522158768077571,
+          "range": [
+            0.9486281513921736,
+            1.0363401203221438
+          ]
+        },
+        {
+          "comparison": "v2_over_default",
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "paired_seed_ratios": {
+            "17": 1.0512629281068413,
+            "18": 0.9895530446065808,
+            "19": 1.1354347809535719
+          },
+          "median_ratio": 1.0512629281068413,
+          "range": [
+            0.9895530446065808,
+            1.1354347809535719
+          ]
+        },
+        {
+          "comparison": "v1_over_default",
+          "phase": "cold",
+          "execution": "cuda_graph",
+          "paired_seed_ratios": {
+            "17": 1.1081928430692727,
+            "18": 1.0392108225752275,
+            "19": 1.0956198246967652
+          },
+          "median_ratio": 1.0956198246967652,
+          "range": [
+            1.0392108225752275,
+            1.1081928430692727
+          ]
+        },
+        {
+          "comparison": "v2_over_v1",
+          "phase": "warm",
+          "execution": "eager",
+          "paired_seed_ratios": {
+            "17": 1.0291542651492882,
+            "18": 1.0156243832206233,
+            "19": 1.0100531807375959
+          },
+          "median_ratio": 1.0156243832206233,
+          "range": [
+            1.0100531807375959,
+            1.0291542651492882
+          ]
+        },
+        {
+          "comparison": "v2_over_default",
+          "phase": "warm",
+          "execution": "eager",
+          "paired_seed_ratios": {
+            "17": 0.897378058470762,
+            "18": 0.8627665779013992,
+            "19": 0.874066537457003
+          },
+          "median_ratio": 0.874066537457003,
+          "range": [
+            0.8627665779013992,
+            0.897378058470762
+          ]
+        },
+        {
+          "comparison": "v1_over_default",
+          "phase": "warm",
+          "execution": "eager",
+          "paired_seed_ratios": {
+            "17": 0.8719567987609604,
+            "18": 0.8494937618231455,
+            "19": 0.8653668481284441
+          },
+          "median_ratio": 0.8653668481284441,
+          "range": [
+            0.8494937618231455,
+            0.8719567987609604
+          ]
+        },
+        {
+          "comparison": "v2_over_v1",
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "paired_seed_ratios": {
+            "17": 0.9207490623620652,
+            "18": 0.91659923358486,
+            "19": 1.0121942507736366
+          },
+          "median_ratio": 0.9207490623620652,
+          "range": [
+            0.91659923358486,
+            1.0121942507736366
+          ]
+        },
+        {
+          "comparison": "v2_over_default",
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "paired_seed_ratios": {
+            "17": 1.011521978602725,
+            "18": 0.9704495261497577,
+            "19": 1.0689950705131825
+          },
+          "median_ratio": 1.011521978602725,
+          "range": [
+            0.9704495261497577,
+            1.0689950705131825
+          ]
+        },
+        {
+          "comparison": "v1_over_default",
+          "phase": "warm",
+          "execution": "cuda_graph",
+          "paired_seed_ratios": {
+            "17": 1.0985859448043243,
+            "18": 1.0587500955617068,
+            "19": 1.056116520812218
+          },
+          "median_ratio": 1.0587500955617068,
+          "range": [
+            1.056116520812218,
+            1.0985859448043243
+          ]
+        }
+      ],
+      "natural_latency_us": [
+        {
+          "arm": "default",
+          "phase": "cold",
+          "lookup_tier": "miss",
+          "eager_worker_medians_us": [
+            48.6096236272715,
+            48.12898259842768,
+            48.81827917415649
+          ],
+          "eager_median_worker_median_us": 48.6096236272715,
+          "cuda_graph_worker_medians_us": [
+            4.63549677078845,
+            4.743844328913838,
+            4.491586150834337
+          ],
+          "cuda_graph_median_worker_median_us": 4.63549677078845
+        },
+        {
+          "arm": "default",
+          "phase": "warm",
+          "lookup_tier": "miss",
+          "eager_worker_medians_us": [
+            49.556203885003924,
+            50.1658272696659,
+            50.08998268749565
+          ],
+          "eager_median_worker_median_us": 50.08998268749565,
+          "cuda_graph_worker_medians_us": [
+            4.5502289140131325,
+            4.687297405325808,
+            4.643592183128931
+          ],
+          "cuda_graph_median_worker_median_us": 4.643592183128931
+        },
+        {
+          "arm": "v1",
+          "phase": "cold",
+          "lookup_tier": "memory",
+          "eager_worker_medians_us": [
+            41.534351476002485,
+            40.59074126416817,
+            41.54391208430752
+          ],
+          "eager_median_worker_median_us": 41.534351476002485,
+          "cuda_graph_worker_medians_us": [
+            5.137024345458485,
+            4.929854367219377,
+            4.921070831187535
+          ],
+          "cuda_graph_median_worker_median_us": 4.929854367219377
+        },
+        {
+          "arm": "v1",
+          "phase": "warm",
+          "lookup_tier": "file",
+          "eager_worker_medians_us": [
+            43.21086889831349,
+            42.61555732227862,
+            43.34621044108644
+          ],
+          "eager_median_worker_median_us": 43.21086889831349,
+          "cuda_graph_worker_medians_us": [
+            4.998817530577071,
+            4.9626765758148395,
+            4.904174420516938
+          ],
+          "cuda_graph_median_worker_median_us": 4.9626765758148395
+        },
+        {
+          "arm": "v2",
+          "phase": "cold",
+          "lookup_tier": "memory",
+          "eager_worker_medians_us": [
+            40.623101813253015,
+            40.25545931654051,
+            41.669304482638836
+          ],
+          "eager_median_worker_median_us": 40.623101813253015,
+          "cuda_graph_worker_medians_us": [
+            4.873125908488873,
+            4.69428559881635,
+            5.099903137306683
+          ],
+          "cuda_graph_median_worker_median_us": 4.873125908488873
+        },
+        {
+          "arm": "v2",
+          "phase": "warm",
+          "lookup_tier": "file",
+          "eager_worker_medians_us": [
+            44.47065002750605,
+            43.28139912104234,
+            43.78197772894055
+          ],
+          "eager_median_worker_median_us": 43.78197772894055,
+          "cuda_graph_worker_medians_us": [
+            4.6026565541978925,
+            4.548785545921419,
+            4.963977153238375
+          ],
+          "cuda_graph_median_worker_median_us": 4.6026565541978925
+        }
+      ],
+      "cold_natural_winners": [
+        {
+          "arm": "v1",
+          "seed": 17,
+          "tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "kind": "descriptor",
+          "runtime_enumeration_index_in_this_worker": 1,
+          "fresh_warm_same_winner": true
+        },
+        {
+          "arm": "v1",
+          "seed": 18,
+          "tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "kind": "descriptor",
+          "runtime_enumeration_index_in_this_worker": 1,
+          "fresh_warm_same_winner": true
+        },
+        {
+          "arm": "v1",
+          "seed": 19,
+          "tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "kind": "descriptor",
+          "runtime_enumeration_index_in_this_worker": 1,
+          "fresh_warm_same_winner": true
+        },
+        {
+          "arm": "v2",
+          "seed": 17,
+          "tactic": -1,
+          "kind": "default",
+          "runtime_enumeration_index_in_this_worker": null,
+          "fresh_warm_same_winner": true
+        },
+        {
+          "arm": "v2",
+          "seed": 18,
+          "tactic": -1,
+          "kind": "default",
+          "runtime_enumeration_index_in_this_worker": null,
+          "fresh_warm_same_winner": true
+        },
+        {
+          "arm": "v2",
+          "seed": 19,
+          "tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "kind": "descriptor",
+          "runtime_enumeration_index_in_this_worker": 1,
+          "fresh_warm_same_winner": true
+        }
+      ],
+      "same_oracle_selected_to_best_regret": {
+        "definition": "selected tactic's median in one oracle sweep divided by the minimum accepted candidate median in that same sweep and lookup tier; optimum1",
+        "results": [
+          {
+            "arm": "v1",
+            "phase": "cold",
+            "execution": "eager",
+            "lookup_tier": "memory",
+            "paired_seed_ratios": {
+              "17": 1.0292101506856126,
+              "18": 1.0264927142261444,
+              "19": 1.0347344949895092
+            },
+            "median_ratio": 1.0292101506856126,
+            "range": [
+              1.0264927142261444,
+              1.0347344949895092
+            ]
+          },
+          {
+            "arm": "v1",
+            "phase": "cold",
+            "execution": "cuda_graph",
+            "lookup_tier": "memory",
+            "paired_seed_ratios": {
+              "17": 1.088103048663379,
+              "18": 1.1025890366380902,
+              "19": 1.0673372488330464
+            },
+            "median_ratio": 1.088103048663379,
+            "range": [
+              1.0673372488330464,
+              1.1025890366380902
+            ]
+          },
+          {
+            "arm": "v1",
+            "phase": "warm",
+            "execution": "eager",
+            "lookup_tier": "file",
+            "paired_seed_ratios": {
+              "17": 1.0437172084674478,
+              "18": 1.0225951366808301,
+              "19": 1.0249784846209333
+            },
+            "median_ratio": 1.0249784846209333,
+            "range": [
+              1.0225951366808301,
+              1.0437172084674478
+            ]
+          },
+          {
+            "arm": "v1",
+            "phase": "warm",
+            "execution": "cuda_graph",
+            "lookup_tier": "file",
+            "paired_seed_ratios": {
+              "17": 1.086357850516837,
+              "18": 1.1029161370069007,
+              "19": 1.066254343282956
+            },
+            "median_ratio": 1.086357850516837,
+            "range": [
+              1.066254343282956,
+              1.1029161370069007
+            ]
+          },
+          {
+            "arm": "v2",
+            "phase": "cold",
+            "execution": "eager",
+            "lookup_tier": "memory",
+            "paired_seed_ratios": {
+              "17": 1.0013110048416693,
+              "18": 1.0,
+              "19": 1.0809726352049585
+            },
+            "median_ratio": 1.0013110048416693,
+            "range": [
+              1.0,
+              1.0809726352049585
+            ]
+          },
+          {
+            "arm": "v2",
+            "phase": "cold",
+            "execution": "cuda_graph",
+            "lookup_tier": "memory",
+            "paired_seed_ratios": {
+              "17": 1.0151235039091997,
+              "18": 1.004104456080386,
+              "19": 1.0726819195438133
+            },
+            "median_ratio": 1.0151235039091997,
+            "range": [
+              1.004104456080386,
+              1.0726819195438133
+            ]
+          },
+          {
+            "arm": "v2",
+            "phase": "warm",
+            "execution": "eager",
+            "lookup_tier": "file",
+            "paired_seed_ratios": {
+              "17": 1.0,
+              "18": 1.0,
+              "19": 1.0222238625294586
+            },
+            "median_ratio": 1.0,
+            "range": [
+              1.0,
+              1.0222238625294586
+            ]
+          },
+          {
+            "arm": "v2",
+            "phase": "warm",
+            "execution": "cuda_graph",
+            "lookup_tier": "file",
+            "paired_seed_ratios": {
+              "17": 1.000529856755994,
+              "18": 1.0139067331584284,
+              "19": 1.079343897180164
+            },
+            "median_ratio": 1.0139067331584284,
+            "range": [
+              1.000529856755994,
+              1.079343897180164
+            ]
+          }
+        ]
+      },
+      "v2_profiler_winner_runner_up_margins": [
+        {
+          "seed": 17,
+          "selected_tactic": -1,
+          "best_us": 9.641599655151367,
+          "runner_up_us": 9.852799773216248,
+          "runner_up_over_best": 1.021905091024189
+        },
+        {
+          "seed": 18,
+          "selected_tactic": -1,
+          "best_us": 9.564799815416336,
+          "runner_up_us": 9.852799773216248,
+          "runner_up_over_best": 1.0301104009867221
+        },
+        {
+          "seed": 19,
+          "selected_tactic": [
+            446676598850,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "best_us": 9.567999839782715,
+          "runner_up_us": 9.673599898815155,
+          "runner_up_over_best": 1.01103679565225
+        }
+      ],
+      "startup_diagnostic_only": [
+        {
+          "phase": "cold",
+          "paired_v2_over_v1": [
+            1.0993410853339058,
+            1.1009133345592095,
+            1.099145554005118
+          ],
+          "median_paired_ratio": 1.0993410853339058,
+          "scope": "instrumented operation wrapper startup; no full-server startup measurement"
+        },
+        {
+          "phase": "warm",
+          "paired_v2_over_v1": [
+            0.9879115912754978,
+            0.9905153846062448,
+            1.0059429622775744
+          ],
+          "median_paired_ratio": 0.9905153846062448,
+          "scope": "instrumented operation wrapper startup; no full-server startup measurement"
+        }
+      ],
+      "excluded_candidates": 0
+    }
+  ],
+  "findings": [
+    "Default -1 participated in v2 profiling and won2/3cold trials at each shape: M128 seeds18/19 and M144 seeds17/18. All four winners survived fresh file reloads as genuine hits.",
+    "M128 warm v2/v1 latency is0.9902773854189744 eager and1.0142401094145443 graph by median paired ratio. All three sampled warm graph ratios exceed1.",
+    "M144 warm v2/v1 latency is1.0156243832206233 eager and0.9207490623620652 graph. All three sampled eager ratios exceed1; graph is faster in two trials and slower in seed19.",
+    "M144 warm same-sweep graph selected-to-best ratios have medians1.086357850516837 for v1 and1.0139067331584284 for v2. This improves the measured candidate-ranking diagnostic while natural eager latency still regresses.",
+    "M144 seed19 v2 selected the same explicit descriptor as v1. Its warm graph selected-to-best oracle ratio is1.079343897180164. This is an exploratory measured ranking, not proof that the algorithm is universally suboptimal.",
+    "The default true-miss versus cached eager gap includes lookup/dispatch-path differences. It does not isolate GPU algorithm quality; cached-default oracle timing is the appropriate same-tier candidate comparison.",
+    "Results support correct candidate adoption and persistence, with performance depending on shape, mode and trial. They do not establish uniform v2 superiority or a serving speedup."
+  ],
+  "diagnostic_and_causal_distinctions": [
+    "Natural paired latency is the observed public-operation outcome; selected-to-best oracle ratios assess measured candidate quality within the same worker, sweep and lookup tier.",
+    "Natural-versus-oracle comparisons span separate timing windows and may be below1; they are not pure selection regret.",
+    "Taking the minimum of nine noisy candidate estimates makes the measured oracle optimistic. Minimum-selection noise, execution order, clock and sampling variation contribute to small apparent regret.",
+    "Observed winner/runner-up profiler gaps are roughly1.1\u20133.0percent in these v2 trials. Current data do not isolate noise versus a mismatch between profiling and eventual runtime objectives.",
+    "All867actual profiling rows record use_cuda_graph=False and use_cold_l2_cache=False. The measurement policy remained unspecified; no explicit eager/graph policy or cold-L2 override was tested. CUDA Graph replay was evaluated separately at runtime.",
+    "Startup intervals exclude explicit native compilation/build and the initial untuned public call, but include wrapper tuning work. They are secondary diagnostics and are not full-server startup measurements."
+  ],
+  "limits": [
+    "Three independent fresh-worker trials per comparison, not45; 15samples estimate each worker latency.",
+    "One H100 NVL, two small FP8 shapes and an experimental source overlay; no confidence interval, significance, equivalence or broad performance guarantee.",
+    "No direct absolute performance comparison with previous HBM3 batches.",
+    "No model-serving, BF16, distributed, managed-store, explicit-policy or production rollout qualification.",
+    "All324oracle candidates were accepted here; this does not establish acceptance for other shapes or devices.",
+    "Descriptor enumeration indices are diagnostics local to each worker; the persisted tactics are the full descriptors."
+  ],
+  "next_recommendation": {
+    "immediate": "Publish the complete mixed results and retain the existing v1 baseline/persistence; this batch justifies neither removing v1 nor making a serving-performance claim.",
+    "conditional_follow_up": "If continuing performance investigation, make the next bounded experiment a ranking-stability and objective-match check on M144's default versus the selected explicit descriptor, retaining eager and graph outcomes separately.",
+    "proposed_method": "Use randomized/interleaved paired candidate measurements with the same real file lookup, fixed inputs and numerical guards; repeat fresh tuning trials, report uncertainty and profiler margins, and check whether ranking disagreement persists.",
+    "later_decision": "Only after that evidence decide whether to evaluate explicit eager/graph measurement policies as a separate manual experiment. Do not combine it with persistence migration.",
+    "launch_status": "recommendation only; no additional experiment launched"
+  },
+  "resource_status": {
+    "allocation": "2676374",
+    "released_at_local": "2026-10-19T17:34:31-07:00",
+    "empty_queue_confirmed_at_local": "2026-10-19T17:35:20-07:00"
+  },
+  "derived_from": {
+    "analysis_sha256": "f0a97463d10b57b6312e30f0747df3eebfa1bc8f63510cf887f0efa8e5cad70e",
+    "independent_analysis_audit_sha256": "ff81f4e3270d578563b6c16a45e8d254606c9b43a9caf21dc8ae2f6ca3cdddb8"
+  }
+}
