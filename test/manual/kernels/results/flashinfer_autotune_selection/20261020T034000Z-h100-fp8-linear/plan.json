@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "batch_id": "20261020T034000Z-h100-fp8-linear",
+  "status": "preregistered_before_fixture_capture",
+  "objective": "Compare untuned default, v1 and v2 through one actual SGLang static per-tensor FP8 fused-QKV linear layer with fixed captured model activations and weights.",
+  "landed_main_commit": "1897575ce11301b6b5ce647f0ad4fa2e777ee2bd",
+  "source_baseline_commit": "4eb4cbbc2a9ea0d12f8246875cc60dc9624bff6f",
+  "flashinfer_source": {
+    "base_release": "0.7.2",
+    "base_commit": "d84335d8c54e0c8f9f7e22faa15c7e34a58abf94",
+    "upstream_pr": 6148,
+    "patch_head": "14c5c67a1eb9ad3a608b8d3da3bf6d8924037c5c",
+    "implementation": "Exact original diff applied cleanly to0.7.2, not full PR head; candidate source only for every arm.",
+    "input_batch": "test/manual/kernels/results/flashinfer_autotune_selection/20261019T232945Z-h100-descriptor-qualification",
+    "source_overlay_archive_sha256": "c62f09dad18dbe0ce326177077360fe716095f209dc023b25c5552dcc12f666f",
+    "source_manifest_sha256": "3f4305fce604d3cd51e85047678c6efbf71e35bcf51037e9586d15bc20486895",
+    "native_loading": "Reuse audited prepare_native(candidate): explicit JitSpec.build/load, identical module bootstrap in every arm; reject AOT substitution. One isolated candidate build workspace, fresh process/container per worker."
+  },
+  "container_image": "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
+  "environment": {
+    "gpu": "NVIDIA H100 NVL",
+    "physical_gpu_uuid": "240958a2-e8e1-3bac-b767-365c9e0b97bd",
+    "driver": "580.159.04",
+    "torch": "2.14.1+cu130",
+    "torch_cuda": "13.0",
+    "exclusive_node": true,
+    "clock_lock": false,
+    "cuda_arch_list": "9.0",
+    "sglang_wrapper_sha256": "64deff581665bd04830535baccfdfbdfa72794d919bc462fc469a4c42bdd68f5",
+    "host": "1u1g-gen-0100",
+    "power_limit_watts": 310,
+    "hardware_change": "Reuse prior H100NVL physical GPU if available; no comparisons to earlier HBM3 absolute timings. Hardware preflight must match this frozen expected model/UUID/driver before workers."
+  },
+  "workload": {
+    "api": "sglang.srt.layers.quantization.fp8_utils.apply_fp8_linear_bmm_flashinfer",
+    "model_id": "Qwen/Qwen3-0.6B",
+    "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "projection": "First transformer layer fused q/k/v projection, concatenated in source-verified SGLang QKV loader order.",
+    "tokens": 144,
+    "batch": 1,
+    "seed": 19,
+    "arms": [
+      "default",
+      "v1",
+      "v2"
+    ],
+    "fixture": "Frozen captured BF16 activations and checkpoint weights; per-tensor static scales calibrated from this one input/weight tensor. Exact shapes, tensor/file hashes and capture provenance frozen before tuning workers.",
+    "measurement_policy": "unspecified",
+    "persistence": "Existing real SGLang wrapper and v1 JSON save/load; managed store disabled.",
+    "shape_limit": "One representative captured prefill projection, not full-model output accuracy or traffic distribution. Dense BF16 checkpoint adapted to static per-tensor FP8 for this experiment; no production calibration claim.",
+    "path": "Actual SGLang static quantizer, normal custom-op dispatch/fast path and allocation, FlashInfer cublas FP8 implementation; no replacement or output copy in timed calls."
+  },
+  "protocol": {
+    "trials": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "phases": [
+      "cold",
+      "warm"
+    ],
+    "workers_total": 36,
+    "trial_arm_orders": [
+      [
+        "default",
+        "v1",
+        "v2"
+      ],
+      [
+        "default",
+        "v2",
+        "v1"
+      ],
+      [
+        "v1",
+        "default",
+        "v2"
+      ],
+      [
+        "v1",
+        "v2",
+        "default"
+      ],
+      [
+        "v2",
+        "default",
+        "v1"
+      ],
+      [
+        "v2",
+        "v1",
+        "default"
+      ]
+    ],
+    "trial_order": "Ascending0..5, all six arm permutations once, cold then fresh warm process per arm; identical fixed input bytes and reset RNG19.",
+    "natural_samples": 15,
+    "requested_iterations": 20,
+    "warmup_ms": 500,
+    "min_sample_ms": 20,
+    "max_iterations": 65536,
+    "timing": "Independent synchronized batches; eager primary wall per call, graph primary GPU-event replay span including possible host gaps. Preserve both raw channels and effective iteration counts.",
+    "graphs": "Capture the actual returned output allocation; replay binds/checks that exact output even after eager calls. Poison and change/restore BF16 inputs outside timing. No output copy added to measured path.",
+    "instrumentation": "No native/choose/search observation in latency windows; dormant forbidden-profiling guard only. Source, native acceptance, true cache source and quantizer operand observations outside timing.",
+    "checkpoint": "First full trial6workers must pass frozen analyzer before remaining30. No speedup acceptance threshold.",
+    "candidate_analysis": "Record every actual startup candidate/profile input shape/settings/time and selected minimum. Runtime enumeration diagnostics outside timing; no forced shortlist/oracle in this batch.",
+    "timeout_seconds_per_worker": 600,
+    "capture_timeout_seconds": 900,
+    "startup_scope": "Secondary operation-wrapper diagnostic, excludes model capture/download, native construction/build/load and initial quantizer/public-call preparation."
+  },
+  "acceptance": [
+    "Pinned image, clean frozen checkout with landed wrapper, exact qualified descriptor overlay and expected physical GPU/driver match.",
+    "Capture script and public checkpoint revision frozen before acquisition. Private immutable fixture bytes, exact model/file/tensor hashes and source capture provenance frozen before comparison workers.",
+    "All36 workers consume identical operands/scales; actual static quantizer matches independent FP32 reciprocal/multiply/clamp/FP8 reference bytes, and observed native operation sees matching inputs/scales/layout.",
+    "Numerical actual quantized-input FP32 reference checks pass; BF16 dense approximation error reported separately with no model accuracy claim.",
+    "Correct eager and poisoned/change/restore CUDA Graph output from actual allocated graph storage; stable serving inputs restored after checks.",
+    "Cold tuned startup has real finite runtime-bucket profile minimum selected; v2 includes default-1; v1 excludes it. Default and all warm/post-startup attempts are zero.",
+    "Cold-to-warm tactic and cache bytes match; warm tuned serving/capture uses actual file-tier hit without memory promotion; explicit winner is natively accepted rather than fallback.",
+    "Actual wrapper preserves caller stream and tuning/store state; original natural file bytes remain unchanged through execution.",
+    "Retain every attempted result and failure; fatal missing/corrupt provenance, numerical/cache/native rejection stops full batch rather than removing records."
+  ],
+  "analysis": {
+    "independent_unit": "Six fresh tuning/warm repetitions on one fixed model-layer fixture. Do not pool15 samples as independent trials.",
+    "comparison": "Pair worker medians by trial and phase for v2/v1, v1/default and v2/default; report6 ratios/range/win counts and exploratory deterministic whole-trial bootstrap95% intervals.",
+    "baseline_limit": "Untuned default consumes a genuine miss; cold tuned calls use memory and fresh warm tuned calls use v1 file hits, matching each natural configuration. Baseline lookup costs therefore differ and are part of the compared paths.",
+    "selection": "Report actual profiled candidate timings/minimum margins, selected frequencies and serving-condition timing; never assume the expanded candidate set is faster or a measured winner is universally optimal.",
+    "scope_limits": "One actual linear path and captured workload; no full model server/throughput, distributed/EP/BF16 backend, managed-store or explicit-policy adoption claim."
+  },
+  "publication": {
+    "fork": "leejnau/sglang",
+    "branch": "experiment/flashinfer-candidate-selection",
+    "open_pr": false,
+    "records": "Preserve every attempt, exact raw bytes, numerical/cache/native build evidence, timing samples, neutral/regressive outcomes; one living Markdown for narrative/history."
+  },
+  "resource_policy": "One exclusive H100 allocation for at most1hour. Verify node/durable/downloaded full archive before release; retain binary privately, exact build/source/hash publicly. No CI triggered."
+}

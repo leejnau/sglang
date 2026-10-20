@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "checks": [
+    "isolated CPU-only help",
+    "refuse existing output before heavy imports",
+    "accept audited Q/K/V loader layout",
+    "reject changed Q/K/V order",
+    "reject changed QKV shard offsets",
+    "real merged production Q/K/V layout",
+    "capture source excludes restricted project token"
+  ],
+  "script_sha256": "040d5ab26b469d538f483ae4b8c0df1c956bd031368173bd0666382b3a2e4e5d",
+  "heavy_model_actions_performed": false,
+  "capture_script_sha256": "c3c88dbf3df9fe0dc73d89a5acb9038e5b09fb1efc6316bc36917d06251f92a4"
+}
