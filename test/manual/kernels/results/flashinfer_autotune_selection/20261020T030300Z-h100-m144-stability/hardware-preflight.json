@@ -1,0 +1,28 @@
+{
+  "status": "success",
+  "checked_utc": "2026-10-20T03:05:50.699199+00:00",
+  "job_id": 2679505,
+  "host": "1u1g-gen-0100",
+  "gpu": {
+    "index": "0",
+    "name": "NVIDIA H100 NVL",
+    "uuid": "GPU-240958a2-e8e1-3bac-b767-365c9e0b97bd",
+    "driver_version": "580.159.04",
+    "pstate": "P0",
+    "clocks.current.sm [MHz]": "345 MHz",
+    "clocks.current.memory [MHz]": "2619 MHz",
+    "power.limit [W]": "310.00 W",
+    "temperature.gpu": "38",
+    "memory.total [MiB]": "95830 MiB",
+    "memory.used [MiB]": "0 MiB"
+  },
+  "image_cached": true,
+  "image_id": "sha256:2e152727f0a5ce999172ec48203b2b292d41b3cb370976827718870557899caa",
+  "image_digest": "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
+  "docker": "Docker version 29.6.1, build 8900f1d",
+  "arch": "x86_64",
+  "disk_free_bytes": 1876965036032,
+  "meminfo": "MemTotal:       263616436 kB\nMemFree:         5380164 kB\nMemAvailable:   254513364 kB\nBuffers:        19130584 kB\nCached:         217479788 kB\nSwapCached:        18296 kB\nActive:          2226156 kB\nInactive:       235970876 kB\nActive(anon):     892512 kB\nInactive(anon):   712912 kB\nActive(file):    1333644 kB\nInactive(file): 235257964 kB\nUnevictable:       45888 kB\nMlocked:           42816 kB\nSwapTotal:      66112712 kB\nSwapFree:       66046960 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:              4808 kB\nWriteback:             0 kB\nAnonPages:       1630476 kB\nMapped:           434724 kB\nShmem:              5072 kB\nKReclaimable:   14833768 kB\nSlab:           16860772 kB\nSReclaimable:   14833768 kB\nSUnreclaim:      2027004 kB\nKernelStack:       30176 kB\nPageTables:        27396 kB\nSecPageTables:      2520 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    197920928 kB\nCommitted_AS:   12632024 kB\nVmallocTotal:   13743895347199 kB\nVmallocUsed:      189120 kB\nVmallocChunk:          0 kB\nPercpu:           156928 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:     20480 kB\nFilePmdMapped:         0 kB\nCmaTotal:              0 kB\nCmaFree:               0 kB\nUnaccepted:            0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:    127502992 kB\nDirectMap2M:    136435712 kB\nDirectMap1G:     5242880 kB\n",
+  "benchmark_workers_run": 0,
+  "scope": "Pre-experiment hardware snapshot; all experimental workers require frozen source/image/GPU assertions and final scheduler cleanup is recorded separately."
+}

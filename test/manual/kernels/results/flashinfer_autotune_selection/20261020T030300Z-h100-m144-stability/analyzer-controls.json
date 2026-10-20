@@ -1,0 +1,211 @@
+{
+  "status": "success",
+  "synthetic_only": true,
+  "scope": "CPU schema/fault controls; fabricated timings are never experiment evidence",
+  "analyzer_sha256": "8e341d5f1851161dee5a6c8d1b32ef775b6af0f28605c3a387dfb4f4401afc7d",
+  "controls": [
+    {
+      "name": "complete_n3_warm_schema",
+      "passed": true
+    },
+    {
+      "name": "complete_n4_warm_schema",
+      "passed": true
+    },
+    {
+      "name": "lost_true_file_hit",
+      "passed": true,
+      "rejected": "n3.json: wrong selected tactic/source/capture"
+    },
+    {
+      "name": "wrong_lookup_tier",
+      "passed": true,
+      "rejected": "n3.json: natural lookup source"
+    },
+    {
+      "name": "native_silent_fallback",
+      "passed": true,
+      "rejected": "n3.json: prepared candidate: native acceptance evidence"
+    },
+    {
+      "name": "fixed_candidate_dropped",
+      "passed": true,
+      "rejected": "n3.json: full preregistered pool required"
+    },
+    {
+      "name": "unbalanced_schedule",
+      "passed": true,
+      "rejected": "n3.json: unbalanced or wrong-seed schedule"
+    },
+    {
+      "name": "wrong_schedule_seed",
+      "passed": true,
+      "rejected": "n3.json: workload"
+    },
+    {
+      "name": "block_order_changed",
+      "passed": true,
+      "rejected": "n3.json: block/mode order or count"
+    },
+    {
+      "name": "missing_timed_numeric",
+      "passed": true,
+      "rejected": "n3.json: eager/graph correctness coverage"
+    },
+    {
+      "name": "warm_profiling_attempt",
+      "passed": true,
+      "rejected": "n3.json: profiling attempt accounting"
+    },
+    {
+      "name": "swallowed_forbidden_profile",
+      "passed": true,
+      "rejected": "n3.json: forbidden profiling attempted"
+    },
+    {
+      "name": "natural_winner_not_restored",
+      "passed": true,
+      "rejected": "n3.json: wrong selected tactic/source/capture"
+    },
+    {
+      "name": "changed_original_cache_bytes",
+      "passed": true,
+      "rejected": "n3.json: persisted bytes changed"
+    },
+    {
+      "name": "missing_rewarm",
+      "passed": true,
+      "rejected": "n3.json: missing candidate rewarm"
+    },
+    {
+      "name": "wrong_common_iterations",
+      "passed": true,
+      "rejected": "n3.json: common iterations not candidate maximum"
+    },
+    {
+      "name": "bad_batch_normalization",
+      "passed": true,
+      "rejected": "n3.json/stability_eager_b00_default: timing normalization"
+    },
+    {
+      "name": "policy_override",
+      "passed": true,
+      "rejected": "n3.json: unspecified measurement policy changed"
+    },
+    {
+      "name": "graph_profiler_override",
+      "passed": true,
+      "rejected": "n3.json: profiling operation defaults"
+    },
+    {
+      "name": "tuner_delay_changed",
+      "passed": true,
+      "rejected": "n3.json: tuner timing defaults changed"
+    },
+    {
+      "name": "operand_mutation",
+      "passed": true,
+      "rejected": "n3.json: operand hashes"
+    },
+    {
+      "name": "source_hash_mismatch",
+      "passed": true,
+      "rejected": "n3.json: worker source"
+    },
+    {
+      "name": "different_control_hash",
+      "passed": true,
+      "rejected": "n3.json: control bytes"
+    },
+    {
+      "name": "graph_capture_missing",
+      "passed": true,
+      "rejected": "n3.json: native guard coverage"
+    },
+    {
+      "name": "complete_v2_cold_profile_schema",
+      "passed": true
+    },
+    {
+      "name": "complete_v1_warm_schema",
+      "passed": true
+    },
+    {
+      "name": "complete_v1_cold_schema",
+      "passed": true
+    },
+    {
+      "name": "later_batches_can_be_shorter_than_calibration_target",
+      "passed": true
+    },
+    {
+      "name": "cold_default_profile_participation_missing",
+      "passed": true,
+      "rejected": "n3.json: v2 default participation"
+    },
+    {
+      "name": "false_reported_profile_minimum",
+      "passed": true,
+      "rejected": "n3.json: reported profiler minimum"
+    },
+    {
+      "name": "per_profile_timer_state_changed",
+      "passed": true,
+      "rejected": "n3.json: profile settings changed"
+    },
+    {
+      "name": "record_global_timer_true_without_forcing_false",
+      "passed": true
+    },
+    {
+      "name": "invalid_persistent_generation",
+      "passed": true,
+      "rejected": "n3.json: candidate generation: invalid persisted generation"
+    },
+    {
+      "name": "control_unrelated_metadata_mutation",
+      "passed": true,
+      "rejected": "n3.json: control altered unrelated entries/policies"
+    },
+    {
+      "name": "cold_warm_pair_requires_identical_bytes",
+      "passed": true,
+      "rejected": "persisted bytes changed across fresh restart"
+    },
+    {
+      "name": "graph_primary_event_and_eager_primary_wall",
+      "passed": true
+    },
+    {
+      "name": "graph_secondary_wall_not_primary",
+      "passed": true
+    },
+    {
+      "name": "overflowing_json_number_rejected",
+      "passed": true,
+      "rejected": "nonfinite JSON numeric literal: 1e999"
+    },
+    {
+      "name": "exact_six_trial_bootstrap_matches_46656_ordered_resamples",
+      "passed": true
+    },
+    {
+      "name": "checkpoint_n1_has_no_confidence_interval",
+      "passed": true
+    },
+    {
+      "name": "blocks_never_claimed_as_independent_trials",
+      "passed": true
+    },
+    {
+      "name": "duplicate_trial_rejected",
+      "passed": true,
+      "rejected": "trial pooled or repeated"
+    },
+    {
+      "name": "median_of_paired_ratios_estimand",
+      "passed": true
+    }
+  ],
+  "passed": 43
+}

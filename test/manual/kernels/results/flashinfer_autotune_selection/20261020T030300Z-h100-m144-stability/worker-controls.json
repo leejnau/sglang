@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "worker_sha256": "2bd1f75515fe337a4186f7fda4b0747ace27a6a7f4f50171da295235ff0725ae",
+  "cpu_guard_checks": 261,
+  "coverage": [
+    "Both 3/4candidate pools,6order-seeds,both execution schedules: complete permutation multiplicity,eachposition balance,andpair-order12/12balance.",
+    "Deterministic schedule recreation.",
+    "Descriptor decoding valid/default and malformed/ordinal rejection."
+  ],
+  "repository_hooks": "all applicable pre-commit checks passed",
+  "syntax": "py_compile and --help passed",
+  "gpu_validation": "pending; no GPU run by this agent",
+  "independent_reviews": [
+    "source/cache/native/timer review: no blockers",
+    "file-only/timing placement/schedule/profile restoration review: no blockers"
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "batch_id": "20261020T030300Z-h100-m144-stability",
+  "status": "preregistered",
+  "objective": "Test M144 tuning repeatability and warm candidate ranking with identical inputs, randomized balanced interleaving and existing v1 file persistence.",
+  "source_baseline_commit": "ec0ae6193ef0b76e91f761fa9e6e5ab0f2878f25",
+  "flashinfer_source": {
+    "base_release": "0.7.2",
+    "base_commit": "d84335d8c54e0c8f9f7e22faa15c7e34a58abf94",
+    "upstream_pr": 6148,
+    "patch_head": "14c5c67a1eb9ad3a608b8d3da3bf6d8924037c5c",
+    "implementation": "Exact original diff applied cleanly to0.7.2, not full PR head; candidate source only for every arm.",
+    "input_batch": "test/manual/kernels/results/flashinfer_autotune_selection/20261019T232945Z-h100-descriptor-qualification",
+    "source_overlay_archive_sha256": "c62f09dad18dbe0ce326177077360fe716095f209dc023b25c5552dcc12f666f",
+    "source_manifest_sha256": "3f4305fce604d3cd51e85047678c6efbf71e35bcf51037e9586d15bc20486895",
+    "native_loading": "Reuse audited prepare_native(candidate): explicit JitSpec.build/load, identical module bootstrap in every arm; reject AOT substitution. One isolated candidate build workspace, fresh process/container per worker."
+  },
+  "container_image": "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
+  "environment": {
+    "gpu": "NVIDIA H100 NVL",
+    "physical_gpu_uuid": "240958a2-e8e1-3bac-b767-365c9e0b97bd",
+    "driver": "580.159.04",
+    "torch": "2.14.1+cu130",
+    "torch_cuda": "13.0",
+    "exclusive_node": true,
+    "clock_lock": false,
+    "cuda_arch_list": "9.0",
+    "sglang_wrapper_sha256": "64deff581665bd04830535baccfdfbdfa72794d919bc462fc469a4c42bdd68f5",
+    "host": "1u1g-gen-0100",
+    "power_limit_watts": 310,
+    "hardware_change": "Reuse prior H100NVL physical GPU if available; no comparisons to earlier HBM3 absolute timings. Hardware preflight must match this frozen expected model/UUID/driver before workers."
+  },
+  "workload": {
+    "api": "flashinfer.bmm_fp8 backend=cublas through actual SGLang startup wrapper",
+    "shape": [
+      144,
+      1024,
+      1024
+    ],
+    "batch": 1,
+    "input_seed": 19,
+    "input_seed_scope": "Identical model inputs and reset Torch RNG across every fresh worker. Trial ID and schedule seed are separate from data seed. Profiling synthetic-input generation remains the unmodified operation behavior.",
+    "reference_operand_sha256": {
+      "a": "b242c1b61a72df344f0b75775a3afe4d9228482664cd87bc5e4334069a64dbe6",
+      "b": "a83d6412ff89c06e01d941a30b0b491ef6b4c65595d16bc16e94ec1ae2af5e06",
+      "scale_a": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c",
+      "scale_b": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+    },
+    "measurement_policy": "unspecified; retain operation defaults and record actual profiler flags, tuner delay/repeat/warmup/global-timer state",
+    "persistence": "actual SGLang wrapper and existing v1 save/load; managed stores disabled",
+    "arms": [
+      "v1",
+      "v2"
+    ],
+    "m144_scope": "Startup and serving both144; normalized cache key256. No independent tune256-to-serve144 transfer.",
+    "profiling_input_limit": "Serving operands are verified byte-identical by hash. Torch/CUDA RNG is reset to19, and the default synthesis is retained, but synthetic profiling tensors are not individually hashed. Dynamic profiling A is generated from uniform[-5,5] then cast; serving A came from Gaussian FP8 quantization. Do not claim identical profiling/serving data domains or bit-verified synthetic inputs."
+  },
+  "protocol": {
+    "trials": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "phases": [
+      "cold",
+      "warm"
+    ],
+    "workers_total": 24,
+    "trial_order": "Ascending0..5; arm order v1/v2 on even trials and v2/v1 on odd trials; cold then warm for each arm.",
+    "schedule_seed_rule": "3000+trial, identical in paired arms",
+    "natural_samples": 15,
+    "blocks": 24,
+    "requested_iterations": 20,
+    "warmup_ms": 500,
+    "rewarm_ms": 20,
+    "min_sample_ms": 20,
+    "max_iterations": 65536,
+    "candidate_manifest": "candidates.json",
+    "candidate_manifest_sha256": "1de565fcf51769d7ed45c290ab114f1e210b4265cc41bb757d5f4f860bb53333",
+    "candidate_pool": "Fixed three candidates plus own natural winner if distinct, maximum4. Deduplicate by actual eight-word descriptor or default-1. Preserve source labels.",
+    "interleaving": "Warm workers only. For3candidates use all6permutations repeated4times; for4use all24permutations once; shuffle complete block list with schedule seed. Position and pair-order balanced. Each candidate occurs once per block in both execution modes.",
+    "iterations": "Calibrate each accepted candidate outside measurement, common iterations per execution=max candidate count; min20ms target, max65536. Normalize each raw block with actual common iteration count.",
+    "cache_switch": "Materialize unique actual v1 control file per candidate with unrelated natural entries/policies preserved. Reload outside every timed batch, assert no memory promotion and true file hit; >=20ms candidate rewarm outside batch.",
+    "graphs": "Capture once per candidate outside primary timings; check poisoned-output changed/restored-input replay. Each replay graph remains tied to its capture-selected candidate.",
+    "instrumentation": "No native/choose/search/binding hooks inside timed windows. Dormant profiling-attempt guard remains; count all attempts before errors. Native acceptance and cache tracing occur outside windows.",
+    "startup_scope": "Cold startup diagnostic; no complete-server startup measurement. Explicit native load/build and initial public API preparation excluded.",
+    "timeout_seconds_per_worker": 900,
+    "checkpoint": "Validate first complete trial (4workers) before remaining20. Acceptance requires numerical/cache/source/timing validity, never a required speedup.",
+    "execution_mode_order": "Per block: eager then graph on even blocks, graph then eager on odd blocks. Candidate permutation shuffles use order_seed for eager and order_seed+1 for graph."
+  },
+  "acceptance": [
+    "Pinned image, exact qualified descriptor overlay, clean frozen Git/source/native hashes and physical GPU/driver match.",
+    "All24fresh containers use identical quantized operand bytes matching original seed19 reference.",
+    "Cold actual profiles use retained flags/config and natural selected tactic equals a finite runtime-bucket minimum; v2 includes finite-1 and v1 excludes it.",
+    "All warm or post-startup profile attempts are zero; original natural cache bytes remain unchanged and cold/warm natural choices match.",
+    "Fixed pool plus own natural selection is retained. If any fixed descriptor or actual natural winner is rejected, preserve explicit reason/partial evidence and stop the batch as an error; do not accept a two-candidate replacement pool or silently remove a worker.",
+    "All candidate control files use actual v1 save/load, preserve unrelated entries/content generations, and are consumed from file-only state.",
+    "All measured explicit candidates accepted natively with used_descriptor1; eager and changed/restored graph numerical checks pass.",
+    "Interleaving, common iterations, >=20ms rewarm and raw positive wall/event sample normalization are recorded and independently checked.",
+    "Original natural tuner state/file bytes and serving winner restored after diagnostics."
+  ],
+  "analysis": {
+    "independent_unit": "Six fresh tuning/warm repetitions on one fixed input seed; no input-distribution or cross-device generalization.",
+    "within_worker": "For each candidate/default contrast compute per-block paired latency ratios and a median of those ratios; retain all24blockvalues. Eager primary wall, graph primary event replay span including host submission gaps.",
+    "between_workers": "Natural v2/v1 paired by trial; summarize6paired ratios with range, win counts and deterministic exploratory cluster bootstrap over trial pairs. Candidate results remain per-worker and per-arm; if using both arms for a shared candidate contrast, cluster by trial.",
+    "ranking": "Report ranks/regret only within accepted preregistered shortlist plus own winner; never global optimum. Preserve pool and minimum-selection noise caveat.",
+    "objectives": "Compare actual startup profiler margins/winner frequencies with independent eager/graph shortlist ranks. Different timer/execution conditions or synthesized inputs can explain disagreements; no causal GPU-kernel identity claim without separate observation.",
+    "scope_limits": "No policy override, managed-store adoption, new SGLang production behavior, BF16, multi-GPU, model server, serving-throughput or universal v2 benefit.",
+    "natural_channels": "Natural eager primary=wall, graph primary=GPU-event replay span including host gaps; retain both channels as secondary diagnostics."
+  },
+  "publication": {
+    "fork": "leejnau/sglang",
+    "branch": "experiment/flashinfer-candidate-selection",
+    "open_pr": false,
+    "records": "Preserve every attempt, exact raw bytes, numerical/cache/native build evidence, timing samples, neutral/regressive outcomes; one living Markdown for narrative/history."
+  },
+  "resource_policy": "One exclusive H100 allocation for at most1hour. Verify node/durable/downloaded full archive before release; retain binary privately, exact build/source/hash publicly. No CI triggered."
+}

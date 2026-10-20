@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "scope": "Preregistered shortlist from the prior M144 input-seed19 v2 warm worker. Add own newly selected natural tactic if absent; this is not a global candidate oracle.",
+  "reference_commit": "ec0ae6193ef0b76e91f761fa9e6e5ab0f2878f25",
+  "reference_worker": "m144-seed19-v2-warm.json",
+  "reference_worker_sha256": "866e4fd0276f170fc648d3d29c93e2ff92555ffd6fe32e252dbb18cae31727f2",
+  "reference_operand_sha256": {
+    "a": "b242c1b61a72df344f0b75775a3afe4d9228482664cd87bc5e4334069a64dbe6",
+    "b": "a83d6412ff89c06e01d941a30b0b491ef6b4c65595d16bc16e94ec1ae2af5e06",
+    "scale_a": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c",
+    "scale_b": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+  },
+  "candidates": [
+    {
+      "id": "default",
+      "tactic": -1,
+      "source": "Heuristic default; measured through the same real warm file cache as every other shortlisted tactic."
+    },
+    {
+      "id": "old_selected",
+      "tactic": [
+        446676598850,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "source": "Previous natural v2 seed19 explicit winner."
+    },
+    {
+      "id": "prior_graph_leader",
+      "tactic": [
+        55834574914,
+        4294967332,
+        0,
+        1407374883553283,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "source": "Lowest median graph-event replay span in previous seed19 v2 warm shortlist; selection from noisy historical data is disclosed."
+    }
+  ]
+}
