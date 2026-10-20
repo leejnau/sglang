@@ -1,0 +1,1541 @@
+{
+  "status": "success",
+  "worker_sha256": "e3aaff0ac276c4333b7f2254ee46a64c1cdbaaa65ba98965eda3ccaffabb49e5",
+  "base_worker_sha256": "62eeaadb792d6b9bc506afcfe41968495f36adff27ee24ee13fb81cebce05859",
+  "manifest_sha256": "7cfd8a13a21ec61b6a4df6be53d9bba379aadd36410b50cb807118b2e38d4b48",
+  "fresh_processes": 8,
+  "assertions_passed": 262,
+  "reports": [
+    {
+      "status": "success",
+      "stage": "seed",
+      "pid": 35657,
+      "checks": [
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "real v1 load succeeds",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "cold graph scope never attaches ambient",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "graph profiles use effective graph objective",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "ambient object preserved",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scope inactive after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "policy reset after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scope reset after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "all tuning contexts exited",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "tuning mode reset",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "legacy file unchanged by graph publication",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "legacy file maps never swapped",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "real managed entry published",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "real managed tactic1 persisted",
+          "passed": true,
+          "detail": null
+        }
+      ],
+      "profiles": [
+        {
+          "tactic": -1,
+          "time_fixture": 4.0,
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "identity": "None"
+        },
+        {
+          "tactic": 0,
+          "time_fixture": 1.0,
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "identity": "None"
+        },
+        {
+          "tactic": 1,
+          "time_fixture": 2.0,
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "identity": "None"
+        },
+        {
+          "tactic": -1,
+          "time_fixture": 4.0,
+          "use_cuda_graph": true,
+          "use_cold_l2_cache": false,
+          "identity": "('/private/tmp/fi-policy-api-review-20261020/final/scoped-candidate/graph-store', '88d76eed8f6f1b83')"
+        },
+        {
+          "tactic": 0,
+          "time_fixture": 2.0,
+          "use_cuda_graph": true,
+          "use_cold_l2_cache": false,
+          "identity": "('/private/tmp/fi-policy-api-review-20261020/final/scoped-candidate/graph-store', '88d76eed8f6f1b83')"
+        },
+        {
+          "tactic": 1,
+          "time_fixture": 1.0,
+          "use_cuda_graph": true,
+          "use_cold_l2_cache": false,
+          "identity": "('/private/tmp/fi-policy-api-review-20261020/final/scoped-candidate/graph-store', '88d76eed8f6f1b83')"
+        }
+      ]
+    },
+    {
+      "status": "success",
+      "stage": "warm",
+      "pid": 35664,
+      "checks": [
+        {
+          "name": "real v1 load succeeds",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "warm graph scope never attaches ambient",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "ambient object preserved",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scope inactive after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "policy reset after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scope reset after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "all tuning contexts exited",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "tuning mode reset",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "warm graph scope never attaches ambient",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "ambient object preserved",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scope inactive after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "policy reset after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scope reset after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "all tuning contexts exited",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "tuning mode reset",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": -1
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": -1
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "ambient object preserved",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scope inactive after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "policy reset after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scope reset after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "all tuning contexts exited",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "tuning mode reset",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "fresh managed reuse performs zero profiling",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "legacy bytes unchanged",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "original file maps untouched",
+          "passed": true,
+          "detail": null
+        }
+      ],
+      "profiles": []
+    },
+    {
+      "status": "success",
+      "stage": "process_default",
+      "pid": 35669,
+      "checks": [
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "default process context attaches",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "ambient object preserved",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scope inactive after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "policy reset after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scope reset after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "all tuning contexts exited",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "tuning mode reset",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "existing memory-only legacy reuse has no profiling",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "ambient object preserved",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scope inactive after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "policy reset after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scope reset after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "all tuning contexts exited",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "tuning mode reset",
+          "passed": true,
+          "detail": null
+        }
+      ],
+      "profiles": [
+        {
+          "tactic": -1,
+          "time_fixture": 4.0,
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "identity": "None"
+        },
+        {
+          "tactic": 0,
+          "time_fixture": 1.0,
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "identity": "None"
+        },
+        {
+          "tactic": 1,
+          "time_fixture": 2.0,
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "identity": "None"
+        },
+        {
+          "tactic": -1,
+          "time_fixture": 4.0,
+          "use_cuda_graph": true,
+          "use_cold_l2_cache": false,
+          "identity": "('/private/tmp/fi-policy-api-review-20261020/final/scoped-candidate/process-store', '88d76eed8f6f1b83')"
+        },
+        {
+          "tactic": 0,
+          "time_fixture": 2.0,
+          "use_cuda_graph": true,
+          "use_cold_l2_cache": false,
+          "identity": "('/private/tmp/fi-policy-api-review-20261020/final/scoped-candidate/process-store', '88d76eed8f6f1b83')"
+        },
+        {
+          "tactic": 1,
+          "time_fixture": 1.0,
+          "use_cuda_graph": true,
+          "use_cold_l2_cache": false,
+          "identity": "('/private/tmp/fi-policy-api-review-20261020/final/scoped-candidate/process-store', '88d76eed8f6f1b83')"
+        }
+      ]
+    },
+    {
+      "status": "success",
+      "stage": "memory",
+      "pid": 35676,
+      "checks": [
+        {
+          "name": "real v1 load succeeds",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "ambient object preserved",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scope inactive after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "policy reset after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scope reset after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "all tuning contexts exited",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "tuning mode reset",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "memory replay does not profile",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "memory scopes touch no requested cache root",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "memory scopes never resolve managed store",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "memory scopes leave legacy bytes unchanged",
+          "passed": true,
+          "detail": null
+        }
+      ],
+      "profiles": [
+        {
+          "tactic": -1,
+          "time_fixture": 4.0,
+          "use_cuda_graph": true,
+          "use_cold_l2_cache": false,
+          "identity": "('__policy__', ('measure_execution_mode', 'cuda_graph'))"
+        },
+        {
+          "tactic": 0,
+          "time_fixture": 2.0,
+          "use_cuda_graph": true,
+          "use_cold_l2_cache": false,
+          "identity": "('__policy__', ('measure_execution_mode', 'cuda_graph'))"
+        },
+        {
+          "tactic": 1,
+          "time_fixture": 1.0,
+          "use_cuda_graph": true,
+          "use_cold_l2_cache": false,
+          "identity": "('__policy__', ('measure_execution_mode', 'cuda_graph'))"
+        }
+      ]
+    },
+    {
+      "status": "success",
+      "stage": "overlap",
+      "pid": 35680,
+      "checks": [
+        {
+          "name": "real v1 load succeeds",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scoped thread sees old ambient without changing it",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "other thread can replace ambient",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scoped target survives another thread attachment",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "thread-local context cleaned",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "reader thread exits",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "reader thread passes",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "ambient object preserved",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scope inactive after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "policy reset after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scope reset after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "all tuning contexts exited",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "tuning mode reset",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scoped thread sees old ambient without changing it",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "other thread can replace ambient",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scoped target survives another thread attachment",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "thread-local context cleaned",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "reader thread exits",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "reader thread passes",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "ambient object preserved",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scope inactive after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "policy reset after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scope reset after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "all tuning contexts exited",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "tuning mode reset",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "overlap exercises replay only, zero profiling",
+          "passed": true,
+          "detail": null
+        }
+      ],
+      "profiles": []
+    },
+    {
+      "status": "success",
+      "stage": "controls",
+      "pid": 35683,
+      "checks": [
+        {
+          "name": "real v1 load succeeds",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "ambient object preserved",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scope inactive after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "policy reset after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scope reset after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "all tuning contexts exited",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "tuning mode reset",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "nested v2 rejected",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scoped reload fails before mutating caches",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "unsafe shortlist tuning rejected",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "single-winner rank delegates safely",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "shortlist guard preserves legacy winner bank",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "outer tuning counter behavior unchanged",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "ambient object preserved",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scope inactive after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "policy reset after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scope reset after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "all tuning contexts exited",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "tuning mode reset",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "validation and nesting never mutate file maps",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "controls require no profiling",
+          "passed": true,
+          "detail": null
+        }
+      ],
+      "profiles": []
+    },
+    {
+      "status": "success",
+      "stage": "bundled",
+      "pid": 35689,
+      "checks": [
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": -1
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "identified scope does not query bundled source",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "unscoped bundled lookup remains enabled",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "ambient object preserved",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scope inactive after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "policy reset after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scope reset after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "all tuning contexts exited",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "tuning mode reset",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "bundled lookup control performs no profiling",
+          "passed": true,
+          "detail": null
+        }
+      ],
+      "profiles": []
+    },
+    {
+      "status": "success",
+      "stage": "invalidation",
+      "pid": 35690,
+      "checks": [
+        {
+          "name": "real v1 load succeeds",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scoped invalidation preserves legacy entries",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scoped invalidation preserves legacy provenance",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "ambient object preserved",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scope inactive after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "policy reset after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scope reset after exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "all tuning contexts exited",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "tuning mode reset",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual choose_one tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "actual search_cache hit",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "actual cached tactic",
+          "passed": true,
+          "detail": 0
+        },
+        {
+          "name": "CPU runner executes selected tactic",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "scoped invalidation leaves legacy disk bytes unchanged",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "actual invalidation forces scoped reprofiling",
+          "passed": true,
+          "detail": null
+        }
+      ],
+      "profiles": [
+        {
+          "tactic": -1,
+          "time_fixture": 4.0,
+          "use_cuda_graph": true,
+          "use_cold_l2_cache": false,
+          "identity": "('/private/tmp/fi-policy-api-review-20261020/final/scoped-candidate/invalidation-store', '88d76eed8f6f1b83')"
+        },
+        {
+          "tactic": 0,
+          "time_fixture": 2.0,
+          "use_cuda_graph": true,
+          "use_cold_l2_cache": false,
+          "identity": "('/private/tmp/fi-policy-api-review-20261020/final/scoped-candidate/invalidation-store', '88d76eed8f6f1b83')"
+        },
+        {
+          "tactic": 1,
+          "time_fixture": 1.0,
+          "use_cuda_graph": true,
+          "use_cold_l2_cache": false,
+          "identity": "('/private/tmp/fi-policy-api-review-20261020/final/scoped-candidate/invalidation-store', '88d76eed8f6f1b83')"
+        },
+        {
+          "tactic": -1,
+          "time_fixture": 4.0,
+          "use_cuda_graph": true,
+          "use_cold_l2_cache": false,
+          "identity": "('/private/tmp/fi-policy-api-review-20261020/final/scoped-candidate/invalidation-store', '88d76eed8f6f1b83')"
+        },
+        {
+          "tactic": 0,
+          "time_fixture": 2.0,
+          "use_cuda_graph": true,
+          "use_cold_l2_cache": false,
+          "identity": "('/private/tmp/fi-policy-api-review-20261020/final/scoped-candidate/invalidation-store', '88d76eed8f6f1b83')"
+        },
+        {
+          "tactic": 1,
+          "time_fixture": 1.0,
+          "use_cuda_graph": true,
+          "use_cold_l2_cache": false,
+          "identity": "('/private/tmp/fi-policy-api-review-20261020/final/scoped-candidate/invalidation-store', '88d76eed8f6f1b83')"
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Research-only upstream API proposal.",
+    "Uses scoped managed graph persistence as peer to unchanged v1 legacy persistence, not graph-winner v1 serialization.",
+    "Synthetic CPU runner, controlled profiling and metadata; no CUDA or performance evidence.",
+    "Overlap checks exercise replay-only attachment; concurrent tuning and serving remain unqualified."
+  ]
+}

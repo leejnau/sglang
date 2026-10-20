@@ -1,0 +1,98 @@
+{
+  "status": "success",
+  "execution_commit": "af0b27cabe97e334c3201e8ba55aa3b4da01662e",
+  "upstream_base": "8dc1163fbfbec7098a2418276fd04bc1fa1aeaa5",
+  "latest_stable": "v0.7.2",
+  "current_main_gaps_reproduced": true,
+  "proofs": {
+    "scoped-candidate": {
+      "checks": 262,
+      "fresh_processes": 8,
+      "sha256": "f01b8a017a58b444048ffe13c1c2e3c53b9845a297fb34dc87552a55306241e2",
+      "size_bytes": 38339
+    },
+    "legacy-candidate": {
+      "checks": 191,
+      "fresh_processes": 5,
+      "sha256": "8d498b14faf83c45f61c29c3a1a7877b5bfacd17d66e3893397b7986e9d4fba2",
+      "size_bytes": 39021
+    },
+    "legacy-upstream": {
+      "checks": 191,
+      "fresh_processes": 5,
+      "sha256": "98f14b3191d66d795aa4651e0465ace568a26cf509b2cd41fdf108424b10bde0",
+      "size_bytes": 39021
+    },
+    "independent-scoped": {
+      "checks": 262,
+      "fresh_processes": 8,
+      "sha256": "2e8cf1864b45f36dd524b74dd73b3630c2d48d39a8bc7a185031c23e4015f34b",
+      "size_bytes": 38279
+    }
+  },
+  "partial_fix_negative_controls": {
+    "status": "success",
+    "independent_partial_fix_negative_controls": [
+      {
+        "name": "ambient-mutation",
+        "expected_failure": true,
+        "returncode": 1,
+        "failing_stage": "seed",
+        "expected_error_substring": "cold graph scope never attaches ambient",
+        "worker_sha256": "e3aaff0ac276c4333b7f2254ee46a64c1cdbaaa65ba98965eda3ccaffabb49e5",
+        "manifest_sha256": "fa5747ea890b28d850f9f77ed71a4dfd85afe4e76cac8d9a0e6e0e53c565b97d",
+        "changed_file": "flashinfer/autotune_cache.py",
+        "changed_file_sha256": "49460feb7039125020201c825c0988533a01d8e74fefa4e63729aa45d838d059"
+      },
+      {
+        "name": "legacy-file-precedence",
+        "expected_failure": true,
+        "returncode": 1,
+        "failing_stage": "warm",
+        "expected_error_substring": "actual choose_one tactic",
+        "worker_sha256": "e3aaff0ac276c4333b7f2254ee46a64c1cdbaaa65ba98965eda3ccaffabb49e5",
+        "manifest_sha256": "69e8e4fd122128087ec4cb58bdf840d1263169ad8e16e5767124887b75455ab6",
+        "changed_file": "flashinfer/autotuner/autotuner.py",
+        "changed_file_sha256": "944fdfcc6ac12f627d0b2714b78f254abf2b3bc3bf40e60a40bd5edf4ad8dc95"
+      },
+      {
+        "name": "bundled-precedence",
+        "expected_failure": true,
+        "returncode": 1,
+        "failing_stage": "bundled",
+        "expected_error_substring": "actual choose_one tactic",
+        "worker_sha256": "e3aaff0ac276c4333b7f2254ee46a64c1cdbaaa65ba98965eda3ccaffabb49e5",
+        "manifest_sha256": "b0d368d48b0e2ae83603f896def434526580f5b5b33da940f48c06bc15beded4",
+        "changed_file": "flashinfer/autotuner/autotuner.py",
+        "changed_file_sha256": "15419b2a384d3185f97ee71d4727df69d9f1af345a218dd2333f6d0d92ed5c99"
+      }
+    ]
+  },
+  "proposal": {
+    "keyword": "cache_scope=\"context\"",
+    "default": "Existing cache_scope=\"process\" behavior is unchanged.",
+    "context": "Select own managed identity without changing ambient; exclude legacy-loaded and bundled sources only for identified context scopes.",
+    "memory": "PersistentFalse explicit policy uses its memory bank, no disk; empty/no policy retains legacy lookup.",
+    "coexistence": "Keep eager/default v1 persistence and add scoped managed graph persistence as a peer.",
+    "scope_change": "Graph winners no longer need a v1 JSON bridge; this is a proposed research direction, not an approved production migration.",
+    "upstream_code_diff": {
+      "files": 2,
+      "added_lines_including_docs_comments": 58,
+      "removed_lines": 20
+    },
+    "unsupported": [
+      "Identified rank_tactics k>1 during tuning",
+      "Reload inside scoped context",
+      "Nested v2 contexts"
+    ]
+  },
+  "limits": [
+    "Research-only upstream API proposal.",
+    "Uses scoped managed graph persistence as peer to unchanged v1 legacy persistence, not graph-winner v1 serialization.",
+    "Synthetic CPU runner, controlled profiling and metadata; no CUDA or performance evidence.",
+    "Overlap checks exercise replay-only attachment; concurrent tuning and serving remain unqualified.",
+    "True distributed coordination and mutation/reload of scoped stores remain unqualified.",
+    "Scope isolation does not constrain arbitrary global v1 load/save calls."
+  ],
+  "readiness": "Concrete CPU-qualified upstream proposal ready for API discussion; no SGLang policy PR or performance claim."
+}

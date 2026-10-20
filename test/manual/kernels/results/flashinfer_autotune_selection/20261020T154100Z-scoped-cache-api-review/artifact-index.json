@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "execution_commit": "af0b27cabe97e334c3201e8ba55aa3b4da01662e",
+  "files": [
+    {
+      "path": "api-review.json",
+      "sha256": "665673649d8683087091180a34109919b36be410ed2eba9f298c323af07811f9",
+      "size_bytes": 2641
+    },
+    {
+      "path": "attempt01-raw.tar.gz",
+      "sha256": "6bab1503ce2473bea17653a9246dac01a0a353e979c01b9ef9c1515d0dffe65d",
+      "size_bytes": 41579
+    },
+    {
+      "path": "candidate-manifest.json",
+      "sha256": "db6afc8df37a97904d63f1b95f3959a2077a64c0cc901799fc86a52160bffae4",
+      "size_bytes": 2524
+    },
+    {
+      "path": "candidate-proof-plan.json",
+      "sha256": "7cfd8a13a21ec61b6a4df6be53d9bba379aadd36410b50cb807118b2e38d4b48",
+      "size_bytes": 6378
+    },
+    {
+      "path": "documentation-proposal.json",
+      "sha256": "8097b76af9f6ffb2e39901cf3f64ef99f9f4af40a076e51b05dc9d4f3d463b28",
+      "size_bytes": 2774
+    },
+    {
+      "path": "independent-audit-sources.tar.gz",
+      "sha256": "77282b8ead2cc646618ffb1f63218fb7301cbe40c564062bdc07be847ff1e349",
+      "size_bytes": 13842
+    },
+    {
+      "path": "raw-member-index.json",
+      "sha256": "e04d32b10108286824c0a9d537ce9f6ee51b982705a6a35250cc4b8c51c2e405",
+      "size_bytes": 30082
+    },
+    {
+      "path": "results.json",
+      "sha256": "f01b8a017a58b444048ffe13c1c2e3c53b9845a297fb34dc87552a55306241e2",
+      "size_bytes": 38339
+    },
+    {
+      "path": "scoped-cache-proposal.patch.gz",
+      "sha256": "3c6d676954615ba3a4d73e18368c86ebe412b3aa34ecaf2c0a79fbc27513f122",
+      "size_bytes": 3199
+    },
+    {
+      "path": "summary.json",
+      "sha256": "711b25910e1c3961dc3b69957ef57aa51ebf35f313507b7c125c072c7b5d8822",
+      "size_bytes": 4443
+    },
+    {
+      "path": "upstream-proof-plan.json",
+      "sha256": "196a4df6290e52193807006a8da70e5b5b019616458bddc1c76f97d1474aab06",
+      "size_bytes": 6356
+    },
+    {
+      "path": "validation.json",
+      "sha256": "e99eb45c2eac7f56ab77270cb16f910704c9382569dae7e790d7b258c81e4bf6",
+      "size_bytes": 15679
+    }
+  ],
+  "repository_checks": {
+    "status": "passed",
+    "applicable_pre_commit_output": "check for broken symlinks..............................(no files to check)Skipped\ndetect destroyed symlinks..................................................Passed\ntrim trailing whitespace...................................................Passed\nfix end of files...........................................................Passed\ncheck yaml.............................................(no files to check)Skipped\ncheck toml.............................................(no files to check)Skipped\ncheck python ast.......................................(no files to check)Skipped\ncheck for added large files................................................Passed\ncheck for merge conflicts..................................................Passed\ncheck that scripts with shebangs are executable............................Passed\ndetect private key.........................................................Passed\ndebug statements (python)..............................(no files to check)Skipped\ndon't commit to branch.....................................................Passed\nisort..................................................(no files to check)Skipped\nruff (legacy alias)....................................(no files to check)Skipped\nruff format............................................(no files to check)Skipped\ncodespell..................................................................Passed\nclang-format...........................................(no files to check)Skipped\nnbstripout.............................................(no files to check)Skipped\nforbid docs_new/ (renamed to docs/)....................(no files to check)Skipped\ncheck chinese characters in multimodal_gen.............(no files to check)Skipped\nsort CI_PERMISSIONS.json...............................(no files to check)Skipped\ncheck for duplicate workflow job names.................(no files to check)Skipped\ncheck rust-ext cache key prefix defaults match.........(no files to check)Skipped\nreject bare pytest.main calls in __main__ blocks.......(no files to check)Skipped\nvalidate registered test CI registries.................(no files to check)Skipped\nreject CI-registered tests inside the sglang package...(no files to check)Skipped\nrustfmt sgl-model-gateway (nightly)....................(no files to check)Skipped\nrustfmt experimental/sgl-router........................(no files to check)Skipped\nclippy rust/ workspace (auto-fix)......................(no files to check)Skipped\nrustfmt rust/ workspace................................(no files to check)Skipped\n",
+    "whitespace_check_passed": true,
+    "decompressed_archives_payload_and_token_scans_passed": true
+  },
+  "external_actions": {
+    "gpu_or_ci_launched": false,
+    "production_sglang_source_changed": false,
+    "pr_opened": false
+  }
+}

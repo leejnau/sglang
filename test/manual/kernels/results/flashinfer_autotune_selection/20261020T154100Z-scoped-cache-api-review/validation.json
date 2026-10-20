@@ -1,0 +1,308 @@
+{
+  "status": "success",
+  "execution_commit": "af0b27cabe97e334c3201e8ba55aa3b4da01662e",
+  "run_records": {
+    "scoped-candidate": {
+      "sha256": "f01b8a017a58b444048ffe13c1c2e3c53b9845a297fb34dc87552a55306241e2",
+      "size_bytes": 38339
+    },
+    "legacy-candidate": {
+      "sha256": "8d498b14faf83c45f61c29c3a1a7877b5bfacd17d66e3893397b7986e9d4fba2",
+      "size_bytes": 39021
+    },
+    "legacy-upstream": {
+      "sha256": "98f14b3191d66d795aa4651e0465ace568a26cf509b2cd41fdf108424b10bde0",
+      "size_bytes": 39021
+    },
+    "independent-scoped": {
+      "sha256": "2e8cf1864b45f36dd524b74dd73b3630c2d48d39a8bc7a185031c23e4015f34b",
+      "size_bytes": 38279
+    }
+  },
+  "independent_audits": [
+    {
+      "report": {
+        "status": "success",
+        "immutable_final": true,
+        "source_commit": "af0b27cabe97e334c3201e8ba55aa3b4da01662e",
+        "worker_sha256": "e3aaff0ac276c4333b7f2254ee46a64c1cdbaaa65ba98965eda3ccaffabb49e5",
+        "base_worker_sha256": "62eeaadb792d6b9bc506afcfe41968495f36adff27ee24ee13fb81cebce05859",
+        "plan_sha256": "7cfd8a13a21ec61b6a4df6be53d9bba379aadd36410b50cb807118b2e38d4b48",
+        "audit_source_sha256": "5444eb201d7f964694118455736e601ff440575b23e8706e2ebff187a45ff0fb",
+        "result_sha256": "2e8cf1864b45f36dd524b74dd73b3630c2d48d39a8bc7a185031c23e4015f34b",
+        "independent_assertions": 497,
+        "errors": [],
+        "proof_assertions": 262,
+        "fresh_processes": 8,
+        "controlled_profiles": 21,
+        "zero_profile_stages": [
+          "warm",
+          "overlap",
+          "controls",
+          "bundled"
+        ],
+        "stages": {
+          "seed": {
+            "pid": 35808,
+            "assertions": 29,
+            "controlled_profiles": 6
+          },
+          "warm": {
+            "pid": 35821,
+            "assertions": 50,
+            "controlled_profiles": 0
+          },
+          "process_default": {
+            "pid": 35830,
+            "assertions": 30,
+            "controlled_profiles": 6
+          },
+          "memory": {
+            "pid": 35832,
+            "assertions": 31,
+            "controlled_profiles": 3
+          },
+          "overlap": {
+            "pid": 35834,
+            "assertions": 38,
+            "controlled_profiles": 0
+          },
+          "controls": {
+            "pid": 35837,
+            "assertions": 37,
+            "controlled_profiles": 0
+          },
+          "bundled": {
+            "pid": 35849,
+            "assertions": 20,
+            "controlled_profiles": 0
+          },
+          "invalidation": {
+            "pid": 35872,
+            "assertions": 27,
+            "controlled_profiles": 6
+          }
+        },
+        "legacy_file_sha256": "e212130258430b58d68ffed549916a64e892ec1b38d30ede9be698f73e36909e",
+        "legacy_generation": "8abadff46ffd1537e221bd92445858c516f752b5919a0b42ee89dd770d5f062c",
+        "managed_entries": [
+          {
+            "root": "graph-store",
+            "manifest_sha256": "d95115ed6b26953e0752d17fe4a51d1b59cfc4b74ea26a95db4bdc82114fde07",
+            "entry_sha256": "9d1def87ad273c383e828ec49303ee1758577998857d50d456b268617ef9edaf",
+            "tactic": 1
+          },
+          {
+            "root": "process-store",
+            "manifest_sha256": "d95115ed6b26953e0752d17fe4a51d1b59cfc4b74ea26a95db4bdc82114fde07",
+            "entry_sha256": "9d1def87ad273c383e828ec49303ee1758577998857d50d456b268617ef9edaf",
+            "tactic": 1
+          },
+          {
+            "root": "invalidation-store",
+            "manifest_sha256": "d95115ed6b26953e0752d17fe4a51d1b59cfc4b74ea26a95db4bdc82114fde07",
+            "entry_sha256": "9d1def87ad273c383e828ec49303ee1758577998857d50d456b268617ef9edaf",
+            "tactic": 1
+          }
+        ],
+        "raw_artifact_sha256": {
+          "bundled.json": "9434f1c361dd2237e2a5c9daf64f125396ec9bcf93a4e779516cc991b9647625",
+          "bundled.log": "dfb58ee0944bd6dcfc2ae0e9b4edf67a7f507b6abbe05ad79e79df5d2726b4b4",
+          "controls.json": "8f4d77dfb6439be013f0c963a0f86f1066ccbb1db472e86ef9dfc7a85326a67c",
+          "controls.log": "dfb58ee0944bd6dcfc2ae0e9b4edf67a7f507b6abbe05ad79e79df5d2726b4b4",
+          "graph-store/v2/88d76eed8f6f1b83/entries/6104c2a942b7842c485a4712.json": "9d1def87ad273c383e828ec49303ee1758577998857d50d456b268617ef9edaf",
+          "graph-store/v2/88d76eed8f6f1b83/manifest.json": "d95115ed6b26953e0752d17fe4a51d1b59cfc4b74ea26a95db4bdc82114fde07",
+          "invalidation-store/v2/88d76eed8f6f1b83/entries/6104c2a942b7842c485a4712.json": "9d1def87ad273c383e828ec49303ee1758577998857d50d456b268617ef9edaf",
+          "invalidation-store/v2/88d76eed8f6f1b83/manifest.json": "d95115ed6b26953e0752d17fe4a51d1b59cfc4b74ea26a95db4bdc82114fde07",
+          "invalidation.json": "20a00f54aacd9b23bc0434cec02b2b9382a8de120d8ac7417dd5baa5fc2fb1ed",
+          "invalidation.log": "64021be87d4b1a234df45ffb1d788c9b05819d0c091aebd25627278eb05f43da",
+          "legacy.json": "e212130258430b58d68ffed549916a64e892ec1b38d30ede9be698f73e36909e",
+          "memory.json": "a2be4e830fbb6f40a58e46e4b3c97e9d65a4d898c156bc25722de07081768a50",
+          "memory.log": "dd4b95bc9a5a06446f7638d95d6c2b8fcafd30aa5495ae4ff85aabaed9d9a772",
+          "overlap.json": "8b7dabd6af00ad57ebc38e7b6763390b76297fad8973af5c352f870ff6cde3e0",
+          "overlap.log": "dfb58ee0944bd6dcfc2ae0e9b4edf67a7f507b6abbe05ad79e79df5d2726b4b4",
+          "process-store/v2/88d76eed8f6f1b83/entries/6104c2a942b7842c485a4712.json": "9d1def87ad273c383e828ec49303ee1758577998857d50d456b268617ef9edaf",
+          "process-store/v2/88d76eed8f6f1b83/manifest.json": "d95115ed6b26953e0752d17fe4a51d1b59cfc4b74ea26a95db4bdc82114fde07",
+          "process_default.json": "3501724f9025c0893e388aaa7fa062a5d3d5d3746115f1fafdae270da6803ab4",
+          "process_default.log": "3e91586c8d7368328bde58709cf66a4461d89a1d29fd6e2ca51f40d6daf682a0",
+          "result.json": "2e8cf1864b45f36dd524b74dd73b3630c2d48d39a8bc7a185031c23e4015f34b",
+          "seed.json": "f72322a2eed48c485016b3245ff3b5b08b12c94225f8a65a4f86b8cafe2d1618",
+          "seed.log": "17d5c14870505354c3cd126ddabaf60ea31950835ffaa7e753612d4321afaf05",
+          "warm.json": "9cc257b3e2b3dd7095cff099bdebe11e815fc9761b071cb21467c73606333665",
+          "warm.log": "dfb58ee0944bd6dcfc2ae0e9b4edf67a7f507b6abbe05ad79e79df5d2726b4b4"
+        },
+        "limits": [
+          "Synthetic CPU runner and controlled profile times; no CUDA, native-kernel or serving-performance evidence.",
+          "Rechecks retained records and serialized bytes; does not rederive unavailable intermediate live tensors.",
+          "Overlap qualifies replay attachment only; concurrent tuning and serving remain unqualified.",
+          "Uses scoped managed graph persistence beside v1 JSON; does not add graph-policy export to v1 JSON."
+        ]
+      },
+      "sha256": "df43f62faed7a824334ad06ee47bd22800c55031afb2a5fc43524eb06668ac97",
+      "size_bytes": 5427
+    },
+    {
+      "report": {
+        "status": "success",
+        "audit_checks_passed": 1097,
+        "frozen_sglang_commit": "af0b27cabe97e334c3201e8ba55aa3b4da01662e",
+        "upstream_base_commit": "8dc1163fbfbec7098a2418276fd04bc1fa1aeaa5",
+        "auditor_sha256": "28518284577ff6689cdf3f36cbf3590eb73530c2493b217e594c762082e8ceca",
+        "driver_sha256": "e3aaff0ac276c4333b7f2254ee46a64c1cdbaaa65ba98965eda3ccaffabb49e5",
+        "helper_sha256": "62eeaadb792d6b9bc506afcfe41968495f36adff27ee24ee13fb81cebce05859",
+        "candidate_patch_sha256": "cf1191d410e1d31e0905a9e9d3360929e23d007a9fef8e80d2490305b0f4c886",
+        "candidate_manifest_sha256": "db6afc8df37a97904d63f1b95f3959a2077a64c0cc901799fc86a52160bffae4",
+        "independent_patch_application_bytes_equal_candidate": true,
+        "documentation_reconstruction_hash_matches": true,
+        "cohorts": [
+          {
+            "cohort": "scoped-candidate",
+            "result_sha256": "f01b8a017a58b444048ffe13c1c2e3c53b9845a297fb34dc87552a55306241e2",
+            "processes": 8,
+            "assertions": 262,
+            "controlled_profile_counts": {
+              "seed": 6,
+              "warm": 0,
+              "process_default": 6,
+              "memory": 3,
+              "overlap": 0,
+              "controls": 0,
+              "bundled": 0,
+              "invalidation": 6
+            }
+          },
+          {
+            "cohort": "legacy-candidate",
+            "result_sha256": "8d498b14faf83c45f61c29c3a1a7877b5bfacd17d66e3893397b7986e9d4fba2",
+            "processes": 5,
+            "assertions": 191,
+            "controlled_profile_counts": {
+              "seed": 6,
+              "plain_reload": 3,
+              "bridge_reload": 0,
+              "file_order": 0,
+              "controls": 6
+            }
+          },
+          {
+            "cohort": "legacy-upstream",
+            "result_sha256": "98f14b3191d66d795aa4651e0465ace568a26cf509b2cd41fdf108424b10bde0",
+            "processes": 5,
+            "assertions": 191,
+            "controlled_profile_counts": {
+              "seed": 6,
+              "plain_reload": 3,
+              "bridge_reload": 0,
+              "file_order": 0,
+              "controls": 6
+            }
+          }
+        ],
+        "total_fresh_processes": 18,
+        "total_proof_assertions": 644,
+        "negative_controls_report_sha256": "2bc12bd75a32c339f76071abc8277286c163579ede20bc69bdaa95cbb416b1d5",
+        "readiness": "Bounded CPU proposal and legacy compatibility evidence is reviewable; no production routing, upstream approval, CUDA capture, distributed coordination, concurrent tuning/serving or performance qualification.",
+        "scope_change": "Graph winners use a scoped v2 managed-store peer while eager/default retains v1 JSON. This relaxes the earlier proposed requirement to persist graph-policy winners in v1 JSON; no SGLang production change is authorized by this prototype.",
+        "claim_clarifications": [
+          "Proposed graph winners use a v2 managed-store peer; the retained v1 JSON path is the eager/default peer.",
+          "Candidate-plan language about no method changes describes harness replacement boundaries; the hash-checked source patch deliberately changes lookup logic.",
+          "The invalidation helper control is not a distributed execution test; overlap controls exercise replay-only attachment.",
+          "Legacy cohorts record Torch2.14.1 and CUDA unavailable. Scoped driver uses the same frozen helper guard rather than repeating those fields in stage reports.",
+          "Fault-control report is checked as retained evidence; no fault variant or proof was re-executed by this audit."
+        ]
+      },
+      "sha256": "d823cbc6a0535bccfcc841b88abda90089bfffc1f94068598b1a44f7136acf4d",
+      "size_bytes": 3275
+    }
+  ],
+  "exact_audit_and_preparation_sources": {
+    "path": "independent-audit-sources.tar.gz",
+    "sha256": "77282b8ead2cc646618ffb1f63218fb7301cbe40c564062bdc07be847ff1e349",
+    "size_bytes": 13842,
+    "members": [
+      {
+        "path": "fi-scoped-cache-independent-audit.py",
+        "sha256": "5444eb201d7f964694118455736e601ff440575b23e8706e2ebff187a45ff0fb",
+        "size_bytes": 10993
+      },
+      {
+        "path": "fi-scoped-cache-readiness-audit.py",
+        "sha256": "28518284577ff6689cdf3f36cbf3590eb73530c2493b217e594c762082e8ceca",
+        "size_bytes": 10108
+      },
+      {
+        "path": "prepare_candidate.py",
+        "sha256": "8e8fae174e91a2fc6fee02fe601f700a96f3f079b8b8f533211ea55c2dd9e437",
+        "size_bytes": 12922
+      },
+      {
+        "path": "final_fault_controls.py",
+        "sha256": "2ebf3addeb649d9db1130530885dcbd24f79e518586283a22ce0f737d1b4d360",
+        "size_bytes": 3029
+      },
+      {
+        "path": "package_results.py",
+        "sha256": "427f96e7af8d55e9f0b6c68b3c8350ab0d39f3ee7d646af9ab746128da853638",
+        "size_bytes": 7800
+      }
+    ]
+  },
+  "patch_validation": {
+    "status": "success",
+    "upstream_base": "8dc1163fbfbec7098a2418276fd04bc1fa1aeaa5",
+    "code_files": 2,
+    "git_apply_check_passed": true,
+    "applied_bytes_equal_candidate": true,
+    "python311_ast_passed": true,
+    "uncompressed_patch_sha256": "cf1191d410e1d31e0905a9e9d3360929e23d007a9fef8e80d2490305b0f4c886"
+  },
+  "patch_archive": {
+    "sha256": "3c6d676954615ba3a4d73e18368c86ebe412b3aa34ecaf2c0a79fbc27513f122",
+    "size_bytes": 3199
+  },
+  "uncompressed_patch_sha256": "cf1191d410e1d31e0905a9e9d3360929e23d007a9fef8e80d2490305b0f4c886",
+  "raw_archive": {
+    "sha256": "6bab1503ce2473bea17653a9246dac01a0a353e979c01b9ef9c1515d0dffe65d",
+    "size_bytes": 41579
+  },
+  "raw_byte_comparison_passed": true,
+  "commands": {
+    "execution_commit": "af0b27cabe97e334c3201e8ba55aa3b4da01662e",
+    "python": "/private/tmp/sglang-policy-lifecycle-venv/bin/python",
+    "working_directory": "/private/tmp/sglang-autotune-selection-study",
+    "scoped_worker": "test/manual/kernels/flashinfer_autotune_scoped_cache.py",
+    "legacy_worker": "test/manual/kernels/flashinfer_autotune_policy_lifecycle.py",
+    "candidate_source": "/private/tmp/fi-policy-api-review-20261020/candidate",
+    "upstream_source": "/private/tmp/fi-policy-api-review-20261020/root/8dc1163fbfbec7098a2418276fd04bc1fa1aeaa5",
+    "formal_commands": [
+      {
+        "worker": "scoped_worker",
+        "source": "candidate_source",
+        "manifest": "/private/tmp/sglang-autotune-selection-study/test/manual/kernels/results/flashinfer_autotune_selection/20261020T154100Z-scoped-cache-api-review/candidate-proof-plan.json",
+        "output_dir": "/private/tmp/fi-policy-api-review-20261020/final/scoped-candidate",
+        "exit_code": 0
+      },
+      {
+        "worker": "legacy_worker",
+        "source": "candidate_source",
+        "manifest": "/private/tmp/sglang-autotune-selection-study/test/manual/kernels/results/flashinfer_autotune_selection/20261020T154100Z-scoped-cache-api-review/candidate-proof-plan.json",
+        "output_dir": "/private/tmp/fi-policy-api-review-20261020/final/legacy-candidate",
+        "exit_code": 0
+      },
+      {
+        "worker": "legacy_worker",
+        "source": "upstream_source",
+        "manifest": "/private/tmp/sglang-autotune-selection-study/test/manual/kernels/results/flashinfer_autotune_selection/20261020T154100Z-scoped-cache-api-review/upstream-proof-plan.json",
+        "output_dir": "/private/tmp/fi-policy-api-review-20261020/final/legacy-upstream",
+        "exit_code": 0
+      }
+    ],
+    "arguments": "--flashinfer-source <source> --manifest <manifest> --output-dir <output_dir>",
+    "controlled_boundaries": "Existing frozen CPU loader, finite profile table and metadata fixture. Managed-entry-point metadata export is bound to the same fixture; bundled-config probe uses a controlled hit response.",
+    "clarification": "Inherited plan wording about unchanged methods means the harness does not monkeypatch choose_one/search/persistence. Candidate source changes are explicit in the pinned proposed patch.",
+    "preparation": "Initial scoped choose_one controls passed203. Review found shortlist/invalidation write paths; guards were added before source freeze and262-check validation. Raw unified-diff whitespace was preserved compressed after a hook rewrote the plain work copy; no source candidate changed from that hook.",
+    "scope": "No SGLang production source change, GPU allocation, CI, upstream message or PR."
+  },
+  "controlled_boundary_clarification": "Inherited plan wording about unchanged methods means the harness does not monkeypatch choose_one/search/persistence. Candidate source changes are explicit in the pinned proposed patch.",
+  "production_or_cuda_claim": false
+}
