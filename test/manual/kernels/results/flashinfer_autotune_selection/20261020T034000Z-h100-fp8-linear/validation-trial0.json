@@ -1,0 +1,992 @@
+{
+  "status": "success",
+  "execution_commit": "f0d3e8e123938a0b762d99af057a1386859b7f13",
+  "scope": "First six-worker checkpoint only; all six repetitions remain pending. No performance conclusion from one trial.",
+  "frozen_analyzer_rerun_sha256": "528dd1b41d37b5efd5988c606477382fd32054e06655f7da641b90b1fe5fc54f",
+  "independent_audits": {
+    "source": {
+      "original_sha256": "7e3487657520c794b4479be8f994af13e56f273bd39c6a6b6591f516dc1d12ce",
+      "report": {
+        "schema_version": 1,
+        "status": "success",
+        "execution_commit": "f0d3e8e123938a0b762d99af057a1386859b7f13",
+        "shapes": [
+          144
+        ],
+        "trials": [
+          0
+        ],
+        "checks": [
+          {
+            "check": "frozen producer, image and hardware identity",
+            "status": "passed",
+            "detail": {
+              "expected_workers": 6,
+              "gpu": "NVIDIA H100 NVL",
+              "uuid": "240958a2-e8e1-3bac-b767-365c9e0b97bd",
+              "scope": "This NVL cohort is separate from prior HBM3 measurements."
+            }
+          },
+          {
+            "check": "acquisition source, all six fixture slices and original checkpoint QKV linkage",
+            "status": "passed",
+            "detail": {
+              "capture_commit": "a29b31850c7b68cafde022614b00ab01d6ff5cde",
+              "capture_script_sha256": "c3c88dbf3df9fe0dc73d89a5acb9038e5b09fb1efc6316bc36917d06251f92a4",
+              "production_source_files": 6,
+              "fixture_manifest_sha256": "e13a86fab5db5796b22d8dab0f84080b8057b036ca7aef2c7be8832e76505bf1",
+              "fixture_tensor_file_sha256": "c30aa761eba827bb0b4eb6de0e99d9b8dda8243dd16d00146f9718d2abb05e8b",
+              "checkpoint_slice_audit_source_sha256": "33f9330355ec34a5016e72bcc448a20bae75b60c0923070dfc1b03d8fd6b8cda",
+              "checkpoint_slice_report_sha256": "03ffac93d2bbeb2f2d2648d7a8a48bedbd5fb5fd45163ae2fab732cd10dec176",
+              "original_bf16_checkpoint_values_linked": 4194304,
+              "tensor_slices_verified": 6
+            }
+          },
+          {
+            "check": "worker trial0-seed19-default-cold",
+            "status": "passed",
+            "detail": {
+              "result_sha256": "1463a63de21274b94d706da4afdc96b4986340eb6c14a0eb26336f9bad769272",
+              "natural_generation": "94384309bf9302eec04e0b4f9c71a619087adf7925371cce8fe4a5661ee4dcf6",
+              "actual_layer": {
+                "public_observations": 8,
+                "native_acceptance_guards": 6,
+                "real_output_poison_records": 6,
+                "numerical_checks": 10
+              }
+            }
+          },
+          {
+            "check": "worker trial0-seed19-default-warm",
+            "status": "passed",
+            "detail": {
+              "result_sha256": "0b4a40f7a02f830e5006be7e466c6f0dc8378b10daa62140595852ad1212e0a5",
+              "natural_generation": "94384309bf9302eec04e0b4f9c71a619087adf7925371cce8fe4a5661ee4dcf6",
+              "actual_layer": {
+                "public_observations": 8,
+                "native_acceptance_guards": 6,
+                "real_output_poison_records": 6,
+                "numerical_checks": 10
+              }
+            }
+          },
+          {
+            "check": "worker trial0-seed19-v1-cold",
+            "status": "passed",
+            "detail": {
+              "result_sha256": "a903ead32e1e4845efa59049f7d81b349835e7cb6281636f3ba46fa0f0c38b09",
+              "natural_generation": "a4a697425efef8ecc69e3c45852d1ee25a303a7634a0f8f25c52366f6d28e424",
+              "actual_layer": {
+                "public_observations": 8,
+                "native_acceptance_guards": 6,
+                "real_output_poison_records": 6,
+                "numerical_checks": 10
+              }
+            }
+          },
+          {
+            "check": "worker trial0-seed19-v1-warm",
+            "status": "passed",
+            "detail": {
+              "result_sha256": "27469234dbe1ca432e3f888794cc1d60fe16c63e7eed2e72abcba9da25fc6c2e",
+              "natural_generation": "a4a697425efef8ecc69e3c45852d1ee25a303a7634a0f8f25c52366f6d28e424",
+              "actual_layer": {
+                "public_observations": 8,
+                "native_acceptance_guards": 6,
+                "real_output_poison_records": 6,
+                "numerical_checks": 10
+              }
+            }
+          },
+          {
+            "check": "worker trial0-seed19-v2-cold",
+            "status": "passed",
+            "detail": {
+              "result_sha256": "e8fb4502bea2aaad24898899142be3de3549d4bff8690f567b9b764eb3583fca",
+              "natural_generation": "dac80d62c5c7d76cdf89bbdb2cd3227d4e87be518da11e249d4fc93cf7a178a4",
+              "actual_layer": {
+                "public_observations": 8,
+                "native_acceptance_guards": 6,
+                "real_output_poison_records": 6,
+                "numerical_checks": 10
+              }
+            }
+          },
+          {
+            "check": "worker trial0-seed19-v2-warm",
+            "status": "passed",
+            "detail": {
+              "result_sha256": "0bb7c1594c13c51a73f929566cbb2f8319ed7b01bba533d47d19a60a88a1ec96",
+              "natural_generation": "dac80d62c5c7d76cdf89bbdb2cd3227d4e87be518da11e249d4fc93cf7a178a4",
+              "actual_layer": {
+                "public_observations": 8,
+                "native_acceptance_guards": 6,
+                "real_output_poison_records": 6,
+                "numerical_checks": 10
+              }
+            }
+          },
+          {
+            "check": "natural file byte chains and paired operand identities",
+            "status": "passed",
+            "detail": {
+              "cold_warm_pairs": 3,
+              "distinct_fresh_containers": 6,
+              "identical_input_workers": 6
+            }
+          },
+          {
+            "check": "actual retained native binary, all three inputs and build rules",
+            "status": "passed",
+            "detail": {
+              "library_sha256": "66aede90cc076d17296005657bb2fb57d810ed1fc1956bd2dce864ef383b63d5",
+              "ninja_sha256": "bea9639085253fd21cb766f1d275d0c0526b736ab726df0a233a79bedcb6a492",
+              "translation_units": 3,
+              "validated_worker_references": 6
+            }
+          }
+        ],
+        "errors": [],
+        "scope": "Independent source/cache/native audit for the actual static FP8 fused-QKV layer. Includes immutable fixture operands, real quantization, dynamic output/graph evidence, native acceptance, true default versus cold-memory/warm-file paths and unchanged natural persistence. Timing statistics are analyzed separately; no full-model accuracy, serving-throughput or physical-kernel causality claim."
+      }
+    },
+    "numerical_cache": {
+      "original_sha256": "3fc8c0afd0fa336c5ae88c7478566ac185f49631760f3b388d50c5cdec839263",
+      "report": {
+        "status": "passed",
+        "immutable_raw": true,
+        "complete_six_trial_batch": false,
+        "source_commit": "f0d3e8e123938a0b762d99af057a1386859b7f13",
+        "trials": [
+          0
+        ],
+        "workers": 6,
+        "assertions": 1617,
+        "cold_profile_attempts": 153,
+        "warm_profile_attempts": 0,
+        "forbidden_profile_attempts": 0,
+        "numerical_checks": 60,
+        "exact_zero_byte_checks": 12,
+        "winner_frequencies": {
+          "default": [
+            {
+              "tactic": -1,
+              "count": 1
+            }
+          ],
+          "v1": [
+            {
+              "tactic": [
+                828928688194,
+                4294967332,
+                0,
+                2533274790395906,
+                558779540176897,
+                120259084316,
+                292058693646,
+                0
+              ],
+              "count": 1
+            }
+          ],
+          "v2": [
+            {
+              "tactic": -1,
+              "count": 1
+            }
+          ]
+        },
+        "natural_paired_contrasts": [
+          {
+            "phase": "cold",
+            "execution": "eager",
+            "channel": "wall",
+            "primary": true,
+            "numerator": "v2",
+            "denominator": "v1",
+            "trial_ratios": [
+              1.0101330305315146
+            ],
+            "median_ratio": 1.0101330305315146,
+            "wins": 0,
+            "independent_trials": 1
+          },
+          {
+            "phase": "cold",
+            "execution": "eager",
+            "channel": "wall",
+            "primary": true,
+            "numerator": "v1",
+            "denominator": "default",
+            "trial_ratios": [
+              0.8923315893210354
+            ],
+            "median_ratio": 0.8923315893210354,
+            "wins": 1,
+            "independent_trials": 1
+          },
+          {
+            "phase": "cold",
+            "execution": "eager",
+            "channel": "wall",
+            "primary": true,
+            "numerator": "v2",
+            "denominator": "default",
+            "trial_ratios": [
+              0.9013736125598604
+            ],
+            "median_ratio": 0.9013736125598604,
+            "wins": 1,
+            "independent_trials": 1
+          },
+          {
+            "phase": "cold",
+            "execution": "eager",
+            "channel": "gpu_event",
+            "primary": false,
+            "numerator": "v2",
+            "denominator": "v1",
+            "trial_ratios": [
+              1.0101716573806256
+            ],
+            "median_ratio": 1.0101716573806256,
+            "wins": 0,
+            "independent_trials": 1
+          },
+          {
+            "phase": "cold",
+            "execution": "eager",
+            "channel": "gpu_event",
+            "primary": false,
+            "numerator": "v1",
+            "denominator": "default",
+            "trial_ratios": [
+              0.8933853193414548
+            ],
+            "median_ratio": 0.8933853193414548,
+            "wins": 1,
+            "independent_trials": 1
+          },
+          {
+            "phase": "cold",
+            "execution": "eager",
+            "channel": "gpu_event",
+            "primary": false,
+            "numerator": "v2",
+            "denominator": "default",
+            "trial_ratios": [
+              0.9024725287186769
+            ],
+            "median_ratio": 0.9024725287186769,
+            "wins": 1,
+            "independent_trials": 1
+          },
+          {
+            "phase": "cold",
+            "execution": "cuda_graph",
+            "channel": "wall",
+            "primary": false,
+            "numerator": "v2",
+            "denominator": "v1",
+            "trial_ratios": [
+              0.9069834167835645
+            ],
+            "median_ratio": 0.9069834167835645,
+            "wins": 1,
+            "independent_trials": 1
+          },
+          {
+            "phase": "cold",
+            "execution": "cuda_graph",
+            "channel": "wall",
+            "primary": false,
+            "numerator": "v1",
+            "denominator": "default",
+            "trial_ratios": [
+              1.1844652536769074
+            ],
+            "median_ratio": 1.1844652536769074,
+            "wins": 0,
+            "independent_trials": 1
+          },
+          {
+            "phase": "cold",
+            "execution": "cuda_graph",
+            "channel": "wall",
+            "primary": false,
+            "numerator": "v2",
+            "denominator": "default",
+            "trial_ratios": [
+              1.0742903428412929
+            ],
+            "median_ratio": 1.0742903428412929,
+            "wins": 0,
+            "independent_trials": 1
+          },
+          {
+            "phase": "cold",
+            "execution": "cuda_graph",
+            "channel": "gpu_event",
+            "primary": true,
+            "numerator": "v2",
+            "denominator": "v1",
+            "trial_ratios": [
+              0.9074437124288223
+            ],
+            "median_ratio": 0.9074437124288223,
+            "wins": 1,
+            "independent_trials": 1
+          },
+          {
+            "phase": "cold",
+            "execution": "cuda_graph",
+            "channel": "gpu_event",
+            "primary": true,
+            "numerator": "v1",
+            "denominator": "default",
+            "trial_ratios": [
+              1.1837742391960795
+            ],
+            "median_ratio": 1.1837742391960795,
+            "wins": 0,
+            "independent_trials": 1
+          },
+          {
+            "phase": "cold",
+            "execution": "cuda_graph",
+            "channel": "gpu_event",
+            "primary": true,
+            "numerator": "v2",
+            "denominator": "default",
+            "trial_ratios": [
+              1.074208490293695
+            ],
+            "median_ratio": 1.074208490293695,
+            "wins": 0,
+            "independent_trials": 1
+          },
+          {
+            "phase": "warm",
+            "execution": "eager",
+            "channel": "wall",
+            "primary": true,
+            "numerator": "v2",
+            "denominator": "v1",
+            "trial_ratios": [
+              0.9768676100643492
+            ],
+            "median_ratio": 0.9768676100643492,
+            "wins": 1,
+            "independent_trials": 1
+          },
+          {
+            "phase": "warm",
+            "execution": "eager",
+            "channel": "wall",
+            "primary": true,
+            "numerator": "v1",
+            "denominator": "default",
+            "trial_ratios": [
+              0.9412245374858584
+            ],
+            "median_ratio": 0.9412245374858584,
+            "wins": 1,
+            "independent_trials": 1
+          },
+          {
+            "phase": "warm",
+            "execution": "eager",
+            "channel": "wall",
+            "primary": true,
+            "numerator": "v2",
+            "denominator": "default",
+            "trial_ratios": [
+              0.919451764467733
+            ],
+            "median_ratio": 0.919451764467733,
+            "wins": 1,
+            "independent_trials": 1
+          },
+          {
+            "phase": "warm",
+            "execution": "eager",
+            "channel": "gpu_event",
+            "primary": false,
+            "numerator": "v2",
+            "denominator": "v1",
+            "trial_ratios": [
+              0.9768502177825643
+            ],
+            "median_ratio": 0.9768502177825643,
+            "wins": 1,
+            "independent_trials": 1
+          },
+          {
+            "phase": "warm",
+            "execution": "eager",
+            "channel": "gpu_event",
+            "primary": false,
+            "numerator": "v1",
+            "denominator": "default",
+            "trial_ratios": [
+              0.9415397028256502
+            ],
+            "median_ratio": 0.9415397028256502,
+            "wins": 1,
+            "independent_trials": 1
+          },
+          {
+            "phase": "warm",
+            "execution": "eager",
+            "channel": "gpu_event",
+            "primary": false,
+            "numerator": "v2",
+            "denominator": "default",
+            "trial_ratios": [
+              0.9197432637561673
+            ],
+            "median_ratio": 0.9197432637561673,
+            "wins": 1,
+            "independent_trials": 1
+          },
+          {
+            "phase": "warm",
+            "execution": "cuda_graph",
+            "channel": "wall",
+            "primary": false,
+            "numerator": "v2",
+            "denominator": "v1",
+            "trial_ratios": [
+              0.8770092879641811
+            ],
+            "median_ratio": 0.8770092879641811,
+            "wins": 1,
+            "independent_trials": 1
+          },
+          {
+            "phase": "warm",
+            "execution": "cuda_graph",
+            "channel": "wall",
+            "primary": false,
+            "numerator": "v1",
+            "denominator": "default",
+            "trial_ratios": [
+              1.1444324305962719
+            ],
+            "median_ratio": 1.1444324305962719,
+            "wins": 0,
+            "independent_trials": 1
+          },
+          {
+            "phase": "warm",
+            "execution": "cuda_graph",
+            "channel": "wall",
+            "primary": false,
+            "numerator": "v2",
+            "denominator": "default",
+            "trial_ratios": [
+              1.0036778710803536
+            ],
+            "median_ratio": 1.0036778710803536,
+            "wins": 0,
+            "independent_trials": 1
+          },
+          {
+            "phase": "warm",
+            "execution": "cuda_graph",
+            "channel": "gpu_event",
+            "primary": true,
+            "numerator": "v2",
+            "denominator": "v1",
+            "trial_ratios": [
+              0.876931924083999
+            ],
+            "median_ratio": 0.876931924083999,
+            "wins": 1,
+            "independent_trials": 1
+          },
+          {
+            "phase": "warm",
+            "execution": "cuda_graph",
+            "channel": "gpu_event",
+            "primary": true,
+            "numerator": "v1",
+            "denominator": "default",
+            "trial_ratios": [
+              1.1448149570153112
+            ],
+            "median_ratio": 1.1448149570153112,
+            "wins": 0,
+            "independent_trials": 1
+          },
+          {
+            "phase": "warm",
+            "execution": "cuda_graph",
+            "channel": "gpu_event",
+            "primary": true,
+            "numerator": "v2",
+            "denominator": "default",
+            "trial_ratios": [
+              1.0039247829755775
+            ],
+            "median_ratio": 1.0039247829755775,
+            "wins": 0,
+            "independent_trials": 1
+          }
+        ],
+        "runtime_profile_minima": [
+          {
+            "trial": 0,
+            "arm": "v1",
+            "winner": [
+              828928688194,
+              4294967332,
+              0,
+              2533274790395906,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "minimum_ms": 0.009984000027179718,
+            "runner_up_over_minimum": 1.0038461831221963
+          },
+          {
+            "trial": 0,
+            "arm": "v2",
+            "winner": -1,
+            "minimum_ms": 0.00941760018467903,
+            "runner_up_over_minimum": 1.0598029017042523
+          }
+        ],
+        "numerical_ranges": {
+          "quantized_max_normalized_error": {
+            "minimum": 0.11754778027534485,
+            "maximum": 0.11754778027534485
+          },
+          "bf16_max_abs_error": {
+            "minimum": 0.14998984336853027,
+            "maximum": 0.14998984336853027
+          },
+          "bf16_relative_l2": {
+            "minimum": 0.023056529720005287,
+            "maximum": 0.023056529720005287
+          }
+        },
+        "input_sha256": {
+          "input_bf16": "189d0b8b23d60c4731ceee930afa1f526e9a99ed8f7db5078b017d06bcc9412f",
+          "weight_fp8_rowmajor": "10a5bab88ff22484e35bdbf143c20e26b28f2bb88fb173728007c80448556d36",
+          "weight_bf16_rowmajor": "63e3c4278e121c311023bd1e204bb19d61b28f049427ad2c58b81a48eeb6a2b3",
+          "input_scale": "d90c7167bcc08674b3f2b333abf733cb676d2c42b6a59de6389c4f29558a1a07",
+          "weight_scale": "3be9ce3eb8c6fe885b92b4481ce3cb14f0af2e2946ffbb1580d02b63de592d3d",
+          "input_ids": "416be52bdc364342c8e86489df49bfdf07904873e4cf7cb5d55f44d406133a47"
+        },
+        "quantized_input_sha256": "879f7986dc7a53da6a9ad1c813773267997fbcc0c3d257fdcd612ca4152c57c3",
+        "scope": "Independent stdlib source/cache/fixture/timing/numerical-evidence audit, without analyzer import or GPU recomputation. Repeated trials on one fixed layer fixture, not pooled timing samples. No full-model or serving-throughput claim.",
+        "concerns": []
+      }
+    },
+    "analysis_math": {
+      "original_sha256": "2682edc591efbe6f048060eeb0dbc26b5c8aa9acea50fb569a7bdff620b3b881",
+      "report": {
+        "status": "success",
+        "report_status": "FINAL; immutable after readiness",
+        "source_commit": "f0d3e8e123938a0b762d99af057a1386859b7f13",
+        "raw_root": "/private/tmp/sglang-fp8-linear-20261020T034000Z/trial0-raw/attempt01",
+        "frozen_analysis": "/private/tmp/fi-fp8-linear-trial0-frozen-analysis.json",
+        "frozen_analysis_sha256": "528dd1b41d37b5efd5988c606477382fd32054e06655f7da641b90b1fe5fc54f",
+        "trials": [
+          0
+        ],
+        "independent_trial_triplets": 1,
+        "checks_passed": 1881,
+        "workers": 6,
+        "profile_attempts": 153,
+        "numerical_checks": 60,
+        "native_acceptance_checks": 36,
+        "actual_native_output_poison_checks": 36,
+        "private_safetensors_independently_rehashed": true,
+        "profile_minimum_audit": [
+          {
+            "trial": 0,
+            "arm": "v1",
+            "winner": [
+              828928688194,
+              4294967332,
+              0,
+              2533274790395906,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "minimum_ms": 0.009984000027179718,
+            "runner_up_fractional_margin": 0.0038461831221963116,
+            "finite_profiles": 8
+          },
+          {
+            "trial": 0,
+            "arm": "v2",
+            "winner": -1,
+            "minimum_ms": 0.00941760018467903,
+            "runner_up_fractional_margin": 0.05980290170425229,
+            "finite_profiles": 9
+          }
+        ],
+        "numerical_diagnostics": [
+          {
+            "trial": 0,
+            "arm": "default",
+            "phase": "cold",
+            "max_quantized_reference_abs_error": 0.025037765502929688,
+            "max_BF16_diagnostic_abs_error": 0.14998984336853027
+          },
+          {
+            "trial": 0,
+            "arm": "default",
+            "phase": "warm",
+            "max_quantized_reference_abs_error": 0.025037765502929688,
+            "max_BF16_diagnostic_abs_error": 0.14998984336853027
+          },
+          {
+            "trial": 0,
+            "arm": "v1",
+            "phase": "cold",
+            "max_quantized_reference_abs_error": 0.025037765502929688,
+            "max_BF16_diagnostic_abs_error": 0.14998984336853027
+          },
+          {
+            "trial": 0,
+            "arm": "v1",
+            "phase": "warm",
+            "max_quantized_reference_abs_error": 0.025037765502929688,
+            "max_BF16_diagnostic_abs_error": 0.14998984336853027
+          },
+          {
+            "trial": 0,
+            "arm": "v2",
+            "phase": "cold",
+            "max_quantized_reference_abs_error": 0.025037765502929688,
+            "max_BF16_diagnostic_abs_error": 0.14998984336853027
+          },
+          {
+            "trial": 0,
+            "arm": "v2",
+            "phase": "warm",
+            "max_quantized_reference_abs_error": 0.025037765502929688,
+            "max_BF16_diagnostic_abs_error": 0.14998984336853027
+          }
+        ],
+        "primary_natural_ratios": [
+          {
+            "phase": "cold",
+            "execution": "eager",
+            "channel": "wall",
+            "primary": true,
+            "comparison": "v2_over_v1",
+            "numerator_lookup_tier": "memory",
+            "denominator_lookup_tier": "memory",
+            "trial_estimates": [
+              {
+                "trial": 0,
+                "numerator_ms": 0.11864022817462683,
+                "denominator_ms": 0.11745010269805789,
+                "ratio": 1.0101330305315146
+              }
+            ],
+            "independent_trials": 1,
+            "median_ratio": 1.0101330305315146,
+            "min_ratio": 1.0101330305315146,
+            "max_ratio": 1.0101330305315146,
+            "ratios_below_one": 0,
+            "ratios_above_one": 1,
+            "exploratory_cluster_bootstrap_95_percent": null,
+            "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+          },
+          {
+            "phase": "cold",
+            "execution": "eager",
+            "channel": "wall",
+            "primary": true,
+            "comparison": "v1_over_default",
+            "numerator_lookup_tier": "memory",
+            "denominator_lookup_tier": "miss",
+            "trial_estimates": [
+              {
+                "trial": 0,
+                "numerator_ms": 0.11745010269805789,
+                "denominator_ms": 0.1316215901169926,
+                "ratio": 0.8923315893210354
+              }
+            ],
+            "independent_trials": 1,
+            "median_ratio": 0.8923315893210354,
+            "min_ratio": 0.8923315893210354,
+            "max_ratio": 0.8923315893210354,
+            "ratios_below_one": 1,
+            "ratios_above_one": 0,
+            "exploratory_cluster_bootstrap_95_percent": null,
+            "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+          },
+          {
+            "phase": "cold",
+            "execution": "eager",
+            "channel": "wall",
+            "primary": true,
+            "comparison": "v2_over_default",
+            "numerator_lookup_tier": "memory",
+            "denominator_lookup_tier": "miss",
+            "trial_estimates": [
+              {
+                "trial": 0,
+                "numerator_ms": 0.11864022817462683,
+                "denominator_ms": 0.1316215901169926,
+                "ratio": 0.9013736125598604
+              }
+            ],
+            "independent_trials": 1,
+            "median_ratio": 0.9013736125598604,
+            "min_ratio": 0.9013736125598604,
+            "max_ratio": 0.9013736125598604,
+            "ratios_below_one": 1,
+            "ratios_above_one": 0,
+            "exploratory_cluster_bootstrap_95_percent": null,
+            "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+          },
+          {
+            "phase": "cold",
+            "execution": "cuda_graph",
+            "channel": "gpu_event",
+            "primary": true,
+            "comparison": "v2_over_v1",
+            "numerator_lookup_tier": "memory",
+            "denominator_lookup_tier": "memory",
+            "trial_estimates": [
+              {
+                "trial": 0,
+                "numerator_ms": 0.007230443507432937,
+                "denominator_ms": 0.007967925071716309,
+                "ratio": 0.9074437124288223
+              }
+            ],
+            "independent_trials": 1,
+            "median_ratio": 0.9074437124288223,
+            "min_ratio": 0.9074437124288223,
+            "max_ratio": 0.9074437124288223,
+            "ratios_below_one": 1,
+            "ratios_above_one": 0,
+            "exploratory_cluster_bootstrap_95_percent": null,
+            "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+          },
+          {
+            "phase": "cold",
+            "execution": "cuda_graph",
+            "channel": "gpu_event",
+            "primary": true,
+            "comparison": "v1_over_default",
+            "numerator_lookup_tier": "memory",
+            "denominator_lookup_tier": "miss",
+            "trial_estimates": [
+              {
+                "trial": 0,
+                "numerator_ms": 0.007967925071716309,
+                "denominator_ms": 0.006730949878692627,
+                "ratio": 1.1837742391960795
+              }
+            ],
+            "independent_trials": 1,
+            "median_ratio": 1.1837742391960795,
+            "min_ratio": 1.1837742391960795,
+            "max_ratio": 1.1837742391960795,
+            "ratios_below_one": 0,
+            "ratios_above_one": 1,
+            "exploratory_cluster_bootstrap_95_percent": null,
+            "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+          },
+          {
+            "phase": "cold",
+            "execution": "cuda_graph",
+            "channel": "gpu_event",
+            "primary": true,
+            "comparison": "v2_over_default",
+            "numerator_lookup_tier": "memory",
+            "denominator_lookup_tier": "miss",
+            "trial_estimates": [
+              {
+                "trial": 0,
+                "numerator_ms": 0.007230443507432937,
+                "denominator_ms": 0.006730949878692627,
+                "ratio": 1.074208490293695
+              }
+            ],
+            "independent_trials": 1,
+            "median_ratio": 1.074208490293695,
+            "min_ratio": 1.074208490293695,
+            "max_ratio": 1.074208490293695,
+            "ratios_below_one": 0,
+            "ratios_above_one": 1,
+            "exploratory_cluster_bootstrap_95_percent": null,
+            "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+          },
+          {
+            "phase": "warm",
+            "execution": "eager",
+            "channel": "wall",
+            "primary": true,
+            "comparison": "v2_over_v1",
+            "numerator_lookup_tier": "file",
+            "denominator_lookup_tier": "file",
+            "trial_estimates": [
+              {
+                "trial": 0,
+                "numerator_ms": 0.11849844886455685,
+                "denominator_ms": 0.1213045121403411,
+                "ratio": 0.9768676100643492
+              }
+            ],
+            "independent_trials": 1,
+            "median_ratio": 0.9768676100643492,
+            "min_ratio": 0.9768676100643492,
+            "max_ratio": 0.9768676100643492,
+            "ratios_below_one": 1,
+            "ratios_above_one": 0,
+            "exploratory_cluster_bootstrap_95_percent": null,
+            "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+          },
+          {
+            "phase": "warm",
+            "execution": "eager",
+            "channel": "wall",
+            "primary": true,
+            "comparison": "v1_over_default",
+            "numerator_lookup_tier": "file",
+            "denominator_lookup_tier": "miss",
+            "trial_estimates": [
+              {
+                "trial": 0,
+                "numerator_ms": 0.1213045121403411,
+                "denominator_ms": 0.1288794621359557,
+                "ratio": 0.9412245374858584
+              }
+            ],
+            "independent_trials": 1,
+            "median_ratio": 0.9412245374858584,
+            "min_ratio": 0.9412245374858584,
+            "max_ratio": 0.9412245374858584,
+            "ratios_below_one": 1,
+            "ratios_above_one": 0,
+            "exploratory_cluster_bootstrap_95_percent": null,
+            "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+          },
+          {
+            "phase": "warm",
+            "execution": "eager",
+            "channel": "wall",
+            "primary": true,
+            "comparison": "v2_over_default",
+            "numerator_lookup_tier": "file",
+            "denominator_lookup_tier": "miss",
+            "trial_estimates": [
+              {
+                "trial": 0,
+                "numerator_ms": 0.11849844886455685,
+                "denominator_ms": 0.1288794621359557,
+                "ratio": 0.919451764467733
+              }
+            ],
+            "independent_trials": 1,
+            "median_ratio": 0.919451764467733,
+            "min_ratio": 0.919451764467733,
+            "max_ratio": 0.919451764467733,
+            "ratios_below_one": 1,
+            "ratios_above_one": 0,
+            "exploratory_cluster_bootstrap_95_percent": null,
+            "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+          },
+          {
+            "phase": "warm",
+            "execution": "cuda_graph",
+            "channel": "gpu_event",
+            "primary": true,
+            "comparison": "v2_over_v1",
+            "numerator_lookup_tier": "file",
+            "denominator_lookup_tier": "file",
+            "trial_estimates": [
+              {
+                "trial": 0,
+                "numerator_ms": 0.006746505945920944,
+                "denominator_ms": 0.007693306356668472,
+                "ratio": 0.876931924083999
+              }
+            ],
+            "independent_trials": 1,
+            "median_ratio": 0.876931924083999,
+            "min_ratio": 0.876931924083999,
+            "max_ratio": 0.876931924083999,
+            "ratios_below_one": 1,
+            "ratios_above_one": 0,
+            "exploratory_cluster_bootstrap_95_percent": null,
+            "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+          },
+          {
+            "phase": "warm",
+            "execution": "cuda_graph",
+            "channel": "gpu_event",
+            "primary": true,
+            "comparison": "v1_over_default",
+            "numerator_lookup_tier": "file",
+            "denominator_lookup_tier": "miss",
+            "trial_estimates": [
+              {
+                "trial": 0,
+                "numerator_ms": 0.007693306356668472,
+                "denominator_ms": 0.0067201308906078335,
+                "ratio": 1.1448149570153112
+              }
+            ],
+            "independent_trials": 1,
+            "median_ratio": 1.1448149570153112,
+            "min_ratio": 1.1448149570153112,
+            "max_ratio": 1.1448149570153112,
+            "ratios_below_one": 0,
+            "ratios_above_one": 1,
+            "exploratory_cluster_bootstrap_95_percent": null,
+            "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+          },
+          {
+            "phase": "warm",
+            "execution": "cuda_graph",
+            "channel": "gpu_event",
+            "primary": true,
+            "comparison": "v2_over_default",
+            "numerator_lookup_tier": "file",
+            "denominator_lookup_tier": "miss",
+            "trial_estimates": [
+              {
+                "trial": 0,
+                "numerator_ms": 0.006746505945920944,
+                "denominator_ms": 0.0067201308906078335,
+                "ratio": 1.0039247829755775
+              }
+            ],
+            "independent_trials": 1,
+            "median_ratio": 1.0039247829755775,
+            "min_ratio": 1.0039247829755775,
+            "max_ratio": 1.0039247829755775,
+            "ratios_below_one": 0,
+            "ratios_above_one": 1,
+            "exploratory_cluster_bootstrap_95_percent": null,
+            "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+          }
+        ],
+        "limits": [
+          "Each independent unit is a fresh trial triplet on one fixed captured layer/input, not15 worker samples.",
+          "Default natural misses and tuned memory/file hits differ; ratios include this dispatch cost.",
+          "Quantized-input FP32 gates do not prove dense BF16/full-model accuracy; BF16 error is diagnostic.",
+          "Actual linear-layer microbenchmarks do not establish end-to-end serving performance or GPU-kernel identity."
+        ],
+        "root_analysis_byte_identical": true
+      }
+    }
+  }
+}

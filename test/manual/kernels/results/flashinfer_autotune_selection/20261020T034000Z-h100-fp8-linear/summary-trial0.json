@@ -1,0 +1,79 @@
+{
+  "status": "success",
+  "report_status": "FINAL; immutable after readiness",
+  "scope": "First complete trial checkpoint; six fresh workers, one fixed captured Qwen3-0.6B fused-QKV layer fixture",
+  "source_commit": "f0d3e8e123938a0b762d99af057a1386859b7f13",
+  "shape": [
+    144,
+    4096,
+    1024
+  ],
+  "fixture_manifest_sha256": "e13a86fab5db5796b22d8dab0f84080b8057b036ca7aef2c7be8832e76505bf1",
+  "fixture_tensor_file_sha256": "c30aa761eba827bb0b4eb6de0e99d9b8dda8243dd16d00146f9718d2abb05e8b",
+  "audit_report_sha256": "2682edc591efbe6f048060eeb0dbc26b5c8aa9acea50fb569a7bdff620b3b881",
+  "analysis_sha256": "528dd1b41d37b5efd5988c606477382fd32054e06655f7da641b90b1fe5fc54f",
+  "validation": {
+    "fresh_workers": 6,
+    "paired_trial_triplets": 1,
+    "independent_actual_data_checks": 1881,
+    "numerical_checks": 60,
+    "native_acceptance_checks": 36,
+    "actual_output_poison_checks": 36,
+    "private_fixture_and_all_six_tensor_byte_ranges_independently_rehashed": true,
+    "v1_startup_profiles": 72,
+    "v2_startup_profiles": 81,
+    "default_or_warm_profiling_attempts": 0,
+    "untuned_default_path": "Genuine miss and tactic-1 in both cold and warm workers",
+    "tuned_cache_reuse": "Cold memory winners survive exact existing JSON bytes and fresh warm file hits; no memory promotion",
+    "graph_checks": "Changed/restored actual BF16 input and poisoned actual captured output allocation passed; no poison nodes added during capture",
+    "timing": "All15 natural samples per mode/channel have finite positive values and verified batch normalization; calibration/warmup targets passed",
+    "root_and_independent_frozen_analysis_byte_identical": true
+  },
+  "cold_winners": [
+    {
+      "arm": "default",
+      "fresh_trials": 1,
+      "winners": [
+        {
+          "tactic": -1,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "arm": "v1",
+      "fresh_trials": 1,
+      "winners": [
+        {
+          "tactic": [
+            828928688194,
+            4294967332,
+            0,
+            2533274790395906,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "arm": "v2",
+      "fresh_trials": 1,
+      "winners": [
+        {
+          "tactic": -1,
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "numerical_reference_scope": {
+    "quantized_FP32_reference": "Correctness gate; maximum observed absolute error0.025037765502929688 across the nonzero recorded checks",
+    "dense_BF16_reference": "Diagnostic only; maximum observed absolute error0.14998984336853027 and relativeL2 0.023056529720005287 for this single-batch FP8 calibration. No full-model accuracy claim."
+  },
+  "performance_assessment": "Withheld at n1. All exploratory confidence intervals are absent; complete six paired repetitions before interpreting performance.",
+  "pending": "Remaining30 workers and full-cohort independent audits; no speedup is required for acceptance."
+}

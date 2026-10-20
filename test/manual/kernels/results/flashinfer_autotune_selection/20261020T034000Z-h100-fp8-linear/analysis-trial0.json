@@ -1,0 +1,2512 @@
+{
+  "status": "success",
+  "schema_version": 1,
+  "source_commit": "f0d3e8e123938a0b762d99af057a1386859b7f13",
+  "analyzer_sha256": "e551c7508890045395074d7532c7a2b621cc91fbfe9b4b8c23a7e9e7070027d5",
+  "trials": [
+    0
+  ],
+  "input_seed": 19,
+  "independent_trial_triplets": 1,
+  "source_manifest_sha256": "3f4305fce604d3cd51e85047678c6efbf71e35bcf51037e9586d15bc20486895",
+  "fixture_manifest_sha256": "e13a86fab5db5796b22d8dab0f84080b8057b036ca7aef2c7be8832e76505bf1",
+  "outer_provenance": {
+    "plan": {
+      "schema_version": 1,
+      "batch_id": "20261020T034000Z-h100-fp8-linear",
+      "status": "preregistered_frozen_fixture_before_comparison",
+      "objective": "Compare untuned default, v1 and v2 through one actual SGLang static per-tensor FP8 fused-QKV linear layer with fixed captured model activations and weights.",
+      "landed_main_commit": "1897575ce11301b6b5ce647f0ad4fa2e777ee2bd",
+      "source_baseline_commit": "4eb4cbbc2a9ea0d12f8246875cc60dc9624bff6f",
+      "flashinfer_source": {
+        "base_release": "0.7.2",
+        "base_commit": "d84335d8c54e0c8f9f7e22faa15c7e34a58abf94",
+        "upstream_pr": 6148,
+        "patch_head": "14c5c67a1eb9ad3a608b8d3da3bf6d8924037c5c",
+        "implementation": "Exact original diff applied cleanly to0.7.2, not full PR head; candidate source only for every arm.",
+        "input_batch": "test/manual/kernels/results/flashinfer_autotune_selection/20261019T232945Z-h100-descriptor-qualification",
+        "source_overlay_archive_sha256": "c62f09dad18dbe0ce326177077360fe716095f209dc023b25c5552dcc12f666f",
+        "source_manifest_sha256": "3f4305fce604d3cd51e85047678c6efbf71e35bcf51037e9586d15bc20486895",
+        "native_loading": "Reuse audited prepare_native(candidate): explicit JitSpec.build/load, identical module bootstrap in every arm; reject AOT substitution. One isolated candidate build workspace, fresh process/container per worker."
+      },
+      "container_image": "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
+      "environment": {
+        "gpu": "NVIDIA H100 NVL",
+        "physical_gpu_uuid": "240958a2-e8e1-3bac-b767-365c9e0b97bd",
+        "driver": "580.159.04",
+        "torch": "2.14.1+cu130",
+        "torch_cuda": "13.0",
+        "exclusive_node": true,
+        "clock_lock": false,
+        "cuda_arch_list": "9.0",
+        "sglang_wrapper_sha256": "64deff581665bd04830535baccfdfbdfa72794d919bc462fc469a4c42bdd68f5",
+        "host": "1u1g-gen-0100",
+        "power_limit_watts": 310,
+        "hardware_change": "Reuse prior H100NVL physical GPU if available; no comparisons to earlier HBM3 absolute timings. Hardware preflight must match this frozen expected model/UUID/driver before workers."
+      },
+      "workload": {
+        "api": "sglang.srt.layers.quantization.fp8_utils.apply_fp8_linear_bmm_flashinfer",
+        "model_id": "Qwen/Qwen3-0.6B",
+        "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+        "projection": "First transformer layer fused q/k/v projection, concatenated in source-verified SGLang QKV loader order.",
+        "tokens": 144,
+        "batch": 1,
+        "seed": 19,
+        "arms": [
+          "default",
+          "v1",
+          "v2"
+        ],
+        "fixture": "Frozen captured BF16 activations and checkpoint weights; per-tensor static scales calibrated from this one input/weight tensor. Exact shapes, tensor/file hashes and capture provenance frozen before tuning workers.",
+        "measurement_policy": "unspecified",
+        "persistence": "Existing real SGLang wrapper and v1 JSON save/load; managed store disabled.",
+        "shape_limit": "One representative captured prefill projection, not full-model output accuracy or traffic distribution. Dense BF16 checkpoint adapted to static per-tensor FP8 for this experiment; no production calibration claim.",
+        "path": "Actual SGLang static quantizer, normal custom-op dispatch/fast path and allocation, FlashInfer cublas FP8 implementation; no replacement or output copy in timed calls.",
+        "profiling_input_limit": "Actual serving and startup calls use captured BF16 inputs quantized by SGLang. FlashInfer retains its existing synthesized dynamic FP8 activation profiles; static real QKV weights and scales are reused. Reset RNG19 does not mean synthesized profiling activations equal captured serving activations. No activation-domain fidelity or profiling-policy change is claimed.",
+        "shape": [
+          144,
+          4096,
+          1024
+        ]
+      },
+      "protocol": {
+        "trials": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "phases": [
+          "cold",
+          "warm"
+        ],
+        "workers_total": 36,
+        "trial_arm_orders": [
+          [
+            "default",
+            "v1",
+            "v2"
+          ],
+          [
+            "default",
+            "v2",
+            "v1"
+          ],
+          [
+            "v1",
+            "default",
+            "v2"
+          ],
+          [
+            "v1",
+            "v2",
+            "default"
+          ],
+          [
+            "v2",
+            "default",
+            "v1"
+          ],
+          [
+            "v2",
+            "v1",
+            "default"
+          ]
+        ],
+        "trial_order": "Ascending0..5, all six arm permutations once, cold then fresh warm process per arm; identical fixed input bytes and reset RNG19.",
+        "natural_samples": 15,
+        "requested_iterations": 20,
+        "warmup_ms": 500,
+        "min_sample_ms": 20,
+        "max_iterations": 65536,
+        "timing": "Independent synchronized batches; eager primary wall per call, graph primary GPU-event replay span including possible host gaps. Preserve both raw channels and effective iteration counts.",
+        "graphs": "Capture the actual returned output allocation; replay binds/checks that exact output even after eager calls. Poison and change/restore BF16 inputs outside timing. No output copy added to measured path.",
+        "instrumentation": "No native/choose/search observation in latency windows; dormant forbidden-profiling guard only. Source, native acceptance, true cache source and quantizer operand observations outside timing.",
+        "checkpoint": "First full trial6workers must pass frozen analyzer before remaining30. No speedup acceptance threshold.",
+        "candidate_analysis": "Record every actual startup candidate/profile input shape/settings/time and selected minimum. Runtime enumeration diagnostics outside timing; no forced shortlist/oracle in this batch.",
+        "timeout_seconds_per_worker": 600,
+        "capture_timeout_seconds": 900,
+        "startup_scope": "Secondary operation-wrapper diagnostic, excludes model capture/download, native construction/build/load and initial quantizer/public-call preparation."
+      },
+      "acceptance": [
+        "Pinned image, clean frozen checkout with landed wrapper, exact qualified descriptor overlay and expected physical GPU/driver match.",
+        "Capture script and public checkpoint revision frozen before acquisition. Private immutable fixture bytes, exact model/file/tensor hashes and source capture provenance frozen before comparison workers.",
+        "All36 workers consume identical operands/scales; actual static quantizer matches independent FP32 reciprocal/multiply/clamp/FP8 reference bytes, and observed native operation sees matching inputs/scales/layout.",
+        "Numerical actual quantized-input FP32 reference checks pass; BF16 dense approximation error reported separately with no model accuracy claim.",
+        "Correct eager and poisoned/change/restore CUDA Graph output from actual allocated graph storage; stable serving inputs restored after checks.",
+        "Cold tuned startup has real finite runtime-bucket profile minimum selected; v2 includes default-1; v1 excludes it. Default and all warm/post-startup attempts are zero.",
+        "Cold-to-warm tactic and cache bytes match; warm tuned serving/capture uses actual file-tier hit without memory promotion; explicit winner is natively accepted rather than fallback.",
+        "Actual wrapper preserves caller stream and tuning/store state; original natural file bytes remain unchanged through execution.",
+        "Retain every attempted result and failure; fatal missing/corrupt provenance, numerical/cache/native rejection stops full batch rather than removing records."
+      ],
+      "analysis": {
+        "independent_unit": "Six fresh tuning/warm repetitions on one fixed model-layer fixture. Do not pool15 samples as independent trials.",
+        "comparison": "Pair worker medians by trial and phase for v2/v1, v1/default and v2/default; report6 ratios/range/win counts and exploratory deterministic whole-trial bootstrap95% intervals.",
+        "baseline_limit": "Untuned default consumes a genuine miss; cold tuned calls use memory and fresh warm tuned calls use v1 file hits, matching each natural configuration. Baseline lookup costs therefore differ and are part of the compared paths.",
+        "selection": "Report actual profiled candidate timings/minimum margins, selected frequencies and serving-condition timing; never assume the expanded candidate set is faster or a measured winner is universally optimal.",
+        "scope_limits": "One actual linear path and captured workload; no full model server/throughput, distributed/EP/BF16 backend, managed-store or explicit-policy adoption claim."
+      },
+      "publication": {
+        "fork": "leejnau/sglang",
+        "branch": "experiment/flashinfer-candidate-selection",
+        "open_pr": false,
+        "records": "Preserve every attempt, exact raw bytes, numerical/cache/native build evidence, timing samples, neutral/regressive outcomes; one living Markdown for narrative/history."
+      },
+      "resource_policy": "One exclusive H100 allocation for at most1hour. Verify node/durable/downloaded full archive before release; retain binary privately, exact build/source/hash publicly. No CI triggered.",
+      "fixture": {
+        "manifest_sha256": "e13a86fab5db5796b22d8dab0f84080b8057b036ca7aef2c7be8832e76505bf1",
+        "tensor_file_sha256": "c30aa761eba827bb0b4eb6de0e99d9b8dda8243dd16d00146f9718d2abb05e8b",
+        "tensor_file_size_bytes": 12879616,
+        "capture_commit": "a29b31850c7b68cafde022614b00ab01d6ff5cde",
+        "capture_script_sha256": "c3c88dbf3df9fe0dc73d89a5acb9038e5b09fb1efc6316bc36917d06251f92a4",
+        "manifest_path": "fixture-manifest.json",
+        "private_capture_archive": "/home/lnau/flashinfer-autotune-study/20261020T034000Z-h100-fp8-linear-capture-full-raw.tgz",
+        "private_capture_archive_sha256": "9f87e468d7b6c1f665f187ff6c9b009da82a5f534ffb67e37c24fd6ad017fec1",
+        "public_tensor_publication": false
+      }
+    },
+    "fixture_manifest": {
+      "schema_version": 1,
+      "shape": [
+        144,
+        4096,
+        1024
+      ],
+      "model": {
+        "repo_id": "Qwen/Qwen3-0.6B",
+        "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+        "resolved_snapshot_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+        "class": "Qwen3ForCausalLM",
+        "checkpoint_dtype": "torch.bfloat16"
+      },
+      "capture": {
+        "layer": "model.layers.0.self_attn",
+        "hook": "model.layers.0.self_attn.q_proj:forward_pre_hook",
+        "captured_shape": [
+          1,
+          144,
+          1024
+        ],
+        "saved_shape": [
+          144,
+          1024
+        ],
+        "weight_order": [
+          "q_proj",
+          "k_proj",
+          "v_proj"
+        ],
+        "projection_shapes": [
+          [
+            2048,
+            1024
+          ],
+          [
+            1024,
+            1024
+          ],
+          [
+            1024,
+            1024
+          ]
+        ],
+        "tensor_parallel_size": 1,
+        "bias": null,
+        "full_bf16_forward_completed": true,
+        "logits_shape": [
+          1,
+          144,
+          151936
+        ],
+        "attention_implementation": "eager",
+        "model_training": false,
+        "seed": 19,
+        "device": "cuda"
+      },
+      "tensor_file": {
+        "name": "fixture.safetensors",
+        "sha256": "c30aa761eba827bb0b4eb6de0e99d9b8dda8243dd16d00146f9718d2abb05e8b",
+        "size_bytes": 12879616
+      },
+      "tensors": {
+        "input_bf16": {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            144,
+            1024
+          ],
+          "sha256": "189d0b8b23d60c4731ceee930afa1f526e9a99ed8f7db5078b017d06bcc9412f",
+          "nbytes": 294912
+        },
+        "weight_fp8_rowmajor": {
+          "dtype": "torch.float8_e4m3fn",
+          "shape": [
+            4096,
+            1024
+          ],
+          "sha256": "10a5bab88ff22484e35bdbf143c20e26b28f2bb88fb173728007c80448556d36",
+          "nbytes": 4194304
+        },
+        "weight_bf16_rowmajor": {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            4096,
+            1024
+          ],
+          "sha256": "63e3c4278e121c311023bd1e204bb19d61b28f049427ad2c58b81a48eeb6a2b3",
+          "nbytes": 8388608
+        },
+        "input_scale": {
+          "dtype": "torch.float32",
+          "shape": [
+            1
+          ],
+          "sha256": "d90c7167bcc08674b3f2b333abf733cb676d2c42b6a59de6389c4f29558a1a07",
+          "nbytes": 4
+        },
+        "weight_scale": {
+          "dtype": "torch.float32",
+          "shape": [
+            1
+          ],
+          "sha256": "3be9ce3eb8c6fe885b92b4481ce3cb14f0af2e2946ffbb1580d02b63de592d3d",
+          "nbytes": 4
+        },
+        "input_ids": {
+          "dtype": "torch.int64",
+          "shape": [
+            1,
+            144
+          ],
+          "sha256": "416be52bdc364342c8e86489df49bfdf07904873e4cf7cb5d55f44d406133a47",
+          "nbytes": 1152
+        }
+      },
+      "quantization": {
+        "dtype": "torch.float8_e4m3fn",
+        "max_finite": 448.0,
+        "scale_rule": "absmax_fp32 / 448",
+        "weight_rule": "clamp(weight.float() / weight_scale,-448,448).to(float8_e4m3fn)",
+        "independent_input_rule": "clamp(input.float() * input_scale.reciprocal(),-448,448).to(float8_e4m3fn)",
+        "independent_input_fp8_sha256": "879f7986dc7a53da6a9ad1c813773267997fbcc0c3d257fdcd612ca4152c57c3",
+        "calibration_batches": 1
+      },
+      "tokenization": {
+        "prompt": "The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. The research team compares repeatable measurements from the same model inputs, records the numerical results, and checks each cached choice. ",
+        "input_ids": [
+          [
+            785,
+            3412,
+            2083,
+            42465,
+            13153,
+            480,
+            21595,
+            504,
+            279,
+            1852,
+            1614,
+            11127,
+            11,
+            7424,
+            279,
+            34776,
+            3059,
+            11,
+            323,
+            12341,
+            1817,
+            20579,
+            5754,
+            13,
+            576,
+            3412,
+            2083,
+            42465,
+            13153,
+            480,
+            21595,
+            504,
+            279,
+            1852,
+            1614,
+            11127,
+            11,
+            7424,
+            279,
+            34776,
+            3059,
+            11,
+            323,
+            12341,
+            1817,
+            20579,
+            5754,
+            13,
+            576,
+            3412,
+            2083,
+            42465,
+            13153,
+            480,
+            21595,
+            504,
+            279,
+            1852,
+            1614,
+            11127,
+            11,
+            7424,
+            279,
+            34776,
+            3059,
+            11,
+            323,
+            12341,
+            1817,
+            20579,
+            5754,
+            13,
+            576,
+            3412,
+            2083,
+            42465,
+            13153,
+            480,
+            21595,
+            504,
+            279,
+            1852,
+            1614,
+            11127,
+            11,
+            7424,
+            279,
+            34776,
+            3059,
+            11,
+            323,
+            12341,
+            1817,
+            20579,
+            5754,
+            13,
+            576,
+            3412,
+            2083,
+            42465,
+            13153,
+            480,
+            21595,
+            504,
+            279,
+            1852,
+            1614,
+            11127,
+            11,
+            7424,
+            279,
+            34776,
+            3059,
+            11,
+            323,
+            12341,
+            1817,
+            20579,
+            5754,
+            13,
+            576,
+            3412,
+            2083,
+            42465,
+            13153,
+            480,
+            21595,
+            504,
+            279,
+            1852,
+            1614,
+            11127,
+            11,
+            7424,
+            279,
+            34776,
+            3059,
+            11,
+            323,
+            12341,
+            1817,
+            20579,
+            5754,
+            13
+          ]
+        ],
+        "attention_mask": [
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "add_special_tokens": false,
+        "truncation": true,
+        "max_length": 144,
+        "padding": false,
+        "tokenizer_class": "Qwen2Tokenizer"
+      },
+      "source": {
+        "sglang_commit": "a29b31850c7b68cafde022614b00ab01d6ff5cde",
+        "capture_script_sha256": "c3c88dbf3df9fe0dc73d89a5acb9038e5b09fb1efc6316bc36917d06251f92a4",
+        "sglang_source_sha256": {
+          "python/sglang/srt/models/qwen3.py": "bc6b5d40731d21d9be6ba287fd9983810ca7998f2ff394a251bc6ee357ad1121",
+          "python/sglang/srt/layers/linear.py": "3ce31df0a8aab09ed8afa0ada8c0ce30ca207a748c02c3073d7f53648b9b7c3c",
+          "python/sglang/srt/layers/quantization/fp8_utils.py": "bf82147d19bf4d9e51647a3b20267386312f808833103d59a1bb0a1171c6c4c8",
+          "python/sglang/kernels/ops/quantization/fp8_kernel.py": "1913b690b331170ae722874a3e27ca41fadbcc560ab0c0490e62e482d2c7fe67",
+          "python/sglang/srt/utils/custom_op.py": "16ce982c284ac85d437b9a6d3ccbe12e92b3ba59c9c1e3dbe0d54be48d8e0166",
+          "python/sglang/srt/runtime_context.py": "17c498293ca672c39fea298fa104d5b5603323581cb18d695e5d8fc4f06d1bc6"
+        },
+        "upstream_source_sha256": {
+          "transformers.models.qwen3.modeling_qwen3": "ca9535e36ea4e689c76d7d753b91aec9ea00da837fbf223c8ea4c01a3b50cac0",
+          "transformers.models.qwen2.tokenization_qwen2": "fac4e6576bfe2369731be147a4e530f262bdf32f2ac50436f96f0d8bdd2fc628"
+        }
+      },
+      "software": {
+        "torch": "2.14.1+cu130",
+        "transformers": "5.19.0",
+        "safetensors": "0.8.0",
+        "huggingface_hub": "1.33.0",
+        "tokenizers": "0.23.2"
+      },
+      "checkpoint_files": {
+        "config.json": {
+          "sha256": "660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd",
+          "size_bytes": 726
+        },
+        "generation_config.json": {
+          "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2",
+          "size_bytes": 239
+        },
+        "tokenizer.json": {
+          "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+          "size_bytes": 11422654
+        },
+        "tokenizer_config.json": {
+          "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "size_bytes": 9732
+        },
+        "vocab.json": {
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "size_bytes": 2776833
+        },
+        "merges.txt": {
+          "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+          "size_bytes": 1671853
+        },
+        "model.safetensors": {
+          "sha256": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b",
+          "size_bytes": 1503300328
+        }
+      },
+      "scope_notes": [
+        "Original checkpoint weights and captured activations are BF16; FP8 weights and static scales are prepared from this single captured batch, not loaded from a precalibrated FP8 checkpoint.",
+        "The measured operation must use the actual SGLang static quantizer and linear facade; this capture performs no autotuning.",
+        "Fused Q/K/V output order matches the audited production loader at TP1. This fixture supports one linear-layer experiment and does not establish full-model quantized accuracy or serving performance.",
+        "The independent FP8 activation digest is a quantizer diagnostic; an independent GEMM reference should consume the actual SGLang-quantized activation bytes."
+      ]
+    },
+    "image": {
+      "Id": "sha256:2e152727f0a5ce999172ec48203b2b292d41b3cb370976827718870557899caa",
+      "RepoDigests": [
+        "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0"
+      ],
+      "Created": "2026-10-19T00:48:17.586753916Z",
+      "Architecture": "amd64",
+      "Os": "linux",
+      "Size": 39141723315
+    },
+    "gpu": {
+      "index": "0",
+      "name": "NVIDIA H100 NVL",
+      "uuid": "GPU-240958a2-e8e1-3bac-b767-365c9e0b97bd",
+      "driver_version": "580.159.04",
+      "pstate": "P0",
+      "clocks.current.sm [MHz]": "345 MHz",
+      "clocks.current.memory [MHz]": "2619 MHz",
+      "power.limit [W]": "310.00 W",
+      "temperature.gpu": "38",
+      "memory.total [MiB]": "95830 MiB",
+      "memory.used [MiB]": "0 MiB"
+    },
+    "environment": {
+      "gpu": "NVIDIA H100 NVL",
+      "physical_gpu_uuid": "240958a2-e8e1-3bac-b767-365c9e0b97bd",
+      "driver": "580.159.04",
+      "torch": "2.14.1+cu130",
+      "torch_cuda": "13.0",
+      "exclusive_node": true,
+      "clock_lock": false,
+      "cuda_arch_list": "9.0",
+      "sglang_wrapper_sha256": "64deff581665bd04830535baccfdfbdfa72794d919bc462fc469a4c42bdd68f5",
+      "host": "1u1g-gen-0100",
+      "power_limit_watts": 310,
+      "hardware_change": "Reuse prior H100NVL physical GPU if available; no comparisons to earlier HBM3 absolute timings. Hardware preflight must match this frozen expected model/UUID/driver before workers."
+    },
+    "private_fixture_locally_rehashed": true,
+    "launcher_manifest_sha256": "993627847ef4757aa16b524a2a3acc87b8ce095f04e201f19553da22103584e8",
+    "plan_sha256": "a684eca9e48107044158f0bb42574a6a9198443241d9e8d96ee7011a0c8fc710",
+    "fixture_manifest_sha256": "e13a86fab5db5796b22d8dab0f84080b8057b036ca7aef2c7be8832e76505bf1"
+  },
+  "validated_workers": [
+    {
+      "file": "/private/tmp/sglang-fp8-linear-20261020T034000Z/trial0-raw/attempt01/trial0-seed19-default-cold.json",
+      "sha256": "1463a63de21274b94d706da4afdc96b4986340eb6c14a0eb26336f9bad769272",
+      "container_id": "54fe35ff4a0ad9bf53b702cfa21a959f288087ee8e6a299d5b3a89596a59d365",
+      "trial": 0,
+      "arm": "default",
+      "phase": "cold",
+      "profile_attempts": 0,
+      "numerical_checks": 10
+    },
+    {
+      "file": "/private/tmp/sglang-fp8-linear-20261020T034000Z/trial0-raw/attempt01/trial0-seed19-default-warm.json",
+      "sha256": "0b4a40f7a02f830e5006be7e466c6f0dc8378b10daa62140595852ad1212e0a5",
+      "container_id": "6f12e419394670cd178e0b947ff7fec28b4c16a4e491d326221bfa874e3104ed",
+      "trial": 0,
+      "arm": "default",
+      "phase": "warm",
+      "profile_attempts": 0,
+      "numerical_checks": 10
+    },
+    {
+      "file": "/private/tmp/sglang-fp8-linear-20261020T034000Z/trial0-raw/attempt01/trial0-seed19-v1-cold.json",
+      "sha256": "a903ead32e1e4845efa59049f7d81b349835e7cb6281636f3ba46fa0f0c38b09",
+      "container_id": "336c72c6146bc05c0f1c937b4787d5236301ba4df3e4c35a7517e917ab46cc84",
+      "trial": 0,
+      "arm": "v1",
+      "phase": "cold",
+      "profile_attempts": 72,
+      "numerical_checks": 10
+    },
+    {
+      "file": "/private/tmp/sglang-fp8-linear-20261020T034000Z/trial0-raw/attempt01/trial0-seed19-v1-warm.json",
+      "sha256": "27469234dbe1ca432e3f888794cc1d60fe16c63e7eed2e72abcba9da25fc6c2e",
+      "container_id": "77cfde78dbda61b87bed1583d05ecc146440f7dd3fce5e440f3118e40c333ce8",
+      "trial": 0,
+      "arm": "v1",
+      "phase": "warm",
+      "profile_attempts": 0,
+      "numerical_checks": 10
+    },
+    {
+      "file": "/private/tmp/sglang-fp8-linear-20261020T034000Z/trial0-raw/attempt01/trial0-seed19-v2-cold.json",
+      "sha256": "e8fb4502bea2aaad24898899142be3de3549d4bff8690f567b9b764eb3583fca",
+      "container_id": "865af9040f66c1fa6e6586c4bc081f7455a7fb755ae08ae07b45a4284014abd2",
+      "trial": 0,
+      "arm": "v2",
+      "phase": "cold",
+      "profile_attempts": 81,
+      "numerical_checks": 10
+    },
+    {
+      "file": "/private/tmp/sglang-fp8-linear-20261020T034000Z/trial0-raw/attempt01/trial0-seed19-v2-warm.json",
+      "sha256": "0bb7c1594c13c51a73f929566cbb2f8319ed7b01bba533d47d19a60a88a1ec96",
+      "container_id": "749babad759dde4a42358f5a212d6ba50d1a37115d727a328499843518777da0",
+      "trial": 0,
+      "arm": "v2",
+      "phase": "warm",
+      "profile_attempts": 0,
+      "numerical_checks": 10
+    }
+  ],
+  "analysis": {
+    "natural_latency_comparisons": [
+      {
+        "phase": "cold",
+        "execution": "eager",
+        "channel": "wall",
+        "primary": true,
+        "comparison": "v2_over_v1",
+        "numerator_lookup_tier": "memory",
+        "denominator_lookup_tier": "memory",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "numerator_ms": 0.11864022817462683,
+            "denominator_ms": 0.11745010269805789,
+            "ratio": 1.0101330305315146
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.0101330305315146,
+        "min_ratio": 1.0101330305315146,
+        "max_ratio": 1.0101330305315146,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null,
+        "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+      },
+      {
+        "phase": "cold",
+        "execution": "eager",
+        "channel": "wall",
+        "primary": true,
+        "comparison": "v1_over_default",
+        "numerator_lookup_tier": "memory",
+        "denominator_lookup_tier": "miss",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "numerator_ms": 0.11745010269805789,
+            "denominator_ms": 0.1316215901169926,
+            "ratio": 0.8923315893210354
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 0.8923315893210354,
+        "min_ratio": 0.8923315893210354,
+        "max_ratio": 0.8923315893210354,
+        "ratios_below_one": 1,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null,
+        "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+      },
+      {
+        "phase": "cold",
+        "execution": "eager",
+        "channel": "wall",
+        "primary": true,
+        "comparison": "v2_over_default",
+        "numerator_lookup_tier": "memory",
+        "denominator_lookup_tier": "miss",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "numerator_ms": 0.11864022817462683,
+            "denominator_ms": 0.1316215901169926,
+            "ratio": 0.9013736125598604
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 0.9013736125598604,
+        "min_ratio": 0.9013736125598604,
+        "max_ratio": 0.9013736125598604,
+        "ratios_below_one": 1,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null,
+        "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+      },
+      {
+        "phase": "cold",
+        "execution": "eager",
+        "channel": "gpu_event",
+        "primary": false,
+        "comparison": "v2_over_v1",
+        "numerator_lookup_tier": "memory",
+        "denominator_lookup_tier": "memory",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "numerator_ms": 0.1185884952545166,
+            "denominator_ms": 0.11739439964294433,
+            "ratio": 1.0101716573806256
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.0101716573806256,
+        "min_ratio": 1.0101716573806256,
+        "max_ratio": 1.0101716573806256,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null,
+        "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+      },
+      {
+        "phase": "cold",
+        "execution": "eager",
+        "channel": "gpu_event",
+        "primary": false,
+        "comparison": "v1_over_default",
+        "numerator_lookup_tier": "memory",
+        "denominator_lookup_tier": "miss",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "numerator_ms": 0.11739439964294433,
+            "denominator_ms": 0.1314039945602417,
+            "ratio": 0.8933853193414548
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 0.8933853193414548,
+        "min_ratio": 0.8933853193414548,
+        "max_ratio": 0.8933853193414548,
+        "ratios_below_one": 1,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null,
+        "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+      },
+      {
+        "phase": "cold",
+        "execution": "eager",
+        "channel": "gpu_event",
+        "primary": false,
+        "comparison": "v2_over_default",
+        "numerator_lookup_tier": "memory",
+        "denominator_lookup_tier": "miss",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "numerator_ms": 0.1185884952545166,
+            "denominator_ms": 0.1314039945602417,
+            "ratio": 0.9024725287186769
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 0.9024725287186769,
+        "min_ratio": 0.9024725287186769,
+        "max_ratio": 0.9024725287186769,
+        "ratios_below_one": 1,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null,
+        "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+      },
+      {
+        "phase": "cold",
+        "execution": "cuda_graph",
+        "channel": "wall",
+        "primary": false,
+        "comparison": "v2_over_v1",
+        "numerator_lookup_tier": "memory",
+        "denominator_lookup_tier": "memory",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "numerator_ms": 0.007234621443785727,
+            "denominator_ms": 0.007976575216162018,
+            "ratio": 0.9069834167835645
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 0.9069834167835645,
+        "min_ratio": 0.9069834167835645,
+        "max_ratio": 0.9069834167835645,
+        "ratios_below_one": 1,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null,
+        "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+      },
+      {
+        "phase": "cold",
+        "execution": "cuda_graph",
+        "channel": "wall",
+        "primary": false,
+        "comparison": "v1_over_default",
+        "numerator_lookup_tier": "memory",
+        "denominator_lookup_tier": "miss",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "numerator_ms": 0.007976575216162018,
+            "denominator_ms": 0.006734326052537654,
+            "ratio": 1.1844652536769074
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.1844652536769074,
+        "min_ratio": 1.1844652536769074,
+        "max_ratio": 1.1844652536769074,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null,
+        "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+      },
+      {
+        "phase": "cold",
+        "execution": "cuda_graph",
+        "channel": "wall",
+        "primary": false,
+        "comparison": "v2_over_default",
+        "numerator_lookup_tier": "memory",
+        "denominator_lookup_tier": "miss",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "numerator_ms": 0.007234621443785727,
+            "denominator_ms": 0.006734326052537654,
+            "ratio": 1.0742903428412929
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.0742903428412929,
+        "min_ratio": 1.0742903428412929,
+        "max_ratio": 1.0742903428412929,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null,
+        "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+      },
+      {
+        "phase": "cold",
+        "execution": "cuda_graph",
+        "channel": "gpu_event",
+        "primary": true,
+        "comparison": "v2_over_v1",
+        "numerator_lookup_tier": "memory",
+        "denominator_lookup_tier": "memory",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "numerator_ms": 0.007230443507432937,
+            "denominator_ms": 0.007967925071716309,
+            "ratio": 0.9074437124288223
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 0.9074437124288223,
+        "min_ratio": 0.9074437124288223,
+        "max_ratio": 0.9074437124288223,
+        "ratios_below_one": 1,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null,
+        "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+      },
+      {
+        "phase": "cold",
+        "execution": "cuda_graph",
+        "channel": "gpu_event",
+        "primary": true,
+        "comparison": "v1_over_default",
+        "numerator_lookup_tier": "memory",
+        "denominator_lookup_tier": "miss",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "numerator_ms": 0.007967925071716309,
+            "denominator_ms": 0.006730949878692627,
+            "ratio": 1.1837742391960795
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.1837742391960795,
+        "min_ratio": 1.1837742391960795,
+        "max_ratio": 1.1837742391960795,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null,
+        "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+      },
+      {
+        "phase": "cold",
+        "execution": "cuda_graph",
+        "channel": "gpu_event",
+        "primary": true,
+        "comparison": "v2_over_default",
+        "numerator_lookup_tier": "memory",
+        "denominator_lookup_tier": "miss",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "numerator_ms": 0.007230443507432937,
+            "denominator_ms": 0.006730949878692627,
+            "ratio": 1.074208490293695
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.074208490293695,
+        "min_ratio": 1.074208490293695,
+        "max_ratio": 1.074208490293695,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null,
+        "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+      },
+      {
+        "phase": "warm",
+        "execution": "eager",
+        "channel": "wall",
+        "primary": true,
+        "comparison": "v2_over_v1",
+        "numerator_lookup_tier": "file",
+        "denominator_lookup_tier": "file",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "numerator_ms": 0.11849844886455685,
+            "denominator_ms": 0.1213045121403411,
+            "ratio": 0.9768676100643492
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 0.9768676100643492,
+        "min_ratio": 0.9768676100643492,
+        "max_ratio": 0.9768676100643492,
+        "ratios_below_one": 1,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null,
+        "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+      },
+      {
+        "phase": "warm",
+        "execution": "eager",
+        "channel": "wall",
+        "primary": true,
+        "comparison": "v1_over_default",
+        "numerator_lookup_tier": "file",
+        "denominator_lookup_tier": "miss",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "numerator_ms": 0.1213045121403411,
+            "denominator_ms": 0.1288794621359557,
+            "ratio": 0.9412245374858584
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 0.9412245374858584,
+        "min_ratio": 0.9412245374858584,
+        "max_ratio": 0.9412245374858584,
+        "ratios_below_one": 1,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null,
+        "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+      },
+      {
+        "phase": "warm",
+        "execution": "eager",
+        "channel": "wall",
+        "primary": true,
+        "comparison": "v2_over_default",
+        "numerator_lookup_tier": "file",
+        "denominator_lookup_tier": "miss",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "numerator_ms": 0.11849844886455685,
+            "denominator_ms": 0.1288794621359557,
+            "ratio": 0.919451764467733
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 0.919451764467733,
+        "min_ratio": 0.919451764467733,
+        "max_ratio": 0.919451764467733,
+        "ratios_below_one": 1,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null,
+        "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+      },
+      {
+        "phase": "warm",
+        "execution": "eager",
+        "channel": "gpu_event",
+        "primary": false,
+        "comparison": "v2_over_v1",
+        "numerator_lookup_tier": "file",
+        "denominator_lookup_tier": "file",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "numerator_ms": 0.118442702293396,
+            "denominator_ms": 0.1212496042251587,
+            "ratio": 0.9768502177825643
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 0.9768502177825643,
+        "min_ratio": 0.9768502177825643,
+        "max_ratio": 0.9768502177825643,
+        "ratios_below_one": 1,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null,
+        "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+      },
+      {
+        "phase": "warm",
+        "execution": "eager",
+        "channel": "gpu_event",
+        "primary": false,
+        "comparison": "v1_over_default",
+        "numerator_lookup_tier": "file",
+        "denominator_lookup_tier": "miss",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "numerator_ms": 0.1212496042251587,
+            "denominator_ms": 0.12877800464630126,
+            "ratio": 0.9415397028256502
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 0.9415397028256502,
+        "min_ratio": 0.9415397028256502,
+        "max_ratio": 0.9415397028256502,
+        "ratios_below_one": 1,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null,
+        "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+      },
+      {
+        "phase": "warm",
+        "execution": "eager",
+        "channel": "gpu_event",
+        "primary": false,
+        "comparison": "v2_over_default",
+        "numerator_lookup_tier": "file",
+        "denominator_lookup_tier": "miss",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "numerator_ms": 0.118442702293396,
+            "denominator_ms": 0.12877800464630126,
+            "ratio": 0.9197432637561673
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 0.9197432637561673,
+        "min_ratio": 0.9197432637561673,
+        "max_ratio": 0.9197432637561673,
+        "ratios_below_one": 1,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null,
+        "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+      },
+      {
+        "phase": "warm",
+        "execution": "cuda_graph",
+        "channel": "wall",
+        "primary": false,
+        "comparison": "v2_over_v1",
+        "numerator_lookup_tier": "file",
+        "denominator_lookup_tier": "file",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "numerator_ms": 0.006750435568392277,
+            "denominator_ms": 0.007697108412685338,
+            "ratio": 0.8770092879641811
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 0.8770092879641811,
+        "min_ratio": 0.8770092879641811,
+        "max_ratio": 0.8770092879641811,
+        "ratios_below_one": 1,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null,
+        "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+      },
+      {
+        "phase": "warm",
+        "execution": "cuda_graph",
+        "channel": "wall",
+        "primary": false,
+        "comparison": "v1_over_default",
+        "numerator_lookup_tier": "file",
+        "denominator_lookup_tier": "miss",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "numerator_ms": 0.007697108412685338,
+            "denominator_ms": 0.006725699313392397,
+            "ratio": 1.1444324305962719
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.1444324305962719,
+        "min_ratio": 1.1444324305962719,
+        "max_ratio": 1.1444324305962719,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null,
+        "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+      },
+      {
+        "phase": "warm",
+        "execution": "cuda_graph",
+        "channel": "wall",
+        "primary": false,
+        "comparison": "v2_over_default",
+        "numerator_lookup_tier": "file",
+        "denominator_lookup_tier": "miss",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "numerator_ms": 0.006750435568392277,
+            "denominator_ms": 0.006725699313392397,
+            "ratio": 1.0036778710803536
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.0036778710803536,
+        "min_ratio": 1.0036778710803536,
+        "max_ratio": 1.0036778710803536,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null,
+        "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+      },
+      {
+        "phase": "warm",
+        "execution": "cuda_graph",
+        "channel": "gpu_event",
+        "primary": true,
+        "comparison": "v2_over_v1",
+        "numerator_lookup_tier": "file",
+        "denominator_lookup_tier": "file",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "numerator_ms": 0.006746505945920944,
+            "denominator_ms": 0.007693306356668472,
+            "ratio": 0.876931924083999
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 0.876931924083999,
+        "min_ratio": 0.876931924083999,
+        "max_ratio": 0.876931924083999,
+        "ratios_below_one": 1,
+        "ratios_above_one": 0,
+        "exploratory_cluster_bootstrap_95_percent": null,
+        "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+      },
+      {
+        "phase": "warm",
+        "execution": "cuda_graph",
+        "channel": "gpu_event",
+        "primary": true,
+        "comparison": "v1_over_default",
+        "numerator_lookup_tier": "file",
+        "denominator_lookup_tier": "miss",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "numerator_ms": 0.007693306356668472,
+            "denominator_ms": 0.0067201308906078335,
+            "ratio": 1.1448149570153112
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.1448149570153112,
+        "min_ratio": 1.1448149570153112,
+        "max_ratio": 1.1448149570153112,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null,
+        "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+      },
+      {
+        "phase": "warm",
+        "execution": "cuda_graph",
+        "channel": "gpu_event",
+        "primary": true,
+        "comparison": "v2_over_default",
+        "numerator_lookup_tier": "file",
+        "denominator_lookup_tier": "miss",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "numerator_ms": 0.006746505945920944,
+            "denominator_ms": 0.0067201308906078335,
+            "ratio": 1.0039247829755775
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.0039247829755775,
+        "min_ratio": 1.0039247829755775,
+        "max_ratio": 1.0039247829755775,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null,
+        "scope": "Natural actual linear-layer path including quantization, dispatch and allocation. Default uses a genuine miss; tuned cold memory and warm file hits differ from that baseline. Graph lookup occurs during capture, not replay."
+      }
+    ],
+    "cold_winner_frequencies": [
+      {
+        "arm": "default",
+        "fresh_trials": 1,
+        "winners": [
+          {
+            "tactic": -1,
+            "count": 1
+          }
+        ]
+      },
+      {
+        "arm": "v1",
+        "fresh_trials": 1,
+        "winners": [
+          {
+            "tactic": [
+              828928688194,
+              4294967332,
+              0,
+              2533274790395906,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "count": 1
+          }
+        ]
+      },
+      {
+        "arm": "v2",
+        "fresh_trials": 1,
+        "winners": [
+          {
+            "tactic": -1,
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "startup_profiler_rankings": [
+      {
+        "trial": 0,
+        "arm": "v1",
+        "selected_tactic": [
+          828928688194,
+          4294967332,
+          0,
+          2533274790395906,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        "finite_candidates": 8,
+        "runtime_profiles": 8,
+        "runner_up_fractional_margin": 0.0038461831221963116,
+        "ranked_profiles": [
+          {
+            "tactic": [
+              828928688194,
+              4294967332,
+              0,
+              2533274790395906,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.009984000027179718
+          },
+          {
+            "tactic": [
+              120259084354,
+              4294967332,
+              0,
+              1970324836974594,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.010022400319576264
+          },
+          {
+            "tactic": [
+              893353197634,
+              4294967332,
+              0,
+              2533274790395907,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.010041599720716476
+          },
+          {
+            "tactic": [
+              841813590082,
+              4294967332,
+              0,
+              2533274790395906,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.010047999769449234
+          },
+          {
+            "tactic": [
+              785979015234,
+              4294967332,
+              0,
+              2533274790395906,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.010080000013113022
+          },
+          {
+            "tactic": [
+              77309411394,
+              4294967332,
+              0,
+              1407374883553283,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.010102400183677673
+          },
+          {
+            "tactic": [
+              73014444098,
+              4294967332,
+              0,
+              844424930131968,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.010105600208044052
+          },
+          {
+            "tactic": [
+              579820585026,
+              4294967332,
+              0,
+              1970324836974594,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.010595200210809707
+          }
+        ],
+        "default_profile": null,
+        "actual_input_m_values": [
+          144
+        ],
+        "normalized_profile": [
+          [
+            1,
+            256,
+            1024
+          ],
+          [
+            1,
+            1024,
+            4096
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            1,
+            -1,
+            4096
+          ],
+          [
+            -1
+          ]
+        ],
+        "autotuner_settings": {
+          "warmup": 3,
+          "repeat": 10,
+          "stream_delay_micro_secs": 5000,
+          "cuda_graph_delay_micro_secs": 100,
+          "use_global_timer": false,
+          "effective_measure_policy": null,
+          "effective_policy_timer": null,
+          "config": {
+            "use_cuda_graph": false,
+            "use_cold_l2_cache": false,
+            "cuda_graph_profile_replays": 1,
+            "profiling_repeat": null,
+            "effective_profiling_repeat": 10
+          }
+        },
+        "interpretation": "Profiler rankings are startup measurements, not a separate serving-candidate oracle or physical-kernel identity proof."
+      },
+      {
+        "trial": 0,
+        "arm": "v2",
+        "selected_tactic": -1,
+        "finite_candidates": 9,
+        "runtime_profiles": 9,
+        "runner_up_fractional_margin": 0.05980290170425229,
+        "ranked_profiles": [
+          {
+            "tactic": -1,
+            "profiler_ms": 0.00941760018467903
+          },
+          {
+            "tactic": [
+              841813590082,
+              4294967332,
+              0,
+              2533274790395906,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.00998080000281334
+          },
+          {
+            "tactic": [
+              893353197634,
+              4294967332,
+              0,
+              2533274790395907,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.010041599720716476
+          },
+          {
+            "tactic": [
+              579820585026,
+              4294967332,
+              0,
+              1970324836974594,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.010044799745082855
+          },
+          {
+            "tactic": [
+              828928688194,
+              4294967332,
+              0,
+              2533274790395906,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.010060799866914749
+          },
+          {
+            "tactic": [
+              120259084354,
+              4294967332,
+              0,
+              1970324836974594,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.010198400169610978
+          },
+          {
+            "tactic": [
+              785979015234,
+              4294967332,
+              0,
+              2533274790395906,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.010230399668216705
+          },
+          {
+            "tactic": [
+              77309411394,
+              4294967332,
+              0,
+              1407374883553283,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.010239999741315842
+          },
+          {
+            "tactic": [
+              73014444098,
+              4294967332,
+              0,
+              844424930131968,
+              558779540176897,
+              120259084316,
+              292058693646,
+              0
+            ],
+            "profiler_ms": 0.0106175996363163
+          }
+        ],
+        "default_profile": {
+          "profiler_ms": 0.00941760018467903,
+          "error": null
+        },
+        "actual_input_m_values": [
+          144
+        ],
+        "normalized_profile": [
+          [
+            1,
+            256,
+            1024
+          ],
+          [
+            1,
+            1024,
+            4096
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            1,
+            -1,
+            4096
+          ],
+          [
+            -1
+          ]
+        ],
+        "autotuner_settings": {
+          "warmup": 3,
+          "repeat": 10,
+          "stream_delay_micro_secs": 5000,
+          "cuda_graph_delay_micro_secs": 100,
+          "use_global_timer": false,
+          "effective_measure_policy": null,
+          "effective_policy_timer": null,
+          "config": {
+            "use_cuda_graph": false,
+            "use_cold_l2_cache": false,
+            "cuda_graph_profile_replays": 1,
+            "profiling_repeat": null,
+            "effective_profiling_repeat": 10
+          }
+        },
+        "interpretation": "Profiler rankings are startup measurements, not a separate serving-candidate oracle or physical-kernel identity proof."
+      }
+    ],
+    "startup_diagnostics": [
+      {
+        "phase": "cold",
+        "comparison": "v2_over_v1",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 1.0971963683019426
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.0971963683019426,
+        "min_ratio": 1.0971963683019426,
+        "max_ratio": 1.0971963683019426,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null,
+        "scope": "Secondary operation-wrapper startup diagnostic; excludes model acquisition/capture, native construction and initial public-call/quantizer preparation. No cold-start or full-server startup performance claim."
+      },
+      {
+        "phase": "cold",
+        "comparison": "v1_over_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 5.197688007225987
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 5.197688007225987,
+        "min_ratio": 5.197688007225987,
+        "max_ratio": 5.197688007225987,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null,
+        "scope": "Secondary operation-wrapper startup diagnostic; excludes model acquisition/capture, native construction and initial public-call/quantizer preparation. No cold-start or full-server startup performance claim."
+      },
+      {
+        "phase": "cold",
+        "comparison": "v2_over_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 5.702884405094914
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 5.702884405094914,
+        "min_ratio": 5.702884405094914,
+        "max_ratio": 5.702884405094914,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null,
+        "scope": "Secondary operation-wrapper startup diagnostic; excludes model acquisition/capture, native construction and initial public-call/quantizer preparation. No cold-start or full-server startup performance claim."
+      },
+      {
+        "phase": "warm",
+        "comparison": "v2_over_v1",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 1.0035838083351756
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.0035838083351756,
+        "min_ratio": 1.0035838083351756,
+        "max_ratio": 1.0035838083351756,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null,
+        "scope": "Secondary operation-wrapper startup diagnostic; excludes model acquisition/capture, native construction and initial public-call/quantizer preparation. No cold-start or full-server startup performance claim."
+      },
+      {
+        "phase": "warm",
+        "comparison": "v1_over_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 1.0405991370712746
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.0405991370712746,
+        "min_ratio": 1.0405991370712746,
+        "max_ratio": 1.0405991370712746,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null,
+        "scope": "Secondary operation-wrapper startup diagnostic; excludes model acquisition/capture, native construction and initial public-call/quantizer preparation. No cold-start or full-server startup performance claim."
+      },
+      {
+        "phase": "warm",
+        "comparison": "v2_over_default",
+        "trial_estimates": [
+          {
+            "trial": 0,
+            "ratio": 1.0443284449322872
+          }
+        ],
+        "independent_trials": 1,
+        "median_ratio": 1.0443284449322872,
+        "min_ratio": 1.0443284449322872,
+        "max_ratio": 1.0443284449322872,
+        "ratios_below_one": 0,
+        "ratios_above_one": 1,
+        "exploratory_cluster_bootstrap_95_percent": null,
+        "scope": "Secondary operation-wrapper startup diagnostic; excludes model acquisition/capture, native construction and initial public-call/quantizer preparation. No cold-start or full-server startup performance claim."
+      }
+    ],
+    "bf16_approximation_diagnostics": [
+      {
+        "trial": 0,
+        "arm": "default",
+        "phase": "cold",
+        "diagnostics": [
+          {
+            "check": "initial_untuned",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_eager_changed_input",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.0,
+              "max_normalized_error": 0.0,
+              "rmse": 0.0,
+              "relative_l2": 0.0
+            }
+          },
+          {
+            "check": "natural_eager_restored_input",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_before",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_changed_input",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.0,
+              "max_normalized_error": 0.0,
+              "rmse": 0.0,
+              "relative_l2": 0.0
+            }
+          },
+          {
+            "check": "natural_restored_input",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_measured_eager",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_measured_cuda_graph",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_after",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_after_oracle",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          }
+        ]
+      },
+      {
+        "trial": 0,
+        "arm": "default",
+        "phase": "warm",
+        "diagnostics": [
+          {
+            "check": "initial_untuned",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_eager_changed_input",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.0,
+              "max_normalized_error": 0.0,
+              "rmse": 0.0,
+              "relative_l2": 0.0
+            }
+          },
+          {
+            "check": "natural_eager_restored_input",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_before",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_changed_input",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.0,
+              "max_normalized_error": 0.0,
+              "rmse": 0.0,
+              "relative_l2": 0.0
+            }
+          },
+          {
+            "check": "natural_restored_input",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_measured_eager",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_measured_cuda_graph",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_after",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_after_oracle",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          }
+        ]
+      },
+      {
+        "trial": 0,
+        "arm": "v1",
+        "phase": "cold",
+        "diagnostics": [
+          {
+            "check": "initial_untuned",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_eager_changed_input",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.0,
+              "max_normalized_error": 0.0,
+              "rmse": 0.0,
+              "relative_l2": 0.0
+            }
+          },
+          {
+            "check": "natural_eager_restored_input",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_before",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_changed_input",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.0,
+              "max_normalized_error": 0.0,
+              "rmse": 0.0,
+              "relative_l2": 0.0
+            }
+          },
+          {
+            "check": "natural_restored_input",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_measured_eager",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_measured_cuda_graph",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_after",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_after_oracle",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          }
+        ]
+      },
+      {
+        "trial": 0,
+        "arm": "v1",
+        "phase": "warm",
+        "diagnostics": [
+          {
+            "check": "initial_untuned",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_eager_changed_input",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.0,
+              "max_normalized_error": 0.0,
+              "rmse": 0.0,
+              "relative_l2": 0.0
+            }
+          },
+          {
+            "check": "natural_eager_restored_input",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_before",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_changed_input",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.0,
+              "max_normalized_error": 0.0,
+              "rmse": 0.0,
+              "relative_l2": 0.0
+            }
+          },
+          {
+            "check": "natural_restored_input",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_measured_eager",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_measured_cuda_graph",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_after",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_after_oracle",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          }
+        ]
+      },
+      {
+        "trial": 0,
+        "arm": "v2",
+        "phase": "cold",
+        "diagnostics": [
+          {
+            "check": "initial_untuned",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_eager_changed_input",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.0,
+              "max_normalized_error": 0.0,
+              "rmse": 0.0,
+              "relative_l2": 0.0
+            }
+          },
+          {
+            "check": "natural_eager_restored_input",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_before",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_changed_input",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.0,
+              "max_normalized_error": 0.0,
+              "rmse": 0.0,
+              "relative_l2": 0.0
+            }
+          },
+          {
+            "check": "natural_restored_input",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_measured_eager",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_measured_cuda_graph",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_after",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_after_oracle",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          }
+        ]
+      },
+      {
+        "trial": 0,
+        "arm": "v2",
+        "phase": "warm",
+        "diagnostics": [
+          {
+            "check": "initial_untuned",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_eager_changed_input",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.0,
+              "max_normalized_error": 0.0,
+              "rmse": 0.0,
+              "relative_l2": 0.0
+            }
+          },
+          {
+            "check": "natural_eager_restored_input",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_before",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_changed_input",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.0,
+              "max_normalized_error": 0.0,
+              "rmse": 0.0,
+              "relative_l2": 0.0
+            }
+          },
+          {
+            "check": "natural_restored_input",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_measured_eager",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_measured_cuda_graph",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_after",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          },
+          {
+            "check": "natural_after_oracle",
+            "bf16_reference": {
+              "diagnostic_only": true,
+              "max_abs_error": 0.14998984336853027,
+              "max_normalized_error": 0.8266758918762207,
+              "rmse": 0.007820826955139637,
+              "relative_l2": 0.023056529720005287
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "limitations": [
+    "One H100, one captured model layer/144-token input and six fresh trial triplets. Fifteen samples within a worker are dependent subsamples, not independent trials.",
+    "Exploratory percentile95% bootstrap resamples whole paired trial units, is unadjusted for multiple contrasts and is absent for a one-trial checkpoint.",
+    "The actual SGLang static FP8 linear path includes quantization, custom-op dispatch, allocation and GEMM. Natural default miss versus tuned memory/file lookup is part of the compared configuration; ratios do not isolate GPU-kernel speed.",
+    "Model activations come from a pinned dense BF16 checkpoint; weights/scales are calibrated for this single fixture. Quantized-input FP32 is the correctness gate; dense BF16 approximation is diagnostic, not full-model accuracy.",
+    "Graph primary latency is a GPU-event replay span including possible host submission gaps; eager primary is wall time. Capture lookup does not repeat during graph replay.",
+    "Recorded startup profiler minima do not provide an independent runtime-candidate oracle. No forced shortlist or physical-kernel identity trace was collected in this batch.",
+    "Experimental exact descriptor overlay over0.7.2, unspecified policy and retained v1 persistence; no managed-store adoption, distributed/backend generalization or serving-throughput claim."
+  ]
+}
