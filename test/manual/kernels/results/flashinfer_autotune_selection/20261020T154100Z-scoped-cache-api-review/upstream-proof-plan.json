@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "flashinfer_release": "unreleased-main",
+  "flashinfer_release_commit": "8dc1163fbfbec7098a2418276fd04bc1fa1aeaa5",
+  "flashinfer_source_sha256": {
+    "flashinfer/autotune_cache.py": "37615f796e489ea7126c14cf116cb7b314be34112f060873040205b2c51607a7",
+    "flashinfer/autotuner/autotuner.py": "af7eff96a4f5492bbef6c315f150648583c6721001134ef9f43dd93ce16ba699",
+    "flashinfer/autotuner/__init__.py": "79d067053b016e29a10d196edc186b027084685bc6d952e2466b878cb03ce5f6",
+    "flashinfer/autotuner/initializers.py": "4c10d847cf9d4e6404ae3f88c6ddc3acf9fd993d18ff140d3f48e6e78b6c80d2",
+    "flashinfer/tactics_blocklist.py": "6f652b3d93a8311fa09392e4ccf24af0cbdd5bab57f1fdba8fb4fc1d6eb7e3b0",
+    "flashinfer/version.py": "a7dde55794323d8d61edf7153a66275b571f039322772ae0ec125d3099607001"
+  },
+  "cpu_metadata_fixture": {
+    "flashinfer_version": "unreleased-main-policy-proof",
+    "cuda_version": "cpu-fixture",
+    "cublas_version": "cpu-fixture",
+    "cudnn_version": "cpu-fixture",
+    "cudnn_frontend_version": "cpu-fixture",
+    "cutlass_dsl_version": "cpu-fixture",
+    "gpu": "cpu-fixture"
+  },
+  "controlled_boundaries": [
+    "Whole FlashInfer autotuner, cache, initializer, blocklist, version and autotuner-export modules loaded from hash-checked exact source, no method extraction.",
+    "Top-level GPU package initialization bypassed with namespace shells; JIT logger supplied; unneeded GPU leaf functions fail if reached.",
+    "Pure next-positive-power-of-two import boundary supplied; no changes to choose_one, policy identity, search_cache, save_configs or load_configs.",
+    "Real CPU Torch2.14.1; CUDA stream capture probe returnsFalse; actual GPU profiling replaced by finite controlled times whose winners differ by effective use_cuda_graph.",
+    "Deployment metadata collector replaced by an explicit CPU fixture stamp; CUDA environment compatibility is not validated.",
+    "Legacy compatibility proof only: Manual bridge projects private policy winner/provenance into a detached actual AutoTuner serializer, then activates an isolated real v1 file bank in a matching replay context; no production integration.",
+    "Confidential-compute device capability probe fixedFalse on CPU; no GPU timing backend executed.",
+    "Fresh workers pin cuda_event constructor mode, disable bundled tactic imports, remove external blocklist, reject CUDA availability and require Torch2.14.1."
+  ],
+  "limits": [
+    "No GPU, actual CUDA Graph capture/replay, timing, correctness of native kernels or serving-performance evidence.",
+    "CPU runner output checks only validate the selected fixture tactic.",
+    "Legacy comparison only: Private-field bridge is research machinery with single-thread single-process activation; not a public supported production adapter.",
+    "No distributed, target/draft runtime, mixed prefill-tail, graph-pool, stream, real MegaMoE or managed-store qualification.",
+    "Existing eager/default behavior remains unspecified policy and v1 persistence.",
+    "Production graph policy routing and a supported policy-aware persistence API remain design work.",
+    "Injected export failure occurs before actual save_configs and proves live-state preservation only, not atomic disk failure recovery."
+  ],
+  "sglang_source_baseline": "d2dccedb3589f372787b15b6bddaf1e29fb6d783",
+  "sglang_phase_source_sha256": {
+    "python/sglang/srt/model_executor/runner/flashinfer_autotune.py": "64deff581665bd04830535baccfdfbdfa72794d919bc462fc469a4c42bdd68f5",
+    "python/sglang/srt/model_executor/runner/base_runner.py": "faa8dbea1c73ec31388f52182849b26ea1f37b0358d0374bfaa61cb3577ad19d",
+    "python/sglang/srt/model_executor/model_runner_components/cuda_graph_setup.py": "24fd6ba038edced86eb20df7d4c01e2ebf1ab055a155fd328a82f3fba48aada9",
+    "python/sglang/srt/model_executor/runner_backend/full_cuda_graph_backend.py": "4cdf861b6dbf61d2875598602c77855df06910784fcec43c89fc132cc99bf217",
+    "python/sglang/srt/model_executor/runner/prefill_cuda_graph_runner.py": "1ce58cd316c4e07ab4e9044f031833ef82777ea0bf1263ffd3d962e3f32eb770"
+  },
+  "design": {
+    "legacy_phase": "Keep eager/default serving on the existing unspecified policy and its v1 JSON persistence.",
+    "graph_phase": "Tune explicit graph identity before capture; scope untimed forward warmups and capture forwards to the same identity. Full captured replay needs no Python policy scope.",
+    "warmup_completion": "Track eventual serving phase; EagerRunner is constructed first and the existing shared _kernel_warmed_up flag cannot represent two objectives.",
+    "mixed_execution": "Prefill can replay a graph body and execute a live eager logits tail; an outer graph policy for the complete runner is too broad.",
+    "persistence_contract": "Exact policy identity and provenance must survive real export/load, while a graph file bank cannot shadow or contaminate eager/default entries and unrelated records.",
+    "upstream_api_gap": "Current public v1 save/load cannot safely export and select simultaneous explicit-policy and legacy winners for one file key. A supported policy-aware export/import/lookup API is needed, or a separately scoped persistence migration; neither is implemented here.",
+    "manual_bridge": "Detached actual AutoTuner serializes a copied policy partition with remapped provenance; full policy/source/content manifest binds it. Isolated real file bank is temporarily activated only under matching graph context. Private APIs, single-thread, preexisting policy memory rejected; not production code.",
+    "next_checkpoint": "Choose and review the supported persistence API boundary before implementing production phase routing. A subsequent current-objective versus graph-objective GPU qualification must change only that objective and carry the proven lifecycle; do not change profiling inputs simultaneously.",
+    "production_pr_ready": false,
+    "gpu_experiment_launched": false,
+    "registered_test_added": false
+  },
+  "comparison_basis": "Same frozen SGLang CPU proof62eeaadb79, only FlashInfer source and disclosed CPU environment fixture stamp differ.",
+  "native_gemm_overlay_applied": false,
+  "native_code_executed": false,
+  "scope_proposal_controls": "The separate scoped-cache driver uses the proposed public context argument and actual managed I/O, without the legacy proof adapter."
+}

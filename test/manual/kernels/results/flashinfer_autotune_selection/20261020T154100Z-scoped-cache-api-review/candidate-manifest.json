@@ -1,0 +1,40 @@
+{
+  "upstream_base_commit": "8dc1163fbfbec7098a2418276fd04bc1fa1aeaa5",
+  "status": "research-only proposal; no maintainer agreement or production adoption",
+  "patch_sha256": "cf1191d410e1d31e0905a9e9d3360929e23d007a9fef8e80d2490305b0f4c886",
+  "files": [
+    {
+      "path": "flashinfer/autotune_cache.py",
+      "base_sha256": "37615f796e489ea7126c14cf116cb7b314be34112f060873040205b2c51607a7",
+      "candidate_sha256": "60388924bcc5aaeab8721fa8583a624b55433a8834798dcb52c4b1abf6ab975e"
+    },
+    {
+      "path": "flashinfer/autotuner/autotuner.py",
+      "base_sha256": "af7eff96a4f5492bbef6c315f150648583c6721001134ef9f43dd93ce16ba699",
+      "candidate_sha256": "8c772bac17aae4b0fcf16d01728334dc68600a8a64d0a712ba838311e01e8484"
+    },
+    {
+      "path": "docs/design_docs/autotuner_v2.md",
+      "base_sha256": "c9b02c422836068ebfd2b46eb3aa01af4c4a6cbea1987a4ae8f124d266c7187b",
+      "candidate_sha256": "ee3c959abc0943191063fa68c89d63d6e4efd45648390835a71515fa6427fdbd"
+    }
+  ],
+  "contract": "Optional context cache ownership; default process behavior unchanged; context resolution never mutates ambient; identified scopes exclude legacy and bundled file sources.",
+  "scope_change": "Graph winners use a scoped v2 managed-store peer while eager/default retains v1 JSON. This relaxes the earlier proposed requirement to persist graph-policy winners in v1 JSON; no SGLang production change is authorized by this prototype.",
+  "limits": [
+    "Concurrent tuning/serving remains unqualified because existing tuning counters are process-global.",
+    "No nested v2 contexts.",
+    "No CUDA capture, native numerical or performance validation.",
+    "Current main is unreleased and does not include the separately qualified descriptor overlay.",
+    "Identified context tuning rejects rank_tactics(k>1); k1/replay/skip remain supported.",
+    "Reload inside context scope is unsupported; outside it remains ambient-only.",
+    "Scope isolates lookup/attachment and guarded candidate invalidation, not arbitrary global v1 load/save calls.",
+    "Real distributed coordination, native CUDA capture and concurrent tuning/serving remain unqualified."
+  ],
+  "patch_archive": {
+    "path": "scoped-cache-proposal.patch.gz",
+    "sha256": "3c6d676954615ba3a4d73e18368c86ebe412b3aa34ecaf2c0a79fbc27513f122",
+    "uncompressed_sha256": "cf1191d410e1d31e0905a9e9d3360929e23d007a9fef8e80d2490305b0f4c886",
+    "retention": "Compressed to preserve meaningful unified-diff context whitespace through repository hooks."
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "path": "docs/design_docs/autotuner_v2.md",
+  "base_sha256": "c9b02c422836068ebfd2b46eb3aa01af4c4a6cbea1987a4ae8f124d266c7187b",
+  "candidate_sha256": "ee3c959abc0943191063fa68c89d63d6e4efd45648390835a71515fa6427fdbd",
+  "attach_section": {
+    "start_anchor": "**Attach semantics.**",
+    "end_anchor": "\n### 2.2 Store layout",
+    "previous_section_sha256": "eb8f6c036550cac1f3a110b611b45ea1e7e75458fc5f82f5e5a9fd2260a0b919",
+    "replacement": "**Attach semantics.** The default `cache_scope=\"process\"` keeps process-lifetime\nattachment: the last process attachment is used by bare inference after warmup.\n`cache_scope=\"context\"` instead resolves and hydrates the selected managed identity\nwithout ever changing that process pointer. The framework must select the same\nidentity while tuning and during capture-time forward warmups and capture. Full\ncaptured replay repeats no Python lookup. Eager tails remain outside the graph scope.\nScoped identities exclude legacy-loaded and bundled configs, leaving legacy serving\nstate intact. Store objects and their memos remain registered across scope exits.\nNested v2 contexts are still unsupported; nesting ordinary `autotune()` is unchanged.\nConcurrent tuning/serving, distributed scoped-store use and scoped reload remain\noutside this initial qualification.\n"
+  },
+  "mixed_execution_section": {
+    "start_anchor": "**Per-bucket or per-region measurement policy.**",
+    "end_anchor": "\n\n## 6. Limitations and future work",
+    "replacement": "**Mixed execution policies.** Actual framework execution and capture coverage determine the\npolicy; eager and graph buckets are not necessarily disjoint. An optional\n`autotune_v2(..., cache_scope=\"context\")` selects a managed identity for a bounded region\nwithout changing the ambient store. The framework must tune covered profiles before capture\nand use the same identity for capture-time lookup; full graph replay performs no Python lookup.\nEager tails stay outside that scope. Identified scopes do not inherit untagged legacy or bundled\nconfigs. `cache_scope=\"process\"` retains existing attachment and lookup behavior by default.\nThis does not change the process-global tuning-mode counter: concurrent tuning and serving\nare not qualified by scoped attachment. Nested v2 contexts remain unsupported. Identified\nscoped tuning rejects `rank_tactics(k>1)` until its winner writes honor the selected identity.\n`autotune_v2_reload()` inside a context scope is unsupported; outside it still targets the\nambient store. Distributed scoped-store use and mutation/reload need separate qualification."
+  },
+  "retention": "Full upstream documentation remains private; the public artifact carries sanitized replacement text and source hashes only."
+}

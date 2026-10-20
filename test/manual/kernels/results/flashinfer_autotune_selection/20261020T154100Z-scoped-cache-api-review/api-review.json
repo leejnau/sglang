@@ -1,0 +1,42 @@
+{
+  "checked_at_utc": "2026-10-20T15:40:54Z",
+  "upstream_head": "8dc1163fbfbec7098a2418276fd04bc1fa1aeaa5",
+  "head_committer_date": "2026-10-20T10:43:52Z",
+  "latest_stable": "v0.7.2",
+  "latest_stable_release_url": "https://github.com/flashinfer-ai/flashinfer/releases/tag/v0.7.2",
+  "relevant_methods_ast_equal_to_tested_072_overlay": {
+    "_winner_cache": true,
+    "_winner_cache_identity": true,
+    "_profiling_policy": true,
+    "save_configs": true,
+    "load_configs": true,
+    "search_cache": true
+  },
+  "findings": [
+    "No policy-aware v1 export/import API on current main or latest stable.",
+    "Current-memory identity, file lookup, provenance and v1 save/load methods remain AST-identical to the tested 0.7.2 overlay.",
+    "Opaque export/install is planned rather than implemented. It does not itself solve ambient ownership.",
+    "Official RFC October18 update retracts the universal disjoint eager/graph bucket assumption; checked-in design non-goal text has not caught up.",
+    "Default process attachment and legacy file precedence are existing behavior; do not label that precedence an upstream bug without agreement."
+  ],
+  "source_urls": {
+    "tuner": "https://github.com/flashinfer-ai/flashinfer/blob/8dc1163fbfbec7098a2418276fd04bc1fa1aeaa5/flashinfer/autotuner/autotuner.py",
+    "cache": "https://github.com/flashinfer-ai/flashinfer/blob/8dc1163fbfbec7098a2418276fd04bc1fa1aeaa5/flashinfer/autotune_cache.py",
+    "rfc": "https://github.com/flashinfer-ai/flashinfer/issues/3920"
+  },
+  "decision": {
+    "chosen_proposal": "Optional v2 cache_scope=context managed-store peer; preserve current default process behavior and v1 eager path.",
+    "alternative_not_chosen": "Policy-aware v1 JSON export/import would extend the legacy persistence product; retain earlier manual proof as research only.",
+    "not_authorized_for_production": "Graph winners would use managed v2 persistence, relaxing the earlier proposal that both identities use v1 JSON. No SGLang production change or PR here.",
+    "upstream_agreement": false
+  },
+  "limits": [
+    "Concurrent tuning/serving remains unqualified because existing tuning counters are process-global.",
+    "No nested v2 contexts.",
+    "No CUDA capture, native numerical or performance validation.",
+    "Current main is unreleased and does not include the separately qualified descriptor overlay.",
+    "Identified context tuning rejects shortlist ranking k>1.",
+    "Reload inside context scope is unsupported; outside it retains ambient-store semantics.",
+    "Calling discard helper in CPU controls does not qualify real distributed coordination."
+  ]
+}
