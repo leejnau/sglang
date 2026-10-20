@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "batch_id": "20261019T235600Z-h100-descriptor-selection",
+  "status": "preregistered",
+  "objective": "Compare natural default/v1/v2 candidate selection and same-cache-path candidate rankings after the qualified descriptor setup fix.",
+  "source_baseline_commit": "193028a257264e1fb290777157133f7135b2078a",
+  "flashinfer_source": {
+    "base_release": "0.7.2",
+    "base_commit": "d84335d8c54e0c8f9f7e22faa15c7e34a58abf94",
+    "upstream_pr": 6148,
+    "patch_head": "14c5c67a1eb9ad3a608b8d3da3bf6d8924037c5c",
+    "implementation": "Exact original diff applied cleanly to0.7.2, not full PR head; candidate source only for every arm.",
+    "input_batch": "test/manual/kernels/results/flashinfer_autotune_selection/20261019T232945Z-h100-descriptor-qualification",
+    "source_overlay_archive_sha256": "c62f09dad18dbe0ce326177077360fe716095f209dc023b25c5552dcc12f666f",
+    "source_manifest_sha256": "3f4305fce604d3cd51e85047678c6efbf71e35bcf51037e9586d15bc20486895",
+    "native_loading": "Reuse audited prepare_native(candidate): explicit JitSpec.build/load, identical module bootstrap in every arm; reject AOT substitution. One isolated candidate build workspace, fresh process/container per worker."
+  },
+  "execution_commit_rule": "Freeze and push clean source including plan, worker and analyzer before GPU launch. Record exact Git SHA, source hashes, input manifest and native build hashes; preserve every failed attempt.",
+  "container_image": "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
+  "environment": {
+    "gpu": "NVIDIA H100 NVL",
+    "physical_gpu_uuid": "240958a2-e8e1-3bac-b767-365c9e0b97bd",
+    "driver": "580.159.04",
+    "torch": "2.14.1+cu130",
+    "torch_cuda": "13.0",
+    "exclusive_node": true,
+    "clock_lock": false,
+    "cuda_arch_list": "9.0",
+    "sglang_wrapper_sha256": "64deff581665bd04830535baccfdfbdfa72794d919bc462fc469a4c42bdd68f5",
+    "host": "1u1g-gen-0100",
+    "power_limit_watts": 310,
+    "hardware_change": "Original H10080GBHBM3 host ipp2-0037 is occupied. All new comparisons use one exclusive H100NVL host with the same580.159.04driver and pinned image; do not compare absolute timings against earlier HBM3 batches."
+  },
+  "workload": {
+    "api": "flashinfer.bmm_fp8 backend=cublas",
+    "batch": 1,
+    "cases": [
+      {
+        "m": 128,
+        "n": 1024,
+        "k": 1024
+      },
+      {
+        "m": 144,
+        "n": 1024,
+        "k": 1024
+      }
+    ],
+    "inputs": "Fixed seeded FP8 e4m3fn bytes and unit FP32 scales, BF16 output; identical data across arms for each shape/seed.",
+    "measurement_policy": "unspecified; preserve operation defaults",
+    "persistence": "Actual SGLang startup wrapper with existing v1 JSON, managed stores disabled",
+    "arms": {
+      "default": "Disable both tuning contexts within the real wrapper; preserve startup/load/save/streams; bare serving is a true uncached -1 miss.",
+      "v1": "Null only v2 context; retain original v1 candidate selection and persistence.",
+      "v2": "Unmodified current wrapper with nested v2 selection and existing v1 persistence."
+    },
+    "m144_scope": "Startup and serving both use144; candidate enumeration uses canonical bucket256. This does not independently test a separate tune256-to-serve144 transfer."
+  },
+  "protocol": {
+    "seeds": [
+      17,
+      18,
+      19
+    ],
+    "cases_order": [
+      128,
+      144
+    ],
+    "arm_orders": {
+      "17": [
+        "default",
+        "v1",
+        "v2"
+      ],
+      "18": [
+        "v1",
+        "v2",
+        "default"
+      ],
+      "19": [
+        "v2",
+        "default",
+        "v1"
+      ]
+    },
+    "phases": [
+      "cold",
+      "warm"
+    ],
+    "fresh_workers_per_case": 18,
+    "fresh_workers_total": 36,
+    "samples": 15,
+    "requested_iterations": 20,
+    "warmup_ms": 500,
+    "min_sample_ms": 20,
+    "max_iterations": 65536,
+    "oracle": true,
+    "oracle_order": "Seeded shuffle of default -1 and all runtime-enumerated descriptors, recorded per worker.",
+    "lookup_tiers": "Natural cold tuned winner uses real memory cache; natural fresh warm tuned winner remains in v1 file configs (no promotion). Oracle follows that same tier using actual memory entries or unique real save/load files. Untuned natural default miss is a separate end-to-end control; seeded oracle default is explicitly labeled.",
+    "primary_instrumentation": "No native preload, choose/search/binding hooks or profiler in timing windows. Profiling attempt guard remains installed but cannot execute outside cold startup.",
+    "checkpoint": "Run M128 first, copy closed caches and analyze all18 workers before starting M144. Correctness/provenance/completeness determine acceptance, not a required v2 speedup.",
+    "timeout_seconds_per_worker": 900,
+    "startup_intervals": "Diagnostic only: explicit native build/load and initial public API preparation are excluded; actual tuning candidate enumeration/profiling inside the wrapper is included. No complete-server startup claim."
+  },
+  "acceptance": [
+    "Exact pinned image/GPU/source/native hashes and distinct fresh container IDs match.",
+    "All attempted profiles are counted before exceptions; zero default/warm/post-startup attempts, including caught exceptions.",
+    "Natural tuned choices are genuine hits, remain identical after context exit/capture/restart, and persist with unchanged cache bytes.",
+    "Finite default -1 runtime-bucket profiling participates in v2 and is absent from v1. Natural profiled winner matches actual profiling minimum; do not require -1 to win.",
+    "Native actual descriptor-use is1 for accepted explicit tactics. Preserve rejected candidate reasons, never treat heuristic fallback as execution of the requested descriptor.",
+    "Independent rankings use matched lookup tiers with actual save/load on warm oracle; original natural cache bytes/state are restored.",
+    "Eager numerical checks and poisoned/changed/restored-input CUDA Graph replay checks pass for every measured natural and accepted oracle tactic.",
+    "Calibrated positive timing samples and exact normalization/medians pass. Record neutral outcomes and failures without selective exclusions."
+  ],
+  "analysis": [
+    "Use three paired trial ratios of fresh-worker medians per shape, phase and execution mode; within-worker samples are not independent trials.",
+    "Compare natural v2/v1 and tuned/default outcomes; report actual choices, runtime profile times, all candidates, accepted/excluded pools, cache tiers and input identities.",
+    "Selected-versus-best regret uses the selected tactic measurement within the same accepted oracle sweep; natural-versus-oracle timing is a separately labeled cross-window diagnostic.",
+    "Replicate the residual eager explicit/default gap before optimizing it; no policy change or universal v2/serving claim.",
+    "One operation on one H100; no full model, distributed, BF16 or managed-store qualification.",
+    "Hardware changed to H100NVL for availability. All arms in this batch share that exact GPU/host/driver; earlier HBM3 absolute timings are separate evidence."
+  ],
+  "publication": {
+    "fork": "leejnau/sglang",
+    "branch": "experiment/flashinfer-candidate-selection",
+    "open_pr": false,
+    "record": "Preserve raw JSON/logs/cache bytes and source/build provenance in checksummed archives, machine-readable analysis and the existing single Markdown working record."
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "status": "success",
+  "controls": [
+    {
+      "control": "valid_m128_default_cold",
+      "result": "passed"
+    },
+    {
+      "control": "valid_m128_default_warm",
+      "result": "passed"
+    },
+    {
+      "control": "pair_m128_default",
+      "result": "passed"
+    },
+    {
+      "control": "valid_m128_v1_cold",
+      "result": "passed"
+    },
+    {
+      "control": "valid_m128_v1_warm",
+      "result": "passed"
+    },
+    {
+      "control": "pair_m128_v1",
+      "result": "passed"
+    },
+    {
+      "control": "valid_m128_v2_cold",
+      "result": "passed"
+    },
+    {
+      "control": "valid_m128_v2_warm",
+      "result": "passed"
+    },
+    {
+      "control": "pair_m128_v2",
+      "result": "passed"
+    },
+    {
+      "control": "valid_m144_default_cold",
+      "result": "passed"
+    },
+    {
+      "control": "valid_m144_default_warm",
+      "result": "passed"
+    },
+    {
+      "control": "pair_m144_default",
+      "result": "passed"
+    },
+    {
+      "control": "valid_m144_v1_cold",
+      "result": "passed"
+    },
+    {
+      "control": "valid_m144_v1_warm",
+      "result": "passed"
+    },
+    {
+      "control": "pair_m144_v1",
+      "result": "passed"
+    },
+    {
+      "control": "valid_m144_v2_cold",
+      "result": "passed"
+    },
+    {
+      "control": "valid_m144_v2_warm",
+      "result": "passed"
+    },
+    {
+      "control": "pair_m144_v2",
+      "result": "passed"
+    },
+    {
+      "control": "explicit_native_rejection_exclusion",
+      "result": "passed"
+    },
+    {
+      "control": "wrong_natural_tier",
+      "result": "rejected_as_expected"
+    },
+    {
+      "control": "wrong_oracle_tier",
+      "result": "rejected_as_expected"
+    },
+    {
+      "control": "false_natural_hit",
+      "result": "rejected_as_expected"
+    },
+    {
+      "control": "native_fallback",
+      "result": "rejected_as_expected"
+    },
+    {
+      "control": "profile_attempt_hidden",
+      "result": "rejected_as_expected"
+    },
+    {
+      "control": "wrong_profile_normalization",
+      "result": "rejected_as_expected"
+    },
+    {
+      "control": "missing_graph_check",
+      "result": "rejected_as_expected"
+    },
+    {
+      "control": "missing_oracle_candidate",
+      "result": "rejected_as_expected"
+    },
+    {
+      "control": "bad_timing_median",
+      "result": "rejected_as_expected"
+    },
+    {
+      "control": "bad_winner_minimum",
+      "result": "rejected_as_expected"
+    },
+    {
+      "control": "unclassified_exclusion",
+      "result": "rejected_as_expected"
+    },
+    {
+      "control": "m144_raw_profile_normalizes256",
+      "result": "passed"
+    },
+    {
+      "control": "regret_uses_selected_oracle",
+      "result": "passed"
+    },
+    {
+      "control": "cross_window_ratio_can_below1",
+      "result": "passed"
+    },
+    {
+      "control": "untuned_default_has_no_regret",
+      "result": "passed"
+    },
+    {
+      "control": "natural_content_generation",
+      "result": "passed"
+    },
+    {
+      "control": "oracle_generation_changes_with_tactic",
+      "result": "passed"
+    },
+    {
+      "control": "stale_generation_rejected",
+      "result": "rejected_as_expected"
+    },
+    {
+      "control": "six_real_prior_cache_generation_hashes",
+      "result": "passed",
+      "files": [
+        "candidate-v1.json",
+        "baseline-v2.json",
+        "candidate-v1.explicit.json",
+        "candidate-v2.explicit.json",
+        "baseline-v2.explicit.json",
+        "candidate-v2.json"
+      ]
+    }
+  ]
+}

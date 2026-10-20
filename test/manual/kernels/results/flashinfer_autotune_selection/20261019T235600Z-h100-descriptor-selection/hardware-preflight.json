@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "status": "compatible_host_selected",
+  "benchmark_workers_run_during_probing": 0,
+  "probes": [
+    {
+      "job_id": 2676346,
+      "host": "ipp2-1588",
+      "gpu": "NVIDIA H100 PCIe",
+      "gpu_uuid": "16486640-ced7-d83d-2443-9402f83e5123",
+      "driver": "535.309.01.02",
+      "pinned_image_cached": false,
+      "decision": "Released after read-only probe because driver535.309.01.02 does not match the qualified580.159.04 stack; no compatibility workaround, image pull or experimental worker ran.",
+      "allocation_released": true
+    },
+    {
+      "job_id": 2676374,
+      "host": "1u1g-gen-0100",
+      "gpu": "NVIDIA H100 NVL",
+      "gpu_uuid": "240958a2-e8e1-3bac-b767-365c9e0b97bd",
+      "driver": "580.159.04",
+      "docker": "29.6.1",
+      "cpu_arch": "x86_64",
+      "pinned_image_cached": false,
+      "power_limit_watts": 310,
+      "decision": "Use for all new comparisons after exact image pull and frozen source push; all arms share the same GPU.",
+      "allocation_state_at_probe": "RUNNING"
+    }
+  ],
+  "previous_host": {
+    "host": "ipp2-0037",
+    "state": "occupied by an unrelated job",
+    "decision": "Leave untouched; no new benchmark runs on a shared host."
+  },
+  "scheduler_probe_notes": [
+    "An initial inventory filter found remote rg unavailable; repeated using awk. One early read-only query timed out.",
+    "One srun probe request arrived while2676374 was still pending and did not execute a worker; repeated only after allocation became RUNNING."
+  ],
+  "scope": "Pre-execution snapshot; final scheduler.json records all allocation cleanup."
+}
