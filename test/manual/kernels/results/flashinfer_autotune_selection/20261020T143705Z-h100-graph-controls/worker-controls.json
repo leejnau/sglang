@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "worker_sha256": "74349bc22955d65442045a11754a8015d566efe54efc45f533b45d1825cb12b4",
+  "checks": [
+    "Six schedules pass complete permutation, position, and pair-order balance.",
+    "Miss removal restores real maps, auxiliary state, and file bytes after normal and deliberate exceptional exits.",
+    "Parser rejects timing traces, missing observer traces, and frozen-protocol deviations.",
+    "Timing preload guard fails before inherited GPU construction.",
+    "Wrong-graph and shared-allocation faults fail independently of coincidentally equal output values.",
+    "Replay source keeps event initialization outside timing and traces retained objects without recapture."
+  ],
+  "scope": "CPU protocol, reversible cache scope, ownership fault, and source controls only; actual CUDA execution pending."
+}

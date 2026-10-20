@@ -1,0 +1,145 @@
+{
+  "status": "success",
+  "synthetic_only": true,
+  "analyzer_sha256": "7955e92c67430bf6bfec0ba2ac509dd9ba1f856c89069923497593553179de95",
+  "helper_sha256": "e551c7508890045395074d7532c7a2b621cc91fbfe9b4b8c23a7e9e7070027d5",
+  "passed": 29,
+  "controls": [
+    {
+      "name": "tuple_metadata_stage_coverage_positive",
+      "passed": true
+    },
+    {
+      "name": "duplicate_stage_coverage_rejected",
+      "passed": true,
+      "rejection": "synthetic"
+    },
+    {
+      "name": "missing_stage_coverage_rejected",
+      "passed": true,
+      "rejection": "synthetic"
+    },
+    {
+      "name": "balanced_positive_blocks",
+      "passed": true
+    },
+    {
+      "name": "unbalanced_order",
+      "passed": true,
+      "rejection": "synthetic: balanced seeded schedule"
+    },
+    {
+      "name": "missing_graph_batch",
+      "passed": true,
+      "rejection": "synthetic: block order/coverage"
+    },
+    {
+      "name": "wrong_replay_count",
+      "passed": true,
+      "rejection": "synthetic/block_00_post_hit: fixed replay count"
+    },
+    {
+      "name": "bad_normalization",
+      "passed": true,
+      "rejection": "synthetic/block_00_post_hit: raw batch normalization"
+    },
+    {
+      "name": "missing_rewarm",
+      "passed": true,
+      "rejection": "synthetic/block_00_post_hit: replay rewarm"
+    },
+    {
+      "name": "mislabelled_timed_check",
+      "passed": true,
+      "rejection": "synthetic: timed-output check label"
+    },
+    {
+      "name": "overlapping_batch",
+      "passed": true,
+      "rejection": "synthetic: overlapping/reordered timed batches"
+    },
+    {
+      "name": "wrong_clock_units",
+      "passed": true,
+      "rejection": "synthetic: batch clock normalization"
+    },
+    {
+      "name": "observation_cohort_has_no_latency",
+      "passed": true
+    },
+    {
+      "name": "instrumented_latency_rejected",
+      "passed": true,
+      "rejection": "synthetic: instrumented timing entered latency cohort"
+    },
+    {
+      "name": "exact_zero_reference",
+      "passed": true
+    },
+    {
+      "name": "stale_zero_output_rejected",
+      "passed": true,
+      "rejection": "synthetic: zero-input replay"
+    },
+    {
+      "name": "bf16_diagnostic_is_not_accuracy_gate",
+      "passed": true,
+      "rejection": "synthetic: reference roles"
+    },
+    {
+      "name": "actual_scoped_graph_launch_cycles",
+      "passed": true
+    },
+    {
+      "name": "missing_actual_gpu_launches",
+      "passed": true,
+      "rejection": "trace launch kernels/scoped lifetime"
+    },
+    {
+      "name": "changed_launch_signature",
+      "passed": true,
+      "rejection": "trace repeated ordered launch signatures"
+    },
+    {
+      "name": "same_graph_substituted_under_three_labels",
+      "passed": true,
+      "rejection": "trace replayed same graph under multiple labels"
+    },
+    {
+      "name": "uncorrelated_kernel_not_attributed",
+      "passed": true,
+      "rejection": "trace launch kernels/scoped lifetime"
+    },
+    {
+      "name": "native_submitted_descriptor_and_heuristic",
+      "passed": true
+    },
+    {
+      "name": "failed_config_query_not_identity",
+      "passed": true,
+      "rejection": "native public config query status"
+    },
+    {
+      "name": "replay_must_not_reenter_native_selection",
+      "passed": true,
+      "rejection": "graph replay performed a Python/native selection call"
+    },
+    {
+      "name": "whole_trial_bootstrap_equals46656_ordered_resamples",
+      "passed": true
+    },
+    {
+      "name": "one_trial_checkpoint_has_no_interval",
+      "passed": true
+    },
+    {
+      "name": "no_duplicate_trial_units",
+      "passed": true,
+      "rejection": "trial pooled or repeated"
+    },
+    {
+      "name": "constant_clock_correlation_is_unknown",
+      "passed": true
+    }
+  ]
+}

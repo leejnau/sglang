@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "batch_id": "20261020T143705Z-h100-graph-controls",
+  "status": "preregistered_graph_control_study",
+  "objective": "Investigate the previously observed cold-process post-tuning graph/default gap using retained real-layer graphs and balanced interleaved replay; do not assume a kernel or v2 cause.",
+  "landed_main_commit": "1897575ce11301b6b5ce647f0ad4fa2e777ee2bd",
+  "source_baseline_commit": "4de7fc7546808a5c265d8b83ba3a73e19a5ba4a3",
+  "flashinfer_source": {
+    "base_release": "0.7.2",
+    "base_commit": "d84335d8c54e0c8f9f7e22faa15c7e34a58abf94",
+    "upstream_pr": 6148,
+    "patch_head": "14c5c67a1eb9ad3a608b8d3da3bf6d8924037c5c",
+    "implementation": "Exact original diff applied cleanly to0.7.2, not full PR head; candidate source only for every arm.",
+    "input_batch": "test/manual/kernels/results/flashinfer_autotune_selection/20261019T232945Z-h100-descriptor-qualification",
+    "source_overlay_archive_sha256": "c62f09dad18dbe0ce326177077360fe716095f209dc023b25c5552dcc12f666f",
+    "source_manifest_sha256": "3f4305fce604d3cd51e85047678c6efbf71e35bcf51037e9586d15bc20486895",
+    "native_loading": "Reuse audited prepare_native(candidate): explicit JitSpec.build/load, identical module bootstrap in every arm; reject AOT substitution. One isolated candidate build workspace, fresh process/container per worker."
+  },
+  "container_image": "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
+  "environment": {
+    "gpu": "NVIDIA H100 NVL",
+    "physical_gpu_uuid": "240958a2-e8e1-3bac-b767-365c9e0b97bd",
+    "driver": "580.159.04",
+    "torch": "2.14.1+cu130",
+    "torch_cuda": "13.0",
+    "exclusive_node": true,
+    "clock_lock": false,
+    "cuda_arch_list": "9.0",
+    "sglang_wrapper_sha256": "64deff581665bd04830535baccfdfbdfa72794d919bc462fc469a4c42bdd68f5",
+    "host": "1u1g-gen-0100",
+    "power_limit_watts": 310,
+    "hardware_change": "Reuse prior H100NVL physical GPU if available; no comparisons to earlier HBM3 absolute timings. Hardware preflight must match this frozen expected model/UUID/driver before workers."
+  },
+  "workload": {
+    "api": "sglang.srt.layers.quantization.fp8_utils.apply_fp8_linear_bmm_flashinfer",
+    "model_id": "Qwen/Qwen3-0.6B",
+    "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "projection": "First transformer layer fused q/k/v projection, concatenated in source-verified SGLang QKV loader order.",
+    "tokens": 144,
+    "batch": 1,
+    "seed": 19,
+    "arms": [
+      "v1",
+      "v2"
+    ],
+    "fixture": "Frozen captured BF16 activations and checkpoint weights; per-tensor static scales calibrated from this one input/weight tensor. Exact shapes, tensor/file hashes and capture provenance frozen before tuning workers.",
+    "measurement_policy": "unspecified",
+    "persistence": "Existing real SGLang wrapper and v1 JSON save/load; managed store disabled.",
+    "shape_limit": "One representative captured prefill projection, not full-model output accuracy or traffic distribution. Dense BF16 checkpoint adapted to static per-tensor FP8 for this experiment; no production calibration claim.",
+    "path": "Actual SGLang static quantizer, normal custom-op dispatch/fast path and allocation, FlashInfer cublas FP8 implementation; no replacement or output copy in timed calls.",
+    "profiling_input_limit": "Actual serving and startup calls use captured BF16 inputs quantized by SGLang. FlashInfer retains its existing synthesized dynamic FP8 activation profiles; static real QKV weights and scales are reused. Reset RNG19 does not mean synthesized profiling activations equal captured serving activations. No activation-domain fidelity or profiling-policy change is claimed.",
+    "shape": [
+      144,
+      4096,
+      1024
+    ]
+  },
+  "protocol": {
+    "trials": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "modes": [
+      "timing",
+      "observe"
+    ],
+    "timing_workers": 12,
+    "observation_workers": 2,
+    "trial_arm_orders": [
+      [
+        "v1",
+        "v2"
+      ],
+      [
+        "v2",
+        "v1"
+      ],
+      [
+        "v1",
+        "v2"
+      ],
+      [
+        "v2",
+        "v1"
+      ],
+      [
+        "v1",
+        "v2"
+      ],
+      [
+        "v2",
+        "v1"
+      ]
+    ],
+    "trial_order": "Ascending0..5, balanced v1/v2 order; each worker fresh process and private initially empty cache. Separate observation subprocesses run after every timing worker.",
+    "graphs": {
+      "pre_default": "Captured before startup tuning under genuine default miss, retained through startup and every subsequent capture/replay.",
+      "post_hit": "Captured after actual cold wrapper tuning consumes naturally selected winner from memory.",
+      "post_miss": "Captured after tuning with actual winner/file maps reversibly removed; real lookup must miss and choose-1. Natural state restored before replay."
+    },
+    "post_capture_order": "post_hit/post_miss for even trial IDs, reverse for odd trial IDs.",
+    "history_windows": [
+      "pre-tuning retainedpregraph alone",
+      "same retainedpregraph immediately after startup before new captures",
+      "three graphs after all captures sequentially",
+      "three retainedgraphs balanced randomized interleaved"
+    ],
+    "sequential_samples": 15,
+    "requested_iterations": 5120,
+    "warmup_ms": 500,
+    "min_sample_ms": 20,
+    "blocks": 24,
+    "block_order": "All six permutations of three graphs repeated four times, deterministic seeded shuffle. Identical common5120replays pergraph in everyblock.",
+    "rewarm_ms": 20,
+    "timing": "Raw CUDAGraph.replay only; primary GPU event span, wall channel retained. No output rebinding/copy, Python/native observer, subprocess query or profiler in timed spans. GPU event span may include host-submission gaps.",
+    "numerical_guards": "Actualgraphowned output rebound after untimed replay, poisoned output and zero/restored BF16 input; quantized-input FP32 numerical gate and separate BF16 approximation diagnostic.",
+    "instrumentation": "Timing workers forbid native preload/torchprofiler; separate explicit observe-mode constructor guard adapter retains actual LD_PRELOAD interposition, native algorithm bytes/settings and actual graph replay launch traces, never latency estimates.",
+    "checkpoint": "First two timingworkers trial0 must pass frozen analyzer before remaining10. Finaltiming gate precedes twoobservers; finaloverall gate requires observations. No performance acceptance threshold.",
+    "observation_calls": 3,
+    "timeout_seconds_per_worker": 600,
+    "startup_scope": "Secondary wrapper-only diagnostic excludes model capture/native construction/build/load/initialquantizer and graphpreparation. Preserve unspecified policy and normal synthesized profiler activations."
+  },
+  "acceptance": [
+    "Frozen clean source, original runtime source overlay, exact existing fixture/model provenance, expected physicalH100/image/driver, actual explicitnative build/load match.",
+    "Real v1/v2 startup profiling is finite; every chosen runtime bucket winner is a profiler minimum. V2default participates; never force it to win. Startup alone mayprofile.",
+    "All three graphs retain their actual normal output allocations, share frozeninputs and execute correctly under outputpoison and changed/restoredinputs.",
+    "pre_default and post_miss actualsearch tier miss/default-1; post_hit actualmemorywinner, explicitdescriptor accepted natively ifselected.",
+    "Actualcache controls restore entiremapcontents and natural persistedcachebytes, including everyunrelated entry; correct callerstream/tuning/store state afterstartup/controls.",
+    "Zero profiling outside coldstartup, no managedstore or explicitmeasurementpolicy, no performanceinstrumentation in timingworkers.",
+    "Balanced block orders/commonreplaycounts, valid raw event/wall observations and perwindowclock/power context recorded; allfailure/retryattempts preserved.",
+    "Separate observeworkers produce nativealgorithm and actualCUDA launch evidence for allgraphs; do not infer samekernel from publictactic alone."
+  ],
+  "analysis": {
+    "independent_unit": "Six freshprocess trials perarm on fixedcapturedlayer; pairedblocks and15samples are dependent subsamples, not independenttrials.",
+    "comparisons": {
+      "process_history": "Samepre_default graph afterstartup/beforestartup, preserving graphandallocation.",
+      "capture_history": "post_miss/pre_default within interleavedblocks aftertuning; both publicdefault-1 with independentcaptures.",
+      "cached_winner": "post_hit/post_miss in interleavedblocks; compare samepublic-1 in v2 onlywhere naturalwinner-1, explicitv1 separate comparator.",
+      "sequential_vs_interleaved": "Report separately to quantify window/order dependence; never replace one estimand with another."
+    },
+    "uncertainty": "Worker medianofwithinblockratios, then sixtrialmedians/ranges/wincounts and exact wholetrialbootstrap95% exploratoryunadjusted intervals. No general serving performanceclaim.",
+    "interpretation": "Retainedpregraph changes suggest process/windowhistory; differences between retainedgraphs in same interleavedwindow suggest capture/allocation/algorithm effects. Nativeandtrace observations are separate subprocesses and cannot prove actualtimingkernelidentity; report scope.",
+    "scope_limits": "One frozenactual FP8 layer and unpublished descriptoroverlay; no fullserver throughput, dependencyreleasequalification, managedstore or policyadoption.",
+    "history_control_limit": "No separate untuned process with matched elapsed workload is run; chronological before/after changes do not uniquely establish tuning as their cause. Retainedgraphs and interleaving distinguish stable capture-specific gaps from observed process/window changes.",
+    "protocol_change_limit": "This deliberately retained-graph/capture-allocation protocol differs from the earlier separate default/v1/v2 processes and their eager-before-graph windows. Disappearance of the gap here cannot uniquely prove the earlier cause or retroactively label it noise."
+  },
+  "publication": {
+    "fork": "leejnau/sglang",
+    "branch": "experiment/flashinfer-candidate-selection",
+    "open_pr": false,
+    "records": "Preserve every attempt, exact raw bytes, numerical/cache/native build evidence, timing samples, neutral/regressive outcomes; one living Markdown for narrative/history."
+  },
+  "resource_policy": "One exclusive samephysicalH100 allocation at most1hour aftersourcefreeze. Preserve fullprivatebinary/fixture archive with node/durable/download hashagreement before release. No CI trigger or PR.",
+  "fixture": {
+    "manifest_sha256": "e13a86fab5db5796b22d8dab0f84080b8057b036ca7aef2c7be8832e76505bf1",
+    "tensor_file_sha256": "c30aa761eba827bb0b4eb6de0e99d9b8dda8243dd16d00146f9718d2abb05e8b",
+    "tensor_file_size_bytes": 12879616,
+    "capture_commit": "a29b31850c7b68cafde022614b00ab01d6ff5cde",
+    "capture_script_sha256": "c3c88dbf3df9fe0dc73d89a5acb9038e5b09fb1efc6316bc36917d06251f92a4",
+    "manifest_path": "fixture-manifest.json",
+    "private_capture_archive": "/home/lnau/flashinfer-autotune-study/20261020T034000Z-h100-fp8-linear-capture-full-raw.tgz",
+    "private_capture_archive_sha256": "9f87e468d7b6c1f665f187ff6c9b009da82a5f534ffb67e37c24fd6ad017fec1",
+    "public_tensor_publication": false
+  },
+  "prior_observation": {
+    "batch": "20261020T034000Z-h100-fp8-linear",
+    "graph_cold_v2_to_default_median": 1.0401509421,
+    "all_six_above_one": true,
+    "runtime_replay_separate_from_startup": true,
+    "cause": "unresolved; v2/v1 graph ratio was lower, so this is not proof of v2 versus v1 regression."
+  }
+}
