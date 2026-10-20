@@ -1,0 +1,808 @@
+{
+  "status": "success",
+  "report_status": "FINAL; immutable after readiness",
+  "headline": "V2 consistently selects the default and improves layer graph latency versus v1; a repeatable cold-process graph regression versus untuned default remains unresolved.",
+  "source_commit": "f0d3e8e123938a0b762d99af057a1386859b7f13",
+  "analyzer_sha256": "e551c7508890045395074d7532c7a2b621cc91fbfe9b4b8c23a7e9e7070027d5",
+  "analysis_sha256": "ef1bbc00335c68a79a3d0705e900bd1b3e76ba8af6a0940143219d662f888af6",
+  "audit_report_sha256": "6528e32f346bf8d05c9586c6eae34aba2dec1b78b101ed8707cbe14049023c93",
+  "scope": {
+    "hardware": {
+      "gpu": "NVIDIA H100 NVL",
+      "physical_gpu_uuid": "240958a2-e8e1-3bac-b767-365c9e0b97bd",
+      "driver": "580.159.04",
+      "torch": "2.14.1+cu130",
+      "torch_cuda": "13.0",
+      "exclusive_node": true,
+      "clock_lock": false,
+      "cuda_arch_list": "9.0",
+      "sglang_wrapper_sha256": "64deff581665bd04830535baccfdfbdfa72794d919bc462fc469a4c42bdd68f5",
+      "host": "1u1g-gen-0100",
+      "power_limit_watts": 310,
+      "hardware_change": "Reuse prior H100NVL physical GPU if available; no comparisons to earlier HBM3 absolute timings. Hardware preflight must match this frozen expected model/UUID/driver before workers."
+    },
+    "image": "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
+    "layer": "Actual apply_fp8_linear_bmm_flashinfer, static SGLang quantizer, normal custom-op dispatch/allocation and FlashInfer cublas",
+    "model": "Qwen/Qwen3-0.6B revisionc1899de289a04d12100db370d81485cdf75e47ca; layer0 fused Q/K/V checkpoint weights and144-token captured activations",
+    "shape": [
+      144,
+      4096,
+      1024
+    ],
+    "normalized_runtime_cache_m": 256,
+    "input_seed": 19,
+    "input_scope": "One fixed captured BF16 input/checkpoint weight fixture adapted to static per-tensor FP8 using this single batch; not a pre-calibrated deployed FP8 checkpoint.",
+    "fixture_manifest_sha256": "e13a86fab5db5796b22d8dab0f84080b8057b036ca7aef2c7be8832e76505bf1",
+    "fixture_tensor_file_sha256": "c30aa761eba827bb0b4eb6de0e99d9b8dda8243dd16d00146f9718d2abb05e8b",
+    "implementation": "FlashInfer0.7.2 plus exact descriptor PR6148 diff at14c5c67a1eb9ad3a608b8d3da3bf6d8924037c5c; experimental overlay.",
+    "fresh_trials": 6,
+    "workers": 36,
+    "arm_order": "All six permutations of default/v1/v2 used once; each arm cold then fresh warm process.",
+    "persistence": "Existing v1 JSON save/load; unspecified policy, managed store disabled.",
+    "primary_timing": {
+      "eager": "Whole linear-helper public-call wall latency",
+      "cuda_graph": "GPU-event replay span including possible host submission gaps; Python cache lookup occurs during capture, not replay."
+    },
+    "measurement": "15 natural samples per mode/channel;500ms warmup,20ms calibration target, actual batch normalization; no forced candidate sweep or timed observation hooks.",
+    "uncertainty": "Six fresh paired trial units; exact46,656 ordered whole-trial resamples, exploratory unadjusted percentile95% intervals. Worker samples are not independent trials."
+  },
+  "validation": {
+    "independent_actual_data_checks": 10026,
+    "fresh_workers": 36,
+    "numerical_checks": 360,
+    "native_acceptance_checks": 216,
+    "actual_native_output_poison_checks": 216,
+    "profiles": 918,
+    "v1_profiles": 432,
+    "v2_profiles": 486,
+    "finite_profiles": 918,
+    "profile_errors": 0,
+    "default_or_warm_profile_attempts": 0,
+    "forbidden_profile_attempts": 0,
+    "persistence": "All18 cold/warm pairs preserve natural cache bytes and winner; tuned warm serving/capture consumes true file hits without memory promotion.",
+    "graphs": "All36 eager and captured-allocation changed/restored-input tests pass exact zero and quantized-reference gates; poisoning is outside capture/timing.",
+    "source_and_binary": "Original execution source, complete descriptor overlay and shared native .so/Ninja rehashed and bound to every fresh worker.",
+    "private_fixture": "Whole retained safetensors and all six exact tensor byte ranges independently rehashed.",
+    "original_input_output_sha_count": 1,
+    "root_and_independent_frozen_analysis_byte_identical": true
+  },
+  "candidate_identities": {
+    "default": -1,
+    "explicit_1": [
+      828928688194,
+      4294967332,
+      0,
+      2533274790395906,
+      558779540176897,
+      120259084316,
+      292058693646,
+      0
+    ],
+    "explicit_2": [
+      785979015234,
+      4294967332,
+      0,
+      2533274790395906,
+      558779540176897,
+      120259084316,
+      292058693646,
+      0
+    ],
+    "explicit_3": [
+      73014444098,
+      4294967332,
+      0,
+      844424930131968,
+      558779540176897,
+      120259084316,
+      292058693646,
+      0
+    ]
+  },
+  "cold_winner_frequencies": [
+    {
+      "arm": "default",
+      "fresh_trials": 6,
+      "winners": [
+        {
+          "id": "default",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "arm": "v1",
+      "fresh_trials": 6,
+      "winners": [
+        {
+          "id": "explicit_1",
+          "count": 3
+        },
+        {
+          "id": "explicit_2",
+          "count": 2
+        },
+        {
+          "id": "explicit_3",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "arm": "v2",
+      "fresh_trials": 6,
+      "winners": [
+        {
+          "id": "default",
+          "count": 6
+        }
+      ]
+    }
+  ],
+  "startup_profiler_minimum_margins": [
+    {
+      "arm": "v1",
+      "winner_by_trial": [
+        "explicit_1",
+        "explicit_2",
+        "explicit_1",
+        "explicit_1",
+        "explicit_3",
+        "explicit_2"
+      ],
+      "minimum_ms_by_trial": [
+        0.009984000027179718,
+        0.010230399668216705,
+        0.010044799745082855,
+        0.009935999661684037,
+        0.010003200173377991,
+        0.01010880023241043
+      ],
+      "runner_up_fractional_margin_by_trial": [
+        0.0038461831221963116,
+        0.007819890889308123,
+        0.0009557256832160022,
+        0.007407464063282632,
+        0.0019194003784279712,
+        0.0
+      ],
+      "margin_median": 0.0028827917503121414,
+      "margin_range": [
+        0.0,
+        0.007819890889308123
+      ],
+      "finite_runtime_candidates": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "arm": "v2",
+      "winner_by_trial": [
+        "default",
+        "default",
+        "default",
+        "default",
+        "default",
+        "default"
+      ],
+      "minimum_ms_by_trial": [
+        0.00941760018467903,
+        0.009267199784517288,
+        0.009404800087213516,
+        0.009414400160312652,
+        0.009468799829483033,
+        0.009491200000047684
+      ],
+      "runner_up_fractional_margin_by_trial": [
+        0.05980290170425229,
+        0.08632598300802563,
+        0.06600887323199434,
+        0.05948332174456161,
+        0.06995604937929656,
+        0.0667566118290055
+      ],
+      "margin_median": 0.06638274253049992,
+      "margin_range": [
+        0.05948332174456161,
+        0.08632598300802563
+      ],
+      "finite_runtime_candidates": [
+        9,
+        9,
+        9,
+        9,
+        9,
+        9
+      ]
+    }
+  ],
+  "natural_primary_comparisons": [
+    {
+      "phase": "cold",
+      "execution": "eager",
+      "channel": "wall",
+      "primary": true,
+      "comparison": "v2_over_v1",
+      "numerator_lookup_tier": "memory",
+      "denominator_lookup_tier": "memory",
+      "median_paired_ratio": 0.9911631742808791,
+      "trial_ratios": [
+        1.0101330305315146,
+        0.9777868678665143,
+        0.9883385827490291,
+        0.9944963061508929,
+        0.9743462887934585,
+        0.9939877658127292
+      ],
+      "range": [
+        0.9743462887934585,
+        1.0101330305315146
+      ],
+      "ratios_below_one": 5,
+      "ratios_above_one": 1,
+      "exploratory_95_percent_whole_trial_bootstrap": [
+        0.9760665783299864,
+        1.0023146683412039
+      ]
+    },
+    {
+      "phase": "cold",
+      "execution": "eager",
+      "channel": "wall",
+      "primary": true,
+      "comparison": "v1_over_default",
+      "numerator_lookup_tier": "memory",
+      "denominator_lookup_tier": "miss",
+      "median_paired_ratio": 0.9052687193347972,
+      "trial_ratios": [
+        0.8923315893210354,
+        0.9100771304877687,
+        0.900809820603804,
+        0.9115436160469114,
+        0.9055390555911083,
+        0.9049983830784862
+      ],
+      "range": [
+        0.8923315893210354,
+        0.9115436160469114
+      ],
+      "ratios_below_one": 6,
+      "ratios_above_one": 0,
+      "exploratory_95_percent_whole_trial_bootstrap": [
+        0.8965707049624196,
+        0.91081037326734
+      ]
+    },
+    {
+      "phase": "cold",
+      "execution": "eager",
+      "channel": "wall",
+      "primary": true,
+      "comparison": "v2_over_default",
+      "numerator_lookup_tier": "memory",
+      "denominator_lookup_tier": "miss",
+      "median_paired_ratio": 0.8949312111411438,
+      "trial_ratios": [
+        0.9013736125598604,
+        0.8898614669365804,
+        0.8903051014219707,
+        0.9065267590540811,
+        0.8823086181727295,
+        0.8995573208603169
+      ],
+      "range": [
+        0.8823086181727295,
+        0.9065267590540811
+      ],
+      "ratios_below_one": 6,
+      "ratios_above_one": 0,
+      "exploratory_95_percent_whole_trial_bootstrap": [
+        0.8860850425546549,
+        0.9039501858069707
+      ]
+    },
+    {
+      "phase": "cold",
+      "execution": "cuda_graph",
+      "channel": "gpu_event",
+      "primary": true,
+      "comparison": "v2_over_v1",
+      "numerator_lookup_tier": "memory",
+      "denominator_lookup_tier": "memory",
+      "median_paired_ratio": 0.8825689249038007,
+      "trial_ratios": [
+        0.9074437124288223,
+        0.8827976693627918,
+        0.890643828360913,
+        0.8823401804448097,
+        0.7270734072702824,
+        0.8497014657726913
+      ],
+      "range": [
+        0.7270734072702824,
+        0.9074437124288223
+      ],
+      "ratios_below_one": 6,
+      "ratios_above_one": 0,
+      "exploratory_95_percent_whole_trial_bootstrap": [
+        0.7883874365214869,
+        0.8990437703948677
+      ]
+    },
+    {
+      "phase": "cold",
+      "execution": "cuda_graph",
+      "channel": "gpu_event",
+      "primary": true,
+      "comparison": "v1_over_default",
+      "numerator_lookup_tier": "memory",
+      "denominator_lookup_tier": "miss",
+      "median_paired_ratio": 1.181812356023081,
+      "trial_ratios": [
+        1.1837742391960795,
+        1.1798504728500825,
+        1.1657702486704635,
+        1.1772473470740803,
+        1.4195012142326466,
+        1.2322522488117282
+      ],
+      "range": [
+        1.1657702486704635,
+        1.4195012142326466
+      ],
+      "ratios_below_one": 0,
+      "ratios_above_one": 6,
+      "exploratory_95_percent_whole_trial_bootstrap": [
+        1.171508797872272,
+        1.3258767315221873
+      ]
+    },
+    {
+      "phase": "cold",
+      "execution": "cuda_graph",
+      "channel": "gpu_event",
+      "primary": true,
+      "comparison": "v2_over_default",
+      "numerator_lookup_tier": "memory",
+      "denominator_lookup_tier": "miss",
+      "median_paired_ratio": 1.0401509421370791,
+      "trial_ratios": [
+        1.074208490293695,
+        1.0415692476286407,
+        1.0382860772651152,
+        1.0387326366455174,
+        1.0320815844564333,
+        1.0470465420170205
+      ],
+      "range": [
+        1.0320815844564333,
+        1.074208490293695
+      ],
+      "ratios_below_one": 0,
+      "ratios_above_one": 6,
+      "exploratory_95_percent_whole_trial_bootstrap": [
+        1.0351838308607744,
+        1.0606275161553578
+      ]
+    },
+    {
+      "phase": "warm",
+      "execution": "eager",
+      "channel": "wall",
+      "primary": true,
+      "comparison": "v2_over_v1",
+      "numerator_lookup_tier": "file",
+      "denominator_lookup_tier": "file",
+      "median_paired_ratio": 0.9861033845215954,
+      "trial_ratios": [
+        0.9768676100643492,
+        0.9706960539389343,
+        0.9838337092542412,
+        0.9883730597889496,
+        0.9951013117943168,
+        1.0072453936454027
+      ],
+      "range": [
+        0.9706960539389343,
+        1.0072453936454027
+      ],
+      "ratios_below_one": 5,
+      "ratios_above_one": 1,
+      "exploratory_95_percent_whole_trial_bootstrap": [
+        0.9737818320016418,
+        1.0011733527198596
+      ]
+    },
+    {
+      "phase": "warm",
+      "execution": "eager",
+      "channel": "wall",
+      "primary": true,
+      "comparison": "v1_over_default",
+      "numerator_lookup_tier": "file",
+      "denominator_lookup_tier": "miss",
+      "median_paired_ratio": 0.9285563483629727,
+      "trial_ratios": [
+        0.9412245374858584,
+        0.9526199980037425,
+        0.9311844138177416,
+        0.9158634076695203,
+        0.9259282829082038,
+        0.8905532791326777
+      ],
+      "range": [
+        0.8905532791326777,
+        0.9526199980037425
+      ],
+      "ratios_below_one": 6,
+      "ratios_above_one": 0,
+      "exploratory_95_percent_whole_trial_bootstrap": [
+        0.903208343401099,
+        0.9469222677448005
+      ]
+    },
+    {
+      "phase": "warm",
+      "execution": "eager",
+      "channel": "wall",
+      "primary": true,
+      "comparison": "v2_over_default",
+      "numerator_lookup_tier": "file",
+      "denominator_lookup_tier": "miss",
+      "median_paired_ratio": 0.917791190156889,
+      "trial_ratios": [
+        0.919451764467733,
+        0.9247044729655484,
+        0.916130615846045,
+        0.9052147185870579,
+        0.9213924489494129,
+        0.8970056882021981
+      ],
+      "range": [
+        0.8970056882021981,
+        0.9247044729655484
+      ],
+      "ratios_below_one": 6,
+      "ratios_above_one": 0,
+      "exploratory_95_percent_whole_trial_bootstrap": [
+        0.901110203394628,
+        0.9230484609574806
+      ]
+    },
+    {
+      "phase": "warm",
+      "execution": "cuda_graph",
+      "channel": "gpu_event",
+      "primary": true,
+      "comparison": "v2_over_v1",
+      "numerator_lookup_tier": "file",
+      "denominator_lookup_tier": "file",
+      "median_paired_ratio": 0.8627140255379389,
+      "trial_ratios": [
+        0.876931924083999,
+        0.8455243483343945,
+        0.8644384854652323,
+        0.88081308499317,
+        0.7267941033597619,
+        0.8609895656106454
+      ],
+      "range": [
+        0.7267941033597619,
+        0.88081308499317
+      ],
+      "ratios_below_one": 6,
+      "ratios_above_one": 0,
+      "exploratory_95_percent_whole_trial_bootstrap": [
+        0.7861592258470782,
+        0.8788725045385846
+      ]
+    },
+    {
+      "phase": "warm",
+      "execution": "cuda_graph",
+      "channel": "gpu_event",
+      "primary": true,
+      "comparison": "v1_over_default",
+      "numerator_lookup_tier": "file",
+      "denominator_lookup_tier": "miss",
+      "median_paired_ratio": 1.1579301555820622,
+      "trial_ratios": [
+        1.1448149570153112,
+        1.1705841806976365,
+        1.1603211344365705,
+        1.127742510094096,
+        1.3750196106982175,
+        1.155539176727554
+      ],
+      "range": [
+        1.127742510094096,
+        1.3750196106982175
+      ],
+      "ratios_below_one": 0,
+      "ratios_above_one": 6,
+      "exploratory_95_percent_whole_trial_bootstrap": [
+        1.1362787335547035,
+        1.272801895697927
+      ]
+    },
+    {
+      "phase": "warm",
+      "execution": "cuda_graph",
+      "channel": "gpu_event",
+      "primary": true,
+      "comparison": "v2_over_default",
+      "numerator_lookup_tier": "file",
+      "denominator_lookup_tier": "miss",
+      "median_paired_ratio": 0.9971316594381199,
+      "trial_ratios": [
+        1.0039247829755775,
+        0.98975742655492,
+        1.0030262441056492,
+        0.9933303593939219,
+        0.9993561450595,
+        0.9949071738167397
+      ],
+      "range": [
+        0.98975742655492,
+        1.0039247829755775
+      ],
+      "ratios_below_one": 4,
+      "ratios_above_one": 2,
+      "exploratory_95_percent_whole_trial_bootstrap": [
+        0.9915438929744209,
+        1.0034755135406135
+      ]
+    }
+  ],
+  "absolute_layer_latencies": [
+    {
+      "phase": "cold",
+      "arm": "default",
+      "median_of_worker_eager_wall_medians_ms": 0.13090655265841633,
+      "median_of_worker_graph_event_medians_ms": 0.006822505965828896,
+      "scope": "Descriptive absolute medians; primary effects use median paired ratios by trial, not division of these medians."
+    },
+    {
+      "phase": "cold",
+      "arm": "v1",
+      "median_of_worker_eager_wall_medians_ms": 0.11875719501404092,
+      "median_of_worker_graph_event_medians_ms": 0.008040643855929376,
+      "scope": "Descriptive absolute medians; primary effects use median paired ratios by trial, not division of these medians."
+    },
+    {
+      "phase": "cold",
+      "arm": "v2",
+      "median_of_worker_eager_wall_medians_ms": 0.11728700628736988,
+      "median_of_worker_graph_event_medians_ms": 0.007096421718597413,
+      "scope": "Descriptive absolute medians; primary effects use median paired ratios by trial, not division of these medians."
+    },
+    {
+      "phase": "warm",
+      "arm": "default",
+      "median_of_worker_eager_wall_medians_ms": 0.1311285828705877,
+      "median_of_worker_graph_event_medians_ms": 0.0067844405770301815,
+      "scope": "Descriptive absolute medians; primary effects use median paired ratios by trial, not division of these medians."
+    },
+    {
+      "phase": "warm",
+      "arm": "v1",
+      "median_of_worker_eager_wall_medians_ms": 0.12148158857598901,
+      "median_of_worker_graph_event_medians_ms": 0.007817300036549568,
+      "scope": "Descriptive absolute medians; primary effects use median paired ratios by trial, not division of these medians."
+    },
+    {
+      "phase": "warm",
+      "arm": "v2",
+      "median_of_worker_eager_wall_medians_ms": 0.119643026846461,
+      "median_of_worker_graph_event_medians_ms": 0.006746109202504158,
+      "scope": "Descriptive absolute medians; primary effects use median paired ratios by trial, not division of these medians."
+    }
+  ],
+  "cold_process_graph_control_gap": {
+    "classification": "Observed post-tuning graph runtime regression versus untuned default; not cold-start tuning cost.",
+    "comparisons": [
+      {
+        "phase": "cold",
+        "execution": "cuda_graph",
+        "channel": "wall",
+        "primary": false,
+        "comparison": "v2_over_default",
+        "numerator_lookup_tier": "memory",
+        "denominator_lookup_tier": "miss",
+        "median_paired_ratio": 1.0405600524046448,
+        "trial_ratios": [
+          1.0742903428412929,
+          1.0417970660534936,
+          1.0383663291977443,
+          1.0393230387557957,
+          1.0320777040026705,
+          1.0468024130756246
+        ],
+        "range": [
+          1.0320777040026705,
+          1.0742903428412929
+        ],
+        "ratios_below_one": 0,
+        "ratios_above_one": 6,
+        "exploratory_95_percent_whole_trial_bootstrap": [
+          1.0352220166002075,
+          1.0605463779584587
+        ]
+      },
+      {
+        "phase": "cold",
+        "execution": "cuda_graph",
+        "channel": "gpu_event",
+        "primary": true,
+        "comparison": "v2_over_default",
+        "numerator_lookup_tier": "memory",
+        "denominator_lookup_tier": "miss",
+        "median_paired_ratio": 1.0401509421370791,
+        "trial_ratios": [
+          1.074208490293695,
+          1.0415692476286407,
+          1.0382860772651152,
+          1.0387326366455174,
+          1.0320815844564333,
+          1.0470465420170205
+        ],
+        "range": [
+          1.0320815844564333,
+          1.074208490293695
+        ],
+        "ratios_below_one": 0,
+        "ratios_above_one": 6,
+        "exploratory_95_percent_whole_trial_bootstrap": [
+          1.0351838308607744,
+          1.0606275161553578
+        ]
+      }
+    ],
+    "same_public_tactic_in_both_arms": -1,
+    "all_cold_default_and_v2_graph_batches_use_iterations": 5120,
+    "warm_graph_v2_over_default": {
+      "phase": "warm",
+      "execution": "cuda_graph",
+      "channel": "gpu_event",
+      "primary": true,
+      "comparison": "v2_over_default",
+      "numerator_lookup_tier": "file",
+      "denominator_lookup_tier": "miss",
+      "median_paired_ratio": 0.9971316594381199,
+      "trial_ratios": [
+        1.0039247829755775,
+        0.98975742655492,
+        1.0030262441056492,
+        0.9933303593939219,
+        0.9993561450595,
+        0.9949071738167397
+      ],
+      "range": [
+        0.98975742655492,
+        1.0039247829755775
+      ],
+      "ratios_below_one": 4,
+      "ratios_above_one": 2,
+      "exploratory_95_percent_whole_trial_bootstrap": [
+        0.9915438929744209,
+        1.0034755135406135
+      ]
+    },
+    "interpretation": "Cold v2 replay is slower in every trial: median ratio1.040151, range1.032082\u20131.074208, exploratory interval[1.035184,1.060628]. Wall timing agrees. Warm reuse is neutral versus untuned default. Current data does not identify the cause; both use public-1 but kernel identity and capture/process state are unobserved.",
+    "guardrail": "Keep this regression visible and investigate it before broader performance or policy claims. The user prioritizing warm serving over startup cost does not waive a post-startup replay regression."
+  },
+  "numerical_references": {
+    "quantized_input_FP32_gate": {
+      "max_abs_error": [
+        0.025037765502929688
+      ],
+      "max_normalized_error": [
+        0.11754778027534485
+      ],
+      "rmse": [
+        0.0006564061623066664
+      ],
+      "relative_l2": [
+        0.0019416571932431184
+      ]
+    },
+    "original_BF16_projection_diagnostic_only": {
+      "max_abs_error": [
+        0.14998984336853027
+      ],
+      "max_normalized_error": [
+        0.8266758918762207
+      ],
+      "rmse": [
+        0.007820826955139637
+      ],
+      "relative_l2": [
+        0.023056529720005287
+      ]
+    },
+    "scope": "All nonzero recorded outputs are bit-identical across arms/trials here. This validates the tested quantized layer, not full-model quantized accuracy; BF16 relativeL2 is~2.306% for this single-batch calibration."
+  },
+  "startup_secondary_diagnostics": [
+    {
+      "phase": "cold",
+      "comparison": "v2_over_v1",
+      "median_paired_ratio": 1.0976274809421827,
+      "trial_ratios": [
+        1.0971963683019426,
+        1.0967045970347926,
+        1.0984074494638545,
+        1.0980585935824227,
+        1.0984063025255677,
+        1.0967648666935987
+      ],
+      "range": [
+        1.0967045970347926,
+        1.0984074494638545
+      ],
+      "ratios_below_one": 0,
+      "ratios_above_one": 6,
+      "exploratory_95_percent_whole_trial_bootstrap": [
+        1.0967347318641956,
+        1.0984068759947112
+      ],
+      "v1_median_wrapper_startup_ms": 465.97130550071597,
+      "v2_median_wrapper_startup_ms": 511.5646170452237
+    },
+    {
+      "phase": "warm",
+      "comparison": "v2_over_v1",
+      "median_paired_ratio": 0.9867896799940763,
+      "trial_ratios": [
+        1.0035838083351756,
+        0.9997218284451604,
+        0.9885043546384448,
+        0.9850750053497079,
+        0.9634127544417344,
+        0.9834449541689425
+      ],
+      "range": [
+        0.9634127544417344,
+        1.0035838083351756
+      ],
+      "ratios_below_one": 5,
+      "ratios_above_one": 1,
+      "exploratory_95_percent_whole_trial_bootstrap": [
+        0.9734288543053384,
+        1.001652818390168
+      ],
+      "v1_median_wrapper_startup_ms": 92.3559945076704,
+      "v2_median_wrapper_startup_ms": 91.31610672920942
+    }
+  ],
+  "interpretation": [
+    "V2 selected default-1 in all6 fresh tunings, persisted it and served it from warm files. V1 selected three explicit descriptors3/2/1 times. V2 runtime-bucket profiler margins are5.95\u20138.63% (median6.64%); v1 margins are0\u20130.78% (median0.29%), including a tie.",
+    "Relative to v1, warm layer graph replay favors v2 in all6 trials: median ratio0.862714, range0.726794\u20130.880813, exploratory interval[0.786159,0.878873]. This is a measured layer result, not serving throughput.",
+    "Warm eager v2/v1 is close to neutral: median0.986103, exploratory interval[0.973782,1.001173], with one1.007245 regression. Do not claim a resolved eager speedup from the point estimate.",
+    "Both tuned eager paths beat the natural untuned default in all6 warm trials, with median ratios0.928556(v1/default) and0.917791(v2/default). These configurations use cached file hits versus genuine default misses, so the result includes lookup/dispatch differences and does not isolate candidate GPU-kernel quality.",
+    "Warm graph v2/default is neutral: median0.997132, exploratory interval[0.991544,1.003476], with4 ratios below1 and2 above. V1/default warm graph is slower in every trial (median1.157930).",
+    "Cold-process graph v2/default is slower in all6 trials despite the same public default tactic: median1.040151 and both timing channels agree. This is post-tuning replay runtime, distinct from wrapper startup time, and remains an unresolved regression.",
+    "Actual operation profiling remains eager/hot-L2 with3 warmups,10 repeats, legacy5000us stream delay, global timer false and no measurement policy. Dynamic profiling activations are synthesized while serving quantizes the captured BF16 input; startup minima do not establish a serving-global optimum.",
+    "V2 wrapper tuning duration is~9.76% higher than v1 here (~511.6ms versus466.0ms median); this is a secondary operation diagnostic excluding acquisition/build/preparation, with no cold-start serving claim."
+  ],
+  "limits": [
+    "One H100 NVL, one captured144-token fused-QKV layer and six repetitions; no traffic-distribution/model/backend/device generalization.",
+    "Natural timings are separate fresh-worker windows; multiple paired comparisons and bootstrap intervals are exploratory and unadjusted.",
+    "Untuned default misses and tuned memory/file hits differ; graph lookup is excluded from replay, so cache lookup cost alone cannot explain the observed graph control gap.",
+    "No forced serving-candidate oracle or native/trace observation was collected. The same public-1 does not prove identical native algorithm or physical GPU launches.",
+    "The dense BF16 checkpoint was adapted to single-batch static FP8 calibration; passing layer numerics and BF16 diagnostics do not establish full-model accuracy.",
+    "No explicit-policy adoption, managed-store migration, multi-GPU/backend validation, full server or serving-throughput measurement."
+  ],
+  "next_bounded_recommendation": {
+    "action": "Investigate the cold-process default-1 graph control gap on this same frozen layer fixture before broadening performance claims or changing policy.",
+    "uninstrumented_control": "Use fresh workers retaining the untuned graph captured before tuning, the cached-default graph captured after v2 tuning, and an untuned-miss graph captured after tuning with a reversible cache-state control. Replaying the retained pre-tuning graph after tuning helps separate capture/allocation changes from process-history effects.",
+    "measurement": "Measure the retained graphs in balanced randomized interleaved blocks with common replay counts, fixed inputs and verified graph-owned outputs; preserve cold/warm labels, cache state and both wall/event channels.",
+    "separate_observation": "In a separate non-performance pass, capture actual native algorithm bytes/settings and CUDA launch signatures for each graph capture, with GPU clock/power/context evidence. Instrumented duration must not be interpreted as performance.",
+    "decision": "If the gap follows different graph/native launches or allocation state, isolate that mechanism; if it disappears under interleaving, quantify the earlier window/history effect. Retain the regression until explained rather than attributing it to startup overhead.",
+    "launch_status": "Proposal only; no new experiment launched by this report."
+  }
+}

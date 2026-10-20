@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "status": "completed_and_released",
+  "execution_commit": "f0d3e8e123938a0b762d99af057a1386859b7f13",
+  "allocation": {
+    "job_id": 2679896,
+    "node": "1u1g-gen-0100",
+    "started_utc": "2026-10-20T03:40:18Z",
+    "released_utc": "2026-10-20T04:04:54Z",
+    "elapsed": "00:24:36",
+    "state": "CANCELLED by 150381",
+    "reason": "Intentional release after every worker/final gate passed and full archive node/durable/download hashes matched."
+  },
+  "experiment_step": {
+    "job_id": "2679896.5",
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "started_utc": "2026-10-20T03:49:03Z",
+    "finished_utc": "2026-10-20T04:03:41Z",
+    "elapsed": "00:14:38"
+  },
+  "preservation_step": {
+    "job_id": "2679896.17",
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "started_utc": "2026-10-20T04:03:53Z",
+    "finished_utc": "2026-10-20T04:03:58Z"
+  },
+  "final_queue": {
+    "checked_utc": "2026-10-20T04:05:47Z",
+    "matching_jobs": []
+  },
+  "worker_outcome": {
+    "expected": 36,
+    "successful": 36,
+    "failed": 0,
+    "experimental_retries": 0,
+    "excluded_workers": 0
+  },
+  "cleanup": {
+    "own_container_prefix": "fi-linear-attempt01",
+    "own_containers_before_release": [],
+    "unrelated_jobs_containers_images_untouched": true,
+    "hold_batch_exit": "0:15",
+    "hold_batch_reason": "The deliberate scancel terminates the allocation sleep; it is separate from successful experiment and preservation exits."
+  },
+  "commands": {
+    "release": "scancel 2679896",
+    "queue": "squeue -h -j 2679896 -o '%i %T %N'",
+    "accounting": "sacct -j 2679896 --format=JobID,JobName,State,ExitCode,Elapsed,Start,End,NodeList --parsable2 --noheader"
+  },
+  "original_release_and_accounting": "2026-10-20T04:04:54Z\n2679896 COMPLETING 1u1g-gen-0100\n2679896|fi-fp8-linear|CANCELLED by 150381|0:0|00:24:36|2026-10-20T03:40:18|2026-10-20T04:04:54|1u1g-gen-0100\n2679896.batch|batch|CANCELLED|0:0|00:24:36|2026-10-20T03:40:18|2026-10-20T04:04:54|1u1g-gen-0100\n2679896.extern|extern|CANCELLED|0:0|00:24:36|2026-10-20T03:40:18|2026-10-20T04:04:54|1u1g-gen-0100\n2679896.0|bash|COMPLETED|0:0|00:00:17|2026-10-20T03:40:22|2026-10-20T03:40:39|1u1g-gen-0100\n2679896.1|bash|COMPLETED|0:0|00:00:37|2026-10-20T03:42:18|2026-10-20T03:42:55|1u1g-gen-0100\n2679896.2|bash|COMPLETED|0:0|00:00:03|2026-10-20T03:42:55|2026-10-20T03:42:58|1u1g-gen-0100\n2679896.3|bash|COMPLETED|0:0|00:00:06|2026-10-20T03:43:26|2026-10-20T03:43:32|1u1g-gen-0100\n2679896.4|bash|COMPLETED|0:0|00:00:03|2026-10-20T03:46:53|2026-10-20T03:46:56|1u1g-gen-0100\n2679896.5|bash|COMPLETED|0:0|00:14:38|2026-10-20T03:49:03|2026-10-20T04:03:41|1u1g-gen-0100\n2679896.6|bash|COMPLETED|0:0|00:00:02|2026-10-20T03:49:55|2026-10-20T03:49:57|1u1g-gen-0100\n2679896.7|bash|COMPLETED|0:0|00:00:03|2026-10-20T03:50:48|2026-10-20T03:50:51|1u1g-gen-0100\n2679896.8|bash|COMPLETED|0:0|00:00:02|2026-10-20T03:51:36|2026-10-20T03:51:38|1u1g-gen-0100\n2679896.9|bash|COMPLETED|0:0|00:00:06|2026-10-20T03:52:23|2026-10-20T03:52:29|1u1g-gen-0100\n2679896.10|bash|COMPLETED|0:0|00:00:02|2026-10-20T03:54:27|2026-10-20T03:54:29|1u1g-gen-0100\n2679896.11|bash|COMPLETED|0:0|00:00:02|2026-10-20T03:56:06|2026-10-20T03:56:08|1u1g-gen-0100\n2679896.12|bash|COMPLETED|0:0|00:00:02|2026-10-20T03:57:24|2026-10-20T03:57:26|1u1g-gen-0100\n2679896.13|bash|COMPLETED|0:0|00:00:02|2026-10-20T03:58:53|2026-10-20T03:58:55|1u1g-gen-0100\n2679896.14|bash|COMPLETED|0:0|00:00:02|2026-10-20T04:00:14|2026-10-20T04:00:16|1u1g-gen-0100\n2679896.15|bash|COMPLETED|0:0|00:00:02|2026-10-20T04:01:30|2026-10-20T04:01:32|1u1g-gen-0100\n2679896.16|bash|COMPLETED|0:0|00:00:03|2026-10-20T04:02:44|2026-10-20T04:02:47|1u1g-gen-0100\n2679896.17|bash|COMPLETED|0:0|00:00:05|2026-10-20T04:03:53|2026-10-20T04:03:58|1u1g-gen-0100\n",
+  "original_final_queue_and_accounting": "2026-10-20T04:05:47Z\n2679896|fi-fp8-linear|CANCELLED by 150381|0:0|00:24:36|2026-10-20T03:40:18|2026-10-20T04:04:54|1u1g-gen-0100\n2679896.batch|batch|CANCELLED|0:15|00:24:37|2026-10-20T03:40:18|2026-10-20T04:04:55|1u1g-gen-0100\n2679896.extern|extern|COMPLETED|0:0|00:24:37|2026-10-20T03:40:18|2026-10-20T04:04:55|1u1g-gen-0100\n2679896.0|bash|COMPLETED|0:0|00:00:17|2026-10-20T03:40:22|2026-10-20T03:40:39|1u1g-gen-0100\n2679896.1|bash|COMPLETED|0:0|00:00:37|2026-10-20T03:42:18|2026-10-20T03:42:55|1u1g-gen-0100\n2679896.2|bash|COMPLETED|0:0|00:00:03|2026-10-20T03:42:55|2026-10-20T03:42:58|1u1g-gen-0100\n2679896.3|bash|COMPLETED|0:0|00:00:06|2026-10-20T03:43:26|2026-10-20T03:43:32|1u1g-gen-0100\n2679896.4|bash|COMPLETED|0:0|00:00:03|2026-10-20T03:46:53|2026-10-20T03:46:56|1u1g-gen-0100\n2679896.5|bash|COMPLETED|0:0|00:14:38|2026-10-20T03:49:03|2026-10-20T04:03:41|1u1g-gen-0100\n2679896.6|bash|COMPLETED|0:0|00:00:02|2026-10-20T03:49:55|2026-10-20T03:49:57|1u1g-gen-0100\n2679896.7|bash|COMPLETED|0:0|00:00:03|2026-10-20T03:50:48|2026-10-20T03:50:51|1u1g-gen-0100\n2679896.8|bash|COMPLETED|0:0|00:00:02|2026-10-20T03:51:36|2026-10-20T03:51:38|1u1g-gen-0100\n2679896.9|bash|COMPLETED|0:0|00:00:06|2026-10-20T03:52:23|2026-10-20T03:52:29|1u1g-gen-0100\n2679896.10|bash|COMPLETED|0:0|00:00:02|2026-10-20T03:54:27|2026-10-20T03:54:29|1u1g-gen-0100\n2679896.11|bash|COMPLETED|0:0|00:00:02|2026-10-20T03:56:06|2026-10-20T03:56:08|1u1g-gen-0100\n2679896.12|bash|COMPLETED|0:0|00:00:02|2026-10-20T03:57:24|2026-10-20T03:57:26|1u1g-gen-0100\n2679896.13|bash|COMPLETED|0:0|00:00:02|2026-10-20T03:58:53|2026-10-20T03:58:55|1u1g-gen-0100\n2679896.14|bash|COMPLETED|0:0|00:00:02|2026-10-20T04:00:14|2026-10-20T04:00:16|1u1g-gen-0100\n2679896.15|bash|COMPLETED|0:0|00:00:02|2026-10-20T04:01:30|2026-10-20T04:01:32|1u1g-gen-0100\n2679896.16|bash|COMPLETED|0:0|00:00:03|2026-10-20T04:02:44|2026-10-20T04:02:47|1u1g-gen-0100\n2679896.17|bash|COMPLETED|0:0|00:00:05|2026-10-20T04:03:53|2026-10-20T04:03:58|1u1g-gen-0100\n"
+}
