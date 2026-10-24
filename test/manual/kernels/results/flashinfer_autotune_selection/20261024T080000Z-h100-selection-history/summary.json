@@ -1,0 +1,536 @@
+{
+  "status": "FINAL_immutable_derived_summary",
+  "source_commit": "bdcd1d9bf844022bae45652c1a7979f3fe8477bd",
+  "scope": "32 fresh workers,8 complete H0/H1 by F0/F1 blocks, fixed source/auto objective and captured144x4096x1024 QKV fixture on the same H100 NVL.",
+  "independent_audit": {
+    "path": "/private/tmp/fi-next-steps-20261024/history-statistics-audit/final-audit.json",
+    "sha256": "23935e4efe0a247184b8177a3d1ae5aae48cd5ca8c8c76504f8355cb2b3c16bf",
+    "official_numeric_comparisons": 337
+  },
+  "totals": {
+    "workers": 32,
+    "primary_paired_batches": 768,
+    "trace_launches": 192,
+    "numeric_checks": 2208,
+    "profiles": 2592
+  },
+  "selection_counts": [
+    {
+      "cell": "h0f0",
+      "default": 7,
+      "explicit": 1
+    },
+    {
+      "cell": "h0f1",
+      "default": 7,
+      "explicit": 1
+    },
+    {
+      "cell": "h1f0",
+      "default": 7,
+      "explicit": 1
+    },
+    {
+      "cell": "h1f1",
+      "default": 8,
+      "explicit": 0
+    }
+  ],
+  "explicit_cases": [
+    {
+      "trial": 3,
+      "cell": "h0f0",
+      "profile_explicit_advantage_percent": 2.45205580820963,
+      "actual_graph_selected_over_default": 1.2198714426078343,
+      "actual_GEMM_signature_differs": true
+    },
+    {
+      "trial": 3,
+      "cell": "h1f0",
+      "profile_explicit_advantage_percent": 0.4959668188173283,
+      "actual_graph_selected_over_default": 1.1889574001998073,
+      "actual_GEMM_signature_differs": true
+    },
+    {
+      "trial": 5,
+      "cell": "h0f1",
+      "profile_explicit_advantage_percent": 1.3462771810085483,
+      "actual_graph_selected_over_default": 1.2097634309674437,
+      "actual_GEMM_signature_differs": true
+    }
+  ],
+  "primary_factorial_estimates": [
+    {
+      "measure": "profile_margin",
+      "contrast": "history_main",
+      "n_complete_repetitions": 8,
+      "trial_values": [
+        [
+          0,
+          0.9937584593154938
+        ],
+        [
+          1,
+          1.0382253905315384
+        ],
+        [
+          2,
+          0.9988227725270109
+        ],
+        [
+          3,
+          0.9947332686915925
+        ],
+        [
+          4,
+          0.9532095784597823
+        ],
+        [
+          5,
+          1.0500901358753572
+        ],
+        [
+          6,
+          0.9851609659323646
+        ],
+        [
+          7,
+          1.0140970107573548
+        ]
+      ],
+      "median": 0.9967780206093018,
+      "range": [
+        0.9532095784597823,
+        1.0500901358753572
+      ],
+      "below_one": 5,
+      "above_one": 3,
+      "exploratory_block_bootstrap95": [
+        0.9851609659323646,
+        1.0382253905315384
+      ]
+    },
+    {
+      "measure": "profile_margin",
+      "contrast": "fingerprint_main",
+      "n_complete_repetitions": 8,
+      "trial_values": [
+        [
+          0,
+          1.001554001475227
+        ],
+        [
+          1,
+          0.9925620703825944
+        ],
+        [
+          2,
+          0.9729325199378995
+        ],
+        [
+          3,
+          1.0689935851445747
+        ],
+        [
+          4,
+          1.0285999834792563
+        ],
+        [
+          5,
+          0.9754334101312379
+        ],
+        [
+          6,
+          1.0007702653305541
+        ],
+        [
+          7,
+          0.9871107397014757
+        ]
+      ],
+      "median": 0.9966661678565742,
+      "range": [
+        0.9729325199378995,
+        1.0689935851445747
+      ],
+      "below_one": 4,
+      "above_one": 4,
+      "exploratory_block_bootstrap95": [
+        0.9754334101312379,
+        1.0285999834792563
+      ]
+    },
+    {
+      "measure": "profile_margin",
+      "contrast": "interaction",
+      "n_complete_repetitions": 8,
+      "trial_values": [
+        [
+          0,
+          0.9748370313597801
+        ],
+        [
+          1,
+          1.0064506431807427
+        ],
+        [
+          2,
+          1.0972843000767722
+        ],
+        [
+          3,
+          0.9509729414016315
+        ],
+        [
+          4,
+          1.042915148401843
+        ],
+        [
+          5,
+          1.099265482639241
+        ],
+        [
+          6,
+          1.050528851776211
+        ],
+        [
+          7,
+          1.0242272066101263
+        ]
+      ],
+      "median": 1.0335711775059848,
+      "range": [
+        0.9509729414016315,
+        1.099265482639241
+      ],
+      "below_one": 2,
+      "above_one": 6,
+      "exploratory_block_bootstrap95": [
+        0.9748370313597801,
+        1.0972843000767722
+      ]
+    },
+    {
+      "measure": "serving_gpu_event",
+      "contrast": "history_main",
+      "n_complete_repetitions": 8,
+      "trial_values": [
+        [
+          0,
+          1.01230831361198
+        ],
+        [
+          1,
+          0.9943799742560734
+        ],
+        [
+          2,
+          1.0128429641535368
+        ],
+        [
+          3,
+          0.9784781668745159
+        ],
+        [
+          4,
+          1.0094563526099265
+        ],
+        [
+          5,
+          0.8966892257888378
+        ],
+        [
+          6,
+          1.0140195267567442
+        ],
+        [
+          7,
+          0.9818482567647357
+        ]
+      ],
+      "median": 1.0019181634329999,
+      "range": [
+        0.8966892257888378,
+        1.0140195267567442
+      ],
+      "below_one": 4,
+      "above_one": 4,
+      "exploratory_block_bootstrap95": [
+        0.9784781668745159,
+        1.0128429641535368
+      ]
+    },
+    {
+      "measure": "serving_gpu_event",
+      "contrast": "fingerprint_main",
+      "n_complete_repetitions": 8,
+      "trial_values": [
+        [
+          0,
+          1.000378979693179
+        ],
+        [
+          1,
+          1.005567307875861
+        ],
+        [
+          2,
+          1.0077627841724497
+        ],
+        [
+          3,
+          0.8286742352522206
+        ],
+        [
+          4,
+          1.0016383838924499
+        ],
+        [
+          5,
+          1.0901872486045088
+        ],
+        [
+          6,
+          1.0010142291038566
+        ],
+        [
+          7,
+          1.001027206687862
+        ]
+      ],
+      "median": 1.001332795290156,
+      "range": [
+        0.8286742352522206,
+        1.0901872486045088
+      ],
+      "below_one": 1,
+      "above_one": 7,
+      "exploratory_block_bootstrap95": [
+        1.000378979693179,
+        1.0077627841724497
+      ]
+    },
+    {
+      "measure": "serving_gpu_event",
+      "contrast": "interaction",
+      "n_complete_repetitions": 8,
+      "trial_values": [
+        [
+          0,
+          0.9964674175242922
+        ],
+        [
+          1,
+          1.0059124653514933
+        ],
+        [
+          2,
+          1.0028196276446248
+        ],
+        [
+          3,
+          1.0078544541038028
+        ],
+        [
+          4,
+          0.997490572030302
+        ],
+        [
+          5,
+          0.8368986042322696
+        ],
+        [
+          6,
+          1.0141679893874191
+        ],
+        [
+          7,
+          0.997572878295791
+        ]
+      ],
+      "median": 1.000196252970208,
+      "range": [
+        0.8368986042322696,
+        1.0141679893874191
+      ],
+      "below_one": 4,
+      "above_one": 4,
+      "exploratory_block_bootstrap95": [
+        0.9964674175242922,
+        1.0078544541038028
+      ]
+    }
+  ],
+  "same_default_same_kernel_capture_association": [
+    {
+      "cell": "h0f0",
+      "n": 7,
+      "trial_values": [
+        [
+          0,
+          1.0113563247642026
+        ],
+        [
+          1,
+          1.0087684660385443
+        ],
+        [
+          2,
+          1.0094249821389052
+        ],
+        [
+          4,
+          1.009155921653803
+        ],
+        [
+          5,
+          1.0151629899514174
+        ],
+        [
+          6,
+          1.0082936636702355
+        ],
+        [
+          7,
+          1.0125285061953948
+        ]
+      ],
+      "median": 1.0094249821389052,
+      "scope": "Post hoc descriptive default-winner AND equal observed launch signatures subgroup; not an independent causal estimate."
+    },
+    {
+      "cell": "h0f1",
+      "n": 7,
+      "trial_values": [
+        [
+          0,
+          1.0091859335742632
+        ],
+        [
+          1,
+          1.0113990661458039
+        ],
+        [
+          2,
+          1.0030605392113499
+        ],
+        [
+          3,
+          1.0069293293535464
+        ],
+        [
+          4,
+          1.0062403163208473
+        ],
+        [
+          6,
+          1.0143824724672952
+        ],
+        [
+          7,
+          1.0148008530085317
+        ]
+      ],
+      "median": 1.0091859335742632,
+      "scope": "Post hoc descriptive default-winner AND equal observed launch signatures subgroup; not an independent causal estimate."
+    },
+    {
+      "cell": "h1f0",
+      "n": 7,
+      "trial_values": [
+        [
+          0,
+          1.0027139509091627
+        ],
+        [
+          1,
+          0.9998531696512978
+        ],
+        [
+          2,
+          1.001974465278223
+        ],
+        [
+          4,
+          1.0015551598248353
+        ],
+        [
+          5,
+          1.0049829506097347
+        ],
+        [
+          6,
+          0.9986293613710359
+        ],
+        [
+          7,
+          1.0046636384777634
+        ]
+      ],
+      "median": 1.001974465278223,
+      "scope": "Post hoc descriptive default-winner AND equal observed launch signatures subgroup; not an independent causal estimate."
+    },
+    {
+      "cell": "h1f1",
+      "n": 8,
+      "trial_values": [
+        [
+          0,
+          1.0013206355753832
+        ],
+        [
+          1,
+          0.9913910347204372
+        ],
+        [
+          2,
+          1.011175137871105
+        ],
+        [
+          3,
+          1.0109995441386785
+        ],
+        [
+          4,
+          1.0019365768385602
+        ],
+        [
+          5,
+          1.0076766016405303
+        ],
+        [
+          6,
+          1.0066987539898231
+        ],
+        [
+          7,
+          1.0048528912246126
+        ]
+      ],
+      "median": 1.0057758226072178,
+      "scope": "Post hoc descriptive default-winner AND equal observed launch signatures subgroup; not an independent causal estimate."
+    }
+  ],
+  "findings": [
+    "All natural choices equal actual finite profile minima; the selection loop and cache-hit consumption behaved correctly.",
+    "Default won29of32; three naturally chosen explicit candidates measured18.90\u201321.99percent slower in the retained serving graph than their own default. These are runtime comparisons, not startup cost.",
+    "The continuous profiler-margin H/F/interaction intervals all include1; this fixed sample does not isolate a stable explanation for the sporadic explicit wins.",
+    "The serving fingerprint-main contrast is1.00133 with exploratory unadjusted interval[1.00038,1.00776]. Preserve this estimate, without a significance/equivalence claim or treating it as a pure profiling-observer cost.",
+    "Among natural-default cases with equal actual same-worker launch signatures, H0 first-capture medians are about0.92\u20130.94percent slower, all7cases per H0cell. H1 patterns are mixed. This is a posthoc subgroup, not an independent causal test.",
+    "Same-worker post-timing traces now establish actual launch signatures for these retained objects; equal signatures still do not equate memory mapping, GPU state or host submission gaps."
+  ],
+  "interpretation": "No uniform selection-quality improvement or clean H/F attribution established. Large explicit-candidate runtime regressions remain alongside subpercent retained-graph measurement sensitivity.",
+  "next_bounded_decision": "Complete the separately preregistered six-process replay-method calibration before interpreting subpercent effects or changing policy/upstream preparation. No new experiment was launched by this summary.",
+  "limits": [
+    "Eight complete blocked repetitions are inferential units.24blocks/15samples are dependent observations.",
+    "Exploratory, unadjusted intervals; no significance/equivalence claim or performance acceptance threshold.",
+    "H bundles startup capture, allocations, work and time. F0 does not attest synthetic operand bytes.",
+    "Post-timing trace observes actual retained graph signatures; its instrumented durations are not performance.",
+    "Same CUDA kernel signatures do not imply identical memory mapping, cache/device state or launch gaps.",
+    "F0 has metadata/RNG evidence without direct synthetic profiling tensor-byte hashes.",
+    "Full-model serving, trained-FP8 calibration, TP/EP and workload generalization remain unqualified.",
+    "Attempt01 failed in the post-timing trace reader and remains preserved as an error; this32worker result uses the full fresh attempt02 after the CPU annotation-category fix.",
+    "The factorial includes any resulting candidate-identity change; it is not an isolated host-cost measurement."
+  ],
+  "summary_source_sha256": "7e7c59385188a8bfcd216e54c61a82e12ada88162fa80d2d31f423ab4d96ba2d"
+}

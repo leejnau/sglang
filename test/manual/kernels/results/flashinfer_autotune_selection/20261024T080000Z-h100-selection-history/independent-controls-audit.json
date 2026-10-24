@@ -1,0 +1,1925 @@
+{
+  "status": "success",
+  "source_commit": "bdcd1d9bf844022bae45652c1a7979f3fe8477bd",
+  "audit_script_sha256": "ddf31e613cc17e00f8178e88f09bc7efce1a76736c35e975f582fc354831471f",
+  "raw_root": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02",
+  "trials": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "workers": 32,
+  "profiles": 2592,
+  "default_profiles": 288,
+  "forbidden_profile_attempts": 0,
+  "numeric_checks": 2208,
+  "zero_checks": 128,
+  "positive_zero_hashes": 128,
+  "check_categories": {
+    "source": 440,
+    "fixture": 728,
+    "worker": 130,
+    "native": 355,
+    "profile": 8290,
+    "fingerprint": 20913,
+    "cache": 576,
+    "capture": 336,
+    "history": 64,
+    "scope": 896,
+    "RNG": 257,
+    "timing": 6208,
+    "numerics": 10416,
+    "trace": 1088
+  },
+  "errors": [],
+  "cells": {
+    "h0f0": {
+      "workers": 8,
+      "default_winners": 7,
+      "explicit_winners": 1,
+      "profile_margins": [
+        1.0343474325223359,
+        1.045977047683764,
+        1.1031249752415335,
+        0.9754794419179037,
+        1.0716917943068733,
+        1.0603937207354528,
+        1.0850771935401677,
+        1.0654620068890246
+      ],
+      "graph_event_ratios": [
+        0.988771193212392,
+        1.0087684660385443,
+        0.9906630187426765,
+        1.2198714426078343,
+        0.9909271486622222,
+        1.0151629899514174,
+        0.9917745554008084,
+        1.0125285061953948
+      ],
+      "same_primary_signature_sequence": 7
+    },
+    "h0f1": {
+      "workers": 8,
+      "default_winners": 7,
+      "explicit_winners": 1,
+      "profile_margins": [
+        1.049239911050384,
+        1.0348647378417306,
+        1.024584671916108,
+        1.0693235716003373,
+        1.07942365362789,
+        0.9865372281899145,
+        1.0594757883910613,
+        1.0392156803067887
+      ],
+      "graph_event_ratios": [
+        0.9908976797350622,
+        1.0113990661458039,
+        0.99694879910862,
+        1.0069293293535464,
+        0.9937983837264004,
+        1.2097634309674437,
+        0.9858214501357536,
+        1.0148008530085317
+      ],
+      "same_primary_signature_sequence": 7
+    },
+    "h1f0": {
+      "workers": 8,
+      "default_winners": 7,
+      "explicit_winners": 1,
+      "profile_margins": [
+        1.0410732081564609,
+        1.0824742136065106,
+        1.0518494157819345,
+        0.9950403318118267,
+        1.00030816875364,
+        1.0620438066158358,
+        1.042950842198074,
+        1.0676264298876919
+      ],
+      "graph_event_ratios": [
+        1.0027139509091627,
+        1.0001468519110195,
+        1.001974465278223,
+        1.1889574001998073,
+        1.0015551598248353,
+        0.9950417560748552,
+        0.9986293613710359,
+        0.9953580100850175
+      ],
+      "same_primary_signature_sequence": 7
+    },
+    "h1f1": {
+      "workers": 8,
+      "default_winners": 8,
+      "explicit_winners": 0,
+      "profile_margins": [
+        1.029488855864708,
+        1.0778826353006266,
+        1.0720026835564795,
+        1.0372892171099724,
+        1.050763107481164,
+        1.0861538677071372,
+        1.0697990910171211,
+        1.0665552246262875
+      ],
+      "graph_event_ratios": [
+        1.0013206355753832,
+        1.0086837231506642,
+        1.011175137871105,
+        0.9891201294773584,
+        1.0019365768385602,
+        0.9923818796347632,
+        1.0066987539898231,
+        0.9951705455923021
+      ],
+      "same_primary_signature_sequence": 8
+    }
+  },
+  "workers_detail": [
+    {
+      "name": "trial0-h0f0-timing",
+      "trial": 0,
+      "cell": "h0f0",
+      "tactic": -1,
+      "profile_margin": 1.0343474325223359,
+      "graph_event_ratio": 0.988771193212392,
+      "graph_wall_ratio": 0.9887934863560852,
+      "numeric": {
+        "checks": 66,
+        "zero_checks": 3,
+        "positive_zero_byte_hashes": 3,
+        "nonzero_output_hashes_by_graph": {
+          "default": 1,
+          "winner": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": true,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "ac9a9b0bbe7ae346eb19114fb7f7ebc7bb5081648f4755dbf7aa9223c5752384"
+    },
+    {
+      "name": "trial0-h0f1-timing",
+      "trial": 0,
+      "cell": "h0f1",
+      "tactic": -1,
+      "profile_margin": 1.049239911050384,
+      "graph_event_ratio": 0.9908976797350622,
+      "graph_wall_ratio": 0.9908904151113349,
+      "numeric": {
+        "checks": 66,
+        "zero_checks": 3,
+        "positive_zero_byte_hashes": 3,
+        "nonzero_output_hashes_by_graph": {
+          "default": 1,
+          "winner": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": true,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "2b20e18460844be6d9da964385635fe0cb50ba0dd5d1aa91694326ff0ae7ff8c"
+    },
+    {
+      "name": "trial0-h1f1-timing",
+      "trial": 0,
+      "cell": "h1f1",
+      "tactic": -1,
+      "profile_margin": 1.029488855864708,
+      "graph_event_ratio": 1.0013206355753832,
+      "graph_wall_ratio": 1.0013306441273553,
+      "numeric": {
+        "checks": 72,
+        "zero_checks": 5,
+        "positive_zero_byte_hashes": 5,
+        "nonzero_output_hashes_by_graph": {
+          "pre_default": 1,
+          "winner": 1,
+          "default": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": true,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "8617b17622589b3349d9b06ff763ddf12d4da5ec40de4937737e85ac0f088e28"
+    },
+    {
+      "name": "trial0-h1f0-timing",
+      "trial": 0,
+      "cell": "h1f0",
+      "tactic": -1,
+      "profile_margin": 1.0410732081564609,
+      "graph_event_ratio": 1.0027139509091627,
+      "graph_wall_ratio": 1.0027215336919775,
+      "numeric": {
+        "checks": 72,
+        "zero_checks": 5,
+        "positive_zero_byte_hashes": 5,
+        "nonzero_output_hashes_by_graph": {
+          "pre_default": 1,
+          "winner": 1,
+          "default": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": true,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "65be62a09020ceafeddbba9843f0a71af63baaf01f545073b831236b1dc271bf"
+    },
+    {
+      "name": "trial1-h0f1-timing",
+      "trial": 1,
+      "cell": "h0f1",
+      "tactic": -1,
+      "profile_margin": 1.0348647378417306,
+      "graph_event_ratio": 1.0113990661458039,
+      "graph_wall_ratio": 1.0113924888471795,
+      "numeric": {
+        "checks": 66,
+        "zero_checks": 3,
+        "positive_zero_byte_hashes": 3,
+        "nonzero_output_hashes_by_graph": {
+          "winner": 1,
+          "default": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": true,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "25bbef4b93697ecc818903ac258c4affe1d2227daf3e87aea345ee6307d91cc5"
+    },
+    {
+      "name": "trial1-h1f0-timing",
+      "trial": 1,
+      "cell": "h1f0",
+      "tactic": -1,
+      "profile_margin": 1.0824742136065106,
+      "graph_event_ratio": 1.0001468519110195,
+      "graph_wall_ratio": 1.000163967865654,
+      "numeric": {
+        "checks": 72,
+        "zero_checks": 5,
+        "positive_zero_byte_hashes": 5,
+        "nonzero_output_hashes_by_graph": {
+          "pre_default": 1,
+          "default": 1,
+          "winner": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": true,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "88b50defa393cc52439d6ae40c90ffc2c0eff42744652f3944c9f13489f40b7d"
+    },
+    {
+      "name": "trial1-h0f0-timing",
+      "trial": 1,
+      "cell": "h0f0",
+      "tactic": -1,
+      "profile_margin": 1.045977047683764,
+      "graph_event_ratio": 1.0087684660385443,
+      "graph_wall_ratio": 1.008758443828577,
+      "numeric": {
+        "checks": 66,
+        "zero_checks": 3,
+        "positive_zero_byte_hashes": 3,
+        "nonzero_output_hashes_by_graph": {
+          "winner": 1,
+          "default": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": true,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "15972026f7385bc83d905618ccd73a58a1c1e2bc64851f94719fcaccf4408f90"
+    },
+    {
+      "name": "trial1-h1f1-timing",
+      "trial": 1,
+      "cell": "h1f1",
+      "tactic": -1,
+      "profile_margin": 1.0778826353006266,
+      "graph_event_ratio": 1.0086837231506642,
+      "graph_wall_ratio": 1.0086532392207137,
+      "numeric": {
+        "checks": 72,
+        "zero_checks": 5,
+        "positive_zero_byte_hashes": 5,
+        "nonzero_output_hashes_by_graph": {
+          "pre_default": 1,
+          "default": 1,
+          "winner": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": true,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "665e40f7b0a2d3481a834e0468241af4b5cbb53a41a2fb2f5ae7a8f9431e4973"
+    },
+    {
+      "name": "trial2-h1f0-timing",
+      "trial": 2,
+      "cell": "h1f0",
+      "tactic": -1,
+      "profile_margin": 1.0518494157819345,
+      "graph_event_ratio": 1.001974465278223,
+      "graph_wall_ratio": 1.001985176183798,
+      "numeric": {
+        "checks": 72,
+        "zero_checks": 5,
+        "positive_zero_byte_hashes": 5,
+        "nonzero_output_hashes_by_graph": {
+          "pre_default": 1,
+          "winner": 1,
+          "default": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": true,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "cb60e1bfe816d314d8889703436411f248016cbb597478ddb1e3895e386275b1"
+    },
+    {
+      "name": "trial2-h1f1-timing",
+      "trial": 2,
+      "cell": "h1f1",
+      "tactic": -1,
+      "profile_margin": 1.0720026835564795,
+      "graph_event_ratio": 1.011175137871105,
+      "graph_wall_ratio": 1.011168093559775,
+      "numeric": {
+        "checks": 72,
+        "zero_checks": 5,
+        "positive_zero_byte_hashes": 5,
+        "nonzero_output_hashes_by_graph": {
+          "pre_default": 1,
+          "winner": 1,
+          "default": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": true,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "f61bd4bdbeac2b1ef675858ff5dce04cb8b54355aee8da191935bfbae5fdf085"
+    },
+    {
+      "name": "trial2-h0f1-timing",
+      "trial": 2,
+      "cell": "h0f1",
+      "tactic": -1,
+      "profile_margin": 1.024584671916108,
+      "graph_event_ratio": 0.99694879910862,
+      "graph_wall_ratio": 0.9969028369848445,
+      "numeric": {
+        "checks": 66,
+        "zero_checks": 3,
+        "positive_zero_byte_hashes": 3,
+        "nonzero_output_hashes_by_graph": {
+          "default": 1,
+          "winner": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": true,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "90ea79eb9023d4f0008a8c60df46947dabb5027cbd4d032338ac36b3298be71e"
+    },
+    {
+      "name": "trial2-h0f0-timing",
+      "trial": 2,
+      "cell": "h0f0",
+      "tactic": -1,
+      "profile_margin": 1.1031249752415335,
+      "graph_event_ratio": 0.9906630187426765,
+      "graph_wall_ratio": 0.990664809961614,
+      "numeric": {
+        "checks": 66,
+        "zero_checks": 3,
+        "positive_zero_byte_hashes": 3,
+        "nonzero_output_hashes_by_graph": {
+          "default": 1,
+          "winner": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": true,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "712017f411e257da222de2ecdcf15f0e9daf010548dc574ae38034e9e6d0aa09"
+    },
+    {
+      "name": "trial3-h1f1-timing",
+      "trial": 3,
+      "cell": "h1f1",
+      "tactic": -1,
+      "profile_margin": 1.0372892171099724,
+      "graph_event_ratio": 0.9891201294773584,
+      "graph_wall_ratio": 0.9890984022726808,
+      "numeric": {
+        "checks": 72,
+        "zero_checks": 5,
+        "positive_zero_byte_hashes": 5,
+        "nonzero_output_hashes_by_graph": {
+          "pre_default": 1,
+          "default": 1,
+          "winner": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": true,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "f551db3ae056da6edd95f30f9404a6417ae9b60418f751611a468f22b484da28"
+    },
+    {
+      "name": "trial3-h0f0-timing",
+      "trial": 3,
+      "cell": "h0f0",
+      "tactic": [
+        893353197634,
+        4294967332,
+        0,
+        2533274790395907,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "profile_margin": 0.9754794419179037,
+      "graph_event_ratio": 1.2198714426078343,
+      "graph_wall_ratio": 1.2197934546913416,
+      "numeric": {
+        "checks": 66,
+        "zero_checks": 3,
+        "positive_zero_byte_hashes": 3,
+        "nonzero_output_hashes_by_graph": {
+          "winner": 1,
+          "default": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": false,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_192x64_128x6_2x4_h_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_192x64_128x6_2x4_h_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_192x64_128x6_2x4_h_bz_TNT"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "02a566743e410eea979a6a753285abcae0a4eea61af7ce8008618f1690cce7ed"
+    },
+    {
+      "name": "trial3-h1f0-timing",
+      "trial": 3,
+      "cell": "h1f0",
+      "tactic": [
+        841813590082,
+        4294967332,
+        0,
+        2533274790395906,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "profile_margin": 0.9950403318118267,
+      "graph_event_ratio": 1.1889574001998073,
+      "graph_wall_ratio": 1.1889102820787913,
+      "numeric": {
+        "checks": 72,
+        "zero_checks": 5,
+        "positive_zero_byte_hashes": 5,
+        "nonzero_output_hashes_by_graph": {
+          "pre_default": 1,
+          "default": 1,
+          "winner": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": false,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_168x64_128x7_2x4_h_bz_TNN",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_168x64_128x7_2x4_h_bz_TNN",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_168x64_128x7_2x4_h_bz_TNN"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "7b7afefcfc1362cc9bee985c2ec576aa2d4afd52b3c8aa83a21f7c3cd4e2b510"
+    },
+    {
+      "name": "trial3-h0f1-timing",
+      "trial": 3,
+      "cell": "h0f1",
+      "tactic": -1,
+      "profile_margin": 1.0693235716003373,
+      "graph_event_ratio": 1.0069293293535464,
+      "graph_wall_ratio": 1.0069390462150642,
+      "numeric": {
+        "checks": 66,
+        "zero_checks": 3,
+        "positive_zero_byte_hashes": 3,
+        "nonzero_output_hashes_by_graph": {
+          "winner": 1,
+          "default": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": true,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "44da2a179009d854539095b6aac20bcc701f2ea934a5118d9586103e1ca5df06"
+    },
+    {
+      "name": "trial4-h1f1-timing",
+      "trial": 4,
+      "cell": "h1f1",
+      "tactic": -1,
+      "profile_margin": 1.050763107481164,
+      "graph_event_ratio": 1.0019365768385602,
+      "graph_wall_ratio": 1.0019014582384405,
+      "numeric": {
+        "checks": 72,
+        "zero_checks": 5,
+        "positive_zero_byte_hashes": 5,
+        "nonzero_output_hashes_by_graph": {
+          "pre_default": 1,
+          "winner": 1,
+          "default": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": true,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "53d7f0652bca466af70cc48ceed10f389aa5432da34d388cf00a62eebcddf2fa"
+    },
+    {
+      "name": "trial4-h0f0-timing",
+      "trial": 4,
+      "cell": "h0f0",
+      "tactic": -1,
+      "profile_margin": 1.0716917943068733,
+      "graph_event_ratio": 0.9909271486622222,
+      "graph_wall_ratio": 0.9909077279259384,
+      "numeric": {
+        "checks": 66,
+        "zero_checks": 3,
+        "positive_zero_byte_hashes": 3,
+        "nonzero_output_hashes_by_graph": {
+          "default": 1,
+          "winner": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": true,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "728067c6b7fe8b13d779c785de5a9e345784a4b08e70cf92fd68ac376a2d939a"
+    },
+    {
+      "name": "trial4-h1f0-timing",
+      "trial": 4,
+      "cell": "h1f0",
+      "tactic": -1,
+      "profile_margin": 1.00030816875364,
+      "graph_event_ratio": 1.0015551598248353,
+      "graph_wall_ratio": 1.0015401502046333,
+      "numeric": {
+        "checks": 72,
+        "zero_checks": 5,
+        "positive_zero_byte_hashes": 5,
+        "nonzero_output_hashes_by_graph": {
+          "pre_default": 1,
+          "winner": 1,
+          "default": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": true,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "2785dbecf2395faf39cc82dd3a4506d8d4c07ec124edd4b6a22494be425f3ed7"
+    },
+    {
+      "name": "trial4-h0f1-timing",
+      "trial": 4,
+      "cell": "h0f1",
+      "tactic": -1,
+      "profile_margin": 1.07942365362789,
+      "graph_event_ratio": 0.9937983837264004,
+      "graph_wall_ratio": 0.9937999528598991,
+      "numeric": {
+        "checks": 66,
+        "zero_checks": 3,
+        "positive_zero_byte_hashes": 3,
+        "nonzero_output_hashes_by_graph": {
+          "default": 1,
+          "winner": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": true,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "6d3f5ef9476d887c5a144a48618e77e5505acddeeb60b670d6da1f85043147a9"
+    },
+    {
+      "name": "trial5-h1f0-timing",
+      "trial": 5,
+      "cell": "h1f0",
+      "tactic": -1,
+      "profile_margin": 1.0620438066158358,
+      "graph_event_ratio": 0.9950417560748552,
+      "graph_wall_ratio": 0.995035024966177,
+      "numeric": {
+        "checks": 72,
+        "zero_checks": 5,
+        "positive_zero_byte_hashes": 5,
+        "nonzero_output_hashes_by_graph": {
+          "pre_default": 1,
+          "default": 1,
+          "winner": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": true,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "d506f8bec74bfe9853a539c78d2f14d585853c718c7e9b67e2436f152eb7f5ad"
+    },
+    {
+      "name": "trial5-h1f1-timing",
+      "trial": 5,
+      "cell": "h1f1",
+      "tactic": -1,
+      "profile_margin": 1.0861538677071372,
+      "graph_event_ratio": 0.9923818796347632,
+      "graph_wall_ratio": 0.9924032763346096,
+      "numeric": {
+        "checks": 72,
+        "zero_checks": 5,
+        "positive_zero_byte_hashes": 5,
+        "nonzero_output_hashes_by_graph": {
+          "pre_default": 1,
+          "default": 1,
+          "winner": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": true,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "16be44596e859283ee4e3860bc84b4f2abccdb514bc6018129a45a5f8b317d87"
+    },
+    {
+      "name": "trial5-h0f1-timing",
+      "trial": 5,
+      "cell": "h0f1",
+      "tactic": [
+        893353197634,
+        4294967332,
+        0,
+        2533274790395907,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "profile_margin": 0.9865372281899145,
+      "graph_event_ratio": 1.2097634309674437,
+      "graph_wall_ratio": 1.2096993157282014,
+      "numeric": {
+        "checks": 66,
+        "zero_checks": 3,
+        "positive_zero_byte_hashes": 3,
+        "nonzero_output_hashes_by_graph": {
+          "winner": 1,
+          "default": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": false,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_192x64_128x6_2x4_h_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_192x64_128x6_2x4_h_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_192x64_128x6_2x4_h_bz_TNT"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "86d534e70237236afa9bf01dc5c1f534210532027afc5f853f5087bdb7a11862"
+    },
+    {
+      "name": "trial5-h0f0-timing",
+      "trial": 5,
+      "cell": "h0f0",
+      "tactic": -1,
+      "profile_margin": 1.0603937207354528,
+      "graph_event_ratio": 1.0151629899514174,
+      "graph_wall_ratio": 1.015163145396605,
+      "numeric": {
+        "checks": 66,
+        "zero_checks": 3,
+        "positive_zero_byte_hashes": 3,
+        "nonzero_output_hashes_by_graph": {
+          "winner": 1,
+          "default": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": true,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "97966b57f3ad8c712c27acc14375518c05de5d39b93313d2c3dec5459108f6ad"
+    },
+    {
+      "name": "trial6-h0f1-timing",
+      "trial": 6,
+      "cell": "h0f1",
+      "tactic": -1,
+      "profile_margin": 1.0594757883910613,
+      "graph_event_ratio": 0.9858214501357536,
+      "graph_wall_ratio": 0.9858070447786196,
+      "numeric": {
+        "checks": 66,
+        "zero_checks": 3,
+        "positive_zero_byte_hashes": 3,
+        "nonzero_output_hashes_by_graph": {
+          "default": 1,
+          "winner": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": true,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "5c07f47884f0994ce574c5f534216f26933fc2932629c4920234cf975127945c"
+    },
+    {
+      "name": "trial6-h1f0-timing",
+      "trial": 6,
+      "cell": "h1f0",
+      "tactic": -1,
+      "profile_margin": 1.042950842198074,
+      "graph_event_ratio": 0.9986293613710359,
+      "graph_wall_ratio": 0.9986981214568116,
+      "numeric": {
+        "checks": 72,
+        "zero_checks": 5,
+        "positive_zero_byte_hashes": 5,
+        "nonzero_output_hashes_by_graph": {
+          "pre_default": 1,
+          "winner": 1,
+          "default": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": true,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "fe38b760a9bfbdafdb6faa34435b9ed09bfa35566ddfbfb090865f2191c2912b"
+    },
+    {
+      "name": "trial6-h0f0-timing",
+      "trial": 6,
+      "cell": "h0f0",
+      "tactic": -1,
+      "profile_margin": 1.0850771935401677,
+      "graph_event_ratio": 0.9917745554008084,
+      "graph_wall_ratio": 0.9918094779363379,
+      "numeric": {
+        "checks": 66,
+        "zero_checks": 3,
+        "positive_zero_byte_hashes": 3,
+        "nonzero_output_hashes_by_graph": {
+          "default": 1,
+          "winner": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": true,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "317fd514c16459fa4c927d330a314dd9a2a29bd24d4b92cdcaa12987d29c966a"
+    },
+    {
+      "name": "trial6-h1f1-timing",
+      "trial": 6,
+      "cell": "h1f1",
+      "tactic": -1,
+      "profile_margin": 1.0697990910171211,
+      "graph_event_ratio": 1.0066987539898231,
+      "graph_wall_ratio": 1.0066851771452132,
+      "numeric": {
+        "checks": 72,
+        "zero_checks": 5,
+        "positive_zero_byte_hashes": 5,
+        "nonzero_output_hashes_by_graph": {
+          "pre_default": 1,
+          "winner": 1,
+          "default": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": true,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "fc48531937d42443f3d95098beb974030347f76690e181bf5cef8e357605bdc8"
+    },
+    {
+      "name": "trial7-h0f0-timing",
+      "trial": 7,
+      "cell": "h0f0",
+      "tactic": -1,
+      "profile_margin": 1.0654620068890246,
+      "graph_event_ratio": 1.0125285061953948,
+      "graph_wall_ratio": 1.0125198836113212,
+      "numeric": {
+        "checks": 66,
+        "zero_checks": 3,
+        "positive_zero_byte_hashes": 3,
+        "nonzero_output_hashes_by_graph": {
+          "winner": 1,
+          "default": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": true,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "209bef6a3725e218f977409877e52b97e07bbe0a8c7ab26b9c944f4f4ed51e8f"
+    },
+    {
+      "name": "trial7-h0f1-timing",
+      "trial": 7,
+      "cell": "h0f1",
+      "tactic": -1,
+      "profile_margin": 1.0392156803067887,
+      "graph_event_ratio": 1.0148008530085317,
+      "graph_wall_ratio": 1.0147934293119714,
+      "numeric": {
+        "checks": 66,
+        "zero_checks": 3,
+        "positive_zero_byte_hashes": 3,
+        "nonzero_output_hashes_by_graph": {
+          "winner": 1,
+          "default": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": true,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "37c9657efe63848602f10bc14b50dad7a0720087a3a6a29805a7615bb3d89607"
+    },
+    {
+      "name": "trial7-h1f1-timing",
+      "trial": 7,
+      "cell": "h1f1",
+      "tactic": -1,
+      "profile_margin": 1.0665552246262875,
+      "graph_event_ratio": 0.9951705455923021,
+      "graph_wall_ratio": 0.9951582788004008,
+      "numeric": {
+        "checks": 72,
+        "zero_checks": 5,
+        "positive_zero_byte_hashes": 5,
+        "nonzero_output_hashes_by_graph": {
+          "pre_default": 1,
+          "default": 1,
+          "winner": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": true,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "1bd2337f613182a689bd37268e2a81004512590db1b3a140d0b8f98b11583707"
+    },
+    {
+      "name": "trial7-h1f0-timing",
+      "trial": 7,
+      "cell": "h1f0",
+      "tactic": -1,
+      "profile_margin": 1.0676264298876919,
+      "graph_event_ratio": 0.9953580100850175,
+      "graph_wall_ratio": 0.9953312614868367,
+      "numeric": {
+        "checks": 72,
+        "zero_checks": 5,
+        "positive_zero_byte_hashes": 5,
+        "nonzero_output_hashes_by_graph": {
+          "pre_default": 1,
+          "default": 1,
+          "winner": 1
+        }
+      },
+      "trace": {
+        "same_primary_signature_sequence": true,
+        "winner_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ],
+        "default_kernel_sequence": [
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+          "_static_quant_fp8",
+          "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT"
+        ]
+      },
+      "rng_sha256": {
+        "before_history": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "before_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "98af6c0f0011df78e61e1938592470d96c93e4cb96d8f0baadc519a1d5fd1e3d"
+        },
+        "after_startup": {
+          "cpu": "1605727da514b4337db0f0c6dcf3c0b3063c7bcb9be47a3e521340ede80ad58b",
+          "cuda": "c1fd7fe19e5f28aee61214bc02ee466f41125726b6ce51b30141778e0d182084"
+        }
+      },
+      "native_sha256": "680df37f46b1a75f3209c0ec1fa84ed4a2c1fe831353b306b8a8d5c1f54cddc0",
+      "ninja_sha256": "438ff9ab63e07052b1068347f0c9da263d12d4ff470be156cc5d505b19dca042",
+      "raw_sha256": "c92e7754307a48852ddd7181fefc89b6882a54c26e49372e4354f7c1f97a096a"
+    }
+  ],
+  "limits": [
+    "Independent standard-library audit of preserved metadata, raw trace events, fixture payloads and cache/native bytes. GPU output arrays are not retained, so general error metrics are not rederived from output tensors.",
+    "F0 has metadata and generator-state consistency, not direct synthetic operand-byte attestation.",
+    "Trace durations do not enter latency ratios; same/different valid kernel signatures are outcomes, not integrity gates.",
+    "Incidental v1 save is checked, but no fresh-process persistence behavior is claimed."
+  ]
+}

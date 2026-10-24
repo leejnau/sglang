@@ -1,0 +1,273 @@
+{
+  "status": "passed",
+  "execution_source_commit": "bdcd1d9bf844022bae45652c1a7979f3fe8477bd",
+  "all32_workers_succeeded": true,
+  "final_integrity_gate_exit": 0,
+  "independent_controls": {
+    "checks": 50697,
+    "workers": 32,
+    "startup_profiles": 2592,
+    "default_profiles": 288,
+    "forbidden_profiles": 0,
+    "numeric_guards": 2208,
+    "exact_zero_guards": 128,
+    "primary_graphs": 64,
+    "retained_history_graphs": 16,
+    "trace_kernels": 384,
+    "graph_launches": 192
+  },
+  "independent_math_comparisons": 337,
+  "local_frozen_analyzer_replay": {
+    "passed": true,
+    "differences_only_relocated_trace_paths_and_double_roundoff": [
+      {
+        "path": ".workers[0].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial0-h0f0-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial0-h0f0-timing.trace.json"
+      },
+      {
+        "path": ".workers[1].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial0-h0f1-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial0-h0f1-timing.trace.json"
+      },
+      {
+        "path": ".workers[2].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial0-h1f1-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial0-h1f1-timing.trace.json"
+      },
+      {
+        "path": ".workers[3].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial0-h1f0-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial0-h1f0-timing.trace.json"
+      },
+      {
+        "path": ".workers[4].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial1-h0f1-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial1-h0f1-timing.trace.json"
+      },
+      {
+        "path": ".workers[5].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial1-h1f0-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial1-h1f0-timing.trace.json"
+      },
+      {
+        "path": ".workers[6].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial1-h0f0-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial1-h0f0-timing.trace.json"
+      },
+      {
+        "path": ".workers[7].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial1-h1f1-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial1-h1f1-timing.trace.json"
+      },
+      {
+        "path": ".workers[8].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial2-h1f0-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial2-h1f0-timing.trace.json"
+      },
+      {
+        "path": ".workers[9].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial2-h1f1-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial2-h1f1-timing.trace.json"
+      },
+      {
+        "path": ".workers[10].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial2-h0f1-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial2-h0f1-timing.trace.json"
+      },
+      {
+        "path": ".workers[11].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial2-h0f0-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial2-h0f0-timing.trace.json"
+      },
+      {
+        "path": ".workers[12].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial3-h1f1-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial3-h1f1-timing.trace.json"
+      },
+      {
+        "path": ".workers[13].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial3-h0f0-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial3-h0f0-timing.trace.json"
+      },
+      {
+        "path": ".workers[14].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial3-h1f0-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial3-h1f0-timing.trace.json"
+      },
+      {
+        "path": ".workers[15].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial3-h0f1-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial3-h0f1-timing.trace.json"
+      },
+      {
+        "path": ".workers[16].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial4-h1f1-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial4-h1f1-timing.trace.json"
+      },
+      {
+        "path": ".workers[17].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial4-h0f0-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial4-h0f0-timing.trace.json"
+      },
+      {
+        "path": ".workers[18].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial4-h1f0-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial4-h1f0-timing.trace.json"
+      },
+      {
+        "path": ".workers[19].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial4-h0f1-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial4-h0f1-timing.trace.json"
+      },
+      {
+        "path": ".workers[20].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial5-h1f0-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial5-h1f0-timing.trace.json"
+      },
+      {
+        "path": ".workers[21].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial5-h1f1-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial5-h1f1-timing.trace.json"
+      },
+      {
+        "path": ".workers[22].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial5-h0f1-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial5-h0f1-timing.trace.json"
+      },
+      {
+        "path": ".workers[23].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial5-h0f0-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial5-h0f0-timing.trace.json"
+      },
+      {
+        "path": ".workers[24].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial6-h0f1-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial6-h0f1-timing.trace.json"
+      },
+      {
+        "path": ".workers[25].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial6-h1f0-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial6-h1f0-timing.trace.json"
+      },
+      {
+        "path": ".workers[26].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial6-h0f0-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial6-h0f0-timing.trace.json"
+      },
+      {
+        "path": ".workers[27].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial6-h1f1-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial6-h1f1-timing.trace.json"
+      },
+      {
+        "path": ".workers[28].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial7-h0f0-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial7-h0f0-timing.trace.json"
+      },
+      {
+        "path": ".workers[29].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial7-h0f1-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial7-h0f1-timing.trace.json"
+      },
+      {
+        "path": ".workers[30].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial7-h1f1-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial7-h1f1-timing.trace.json"
+      },
+      {
+        "path": ".workers[31].trace.file",
+        "cluster": "/study/results/20261024T080000Z-h100-selection-history/attempt02/trial7-h1f0-timing.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/raw/attempt02/trial7-h1f0-timing.trace.json"
+      },
+      {
+        "path": ".factorial_effects[1].trial_estimates[5].ratio",
+        "cluster": 0.9754334101312377,
+        "local": 0.9754334101312379
+      },
+      {
+        "path": ".factorial_effects[1].exploratory_cluster_bootstrap_95_percent.lower",
+        "cluster": 0.9754334101312377,
+        "local": 0.9754334101312379
+      }
+    ]
+  },
+  "successful_full_raw": {
+    "sha256": "0eeedb2912c10089c743f1249701e8c65347a8a585e734023a2fbedb2404448b",
+    "size_bytes": 11636498,
+    "manifest_files_verified": 238,
+    "durable_path": "/home/lnau/flashinfer-autotune-study/20261024T080000Z-h100-selection-history-attempt02-full-raw.tgz"
+  },
+  "failed_attempt01": {
+    "execution_source_commit": "fb6655b8775f0fb81915800fd8f2a0e3934f6136",
+    "workers_started": 1,
+    "stage": "post-timing trace parsing",
+    "cause": "CPU user_annotation and GPU gpu_user_annotation share a name; original reader required only one name match.",
+    "fix_commit": "a15130a52ebdd4a85281df319170ec572e33583b",
+    "fix_scope": "Filter CPU user_annotation only; candidate/timing/capture/policy unchanged. Full32process retry; failed process not mixed into cohort.",
+    "full_raw_sha256": "7f1be8f20e678b3e530e4eb74d473e47d87bf8e969824fa3ed00b2155cbbd5e8",
+    "native_supplement_sha256": "d3b45d8f01141d4e8043de3701607bd35543eaa0412798e9385813258397780b",
+    "preserved": true
+  },
+  "audit_tools": [
+    {
+      "path": "history-statistics-audit/audit.py",
+      "sha256": "ac205eb5eb7fe6c81c6b7031cc151b346a621dfac4a0d55df2f93e2aed6f604c",
+      "size_bytes": 25812
+    },
+    {
+      "path": "history-statistics-audit/summarize.py",
+      "sha256": "7e7c59385188a8bfcd216e54c61a82e12ada88162fa80d2d31f423ab4d96ba2d",
+      "size_bytes": 4263
+    },
+    {
+      "path": "selection-audit/audit_history_raw.py",
+      "sha256": "ddf31e613cc17e00f8178e88f09bc7efce1a76736c35e975f582fc354831471f",
+      "size_bytes": 28873
+    },
+    {
+      "path": "coordinator/package_public.py",
+      "sha256": "257433ed12e92c2f814a00dbfceda0c763e56e907eb013efd3abef713d3a4626",
+      "size_bytes": 1722
+    },
+    {
+      "path": "coordinator/preserve.py",
+      "sha256": "dfb9daec244f2cf7686472a9980f7caa7e9fbc68f6f1b340ff94dcb8612fe5f2",
+      "size_bytes": 2079
+    },
+    {
+      "path": "coordinator/check_launcher.py",
+      "sha256": "af1e573ce286539e55642b221678db6835b1bd15d987bf815c750742177a59cd",
+      "size_bytes": 7916
+    },
+    {
+      "path": "coordinator/launcher-controls.json",
+      "sha256": "e0d68bd6ee0bc59a8e91cf9e8b3724e4549cf953366fa466b0d17c5ea70f8d92",
+      "size_bytes": 3357
+    },
+    {
+      "path": "coordinator/package_history_results.py",
+      "sha256": "e4b8f0fc8c24cbc21c7bbb54a688cc62855ac3c0c3ce1679947b50ca8e64afc6",
+      "size_bytes": 4040
+    }
+  ],
+  "limitations": [
+    "History bundles pre-startup capture/retained allocations/GPU work/time; it does not isolate thermal state or tuning causality.",
+    "F0 records no synthetic byte hashes and retains no synthetic inputs; equal metadata/RNG state is not direct byte proof.",
+    "Four fresh cells form one independent repetition; replay samples and trace calls are dependent subsamples.",
+    "Intervals are exploratory/unadjusted whole-trial bootstrap, not equivalence or significance claims. All32workers were planned.",
+    "CUDA event replay spans include host submission gaps. Post-timing traces establish launch signatures, not uninstrumented kernel latency or physical memory equivalence.",
+    "Single static-calibrated FP8 QKV fixture/H100; no fullmodel accuracy/serving performance, persistence, TP/EP or backend-wide claim.",
+    "This fixed-source factorial does not retroactively establish the cause of another campaign's measurements."
+  ],
+  "allocation": {
+    "job_id": 2792066,
+    "state": "released",
+    "released_at_utc": "2026-10-24T08:36:29Z",
+    "history_worker_step": "2792066.5 COMPLETED 0:0",
+    "calibration_worker_step": "2792066.14 COMPLETED 0:0",
+    "hold_allocation": "CANCELLED by owner after preservation; not a failed study",
+    "final_resource_check": "No experiment containers or GPU compute processes; 0MiB GPU memory. Only preexisting DCGM container remains.",
+    "final_scheduler": "No longer in active queue; sacct final record preserved."
+  }
+}
