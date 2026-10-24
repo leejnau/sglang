@@ -1,0 +1,360 @@
+{
+  "schema_version": 1,
+  "scope": "Read-only source routing assessment; metadata only, no weights downloaded and no model run.",
+  "conclusion": "On H100/SM90, this checkpoint is expected to use the measured static per-tensor FlashInfer cuBLAS FP8 choose_one path for aligned, non-excluded dense linear layers by default, when FlashInfer is available and Marlin is not forced. This is source reachability, not observed model execution or a performance qualification.",
+  "source_pins": {
+    "sglang": "efc9849520216b31b8a4a4322399e47e8dbde067",
+    "flashinfer_main": "27c62fdf0ab1cd4014df8a15b66a975541fda83c",
+    "model": "nvidia/Llama-3.1-8B-Instruct-FP8",
+    "model_revision": "42d9515ebd69eea3a87351d079c671c3c5ff0a31",
+    "flashinfer_runtime_port": "Research-only FP8 descriptor port; baseline main and port both retain the public bmm_fp8 to fp8_gemm choose_one route. Port acceptance is a separate gate."
+  },
+  "model_metadata": {
+    "config_sha256": "60c4b66789dfbb8a44e5fc7664b572250337bc2d372defce618c990c5b261d78",
+    "quant_config_sha256": "67af064d00f30442be00b6b0296f0cc9ede7ffef22b31d3c0b809895a792a7a9",
+    "architecture": "LlamaForCausalLM",
+    "quant_algo": "FP8",
+    "kv_cache_quant_algo": "FP8",
+    "exclude_modules": [
+      "lm_head"
+    ],
+    "weights_downloaded": false,
+    "model_executed": false
+  },
+  "route": [
+    {
+      "path": "python/sglang/srt/configs/model_config.py",
+      "lines": [
+        1721,
+        1797
+      ],
+      "fact": "Standalone hf_quant_config.json is discovered when config.json lacks a quantization_config; the source explicitly includes this model as an example.",
+      "url": "https://github.com/sgl-project/sglang/blob/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/configs/model_config.py#L1721-L1797"
+    },
+    {
+      "path": "python/sglang/srt/configs/model_config.py",
+      "lines": [
+        1813,
+        1844
+      ],
+      "fact": "FP8 metadata resolves to modelopt_fp8.",
+      "url": "https://github.com/sgl-project/sglang/blob/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/configs/model_config.py#L1813-L1844"
+    },
+    {
+      "path": "python/sglang/srt/layers/quantization/__init__.py",
+      "lines": [
+        61,
+        70
+      ],
+      "fact": "modelopt_fp8 and modelopt map to ModelOptFp8Config.",
+      "url": "https://github.com/sgl-project/sglang/blob/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/layers/quantization/__init__.py#L61-L70"
+    },
+    {
+      "path": "python/sglang/srt/layers/quantization/modelopt_quant.py",
+      "lines": [
+        329,
+        346
+      ],
+      "fact": "Non-excluded LinearBase/ParallelLMHead modules receive ModelOptFp8LinearMethod; excluded lm_head is unquantized.",
+      "url": "https://github.com/sgl-project/sglang/blob/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/layers/quantization/modelopt_quant.py#L329-L346"
+    },
+    {
+      "path": "python/sglang/srt/layers/quantization/modelopt_quant.py",
+      "lines": [
+        466,
+        528
+      ],
+      "fact": "FP8 checkpoint configuration retains static scales and routes linear modules to ModelOptFp8LinearMethod.",
+      "url": "https://github.com/sgl-project/sglang/blob/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/layers/quantization/modelopt_quant.py#L466-L528"
+    },
+    {
+      "path": "python/sglang/srt/layers/quantization/modelopt_quant.py",
+      "lines": [
+        546,
+        558
+      ],
+      "fact": "FlashInfer per-tensor support is selected; Marlin can override it, and the SM120 fast branch requires device major12.",
+      "url": "https://github.com/sgl-project/sglang/blob/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/layers/quantization/modelopt_quant.py#L546-L558"
+    },
+    {
+      "path": "python/sglang/srt/layers/quantization/fp8_utils.py",
+      "lines": [
+        527,
+        531
+      ],
+      "fact": "FlashInfer availability and SM90/SM100/SM120 enable per-tensor BMM.",
+      "url": "https://github.com/sgl-project/sglang/blob/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/layers/quantization/fp8_utils.py#L527-L531"
+    },
+    {
+      "path": "python/sglang/srt/layers/quantization/fp8_utils.py",
+      "lines": [
+        2788,
+        2794
+      ],
+      "fact": "Automatic Marlin is limited to SM80 through SM88, so it does not activate on H100/SM90.",
+      "url": "https://github.com/sgl-project/sglang/blob/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/layers/quantization/fp8_utils.py#L2788-L2794"
+    },
+    {
+      "path": "python/sglang/srt/environ.py",
+      "lines": [
+        1154,
+        1156
+      ],
+      "fact": "SGLANG_FORCE_FP8_MARLIN defaults to false.",
+      "url": "https://github.com/sgl-project/sglang/blob/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/environ.py#L1154-L1156"
+    },
+    {
+      "path": "python/sglang/srt/layers/quantization/modelopt_quant.py",
+      "lines": [
+        611,
+        627
+      ],
+      "fact": "Loaded weight is transposed to K,N. Non-null input_scale and K,N multiples of16 set layer.use_flashinfer_bmm.",
+      "url": "https://github.com/sgl-project/sglang/blob/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/layers/quantization/modelopt_quant.py#L611-L627"
+    },
+    {
+      "path": "python/sglang/srt/layers/quantization/modelopt_quant.py",
+      "lines": [
+        650,
+        688
+      ],
+      "fact": "After Marlin/SM120 branches, use_flashinfer_bmm invokes apply_fp8_linear_bmm_flashinfer; other layers fall back to generic apply_fp8_linear.",
+      "url": "https://github.com/sgl-project/sglang/blob/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/layers/quantization/modelopt_quant.py#L650-L688"
+    },
+    {
+      "path": "python/sglang/srt/layers/quantization/fp8_utils.py",
+      "lines": [
+        2478,
+        2492
+      ],
+      "fact": "Static activation quantization precedes the FlashInfer BMM wrapper.",
+      "url": "https://github.com/sgl-project/sglang/blob/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/layers/quantization/fp8_utils.py#L2478-L2492"
+    },
+    {
+      "path": "python/sglang/srt/layers/quantization/fp8_utils.py",
+      "lines": [
+        534,
+        559
+      ],
+      "fact": "The wrapper explicitly submits bmm_fp8 with backend=cublas, batch1, scalar scales, and BF16/FP16 output.",
+      "url": "https://github.com/sgl-project/sglang/blob/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/layers/quantization/fp8_utils.py#L534-L559"
+    }
+  ],
+  "flashinfer_route": {
+    "path": "flashinfer/gemm/gemm_base.py",
+    "base_sha256": "f32bf0348f4434fa8c47723d54e2daebc52b23f92711e278850011a66ba6c68f",
+    "ported_sha256": "0bba9240029a5e09f331e7a2267f7067e126d57a7a341ca535f7c9557599adca",
+    "base_lines": {
+      "bmm_fp8": [
+        9961,
+        10054
+      ],
+      "fp8_gemm_sm100": [
+        2807,
+        2834
+      ]
+    },
+    "ported_lines": {
+      "fp8_gemm_sm100": [
+        2861,
+        2897
+      ]
+    },
+    "fact": "Despite the historical fp8_gemm_sm100 function name, explicit cublas reaches its CublasFp8GemmRunner and AutoTuner.get().choose_one(\"fp8_gemm\", ...). The source route does not imply SM100-only execution."
+  },
+  "tp1_expected_dense_shapes": {
+    "status": "Derived from pinned metadata and Llama constructors, not observed loaded tensors.",
+    "shapes": [
+      {
+        "layer": "qkv_proj",
+        "K": 4096,
+        "N": 6144
+      },
+      {
+        "layer": "o_proj",
+        "K": 4096,
+        "N": 4096
+      },
+      {
+        "layer": "gate_up_proj",
+        "K": 4096,
+        "N": 28672
+      },
+      {
+        "layer": "down_proj",
+        "K": 14336,
+        "N": 4096
+      }
+    ],
+    "source": [
+      {
+        "path": "python/sglang/srt/models/llama.py",
+        "lines": [
+          98,
+          114
+        ],
+        "fact": "gate/up and down linear construction",
+        "url": "https://github.com/sgl-project/sglang/blob/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/models/llama.py#L98-L114"
+      },
+      {
+        "path": "python/sglang/srt/models/llama.py",
+        "lines": [
+          179,
+          222
+        ],
+        "fact": "QKV and output linear dimensions",
+        "url": "https://github.com/sgl-project/sglang/blob/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/models/llama.py#L179-L222"
+      }
+    ],
+    "all_K_N_divisible_by_16": true
+  },
+  "supported_configuration": {
+    "required_backend_override": null,
+    "explicit_model_options_if_pinning_a_later_test": [
+      "--model-path nvidia/Llama-3.1-8B-Instruct-FP8",
+      "--revision 42d9515ebd69eea3a87351d079c671c3c5ff0a31",
+      "--model-impl sglang",
+      "--quantization modelopt_fp8",
+      "--dtype bfloat16",
+      "--tp-size 1"
+    ],
+    "quantization_note": "Omitting --quantization should autodetect the same method from the pinned standalone metadata; explicit modelopt_fp8 documents intent. Do not substitute generic fp8 quantization without verifying its different loader/method.",
+    "autotuning_note": "Keep the default disable_flashinfer_autotune=False and do not skip the FP8 operation when qualifying startup tuning. Reaching the cuBLAS route also occurs without tuning, using its heuristic/cache path.",
+    "environment_condition": "SGLANG_FORCE_FP8_MARLIN must remain false (the default).",
+    "fp8_backend_flag_scope": "The supported --fp8-gemm-backend option controls blockwise FP8 operations; it is not read by ModelOptFp8LinearMethod and is not a switch to cublas for this path.",
+    "flag_evidence": [
+      {
+        "path": "python/sglang/srt/arg_groups/fields/model.py",
+        "lines": [
+          122,
+          140
+        ],
+        "fact": "Pinned revision and native implementation options",
+        "url": "https://github.com/sgl-project/sglang/blob/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/arg_groups/fields/model.py#L122-L140"
+      },
+      {
+        "path": "python/sglang/srt/arg_groups/fields/model.py",
+        "lines": [
+          177,
+          184
+        ],
+        "fact": "Optional quantization choice",
+        "url": "https://github.com/sgl-project/sglang/blob/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/arg_groups/fields/model.py#L177-L184"
+      },
+      {
+        "path": "python/sglang/srt/arg_groups/choices.py",
+        "lines": [
+          32,
+          44
+        ],
+        "fact": "modelopt_fp8 is a supported CLI choice",
+        "url": "https://github.com/sgl-project/sglang/blob/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/arg_groups/choices.py#L32-L44"
+      },
+      {
+        "path": "python/sglang/srt/arg_groups/fields/exec_.py",
+        "lines": [
+          241,
+          249
+        ],
+        "fact": "Blockwise FP8 backend selector",
+        "url": "https://github.com/sgl-project/sglang/blob/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/arg_groups/fields/exec_.py#L241-L249"
+      },
+      {
+        "path": "python/sglang/srt/arg_groups/fields/exec_.py",
+        "lines": [
+          360,
+          373
+        ],
+        "fact": "Autotune enabled by default; per-operation skips supported",
+        "url": "https://github.com/sgl-project/sglang/blob/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/arg_groups/fields/exec_.py#L360-L373"
+      }
+    ]
+  },
+  "later_model_test_admission": [
+    "Record the exact model revision, SGLang source, FlashInfer Python/header/native source and loaded provider ELF; stock pinned0.7.2 and the research current-main descriptor port are different treatments.",
+    "Observe resolved ModelOptFp8Config and representative loaded ModelOptFp8LinearMethod attributes: use_marlin=False, use_sm120_fp8=False, use_flashinfer_bmm=True, scalar static scales, actual K/N and dtype/strides.",
+    "Capture a serving trace or setup-only call record establishing sglang flashinfer_bmm_fp8 and public FlashInfer bmm_fp8/cublas use in the relevant decode and prefill modes; model metadata and kernel names alone are insufficient.",
+    "Bind real startup fp8_gemm profiles, actual layer inputs/cache keys, selected tactics and serving capture lookups. If claiming a selected explicit descriptor ran, perform the separate accepted-descriptor control outside all timers on retained actual capture inputs, with its stated inferential limits.",
+    "Require model output/numerical validation and a frozen request/batch/graph workload before interpreting end-to-end performance. A global autotune on/off comparison may affect other FlashInfer operations and cannot by itself attribute a difference to FP8 selection."
+  ],
+  "limits": [
+    "No actual model weights, loaded tensor metadata, startup log, trace, correctness result or model performance was observed.",
+    "This source check establishes conditional default reachability, not that every model operation uses FlashInfer: lm_head is excluded, KV-cache/attention use separate paths, and unaligned/unavailable/forced-Marlin cases can take another route.",
+    "TP1 Llama shapes and model values differ from the frozen Qwen-derived M144/N4096/K1024 fixture. API reachability makes a later model test relevant to integration, but does not transfer its winner or regression to this model.",
+    "No model test is required before the independent upstream harness correctness fix. Production policy, dependency upgrades and scoped persistence remain separate decisions."
+  ],
+  "files": [
+    {
+      "path": "python/sglang/srt/layers/quantization/modelopt_quant.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/layers/quantization/modelopt_quant.py",
+      "sha256": "f3a0d4cca0bd92ad16f8f598c80091b18d019fd76664c7a5311d516675e860e8",
+      "bytes": 139066
+    },
+    {
+      "path": "python/sglang/srt/layers/quantization/__init__.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/layers/quantization/__init__.py",
+      "sha256": "13a9f194ce7693840529647e818fd784cbd221b7120ceafa98a986762a85512c",
+      "bytes": 6417
+    },
+    {
+      "path": "python/sglang/srt/layers/quantization/utils.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/layers/quantization/utils.py",
+      "sha256": "a5c45d9e5a35b996d254e59ecefedaae04cf3fee48b85082d4f23539741f93e2",
+      "bytes": 26153
+    },
+    {
+      "path": "python/sglang/srt/server_args.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/server_args.py",
+      "sha256": "54459eff68d2ae044202051ee625f1ca808dfcd73edd8ec4b753dbaf2564db59",
+      "bytes": 35442
+    },
+    {
+      "path": "python/sglang/srt/configs/model_config.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/configs/model_config.py",
+      "sha256": "250906ecbb1ca4a4c85d00985fbc39c78e3b4c2558149ab00305eb49e22d9cca",
+      "bytes": 119021
+    },
+    {
+      "path": "python/sglang/srt/layers/quantization/fp8.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/layers/quantization/fp8.py",
+      "sha256": "1f0e409e06ea44d0a348e5d8780e4cd7d80bbcebfd23bb82a03dcd91d4f4e8fb",
+      "bytes": 149982
+    },
+    {
+      "path": "python/sglang/srt/arg_groups/fields/exec_.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/arg_groups/fields/exec_.py",
+      "sha256": "c8ae3dc55603935c452c82746be94035b2a6ad0d439b7a8abaf872a84038d350",
+      "bytes": 48461
+    },
+    {
+      "path": "python/sglang/srt/arg_groups/fields/model.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/arg_groups/fields/model.py",
+      "sha256": "1dc3666aa23ad1da15e7417e397025348bdfa6d517898b2ebcd9fee1ebb84e44",
+      "bytes": 16638
+    },
+    {
+      "path": "python/sglang/srt/arg_groups/choices.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/arg_groups/choices.py",
+      "sha256": "1a92af7024c6ccc8773e622b30ca4ae28125d67882c255d886b2d96d2a604dc1",
+      "bytes": 8482
+    },
+    {
+      "path": "python/sglang/srt/models/llama.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/models/llama.py",
+      "sha256": "19a843fda901ee5cdc1ede2356d5e87f804fd87a37cc2719b6698f434b82c9ae",
+      "bytes": 36792
+    },
+    {
+      "path": "python/sglang/srt/layers/quantization/fp8_utils.py",
+      "sha256": "35bd871eb581e9b3f700b7672c20c867cbc26d3fcf2eaf431632e307501d5894",
+      "bytes": 108735,
+      "url": "https://github.com/sgl-project/sglang/blob/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/layers/quantization/fp8_utils.py"
+    },
+    {
+      "path": "python/sglang/srt/environ.py",
+      "sha256": "b1ce6670260e8b3c8c3ba29d6d770fefe0b8640740a92e65891147f70a7828d7",
+      "bytes": 128812,
+      "url": "https://github.com/sgl-project/sglang/blob/efc9849520216b31b8a4a4322399e47e8dbde067/python/sglang/srt/environ.py"
+    }
+  ]
+}
