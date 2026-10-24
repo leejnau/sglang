@@ -1,0 +1,106 @@
+{
+  "status": "passed",
+  "archive_sha256": "f3c714744ab8e685de77d97e98e191037bbe7164324cf35ff6bd6077e69f88b8",
+  "size_bytes": 167959,
+  "members": [
+    {
+      "path": "admission-audit/attempt03-audit-final.json",
+      "sha256": "06dd849b154147a6f10e96ef1d9806f633d3049d4cd006c548364c0276cb0a73",
+      "size_bytes": 197042
+    },
+    {
+      "path": "admission-audit/audit_admissions.py",
+      "sha256": "0a7e9da8735820a78f5ec17abecc6276abc44a9425d53db0290194046e90e387",
+      "size_bytes": 16452
+    },
+    {
+      "path": "independent-parts-claims-audit.json",
+      "sha256": "ccd2882256ec85e1427fc186bcdb1e3122be4e2d7f4a1f3d0d713b86e24e5fb6",
+      "size_bytes": 1905
+    },
+    {
+      "path": "independent-public-package-audit.json",
+      "sha256": "f64b2d00dd3f519f31ee4507d22ee24b140f87c17271156bc491543abc3e826f",
+      "size_bytes": 1428
+    },
+    {
+      "path": "independent_parts_claims_audit.py",
+      "sha256": "999e93550a4adc2f312eae663bc46c0851e5824f7e69732b324d3f835df40d5e",
+      "size_bytes": 8669
+    },
+    {
+      "path": "independent_public_package_audit.py",
+      "sha256": "2e9ec6fb4c971594ec4bae59ad1c8ca283b48e1610ade1f6ecb84dd0f8ac8bab",
+      "size_bytes": 10411
+    },
+    {
+      "path": "interpretation-review/interpretation-review.json",
+      "sha256": "89cde2e9a658ace5ac3a6d978e7cb03b2e011d8ce9610d30f64fba3fa3b6e40d",
+      "size_bytes": 7282
+    },
+    {
+      "path": "interpretation-review/review.json",
+      "sha256": "5265d42527265f795c3a076f48bccf5eec8ceee64229758348a497f31c80ca13",
+      "size_bytes": 289926
+    },
+    {
+      "path": "interpretation-review/review.py",
+      "sha256": "c97560817a0f3042fb5a7adb6604724d47782e84b41ad86b8aad2189e4e604f7",
+      "size_bytes": 16218
+    },
+    {
+      "path": "timing-audit/attempt03-final-summary/counterexamples.json",
+      "sha256": "724ca8cafdef8308fd3e2b4d33ac8b024897c9706b12de9248055d646ea8215c",
+      "size_bytes": 13154
+    },
+    {
+      "path": "timing-audit/attempt03-final-summary/summary.json",
+      "sha256": "70a8669aff652043fbcb8a84b2acbc2fe7a1778111502e7a5668634b6fdfadd4",
+      "size_bytes": 14307
+    },
+    {
+      "path": "timing-audit/attempt03-first-block-preservation.json",
+      "sha256": "4c5b566e165d69646d3b9d75d5164fe173eadb6fcdfbb04cbe7494b399111761",
+      "size_bytes": 4115
+    },
+    {
+      "path": "timing-audit/attempt03-full-audit.json",
+      "sha256": "22da18be76d2e9785f13bacdfded665a199e892d28eb3d47d2c38234f717a2f3",
+      "size_bytes": 1892275
+    },
+    {
+      "path": "timing-audit/audit_cohort.py",
+      "sha256": "38f60b5bf74a21f5cee6f7fcf8c5aa8f738beb53075a4b6b3ee78ae99ea99ba4",
+      "size_bytes": 19865
+    },
+    {
+      "path": "timing-audit/check_statistics.py",
+      "sha256": "4bfd359d899b9ee9d95ba7144dfbc48bdd9e2c7577f2b91ef94dc5ea36ba66d0",
+      "size_bytes": 6827
+    },
+    {
+      "path": "timing-audit/derive_summary.py",
+      "sha256": "e1c69ce391e5535a8cd9c4f02276ea636145104df46ba94cd0383d688ee44436",
+      "size_bytes": 12439
+    },
+    {
+      "path": "timing-audit/first-block-attempt03-audit.json",
+      "sha256": "cd0e365b2f1a721767f06620ccbb2f32ee589fea01d574a47310ddbdf0f76306",
+      "size_bytes": 241458
+    },
+    {
+      "path": "timing-audit/statistics-controls.json",
+      "sha256": "3f46722e3a0db9ac8720ce32bf553631c8f1d8f41fc62ab038636a4b5a448d51",
+      "size_bytes": 1967
+    }
+  ],
+  "cohort_checks": 28650,
+  "admission_checks": 2665,
+  "cohort_admission_bindings": 192,
+  "second_independent_review_checks": 9817,
+  "public_package_checks": 4667,
+  "parts_claims_checks": 1028,
+  "statistics_cpu_controls": 26,
+  "first_block_checks": 3587,
+  "scope": "Independent reader/statistical/admission/packaging code and exact reports. All GPU outcomes and primary analysis remain in the original raw archive. No official analyzer code imported by the independent cohort or interpretation reader."
+}

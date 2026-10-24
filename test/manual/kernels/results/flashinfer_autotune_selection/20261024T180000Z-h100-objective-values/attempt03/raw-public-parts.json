@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "format": "ordered byte segments of one unchanged gzip tar archive",
+  "reason": "Each committed segment remains below the repository 1500KiB file limit.",
+  "master_sha256": "55af84c2272e7f6b0a98fa10ced3ccd0b1f9b068f058c01840f3087a65aa6706",
+  "master_size_bytes": 3069698,
+  "parts": [
+    {
+      "path": "raw-public.tar.gz.part001",
+      "size_bytes": 1048576,
+      "sha256": "946eca8048fea3fb82fc1fcc3bbb5a3790d60eb77d095a9d571a869bf06f1792"
+    },
+    {
+      "path": "raw-public.tar.gz.part002",
+      "size_bytes": 1048576,
+      "sha256": "786ad5abd880a4e2e91a05c93401a6e197a31742eb6a3a18ba01ce7c4a2d083f"
+    },
+    {
+      "path": "raw-public.tar.gz.part003",
+      "size_bytes": 972546,
+      "sha256": "e362b275a3d562aaf0ec136d2f0a15a827023674e9fd719ee9fc3ce75c4a3a2d"
+    }
+  ],
+  "joined_bytes_match_original": true,
+  "decompressed_members_scanned": 245,
+  "reconstruct": "cat raw-public.tar.gz.part* > raw-public.tar.gz",
+  "extract": "tar -xzf raw-public.tar.gz"
+}

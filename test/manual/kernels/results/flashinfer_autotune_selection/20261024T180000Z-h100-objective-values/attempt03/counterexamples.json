@@ -1,0 +1,473 @@
+{
+  "status": "success",
+  "final_immutable": true,
+  "material_threshold": 1.1,
+  "counterexamples": [
+    {
+      "block": 0,
+      "cell": "auto_synthetic",
+      "raw_name": "block0-auto_synthetic-timing.json",
+      "raw_sha256": "fed1517860d8de5c3b1b25e1eaba7aac1df573b4b190bcc9b1655fdb3fa97980",
+      "selected_descriptor_words": [
+        77309411394,
+        4294967332,
+        0,
+        1407374883553283,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "selected_descriptor_raw64_hex": "42000000120000002400000001000000000000000000000003000000000005000100000035fc01001c0000001c0000000e000e00440000000000000000000000",
+      "selected_descriptor_raw64_sha256": "d91caadb5b6a529ea51687818fdd5ae60aafc090d2c7c0b68999315df6a3fe76",
+      "runtime_profile_actual_m": 144,
+      "runtime_cache_m": 256,
+      "runtime_profile_order_index": 2,
+      "global_measurement_index": 74,
+      "profile_selected_us": 10.076799988746643,
+      "profile_default_us": 10.140799731016159,
+      "profile_selected_over_default": 0.993688886087182,
+      "apparent_profile_advantage_fraction": 0.006311113912818023,
+      "runner_up_tactic": -1,
+      "selected_profile_settings": {
+        "warmup": 3,
+        "repeat": 10,
+        "stream_delay_micro_secs": 5000,
+        "cuda_graph_delay_micro_secs": 100,
+        "use_global_timer": false,
+        "measurement_policy": null,
+        "effective_policy_timer": null,
+        "config": {
+          "use_cuda_graph": false,
+          "use_cold_l2_cache": false,
+          "use_cuda_graph_individual_timing": false,
+          "cuda_graph_profile_replays": 1,
+          "profiling_repeat": null,
+          "effective_profiling_repeat": 10
+        }
+      },
+      "runtime_candidates_in_original_order": [
+        {
+          "order": 0,
+          "tactic": -1,
+          "profile_us": 10.140799731016159
+        },
+        {
+          "order": 1,
+          "tactic": [
+            73014444098,
+            4294967332,
+            0,
+            844424930131968,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "profile_us": 10.393600165843964
+        },
+        {
+          "order": 2,
+          "tactic": [
+            77309411394,
+            4294967332,
+            0,
+            1407374883553283,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "profile_us": 10.076799988746643
+        },
+        {
+          "order": 3,
+          "tactic": [
+            785979015234,
+            4294967332,
+            0,
+            2533274790395906,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "profile_us": 10.179200023412704
+        },
+        {
+          "order": 4,
+          "tactic": [
+            579820585026,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "profile_us": 10.745599865913391
+        },
+        {
+          "order": 5,
+          "tactic": [
+            120259084354,
+            4294967332,
+            0,
+            1970324836974594,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "profile_us": 10.204800218343735
+        },
+        {
+          "order": 6,
+          "tactic": [
+            828928688194,
+            4294967332,
+            0,
+            2533274790395906,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "profile_us": 10.422399640083313
+        },
+        {
+          "order": 7,
+          "tactic": [
+            841813590082,
+            4294967332,
+            0,
+            2533274790395906,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "profile_us": 10.307200253009796
+        },
+        {
+          "order": 8,
+          "tactic": [
+            893353197634,
+            4294967332,
+            0,
+            2533274790395907,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ],
+          "profile_us": 10.56319996714592
+        }
+      ],
+      "retained_graph_event_ratio": 1.160214079060569,
+      "all24_pair_ratios": [
+        1.1609550346485997,
+        1.1598984474936693,
+        1.160542720475422,
+        1.1603268918604992,
+        1.1601012662606391,
+        1.164782370468703,
+        1.1586362619194495,
+        1.1590205752692706,
+        1.1562236008883806,
+        1.161126805863974,
+        1.160462467581977,
+        1.1592446102462282,
+        1.1600339066610001,
+        1.1613540011634307,
+        1.1638928732083125,
+        1.16341532083596,
+        1.1630465387409503,
+        1.1580580990991103,
+        1.1635541104623974,
+        1.1595265269437816,
+        1.1595473508713103,
+        1.1597967602752792,
+        1.1586674461870006,
+        1.1622535749997345
+      ],
+      "pair_ratio_range": [
+        1.1562236008883806,
+        1.164782370468703
+      ],
+      "rounds_above_one": 24,
+      "rounds_above1_10": 24,
+      "order_strata": {
+        "winner_first": {
+          "n": 12,
+          "median": 1.1607087511152883,
+          "minimum": 1.1586362619194495,
+          "maximum": 1.164782370468703,
+          "values": [
+            1.1609550346485997,
+            1.1603268918604992,
+            1.164782370468703,
+            1.1586362619194495,
+            1.161126805863974,
+            1.160462467581977,
+            1.1600339066610001,
+            1.1638928732083125,
+            1.1630465387409503,
+            1.1635541104623974,
+            1.1597967602752792,
+            1.1586674461870006
+          ]
+        },
+        "default_first": {
+          "n": 12,
+          "median": 1.1597228991824897,
+          "minimum": 1.1562236008883806,
+          "maximum": 1.16341532083596,
+          "values": [
+            1.1598984474936693,
+            1.160542720475422,
+            1.1601012662606391,
+            1.1590205752692706,
+            1.1562236008883806,
+            1.1592446102462282,
+            1.1613540011634307,
+            1.16341532083596,
+            1.1580580990991103,
+            1.1595265269437816,
+            1.1595473508713103,
+            1.1622535749997345
+          ]
+        }
+      },
+      "per_graph_gpu_event_us": {
+        "winner": {
+          "median": 8.229999803006649,
+          "minimum": 8.197999559342861,
+          "maximum": 8.26600007712841
+        },
+        "default": {
+          "median": 7.090999977663159,
+          "minimum": 7.067999802529812,
+          "maximum": 7.120000198483467
+        }
+      },
+      "capture_order": "winner-first",
+      "captured_read_operand_hashes": {
+        "winner": [
+          "879f7986dc7a53da6a9ad1c813773267997fbcc0c3d257fdcd612ca4152c57c3",
+          "f03d6e67c858d364c82a0c2b291836d290883711500944119e2a4104031cec6e",
+          "d90c7167bcc08674b3f2b333abf733cb676d2c42b6a59de6389c4f29558a1a07",
+          "3be9ce3eb8c6fe885b92b4481ce3cb14f0af2e2946ffbb1580d02b63de592d3d"
+        ],
+        "default": [
+          "879f7986dc7a53da6a9ad1c813773267997fbcc0c3d257fdcd612ca4152c57c3",
+          "f03d6e67c858d364c82a0c2b291836d290883711500944119e2a4104031cec6e",
+          "d90c7167bcc08674b3f2b333abf733cb676d2c42b6a59de6389c4f29558a1a07",
+          "3be9ce3eb8c6fe885b92b4481ce3cb14f0af2e2946ffbb1580d02b63de592d3d"
+        ]
+      },
+      "native_acceptance": {
+        "graph_id": "winner",
+        "graph_object_id": 132514622420560,
+        "output_data_ptr": 132515220160512,
+        "tactic": [
+          77309411394,
+          4294967332,
+          0,
+          1407374883553283,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        "captured_inputs": [
+          {
+            "shape": [
+              1,
+              144,
+              1024
+            ],
+            "stride": [
+              147456,
+              1024,
+              1
+            ],
+            "dtype": "torch.float8_e4m3fn",
+            "device": "cuda:0",
+            "data_ptr": 132515641688064,
+            "alignment_mod256": 0,
+            "alignment_mod4096": 0
+          },
+          {
+            "shape": [
+              1,
+              1024,
+              4096
+            ],
+            "stride": [
+              1024,
+              1,
+              1024
+            ],
+            "dtype": "torch.float8_e4m3fn",
+            "device": "cuda:0",
+            "data_ptr": 132515721379840,
+            "alignment_mod256": 0,
+            "alignment_mod4096": 0
+          },
+          {
+            "shape": [
+              1
+            ],
+            "stride": [
+              1
+            ],
+            "dtype": "torch.float32",
+            "device": "cuda:0",
+            "data_ptr": 132515644375040,
+            "alignment_mod256": 0,
+            "alignment_mod4096": 0
+          },
+          {
+            "shape": [
+              1
+            ],
+            "stride": [
+              1
+            ],
+            "dtype": "torch.float32",
+            "device": "cuda:0",
+            "data_ptr": 132515644375552,
+            "alignment_mod256": 0,
+            "alignment_mod4096": 512
+          },
+          {
+            "shape": [
+              1,
+              144,
+              4096
+            ],
+            "stride": [
+              589824,
+              4096,
+              1
+            ],
+            "dtype": "torch.bfloat16",
+            "device": "cuda:0",
+            "data_ptr": 132515220160512,
+            "alignment_mod256": 0,
+            "alignment_mod4096": 0
+          },
+          {
+            "shape": [
+              41943040
+            ],
+            "stride": [
+              1
+            ],
+            "dtype": "torch.uint8",
+            "device": "cuda:0",
+            "data_ptr": 132515427778560,
+            "alignment_mod256": 0,
+            "alignment_mod4096": 0
+          }
+        ],
+        "started_ns": 5095231086873494,
+        "used_descriptor": 1,
+        "route": "native_descriptor",
+        "descriptor_acceptance": "accepted",
+        "raw_numerical_check": "selected_acceptance_raw",
+        "original_graph_check": "selected_acceptance_original_graph",
+        "pointers_unchanged": true,
+        "original_graph_replayed": true,
+        "ended_ns": 5095231087472105
+      },
+      "actual_original_graph_launch_signatures": {
+        "winner": [
+          {
+            "name": "_static_quant_fp8",
+            "device": 0,
+            "grid": [
+              144,
+              1,
+              1
+            ],
+            "block": [
+              128,
+              1,
+              1
+            ],
+            "registers per thread": 25,
+            "shared memory": 0
+          },
+          {
+            "name": "nvjet_sm90_qqtst_128x64_128x8_1x2_h_bz_TNT",
+            "device": 0,
+            "grid": [
+              2,
+              64,
+              1
+            ],
+            "block": [
+              384,
+              1,
+              1
+            ],
+            "registers per thread": 168,
+            "shared memory": 213268
+          }
+        ],
+        "default": [
+          {
+            "name": "_static_quant_fp8",
+            "device": 0,
+            "grid": [
+              144,
+              1,
+              1
+            ],
+            "block": [
+              128,
+              1,
+              1
+            ],
+            "registers per thread": 25,
+            "shared memory": 0
+          },
+          {
+            "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+            "device": 0,
+            "grid": [
+              2,
+              64,
+              1
+            ],
+            "block": [
+              384,
+              1,
+              1
+            ],
+            "registers per thread": 168,
+            "shared memory": 225652
+          }
+        ]
+      },
+      "same_quantizer_signature": true,
+      "different_gemm_signatures": true,
+      "numerical_guards": 65,
+      "all_numerics_passed": true,
+      "zero_input_checks_exact": true,
+      "max_quantized_reference_abs_error": 0.025037765502929688,
+      "cache_state_unchanged": true,
+      "all_query_outcomes": {
+        "start_complete_inconclusive": 0,
+        "start_pending_after_enqueue": 48
+      },
+      "trace_sha256": "94de654a9a5b1baed67747b60b23766e1ae8cf0d9ef814f6e7465d7512714634",
+      "interpretation": "Accepted, numerically correct explicit tactic won this synthetic-input eager/hot startup profile by a small measured margin, then its original full-layer graph was slower under the fixed independent replay oracle. This is a retained counterexample, not a serving-throughput or general algorithm-speed claim."
+    }
+  ],
+  "audit_sha256": "22da18be76d2e9785f13bacdfded665a199e892d28eb3d47d2c38234f717a2f3",
+  "derivation_source_sha256": "e1c69ce391e5535a8cd9c4f02276ea636145104df46ba94cd0383d688ee44436"
+}

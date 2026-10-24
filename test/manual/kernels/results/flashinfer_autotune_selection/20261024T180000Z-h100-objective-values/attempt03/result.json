@@ -1,0 +1,783 @@
+{
+  "status": "completed_all_fixed_workers",
+  "execution_commit": "e2f0716b5b841360dd5fbeaed9e41f38c6e42071",
+  "allocation": "2803956",
+  "allocation_released": true,
+  "elapsed_launcher_seconds": 925,
+  "launcher_exit_code": 0,
+  "admission_workers": 4,
+  "timing_workers": 32,
+  "independent_blocks": 8,
+  "paired_rounds": 768,
+  "retained_samples": 1536,
+  "excluded_samples": 0,
+  "admission_profile_measurements": 324,
+  "timing_profile_measurements": 2592,
+  "admission_numerical_checks": 108,
+  "timing_numerical_checks": 2080,
+  "default_selections": 31,
+  "explicit_selections": 1,
+  "same_default_kernel_signatures": 31,
+  "factor_estimates": {
+    "objective": {
+      "ratio_of_ratios": 0.9909177863780857,
+      "block_log_contrasts": {
+        "n": 8,
+        "mean": -0.009123708357835117,
+        "median": -0.00046857426160480534,
+        "range": [
+          -0.07334044393606569,
+          0.014075093065842257
+        ],
+        "values": [
+          -0.07334044393606569,
+          -0.0032595139309365435,
+          0.002322365407726933,
+          0.003311802243260201,
+          -0.012598020043183961,
+          -0.013966379512779478,
+          0.014075093065842257,
+          0.010465429843455342
+        ]
+      },
+      "block_ratio_contrasts": {
+        "n": 8,
+        "mean": 0.9912474067777849,
+        "median": 0.9995354283522999,
+        "range": [
+          0.9292844069254679,
+          1.0141746135601462
+        ],
+        "values": [
+          0.9292844069254679,
+          0.9967457925175498,
+          1.00232506418705,
+          1.0033172923193185,
+          0.9874810028193631,
+          0.9861306979000646,
+          1.0141746135601462,
+          1.010520383993319
+        ]
+      },
+      "primary": true,
+      "bootstrap_interval": {
+        "confidence": 0.975,
+        "bounds": [
+          0.9678422620368534,
+          1.0062648421558218
+        ],
+        "resamples": 200000,
+        "seed": 202610241803,
+        "unit": "whole four-cell block",
+        "quantile": "Hyndman-Fan type7",
+        "family": "two prespecified factors",
+        "interpretation": "Exploratory percentile interval; no equivalence, safety or superiority claim."
+      }
+    },
+    "values": {
+      "ratio_of_ratios": 0.990766618210608,
+      "block_log_contrasts": {
+        "n": 8,
+        "mean": -0.0092762736880369,
+        "median": 0.0003998288849210649,
+        "range": [
+          -0.07884962322236695,
+          0.0061993441125125885
+        ],
+        "values": [
+          -0.07884962322236695,
+          -0.001114285048367334,
+          0.0061993441125125885,
+          0.0040245029185019664,
+          -0.0038422729162884135,
+          0.0019139428182094638,
+          0.0025385517793632875,
+          -0.0050803499458598085
+        ]
+      },
+      "block_ratio_contrasts": {
+        "n": 8,
+        "mean": 0.9911089526349014,
+        "median": 1.000401055556268,
+        "range": [
+          0.9241788890395912,
+          1.0062185998165722
+        ],
+        "values": [
+          0.9241788890395912,
+          0.9988863355366929,
+          1.0062185998165722,
+          1.004032612105205,
+          0.9961650991694158,
+          1.001915775575843,
+          1.0025417766301712,
+          0.9949325332057202
+        ]
+      },
+      "primary": true,
+      "bootstrap_interval": {
+        "confidence": 0.975,
+        "bounds": [
+          0.9690084513058853,
+          1.0030619042947437
+        ],
+        "resamples": 200000,
+        "seed": 202610241803,
+        "unit": "whole four-cell block",
+        "quantile": "Hyndman-Fan type7",
+        "family": "two prespecified factors",
+        "interpretation": "Exploratory percentile interval; no equivalence, safety or superiority claim."
+      }
+    },
+    "interaction": {
+      "ratio_of_ratios": 1.0142883114047947,
+      "block_log_contrasts": {
+        "n": 8,
+        "mean": 0.01418719552861674,
+        "median": -0.002468286489015525,
+        "range": [
+          -0.04445055806378455,
+          0.15720645910279243
+        ],
+        "values": [
+          0.15720645910279243,
+          0.035682721285678454,
+          -0.02532659695480003,
+          -0.04445055806378455,
+          -0.00278054318261242,
+          -0.0021560297954186305,
+          -0.00424230462929626,
+          -0.00043558353362508316
+        ]
+      },
+      "block_ratio_contrasts": {
+        "n": 8,
+        "mean": 1.0160599139048887,
+        "median": 0.9975348058572484,
+        "range": [
+          0.9565228912683063,
+          1.1702371950830897
+        ],
+        "values": [
+          1.1702371950830897,
+          1.0363269898291234,
+          0.9749914307914099,
+          0.9565228912683063,
+          0.9972233189471473,
+          0.9978462927673494,
+          0.9957666812335741,
+          0.9995645113191097
+        ]
+      },
+      "primary": false,
+      "bootstrap_interval": {
+        "confidence": 0.95,
+        "bounds": [
+          0.9819466158197737,
+          1.0611090489819286
+        ],
+        "resamples": 200000,
+        "seed": 202610241803,
+        "unit": "whole four-cell block",
+        "quantile": "Hyndman-Fan type7",
+        "family": "secondary interaction",
+        "interpretation": "Exploratory percentile interval; no equivalence, safety or superiority claim."
+      }
+    }
+  },
+  "cells": {
+    "auto_synthetic": {
+      "event_winner_over_default": {
+        "n": 8,
+        "mean": 1.0172879823963616,
+        "median": 0.9995407780840059,
+        "range": [
+          0.9846708118219516,
+          1.160214079060569
+        ],
+        "values": [
+          1.160214079060569,
+          1.0074837529775331,
+          0.9881803105837935,
+          0.9846708118219516,
+          1.0088971547050232,
+          1.010277794711426,
+          0.9869821521201187,
+          0.9915978031904786
+        ]
+      },
+      "default_selections": {
+        "count": 7,
+        "n": 8,
+        "fraction": 0.875,
+        "confidence": 0.95,
+        "two_sided_clopper_pearson": [
+          0.4734903291247933,
+          0.9968402764687481
+        ],
+        "one_sided_upper": 0.9936088490454551,
+        "assumption_limit": "Fixed-input process repetitions; binomial stationarity/independence is not established by this pilot."
+      },
+      "explicit_selections": {
+        "count": 1,
+        "n": 8,
+        "fraction": 0.125,
+        "confidence": 0.95,
+        "two_sided_clopper_pearson": [
+          0.003159723531251879,
+          0.5265096708752064
+        ],
+        "one_sided_upper": 0.47067940860113155,
+        "assumption_limit": "Fixed-input process repetitions; binomial stationarity/independence is not established by this pilot."
+      },
+      "material_regressions_ratio_gt_1_10": {
+        "count": 1,
+        "n": 8,
+        "fraction": 0.125,
+        "confidence": 0.95,
+        "two_sided_clopper_pearson": [
+          0.003159723531251879,
+          0.5265096708752064
+        ],
+        "one_sided_upper": 0.47067940860113155,
+        "assumption_limit": "Fixed-input process repetitions; binomial stationarity/independence is not established by this pilot."
+      }
+    },
+    "graph_synthetic": {
+      "event_winner_over_default": {
+        "n": 8,
+        "mean": 0.9995867288872743,
+        "median": 0.9999504345907619,
+        "range": [
+          0.98644768490239,
+          1.0101402538511537
+        ],
+        "values": [
+          0.9966664342272678,
+          0.98644768490239,
+          1.003100362804516,
+          1.0101402538511537,
+          0.997652818729075,
+          0.9973405154008481,
+          1.0030977107304948,
+          1.002248050452449
+        ]
+      },
+      "default_selections": {
+        "count": 8,
+        "n": 8,
+        "fraction": 1.0,
+        "confidence": 0.95,
+        "two_sided_clopper_pearson": [
+          0.6305833524471809,
+          1.0
+        ],
+        "one_sided_upper": 1.0,
+        "assumption_limit": "Fixed-input process repetitions; binomial stationarity/independence is not established by this pilot."
+      },
+      "explicit_selections": {
+        "count": 0,
+        "n": 8,
+        "fraction": 0.0,
+        "confidence": 0.95,
+        "two_sided_clopper_pearson": [
+          0.0,
+          0.3694166475528192
+        ],
+        "one_sided_upper": 0.3123439780663678,
+        "assumption_limit": "Fixed-input process repetitions; binomial stationarity/independence is not established by this pilot."
+      },
+      "material_regressions_ratio_gt_1_10": {
+        "count": 0,
+        "n": 8,
+        "fraction": 0.0,
+        "confidence": 0.95,
+        "two_sided_clopper_pearson": [
+          0.0,
+          0.3694166475528192
+        ],
+        "one_sided_upper": 0.3123439780663678,
+        "assumption_limit": "Fixed-input process repetitions; binomial stationarity/independence is not established by this pilot."
+      }
+    },
+    "auto_captured": {
+      "event_winner_over_default": {
+        "n": 8,
+        "mean": 0.999465663656664,
+        "median": 0.9990091483102164,
+        "range": [
+          0.9867878051074943,
+          1.01330502957562
+        ],
+        "values": [
+          0.9911907173549321,
+          0.9885661124107062,
+          1.0069969100845482,
+          1.010860438099578,
+          1.0064263679690189,
+          1.01330502957562,
+          0.9915919286514139,
+          0.9867878051074943
+        ]
+      },
+      "default_selections": {
+        "count": 8,
+        "n": 8,
+        "fraction": 1.0,
+        "confidence": 0.95,
+        "two_sided_clopper_pearson": [
+          0.6305833524471809,
+          1.0
+        ],
+        "one_sided_upper": 1.0,
+        "assumption_limit": "Fixed-input process repetitions; binomial stationarity/independence is not established by this pilot."
+      },
+      "explicit_selections": {
+        "count": 0,
+        "n": 8,
+        "fraction": 0.0,
+        "confidence": 0.95,
+        "two_sided_clopper_pearson": [
+          0.0,
+          0.3694166475528192
+        ],
+        "one_sided_upper": 0.3123439780663678,
+        "assumption_limit": "Fixed-input process repetitions; binomial stationarity/independence is not established by this pilot."
+      },
+      "material_regressions_ratio_gt_1_10": {
+        "count": 0,
+        "n": 8,
+        "fraction": 0.0,
+        "confidence": 0.95,
+        "two_sided_clopper_pearson": [
+          0.0,
+          0.3694166475528192
+        ],
+        "one_sided_upper": 0.3123439780663678,
+        "assumption_limit": "Fixed-input process repetitions; binomial stationarity/independence is not established by this pilot."
+      }
+    },
+    "graph_captured": {
+      "event_winner_over_default": {
+        "n": 8,
+        "mean": 0.9973944406180364,
+        "median": 0.9967946595121541,
+        "range": [
+          0.9919212204676603,
+          1.0035164905711713
+        ],
+        "values": [
+          0.996420892177051,
+          1.0030868441741592,
+          0.9966372788794653,
+          0.9919212204676603,
+          0.9924461897903549,
+          0.9981745687395862,
+          1.0035164905711713,
+          0.9969520401448428
+        ]
+      },
+      "default_selections": {
+        "count": 8,
+        "n": 8,
+        "fraction": 1.0,
+        "confidence": 0.95,
+        "two_sided_clopper_pearson": [
+          0.6305833524471809,
+          1.0
+        ],
+        "one_sided_upper": 1.0,
+        "assumption_limit": "Fixed-input process repetitions; binomial stationarity/independence is not established by this pilot."
+      },
+      "explicit_selections": {
+        "count": 0,
+        "n": 8,
+        "fraction": 0.0,
+        "confidence": 0.95,
+        "two_sided_clopper_pearson": [
+          0.0,
+          0.3694166475528192
+        ],
+        "one_sided_upper": 0.3123439780663678,
+        "assumption_limit": "Fixed-input process repetitions; binomial stationarity/independence is not established by this pilot."
+      },
+      "material_regressions_ratio_gt_1_10": {
+        "count": 0,
+        "n": 8,
+        "fraction": 0.0,
+        "confidence": 0.95,
+        "two_sided_clopper_pearson": [
+          0.0,
+          0.3694166475528192
+        ],
+        "one_sided_upper": 0.3123439780663678,
+        "assumption_limit": "Fixed-input process repetitions; binomial stationarity/independence is not established by this pilot."
+      }
+    }
+  },
+  "counterexample": {
+    "raw_name": "block0-auto_synthetic-timing.json",
+    "selected_tactic": [
+      77309411394,
+      4294967332,
+      0,
+      1407374883553283,
+      558779540176897,
+      120259084316,
+      292058693646,
+      0
+    ],
+    "profile": {
+      "actual_m": 144,
+      "key": "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 256, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+      "default_ms": 0.01014079973101616,
+      "best_explicit_ms": 0.010076799988746643,
+      "best_explicit_tactic": [
+        77309411394,
+        4294967332,
+        0,
+        1407374883553283,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "best_explicit_over_default": 0.993688886087182,
+      "profile_winner": [
+        77309411394,
+        4294967332,
+        0,
+        1407374883553283,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "profile_winner_ms": 0.010076799988746643,
+      "runner_up_ms": 0.01014079973101616,
+      "winner_over_runner_up": 0.993688886087182,
+      "winner_margin_fraction_of_runner_up": 0.006311113912818023,
+      "candidate_order": [
+        -1,
+        [
+          73014444098,
+          4294967332,
+          0,
+          844424930131968,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        [
+          77309411394,
+          4294967332,
+          0,
+          1407374883553283,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        [
+          785979015234,
+          4294967332,
+          0,
+          2533274790395906,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        [
+          579820585026,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        [
+          120259084354,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        [
+          828928688194,
+          4294967332,
+          0,
+          2533274790395906,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        [
+          841813590082,
+          4294967332,
+          0,
+          2533274790395906,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        [
+          893353197634,
+          4294967332,
+          0,
+          2533274790395907,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      ]
+    },
+    "graph_ratio": 1.160214079060569,
+    "graph_per_replay_ms": {
+      "winner": {
+        "n": 24,
+        "mean": 0.00823050003964454,
+        "median": 0.008229999803006649,
+        "range": [
+          0.008197999559342861,
+          0.00826600007712841
+        ],
+        "values": [
+          0.00826600007712841,
+          0.008225999772548676,
+          0.008212000131607056,
+          0.008236000314354897,
+          0.008245999924838543,
+          0.00824199989438057,
+          0.008224000222980976,
+          0.008236000314354897,
+          0.008229999803006649,
+          0.008244000375270844,
+          0.008229999803006649,
+          0.008225999772548676,
+          0.008220000192523003,
+          0.008233999833464622,
+          0.00825200043618679,
+          0.008229999803006649,
+          0.008245999924838543,
+          0.008205999620258808,
+          0.008224000222980976,
+          0.00822800025343895,
+          0.008197999559342861,
+          0.00821600016206503,
+          0.008208000101149082,
+          0.00825200043618679
+        ]
+      },
+      "default": {
+        "n": 24,
+        "mean": 0.007091583315438281,
+        "median": 0.007090999977663159,
+        "range": [
+          0.007067999802529812,
+          0.007120000198483467
+        ],
+        "values": [
+          0.007120000198483467,
+          0.007091999985277653,
+          0.007075999863445759,
+          0.007098000030964613,
+          0.007108000107109547,
+          0.007075999863445759,
+          0.007098000030964613,
+          0.00710600009188056,
+          0.00711800018325448,
+          0.0071000000461936,
+          0.007091999985277653,
+          0.007096000015735626,
+          0.0070859999395906925,
+          0.007089999970048666,
+          0.007089999970048666,
+          0.007073999848216772,
+          0.007089999970048666,
+          0.0070859999395906925,
+          0.007067999802529812,
+          0.007096000015735626,
+          0.007069999817758799,
+          0.007083999924361706,
+          0.007083999924361706,
+          0.0071000000461936
+        ]
+      }
+    },
+    "sample_order_strata": {
+      "winner_first": {
+        "n": 12,
+        "mean": 1.1612734556565119,
+        "median": 1.1607087511152883,
+        "range": [
+          1.1586362619194495,
+          1.164782370468703
+        ],
+        "values": [
+          1.1609550346485997,
+          1.1603268918604992,
+          1.164782370468703,
+          1.1586362619194495,
+          1.161126805863974,
+          1.160462467581977,
+          1.1600339066610001,
+          1.1638928732083125,
+          1.1630465387409503,
+          1.1635541104623974,
+          1.1597967602752792,
+          1.1586674461870006
+        ]
+      },
+      "default_first": {
+        "n": 12,
+        "mean": 1.1599321745455782,
+        "median": 1.1597228991824897,
+        "range": [
+          1.1562236008883806,
+          1.16341532083596
+        ],
+        "values": [
+          1.1598984474936693,
+          1.160542720475422,
+          1.1601012662606391,
+          1.1590205752692706,
+          1.1562236008883806,
+          1.1592446102462282,
+          1.1613540011634307,
+          1.16341532083596,
+          1.1580580990991103,
+          1.1595265269437816,
+          1.1595473508713103,
+          1.1622535749997345
+        ]
+      }
+    },
+    "native_used_descriptor": 1,
+    "numerical_checks_passed": 65,
+    "max_abs_error": 0.025037765502929688,
+    "original_graph_signatures": {
+      "winner": {
+        "cuda_graph_id": 2,
+        "graph_launches": 3,
+        "ordered_launch_signature": [
+          {
+            "name": "_static_quant_fp8",
+            "grid": [
+              144,
+              1,
+              1
+            ],
+            "block": [
+              128,
+              1,
+              1
+            ],
+            "registers per thread": 25,
+            "shared memory": 0,
+            "device": 0
+          },
+          {
+            "name": "nvjet_sm90_qqtst_128x64_128x8_1x2_h_bz_TNT",
+            "grid": [
+              2,
+              64,
+              1
+            ],
+            "block": [
+              384,
+              1,
+              1
+            ],
+            "registers per thread": 168,
+            "shared memory": 213268,
+            "device": 0
+          }
+        ],
+        "kernel_events": 6
+      },
+      "default": {
+        "cuda_graph_id": 5,
+        "graph_launches": 3,
+        "ordered_launch_signature": [
+          {
+            "name": "_static_quant_fp8",
+            "grid": [
+              144,
+              1,
+              1
+            ],
+            "block": [
+              128,
+              1,
+              1
+            ],
+            "registers per thread": 25,
+            "shared memory": 0,
+            "device": 0
+          },
+          {
+            "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+            "grid": [
+              2,
+              64,
+              1
+            ],
+            "block": [
+              384,
+              1,
+              1
+            ],
+            "registers per thread": 168,
+            "shared memory": 225652,
+            "device": 0
+          }
+        ],
+        "kernel_events": 6
+      },
+      "winner_default_signatures_equal": false
+    },
+    "interpretation": "A real explicit choice won startup profiling narrowly and replayed slower than default; source, accepted descriptor, owned numerical outputs and original graph kernel identity are verified. This does not identify the cause or prove either factor prevents the failure."
+  },
+  "private_archive_sha256": "e972e9fa9abc02f841867b6e2921e11825c926ff3a337d5efc210ce54c0d7ddb",
+  "public_archive_sha256": "55af84c2272e7f6b0a98fa10ced3ccd0b1f9b068f058c01840f3087a65aa6706",
+  "preserved_private_files_excluding_manifest": 272,
+  "native_artifacts": 4,
+  "official_analysis_sha256": "671159cae0e0ba518e1556d33d039094992a75fd05eed6c9e40f704898a99fd3",
+  "first_block_files_unchanged": 27,
+  "independent_cohort_checks": 28650,
+  "independent_public_package_checks": 4667,
+  "limits": [
+    "Single H100 NVL and one static FP8 QKV layer, M144/N4096/K1024; patched pinned FlashInfer source.",
+    "This compares two v2 objectives and two controlled initializer recipes; no v1-v2 or end-to-end serving throughput result.",
+    "Both prespecified main-factor intervals include1; one bad choice cannot establish prevention by either factor.",
+    "Matched synthetic copying differs from untouched production initialization, and activation content is not isolated from device history.",
+    "Eight workers per cell do not establish rare-regression safety; zero of8 still permits a one-sided95% upper bound of31.2% under the model.",
+    "Post-timing native acceptance verifies viability of the retained problem, not direct capture-time native return; original lookup and trace provide separate capture evidence.",
+    "All32timing processes and all1536samples retained. Earlier admission failures are preserved separately; no timing outcome replaced."
+  ],
+  "next_steps": [
+    "Preserve existing SGLang measurement policy and v1 persistence; keep scoped prototype parked.",
+    "Prepare the separate upstream owned-output validation fix for review; its28-test CUDA-host gate passed, including12 GPU cases. No PR opened.",
+    "Next measurement proposal: a fixed-descriptor/default paired mechanism replication on the same problem, source and both objective/input recipes, with independent graph replay, before another policy or cache integration change. No additional experiment is launched."
+  ],
+  "independent_admission_checks": 2665,
+  "cohort_admission_cross_bindings": 192,
+  "independent_parts_claims_checks": 1028,
+  "second_independent_review_checks": 9817,
+  "same_default_capture_order_diagnostic": {
+    "first_captured_slower": 29,
+    "n": 31,
+    "median_first_over_second": 1.007611,
+    "interpretation": "Posthoc descriptive association only; no causal or small-speedup claim."
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "checks_passed": 9817,
+  "cohort": {
+    "actual_trace_kernel_events": 384,
+    "actual_trace_launches": 192,
+    "complete_start_queries": 0,
+    "independent_units": 8,
+    "numerical_checks": 2080,
+    "numerical_zero_input_checks": 64,
+    "paired_rounds": 768,
+    "pending_start_queries": 1536,
+    "profiles": 2592,
+    "replay_samples": 1536,
+    "worker_count": 32
+  },
+  "decision": {
+    "additional_gpu_expansion_now": "not justified by this cohort alone",
+    "conditional_next_experiment": "Only if the owner needs the ranking mechanism resolved: freeze the saved explicit descriptor and default on identical actual operands, compare actual eager and graph profiler objectives against the serving oracle without fresh winner search. Predeclare the rank comparison and keep this separate from production policy adoption.",
+    "next_bounded_work": "Package the accepted-descriptor rank-mismatch case and completed result for the owner; turn the already qualified validation defect into a focused reviewable change.",
+    "next_pr_priority": "The narrow upstream output-refresh validation correctness fix remains the smallest useful contribution. Keep its inference-output safety and no-write controls separate from tuning policy, descriptor port and cache lifecycle work.",
+    "scoped_persistence_prototype": "remain_parked",
+    "sglang_production_policy_change": "no_go"
+  },
+  "evidence": {
+    "detailed_audit_path": "/private/tmp/fi-objective-values-20261024/interpretation-review/review.json",
+    "detailed_audit_sha256": "5265d42527265f795c3a076f48bccf5eec8ceee64229758348a497f31c80ca13",
+    "official_analysis_sha256": "671159cae0e0ba518e1556d33d039094992a75fd05eed6c9e40f704898a99fd3",
+    "script_path": "/private/tmp/fi-objective-values-20261024/interpretation-review/review.py",
+    "script_sha256": "c97560817a0f3042fb5a7adb6604724d47782e84b41ad86b8aad2189e4e604f7"
+  },
+  "execution_commit": "e2f0716b5b841360dd5fbeaed9e41f38c6e42071",
+  "factor_cautions": [
+    "The two favorable point estimates share the same lone unfavorable auto/synthetic cell; they are not independent demonstrations that either intervention prevents bad selection.",
+    "Block0 remains in the primary result. Descriptive removal makes objective and values factors approximately 1.00005 and 1.00066; this sensitivity is not an alternative primary analysis.",
+    "Values changes include the preregistered matched copy/initialization behavior; no identical physical-history or pure value-only causal claim.",
+    "Timing processes have no inline synthetic-byte hashes; separate admissions attest the adapter mechanism without proving byte identity in each timing process.",
+    "The current pinned FlashInfer source includes research descriptor and harness patches. No stock release, dependency-upgrade or full-model claim follows.",
+    "Zero bad selections in an eight-process cell does not demonstrate safety; descriptive one-sided 95 percent binomial upper bound is about 31.2 percent under an unestablished stationary-trial model."
+  ],
+  "independent_math": {
+    "all_factor_estimates_and_frozen_bootstrap_intervals_match": true,
+    "all_worker_event_wall_estimates_match": true,
+    "factors": {
+      "interaction": {
+        "exploratory_interval": [
+          0.9819466158197737,
+          1.0611090489819286
+        ],
+        "ratio_of_ratios": 1.0142883114047947
+      },
+      "objective": {
+        "exploratory_interval": [
+          0.9678422620368534,
+          1.0062648421558218
+        ],
+        "ratio_of_ratios": 0.9909177863780857
+      },
+      "values": {
+        "exploratory_interval": [
+          0.9690084513058853,
+          1.0030619042947437
+        ],
+        "ratio_of_ratios": 0.990766618210608
+      }
+    },
+    "primary_unit": "Eight complete four-cell blocks; not 768 independent rounds.",
+    "uncertainty": "Both primary intervals include one. Small-sample percentile intervals and fixed-source repetitions do not establish superiority, equivalence, safety or population failure rates."
+  },
+  "lone_explicit": {
+    "block": 0,
+    "cell": "auto_synthetic",
+    "limits": [
+      "This shows an accepted explicit descriptor selected by the eager/synthetic objective with a materially slower retained serving graph.",
+      "Posttiming native acceptance proves submitted-descriptor viability on retained actual capture operands, not direct observation of the earlier capture return.",
+      "The profiler records one aggregate measurement per tactic, so its 0.63 percent advantage alone cannot identify noise, confidence or a safe rejection margin."
+    ],
+    "median_event_ms": {
+      "default": 0.007090999977663159,
+      "winner": 0.008229999803006649
+    },
+    "posttiming_used_descriptor": 1,
+    "profile_apparent_advantage_fraction": 0.006311113912818023,
+    "profile_default_ms": 0.01014079973101616,
+    "profile_selected_ms": 0.010076799988746643,
+    "raw_trace_default_gemm": {
+      "block": [
+        384,
+        1,
+        1
+      ],
+      "device": 0,
+      "grid": [
+        2,
+        64,
+        1
+      ],
+      "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+      "registers per thread": 168,
+      "shared memory": 225652
+    },
+    "raw_trace_winner_gemm": {
+      "block": [
+        384,
+        1,
+        1
+      ],
+      "device": 0,
+      "grid": [
+        2,
+        64,
+        1
+      ],
+      "name": "nvjet_sm90_qqtst_128x64_128x8_1x2_h_bz_TNT",
+      "registers per thread": 168,
+      "shared memory": 213268
+    },
+    "replay_order_stratum_medians": {
+      "default_first": 1.1597228991824897,
+      "winner_first": 1.1607087511152883
+    },
+    "serving_graph_ratio": 1.160214079060569,
+    "tactic": [
+      77309411394,
+      4294967332,
+      0,
+      1407374883553283,
+      558779540176897,
+      120259084316,
+      292058693646,
+      0
+    ]
+  },
+  "other_31": {
+    "all_paired_raw_launch_signatures_identical": true,
+    "all_selected_default": true,
+    "first_capture_over_second_median": 1.0076113045597372,
+    "first_capture_over_second_range": [
+      0.996420892177051,
+      1.015567830379459
+    ],
+    "first_capture_slower_count": 29,
+    "limit": "Descriptive capture-order association; does not isolate allocation or history mechanisms. Same kernel signatures do not imply exact timing equivalence."
+  },
+  "profile_margins": {
+    "auto_captured": {
+      "best_explicit_over_default_actual_m144_median": 1.0581003419293245,
+      "range": [
+        1.0044929739093684,
+        1.0694492491709342
+      ]
+    },
+    "auto_synthetic": {
+      "best_explicit_over_default_actual_m144_median": 1.068416491743497,
+      "range": [
+        0.993688886087182,
+        1.0872093319543985
+      ]
+    },
+    "graph_captured": {
+      "best_explicit_over_default_actual_m144_median": 1.1554184439291437,
+      "range": [
+        1.1427061123459559,
+        1.17599125335856
+      ]
+    },
+    "graph_synthetic": {
+      "best_explicit_over_default_actual_m144_median": 1.1622149166078026,
+      "range": [
+        1.0189753662305658,
+        1.1753528167830187
+      ]
+    }
+  },
+  "schema_version": 1,
+  "scope": "Independent raw-data math, trace signatures and interpretation review; no analyzer import, source edits or GPU execution.",
+  "status": "passed"
+}
