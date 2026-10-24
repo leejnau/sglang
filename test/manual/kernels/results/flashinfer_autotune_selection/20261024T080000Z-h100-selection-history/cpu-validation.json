@@ -1,0 +1,291 @@
+{
+  "schema_version": 1,
+  "scope": "CPU protocol/ownership/analyzer/provenance controls; no GPU result or performance inference.",
+  "reports": {
+    "history-worker-cpu-controls.json": {
+      "status": "success",
+      "worker_path": "/private/tmp/sglang-autotune-selection-study/test/manual/kernels/bench_flashinfer_selection_history.py",
+      "worker_sha256": "a2f08f0e024e08e9563b9287957c320533f604fd114092ae86a8d7d24431ea7c",
+      "audit_script_sha256": "e94997c5b78b5aff95151f3408a12f3206c9ad3d779baba3575da2a983a30f4c",
+      "checks": 66,
+      "passed": [
+        "trial0 balanced replay order",
+        "trial0 deterministic replay order",
+        "trial1 balanced replay order",
+        "trial1 deterministic replay order",
+        "trial2 balanced replay order",
+        "trial2 deterministic replay order",
+        "trial3 balanced replay order",
+        "trial3 deterministic replay order",
+        "trial4 balanced replay order",
+        "trial4 deterministic replay order",
+        "trial5 balanced replay order",
+        "trial5 deterministic replay order",
+        "trial6 balanced replay order",
+        "trial6 deterministic replay order",
+        "trial7 balanced replay order",
+        "trial7 deterministic replay order",
+        "reject ninth trial",
+        "reject unbalanced block count",
+        "trial0 independent winner-first",
+        "trial0 independent default-first",
+        "trial1 independent winner-first",
+        "trial1 independent default-first",
+        "trial2 independent winner-first",
+        "trial2 independent default-first",
+        "trial3 independent winner-first",
+        "trial3 independent default-first",
+        "trial4 independent winner-first",
+        "trial4 independent default-first",
+        "trial5 independent winner-first",
+        "trial5 independent default-first",
+        "trial6 independent winner-first",
+        "trial6 independent default-first",
+        "trial7 independent winner-first",
+        "trial7 independent default-first",
+        "reject changed warmup policy",
+        "metadata-only reaches original profile path",
+        "metadata-only records no hashes",
+        "metadata-only flags every recorded profile",
+        "metadata-only retains no input tensors",
+        "fingerprint-on preserves full original hash order",
+        "fingerprint-on records exact hashes",
+        "fingerprint-on flags every recorded profile",
+        "forbidden profiling arm0 rejected",
+        "forbidden profiling arm0 counted before error",
+        "forbidden profiling arm1 rejected",
+        "forbidden profiling arm1 counted before error",
+        "trace numeric owns winner",
+        "trace numeric owns default",
+        "posttiming trace replays original objects exactly3 times",
+        "trace signature preserves pergraph ownership",
+        "trace records ordered actual kernel signatures",
+        "trace overwrite rejected",
+        "trace missing_launch rejected",
+        "trace numeric owns winner",
+        "trace numeric owns default",
+        "trace outside_kernel rejected",
+        "trace duplicate_marker rejected",
+        "history output remains explicitly owned after separation",
+        "history alias with primary output rejected",
+        "history0 preserves RNG boundary sequence",
+        "no-history skips capture and measurement",
+        "history1 preserves RNG boundary sequence",
+        "history capture and measurement use exact default miss sequence",
+        "history object remains strongly held outside primary graph counters",
+        "history cache state remains unchanged",
+        "no prohibited token in worker"
+      ],
+      "limits": [
+        "CPU boundary controls validate protocol/metadata/ownership/failure behavior only; CUDA execution, real trace compatibility, numerical results and performance remain unrun."
+      ]
+    },
+    "selection-history-analyzer-controls.json": {
+      "status": "success",
+      "scope": "stdlib CPU synthetic records only; no GPU/performance evidence",
+      "passed_controls": 30,
+      "controls": [
+        "full32_preregistered_launch_and_capture_counterbalance",
+        "all32_H_F_capture_order_payloads_no_GPU",
+        "successful_final_record_hash_and_full32_summary_branch",
+        "history_enabled_but_absent",
+        "H0_fabricated_history",
+        "F0_fabricated_byte_hash",
+        "F1_missing_byte_hash",
+        "profiling_input_references_retained",
+        "lost_true_winner_hit",
+        "default_did_not_participate",
+        "wrong_profiler_minimum",
+        "extra_profiling_attempt",
+        "history_advanced_rng",
+        "history_tuned",
+        "history_released_before_end",
+        "history_after_startup",
+        "wrong_scheduled_capture_order",
+        "shared_primary_output",
+        "cache_miss_not_restored",
+        "unbalanced_actual_block_order",
+        "wrong_timed_output_owner",
+        "trace_before_latency_ended",
+        "trace_replaced_graph",
+        "trace_accepted_wrong_output",
+        "trace_tuned_after_latency",
+        "trace_lost_kernel_correlation",
+        "trace_same_CUDA_graph_both_labels",
+        "known_history_fingerprint_interaction_log_contrasts",
+        "exact_compact8trial_bootstrap_weights",
+        "cluster_interval_bruteforce_and_n1_no_CI"
+      ],
+      "analyzer_sha256": "e1db4da97d5474d07cb173c375dd33f9986120653e8da8e6419d7cbd71d64d01"
+    },
+    "selection-history-full-main-control.json": {
+      "status": "success",
+      "scope": "CPU-only full-main integration; no GPU/performance evidence",
+      "analyzer_sha256": "e1db4da97d5474d07cb173c375dd33f9986120653e8da8e6419d7cbd71d64d01",
+      "plan_sha256": "44aed74be70eae283dab2fd4e2bcbefca5d906fc15eb35fbda775337ec9f4544",
+      "control_source_sha256": "0e6599879edfec2b25ce2a4e66c881ecc7908a631b86c7b4ae19114438827c58",
+      "passed_controls": 6,
+      "controls": [
+        "full_main_first4_source_metadata_trace_native_and_final_JSON",
+        "full_main_all32_8trials_source_metadata_trace_native_and_final_JSON",
+        "main_rejects_changed_frozen_plan_hash",
+        "main_rejects_changed_source_binding",
+        "main_rejects_changed_fixture_manifest",
+        "main_rejects_wrong_physical_GPU"
+      ],
+      "source_adapter": "Only expected-source Git blob retrieval reads current source files because the new study is not yet committed. Historical capture/source Git checks remain real. Runtime execution uses unadapted frozen Git checks."
+    },
+    "launcher-controls.json": {
+      "status": "success",
+      "scope": "CPU-only launcher ownership and retained real native/source provenance controls; no Docker/GPU execution or experiment simulation.",
+      "launcher_sha256": "b5f25bd318fb22f05e4bced5d055f769034a5548cf35978c583d7763b115ee9f",
+      "collector_sha256": "8da31db36b9010247dc741d60ad79bf98888b0de4b9f8c675108c2e5e8dcaf96",
+      "controls_passed": 19,
+      "controls": [
+        {
+          "control": "positive-first-block",
+          "passed": true,
+          "detail": [
+            "success",
+            []
+          ]
+        },
+        {
+          "control": "first-block-record-count",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "control": "positive-full-cohort",
+          "passed": true,
+          "detail": [
+            "success",
+            []
+          ]
+        },
+        {
+          "control": "full-cohort-record-count",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "control": "reject-missing-record",
+          "passed": true,
+          "detail": [
+            "error",
+            [
+              "required native records are missing"
+            ]
+          ]
+        },
+        {
+          "control": "reject-worker-failure",
+          "passed": true,
+          "detail": [
+            "error",
+            [
+              "trial0-h1f1-timing is not successful"
+            ]
+          ]
+        },
+        {
+          "control": "reject-native-hash-drift",
+          "passed": true,
+          "detail": [
+            "error",
+            [
+              "candidate: RuntimeError: worker build hash differs from final artifact: trial0-h1f1-timing"
+            ]
+          ]
+        },
+        {
+          "control": "reject-library-outside-runtime",
+          "passed": true,
+          "detail": [
+            "error",
+            [
+              "candidate: RuntimeError: worker switched native build paths: trial0-h1f1-timing"
+            ]
+          ]
+        },
+        {
+          "control": "reject-runtime-source-drift",
+          "passed": true,
+          "detail": [
+            "error",
+            [
+              "candidate: RuntimeError: collected source differs from frozen manifest: flashinfer/data/include/flashinfer/gemm/bmm_fp8.cuh"
+            ]
+          ]
+        },
+        {
+          "control": "reject-wrong-architecture",
+          "passed": true,
+          "detail": [
+            "error",
+            [
+              "candidate: RuntimeError: the FP8 native build did not target SM90a"
+            ]
+          ]
+        },
+        {
+          "control": "positive-after-fault-restoration",
+          "passed": true,
+          "detail": [
+            "success",
+            []
+          ]
+        },
+        {
+          "control": "restored-first-block",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "control": "reject-existing-attempt-without-overwrite",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "control": "existing-attempt-no-container-or-GPU-touch",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "control": "reject-attempt-path-traversal",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "control": "reject-non-SHA-before-side-effects",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "control": "cleanup-only-recorded-owned-CID",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "control": "cleanup-preserves-failing-exit-and-cache",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "control": "cleanup-invalid-CID-never-removes-container",
+          "passed": true,
+          "detail": null
+        }
+      ],
+      "script_sha256": "af1e573ce286539e55642b221678db6835b1bd15d987bf815c750742177a59cd"
+    }
+  },
+  "independent_review": "Separate read-only reviewer found and corrected a string/Path output bug before execution; final worker/launcher/collector/analyzer have no remaining identified blocker.",
+  "source_sha256": {
+    "test/manual/kernels/bench_flashinfer_selection_history.py": "a2f08f0e024e08e9563b9287957c320533f604fd114092ae86a8d7d24431ea7c",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261024T080000Z-h100-selection-history/plan.json": "44aed74be70eae283dab2fd4e2bcbefca5d906fc15eb35fbda775337ec9f4544",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261024T080000Z-h100-selection-history/analyze.py": "e1db4da97d5474d07cb173c375dd33f9986120653e8da8e6419d7cbd71d64d01",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261024T080000Z-h100-selection-history/launch.sh": "b5f25bd318fb22f05e4bced5d055f769034a5548cf35978c583d7763b115ee9f",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261024T080000Z-h100-selection-history/collect_build_provenance.py": "8da31db36b9010247dc741d60ad79bf98888b0de4b9f8c675108c2e5e8dcaf96"
+  }
+}

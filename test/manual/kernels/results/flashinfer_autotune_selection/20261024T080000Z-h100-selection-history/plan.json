@@ -1,0 +1,528 @@
+{
+  "schema_version": 1,
+  "batch_id": "20261024T080000Z-h100-selection-history",
+  "status": "preregistered_factorial_study",
+  "objective": "Determine whether the pre-startup retained-default-graph recipe, inline per-candidate tensor fingerprinting, or their interaction changes natural default-versus-explicit selection or actual retained serving-graph replay, while keeping source and auto measurement fixed.",
+  "landed_main_commit": "1897575ce11301b6b5ce647f0ad4fa2e777ee2bd",
+  "source_baseline_commit": "447c2d9bc611407e585dfdafae746baa27f56b4c",
+  "flashinfer_source": {
+    "base_release": "0.7.2",
+    "base_commit": "d84335d8c54e0c8f9f7e22faa15c7e34a58abf94",
+    "upstream_pr": 6148,
+    "patch_head": "14c5c67a1eb9ad3a608b8d3da3bf6d8924037c5c",
+    "implementation": "Exact original diff applied cleanly to0.7.2, not full PR head; candidate source only for every arm.",
+    "input_batch": "test/manual/kernels/results/flashinfer_autotune_selection/20261019T232945Z-h100-descriptor-qualification",
+    "source_overlay_archive_sha256": "c62f09dad18dbe0ce326177077360fe716095f209dc023b25c5552dcc12f666f",
+    "source_manifest_sha256": "3f4305fce604d3cd51e85047678c6efbf71e35bcf51037e9586d15bc20486895",
+    "native_loading": "Reuse audited prepare_native(candidate): explicit JitSpec.build/load, identical module bootstrap in every arm; reject AOT substitution. One isolated candidate build workspace, fresh process/container per worker.",
+    "autotune_cache_sha256": "7be4f83162ce3afada8593f5acd863769356da74102e6762ece133548a4d8bda"
+  },
+  "container_image": "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
+  "environment": {
+    "gpu": "NVIDIA H100 NVL",
+    "physical_gpu_uuid": "240958a2-e8e1-3bac-b767-365c9e0b97bd",
+    "driver": "580.159.04",
+    "torch": "2.14.1+cu130",
+    "torch_cuda": "13.0",
+    "exclusive_node": true,
+    "clock_lock": false,
+    "cuda_arch_list": "9.0",
+    "sglang_wrapper_sha256": "64deff581665bd04830535baccfdfbdfa72794d919bc462fc469a4c42bdd68f5",
+    "power_limit_watts": 310,
+    "hardware_change": "Request the same H100 NVL physical GPU; require identical UUID, driver and power limit before workers. Any necessary hardware substitution requires an explicitly recorded protocol revision before measurements. Comparisons are within this batch."
+  },
+  "workload": {
+    "api": "sglang.srt.layers.quantization.fp8_utils.apply_fp8_linear_bmm_flashinfer",
+    "model_id": "Qwen/Qwen3-0.6B",
+    "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "projection": "First transformer layer fused q/k/v projection, concatenated in source-verified SGLang QKV loader order.",
+    "tokens": 144,
+    "batch": 1,
+    "seed": 19,
+    "arms": [
+      "h0f0",
+      "h0f1",
+      "h1f0",
+      "h1f1"
+    ],
+    "fixture": "Frozen captured BF16 activations and checkpoint weights; per-tensor static scales calibrated from this one input/weight tensor. Exact shapes, tensor/file hashes and capture provenance frozen before tuning workers.",
+    "measurement_policy": "Unspecified current/auto in every cell; actual FP8 path eager/hot-L2 profiling. v2 default comparison enabled throughout.",
+    "persistence": "Winner consumption is memory-only inside matching replay scopes at capture. Existing wrapper may emit incidental v1 JSON, but workers never reload it and no explicit-policy persistence claim is made. Managed persistence disabled in both arms.",
+    "shape_limit": "One representative captured prefill projection, not full-model output accuracy or traffic distribution. Dense BF16 checkpoint adapted to static per-tensor FP8 for this experiment; no production calibration claim.",
+    "path": "Actual SGLang static quantizer, normal custom-op dispatch/fast path and allocation, FlashInfer cublas FP8 implementation; no replacement or output copy in timed calls.",
+    "profiling_input_limit": "Serving uses identical captured fixture bytes. The tuner retains its synthesized dynamic profiling activations. F1 records four-operand bytes immediately before each real profiler call; F0 records shape/stride/dtype only and retains no profiling-input references. F0 does not directly attest synthetic tensor-byte equality. Neither factor changes the candidate pool or RNG seed.",
+    "shape": [
+      144,
+      4096,
+      1024
+    ]
+  },
+  "protocol": {
+    "trials": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "timing_workers": 32,
+    "worker": "test/manual/kernels/bench_flashinfer_selection_history.py",
+    "cells": {
+      "h0f0": {
+        "history": 0,
+        "fingerprint": 0
+      },
+      "h0f1": {
+        "history": 0,
+        "fingerprint": 1
+      },
+      "h1f0": {
+        "history": 1,
+        "fingerprint": 0
+      },
+      "h1f1": {
+        "history": 1,
+        "fingerprint": 1
+      }
+    },
+    "trial_order": "Ascending0..7; four cells per trial in the exact schedule. Two full Williams four-row blocks. Source/plan frozen before first GPU worker. Fixed32 workers; no adaptive expansion or performance stopping.",
+    "counterbalance": "Within each Williams block every cell occupies each launch slot once and every directed within-trial predecessor pair once. Across both blocks each cell-by-slot pair has one winner-first and one default-first capture. Between-trial device-history transitions are not perfectly balanced.",
+    "history_factor": {
+      "h0": "After identical common setup, omit extra pre-startup graph and its measurement.",
+      "h1": "After identical common setup, capture a true-default-miss graph, retain it through primary timings, and perform its original500ms warmup,20ms calibration,15-sample measurement before actual startup tuning.",
+      "estimand_limit": "Bundled pre-startup recipe includes capture, live allocations, GPU work and elapsed time; it does not isolate temperature, clocks or a pure tuning effect."
+    },
+    "fingerprint_factor": {
+      "f0": "Keep profiler settings/counters/results/errors and operand metadata. Omit per-candidate GPU reads/copies/transfers/SHA; no retained synthetic tensor references.",
+      "f1": "Exact existing activation/weight/input-scale/weight-scale tensor-to-CPU SHA immediately before each original profiler call; output/workspace excluded.",
+      "observer_limit": "Outside profiler timestamps does not mean nonintervening; the noncontiguous4MiB weight copy, GPU-to-CPU transfers and SHA alter surrounding history. F0 has no direct synthetic-byte proof."
+    },
+    "graphs": {
+      "winner": "Actual natural memory-hit winner captured after startup.",
+      "default": "Independent graph of actual genuine cache-miss tactic-1; reversible full cache-state removal/restoration.",
+      "history": "Only H1 owns an additional pre-startup default graph; not a primary timing comparator."
+    },
+    "capture_order": "Explicit per-worker schedule field, independently balanced from cell launch order. Winner/default output allocations remain distinct.",
+    "profiling_defaults": {
+      "warmup": 3,
+      "repeat": 10,
+      "profiling_repeat": null,
+      "effective_profiling_repeat": 10,
+      "cuda_graph_profile_replays": 1,
+      "use_cuda_graph": false,
+      "use_cold_l2_cache": false,
+      "stream_delay_micro_secs": 5000,
+      "cuda_graph_delay_micro_secs": 100,
+      "use_global_timer": false
+    },
+    "profiling_change": "Only H/F experimental factors; no upstream preparation fix, current-main shift, policy, candidate-order, representative-input or persistence migration.",
+    "samples": 15,
+    "requested_iterations": 5120,
+    "warmup_ms": 500,
+    "min_sample_ms": 20,
+    "blocks": 24,
+    "rewarm_ms": 20,
+    "block_order": "12 winner/default and12 default/winner blocks, deterministic shuffle seed6100+trial, identical for four cells within a repetition.",
+    "timing": "Actual retained serving graphs replay outside policy scopes; primary CUDA-event replay span and secondary wall span,5120calls per batch. No profiler/probe/lookup/subprocess inside spans. Events can include host enqueue gaps.",
+    "identity": "Mandatory post-timing Torch profiler pass over the exact same retained winner/default objects in each timing worker, without recapture. Preserve per-graph labels and ordered kernel name/grid/block/register/shared signatures across3replays. Instrumented durations are diagnostic only.",
+    "numerical_guards": "Actual graph-owned allocation, independent quantized-input FP32 reference, output poison, zero and restored captured input; dense BF16 approximation separately diagnostic.",
+    "checkpoint": "First complete four-cell trial integrity gate before remaining28workers; no threshold on winner identity, margin or speedup.",
+    "timeout_seconds_per_worker": 600,
+    "startup_scope": "Instrumented startup walltime is secondary and includes the selected fingerprint intervention; pre-startup history measurement has a separate interval.",
+    "worker_schedule": [
+      {
+        "trial": 0,
+        "williams_block": 0,
+        "launch_position": 0,
+        "cell": "h0f0",
+        "history": 0,
+        "fingerprint": 0,
+        "capture_order": "default-first",
+        "replay_order_seed": 6100,
+        "raw_name": "trial0-h0f0-timing.json"
+      },
+      {
+        "trial": 0,
+        "williams_block": 0,
+        "launch_position": 1,
+        "cell": "h0f1",
+        "history": 0,
+        "fingerprint": 1,
+        "capture_order": "default-first",
+        "replay_order_seed": 6100,
+        "raw_name": "trial0-h0f1-timing.json"
+      },
+      {
+        "trial": 0,
+        "williams_block": 0,
+        "launch_position": 2,
+        "cell": "h1f1",
+        "history": 1,
+        "fingerprint": 1,
+        "capture_order": "winner-first",
+        "replay_order_seed": 6100,
+        "raw_name": "trial0-h1f1-timing.json"
+      },
+      {
+        "trial": 0,
+        "williams_block": 0,
+        "launch_position": 3,
+        "cell": "h1f0",
+        "history": 1,
+        "fingerprint": 0,
+        "capture_order": "winner-first",
+        "replay_order_seed": 6100,
+        "raw_name": "trial0-h1f0-timing.json"
+      },
+      {
+        "trial": 1,
+        "williams_block": 0,
+        "launch_position": 0,
+        "cell": "h0f1",
+        "history": 0,
+        "fingerprint": 1,
+        "capture_order": "winner-first",
+        "replay_order_seed": 6101,
+        "raw_name": "trial1-h0f1-timing.json"
+      },
+      {
+        "trial": 1,
+        "williams_block": 0,
+        "launch_position": 1,
+        "cell": "h1f0",
+        "history": 1,
+        "fingerprint": 0,
+        "capture_order": "default-first",
+        "replay_order_seed": 6101,
+        "raw_name": "trial1-h1f0-timing.json"
+      },
+      {
+        "trial": 1,
+        "williams_block": 0,
+        "launch_position": 2,
+        "cell": "h0f0",
+        "history": 0,
+        "fingerprint": 0,
+        "capture_order": "winner-first",
+        "replay_order_seed": 6101,
+        "raw_name": "trial1-h0f0-timing.json"
+      },
+      {
+        "trial": 1,
+        "williams_block": 0,
+        "launch_position": 3,
+        "cell": "h1f1",
+        "history": 1,
+        "fingerprint": 1,
+        "capture_order": "default-first",
+        "replay_order_seed": 6101,
+        "raw_name": "trial1-h1f1-timing.json"
+      },
+      {
+        "trial": 2,
+        "williams_block": 0,
+        "launch_position": 0,
+        "cell": "h1f0",
+        "history": 1,
+        "fingerprint": 0,
+        "capture_order": "winner-first",
+        "replay_order_seed": 6102,
+        "raw_name": "trial2-h1f0-timing.json"
+      },
+      {
+        "trial": 2,
+        "williams_block": 0,
+        "launch_position": 1,
+        "cell": "h1f1",
+        "history": 1,
+        "fingerprint": 1,
+        "capture_order": "winner-first",
+        "replay_order_seed": 6102,
+        "raw_name": "trial2-h1f1-timing.json"
+      },
+      {
+        "trial": 2,
+        "williams_block": 0,
+        "launch_position": 2,
+        "cell": "h0f1",
+        "history": 0,
+        "fingerprint": 1,
+        "capture_order": "default-first",
+        "replay_order_seed": 6102,
+        "raw_name": "trial2-h0f1-timing.json"
+      },
+      {
+        "trial": 2,
+        "williams_block": 0,
+        "launch_position": 3,
+        "cell": "h0f0",
+        "history": 0,
+        "fingerprint": 0,
+        "capture_order": "default-first",
+        "replay_order_seed": 6102,
+        "raw_name": "trial2-h0f0-timing.json"
+      },
+      {
+        "trial": 3,
+        "williams_block": 0,
+        "launch_position": 0,
+        "cell": "h1f1",
+        "history": 1,
+        "fingerprint": 1,
+        "capture_order": "default-first",
+        "replay_order_seed": 6103,
+        "raw_name": "trial3-h1f1-timing.json"
+      },
+      {
+        "trial": 3,
+        "williams_block": 0,
+        "launch_position": 1,
+        "cell": "h0f0",
+        "history": 0,
+        "fingerprint": 0,
+        "capture_order": "winner-first",
+        "replay_order_seed": 6103,
+        "raw_name": "trial3-h0f0-timing.json"
+      },
+      {
+        "trial": 3,
+        "williams_block": 0,
+        "launch_position": 2,
+        "cell": "h1f0",
+        "history": 1,
+        "fingerprint": 0,
+        "capture_order": "default-first",
+        "replay_order_seed": 6103,
+        "raw_name": "trial3-h1f0-timing.json"
+      },
+      {
+        "trial": 3,
+        "williams_block": 0,
+        "launch_position": 3,
+        "cell": "h0f1",
+        "history": 0,
+        "fingerprint": 1,
+        "capture_order": "winner-first",
+        "replay_order_seed": 6103,
+        "raw_name": "trial3-h0f1-timing.json"
+      },
+      {
+        "trial": 4,
+        "williams_block": 1,
+        "launch_position": 0,
+        "cell": "h1f1",
+        "history": 1,
+        "fingerprint": 1,
+        "capture_order": "winner-first",
+        "replay_order_seed": 6104,
+        "raw_name": "trial4-h1f1-timing.json"
+      },
+      {
+        "trial": 4,
+        "williams_block": 1,
+        "launch_position": 1,
+        "cell": "h0f0",
+        "history": 0,
+        "fingerprint": 0,
+        "capture_order": "default-first",
+        "replay_order_seed": 6104,
+        "raw_name": "trial4-h0f0-timing.json"
+      },
+      {
+        "trial": 4,
+        "williams_block": 1,
+        "launch_position": 2,
+        "cell": "h1f0",
+        "history": 1,
+        "fingerprint": 0,
+        "capture_order": "winner-first",
+        "replay_order_seed": 6104,
+        "raw_name": "trial4-h1f0-timing.json"
+      },
+      {
+        "trial": 4,
+        "williams_block": 1,
+        "launch_position": 3,
+        "cell": "h0f1",
+        "history": 0,
+        "fingerprint": 1,
+        "capture_order": "default-first",
+        "replay_order_seed": 6104,
+        "raw_name": "trial4-h0f1-timing.json"
+      },
+      {
+        "trial": 5,
+        "williams_block": 1,
+        "launch_position": 0,
+        "cell": "h1f0",
+        "history": 1,
+        "fingerprint": 0,
+        "capture_order": "default-first",
+        "replay_order_seed": 6105,
+        "raw_name": "trial5-h1f0-timing.json"
+      },
+      {
+        "trial": 5,
+        "williams_block": 1,
+        "launch_position": 1,
+        "cell": "h1f1",
+        "history": 1,
+        "fingerprint": 1,
+        "capture_order": "default-first",
+        "replay_order_seed": 6105,
+        "raw_name": "trial5-h1f1-timing.json"
+      },
+      {
+        "trial": 5,
+        "williams_block": 1,
+        "launch_position": 2,
+        "cell": "h0f1",
+        "history": 0,
+        "fingerprint": 1,
+        "capture_order": "winner-first",
+        "replay_order_seed": 6105,
+        "raw_name": "trial5-h0f1-timing.json"
+      },
+      {
+        "trial": 5,
+        "williams_block": 1,
+        "launch_position": 3,
+        "cell": "h0f0",
+        "history": 0,
+        "fingerprint": 0,
+        "capture_order": "winner-first",
+        "replay_order_seed": 6105,
+        "raw_name": "trial5-h0f0-timing.json"
+      },
+      {
+        "trial": 6,
+        "williams_block": 1,
+        "launch_position": 0,
+        "cell": "h0f1",
+        "history": 0,
+        "fingerprint": 1,
+        "capture_order": "default-first",
+        "replay_order_seed": 6106,
+        "raw_name": "trial6-h0f1-timing.json"
+      },
+      {
+        "trial": 6,
+        "williams_block": 1,
+        "launch_position": 1,
+        "cell": "h1f0",
+        "history": 1,
+        "fingerprint": 0,
+        "capture_order": "winner-first",
+        "replay_order_seed": 6106,
+        "raw_name": "trial6-h1f0-timing.json"
+      },
+      {
+        "trial": 6,
+        "williams_block": 1,
+        "launch_position": 2,
+        "cell": "h0f0",
+        "history": 0,
+        "fingerprint": 0,
+        "capture_order": "default-first",
+        "replay_order_seed": 6106,
+        "raw_name": "trial6-h0f0-timing.json"
+      },
+      {
+        "trial": 6,
+        "williams_block": 1,
+        "launch_position": 3,
+        "cell": "h1f1",
+        "history": 1,
+        "fingerprint": 1,
+        "capture_order": "winner-first",
+        "replay_order_seed": 6106,
+        "raw_name": "trial6-h1f1-timing.json"
+      },
+      {
+        "trial": 7,
+        "williams_block": 1,
+        "launch_position": 0,
+        "cell": "h0f0",
+        "history": 0,
+        "fingerprint": 0,
+        "capture_order": "winner-first",
+        "replay_order_seed": 6107,
+        "raw_name": "trial7-h0f0-timing.json"
+      },
+      {
+        "trial": 7,
+        "williams_block": 1,
+        "launch_position": 1,
+        "cell": "h0f1",
+        "history": 0,
+        "fingerprint": 1,
+        "capture_order": "winner-first",
+        "replay_order_seed": 6107,
+        "raw_name": "trial7-h0f1-timing.json"
+      },
+      {
+        "trial": 7,
+        "williams_block": 1,
+        "launch_position": 2,
+        "cell": "h1f1",
+        "history": 1,
+        "fingerprint": 1,
+        "capture_order": "default-first",
+        "replay_order_seed": 6107,
+        "raw_name": "trial7-h1f1-timing.json"
+      },
+      {
+        "trial": 7,
+        "williams_block": 1,
+        "launch_position": 3,
+        "cell": "h1f0",
+        "history": 1,
+        "fingerprint": 0,
+        "capture_order": "default-first",
+        "replay_order_seed": 6107,
+        "raw_name": "trial7-h1f0-timing.json"
+      }
+    ]
+  },
+  "acceptance": [
+    "Exact frozen source/overlay/nativebuild/container/physicalGPU/fixture hashes verified; new upstream implementation excluded.",
+    "Every worker H/F/capture order matches preregistered32worker schedule; fresh containers and native binary identity across cohort.",
+    "Actual natural minimum selection and default-first participation preserved; candidate failures visible rather than silently excluded.",
+    "F1 actual profiling bytes attested; F0 metadata-only and no retained synthetic references, without fabricating absent hashes.",
+    "Actual memory winner hit/default miss/cache restoration/no post-startup profiling and outside-scope replay verified.",
+    "All graph-owned outputs pass numerical/poison/changed/restored-input checks; exact retained objects traced only after primary timing.",
+    "All valid outcomes preserved without performance threshold; first complete4worker gate covers integrity only."
+  ],
+  "analysis": {
+    "independent_unit": "Eight complete fresh-process four-cell repetitions. Profile candidates,24replay blocks,15sequential samples and3instrumented trace replays are dependent within-worker observations.",
+    "primary_selection": "Runtime-bucket minimum best-explicit/default profiler ratio and signed percent margin, all finite/error rows, natural winner identity/count. Preserve continuous margins even if the categorical winner does not change.",
+    "primary_serving": "For each worker median of same-block winner/default GPU-event ratios, actual kernel signatures and capture order. No assumption that public tactic-1 proves identical CUDA kernels.",
+    "factorial": "Within each complete trial log contrasts: H=.5[(logR10+logR11)-(logR00+logR01)], F=.5[(logR01+logR11)-(logR00+logR10)], interaction=logR11-logR10-logR01+logR00. Apply separately to best-explicit/default profiling ratio and selected/default serving ratio; exponentiate and report all8values.",
+    "uncertainty": "Exploratory95percent percentile bootstrap of the median trial contrast, resampling complete four-cell trial vectors only. Exact multinomial weights represent all8^8 ordered resamples compactly; checkpoints with n1 report no CI. No block/sample pooling, multiple-testing significance or adaptive expansion.",
+    "descriptive": "Per-cell winner frequencies/tactics, profile margins, rawlatencies, startup time, capture-order strata and recorded device snapshots. Preserve neutral/slower outcomes. Physical launch equality does not imply equal address mapping/cache/device state.",
+    "exclusions": "No candidate-time trimming or removal of surprising valid trials. Invalid worker/trace/source/cache/numeric evidence fails integrity with exact reason and preserved attempt; coordinator retries require recorded justification.",
+    "scope_limits": "Single static-calibrated FP8 QKV fixture/H100/backend/hot-buffer source; no fullmodel accuracy/throughput, TP/EP, decode matrix, persistence or managed-store claim."
+  },
+  "publication": {
+    "branch": "experiment/flashinfer-candidate-selection",
+    "fork": "leejnau/sglang",
+    "pull_request": false,
+    "private_material": "Fixture tensors, native binaries and internal host details remain in private raw archive; public evidence keeps allowed hashes/metadata and filtered raw logs."
+  },
+  "resource_policy": "One exclusive same-GPU allocation; root freezes the exact source and confirms bounded allocation duration before launch. Preserve every attempt, exact binary/fixture private archive and node/durable/download hashes. No CI trigger or PR.",
+  "fixture": {
+    "manifest_sha256": "e13a86fab5db5796b22d8dab0f84080b8057b036ca7aef2c7be8832e76505bf1",
+    "tensor_file_sha256": "c30aa761eba827bb0b4eb6de0e99d9b8dda8243dd16d00146f9718d2abb05e8b",
+    "tensor_file_size_bytes": 12879616,
+    "capture_commit": "a29b31850c7b68cafde022614b00ab01d6ff5cde",
+    "capture_script_sha256": "c3c88dbf3df9fe0dc73d89a5acb9038e5b09fb1efc6316bc36917d06251f92a4",
+    "manifest_path": "fixture-manifest.json",
+    "private_capture_archive": "20261020T034000Z-h100-fp8-linear-capture-full-raw.tgz",
+    "private_capture_archive_sha256": "9f87e468d7b6c1f665f187ff6c9b009da82a5f534ffb67e37c24fd6ad017fec1",
+    "public_tensor_publication": false
+  },
+  "prior_objective_execution_commit": "e1024dc062cd252f72730359ab1d695d0c221178"
+}
