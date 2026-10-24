@@ -1,0 +1,178 @@
+{
+  "status": "success",
+  "checks": 51,
+  "passed_checks": [
+    "all role and ownership guard ASTs remain unchanged",
+    "only the original fill is inside the added inference context",
+    "old helper invoked outside inference mode",
+    "old helper only admits the normal output control",
+    "new helper refreshes the admitted output",
+    "output allocation retained",
+    "new helper restores caller inference state",
+    "new helper preserves reads",
+    "real correct write under inference mode remains valid",
+    "no-write leaves poison and is rejected",
+    "unsafe role rejected before mutation",
+    "unsafe rejection preserves caller inference state",
+    "unsafe role rejected before mutation",
+    "unsafe rejection preserves caller inference state",
+    "unsafe role rejected before mutation",
+    "unsafe rejection preserves caller inference state",
+    "unsafe role rejected before mutation",
+    "unsafe rejection preserves caller inference state",
+    "unsafe role rejected before mutation",
+    "unsafe rejection preserves caller inference state",
+    "unsafe role rejected before mutation",
+    "unsafe rejection preserves caller inference state",
+    "unsafe role rejected before mutation",
+    "unsafe rejection preserves caller inference state",
+    "unsafe role rejected before mutation",
+    "unsafe rejection preserves caller inference state",
+    "old helper invoked outside inference mode",
+    "old helper fails for inference output",
+    "new helper refreshes the admitted output",
+    "output allocation retained",
+    "new helper restores caller inference state",
+    "new helper preserves reads",
+    "real correct write under inference mode remains valid",
+    "no-write leaves poison and is rejected",
+    "unsafe role rejected before mutation",
+    "unsafe rejection preserves caller inference state",
+    "unsafe role rejected before mutation",
+    "unsafe rejection preserves caller inference state",
+    "unsafe role rejected before mutation",
+    "unsafe rejection preserves caller inference state",
+    "unsafe role rejected before mutation",
+    "unsafe rejection preserves caller inference state",
+    "unsafe role rejected before mutation",
+    "unsafe rejection preserves caller inference state",
+    "unsafe role rejected before mutation",
+    "unsafe rejection preserves caller inference state",
+    "unsafe role rejected before mutation",
+    "unsafe rejection preserves caller inference state",
+    "unsafe role rejected before mutation",
+    "unsafe rejection preserves caller inference state",
+    "patch against pinned original reproduces exact new harness"
+  ],
+  "script_sha256": "161840d33b1bfcacf55e97130264e7f32db672e0893b3c1bbd6d68ada9320624",
+  "loader_sha256": "1015ac25b2029495c09959bf8d1c638fa242c09d149a9ccdb14036ff82800843",
+  "old_harness_sha256": "094f66306d6e6080cdb5b50915f21fb643cdb40cb82471b58e5bdce6f451ce86",
+  "new_harness_sha256": "9f6f8db43d5b584fa07852e42c640f4c22a2ac8b535519bde637858841142efe",
+  "harness_patch_sha256": "706ca4d91f3e6ef8c1643977beef72fa39af121e691f9380a175633787fe94ef",
+  "torch": "2.14.1",
+  "outside_inference_mode_cases": [
+    {
+      "inference_allocation": false,
+      "old_helper": "passed",
+      "new_helper": "passed"
+    },
+    {
+      "inference_allocation": true,
+      "old_helper": "RuntimeError: inference tensor update outside InferenceMode",
+      "new_helper": "passed"
+    }
+  ],
+  "unsafe_role_controls": [
+    {
+      "helper": "old",
+      "inference_allocation": false,
+      "kind": "read_alias",
+      "rejected_before_mutation": true
+    },
+    {
+      "helper": "new",
+      "inference_allocation": false,
+      "kind": "read_alias",
+      "rejected_before_mutation": true
+    },
+    {
+      "helper": "old",
+      "inference_allocation": false,
+      "kind": "scratch_alias",
+      "rejected_before_mutation": true
+    },
+    {
+      "helper": "new",
+      "inference_allocation": false,
+      "kind": "scratch_alias",
+      "rejected_before_mutation": true
+    },
+    {
+      "helper": "old",
+      "inference_allocation": false,
+      "kind": "integer",
+      "rejected_before_mutation": true
+    },
+    {
+      "helper": "new",
+      "inference_allocation": false,
+      "kind": "integer",
+      "rejected_before_mutation": true
+    },
+    {
+      "helper": "old",
+      "inference_allocation": false,
+      "kind": "wrong_role",
+      "rejected_before_mutation": true
+    },
+    {
+      "helper": "new",
+      "inference_allocation": false,
+      "kind": "wrong_role",
+      "rejected_before_mutation": true
+    },
+    {
+      "helper": "old",
+      "inference_allocation": true,
+      "kind": "read_alias",
+      "rejected_before_mutation": true
+    },
+    {
+      "helper": "new",
+      "inference_allocation": true,
+      "kind": "read_alias",
+      "rejected_before_mutation": true
+    },
+    {
+      "helper": "old",
+      "inference_allocation": true,
+      "kind": "scratch_alias",
+      "rejected_before_mutation": true
+    },
+    {
+      "helper": "new",
+      "inference_allocation": true,
+      "kind": "scratch_alias",
+      "rejected_before_mutation": true
+    },
+    {
+      "helper": "old",
+      "inference_allocation": true,
+      "kind": "integer",
+      "rejected_before_mutation": true
+    },
+    {
+      "helper": "new",
+      "inference_allocation": true,
+      "kind": "integer",
+      "rejected_before_mutation": true
+    },
+    {
+      "helper": "old",
+      "inference_allocation": true,
+      "kind": "wrong_role",
+      "rejected_before_mutation": true
+    },
+    {
+      "helper": "new",
+      "inference_allocation": true,
+      "kind": "wrong_role",
+      "rejected_before_mutation": true
+    }
+  ],
+  "limits": [
+    "Actual CPU inference tensors and unchanged whole harness modules execute; GPU-only import boundaries use the disclosed existing loader.",
+    "No CUDA capture, device timing, descriptor execution or SGLang GPU call is qualified by these controls.",
+    "The fix changes only the ownership-validated output fill context, with no guard or timing placement changes."
+  ]
+}

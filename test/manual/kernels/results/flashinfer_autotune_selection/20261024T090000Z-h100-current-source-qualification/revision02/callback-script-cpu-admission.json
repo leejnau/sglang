@@ -1,0 +1,206 @@
+{
+  "status": "CPU admission passed; actual CUDA pending",
+  "worker_sha256": "d2f45d6191727873e71caecf172cef020e8d836ced3ddc687ce85bf234f3e1ba",
+  "admission_source_sha256": "6e05b8843047ae1f74f68d3c8893e7cd2f6073cdb30f91c889d076509889d42c",
+  "actual_harness_source_sha256": "9f6f8db43d5b584fa07852e42c640f4c22a2ac8b535519bde637858841142efe",
+  "cases": [
+    {
+      "allocation_mode": "normal",
+      "output_is_inference": false,
+      "callback_enabled": false,
+      "kind": "correct",
+      "accepted": true,
+      "expected": true,
+      "rejection": null,
+      "profile_tactics": [
+        -1,
+        0
+      ],
+      "final_assertions": 3,
+      "callback_calls": 0,
+      "output_data_ptr": 38563085760
+    },
+    {
+      "allocation_mode": "normal",
+      "output_is_inference": false,
+      "callback_enabled": false,
+      "kind": "wrong",
+      "accepted": false,
+      "expected": false,
+      "rejection": "Tensor-likes are not equal!",
+      "profile_tactics": [
+        -1,
+        0
+      ],
+      "final_assertions": 2,
+      "callback_calls": 0,
+      "output_data_ptr": 38569509760
+    },
+    {
+      "allocation_mode": "normal",
+      "output_is_inference": false,
+      "callback_enabled": false,
+      "kind": "no_write",
+      "accepted": true,
+      "expected": true,
+      "rejection": null,
+      "profile_tactics": [
+        -1,
+        0
+      ],
+      "final_assertions": 3,
+      "callback_calls": 0,
+      "output_data_ptr": 38569510464
+    },
+    {
+      "allocation_mode": "normal",
+      "output_is_inference": false,
+      "callback_enabled": true,
+      "kind": "correct",
+      "accepted": true,
+      "expected": true,
+      "rejection": null,
+      "profile_tactics": [
+        -1,
+        0
+      ],
+      "final_assertions": 3,
+      "callback_calls": 3,
+      "output_data_ptr": 38569510720
+    },
+    {
+      "allocation_mode": "normal",
+      "output_is_inference": false,
+      "callback_enabled": true,
+      "kind": "wrong",
+      "accepted": false,
+      "expected": false,
+      "rejection": "Tensor-likes are not equal!",
+      "profile_tactics": [
+        -1,
+        0
+      ],
+      "final_assertions": 2,
+      "callback_calls": 2,
+      "output_data_ptr": 38569511168
+    },
+    {
+      "allocation_mode": "normal",
+      "output_is_inference": false,
+      "callback_enabled": true,
+      "kind": "no_write",
+      "accepted": false,
+      "expected": false,
+      "rejection": "Tensor-likes are not equal!",
+      "profile_tactics": [
+        -1,
+        0
+      ],
+      "final_assertions": 2,
+      "callback_calls": 2,
+      "output_data_ptr": 38569510336
+    },
+    {
+      "allocation_mode": "inference",
+      "output_is_inference": true,
+      "callback_enabled": false,
+      "kind": "correct",
+      "accepted": true,
+      "expected": true,
+      "rejection": null,
+      "profile_tactics": [
+        -1,
+        0
+      ],
+      "final_assertions": 3,
+      "callback_calls": 0,
+      "output_data_ptr": 38569510592
+    },
+    {
+      "allocation_mode": "inference",
+      "output_is_inference": true,
+      "callback_enabled": false,
+      "kind": "wrong",
+      "accepted": false,
+      "expected": false,
+      "rejection": "Tensor-likes are not equal!",
+      "profile_tactics": [
+        -1,
+        0
+      ],
+      "final_assertions": 2,
+      "callback_calls": 0,
+      "output_data_ptr": 38569511808
+    },
+    {
+      "allocation_mode": "inference",
+      "output_is_inference": true,
+      "callback_enabled": false,
+      "kind": "no_write",
+      "accepted": true,
+      "expected": true,
+      "rejection": null,
+      "profile_tactics": [
+        -1,
+        0
+      ],
+      "final_assertions": 3,
+      "callback_calls": 0,
+      "output_data_ptr": 38569510144
+    },
+    {
+      "allocation_mode": "inference",
+      "output_is_inference": true,
+      "callback_enabled": true,
+      "kind": "correct",
+      "accepted": true,
+      "expected": true,
+      "rejection": null,
+      "profile_tactics": [
+        -1,
+        0
+      ],
+      "final_assertions": 3,
+      "callback_calls": 3,
+      "output_data_ptr": 38569510976
+    },
+    {
+      "allocation_mode": "inference",
+      "output_is_inference": true,
+      "callback_enabled": true,
+      "kind": "wrong",
+      "accepted": false,
+      "expected": false,
+      "rejection": "Tensor-likes are not equal!",
+      "profile_tactics": [
+        -1,
+        0
+      ],
+      "final_assertions": 2,
+      "callback_calls": 2,
+      "output_data_ptr": 38569512448
+    },
+    {
+      "allocation_mode": "inference",
+      "output_is_inference": true,
+      "callback_enabled": true,
+      "kind": "no_write",
+      "accepted": false,
+      "expected": false,
+      "rejection": "Tensor-likes are not equal!",
+      "profile_tactics": [
+        -1,
+        0
+      ],
+      "final_assertions": 2,
+      "callback_calls": 2,
+      "output_data_ptr": 38569513088
+    }
+  ],
+  "unsafe_role_rejections": 4,
+  "boundaries": [
+    "Complete revised worker, whole current harness and real tuner/cache/policy execute with actual CPU inference and normal tensors.",
+    "Only allocations/device queries, capture/replay, events and captured add execution use disclosed CPU CUDA boundaries. Inference write admission is preserved for the captured runner actions.",
+    "Profiling times are controlled by the standalone worker as intended. No actual CUDA, native provider or GPU numerical pass is claimed."
+  ]
+}

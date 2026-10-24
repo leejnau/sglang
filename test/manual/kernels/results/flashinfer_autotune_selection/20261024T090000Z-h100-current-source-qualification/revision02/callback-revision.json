@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "status": "Revision02 prepared; actual CUDA execution pending.",
+  "base_commit": "27c62fdf0ab1cd4014df8a15b66a975541fda83c",
+  "reason": "The original owned-output callback passed normal-tensor controls but failed on the real inference-allocated SGLang output when invoked outside inference mode.",
+  "minimal_change": "Wrap only the existing declared-output NaN fill in torch.inference_mode(). Keep every role/ownership guard outside that context and preserve after-timing, immediately-before-final-replay placement.",
+  "original_sources_unchanged": true,
+  "base_harness_sha256": "7947647d266ec6a837bedd8e9c87d7d4dcbb4683bb9d16fef4b2d01c3f43b0dd",
+  "attempt01_callback_harness_sha256": "094f66306d6e6080cdb5b50915f21fb643cdb40cb82471b58e5bdce6f451ce86",
+  "revision02_harness_sha256": "9f6f8db43d5b584fa07852e42c640f4c22a2ac8b535519bde637858841142efe",
+  "patch_against_original_sha256": "706ca4d91f3e6ef8c1643977beef72fa39af121e691f9380a175633787fe94ef",
+  "delta_against_attempt01_sha256": "82eed25751b16c7cc543f7945a07542663d375df7a8155da666f1c819edf08ac",
+  "standalone_test": {
+    "path": "/private/tmp/fi-next-steps-20261024/current-source-coordinator/revision02/test_output_refresh.py",
+    "sha256": "d2f45d6191727873e71caecf172cef020e8d836ced3ddc687ce85bf234f3e1ba",
+    "case_field": "allocation_mode normal|inference; output_is_inference bool",
+    "cases": 12,
+    "cases_per_allocation_mode": 6,
+    "unsafe_roles": 4,
+    "allocation_scope": "Allocation context exits before graph_selection_study. Runner writes enter inference_mode, and the prepare callback asserts it is called outside inference_mode."
+  },
+  "CPU": {
+    "inference_regression_checks": 51,
+    "unsafe_role_controls_old_new_normal_inference": 16,
+    "standalone_admission_cases": 12,
+    "standalone_unsafe_role_rejections": 4,
+    "old_helper_inference_output": "RuntimeError outside InferenceMode",
+    "new_helper_inference_output": "Accepted output refresh retains same allocation and pointer; correct write passes and no-write fails.",
+    "actual_sources": "Whole pinned harness modules and production tuner/cache paths loaded with explicitly disclosed GPU-only import/capture/event/native boundaries. Actual CPU normal and inference tensors, writes and numerical assertions remain real."
+  },
+  "checks": {
+    "AST": "pass",
+    "Ruff_lint": "pass",
+    "Ruff_format": "pass",
+    "CLI_help": "pass",
+    "patch_against_original_reproduces_new_bytes": "pass",
+    "original_guard_AST_unchanged": "pass"
+  },
+  "limits": [
+    "No CUDA execution, device timing or selected-descriptor acceptance is established here.",
+    "The standalone CPU admission uses graph/event/allocation boundaries; it does not report actual CUDA success.",
+    "No timing objective, candidate selection, source provider or production behavior is changed by this callback repair.",
+    "Attempt01 evidence remains separate and preserved; these are new revision02 sources rather than modifications to the frozen attempt."
+  ]
+}

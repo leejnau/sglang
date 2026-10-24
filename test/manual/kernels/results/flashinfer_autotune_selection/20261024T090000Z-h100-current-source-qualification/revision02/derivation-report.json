@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "status": "prepared_not_GPU_executed",
+  "original_manifest_sha256": "7c68529cfcb89ab47f1cae5f08ee3187626c0a6f2dadac3e6c4f862f42ded974",
+  "revision_manifest_sha256": "9a4c51562d7410d785cc544c004bc4f92486f40311cb5c7a7328c2c1213160d5",
+  "harness_sha256": "9f6f8db43d5b584fa07852e42c640f4c22a2ac8b535519bde637858841142efe",
+  "callback_patch_sha256": "706ca4d91f3e6ef8c1643977beef72fa39af121e691f9380a175633787fe94ef",
+  "patch_apply_byte_equality": true,
+  "whole_benchmark_AST_change": "Only existing output.fill_(NaN) is wrapped in torch.inference_mode; ownership guards and all other benchmark AST nodes are identical.",
+  "manifest_changes": [
+    {
+      "path": "$.candidates[1].derivation_note",
+      "added": "Revision02 callback only: runtime source root is supplied explicitly; official data links are generated at the actual container path. Original FP8 runtime source and all other source/dependency records remain unchanged."
+    },
+    {
+      "path": "$.candidates[1].patches[1].path",
+      "before": "/private/tmp/fi-next-steps-20261024/fixture-validation-callback/harness-only.patch",
+      "after": "/private/tmp/fi-next-steps-20261024/current-source-coordinator/revision02/harness-only.patch"
+    },
+    {
+      "path": "$.candidates[1].patches[1].sha256",
+      "before": "12947a8150ca1f09fb8294279027b8aa5d4d402de6f5eaa6022e6981e642b31c",
+      "after": "706ca4d91f3e6ef8c1643977beef72fa39af121e691f9380a175633787fe94ef"
+    },
+    {
+      "path": "$.candidates[1].root",
+      "removed": "/private/tmp/fi-next-steps-20261024/current-source-qualification/fp8-runtime-callback"
+    },
+    {
+      "path": "$.candidates[1].tracked_changes[0].candidate_sha256",
+      "before": "094f66306d6e6080cdb5b50915f21fb643cdb40cb82471b58e5bdce6f451ce86",
+      "after": "9f6f8db43d5b584fa07852e42c640f4c22a2ac8b535519bde637858841142efe"
+    },
+    {
+      "path": "$.candidates[1].tracked_changes[0].size",
+      "before": 38036,
+      "after": 38073
+    },
+    {
+      "path": "$.candidates[1].untracked_packaging_links",
+      "removed": {
+        "csrc": "/private/tmp/fi-next-steps-20261024/current-source-qualification/fp8-runtime-callback/csrc",
+        "include": "/private/tmp/fi-next-steps-20261024/current-source-qualification/fp8-runtime-callback/include",
+        "cutlass": "/private/tmp/fi-next-steps-20261024/current-source-qualification/fp8-runtime-callback/3rdparty/cutlass",
+        "cccl": "/private/tmp/fi-next-steps-20261024/current-source-qualification/fp8-runtime-callback/3rdparty/cccl",
+        "spdlog": "/private/tmp/fi-next-steps-20261024/current-source-qualification/fp8-runtime-callback/3rdparty/spdlog"
+      }
+    }
+  ],
+  "adapter_contract_changes": [
+    {
+      "path": "$.harness_sha256",
+      "before": "094f66306d6e6080cdb5b50915f21fb643cdb40cb82471b58e5bdce6f451ce86",
+      "after": "9f6f8db43d5b584fa07852e42c640f4c22a2ac8b535519bde637858841142efe"
+    },
+    {
+      "path": "$.patches[1].sha256",
+      "before": "12947a8150ca1f09fb8294279027b8aa5d4d402de6f5eaa6022e6981e642b31c",
+      "after": "706ca4d91f3e6ef8c1643977beef72fa39af121e691f9380a175633787fe94ef"
+    }
+  ],
+  "preserved_original_files": {
+    "/private/tmp/fi-next-steps-20261024/current-source-qualification/candidate-manifest.json": "7c68529cfcb89ab47f1cae5f08ee3187626c0a6f2dadac3e6c4f862f42ded974",
+    "/private/tmp/fi-next-steps-20261024/current-source-qualification-review/qualify_cuda.py": "994bbb8d0fbdae65dc19d97e9d787b53df598ae26813fda9531cc507d6f5c715",
+    "/private/tmp/fi-next-steps-20261024/current-source-coordinator/launch_current.sh": "ba45937f135a22f56a0a9b05a622ed2d566d67be07facff47cf66f3eee151b2b",
+    "/private/tmp/fi-next-steps-20261024/current-source-coordinator/adapter/adapter-contract.json": "65d85839c072946a19ef20a564428232502ef35b1a0d689a8759bdf14a5c4d19",
+    "/private/tmp/fi-next-steps-20261024/current-source-qualification/fp8-runtime-callback/benchmarks/bench_autotuner_accuracy.py": "094f66306d6e6080cdb5b50915f21fb643cdb40cb82471b58e5bdce6f451ce86"
+  },
+  "new_files": {
+    "candidate-manifest.json": "9a4c51562d7410d785cc544c004bc4f92486f40311cb5c7a7328c2c1213160d5",
+    "qualify_cuda.py": "3e6e0c1f4ff8b8b419f9e710d90d73878449412b653245e91296674b62cb78da",
+    "launch_current.sh": "cf64f9678a7e1ef1f7c9dc5e3c7ff28e98f7d2f40e31d551510dd3c178136920",
+    "adapter/adapter-contract.json": "1076ddea3b9d9464c50a52dfb5c187a7b4824587ea4a56c67ca3bb7b64f145ed",
+    "adapter/sglang_captured_fixture.py": "f0e1cedbcb79b3934cce877e3b1780c315ebf32665ec4de6803267ccce5bb413",
+    "harness-only.patch": "706ca4d91f3e6ef8c1643977beef72fa39af121e691f9380a175633787fe94ef",
+    "run_harness.py": "f406c9786f4af2480d134dbb861e404100ea0e1e3346d76774b26593cc8a435f",
+    "test_output_refresh.py": "d2f45d6191727873e71caecf172cef020e8d836ced3ddc687ce85bf234f3e1ba"
+  },
+  "limits": [
+    "No native runtime/source change, helper change, import, CUDA execution, retry or performance claim.",
+    "Standalone callback controls must exercise both normal and inference allocations outside allocation context; root owns execution gating and preservation."
+  ],
+  "launcher_metadata_guard": "New launcher additionally cross-checks staged runtime/callback patch bytes against candidate-manifest patch hashes.",
+  "derivation_script_sha256": "20a0a862f214e0655fe5bb28548c5e1ee0e34277cbe661bf308167553f9b6481"
+}

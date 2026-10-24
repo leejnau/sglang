@@ -1,0 +1,14 @@
+[
+  {
+    "path": "check_inference_refresh.py",
+    "sha256": "161840d33b1bfcacf55e97130264e7f32db672e0893b3c1bbd6d68ada9320624"
+  },
+  {
+    "path": "check_cuda_gate_cpu.py",
+    "sha256": "6e05b8843047ae1f74f68d3c8893e7cd2f6073cdb30f91c889d076509889d42c"
+  },
+  {
+    "path": "revision02-only.patch",
+    "sha256": "82eed25751b16c7cc543f7945a07542663d375df7a8155da666f1c819edf08ac"
+  }
+]

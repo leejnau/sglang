@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "batch": "20261024T090000Z-h100-current-source-qualification",
+  "objective": "Qualify the pinned current-source FP8 native provider, original decorated SGLang facade and fixture output-refresh contract before proposing another measurement comparison.",
+  "scope": "Bounded correctness and API/cache setup; not a performance experiment or production adoption.",
+  "source": {
+    "flashinfer_commit": "27c62fdf0ab1cd4014df8a15b66a975541fda83c",
+    "variant": "FP8-only descriptor runtime port plus optional benchmark validation callback",
+    "port_patch_sha256": "e5c0a130690cd9fe9f1204b11368433430345f066ee8dc3bd376cf49c7ef4d64",
+    "harness_patch_sha256": "706ca4d91f3e6ef8c1643977beef72fa39af121e691f9380a175633787fe94ef",
+    "private_source_archive_sha256": "209b2de9e76c358b94407202a4670613055e963200184e716b50eb67aad71c91",
+    "private_source_archive_bytes": 161190591,
+    "source_runtime_metadata": "No fabricated build metadata: official fallback0.0.0+unknown/unknown, exact source identity established through pinned exhaustive manifests.",
+    "new_tuner_cache_timer_unchanged": true,
+    "sglang": "Frozen research branch commit recorded by launcher; actual fixture-source hashes verified against unchanged SGLang facade and quantizer."
+  },
+  "environment": {
+    "image": "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
+    "gpu": "NVIDIA H100 NVL",
+    "uuid": "240958a2-e8e1-3bac-b767-365c9e0b97bd",
+    "driver": "580.159.04",
+    "power_limit_watts": 310,
+    "torch": "2.14.1+cu130",
+    "exclusive": true,
+    "network_in_container": "none",
+    "native_build": "Explicit current JitSpec build/load for GEMM and delay helper; one-time binding, installed AOT providers not used for those two modules.",
+    "shared_build_cache": "New unique owned directory shared by four fresh containers; separate HOME per container, no managed tuning persistence."
+  },
+  "fixture": {
+    "shape_m_n_k": [
+      144,
+      4096,
+      1024
+    ],
+    "tensor_file_sha256": "c30aa761eba827bb0b4eb6de0e99d9b8dda8243dd16d00146f9718d2abb05e8b",
+    "manifest_sha256": "e13a86fab5db5796b22d8dab0f84080b8057b036ca7aef2c7be8832e76505bf1",
+    "numerical_reference": "Actual static-quantized activation/weights dequantized into FP32 matmul with TF32 disabled; rtol0.02, atol0.125; exact zero on changed-zero-input controls."
+  },
+  "gates": [
+    {
+      "name": "native-facade",
+      "timeout_seconds": 900,
+      "checks": [
+        "Exact source/import/package/provider inventory and build artifacts.",
+        "Actual original decorated BMM and SGLang static FP8 facade.",
+        "One control descriptor accepted by actual native implementation at M144 and M129; same bucket256 enumeration and cache key.",
+        "Default true-miss and explicit real-memory-hit eager/graph numerics.",
+        "Original retained graphs, poisoned outputs, changed-zero/restored inputs, no profiling."
+      ],
+      "selection": "First native-accepted shared descriptor as functionality control; no fastest/natural-winner claim."
+    },
+    {
+      "name": "callback-controls",
+      "timeout_seconds": 300,
+      "checks": [
+        "Actual current harness/tuner plus actual CUDA capture/replay and tensor writes, controlled profile durations.",
+        "Twelve correct/wrong/no-write cases with/without callback across normal/inference output allocations; four unsafe-role CPU checks.",
+        "Only callback-covered no-write case must reject; preserve legacy behavior without callback."
+      ]
+    },
+    {
+      "name": "retained-auto",
+      "timeout_seconds": 300,
+      "checks": [
+        "Official module:factory path, one fresh process/seed19, actual cache hit and output refresh.",
+        "One exactM144 profile; runtime normalized keyM144 while runner enumeration can remain256."
+      ],
+      "measurement": "Two short validation rounds only, not selection/performance inference."
+    },
+    {
+      "name": "synthesized-auto",
+      "timeout_seconds": 300,
+      "checks": [
+        "Official module:factory path, one fresh process/seed19, actual cache hit and output refresh.",
+        "Original nine actualMs1,2,4,8,16,32,64,128,144; runtime normalized key256."
+      ],
+      "measurement": "Two short validation rounds only, not selection/performance inference."
+    }
+  ],
+  "shared_smoke_settings": {
+    "policy": "auto; no measurement policy/coldL2 override",
+    "warmup": 3,
+    "tuner_repeat": 10,
+    "validation_replays": 16,
+    "oracle_rounds": 2,
+    "prequeue_cycles": 10000000
+  },
+  "stopping": {
+    "overall_launcher_seconds": 1800,
+    "allocation_minutes": 45,
+    "workers": 4,
+    "stop_on_any_gate_failure": true,
+    "automatic_retry": false,
+    "all_attempts_preserved": true,
+    "release_after_preservation": true
+  },
+  "limits": [
+    "No claim this is stock released FlashInfer; patches remain unmerged research changes.",
+    "Native acceptance proves the native-worker control descriptor only. The two setup smokes do not observe actual selected-descriptor acceptance and may exercise fallback. Each future measured selected descriptor needs an outside-timer acceptance check.",
+    "Retained versus synthesized fixture modes change profile domain and keys; they are not an activation-values-only contrast.",
+    "BMM harness timings omit SGLang quantization, allocation and lookup; no model-serving or throughput claim.",
+    "No fresh-process persistence, scoped-cache prototype, distributed GPU, BF16, EP/MegaMoE or full-model qualification.",
+    "Do not launch objective/input performance matrix automatically from passing these gates."
+  ],
+  "revision": 2,
+  "revision_reason": {
+    "attempt01_source": "24ef03964c06503e30aabffafb0ae0c31320e4d4",
+    "attempt01_result": "Native/facade and callbacknormal-output gates passed. Retainedfixture failed callback outputfill outside inference mode; synthesized not launched.",
+    "failure_is": "Validation-helper integration defect, not evidence of numerical kernel failure.",
+    "change": "Only declared output.fill_(NaN) now runs under torch.inference_mode; original source/timer/native code and ownership checks unchanged. Tests add inferenceoutput allocation mode; metadata pins updated.",
+    "preserved_full_raw_sha256": "395c7e543cf701d194ed27d6698db5dec1599ece06399be496fcca7c2002bcbe",
+    "fresh_attempt": "Four new fresh processes/newunique cache; no failed result excluded or merged into successes."
+  },
+  "tools_archive": {
+    "sha256": "ae7159aba41c3f26199568f9742ab140e7c20985131dbdbd58d7af7c28246829",
+    "members": [
+      {
+        "path": "manifests/candidate-manifest.json",
+        "sha256": "9a4c51562d7410d785cc544c004bc4f92486f40311cb5c7a7328c2c1213160d5",
+        "bytes": 6082
+      },
+      {
+        "path": "manifests/port-manifest.json",
+        "sha256": "1ac5a30bb27519322e067b17f796a243bcec76814925a40c703797cfdfe31f14",
+        "bytes": 4437
+      },
+      {
+        "path": "patches/fp8-current-main.patch",
+        "sha256": "e5c0a130690cd9fe9f1204b11368433430345f066ee8dc3bd376cf49c7ef4d64",
+        "bytes": 22599
+      },
+      {
+        "path": "patches/harness-only.patch",
+        "sha256": "706ca4d91f3e6ef8c1643977beef72fa39af121e691f9380a175633787fe94ef",
+        "bytes": 3648
+      },
+      {
+        "path": "tools/adapter/adapter-contract.json",
+        "sha256": "1076ddea3b9d9464c50a52dfb5c187a7b4824587ea4a56c67ca3bb7b64f145ed",
+        "bytes": 1859
+      },
+      {
+        "path": "tools/adapter/sglang_captured_fixture.py",
+        "sha256": "f0e1cedbcb79b3934cce877e3b1780c315ebf32665ec4de6803267ccce5bb413",
+        "bytes": 10385
+      },
+      {
+        "path": "tools/container_preflight.py",
+        "sha256": "b8d0f6bbc85eaca0e3ef1419ab99a97d5340c96b3da382cba81d7896768287ba",
+        "bytes": 9900
+      },
+      {
+        "path": "tools/launch_current.sh",
+        "sha256": "cf64f9678a7e1ef1f7c9dc5e3c7ff28e98f7d2f40e31d551510dd3c178136920",
+        "bytes": 16732
+      },
+      {
+        "path": "tools/preserve_current.py",
+        "sha256": "93acf0f49038a56024b8a1934a6a83194bc43c81b597c9bb96cae52de503a09a",
+        "bytes": 3243
+      },
+      {
+        "path": "tools/qualify_cuda.py",
+        "sha256": "3e6e0c1f4ff8b8b419f9e710d90d73878449412b653245e91296674b62cb78da",
+        "bytes": 27655
+      },
+      {
+        "path": "tools/run_harness.py",
+        "sha256": "f406c9786f4af2480d134dbb861e404100ea0e1e3346d76774b26593cc8a435f",
+        "bytes": 4056
+      },
+      {
+        "path": "tools/test_output_refresh.py",
+        "sha256": "d2f45d6191727873e71caecf172cef020e8d836ced3ddc687ce85bf234f3e1ba",
+        "bytes": 10282
+      }
+    ]
+  }
+}
