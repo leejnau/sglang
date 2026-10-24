@@ -1,0 +1,33 @@
+{
+  "worker_protocol_assertions": 54,
+  "real_tuner_assertions": 31,
+  "launcher_collector_controls": 19,
+  "analyzer_controls": 47,
+  "status": "passed",
+  "private_evidence": [
+    {
+      "file": "fi-measurement-objective-worker-cpu-controls.json",
+      "sha256": "c39baac40bfc3e1a20d4dfbe2924a459d43cd8dbdeb3485f94fcc5e1d5624cba"
+    },
+    {
+      "file": "fi-objective-analyzer-controls.json",
+      "sha256": "5e2b1e929946afdd10605910f836d3cdd21a7451c8e62c7300b24b84157c36f4"
+    },
+    {
+      "file": "fi-objective-launcher-controls.json",
+      "sha256": "8659dae4e4f5fe9b627f956b216478f5770d507dab3958a0e1f21d34e7f0a68a"
+    },
+    {
+      "file": "fi-objective-launcher-controls.py",
+      "sha256": "2cd501526ad5ac562cdfa6dd50080d6ac093581dab5ba3c109de6f878905da5e"
+    }
+  ],
+  "checks": [
+    "CPU fault controls",
+    "real FlashInfer tuner with controlled timings",
+    "Python compile and CLI help",
+    "shell syntax",
+    "applicable repository hooks"
+  ],
+  "gpu_status": "pending"
+}

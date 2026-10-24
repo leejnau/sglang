@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "batch_id": "20261024T031500Z-h100-measurement-objective",
+  "status": "preregistered_objective_only_study",
+  "objective": "Compare current/auto against explicit CUDA Graph measurement with default-candidate comparison in both arms; independently evaluate each naturally selected winner against default on the same real SGLang FP8 linear serving graph.",
+  "landed_main_commit": "1897575ce11301b6b5ce647f0ad4fa2e777ee2bd",
+  "source_baseline_commit": "ad54bea9c2b3dd9c121fee258cda474c7a76b202",
+  "flashinfer_source": {
+    "base_release": "0.7.2",
+    "base_commit": "d84335d8c54e0c8f9f7e22faa15c7e34a58abf94",
+    "upstream_pr": 6148,
+    "patch_head": "14c5c67a1eb9ad3a608b8d3da3bf6d8924037c5c",
+    "implementation": "Exact original diff applied cleanly to0.7.2, not full PR head; candidate source only for every arm.",
+    "input_batch": "test/manual/kernels/results/flashinfer_autotune_selection/20261019T232945Z-h100-descriptor-qualification",
+    "source_overlay_archive_sha256": "c62f09dad18dbe0ce326177077360fe716095f209dc023b25c5552dcc12f666f",
+    "source_manifest_sha256": "3f4305fce604d3cd51e85047678c6efbf71e35bcf51037e9586d15bc20486895",
+    "native_loading": "Reuse audited prepare_native(candidate): explicit JitSpec.build/load, identical module bootstrap in every arm; reject AOT substitution. One isolated candidate build workspace, fresh process/container per worker.",
+    "autotune_cache_sha256": "7be4f83162ce3afada8593f5acd863769356da74102e6762ece133548a4d8bda"
+  },
+  "container_image": "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
+  "environment": {
+    "gpu": "NVIDIA H100 NVL",
+    "physical_gpu_uuid": "240958a2-e8e1-3bac-b767-365c9e0b97bd",
+    "driver": "580.159.04",
+    "torch": "2.14.1+cu130",
+    "torch_cuda": "13.0",
+    "exclusive_node": true,
+    "clock_lock": false,
+    "cuda_arch_list": "9.0",
+    "sglang_wrapper_sha256": "64deff581665bd04830535baccfdfbdfa72794d919bc462fc469a4c42bdd68f5",
+    "power_limit_watts": 310,
+    "hardware_change": "Request the same H100 NVL physical GPU; require identical UUID, driver and power limit before workers. Any necessary hardware substitution requires an explicitly recorded protocol revision before measurements. Comparisons are within this batch."
+  },
+  "workload": {
+    "api": "sglang.srt.layers.quantization.fp8_utils.apply_fp8_linear_bmm_flashinfer",
+    "model_id": "Qwen/Qwen3-0.6B",
+    "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "projection": "First transformer layer fused q/k/v projection, concatenated in source-verified SGLang QKV loader order.",
+    "tokens": 144,
+    "batch": 1,
+    "seed": 19,
+    "arms": [
+      "auto",
+      "cuda_graph"
+    ],
+    "fixture": "Frozen captured BF16 activations and checkpoint weights; per-tensor static scales calibrated from this one input/weight tensor. Exact shapes, tensor/file hashes and capture provenance frozen before tuning workers.",
+    "measurement_policy": {
+      "auto": "Unspecified measurement_policy through the existing v2 startup context; this FP8 path uses eager/hot-L2 timing.",
+      "cuda_graph": "MeasurementPolicy(execution_mode=\"cuda_graph\") only; no L2, replay-count, warmup or repeat overrides."
+    },
+    "persistence": "Winner consumption is memory-only inside matching replay scopes at capture. Existing wrapper may emit incidental v1 JSON, but workers never reload it and no explicit-policy persistence claim is made. Managed persistence disabled in both arms.",
+    "shape_limit": "One representative captured prefill projection, not full-model output accuracy or traffic distribution. Dense BF16 checkpoint adapted to static per-tensor FP8 for this experiment; no production calibration claim.",
+    "path": "Actual SGLang static quantizer, normal custom-op dispatch/fast path and allocation, FlashInfer cublas FP8 implementation; no replacement or output copy in timed calls.",
+    "profiling_input_limit": "Actual startup and serving calls use the frozen captured activations, real QKV weights and static FP8 scales. The tuner retains synthesized dynamic profiling activations. Record A/B/scale fingerprints for every profile; compare them across arms and trials. Output/workspace bytes are not representative input fingerprints.",
+    "shape": [
+      144,
+      4096,
+      1024
+    ]
+  },
+  "protocol": {
+    "trials": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "timing_workers": 12,
+    "trial_arm_orders": [
+      [
+        "auto",
+        "cuda_graph"
+      ],
+      [
+        "cuda_graph",
+        "auto"
+      ],
+      [
+        "auto",
+        "cuda_graph"
+      ],
+      [
+        "cuda_graph",
+        "auto"
+      ],
+      [
+        "auto",
+        "cuda_graph"
+      ],
+      [
+        "cuda_graph",
+        "auto"
+      ]
+    ],
+    "trial_order": "Ascending0..5, balanced arm order; fresh process/container/private empty cache per worker; no adaptive stopping based on performance.",
+    "graphs": {
+      "winner": "Independent serving graph captured after tuning under the matching memory-only replay scope; must consume a real cache hit on the natural winner.",
+      "default": "Independent serving graph captured after tuning under a genuine cache miss with reversible cache-state removal; must use heuristic tactic-1."
+    },
+    "capture_order": "winner/default for even trial IDs, reverse for odd IDs.",
+    "profiling_defaults": {
+      "warmup": 3,
+      "repeat": 10,
+      "profiling_repeat": null,
+      "effective_profiling_repeat": 10,
+      "cuda_graph_profile_replays": 1,
+      "use_cold_l2_cache": false,
+      "stream_delay_micro_secs": 5000,
+      "cuda_graph_delay_micro_secs": 100,
+      "use_global_timer": false
+    },
+    "profiling_change": "Only execution_mode is overridden; preserve the pinned profiler defaults and record policy-derived timer behavior. Both arms enable the default-candidate race. No new margin, confirmation policy, representative-input override, shortlist implementation, or dependency update.",
+    "samples": 15,
+    "requested_iterations": 5120,
+    "warmup_ms": 500,
+    "min_sample_ms": 20,
+    "blocks": 24,
+    "rewarm_ms": 20,
+    "block_order": "12 winner/default and12 default/winner blocks, deterministic shuffled seed5000+trial; identical5120replays per graph in every block.",
+    "timing": "Replay retained graphs after exiting all policy/tuning contexts. Primary CUDA-event span plus wall-time channel. No Python lookup/output rebinding/native probe/torch profiler/subprocess query inside timed spans. Event spans can include host submission gaps.",
+    "numerical_guards": "Actual graph-owned output, quantized-input FP32 reference, poison checks, zero/restored captured inputs, separate BF16 approximation diagnostics.",
+    "profiling_observation": "Common instrumentation around the real profiler records effective configuration and A/B/scale hashes outside timed candidate execution; retain its overhead caveat. No controlled profiling times or forced winner.",
+    "checkpoint": "First trial pair must pass correctness/provenance/selection gates before remaining10workers. No performance acceptance threshold.",
+    "timeout_seconds_per_worker": 600,
+    "startup_scope": "Record instrumented wrapper-only startup cost separately; runtime winner quality is the primary outcome."
+  },
+  "acceptance": [
+    "Frozen source, actual source-overlay/nativebuild, exact fixture bytes, expected GPU/image/driver/powerlimit and production helper hashes verified.",
+    "Both arms use real v2 candidate selection/default race; profile candidates, A/B/scales, buckets and non-objective settings match.",
+    "Every measured candidate time finite; natural runtime winner is a measured minimum; default participates without being forced to win.",
+    "Winner capture consumes real matching memory hit; default capture consumes genuine miss/tactic-1; cache maps/state restored.",
+    "All retained serving graphs pass numerical/poison/changed-input guards; zero profiling during capture and replay.",
+    "Policy scopes exited and tuning/store/stream state restored before replay. Incidental v1files never provide explicit-policy winner evidence.",
+    "Balanced common-replay blocks and independent fresh trial identifiers preserved; retain every failed attempt and rerun reason."
+  ],
+  "analysis": {
+    "independent_unit": "Six fresh tuning processes/trials per arm. The24 blocks and15 samples are dependent within-trial subsamples.",
+    "primary": "Pertrial median within-block winner/default GPU-event ratio; report all six values, median/range, below1counts and exploratory exact wholetrial-bootstrap95percent interval.",
+    "objective_comparison": "Pair trials across arms and report ratio of normalized winner/default scores (cuda_graph/auto). Retain raw absolute latency summaries; do not claim crossprocess physicalidentity or fullmodel serving gains.",
+    "uncertainty": "Wholetrial bootstrap only; small fixed-workload sample, descriptive/exploratory intervals and mixed/neutral/regressive outcomes retained.",
+    "secondary": "Wall timing, actual chosen tactics, profile margins, instrumented tuning walltime, effective profiler settings and clock/power context.",
+    "scope_limits": "One H100 NVL, one frozen statically calibrated FP8 QKV fixture, pinned0.7.2 plus original descriptor diff. No fullmodel accuracy/throughput, freshprocess graph persistence, TP/EP or MegaMoE qualification. No new native observer campaign; existing capture-time descriptor acceptance checks still apply."
+  },
+  "publication": {
+    "branch": "experiment/flashinfer-candidate-selection",
+    "fork": "leejnau/sglang",
+    "pull_request": false,
+    "private_material": "Fixture tensors, native binaries and internal host details remain in private raw archive; public evidence keeps allowed hashes/metadata and filtered raw logs."
+  },
+  "resource_policy": "One exclusive allocation on the same physical H100, bounded to one hour including source preparation. Freeze source before measurements. Preserve the full private binary/fixture archive with node/durable/download hash agreement before release. No CI trigger or PR.",
+  "fixture": {
+    "manifest_sha256": "e13a86fab5db5796b22d8dab0f84080b8057b036ca7aef2c7be8832e76505bf1",
+    "tensor_file_sha256": "c30aa761eba827bb0b4eb6de0e99d9b8dda8243dd16d00146f9718d2abb05e8b",
+    "tensor_file_size_bytes": 12879616,
+    "capture_commit": "a29b31850c7b68cafde022614b00ab01d6ff5cde",
+    "capture_script_sha256": "c3c88dbf3df9fe0dc73d89a5acb9038e5b09fb1efc6316bc36917d06251f92a4",
+    "manifest_path": "fixture-manifest.json",
+    "private_capture_archive": "20261020T034000Z-h100-fp8-linear-capture-full-raw.tgz",
+    "private_capture_archive_sha256": "9f87e468d7b6c1f665f187ff6c9b009da82a5f534ffb67e37c24fd6ad017fec1",
+    "public_tensor_publication": false
+  },
+  "prior_observation": {
+    "batch": "20261020T034000Z-h100-fp8-linear",
+    "graph_cold_v2_to_default_median": 1.0401509421,
+    "all_six_above_one": true,
+    "runtime_replay_separate_from_startup": true,
+    "cause": "unresolved; v2/v1 graph ratio was lower, so this is not proof of v2 versus v1 regression."
+  }
+}
