@@ -1,0 +1,1939 @@
+{
+  "schema_version": 1,
+  "batch_id": "20261024T090000Z-h100-replay-calibration",
+  "status": "preregistered_replay_measurement_calibration",
+  "objective": "Calibrate repeatability and graph-capture association of three CUDA-event replay measurement recipes on the exact same two retained untuned-default SGLang FP8 graphs; no tuner selection or serving-speedup claim.",
+  "landed_main_commit": "1897575ce11301b6b5ce647f0ad4fa2e777ee2bd",
+  "source_baseline_commit": "bdcd1d9bf844022bae45652c1a7979f3fe8477bd",
+  "flashinfer_source": {
+    "base_release": "0.7.2",
+    "base_commit": "d84335d8c54e0c8f9f7e22faa15c7e34a58abf94",
+    "upstream_pr": 6148,
+    "patch_head": "14c5c67a1eb9ad3a608b8d3da3bf6d8924037c5c",
+    "implementation": "Exact original diff applied cleanly to0.7.2, not full PR head; candidate source only for every arm.",
+    "input_batch": "test/manual/kernels/results/flashinfer_autotune_selection/20261019T232945Z-h100-descriptor-qualification",
+    "source_overlay_archive_sha256": "c62f09dad18dbe0ce326177077360fe716095f209dc023b25c5552dcc12f666f",
+    "source_manifest_sha256": "3f4305fce604d3cd51e85047678c6efbf71e35bcf51037e9586d15bc20486895",
+    "native_loading": "Reuse audited prepare_native(candidate): explicit JitSpec.build/load, identical module bootstrap in every arm; reject AOT substitution. One isolated candidate build workspace, fresh process/container per worker.",
+    "autotune_cache_sha256": "7be4f83162ce3afada8593f5acd863769356da74102e6762ece133548a4d8bda"
+  },
+  "container_image": "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
+  "environment": {
+    "gpu": "NVIDIA H100 NVL",
+    "physical_gpu_uuid": "240958a2-e8e1-3bac-b767-365c9e0b97bd",
+    "driver": "580.159.04",
+    "torch": "2.14.1+cu130",
+    "torch_cuda": "13.0",
+    "exclusive_node": true,
+    "clock_lock": false,
+    "cuda_arch_list": "9.0",
+    "sglang_wrapper_sha256": "64deff581665bd04830535baccfdfbdfa72794d919bc462fc469a4c42bdd68f5",
+    "power_limit_watts": 310,
+    "hardware_change": "Request the same H100 NVL physical GPU; require identical UUID, driver and power limit before workers. Any necessary hardware substitution requires an explicitly recorded protocol revision before measurements. Comparisons are within this batch."
+  },
+  "workload": {
+    "api": "sglang.srt.layers.quantization.fp8_utils.apply_fp8_linear_bmm_flashinfer",
+    "model_id": "Qwen/Qwen3-0.6B",
+    "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "projection": "First transformer layer fused q/k/v projection, concatenated in source-verified SGLang QKV loader order.",
+    "tokens": 144,
+    "batch": 1,
+    "seed": 19,
+    "arms": [
+      "plain5120",
+      "queued16_10m",
+      "queued16_40m"
+    ],
+    "fixture": "Frozen captured BF16 activations and checkpoint weights; per-tensor static scales calibrated from this one input/weight tensor. Exact shapes, tensor/file hashes and capture provenance frozen before tuning workers.",
+    "measurement_policy": "Preserve actual H0/F0 startup tuning with unspecified current/auto measurement and v2 default comparison. Both measured graphs use genuine default misses after startup; no additional profiling and all policy scopes exit before timed replay.",
+    "persistence": "Existing startup saves remain incidental; no persistence is qualified. Both graph captures reversibly remove real winner/file cache state and restore the original tuned cache. Managed persistence remains disabled.",
+    "shape_limit": "One representative captured prefill projection, not full-model output accuracy or traffic distribution. Dense BF16 checkpoint adapted to static per-tensor FP8 for this experiment; no production calibration claim.",
+    "path": "Actual SGLang static quantizer, normal custom-op dispatch/fast path and allocation, FlashInfer cublas FP8 implementation; no replacement or output copy in timed calls.",
+    "profiling_input_limit": "Actual H0/F0 startup retains synthesized profiling activations and metadata-only observations without tensor hashes or retained input references. Both serving graphs use the identical frozen captured fixture. No profiling after startup.",
+    "shape": [
+      144,
+      4096,
+      1024
+    ]
+  },
+  "protocol": {
+    "worker": "test/manual/kernels/bench_flashinfer_oracle_calibration.py",
+    "trials": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "timing_workers": 6,
+    "worker_schedule": [
+      {
+        "trial": 0,
+        "capture_order": "a-first",
+        "raw_name": "trial0-calibration.json",
+        "trace_name": "trial0-calibration.trace.json"
+      },
+      {
+        "trial": 1,
+        "capture_order": "b-first",
+        "raw_name": "trial1-calibration.json",
+        "trace_name": "trial1-calibration.trace.json"
+      },
+      {
+        "trial": 2,
+        "capture_order": "a-first",
+        "raw_name": "trial2-calibration.json",
+        "trace_name": "trial2-calibration.trace.json"
+      },
+      {
+        "trial": 3,
+        "capture_order": "b-first",
+        "raw_name": "trial3-calibration.json",
+        "trace_name": "trial3-calibration.trace.json"
+      },
+      {
+        "trial": 4,
+        "capture_order": "a-first",
+        "raw_name": "trial4-calibration.json",
+        "trace_name": "trial4-calibration.trace.json"
+      },
+      {
+        "trial": 5,
+        "capture_order": "b-first",
+        "raw_name": "trial5-calibration.json",
+        "trace_name": "trial5-calibration.trace.json"
+      }
+    ],
+    "methods": {
+      "plain5120": {
+        "replays": 5120,
+        "prequeue_cycles": 0
+      },
+      "queued16_10m": {
+        "replays": 16,
+        "prequeue_cycles": 10000000
+      },
+      "queued16_40m": {
+        "replays": 16,
+        "prequeue_cycles": 40000000
+      }
+    },
+    "round_schedules": [
+      {
+        "trial": 0,
+        "seed": 7200,
+        "rounds": [
+          {
+            "index": 0,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_40m",
+              "plain5120",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 1,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_40m",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 2,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_40m",
+              "queued16_10m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 3,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_10m",
+              "queued16_40m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 4,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_10m",
+              "plain5120",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 5,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_40m",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 6,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_10m",
+              "plain5120",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 7,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_40m",
+              "queued16_10m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 8,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_40m",
+              "plain5120",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 9,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_40m",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 10,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_10m",
+              "plain5120",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 11,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_10m",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 12,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_40m",
+              "plain5120",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 13,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_40m",
+              "plain5120",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 14,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_10m",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 15,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_40m",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 16,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_10m",
+              "queued16_40m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 17,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_10m",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 18,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_10m",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 19,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_10m",
+              "queued16_40m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 20,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_40m",
+              "queued16_10m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 21,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_10m",
+              "queued16_40m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 22,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_40m",
+              "queued16_10m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 23,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_10m",
+              "plain5120",
+              "queued16_40m"
+            ]
+          }
+        ]
+      },
+      {
+        "trial": 1,
+        "seed": 7201,
+        "rounds": [
+          {
+            "index": 0,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_10m",
+              "plain5120",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 1,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_40m",
+              "queued16_10m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 2,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_40m",
+              "queued16_10m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 3,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_40m",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 4,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_40m",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 5,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_40m",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 6,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_10m",
+              "plain5120",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 7,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_10m",
+              "queued16_40m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 8,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_40m",
+              "plain5120",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 9,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_10m",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 10,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_40m",
+              "plain5120",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 11,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_40m",
+              "queued16_10m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 12,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_10m",
+              "queued16_40m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 13,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_10m",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 14,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_10m",
+              "queued16_40m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 15,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_10m",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 16,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_40m",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 17,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_40m",
+              "plain5120",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 18,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_10m",
+              "plain5120",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 19,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_10m",
+              "queued16_40m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 20,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_10m",
+              "plain5120",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 21,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_40m",
+              "plain5120",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 22,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_10m",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 23,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_40m",
+              "queued16_10m",
+              "plain5120"
+            ]
+          }
+        ]
+      },
+      {
+        "trial": 2,
+        "seed": 7202,
+        "rounds": [
+          {
+            "index": 0,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_40m",
+              "plain5120",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 1,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_10m",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 2,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_40m",
+              "plain5120",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 3,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_40m",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 4,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_40m",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 5,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_10m",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 6,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_40m",
+              "queued16_10m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 7,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_40m",
+              "queued16_10m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 8,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_40m",
+              "plain5120",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 9,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_10m",
+              "queued16_40m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 10,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_10m",
+              "queued16_40m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 11,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_10m",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 12,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_10m",
+              "queued16_40m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 13,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_40m",
+              "plain5120",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 14,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_40m",
+              "queued16_10m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 15,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_10m",
+              "plain5120",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 16,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_40m",
+              "queued16_10m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 17,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_10m",
+              "plain5120",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 18,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_10m",
+              "plain5120",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 19,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_10m",
+              "plain5120",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 20,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_10m",
+              "queued16_40m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 21,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_40m",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 22,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_10m",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 23,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_40m",
+              "queued16_10m"
+            ]
+          }
+        ]
+      },
+      {
+        "trial": 3,
+        "seed": 7203,
+        "rounds": [
+          {
+            "index": 0,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_40m",
+              "plain5120",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 1,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_10m",
+              "plain5120",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 2,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_10m",
+              "plain5120",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 3,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_40m",
+              "queued16_10m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 4,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_10m",
+              "queued16_40m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 5,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_40m",
+              "plain5120",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 6,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_40m",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 7,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_10m",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 8,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_40m",
+              "queued16_10m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 9,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_40m",
+              "queued16_10m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 10,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_10m",
+              "plain5120",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 11,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_40m",
+              "plain5120",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 12,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_40m",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 13,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_10m",
+              "queued16_40m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 14,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_10m",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 15,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_40m",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 16,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_40m",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 17,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_40m",
+              "queued16_10m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 18,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_10m",
+              "queued16_40m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 19,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_10m",
+              "plain5120",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 20,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_40m",
+              "plain5120",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 21,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_10m",
+              "queued16_40m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 22,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_10m",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 23,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_10m",
+              "queued16_40m"
+            ]
+          }
+        ]
+      },
+      {
+        "trial": 4,
+        "seed": 7204,
+        "rounds": [
+          {
+            "index": 0,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_40m",
+              "plain5120",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 1,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_10m",
+              "queued16_40m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 2,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_40m",
+              "plain5120",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 3,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_10m",
+              "plain5120",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 4,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_10m",
+              "queued16_40m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 5,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_40m",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 6,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_40m",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 7,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_10m",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 8,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_10m",
+              "plain5120",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 9,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_10m",
+              "queued16_40m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 10,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_40m",
+              "queued16_10m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 11,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_10m",
+              "queued16_40m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 12,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_40m",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 13,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_40m",
+              "queued16_10m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 14,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_10m",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 15,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_40m",
+              "plain5120",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 16,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_10m",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 17,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_40m",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 18,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_10m",
+              "plain5120",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 19,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_40m",
+              "queued16_10m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 20,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_10m",
+              "plain5120",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 21,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_40m",
+              "queued16_10m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 22,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_10m",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 23,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_40m",
+              "plain5120",
+              "queued16_10m"
+            ]
+          }
+        ]
+      },
+      {
+        "trial": 5,
+        "seed": 7205,
+        "rounds": [
+          {
+            "index": 0,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_40m",
+              "queued16_10m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 1,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_10m",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 2,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_40m",
+              "queued16_10m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 3,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_10m",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 4,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_40m",
+              "plain5120",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 5,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_10m",
+              "queued16_40m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 6,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_40m",
+              "queued16_10m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 7,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_10m",
+              "plain5120",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 8,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_40m",
+              "plain5120",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 9,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_10m",
+              "queued16_40m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 10,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_10m",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 11,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_10m",
+              "queued16_40m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 12,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_40m",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 13,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_10m",
+              "queued16_40m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 14,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_40m",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 15,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_40m",
+              "queued16_10m",
+              "plain5120"
+            ]
+          },
+          {
+            "index": 16,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_10m",
+              "plain5120",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 17,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_10m",
+              "plain5120",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 18,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_40m",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 19,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_40m",
+              "plain5120",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 20,
+            "graph_order": [
+              "graph_b",
+              "graph_a"
+            ],
+            "methods": [
+              "queued16_40m",
+              "plain5120",
+              "queued16_10m"
+            ]
+          },
+          {
+            "index": 21,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "queued16_10m",
+              "plain5120",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 22,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_10m",
+              "queued16_40m"
+            ]
+          },
+          {
+            "index": 23,
+            "graph_order": [
+              "graph_a",
+              "graph_b"
+            ],
+            "methods": [
+              "plain5120",
+              "queued16_40m",
+              "queued16_10m"
+            ]
+          }
+        ]
+      }
+    ],
+    "rounds": 24,
+    "rewarm_ms": 20,
+    "initial_warmup_ms": 500,
+    "source_change": "No upstream/current-main/tuning-policy change. Reuse the exact qualified0.7.2+descriptor overlay, container, fixture and production path.",
+    "graphs": "After actual H0/F0 startup, capture two real independent default graphs named graph_a and graph_b under genuine cache misses/tactic-1. Restore the original tuned winner/file state after each miss; outputs remain distinct and capture order is balanced3/3 across six fresh containers.",
+    "preparation": "Build/load the qualified native module, initialize timing events and prime the exact delay helper before captures/timing. Preserve exact delay-helper/source metadata. No profiler, preload, Python lookup or numerical work inside primary event spans.",
+    "round_order": "Each of all six method permutations occurs four times. Its four copies alternate a/b and b/a graph order, giving two of each; shuffle complete rounds with seed7200+trial. Every method measures each original graph once per round.",
+    "batch_order": "Within one method, measure both graphs in the round graph_order. Rewarm the same retained object for at least20ms before each batch, outside timing.",
+    "timing": "CUDA-event elapsed span divided by iterations is primary. Queue spin is enqueued before the start event and excluded from event timing. Wall includes deliberate queue delay and is diagnostic only.5120/noqueue vs16/queued compares complete recipes with different batch lengths.",
+    "queue_evidence": "Immediately after end.record and before end.synchronize call start.query, recording its outcome and host enqueue timestamps. False is evidence the start event had not reported completion after all timed commands were issued. True is inconclusive, not a failed/invalid sample; every sample remains in primary statistics. Record query errors explicitly and preserve any actual CUDA/numerical failure.",
+    "queue_limit": "A longer prequeue spin can change GPU state as well as enqueue readiness. Do not subtract timing contracts to claim pure CPU launch cost. Compare prequeue-delay sensitivity at a fixed16-replay window between the two queued recipes.",
+    "numerical_guards": "Actual graph-owned output, poison, independent quantized FP32 reference, exact-zero changed input and restored input. Actual startup profiling is recorded; no extra profiling during capture, primary measurement or trace.",
+    "identity": "Mandatory post-timing trace of the same original retained graph objects in each process; three replays each, ordered quantizer/GEMM kernel signatures, distinct CUDA graph identities and unchanged graph/output pointers. Instrumented durations are not primary measurements.",
+    "checkpoint": "First fresh process integrity gate only, then all remaining five; no performance threshold, query-outcome exclusion, sample trimming or adaptive expansion.",
+    "timeout_seconds_per_worker": 600
+  },
+  "acceptance": [
+    "Fixed six-process preregistration, exact source/fixture/container/nativebuild/GPU bindings and balanced method/graph schedules.",
+    "Actual H0/F0 startup natural minimum is retained in the real cache. Both measured graphs consume genuine default misses, followed by full cache restoration; no profiling after startup or silent descriptor substitution.",
+    "Every raw event sample finite/positive and normalized using its declared16or5120count; all query outcomes are retained without posthoc exclusion.",
+    "Every graph-owned output passes changed/zero/restored/numerical guards; both graph objects and output allocations survive through post-timing traces.",
+    "Actual trace correlates three launches per original graph to repeated ordered quantizer/GEMM signatures and distinct CUDA graph IDs.",
+    "Integrity gates have no speedup, equivalence, query-outcome or0.65percent acceptance threshold."
+  ],
+  "analysis": {
+    "independent_unit": "Six fresh processes, each owns the same two retained objects throughout all three methods.24rounds,144timed batches per process and trace calls are dependent subsamples.",
+    "primary_within_graph": "For each exact graph and process, median of same-round event ratios queued16_10m/plain5120 and queued16_40m/queued16_10m; also report queued16_40m/plain5120.",
+    "primary_capture": "For each method/process, median of same-round first-captured-graph/second-captured-graph event ratios. Graph label and capture order remain explicit.",
+    "secondary": "Absolute event medians/ranges, raw per-round wall/enqueue durations, all start.query outcomes/counts by method/process, same-object signatures and numerical/source guards. Optional ratios of capture contrasts across methods are descriptive.",
+    "uncertainty": "Exploratory exact whole-process multinomial percentile bootstrap of median process ratio, six independent units. Pair comparisons within the same round/process first; never pool rounds or graphs as independent processes. A one-process checkpoint has no CI.",
+    "resolution": "Prior subpercent association is contextual scale0.0065, not a pass/fail threshold. If interval width/effect uncertainty or10m-versus40m sensitivity is comparable to that scale, report subpercent measurement resolution unresolved. CI crossing1 does not establish equivalence. Preserve mixed outcomes.",
+    "scope_limits": "Single fixture/GPU/backend/hot-buffer source. This calibrates these measurement recipes; it does not claim model/serving speedup, isolate pure host cost or establish a universally correct ranking objective."
+  },
+  "publication": {
+    "branch": "experiment/flashinfer-candidate-selection",
+    "fork": "leejnau/sglang",
+    "pull_request": false,
+    "private_material": "Fixture tensors, native binaries and internal host details remain in private raw archive; public evidence keeps allowed hashes/metadata and filtered raw logs."
+  },
+  "resource_policy": "Fixed six fresh processes on the same exclusive physical GPU after source/plan freeze. Root owns allocation/launch, bounded preservation/release and every failed attempt. No CI trigger or PR; no adaptive sample expansion.",
+  "fixture": {
+    "manifest_sha256": "e13a86fab5db5796b22d8dab0f84080b8057b036ca7aef2c7be8832e76505bf1",
+    "tensor_file_sha256": "c30aa761eba827bb0b4eb6de0e99d9b8dda8243dd16d00146f9718d2abb05e8b",
+    "tensor_file_size_bytes": 12879616,
+    "capture_commit": "a29b31850c7b68cafde022614b00ab01d6ff5cde",
+    "capture_script_sha256": "c3c88dbf3df9fe0dc73d89a5acb9038e5b09fb1efc6316bc36917d06251f92a4",
+    "manifest_path": "fixture-manifest.json",
+    "private_capture_archive": "20261020T034000Z-h100-fp8-linear-capture-full-raw.tgz",
+    "private_capture_archive_sha256": "9f87e468d7b6c1f665f187ff6c9b009da82a5f534ffb67e37c24fd6ad017fec1",
+    "public_tensor_publication": false
+  }
+}

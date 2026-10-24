@@ -1,0 +1,344 @@
+{
+  "status": "passed",
+  "scope": "CPU validation and source review; no GPU calibration result yet.",
+  "reports": [
+    {
+      "source": "/private/tmp/fi-next-steps-20261024/selection-audit/oracle-calibration-worker-cpu-controls.json",
+      "sha256": "b28019952ee13317098b75cbcde692d4f530eac422fce8b6745ac8a1e83586b4",
+      "report": {
+        "status": "success",
+        "worker": "/private/tmp/sglang-autotune-selection-study/test/manual/kernels/bench_flashinfer_oracle_calibration.py",
+        "worker_sha256": "c63e74018979d21aa3424ac033ee83ce69691d258f6cbadd59415aee0ea4a18c",
+        "controls": 111,
+        "checks": [
+          "trial0 has 24 rounds",
+          "trial0 method permutations balanced",
+          "trial0 method positions balanced",
+          "trial0 graph order balanced within each permutation",
+          "trial0 schedule deterministic",
+          "trial1 has 24 rounds",
+          "trial1 method permutations balanced",
+          "trial1 method positions balanced",
+          "trial1 graph order balanced within each permutation",
+          "trial1 schedule deterministic",
+          "trial2 has 24 rounds",
+          "trial2 method permutations balanced",
+          "trial2 method positions balanced",
+          "trial2 graph order balanced within each permutation",
+          "trial2 schedule deterministic",
+          "trial3 has 24 rounds",
+          "trial3 method permutations balanced",
+          "trial3 method positions balanced",
+          "trial3 graph order balanced within each permutation",
+          "trial3 schedule deterministic",
+          "trial4 has 24 rounds",
+          "trial4 method permutations balanced",
+          "trial4 method positions balanced",
+          "trial4 graph order balanced within each permutation",
+          "trial4 schedule deterministic",
+          "trial5 has 24 rounds",
+          "trial5 method permutations balanced",
+          "trial5 method positions balanced",
+          "trial5 graph order balanced within each permutation",
+          "trial5 schedule deterministic",
+          "actual H0/F0 auto startup is fixed",
+          "parser rejects --blocks 23",
+          "parser rejects --rewarm-ms 19",
+          "parser rejects --trial 6",
+          "parser rejects --capture-order other",
+          "plain5120 query=True returns a retained sample",
+          "plain5120 query=True exact actual replay count",
+          "plain5120 query=True query outcome preserved",
+          "plain5120 query=True event normalization",
+          "plain5120 query=True diagnostic wall and honest enqueue span",
+          "plain5120 query=True no additional profiling",
+          "plain5120 query=True output poison drained before measured replay",
+          "plain5120 query=True exact timed output checked before another operation",
+          "plain5120 query=True original graph and owned allocation bound",
+          "plain5120 query=True exact delay method",
+          "plain5120 query=True completed sample clears pending evidence",
+          "plain5120 query=False returns a retained sample",
+          "plain5120 query=False exact actual replay count",
+          "plain5120 query=False query outcome preserved",
+          "plain5120 query=False event normalization",
+          "plain5120 query=False diagnostic wall and honest enqueue span",
+          "plain5120 query=False no additional profiling",
+          "plain5120 query=False output poison drained before measured replay",
+          "plain5120 query=False exact timed output checked before another operation",
+          "plain5120 query=False original graph and owned allocation bound",
+          "plain5120 query=False exact delay method",
+          "plain5120 query=False completed sample clears pending evidence",
+          "queued16_10m query=True returns a retained sample",
+          "queued16_10m query=True exact actual replay count",
+          "queued16_10m query=True query outcome preserved",
+          "queued16_10m query=True event normalization",
+          "queued16_10m query=True diagnostic wall and honest enqueue span",
+          "queued16_10m query=True no additional profiling",
+          "queued16_10m query=True output poison drained before measured replay",
+          "queued16_10m query=True exact timed output checked before another operation",
+          "queued16_10m query=True original graph and owned allocation bound",
+          "queued16_10m query=True exact delay method",
+          "queued16_10m query=True prequeue follows poison drain and precedes replay",
+          "queued16_10m query=True completed sample clears pending evidence",
+          "queued16_10m query=False returns a retained sample",
+          "queued16_10m query=False exact actual replay count",
+          "queued16_10m query=False query outcome preserved",
+          "queued16_10m query=False event normalization",
+          "queued16_10m query=False diagnostic wall and honest enqueue span",
+          "queued16_10m query=False no additional profiling",
+          "queued16_10m query=False output poison drained before measured replay",
+          "queued16_10m query=False exact timed output checked before another operation",
+          "queued16_10m query=False original graph and owned allocation bound",
+          "queued16_10m query=False exact delay method",
+          "queued16_10m query=False prequeue follows poison drain and precedes replay",
+          "queued16_10m query=False completed sample clears pending evidence",
+          "queued16_40m query=True returns a retained sample",
+          "queued16_40m query=True exact actual replay count",
+          "queued16_40m query=True query outcome preserved",
+          "queued16_40m query=True event normalization",
+          "queued16_40m query=True diagnostic wall and honest enqueue span",
+          "queued16_40m query=True no additional profiling",
+          "queued16_40m query=True output poison drained before measured replay",
+          "queued16_40m query=True exact timed output checked before another operation",
+          "queued16_40m query=True original graph and owned allocation bound",
+          "queued16_40m query=True exact delay method",
+          "queued16_40m query=True prequeue follows poison drain and precedes replay",
+          "queued16_40m query=True completed sample clears pending evidence",
+          "queued16_40m query=False returns a retained sample",
+          "queued16_40m query=False exact actual replay count",
+          "queued16_40m query=False query outcome preserved",
+          "queued16_40m query=False event normalization",
+          "queued16_40m query=False diagnostic wall and honest enqueue span",
+          "queued16_40m query=False no additional profiling",
+          "queued16_40m query=False output poison drained before measured replay",
+          "queued16_40m query=False exact timed output checked before another operation",
+          "queued16_40m query=False original graph and owned allocation bound",
+          "queued16_40m query=False exact delay method",
+          "queued16_40m query=False prequeue follows poison drain and precedes replay",
+          "queued16_40m query=False completed sample clears pending evidence",
+          "query exception propagates without exclusion or retry",
+          "query error retained with original text",
+          "partial query failure retains boundary timestamps",
+          "query failure does not rerun measured work",
+          "destructive no-write replay is rejected after poison",
+          "failed numeric sample retains queue/timing evidence"
+        ],
+        "scope": "CPU execution of the actual worker schedule/parser/sampler with fake GPU boundaries. No CUDA measurement, sleep behavior, kernel or numerical accuracy claim."
+      }
+    },
+    {
+      "source": "/private/tmp/fi-next-steps-20261024/replay-calibration-analyzer-controls.json",
+      "sha256": "b000dc15c63b601311ba3a1c5ef5361b0a01ac3fed43a4b80dbc199ea034ffbe",
+      "report": {
+        "status": "success",
+        "scope": "stdlib CPU synthetic controls; no performance/GPU evidence",
+        "passed_controls": 23,
+        "controls": [
+          "all6_processes_all_methods_orders_and_both_query_outcomes_retained",
+          "missing_round_is_not_excluded",
+          "missing_sample_is_not_excluded",
+          "wrong16_vs5120_normalization",
+          "query_outcome_exclusion_flag",
+          "query_evidence_mislabel",
+          "query_error_cannot_be_success",
+          "wall_scope_must_remain_diagnostic",
+          "cpu_enqueue_scope_must_include_query",
+          "delay_helper_preparation_inside_capture",
+          "timed_graph_substituted",
+          "timed_output_substituted",
+          "extra_profiling_during_measurement",
+          "actual_default_capture_used_winner",
+          "default_miss_cache_not_restored",
+          "profile_or_helper_inside_timed_context",
+          "numerical_guard_checked_other_output",
+          "trace_before_measurements_finish",
+          "trace_substituted_original_graph",
+          "scope_record_missing",
+          "trace_invalid_actual_kernel_correlation",
+          "full6_summary_exact_process_units_known_ratios_and_no_query_exclusions",
+          "checkpoint_n1_has_no_uncertainty_interval"
+        ],
+        "analyzer_sha256": "140bd5dffc9e7279f09fa16107f8754360222b2a035fb682f6d6488951fd8ffa"
+      }
+    },
+    {
+      "source": "/private/tmp/fi-next-steps-20261024/replay-calibration-full-main-control.json",
+      "sha256": "6bd472fe9662699d716ebf4814ad8f6cc2d7915bbfba182ef4e26211576a48d3",
+      "report": {
+        "status": "success",
+        "scope": "CPU-only full-main integration; no GPU/performance evidence",
+        "analyzer_sha256": "140bd5dffc9e7279f09fa16107f8754360222b2a035fb682f6d6488951fd8ffa",
+        "plan_sha256": "1f263135413a4c331f0408961da46fa11718ae2f19332c8cc2edacc71e4424a6",
+        "control_source_sha256": "c4252ecf42c800f3ab1e7d9165217eb664026b5f2f961b2d66300a73505b7ae9",
+        "passed_controls": 6,
+        "controls": [
+          "full_main_firstprocess_source_metadata_trace_native_and_final_JSON",
+          "full_main_all6_processes_source_metadata_trace_native_and_final_JSON",
+          "main_rejects_changed_frozen_plan_hash",
+          "main_rejects_changed_source_binding",
+          "main_rejects_changed_fixture_manifest",
+          "main_rejects_wrong_physical_GPU"
+        ],
+        "source_adapter": "Only expected-source Git blob retrieval reads current source files because the new study is not yet committed. Historical capture/source Git checks remain real. Runtime execution uses unadapted frozen Git checks."
+      }
+    },
+    {
+      "source": "/private/tmp/fi-next-steps-20261024/coordinator/calibration-launcher-controls.json",
+      "sha256": "7b9dd77966954cb0b84048ecac30bd85733e87383dfbcdc91776829338593808",
+      "report": {
+        "status": "success",
+        "scope": "CPU-only launcher ownership and retained real native/source provenance controls; no Docker/GPU execution or experiment simulation.",
+        "launcher_sha256": "2952b13d016f142383c6762bf017b1012831a676ca8a6c379890205b29a54434",
+        "collector_sha256": "fd73578a4cb581f161dd3766b6175008dff8970943c21c0397cea19afff1e319",
+        "controls_passed": 19,
+        "controls": [
+          {
+            "control": "positive-first-block",
+            "passed": true,
+            "detail": [
+              "success",
+              []
+            ]
+          },
+          {
+            "control": "first-block-record-count",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "control": "positive-full-cohort",
+            "passed": true,
+            "detail": [
+              "success",
+              []
+            ]
+          },
+          {
+            "control": "full-cohort-record-count",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "control": "reject-missing-record",
+            "passed": true,
+            "detail": [
+              "error",
+              [
+                "no native records for candidate",
+                "required native records are missing"
+              ]
+            ]
+          },
+          {
+            "control": "reject-worker-failure",
+            "passed": true,
+            "detail": [
+              "error",
+              [
+                "trial0-calibration is not successful",
+                "no native records for candidate"
+              ]
+            ]
+          },
+          {
+            "control": "reject-native-hash-drift",
+            "passed": true,
+            "detail": [
+              "error",
+              [
+                "candidate: RuntimeError: worker build hash differs from final artifact: trial0-calibration"
+              ]
+            ]
+          },
+          {
+            "control": "reject-library-outside-runtime",
+            "passed": true,
+            "detail": [
+              "error",
+              [
+                "candidate: RuntimeError: native build path is outside this attempt: /private/var/folders/g7/n31j1mzn7hlfly2gqx47r39c0000gp/T/fi-objective-collector-rc97dvz3/source/unrelated.so"
+              ]
+            ]
+          },
+          {
+            "control": "reject-runtime-source-drift",
+            "passed": true,
+            "detail": [
+              "error",
+              [
+                "candidate: RuntimeError: collected source differs from frozen manifest: flashinfer/data/include/flashinfer/gemm/bmm_fp8.cuh"
+              ]
+            ]
+          },
+          {
+            "control": "reject-wrong-architecture",
+            "passed": true,
+            "detail": [
+              "error",
+              [
+                "candidate: RuntimeError: the FP8 native build did not target SM90a"
+              ]
+            ]
+          },
+          {
+            "control": "positive-after-fault-restoration",
+            "passed": true,
+            "detail": [
+              "success",
+              []
+            ]
+          },
+          {
+            "control": "restored-first-block",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "control": "reject-existing-attempt-without-overwrite",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "control": "existing-attempt-no-container-or-GPU-touch",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "control": "reject-attempt-path-traversal",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "control": "reject-non-SHA-before-side-effects",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "control": "cleanup-only-recorded-owned-CID",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "control": "cleanup-preserves-failing-exit-and-cache",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "control": "cleanup-invalid-CID-never-removes-container",
+            "passed": true,
+            "detail": null
+          }
+        ],
+        "script_sha256": "254ffca48ef8520e8a6b9e2afe7f800e412354735f4be959e0fe89385d152ed2"
+      }
+    }
+  ],
+  "independent_source_review": "No remaining blocker after startup-plan alignment and stage-coverage mapping correction; actual sleep/event/query, graph ownership, balanced schedule, lifetime, source and native gates reviewed.",
+  "frozen_files": {
+    "test/manual/kernels/bench_flashinfer_oracle_calibration.py": "c63e74018979d21aa3424ac033ee83ce69691d258f6cbadd59415aee0ea4a18c",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261024T090000Z-h100-replay-calibration/analyze.py": "140bd5dffc9e7279f09fa16107f8754360222b2a035fb682f6d6488951fd8ffa",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261024T090000Z-h100-replay-calibration/collect_build_provenance.py": "fd73578a4cb581f161dd3766b6175008dff8970943c21c0397cea19afff1e319",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261024T090000Z-h100-replay-calibration/launch.sh": "2952b13d016f142383c6762bf017b1012831a676ca8a6c379890205b29a54434",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261024T090000Z-h100-replay-calibration/plan.json": "1f263135413a4c331f0408961da46fa11718ae2f19332c8cc2edacc71e4424a6"
+  }
+}
