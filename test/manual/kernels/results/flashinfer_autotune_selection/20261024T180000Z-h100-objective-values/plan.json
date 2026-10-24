@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "batch_id": "20261024T180000Z-h100-objective-values",
+  "scope": "Fixed current-source mechanism pilot. No production policy, persistence, model performance or rare-failure safety claim.",
+  "proposal_sha256": "347b905b8b421f3f6d1160d3b40f3b7aa4348fbaf4fc0602bf5608f42932a45b",
+  "schedule_sha256": "cca9dd435bd9c47192d4193153f94c801acb265ecc75bee86c4542482824da0d",
+  "source_contract": {
+    "flashinfer_commit": "27c62fdf0ab1cd4014df8a15b66a975541fda83c",
+    "variant": "The same qualified FP8-only descriptor port plus fixture-owned validation callback in every cell; no configured-timer guard or old scoped-cache prototype.",
+    "runtime_sha256": {
+      "flashinfer/autotuner/autotuner.py": "0db42ad90d1a3fec6f81509a2c520c1892cea0a433f5dbd7f43468a2a10243ca",
+      "flashinfer/autotune_cache.py": "1ab2ed7208ed1bf1007b1f74de29fc818c93a5ab091beea0833474177fbb29ad",
+      "flashinfer/autotuner/_graph_timing.py": "5f3be31e17501ba11ee95327176ac4a4b95eeaee7be92c2bc7795bcbd30cefe3",
+      "flashinfer/gemm/gemm_base.py": "0bba9240029a5e09f331e7a2267f7067e126d57a7a341ca535f7c9557599adca"
+    },
+    "activation_values_cpu_proof": {
+      "path": "activation-values-design/cpu-proof.json",
+      "sha256": "b19dfa0c2f600c261a6998e20d4a4d9a69ddd316fd2b1d3931daf3039052cf03",
+      "checks": 216,
+      "limit": "CPU mechanism proof, not physical GPU copy/history or native qualification."
+    },
+    "fixture": {
+      "shape_m_n_k": [
+        144,
+        4096,
+        1024
+      ],
+      "seed": 19,
+      "sha256": "c30aa761eba827bb0b4eb6de0e99d9b8dda8243dd16d00146f9718d2abb05e8b"
+    },
+    "no_historical_pooling": "Earlier source/hardware/protocol batches are context only, not additional trials in this current-source comparison."
+  },
+  "qualified_source": {
+    "candidate_manifest_sha256": "9a4c51562d7410d785cc544c004bc4f92486f40311cb5c7a7328c2c1213160d5",
+    "container_preflight_sha256": "b8d0f6bbc85eaca0e3ef1419ab99a97d5340c96b3da382cba81d7896768287ba",
+    "fp8_port_patch_sha256": "e5c0a130690cd9fe9f1204b11368433430345f066ee8dc3bd376cf49c7ef4d64",
+    "callback_patch_sha256": "706ca4d91f3e6ef8c1643977beef72fa39af121e691f9380a175633787fe94ef",
+    "qualification_execution_commit": "12447b7d6219d54d1296401c0b8cfeeff1568931",
+    "version_limit": "Official fallback package0.0.0+unknown/unknown; exact source manifests and native artifacts establish identity."
+  },
+  "environment": {
+    "image": "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
+    "gpu": "NVIDIA H100 NVL",
+    "uuid": "240958a2-e8e1-3bac-b767-365c9e0b97bd",
+    "driver": "580.159.04",
+    "power_limit_watts": 310,
+    "torch": "2.14.1+cu130",
+    "exclusive": true,
+    "image_id": "sha256:2e152727f0a5ce999172ec48203b2b292d41b3cb370976827718870557899caa"
+  },
+  "protocol": {
+    "worker": "test/manual/kernels/bench_flashinfer_objective_values.py",
+    "independent_blocks": 8,
+    "timing_workers": 32,
+    "cells": {
+      "auto_synthetic": {
+        "objective": "auto",
+        "values": "synthetic"
+      },
+      "graph_synthetic": {
+        "objective": "graph",
+        "values": "synthetic"
+      },
+      "auto_captured": {
+        "objective": "auto",
+        "values": "captured"
+      },
+      "graph_captured": {
+        "objective": "graph",
+        "values": "captured"
+      }
+    },
+    "seed": 19,
+    "actual_profile_ms": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      144
+    ],
+    "runtime_cache_m": 256,
+    "profiles_per_worker": 9,
+    "expected_tactics_per_profile": 9,
+    "expected_measurements_per_worker": 81,
+    "rounds": 24,
+    "replays_per_sample": 16,
+    "prequeue_cycles": 10000000,
+    "initial_warmup_ms": 500,
+    "rewarm_ms": 20,
+    "capture_graphs": [
+      "winner",
+      "default"
+    ],
+    "startup_history": false,
+    "inline_gpu_fingerprints": false,
+    "cache_persistence": false,
+    "graph_profile_replays": 1,
+    "profiler_warmup": 3,
+    "profiler_repeat": 10,
+    "cold_l2": false,
+    "objective_auto": null,
+    "objective_graph": {
+      "execution_mode": "cuda_graph"
+    },
+    "graph_timing": null,
+    "global_timer": false,
+    "timing_oracle": "Same retained full-layer graphs; GPU events exclude the queued sleep. Queued wall time is diagnostic only.",
+    "all_query_outcomes_retained": true,
+    "no_adaptive_depth": true,
+    "first_block_gate": "Integrity/comparability only; then all remaining28 workers, independent of observed winners or signs.",
+    "candidate_order_scope": "Original ordered candidate pool at each fixed actual profile M must match across cells/processes. Different M endpoints may have different descriptor lists."
+  },
+  "analysis": {
+    "primary_unit": "One complete four-cell fresh-process block.",
+    "worker_estimator": "Median of24 within-round winner/default GPU-event ratios.",
+    "objective_log_contrast": "0.5 * ((log graph_synthetic - log auto_synthetic) + (log graph_captured - log auto_captured))",
+    "values_log_contrast": "0.5 * ((log auto_captured - log auto_synthetic) + (log graph_captured - log graph_synthetic))",
+    "primary_estimator": "Exponentiate the arithmetic mean of8 complete-block log contrasts.",
+    "primary_factor_family": [
+      "objective",
+      "values"
+    ],
+    "bootstrap": {
+      "unit": "whole four-cell block",
+      "resamples": 200000,
+      "seed": 202610241803,
+      "sampling": "Python random.Random(seed).randrange(8),8 draws per replicate; same resampled block indices for both primary factors and secondary interaction.",
+      "interval_level": 0.975,
+      "tail_probabilities": [
+        0.0125,
+        0.9875
+      ],
+      "quantile": "Linear interpolation at sorted index (B-1)*p (Hyndman-Fan type7).",
+      "interpretation": "Bonferroni-adjusted nominal95% two-factor estimation family; exploratory percentile intervals with only8 blocks, no formal equivalence or superiority conclusion."
+    },
+    "secondary": [
+      "All four cell worker distributions and full block contrasts; interaction; profiler margins by bucket; selection/kernel/native identities; order strata; paired queued wall diagnostics."
+    ],
+    "material_regression": {
+      "threshold": 1.1,
+      "comparison": ">",
+      "scope": "Research classifier, not a production replacement margin or safety policy."
+    },
+    "frequency_uncertainty": {
+      "per_cell_n": 8,
+      "two_sided": "Exact95% Clopper-Pearson binomial intervals.",
+      "one_sided_failure_upper": "Exact95% upper bound;0/8 gives1-0.05**(1/8), approximately31.2%.",
+      "limit": "Fixed-input process repetitions may be nonstationary/dependent; binomial bounds are conditional and not safety certification."
+    },
+    "no_pooling": "No historical pooling or within-worker pseudo-replication; all outcomes, failed selections and traces retained.",
+    "small_effect_limit": "Calibration showed recipe sensitivity around1.3\u20131.5% and unresolved sub-percent capture effects. Same-default small ratios do not demonstrate a speedup."
+  },
+  "values_limits": [
+    "Matched allocation/copy operations do not prove identical physical copy history: captured and synthetic source addresses/contents differ. Main F0 startup has no direct synthetic-byte fingerprint; log target/layout/control metadata, RNG states and source pins without claiming byte attestation.",
+    "The synthetic arm includes matched clone/copy work and is not an untouched production-initializer baseline. The factor compares two controlled initializer recipes. Distinct source addresses/contents can cause physical history differences, so any factor effect cannot be attributed solely to activation-value distribution."
+  ],
+  "admission": "Before the cohort, qualify all four objective-by-values cells using actual GPU initializer semantics in disposable correctness-only controls with explicit hashes: nine shapes/keys/order/RNG unchanged, only M144 A differs, weights/scales unchanged. Check matching objective/policy identity and exact public capture operands. Do not count these instrumented admissions as performance trials or silently insert hashes into cohort startup.",
+  "stopping": {
+    "integrity_failure": "Stop and preserve all outcomes; no retry or silent substitution.",
+    "performance_sign": "Never a stop/acceptance criterion.",
+    "complete_blocks_required": 8,
+    "no_automatic_expansion": true
+  },
+  "limits": [
+    "Research source with unmerged FP8 runtime/callback patches, not stock FlashInfer.",
+    "Selected explicit native acceptance after timing proves viability on the retained problem, not observation of native return during the earlier capture. Capture lookup/submitted-tactic provenance and same-original-graph trace are separate required evidence.",
+    "No scoped-cache prototype, persistence claim, production policy change, distributed adoption or full-model performance inference.",
+    "All-default or neutral results show only no demonstrated benefit in this one fixed current-source case."
+  ]
+}

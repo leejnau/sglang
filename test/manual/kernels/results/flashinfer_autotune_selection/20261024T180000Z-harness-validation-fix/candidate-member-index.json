@@ -1,0 +1,16 @@
+{
+  "members": {
+    "benchmarks/bench_autotuner_accuracy.py": {
+      "sha256": "9f6f8db43d5b584fa07852e42c640f4c22a2ac8b535519bde637858841142efe",
+      "size_bytes": 38073
+    },
+    "run_cuda_tests.py": {
+      "sha256": "eb1367c3d2d14f7292016f0abdba29ae887c38f764a8b775a2645c51d742a87f",
+      "size_bytes": 4146
+    },
+    "tests/autotuner/test_accuracy_harness.py": {
+      "sha256": "8c69bce9eeae4b123992a85e9a475e352481c063856ffadb908c021a81a7463b",
+      "size_bytes": 17375
+    }
+  }
+}

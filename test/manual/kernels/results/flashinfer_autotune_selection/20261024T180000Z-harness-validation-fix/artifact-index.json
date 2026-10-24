@@ -1,0 +1,41 @@
+{
+  "archive_members_verified": 16,
+  "files": {
+    "README.md": {
+      "sha256": "6411ff9f4bb83f76816c3247b822e51aa1ae14e23933ebb4f2ac4bec548e9566",
+      "size_bytes": 1675
+    },
+    "candidate-manifest.json": {
+      "sha256": "bf7737211f6aa6a4d9288d1ab285e063d99b5b9f3ea3f95499743813f98b6c27",
+      "size_bytes": 1463
+    },
+    "candidate-member-index.json": {
+      "sha256": "5824e5015886a2cad3f6b1aebc438baac6713ec28921306c44ae0e202d355f5a",
+      "size_bytes": 497
+    },
+    "candidate.patch": {
+      "sha256": "78a86745ecd2415ff8f2117cd3834e14ac334e23583dc6fb49898bec4014d3b2",
+      "size_bytes": 11443
+    },
+    "candidate.tar.gz": {
+      "sha256": "03860ff06986607d30b8ccfc2daf47e650cf8519a7ffc0ee8ef3cd062f5f16f7",
+      "size_bytes": 15879
+    },
+    "cpu-evidence-member-index.json": {
+      "sha256": "1bd9c7bd88e8fb8cfb6a9b0926cff191a64aa842c869c0abf91b10ca25b93063",
+      "size_bytes": 1938
+    },
+    "cpu-evidence.tar.gz": {
+      "sha256": "70e72bcf1036d9e58301b25ec11aa4974ce8df94043a2fbd917d9167a2b15bac",
+      "size_bytes": 16862
+    },
+    "cpu-validation.json": {
+      "sha256": "72e32aadd3eb220e83d456da37d69ba565b21bfc5b892c1e2fcc72919ef44319",
+      "size_bytes": 4327
+    },
+    "run_cuda_tests.py": {
+      "sha256": "eb1367c3d2d14f7292016f0abdba29ae887c38f764a8b775a2645c51d742a87f",
+      "size_bytes": 4146
+    }
+  }
+}

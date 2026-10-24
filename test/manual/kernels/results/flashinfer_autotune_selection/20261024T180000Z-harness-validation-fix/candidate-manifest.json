@@ -1,0 +1,28 @@
+{
+  "baseline_commit": "27c62fdf0ab1cd4014df8a15b66a975541fda83c",
+  "reviewed_current_commit": "f5d4db2c488d77331afa653c282d2e03c87ba517",
+  "touched_files_unchanged_between_baseline_and_current": true,
+  "files": [
+    {
+      "path": "benchmarks/bench_autotuner_accuracy.py",
+      "base_sha256": "7947647d266ec6a837bedd8e9c87d7d4dcbb4683bb9d16fef4b2d01c3f43b0dd",
+      "candidate_sha256": "9f6f8db43d5b584fa07852e42c640f4c22a2ac8b535519bde637858841142efe",
+      "added": 51,
+      "removed": 2
+    },
+    {
+      "path": "tests/autotuner/test_accuracy_harness.py",
+      "base_sha256": "31847ca23354d3a8b0b282efe35a61a53644b5db3850dda5a637cd2f28cfc92b",
+      "candidate_sha256": "8c69bce9eeae4b123992a85e9a475e352481c063856ffadb908c021a81a7463b",
+      "added": 216,
+      "removed": 0
+    }
+  ],
+  "patch_sha256": "78a86745ecd2415ff8f2117cd3834e14ac334e23583dc6fb49898bec4014d3b2",
+  "harness_patch_sha256": "706ca4d91f3e6ef8c1643977beef72fa39af121e691f9380a175633787fe94ef",
+  "tests_patch_sha256": "224f7c1e2054e48cfb1fc508919ce9b89e95bb98b96ec9c66b4b3a23a25aeb59",
+  "patch_applies_and_reproduces_candidate": true,
+  "runtime_or_descriptor_port_files_changed": false,
+  "gpu_gate_script_sha256": "eb1367c3d2d14f7292016f0abdba29ae887c38f764a8b775a2645c51d742a87f",
+  "patch_format": "Git-compatible unified diff; blank context-line trailing spaces removed for repository hooks. Ordinary git apply/check still reproduces both candidate files exactly."
+}

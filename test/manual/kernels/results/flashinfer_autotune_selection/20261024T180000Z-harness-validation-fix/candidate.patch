@@ -1,0 +1,323 @@
+--- a/benchmarks/bench_autotuner_accuracy.py
++++ b/benchmarks/bench_autotuner_accuracy.py
+@@ -129,7 +129,39 @@
+         return torch.bmm(a8.float(), b8.float()) * a_scale * b_scale
+
+     call.reference = reference
++    call.prepare_validation = prepare_fp8_validation
+     return call
++
++
++def prepare_fp8_validation(output, inputs):
++    """Refresh declared FP8 read0..3/output4/scratch5 roles outside timing."""
++    if len(inputs) != 6 or not all(
++        isinstance(t, torch.Tensor) for t in [output, *inputs]
++    ):
++        raise ValueError("FP8 validation requires six tensors and one tensor output")
++    declared = inputs[4]
++    if (
++        not output.is_floating_point()
++        or output.dtype != declared.dtype
++        or output.device != declared.device
++        or not output.is_contiguous()
++        or not declared.is_contiguous()
++        or output.data_ptr() != declared.data_ptr()
++        or output.numel() != declared.numel()
++    ):
++        raise ValueError("FP8 validation requires the declared floating output buffer")
++    begin, size = output.untyped_storage().data_ptr(), output.untyped_storage().nbytes()
++    for tensor in [*inputs[:4], inputs[5]]:
++        other, length = (
++            tensor.untyped_storage().data_ptr(),
++            tensor.untyped_storage().nbytes(),
++        )
++        if begin < other + length and other < begin + size:
++            raise ValueError(
++                "FP8 output refresh would alias a read operand or workspace"
++            )
++    with torch.inference_mode():
++        output.fill_(float("nan"))
+
+
+ def build_mm_fp4(m, n, k):
+@@ -451,10 +483,14 @@
+     return samples
+
+
+-def graph_selection_study(op, runners, config, inputs, kwargs, args):
++def graph_selection_study(
++    op, runners, config, inputs, kwargs, args, *, prepare_validation=None
++):
+     """Fresh cache searches with retained pre-/post-tuning default controls."""
+     from torch.utils._pytree import tree_map
+
++    if prepare_validation is not None and not callable(prepare_validation):
++        raise TypeError("prepare_validation must be a fixture-owned callable")
+     policies = {
+         "auto": None,
+         "eager": MeasurementPolicy(execution_mode="eager", cold_l2=args.cold_l2),
+@@ -570,6 +606,8 @@
+                 (chosen, chosen_output),
+                 (after, after_output),
+             ):
++                if prepare_validation is not None:
++                    prepare_validation(output, inputs)
+                 graph.replay()
+                 torch.cuda.synchronize()
+                 torch.testing.assert_close(
+@@ -607,6 +645,9 @@
+         "trials": rows,
+         "trial_isolation": "fresh tuner/cache; same process and retained runner/input objects",
+         "validation": {
++            "output_refresh": "fixture_callback"
++            if prepare_validation is not None
++            else "unavailable",
+             "events": "outside captured graph",
+             "prequeue_cycles": args.prequeue_cycles,
+             "replays": args.validation_replays,
+@@ -706,7 +747,15 @@
+             )
+         op, (runners, config, inputs, kwargs) = next(iter(captured.items()))
+         try:
+-            result = graph_selection_study(op, runners, config, inputs, kwargs, args)
++            result = graph_selection_study(
++                op,
++                runners,
++                config,
++                inputs,
++                kwargs,
++                args,
++                prepare_validation=getattr(call, "prepare_validation", None),
++            )
+         except Exception as exc:
+             with open(args.out, "w") as handle:
+                 json.dump(
+--- a/tests/autotuner/test_accuracy_harness.py
++++ b/tests/autotuner/test_accuracy_harness.py
+@@ -116,6 +116,7 @@
+     )
+     assert AutoTuner._instance is original
+     assert len(report["trials"]) == 3
++    assert report["validation"]["output_refresh"] == "unavailable"
+     for row in report["trials"]:
+         assert row["cache_hit"]
+         assert row["profile_count"] == (3 if profile_inputs == "retained" else 6)
+@@ -315,3 +316,218 @@
+         "error": "MeasurementUnavailable: no finite oracle candidates",
+     }
+     assert rows[1] == {"api": "bmm_fp8", "op": "op", "m": 2, "valid": 1}
++
++
++@pytest.mark.skipif(not torch.cuda.is_available(), reason="requires CUDA")
++@pytest.mark.parametrize("inference_output", [False, True])
++@pytest.mark.parametrize("kind", ["correct", "wrong", "no_write"])
++@pytest.mark.parametrize("refresh", [False, True])
++def test_graph_study_validates_owned_output(
++    monkeypatch, inference_output, kind, refresh
++):
++    from flashinfer.autotuner import TunableRunner
++
++    module = _harness()
++    original = AutoTuner._instance
++    with torch.inference_mode(inference_output):
++        output = torch.empty(4, device="cuda")
++        unrelated = torch.empty_like(output)
++        inputs = [
++            torch.ones_like(output),
++            torch.ones_like(output),
++            torch.ones(1, device="cuda"),
++            torch.ones(1, device="cuda"),
++            output,
++            torch.empty(8, dtype=torch.uint8, device="cuda"),
++        ]
++    assert output.is_inference() == inference_output
++    profiles, refreshes = [], []
++    sampled = False
++    sample = module.interleaved_graph_samples
++
++    class Runner(TunableRunner):
++        def get_valid_tactics(self, inputs, profile):
++            return [0]
++
++        def forward(self, inputs, tactic=-1, **kwargs):
++            with torch.inference_mode():
++                if tactic == -1 or kind == "correct":
++                    torch.add(inputs[0], 1, out=output)
++                elif kind == "wrong":
++                    torch.add(inputs[0], 2, out=output)
++                else:
++                    torch.add(inputs[1], 1, out=unrelated)
++            return output
++
++    def profile(self, runner, inputs, tactic, config, **kwargs):
++        profiles.append(tactic)
++        return 1.0 if tactic == 0 else 2.0
++
++    def samples(*args, **kwargs):
++        nonlocal sampled
++        result = sample(*args, **kwargs)
++        sampled = True
++        return result
++
++    def prepare(actual, actual_inputs):
++        assert sampled and not torch.cuda.is_current_stream_capturing()
++        assert not torch.is_inference_mode_enabled()
++        assert actual is output and actual_inputs is inputs
++        refreshes.append(actual.data_ptr())
++        module.prepare_fp8_validation(actual, actual_inputs)
++
++    monkeypatch.setattr(AutoTuner, "_profile_single_kernel", profile)
++    monkeypatch.setattr(module, "interleaved_graph_samples", samples)
++    kwargs = {"prepare_validation": prepare} if refresh else {}
++
++    def study():
++        return module.graph_selection_study(
++            "test.owned_output",
++            [Runner()],
++            TuningConfig(),
++            inputs,
++            {},
++            _study_args(),
++            **kwargs,
++        )
++
++    accepted = kind == "correct" or (kind == "no_write" and not refresh)
++    if accepted:
++        report = study()
++        row = report["trials"][0]
++        assert row["cache_hit"] and row["tactic"] == "0"
++        assert report["validation"]["output_refresh"] == (
++            "fixture_callback" if refresh else "unavailable"
++        )
++    else:
++        with pytest.raises(AssertionError):
++            study()
++    assert profiles == [-1, 0]
++    assert len(refreshes) == ((3 if accepted else 2) if refresh else 0)
++    assert AutoTuner._instance is original
++    assert not torch.is_inference_mode_enabled()
++
++
++@pytest.mark.parametrize("inference_output", [False, True])
++def test_fp8_validation_refresh_preserves_views(inference_output):
++    module = _harness()
++    with torch.inference_mode(inference_output):
++        declared = torch.ones(1, 2, 2)
++        output = declared.view(2, 2)
++        inputs = [
++            torch.ones(4),
++            torch.ones(4),
++            torch.ones(1),
++            torch.ones(1),
++            declared,
++            torch.empty(8, dtype=torch.uint8),
++        ]
++    reads = [tensor.clone() for tensor in inputs[:4]]
++    pointer = output.data_ptr()
++    module.prepare_fp8_validation(output, inputs)
++    assert torch.isnan(output).all()
++    assert output.data_ptr() == declared.data_ptr() == pointer
++    assert output.is_inference() == inference_output
++    assert all(torch.equal(a, b) for a, b in zip(reads, inputs[:4], strict=True))
++    assert not torch.is_inference_mode_enabled()
++
++
++@pytest.mark.parametrize("inference_output", [False, True])
++@pytest.mark.parametrize(
++    "kind",
++    [
++        "read_alias",
++        "partial_read_alias",
++        "scratch_alias",
++        "integer",
++        "wrong_role",
++        "strided_output",
++    ],
++)
++def test_fp8_validation_rejects_unsafe_roles(inference_output, kind):
++    module = _harness()
++    with torch.inference_mode(inference_output):
++        output = torch.ones(
++            4, dtype=torch.int64 if kind == "integer" else torch.float32
++        )
++        if kind == "strided_output":
++            output = torch.ones(8)[::2]
++        inputs = [
++            torch.ones(4),
++            torch.ones(4),
++            torch.ones(1),
++            torch.ones(1),
++            output,
++            torch.empty(8, dtype=torch.uint8),
++        ]
++        if kind == "read_alias":
++            inputs[0] = output
++        elif kind == "partial_read_alias":
++            storage = torch.ones(8)
++            output = inputs[4] = storage[:4]
++            inputs[0] = storage[2:6]
++        elif kind == "scratch_alias":
++            inputs[5] = output
++        elif kind == "wrong_role":
++            inputs[4] = torch.ones_like(output)
++    tensors = [output, *inputs]
++    before = [tensor.clone() for tensor in tensors]
++    with pytest.raises(ValueError):
++        module.prepare_fp8_validation(output, inputs)
++    assert all(torch.equal(a, b) for a, b in zip(before, tensors, strict=True))
++    assert not torch.is_inference_mode_enabled()
++
++
++@pytest.mark.parametrize("refresh", [False, True])
++def test_graph_study_fixture_refresh_is_optional(monkeypatch, tmp_path, refresh):
++    import sys
++    from types import SimpleNamespace
++
++    module = _harness()
++    output = tmp_path / "report.json"
++
++    def call():
++        return torch.ones(4)
++
++    def callback(*args):
++        pass
++
++    if refresh:
++        call.prepare_validation = callback
++    monkeypatch.setattr(
++        sys,
++        "argv",
++        [
++            "study",
++            "--graph-selection-study",
++            "--ops",
++            "bmm_fp8",
++            "--grid",
++            "1",
++            "--out",
++            str(output),
++        ],
++    )
++    monkeypatch.setattr(
++        torch.cuda,
++        "get_device_properties",
++        lambda _: SimpleNamespace(name="test", major=9, minor=0),
++    )
++    monkeypatch.setitem(module.OPS, "bmm_fp8", {"axis": "m", "build": lambda *a: call})
++    monkeypatch.setattr(
++        module,
++        "capture_choose_one_calls",
++        lambda *a, **kw: {
++            "test.fixture": ([object()], TuningConfig(), [torch.ones(4)], {})
++        },
++    )
++    seen = []
++
++    def study(*args, **kwargs):
++        seen.append(kwargs["prepare_validation"])
++        return {"trials": []}
++
++    monkeypatch.setattr(module, "graph_selection_study", study)
++    module.main()
++    assert seen == [callback if refresh else None]
++    assert output.is_file()

@@ -1,0 +1,1354 @@
+{
+  "schema_version": 1,
+  "cells": [
+    "auto_synthetic",
+    "graph_synthetic",
+    "auto_captured",
+    "graph_captured"
+  ],
+  "independent_blocks": 8,
+  "workers": 32,
+  "launch_randomization": {
+    "design": "Four-sequence first-order-balanced Williams design, two complete repeats; shuffle the four sequence labels separately within each repeat using one seeded generator.",
+    "sequences": [
+      "ABDC",
+      "BCAD",
+      "CDBA",
+      "DACB"
+    ],
+    "seed": 202610241801,
+    "sequence_indices": [
+      3,
+      1,
+      2,
+      0,
+      0,
+      3,
+      2,
+      1
+    ]
+  },
+  "capture_randomization": {
+    "seed": 202610241802,
+    "search_attempt": 44177,
+    "algorithm": "Independent seeded draws of two winner-first cells in each block; first schedule with4/8 winner-first per cell,2/4 per cell in each Williams repeat,2/4 per cell on even blocks and4/8 per launch position.",
+    "winner_first_bits_in_cell_order": [
+      [
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        1
+      ]
+    ]
+  },
+  "entries": [
+    {
+      "block": 0,
+      "williams_sequence": "DACB",
+      "launch_position": 0,
+      "launch_index": 0,
+      "cell": "graph_captured",
+      "objective": "graph",
+      "values": "captured",
+      "capture_order": "winner-first",
+      "replay_order_seed": 180100,
+      "raw_name": "block0-graph_captured-timing.json",
+      "trace_name": "block0-graph_captured-timing.trace.json",
+      "bootstrap_name": "block0-graph_captured-timing.bootstrap.json"
+    },
+    {
+      "block": 0,
+      "williams_sequence": "DACB",
+      "launch_position": 1,
+      "launch_index": 1,
+      "cell": "auto_synthetic",
+      "objective": "auto",
+      "values": "synthetic",
+      "capture_order": "winner-first",
+      "replay_order_seed": 180100,
+      "raw_name": "block0-auto_synthetic-timing.json",
+      "trace_name": "block0-auto_synthetic-timing.trace.json",
+      "bootstrap_name": "block0-auto_synthetic-timing.bootstrap.json"
+    },
+    {
+      "block": 0,
+      "williams_sequence": "DACB",
+      "launch_position": 2,
+      "launch_index": 2,
+      "cell": "auto_captured",
+      "objective": "auto",
+      "values": "captured",
+      "capture_order": "default-first",
+      "replay_order_seed": 180100,
+      "raw_name": "block0-auto_captured-timing.json",
+      "trace_name": "block0-auto_captured-timing.trace.json",
+      "bootstrap_name": "block0-auto_captured-timing.bootstrap.json"
+    },
+    {
+      "block": 0,
+      "williams_sequence": "DACB",
+      "launch_position": 3,
+      "launch_index": 3,
+      "cell": "graph_synthetic",
+      "objective": "graph",
+      "values": "synthetic",
+      "capture_order": "default-first",
+      "replay_order_seed": 180100,
+      "raw_name": "block0-graph_synthetic-timing.json",
+      "trace_name": "block0-graph_synthetic-timing.trace.json",
+      "bootstrap_name": "block0-graph_synthetic-timing.bootstrap.json"
+    },
+    {
+      "block": 1,
+      "williams_sequence": "BCAD",
+      "launch_position": 0,
+      "launch_index": 4,
+      "cell": "graph_synthetic",
+      "objective": "graph",
+      "values": "synthetic",
+      "capture_order": "default-first",
+      "replay_order_seed": 180101,
+      "raw_name": "block1-graph_synthetic-timing.json",
+      "trace_name": "block1-graph_synthetic-timing.trace.json",
+      "bootstrap_name": "block1-graph_synthetic-timing.bootstrap.json"
+    },
+    {
+      "block": 1,
+      "williams_sequence": "BCAD",
+      "launch_position": 1,
+      "launch_index": 5,
+      "cell": "auto_captured",
+      "objective": "auto",
+      "values": "captured",
+      "capture_order": "default-first",
+      "replay_order_seed": 180101,
+      "raw_name": "block1-auto_captured-timing.json",
+      "trace_name": "block1-auto_captured-timing.trace.json",
+      "bootstrap_name": "block1-auto_captured-timing.bootstrap.json"
+    },
+    {
+      "block": 1,
+      "williams_sequence": "BCAD",
+      "launch_position": 2,
+      "launch_index": 6,
+      "cell": "auto_synthetic",
+      "objective": "auto",
+      "values": "synthetic",
+      "capture_order": "winner-first",
+      "replay_order_seed": 180101,
+      "raw_name": "block1-auto_synthetic-timing.json",
+      "trace_name": "block1-auto_synthetic-timing.trace.json",
+      "bootstrap_name": "block1-auto_synthetic-timing.bootstrap.json"
+    },
+    {
+      "block": 1,
+      "williams_sequence": "BCAD",
+      "launch_position": 3,
+      "launch_index": 7,
+      "cell": "graph_captured",
+      "objective": "graph",
+      "values": "captured",
+      "capture_order": "winner-first",
+      "replay_order_seed": 180101,
+      "raw_name": "block1-graph_captured-timing.json",
+      "trace_name": "block1-graph_captured-timing.trace.json",
+      "bootstrap_name": "block1-graph_captured-timing.bootstrap.json"
+    },
+    {
+      "block": 2,
+      "williams_sequence": "CDBA",
+      "launch_position": 0,
+      "launch_index": 8,
+      "cell": "auto_captured",
+      "objective": "auto",
+      "values": "captured",
+      "capture_order": "winner-first",
+      "replay_order_seed": 180102,
+      "raw_name": "block2-auto_captured-timing.json",
+      "trace_name": "block2-auto_captured-timing.trace.json",
+      "bootstrap_name": "block2-auto_captured-timing.bootstrap.json"
+    },
+    {
+      "block": 2,
+      "williams_sequence": "CDBA",
+      "launch_position": 1,
+      "launch_index": 9,
+      "cell": "graph_captured",
+      "objective": "graph",
+      "values": "captured",
+      "capture_order": "default-first",
+      "replay_order_seed": 180102,
+      "raw_name": "block2-graph_captured-timing.json",
+      "trace_name": "block2-graph_captured-timing.trace.json",
+      "bootstrap_name": "block2-graph_captured-timing.bootstrap.json"
+    },
+    {
+      "block": 2,
+      "williams_sequence": "CDBA",
+      "launch_position": 2,
+      "launch_index": 10,
+      "cell": "graph_synthetic",
+      "objective": "graph",
+      "values": "synthetic",
+      "capture_order": "winner-first",
+      "replay_order_seed": 180102,
+      "raw_name": "block2-graph_synthetic-timing.json",
+      "trace_name": "block2-graph_synthetic-timing.trace.json",
+      "bootstrap_name": "block2-graph_synthetic-timing.bootstrap.json"
+    },
+    {
+      "block": 2,
+      "williams_sequence": "CDBA",
+      "launch_position": 3,
+      "launch_index": 11,
+      "cell": "auto_synthetic",
+      "objective": "auto",
+      "values": "synthetic",
+      "capture_order": "default-first",
+      "replay_order_seed": 180102,
+      "raw_name": "block2-auto_synthetic-timing.json",
+      "trace_name": "block2-auto_synthetic-timing.trace.json",
+      "bootstrap_name": "block2-auto_synthetic-timing.bootstrap.json"
+    },
+    {
+      "block": 3,
+      "williams_sequence": "ABDC",
+      "launch_position": 0,
+      "launch_index": 12,
+      "cell": "auto_synthetic",
+      "objective": "auto",
+      "values": "synthetic",
+      "capture_order": "default-first",
+      "replay_order_seed": 180103,
+      "raw_name": "block3-auto_synthetic-timing.json",
+      "trace_name": "block3-auto_synthetic-timing.trace.json",
+      "bootstrap_name": "block3-auto_synthetic-timing.bootstrap.json"
+    },
+    {
+      "block": 3,
+      "williams_sequence": "ABDC",
+      "launch_position": 1,
+      "launch_index": 13,
+      "cell": "graph_synthetic",
+      "objective": "graph",
+      "values": "synthetic",
+      "capture_order": "winner-first",
+      "replay_order_seed": 180103,
+      "raw_name": "block3-graph_synthetic-timing.json",
+      "trace_name": "block3-graph_synthetic-timing.trace.json",
+      "bootstrap_name": "block3-graph_synthetic-timing.bootstrap.json"
+    },
+    {
+      "block": 3,
+      "williams_sequence": "ABDC",
+      "launch_position": 2,
+      "launch_index": 14,
+      "cell": "graph_captured",
+      "objective": "graph",
+      "values": "captured",
+      "capture_order": "default-first",
+      "replay_order_seed": 180103,
+      "raw_name": "block3-graph_captured-timing.json",
+      "trace_name": "block3-graph_captured-timing.trace.json",
+      "bootstrap_name": "block3-graph_captured-timing.bootstrap.json"
+    },
+    {
+      "block": 3,
+      "williams_sequence": "ABDC",
+      "launch_position": 3,
+      "launch_index": 15,
+      "cell": "auto_captured",
+      "objective": "auto",
+      "values": "captured",
+      "capture_order": "winner-first",
+      "replay_order_seed": 180103,
+      "raw_name": "block3-auto_captured-timing.json",
+      "trace_name": "block3-auto_captured-timing.trace.json",
+      "bootstrap_name": "block3-auto_captured-timing.bootstrap.json"
+    },
+    {
+      "block": 4,
+      "williams_sequence": "ABDC",
+      "launch_position": 0,
+      "launch_index": 16,
+      "cell": "auto_synthetic",
+      "objective": "auto",
+      "values": "synthetic",
+      "capture_order": "winner-first",
+      "replay_order_seed": 180104,
+      "raw_name": "block4-auto_synthetic-timing.json",
+      "trace_name": "block4-auto_synthetic-timing.trace.json",
+      "bootstrap_name": "block4-auto_synthetic-timing.bootstrap.json"
+    },
+    {
+      "block": 4,
+      "williams_sequence": "ABDC",
+      "launch_position": 1,
+      "launch_index": 17,
+      "cell": "graph_synthetic",
+      "objective": "graph",
+      "values": "synthetic",
+      "capture_order": "default-first",
+      "replay_order_seed": 180104,
+      "raw_name": "block4-graph_synthetic-timing.json",
+      "trace_name": "block4-graph_synthetic-timing.trace.json",
+      "bootstrap_name": "block4-graph_synthetic-timing.bootstrap.json"
+    },
+    {
+      "block": 4,
+      "williams_sequence": "ABDC",
+      "launch_position": 2,
+      "launch_index": 18,
+      "cell": "graph_captured",
+      "objective": "graph",
+      "values": "captured",
+      "capture_order": "default-first",
+      "replay_order_seed": 180104,
+      "raw_name": "block4-graph_captured-timing.json",
+      "trace_name": "block4-graph_captured-timing.trace.json",
+      "bootstrap_name": "block4-graph_captured-timing.bootstrap.json"
+    },
+    {
+      "block": 4,
+      "williams_sequence": "ABDC",
+      "launch_position": 3,
+      "launch_index": 19,
+      "cell": "auto_captured",
+      "objective": "auto",
+      "values": "captured",
+      "capture_order": "winner-first",
+      "replay_order_seed": 180104,
+      "raw_name": "block4-auto_captured-timing.json",
+      "trace_name": "block4-auto_captured-timing.trace.json",
+      "bootstrap_name": "block4-auto_captured-timing.bootstrap.json"
+    },
+    {
+      "block": 5,
+      "williams_sequence": "DACB",
+      "launch_position": 0,
+      "launch_index": 20,
+      "cell": "graph_captured",
+      "objective": "graph",
+      "values": "captured",
+      "capture_order": "default-first",
+      "replay_order_seed": 180105,
+      "raw_name": "block5-graph_captured-timing.json",
+      "trace_name": "block5-graph_captured-timing.trace.json",
+      "bootstrap_name": "block5-graph_captured-timing.bootstrap.json"
+    },
+    {
+      "block": 5,
+      "williams_sequence": "DACB",
+      "launch_position": 1,
+      "launch_index": 21,
+      "cell": "auto_synthetic",
+      "objective": "auto",
+      "values": "synthetic",
+      "capture_order": "winner-first",
+      "replay_order_seed": 180105,
+      "raw_name": "block5-auto_synthetic-timing.json",
+      "trace_name": "block5-auto_synthetic-timing.trace.json",
+      "bootstrap_name": "block5-auto_synthetic-timing.bootstrap.json"
+    },
+    {
+      "block": 5,
+      "williams_sequence": "DACB",
+      "launch_position": 2,
+      "launch_index": 22,
+      "cell": "auto_captured",
+      "objective": "auto",
+      "values": "captured",
+      "capture_order": "winner-first",
+      "replay_order_seed": 180105,
+      "raw_name": "block5-auto_captured-timing.json",
+      "trace_name": "block5-auto_captured-timing.trace.json",
+      "bootstrap_name": "block5-auto_captured-timing.bootstrap.json"
+    },
+    {
+      "block": 5,
+      "williams_sequence": "DACB",
+      "launch_position": 3,
+      "launch_index": 23,
+      "cell": "graph_synthetic",
+      "objective": "graph",
+      "values": "synthetic",
+      "capture_order": "default-first",
+      "replay_order_seed": 180105,
+      "raw_name": "block5-graph_synthetic-timing.json",
+      "trace_name": "block5-graph_synthetic-timing.trace.json",
+      "bootstrap_name": "block5-graph_synthetic-timing.bootstrap.json"
+    },
+    {
+      "block": 6,
+      "williams_sequence": "CDBA",
+      "launch_position": 0,
+      "launch_index": 24,
+      "cell": "auto_captured",
+      "objective": "auto",
+      "values": "captured",
+      "capture_order": "default-first",
+      "replay_order_seed": 180106,
+      "raw_name": "block6-auto_captured-timing.json",
+      "trace_name": "block6-auto_captured-timing.trace.json",
+      "bootstrap_name": "block6-auto_captured-timing.bootstrap.json"
+    },
+    {
+      "block": 6,
+      "williams_sequence": "CDBA",
+      "launch_position": 1,
+      "launch_index": 25,
+      "cell": "graph_captured",
+      "objective": "graph",
+      "values": "captured",
+      "capture_order": "winner-first",
+      "replay_order_seed": 180106,
+      "raw_name": "block6-graph_captured-timing.json",
+      "trace_name": "block6-graph_captured-timing.trace.json",
+      "bootstrap_name": "block6-graph_captured-timing.bootstrap.json"
+    },
+    {
+      "block": 6,
+      "williams_sequence": "CDBA",
+      "launch_position": 2,
+      "launch_index": 26,
+      "cell": "graph_synthetic",
+      "objective": "graph",
+      "values": "synthetic",
+      "capture_order": "winner-first",
+      "replay_order_seed": 180106,
+      "raw_name": "block6-graph_synthetic-timing.json",
+      "trace_name": "block6-graph_synthetic-timing.trace.json",
+      "bootstrap_name": "block6-graph_synthetic-timing.bootstrap.json"
+    },
+    {
+      "block": 6,
+      "williams_sequence": "CDBA",
+      "launch_position": 3,
+      "launch_index": 27,
+      "cell": "auto_synthetic",
+      "objective": "auto",
+      "values": "synthetic",
+      "capture_order": "default-first",
+      "replay_order_seed": 180106,
+      "raw_name": "block6-auto_synthetic-timing.json",
+      "trace_name": "block6-auto_synthetic-timing.trace.json",
+      "bootstrap_name": "block6-auto_synthetic-timing.bootstrap.json"
+    },
+    {
+      "block": 7,
+      "williams_sequence": "BCAD",
+      "launch_position": 0,
+      "launch_index": 28,
+      "cell": "graph_synthetic",
+      "objective": "graph",
+      "values": "synthetic",
+      "capture_order": "winner-first",
+      "replay_order_seed": 180107,
+      "raw_name": "block7-graph_synthetic-timing.json",
+      "trace_name": "block7-graph_synthetic-timing.trace.json",
+      "bootstrap_name": "block7-graph_synthetic-timing.bootstrap.json"
+    },
+    {
+      "block": 7,
+      "williams_sequence": "BCAD",
+      "launch_position": 1,
+      "launch_index": 29,
+      "cell": "auto_captured",
+      "objective": "auto",
+      "values": "captured",
+      "capture_order": "default-first",
+      "replay_order_seed": 180107,
+      "raw_name": "block7-auto_captured-timing.json",
+      "trace_name": "block7-auto_captured-timing.trace.json",
+      "bootstrap_name": "block7-auto_captured-timing.bootstrap.json"
+    },
+    {
+      "block": 7,
+      "williams_sequence": "BCAD",
+      "launch_position": 2,
+      "launch_index": 30,
+      "cell": "auto_synthetic",
+      "objective": "auto",
+      "values": "synthetic",
+      "capture_order": "default-first",
+      "replay_order_seed": 180107,
+      "raw_name": "block7-auto_synthetic-timing.json",
+      "trace_name": "block7-auto_synthetic-timing.trace.json",
+      "bootstrap_name": "block7-auto_synthetic-timing.bootstrap.json"
+    },
+    {
+      "block": 7,
+      "williams_sequence": "BCAD",
+      "launch_position": 3,
+      "launch_index": 31,
+      "cell": "graph_captured",
+      "objective": "graph",
+      "values": "captured",
+      "capture_order": "winner-first",
+      "replay_order_seed": 180107,
+      "raw_name": "block7-graph_captured-timing.json",
+      "trace_name": "block7-graph_captured-timing.trace.json",
+      "bootstrap_name": "block7-graph_captured-timing.bootstrap.json"
+    }
+  ],
+  "round_schedules": [
+    {
+      "block": 0,
+      "seed": 180100,
+      "orders": [
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ]
+      ]
+    },
+    {
+      "block": 1,
+      "seed": 180101,
+      "orders": [
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ]
+      ]
+    },
+    {
+      "block": 2,
+      "seed": 180102,
+      "orders": [
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ]
+      ]
+    },
+    {
+      "block": 3,
+      "seed": 180103,
+      "orders": [
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ]
+      ]
+    },
+    {
+      "block": 4,
+      "seed": 180104,
+      "orders": [
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ]
+      ]
+    },
+    {
+      "block": 5,
+      "seed": 180105,
+      "orders": [
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ]
+      ]
+    },
+    {
+      "block": 6,
+      "seed": 180106,
+      "orders": [
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ]
+      ]
+    },
+    {
+      "block": 7,
+      "seed": 180107,
+      "orders": [
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "winner",
+          "default"
+        ],
+        [
+          "default",
+          "winner"
+        ],
+        [
+          "default",
+          "winner"
+        ]
+      ]
+    }
+  ]
+}

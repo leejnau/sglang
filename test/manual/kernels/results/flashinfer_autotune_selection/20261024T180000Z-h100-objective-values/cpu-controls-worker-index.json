@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "status": "success",
+  "archive_sha256": "2408a6a60d3702b7bfc67d75843fb90ff6c52a030b3453636bb1a65bdf19d41e",
+  "members": [
+    {
+      "path": "bootstrap/bootstrap-controls.json",
+      "size_bytes": 1712,
+      "sha256": "5b09f8f7af531d5a6333fea9fe36ad3b4f686ca5484d83972b8bc33f90f5e3fb"
+    },
+    {
+      "path": "bootstrap/check_bootstrap_cpu.py",
+      "size_bytes": 5936,
+      "sha256": "e6b7c9151ace687711bf9da7d3d78014439e65bdc908ad94cbc3f9fd42a119ac"
+    },
+    {
+      "path": "worker/check_worker_cpu.py",
+      "size_bytes": 13260,
+      "sha256": "39d4b8584896fb3cfc92d6a35d6a927c74133d5685f9eda03aa94938cdd62767"
+    },
+    {
+      "path": "worker/cpu-controls.json",
+      "size_bytes": 4215,
+      "sha256": "c23b580eca210606135590076aa2db343fdad4da989d256778323da326fa3349"
+    }
+  ],
+  "worker_controls": 84,
+  "bootstrap_controls": 22,
+  "worker_sha256": "3adf2314775574bc9f0f2c4a4b2aaaab8ed8f178f9949eb82070d912a45f95ab",
+  "scope": "Worker controls execute exact current initializer/cache APIs on CPU with disclosed GPU-only import leaves and deterministic CUDA event/native doubles. Bootstrap controls execute actual run_current.main/runpy with explicit CPU-only provider/native doubles. No CUDA numerics, actual native build or performance claim. Scripts retain their local scratch dependencies and absolute-path prerequisites; previous admission proof supplies the current-source CPU loader.",
+  "prohibited_byte_scan": {
+    "pattern_hex": "766c6c6d",
+    "all_decompressed_members_safe": true
+  },
+  "pycache_included": false
+}

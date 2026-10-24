@@ -1,0 +1,87 @@
+{
+  "CPU": {
+    "cpu-green.json": {
+      "counts": {
+        "failed": 0,
+        "passed": 16,
+        "skipped": 12
+      },
+      "mode": "actual CPU tests",
+      "pytest_exit_code": 0
+    },
+    "cuda-boundary-green.json": {
+      "counts": {
+        "failed": 0,
+        "passed": 28,
+        "skipped": 0
+      },
+      "mode": "CPU CUDA-boundary admission",
+      "pytest_exit_code": 0
+    },
+    "red-without-callback.json": {
+      "counts": {
+        "failed": 6,
+        "passed": 22,
+        "skipped": 0
+      },
+      "mode": "CPU CUDA-boundary admission",
+      "pytest_exit_code": 1
+    },
+    "red-without-inference.json": {
+      "counts": {
+        "failed": 1,
+        "passed": 15,
+        "skipped": 12
+      },
+      "mode": "actual CPU tests",
+      "pytest_exit_code": 1
+    }
+  },
+  "change": "Add an optional fixture-owned prepare_validation callback before each final validation replay, after all timing. The built-in FP8 fixture opts in through validated read/output/workspace roles and inference-safe output NaN refresh. Unowned generic fixtures retain legacy behavior and report refresh unavailable.",
+  "limits": [
+    "No candidate-selection improvement, numerical backend defect or serving-performance claim.",
+    "Generic/in-place/integer fixtures are not blindly poisoned; unsupported FP8 output roles reject before mutation.",
+    "The candidate archive contains only the two requested benchmark/test files and the own gate wrapper, not a FlashInfer source tree or provider package."
+  ],
+  "line_counts": [
+    {
+      "added": 51,
+      "base_sha256": "7947647d266ec6a837bedd8e9c87d7d4dcbb4683bb9d16fef4b2d01c3f43b0dd",
+      "candidate_sha256": "9f6f8db43d5b584fa07852e42c640f4c22a2ac8b535519bde637858841142efe",
+      "path": "benchmarks/bench_autotuner_accuracy.py",
+      "removed": 2
+    },
+    {
+      "added": 216,
+      "base_sha256": "31847ca23354d3a8b0b282efe35a61a53644b5db3850dda5a637cd2f28cfc92b",
+      "candidate_sha256": "8c69bce9eeae4b123992a85e9a475e352481c063856ffadb908c021a81a7463b",
+      "path": "tests/autotuner/test_accuracy_harness.py",
+      "removed": 0
+    }
+  ],
+  "pending": [
+    "Run the separate real-CUDA pytest gate after the qualified bootstrap in a fresh container.",
+    "No PR, push, commit, CI trigger or external message has been performed."
+  ],
+  "problem": "A selected tactic that writes nothing can inherit a valid default result in a shared output buffer and pass the graph selection study's final comparisons.",
+  "red_green": {
+    "missing_callback": "Removing only the callback invocation causes six expected admission failures, including both no-write outputs that cease to be rejected.",
+    "missing_inference_context": "Removing only the inference context around fill causes one real CPU inference-output regression, with the other fifteen CPU controls still passing."
+  },
+  "runtime_boundary": "CPU proofs import complete 27c62 tuner/cache modules with disclosed GPU-only import shells. The separate28-test CUDA-boundary admission uses simulated graphs/events and is not a CUDA pass. The new real-CUDA gate remains pending.",
+  "schema_version": 1,
+  "scope": "Only the benchmark and its focused tests change. No descriptor port, production tuner, cache format, measurement policy, SGLang runtime or serving-performance change.",
+  "status": "Separate upstream candidate prepared; new actual-CUDA pytest gate pending.",
+  "test_coverage": "Twelve CUDA correctness cases: normal/inference allocations x correct/wrong/no-write x callback present/omitted; sixteen CPU cases: output views, six unsafe roles x both allocation modes and optional factory-hook routing.",
+  "upstream_review": {
+    "benchmark_last_change": "https://github.com/flashinfer-ai/flashinfer/pull/7155",
+    "both_touched_files_byte_identical_to27c62": true,
+    "limit": "Read-only snapshot during preparation; targeted searches are not an exhaustive guarantee. Recheck current head and reviews before any future PR.",
+    "reviewed_main": "f5d4db2c488d77331afa653c282d2e03c87ba517",
+    "targeted_searches_without_match": [
+      "repo:flashinfer-ai/flashinfer is:pr prepare_validation",
+      "repo:flashinfer-ai/flashinfer is:pr in:title autotuner validation",
+      "repo:flashinfer-ai/flashinfer is:pr in:title output validation autotuner"
+    ]
+  }
+}

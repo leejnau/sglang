@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "archive": {
+    "path": "analysis-controls.tar.gz",
+    "sha256": "68706820b59bcf23cf00733dd2b2a7ee576554a309fe7109e66d520a402ca243",
+    "bytes": 16097
+  },
+  "members": [
+    {
+      "path": "analysis/make_plan.py",
+      "bytes": 10912,
+      "sha256": "c4b14b92bbb2b2f60ca75079b8b8d8a391e915004e58a3033da523fa902b7b67"
+    },
+    {
+      "path": "analysis/check_statistics.py",
+      "bytes": 3754,
+      "sha256": "94307bb919bd7c66e6bb00eea568082c6e861c9cb396dbbb1edae8af50eca6c9"
+    },
+    {
+      "path": "analysis/statistics-controls.json",
+      "bytes": 924,
+      "sha256": "596d2d51980bacc3ad13dbd9085ec0d15d5de65d6c54c131081dc451557e58d2"
+    },
+    {
+      "path": "analysis/analyzer-controls.json",
+      "bytes": 2466,
+      "sha256": "3e5c6efb4fea3451296806212e7ddb46d06c34c3c1115456adb49e5f0696f0fc"
+    },
+    {
+      "path": "batch/analyzer_controls.py",
+      "bytes": 42853,
+      "sha256": "5dd25cb87b0c59544a90b2a4d56584aef033a63fba4864d86341e4de256502c4"
+    }
+  ]
+}
