@@ -908,7 +908,11 @@ def run(a):
                     {
                         "file": p,
                         "directory": "/study/cache",
-                        "command": "nvcc -gencode=arch=compute_90a,code=sm_90a " + p,
+                        "command": (
+                            "nvcc -c " + p + " -gencode=arch=compute_90a,code=sm_90a"
+                            if Path(p).suffix == ".cu"
+                            else "c++ -c " + p
+                        ),
                     }
                     for p in sources
                 ],
@@ -1056,6 +1060,41 @@ def run(a):
             ] = "wrong"
             path.write_text(json.dumps(bad))
             rejects("full_main_wrong_actual_native_source", lambda: a.analyze(args))
+            path.write_text(saved)
+            check(
+                "host_CPP_metadata_without_CUDA_architecture",
+                providers["trtllm_utils"]["compile_commands"][1]["command"].startswith(
+                    "c++ -c "
+                )
+                and "-gencode"
+                not in providers["trtllm_utils"]["compile_commands"][1]["command"],
+            )
+            for label, provider_name, index, replacement in (
+                ("CUDA_wrong_architecture", "gemm", 0, "wrong_arch"),
+                ("host_wrong_compiler", "trtllm_utils", 1, "wrong_compiler"),
+                ("compile_source_mismatch", "trtllm_utils", 1, "wrong_source"),
+                ("duplicate_translation_unit", "trtllm_utils", 2, "duplicate"),
+            ):
+                bad = json.loads(saved)
+                commands = bad["native"]["providers"][provider_name]["compile_commands"]
+                if replacement == "wrong_arch":
+                    commands[index]["command"] = commands[index]["command"].replace(
+                        "compute_90a,code=sm_90a", "compute_100a,code=sm_100a"
+                    )
+                elif replacement == "wrong_compiler":
+                    commands[index]["command"] = commands[index]["command"].replace(
+                        "c++", "nvcc", 1
+                    )
+                elif replacement == "wrong_source":
+                    commands[index]["command"] = commands[index]["command"].replace(
+                        commands[index]["file"],
+                        "/study/input/current/source/csrc/wrong.cpp",
+                        1,
+                    )
+                else:
+                    commands[index] = copy.deepcopy(commands[1])
+                path.write_text(json.dumps(bad))
+                rejects("full_main_" + label, lambda: a.analyze(args))
             path.write_text(saved)
             path = raw / (
                 Path(schedule["entries"][4]["raw_name"]).stem + ".container-id"

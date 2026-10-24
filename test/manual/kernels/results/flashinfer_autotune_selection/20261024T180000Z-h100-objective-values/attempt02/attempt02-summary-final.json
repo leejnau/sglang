@@ -1,0 +1,37 @@
+{
+  "status": "success",
+  "final_immutable": true,
+  "scope": "Four disposable instrumented admissions only; all 32 performance workers remain unlaunched.",
+  "execution_commit": "900c3f9656e468f8c942b828fa699bc8bd28f3a7",
+  "private_archive_sha256": "09c4e8981d84bf84fbdd7a51c28df9292eb5fb2f67583370d1a4bd467e00e43a",
+  "independent_audit_checks": 2665,
+  "admission_workers": 4,
+  "optimization_profiles": 36,
+  "actual_positive_finite_candidate_measurements": 324,
+  "passed_unique_numerical_guards": 108,
+  "initializer_and_domain": "All four share the original nine actual endpoints, RNG before/after, default generated draws, endpoint-specific candidate order and file keys. Only captured-values M144 activation bytes differ; the other eight activation profiles and static weights/scales match the actual immutable fixture.",
+  "cache": "Canonical combined/per-field cache digests agree after startup, before capture, before trace and at completion in all four workers. Genuine miss-map removals restore state and profiling remains at 81 attempts each.",
+  "native": "Actual GEMM/helper ELF, Ninja and translation-unit hashes match in all four workers. All natural selected tactics are -1 and use the native default route. Every known explicit control returns used_descriptor=1 and passes raw-call and original-graph numerical checks.",
+  "graphs": "Each worker retains three distinct graph-owned outputs, including its explicit control. Changed-zero input gives exact zero; restored-input and poisoned-output checks pass. Traces after the controls correlate three replays each of the original winner/default graphs with quantizer and GEMM sequences. Their ordered signatures match within each worker.",
+  "checker_failure": "All four worker/container exit codes are 0. The frozen analyzer rejected host C++ commands for lacking CUDA gencode; actual .cu rows correctly target 90a. This checker assertion failed after successful admissions. Launcher exit 1 is preserved; the allocation was released and no timing workers ran.",
+  "limits": [
+    "Admission byte hashing can affect profiling history; these selections and profiling times are not performance trial results.",
+    "Native acceptance is checked on exact retained operands after setup, rather than observed during the earlier capture.",
+    "Matching kernel names and launch metadata do not establish opaque algorithm identity or serving performance."
+  ],
+  "audit_source_sha256": "0a7e9da8735820a78f5ec17abecc6276abc44a9425d53db0290194046e90e387",
+  "audit_report_sha256": "482f2ccd5561df05addeaf0a2de4ec98f43c51316fa266c118cbf22be9254ed5",
+  "public_bundle": {
+    "status": "success",
+    "members_checked": 48,
+    "archive_sha256": "ee2845c1a3021d53b38e29de5e9ddc5f27c8dea2acfd22bb186c7770bd97110f",
+    "private_archive_sha256": "09c4e8981d84bf84fbdd7a51c28df9292eb5fb2f67583370d1a4bd467e00e43a",
+    "manifest_sha256": "a89322255e25699afd6907b0ccf19017d0ca960d10bb1beab781a8bc6c2a83f0",
+    "exact_files": 43,
+    "derived_bootstrap_files": 4,
+    "omitted_inventory_entries": 24,
+    "excluded_private_files": 29,
+    "scan_pattern_hex": "766c6c6d",
+    "decompressed_member_scan": true
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "status": "workers_passed_analysis_gate_failed",
+  "execution_commit": "900c3f9656e468f8c942b828fa699bc8bd28f3a7",
+  "allocation": "2803736",
+  "worker_count": 4,
+  "worker_statuses": "all success",
+  "profile_attempts": 324,
+  "numerical_checks_passed": 108,
+  "natural_default_selections": 4,
+  "accepted_explicit_controls": 4,
+  "timing_workers": 0,
+  "complete_timing_blocks": 0,
+  "error": "ValueError: current-source H100 native compilation",
+  "cause": "The frozen analyzer incorrectly required CUDA architecture flags on host C++ translation units. The worker and compiled provider are valid; the original failed gate remains preserved.",
+  "independent_actual_data_checks": 2665,
+  "private_archive_sha256": "09c4e8981d84bf84fbdd7a51c28df9292eb5fb2f67583370d1a4bd467e00e43a",
+  "preserved_private_files": 75,
+  "native_artifacts": 4,
+  "performance_claim": "None: instrumented admission processes are excluded from timing inference.",
+  "public_derivation": "Only AOT import-inventory entries omitted from four bootstraps with original hashes/counts; all worker results/traces/errors byte-exact."
+}

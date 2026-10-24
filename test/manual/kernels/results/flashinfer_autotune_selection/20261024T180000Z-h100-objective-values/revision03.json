@@ -1,0 +1,21 @@
+{
+  "status": "new_analyzer_revision_before_timing",
+  "prior_execution_commit": "900c3f9656e468f8c942b828fa699bc8bd28f3a7",
+  "prior_attempt": "attempt02",
+  "prior_timing_workers": 0,
+  "reason": "Validate CUDA translation units with nvcc and H100 architecture flags, and host C++ translation units with their host compiler. Bind both to the recorded current source path and unique -c operand.",
+  "unchanged": [
+    "worker source",
+    "FlashInfer and SGLang production source",
+    "objective and activation-value factors",
+    "schedule, samples, timing and estimators"
+  ],
+  "controls": {
+    "analyzer": 63,
+    "actual_native_metadata": 11,
+    "actual_admissions_reanalyzed": 4,
+    "independent_admission_checks": 2665
+  },
+  "protocol_disposition": "The prior unsuccessful attempt is preserved unchanged. A separately frozen analyzer revision begins a fresh four-admission sequence and entire fixed 32-worker timing cohort. No performance data were collected or replaced.",
+  "analyzer_sha256": "cf72c74cf2e9c343e46af1b1b74a232a8b201de06dc2cd01bef6552f0981ce4f"
+}

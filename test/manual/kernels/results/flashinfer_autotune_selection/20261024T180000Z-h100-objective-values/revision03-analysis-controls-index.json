@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "archive": {
+    "path": "revision03-analysis-controls.tar.gz",
+    "bytes": 108925,
+    "sha256": "1c2a52253b9709cefbce90fd7fd93ba970b3e87201cf09ea5968bfff828506a3"
+  },
+  "members": [
+    {
+      "path": "src/analyze.py",
+      "bytes": 79502,
+      "sha256": "cf72c74cf2e9c343e46af1b1b74a232a8b201de06dc2cd01bef6552f0981ce4f"
+    },
+    {
+      "path": "src/analyzer_controls.py",
+      "bytes": 44863,
+      "sha256": "76a8b613f8b14876aee938b776a44585216e99970df1e4b5ef098bb620a4ea67"
+    },
+    {
+      "path": "baseline/analyze.py",
+      "bytes": 78106,
+      "sha256": "321bd9d17d5f1cacc6a31b49b5a4173f34968ed47d54b9fe358f6b3540274e58"
+    },
+    {
+      "path": "baseline/analyzer_controls.py",
+      "bytes": 42853,
+      "sha256": "5dd25cb87b0c59544a90b2a4d56584aef033a63fba4864d86341e4de256502c4"
+    },
+    {
+      "path": "revision03.patch",
+      "bytes": 5511,
+      "sha256": "48d4049af5c4bc47be1f333d9f562c96b35245a3ed0c92651c2bf92ea37a6fee"
+    },
+    {
+      "path": "controls/full-controls.json",
+      "bytes": 2680,
+      "sha256": "96cb67430f49fb098fe89a60050b326d0eb5ba8c16191e48de84de4b8c60d58c"
+    },
+    {
+      "path": "controls/actual-compile-metadata-controls.json",
+      "bytes": 774,
+      "sha256": "9d4ec8b1c6a2ce6ba2651c637f1a2dcaaa30750b3652f2e31dcea41876c44b1d"
+    },
+    {
+      "path": "controls/check_compile_metadata.py",
+      "bytes": 2717,
+      "sha256": "fe6a6d316e169ca90a8a4ad600ce84cb3824d9a7a4955795cceb48dd5fed73ba"
+    },
+    {
+      "path": "scratch/analyze_candidate.py",
+      "bytes": 79426,
+      "sha256": "e7f254d424b6843cb68acfcd73b6ca65eced9418347d5d22832c017edf90995c"
+    },
+    {
+      "path": "scratch/analyzer_controls_candidate.py",
+      "bytes": 44622,
+      "sha256": "c82c899110ffd81a87cfa7b0612e130793ce83e37e10fe585f6314d542a27d78"
+    },
+    {
+      "path": "scratch/prepare_candidate.py",
+      "bytes": 3066,
+      "sha256": "3cdcd8784dc989a2d663a947bfe031560864a01010675b36c880c647830e4876"
+    },
+    {
+      "path": "scratch/prepare_controls_candidate.py",
+      "bytes": 3056,
+      "sha256": "40e25c39cc875802256c6af416031da456c9dc45af1d64726a0c2d9b7ee56004"
+    },
+    {
+      "path": "scratch/run_candidate_controls.py",
+      "bytes": 1301,
+      "sha256": "05c154f72de012f101de1712bb8aafd5e192db774478c4ed8a4b2e6056d8dcc2"
+    },
+    {
+      "path": "scratch/candidate-full-controls.json",
+      "bytes": 3094,
+      "sha256": "25866d75a99d3cc3134aa01310f51c720c998cf26a73d05601fe1101debf1333"
+    },
+    {
+      "path": "scratch/offline-readiness.json",
+      "bytes": 5972,
+      "sha256": "c0d960b2d33b8846eed088dfa2944b247e77f79f5adfe84e298e300d99a99cf7"
+    },
+    {
+      "path": "scratch/gate01-invocation.stderr.log",
+      "bytes": 663,
+      "sha256": "50895a69ca6720a7047a15d5f27bf51b9d34884b3a1d0f013480815c90a2554e"
+    },
+    {
+      "path": "scratch/gate02-candidate-analysis.json",
+      "bytes": 119823,
+      "sha256": "58b986069e8391384af78953e9e6094ca9599c8c23171316983fd24500136bc0"
+    },
+    {
+      "path": "actual/admission-analysis.json",
+      "bytes": 119823,
+      "sha256": "58b986069e8391384af78953e9e6094ca9599c8c23171316983fd24500136bc0"
+    },
+    {
+      "path": "actual/status.json",
+      "bytes": 1073,
+      "sha256": "337eb7cf9e2f08d17b19874d4959e5c130401d5d86d2cd130274d39850f5d4e4"
+    },
+    {
+      "path": "package_revision03.py",
+      "bytes": 7031,
+      "sha256": "61d506fd60f7528537264365f4c3c8f91f28bd5bc78756f864bc1182c989bca9"
+    }
+  ]
+}

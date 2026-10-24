@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "status": "offline_corrected_checker_passed_four_admissions",
+  "original_attempt02_status": "failed original frozen analyzer compilation metadata guard; preserved without relabeling",
+  "execution_commit": "900c3f9656e468f8c942b828fa699bc8bd28f3a7",
+  "private_raw_archive_sha256": "09c4e8981d84bf84fbdd7a51c28df9292eb5fb2f67583370d1a4bd467e00e43a",
+  "corrected_analyzer_sha256": "cf72c74cf2e9c343e46af1b1b74a232a8b201de06dc2cd01bef6552f0981ce4f",
+  "analysis_sha256": "58b986069e8391384af78953e9e6094ca9599c8c23171316983fd24500136bc0",
+  "producer_source_verification": "Forty source blobs reconstructed from exact execution commit and verified against original raw manifest; real Git source checks executed without CPU adaptation.",
+  "admission_workers": 4,
+  "startup_profile_rows": 324,
+  "recorded_numerical_checks": 108,
+  "timing_workers": 0,
+  "factor_estimates": null,
+  "limit": "The offline correction validates the four instrumented admissions; it does not turn them into timing trials or change the original attempt02 outcome."
+}

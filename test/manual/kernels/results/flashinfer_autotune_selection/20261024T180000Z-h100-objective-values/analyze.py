@@ -603,13 +603,46 @@ def normalize_provider_identity(bootstrap):
             )
         commands = provider["compile_commands"]
         require(len(commands) == len(sources), "all native compile commands preserved")
+        import shlex
+
+        compiled_sources = []
+        for row in commands:
+            path = Path(row["file"])
+            require(
+                str(path).startswith("/study/input/current/source/csrc/"),
+                "actual current-source translation-unit path",
+            )
+            relative = str(path).split("/csrc/", 1)[1]
+            require(
+                relative in sources, "compiled source belongs to qualified provider"
+            )
+            compiled_sources.append(relative)
+            argv = shlex.split(row["command"])
+            require(
+                argv.count("-c") == 1 and argv[argv.index("-c") + 1] == str(path),
+                "compile command names its recorded translation unit",
+            )
+            compiler = Path(argv[0]).name
+            if path.suffix == ".cu":
+                require(
+                    compiler == "nvcc"
+                    and "-gencode=arch=compute_90a,code=sm_90a" in argv,
+                    "current-source H100 CUDA compilation",
+                )
+            elif path.suffix == ".cpp":
+                require(
+                    compiler in {"c++", "g++", "clang++"}
+                    and not any(
+                        arg.startswith(("-gencode", "--generate-code")) for arg in argv
+                    ),
+                    "current-source host C++ compilation",
+                )
+            else:
+                raise ValueError("unexpected native translation-unit type")
         require(
-            all(
-                "-gencode=arch=compute_90a,code=sm_90a" in row["command"]
-                and "/study/input/current/source/" in row["command"]
-                for row in commands
-            ),
-            "current-source H100 native compilation",
+            len(set(compiled_sources)) == len(sources)
+            and set(compiled_sources) == set(sources),
+            "complete one-to-one native translation-unit compilation",
         )
         identities[name] = {
             "library_sha256": provider["library_sha256"],
