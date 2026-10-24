@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "checks": 1001,
+  "exact_agreements": 1001,
+  "nonexact_count": 0,
+  "numerical_disagreements": [],
+  "nonexact": [],
+  "independent_math_sha256": "bfe87d7ac205fe5bcd632ffa3fbc49c131c8d3738def10d4d927eda4c2c530c6",
+  "frozen_final_analysis_sha256": "69719d2fde5d8cb4a18f24174e98af26acb6bec8b10e53cf74b7d7792c2a5abd",
+  "script_sha256": "5acc17cc606f6bf90377b4faacac755c9dbf01ff04d0d7f8f60f7d97ec360460"
+}

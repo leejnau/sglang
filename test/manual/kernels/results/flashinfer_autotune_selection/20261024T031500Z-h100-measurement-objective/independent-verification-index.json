@@ -1,0 +1,17 @@
+{
+  "archive_sha256": "b34bfd306b1215b45c4058dbe441b39f1533ac000eda3f0f3896ef8dd7b2e105",
+  "files": [
+    {
+      "name": "independent_math.py",
+      "sha256": "7df1cfb979d3f0deced8f9b056a8fe777cd9960666fbaf18775180b21984e3bc"
+    },
+    {
+      "name": "compare_independent_math.py",
+      "sha256": "5acc17cc606f6bf90377b4faacac755c9dbf01ff04d0d7f8f60f7d97ec360460"
+    },
+    {
+      "name": "independent_controls_audit.py",
+      "sha256": "48f9ef03f61771e59c7598ec7fe3526bb92c6beaedef5b2a737d5c0a7f6d72b9"
+    }
+  ]
+}

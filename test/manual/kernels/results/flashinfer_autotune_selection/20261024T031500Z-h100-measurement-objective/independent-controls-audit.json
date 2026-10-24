@@ -1,0 +1,162 @@
+{
+  "status": "success",
+  "immutable_final": true,
+  "source_commit": "e1024dc062cd252f72730359ab1d695d0c221178",
+  "worker_sha256": "fc69ed3a7f90d579144cfa557e5d69e104e00204689e3842cd152fe097112541",
+  "audit_source_sha256": "48f9ef03f61771e59c7598ec7fe3526bb92c6beaedef5b2a737d5c0a7f6d72b9",
+  "independent_assertions": 16013,
+  "errors": [],
+  "counts": {
+    "profiles": 972,
+    "finite_profiles": 972,
+    "default_profiles": 108,
+    "default_runtime_winners": 12,
+    "retained_graphs": 24,
+    "numerical_checks": 768,
+    "exact_zero_checks": 36,
+    "owned_output_checks": 672,
+    "native_acceptance_guards": 108,
+    "replay_batches": 576
+  },
+  "workers": [
+    {
+      "trial": 0,
+      "arm": "auto",
+      "profiles": 81,
+      "runtime_winner": -1,
+      "numerical_checks": 64,
+      "maximum_quantized_normalized_error": 0.11754778027534485,
+      "legacy_entries": 9
+    },
+    {
+      "trial": 0,
+      "arm": "cuda_graph",
+      "profiles": 81,
+      "runtime_winner": -1,
+      "numerical_checks": 64,
+      "maximum_quantized_normalized_error": 0.11754778027534485,
+      "legacy_entries": 0
+    },
+    {
+      "trial": 1,
+      "arm": "auto",
+      "profiles": 81,
+      "runtime_winner": -1,
+      "numerical_checks": 64,
+      "maximum_quantized_normalized_error": 0.11754778027534485,
+      "legacy_entries": 9
+    },
+    {
+      "trial": 1,
+      "arm": "cuda_graph",
+      "profiles": 81,
+      "runtime_winner": -1,
+      "numerical_checks": 64,
+      "maximum_quantized_normalized_error": 0.11754778027534485,
+      "legacy_entries": 0
+    },
+    {
+      "trial": 2,
+      "arm": "auto",
+      "profiles": 81,
+      "runtime_winner": -1,
+      "numerical_checks": 64,
+      "maximum_quantized_normalized_error": 0.11754778027534485,
+      "legacy_entries": 9
+    },
+    {
+      "trial": 2,
+      "arm": "cuda_graph",
+      "profiles": 81,
+      "runtime_winner": -1,
+      "numerical_checks": 64,
+      "maximum_quantized_normalized_error": 0.11754778027534485,
+      "legacy_entries": 0
+    },
+    {
+      "trial": 3,
+      "arm": "auto",
+      "profiles": 81,
+      "runtime_winner": -1,
+      "numerical_checks": 64,
+      "maximum_quantized_normalized_error": 0.11754778027534485,
+      "legacy_entries": 9
+    },
+    {
+      "trial": 3,
+      "arm": "cuda_graph",
+      "profiles": 81,
+      "runtime_winner": -1,
+      "numerical_checks": 64,
+      "maximum_quantized_normalized_error": 0.11754778027534485,
+      "legacy_entries": 0
+    },
+    {
+      "trial": 4,
+      "arm": "auto",
+      "profiles": 81,
+      "runtime_winner": -1,
+      "numerical_checks": 64,
+      "maximum_quantized_normalized_error": 0.11754778027534485,
+      "legacy_entries": 9
+    },
+    {
+      "trial": 4,
+      "arm": "cuda_graph",
+      "profiles": 81,
+      "runtime_winner": -1,
+      "numerical_checks": 64,
+      "maximum_quantized_normalized_error": 0.11754778027534485,
+      "legacy_entries": 0
+    },
+    {
+      "trial": 5,
+      "arm": "auto",
+      "profiles": 81,
+      "runtime_winner": -1,
+      "numerical_checks": 64,
+      "maximum_quantized_normalized_error": 0.11754778027534485,
+      "legacy_entries": 9
+    },
+    {
+      "trial": 5,
+      "arm": "cuda_graph",
+      "profiles": 81,
+      "runtime_winner": -1,
+      "numerical_checks": 64,
+      "maximum_quantized_normalized_error": 0.11754778027534485,
+      "legacy_entries": 0
+    }
+  ],
+  "all_nonzero_output_sha256": [
+    "eb0d50e1f52aa2caba2166e8a04433a3c21ea53771a8272d0a2fcb960fa8baa6"
+  ],
+  "independent_zero_output_sha256": "a76c77fe203db862b48214c88fbdc1d5560655ccba2f7a2c7166baf6f846e856",
+  "fixture_sha256": "c30aa761eba827bb0b4eb6de0e99d9b8dda8243dd16d00146f9718d2abb05e8b",
+  "native_elf_sha256": "222bd9434f7b14baadee6d8be787be4c127a1193db7200207411fcd555361648",
+  "native_elf_size_bytes": 603248,
+  "native_ninja_sha256": "bea9639085253fd21cb766f1d275d0c0526b736ab726df0a233a79bedcb6a492",
+  "policy_source_sha256": "7be4f83162ce3afada8593f5acd863769356da74102e6762ece133548a4d8bda",
+  "profile_inputs_and_candidates_identical_all_12": true,
+  "worker_result_sha256": {
+    "trial0-auto-timing.json": "1dc08c83ac1e547f6033ab61e99187cda45cc77ce459a7921efd9fc168f761a8",
+    "trial0-cuda_graph-timing.json": "80d4a49e6b6b296fb5de1278956a411317bac4d3f1a0ba561de01342cd950ec1",
+    "trial1-auto-timing.json": "ffcfccb036ae394b3df0a6bfe48cef59473dc06fcacdfda528f237647ef44409",
+    "trial1-cuda_graph-timing.json": "eec81e9f62bfafb104f1eb16925ba1e81697c8db3146d81ca3108c0a40d9c17b",
+    "trial2-auto-timing.json": "d7bd6fe9b9395f322b9f08c727177093c52d96402c58d615917868045f17b808",
+    "trial2-cuda_graph-timing.json": "eb60bd51502b80879bfa2463bebebf81315099ad0587e460f3f1062158aee64d",
+    "trial3-auto-timing.json": "3bfabc5d8113d1c195add3c65bcd46edc6afe5e865ef6ed099f4436aaf7c546b",
+    "trial3-cuda_graph-timing.json": "a4222de5464413dc920ca2ec3746fa8ecce45110224c156e481e1b8b7c29d307",
+    "trial4-auto-timing.json": "2a5330bdf79af0813af94e47855c1774af4720eaff1fc1973c703f286e5148fd",
+    "trial4-cuda_graph-timing.json": "f5e89d645a9b9047629c1a26fb62b53562aa8b721910535dd8295cda1b259d09",
+    "trial5-auto-timing.json": "94ef8d7595d32c76b466c633abbd7809ebf76ae5c0738e16b1dc37d68403bc38",
+    "trial5-cuda_graph-timing.json": "72bc2ee2ac85739d65386fd0d47a437286fe7be7cfe5e90a79291655eb4d9362"
+  },
+  "limitations": [
+    "Audit imports no main analyzer and executes no GPU operation or benchmark worker.",
+    "Checks reported numerical metrics and actual zero-output hashes, not unavailable full intermediate output arrays or independent native-kernel calculations.",
+    "All runtime winners are default -1: native default-path guards run, but this cohort has no selected explicit-descriptor serving winner.",
+    "Private fixture tensor bytes and actual preserved native ELF/ninja are rehashed; native source input bindings also rely on the preserved on-host collector record.",
+    "One fixed FP8 linear fixture. No full-model accuracy, persistence, physical kernel identity or serving-performance claim."
+  ]
+}

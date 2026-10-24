@@ -1,0 +1,451 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "batch_id": "20261024T031500Z-h100-measurement-objective",
+  "source_commit": "e1024dc062cd252f72730359ab1d695d0c221178",
+  "source_baseline_commit": "ad54bea9c2b3dd9c121fee258cda474c7a76b202",
+  "result": "Both objectives selected default at the runtime bucket in all six trials. The independent retained graph comparison found no selection change and did not establish a serving performance benefit from explicit graph policy on this fixture.",
+  "comparison": "Current/auto versus MeasurementPolicy(execution_mode=\"cuda_graph\"), with default candidate racing in both arms and all other recorded settings held fixed.",
+  "workload": {
+    "gpu": "NVIDIA H100 NVL",
+    "shape": [
+      144,
+      4096,
+      1024
+    ],
+    "path": "SGLang apply_fp8_linear_bmm_flashinfer",
+    "fixture": "One captured Qwen3-0.6B QKV layer, static FP8 scales calibrated from one input/weight tensor",
+    "dependency": "FlashInfer 0.7.2 plus exact original descriptor diff; no dependency update"
+  },
+  "trial_protocol": {
+    "fresh_processes_per_arm": 6,
+    "total_workers": 12,
+    "paired_blocks_per_worker": 24,
+    "default_race_both_arms": true,
+    "hot_l2": true,
+    "profiling_warmup": 3,
+    "profiling_repeat": 10,
+    "profiling_graph_replays": 1,
+    "first_pair_gate": "passed",
+    "attempts": 1,
+    "failed_or_excluded_workers": 0,
+    "graph_replays_per_graph_per_block": 5120
+  },
+  "selections": [
+    {
+      "arm": "auto",
+      "trials": 6,
+      "default_winners": 6,
+      "explicit_winners": 0,
+      "best_explicit_to_default_profile_ratio_range": [
+        1.0403014439772236,
+        1.0744823212017731
+      ],
+      "instrumented_startup_ms": {
+        "trials": [
+          528.3382991328835,
+          525.9402580559254,
+          524.250328540802,
+          525.3292694687843,
+          526.0923597961664,
+          524.2942804470658
+        ],
+        "median": 525.6347637623549
+      },
+      "profiling_margin_is_not_serving_speedup": true
+    },
+    {
+      "arm": "cuda_graph",
+      "trials": 6,
+      "default_winners": 6,
+      "explicit_winners": 0,
+      "best_explicit_to_default_profile_ratio_range": [
+        1.132658455241223,
+        1.1662155546629192
+      ],
+      "instrumented_startup_ms": {
+        "trials": [
+          425.28481408953667,
+          422.75355104357004,
+          422.8309625759721,
+          422.3678829148412,
+          422.66050446778536,
+          426.4539070427418
+        ],
+        "median": 422.79225680977106
+      },
+      "profiling_margin_is_not_serving_speedup": true
+    }
+  ],
+  "within_arm": [
+    {
+      "arm": "auto",
+      "channel": "gpu_event",
+      "primary": true,
+      "ratio": "retained_winner / independent_retained_default",
+      "independent_trials": 6,
+      "median_ratio": 1.0001295217669721,
+      "min_ratio": 0.9914379942457174,
+      "max_ratio": 1.0083514333377641,
+      "ratios_below_one": 3,
+      "ratios_above_one": 3,
+      "exploratory_cluster_bootstrap_95_percent": {
+        "level": 0.95,
+        "lower": 0.9929427437928539,
+        "upper": 1.007856384361201,
+        "method": "exhaustive percentile bootstrap of paired trial units; median statistic",
+        "ordered_resamples": 46656,
+        "independent_units": 6,
+        "exploratory_unadjusted": true
+      },
+      "ratios_equal_one": 0,
+      "trial_ratios": [
+        1.0083514333377641,
+        0.9944474933399903,
+        1.0056886505713771,
+        0.9945703929625671,
+        1.0073613353846378,
+        0.9914379942457174
+      ]
+    },
+    {
+      "arm": "cuda_graph",
+      "channel": "gpu_event",
+      "primary": true,
+      "ratio": "retained_winner / independent_retained_default",
+      "independent_trials": 6,
+      "median_ratio": 0.9950728347255566,
+      "min_ratio": 0.9908206315109516,
+      "max_ratio": 1.0067192587494005,
+      "ratios_below_one": 4,
+      "ratios_above_one": 2,
+      "exploratory_cluster_bootstrap_95_percent": {
+        "level": 0.95,
+        "lower": 0.9924812939774327,
+        "upper": 1.0049746719429544,
+        "method": "exhaustive percentile bootstrap of paired trial units; median statistic",
+        "ordered_resamples": 46656,
+        "independent_units": 6,
+        "exploratory_unadjusted": true
+      },
+      "ratios_equal_one": 0,
+      "trial_ratios": [
+        0.9941419564439138,
+        0.9947311529358398,
+        1.0032300851365084,
+        0.9908206315109516,
+        1.0067192587494005,
+        0.9954145165152735
+      ]
+    },
+    {
+      "arm": "auto",
+      "channel": "wall",
+      "primary": false,
+      "ratio": "retained_winner / independent_retained_default",
+      "independent_trials": 6,
+      "median_ratio": 1.0001012260437745,
+      "min_ratio": 0.9914371791694985,
+      "max_ratio": 1.0083780702268679,
+      "ratios_below_one": 3,
+      "ratios_above_one": 3,
+      "exploratory_cluster_bootstrap_95_percent": {
+        "level": 0.95,
+        "lower": 0.9929333617188372,
+        "upper": 1.0078658075696427,
+        "method": "exhaustive percentile bootstrap of paired trial units; median statistic",
+        "ordered_resamples": 46656,
+        "independent_units": 6,
+        "exploratory_unadjusted": true
+      },
+      "ratios_equal_one": 0,
+      "trial_ratios": [
+        1.0083780702268679,
+        0.9944295442681759,
+        1.0056742014240148,
+        0.9945282506635342,
+        1.0073535449124176,
+        0.9914371791694985
+      ]
+    },
+    {
+      "arm": "cuda_graph",
+      "channel": "wall",
+      "primary": false,
+      "ratio": "retained_winner / independent_retained_default",
+      "independent_trials": 6,
+      "median_ratio": 0.9950809197430162,
+      "min_ratio": 0.990809978306081,
+      "max_ratio": 1.006715314533341,
+      "ratios_below_one": 4,
+      "ratios_above_one": 2,
+      "exploratory_cluster_bootstrap_95_percent": {
+        "level": 0.95,
+        "lower": 0.9924716971522756,
+        "upper": 1.0049739827342254,
+        "method": "exhaustive percentile bootstrap of paired trial units; median statistic",
+        "ordered_resamples": 46656,
+        "independent_units": 6,
+        "exploratory_unadjusted": true
+      },
+      "ratios_equal_one": 0,
+      "trial_ratios": [
+        0.9941334159984703,
+        0.99469306550184,
+        1.00323265093511,
+        0.990809978306081,
+        1.006715314533341,
+        0.9954687739841923
+      ]
+    }
+  ],
+  "paired_cross_arm": [
+    {
+      "channel": "gpu_event",
+      "measure": "normalized_winner_default",
+      "primary": true,
+      "ratio": "explicit_graph_objective / current_auto_objective",
+      "independent_trials": 6,
+      "median_ratio": 0.9984589783703193,
+      "min_ratio": 0.9859082097530072,
+      "max_ratio": 1.0040108633042466,
+      "ratios_below_one": 4,
+      "ratios_above_one": 2,
+      "exploratory_cluster_bootstrap_95_percent": {
+        "level": 0.95,
+        "lower": 0.9910689887106956,
+        "upper": 1.0021480533580198,
+        "method": "exhaustive percentile bootstrap of paired trial units; median statistic",
+        "ordered_resamples": 46656,
+        "independent_units": 6,
+        "exploratory_unadjusted": true
+      },
+      "ratios_equal_one": 0,
+      "trial_ratios": [
+        0.9859082097530072,
+        1.0002852434117933,
+        0.9975553413738218,
+        0.996229767668384,
+        0.9993626153668166,
+        1.0040108633042466
+      ]
+    },
+    {
+      "channel": "gpu_event",
+      "measure": "winner_latency",
+      "primary": false,
+      "ratio": "explicit_graph_objective / current_auto_objective",
+      "independent_trials": 6,
+      "median_ratio": 0.9999535044552158,
+      "min_ratio": 0.9953733412018115,
+      "max_ratio": 1.0213597282620501,
+      "ratios_below_one": 3,
+      "ratios_above_one": 3,
+      "exploratory_cluster_bootstrap_95_percent": {
+        "level": 0.95,
+        "lower": 0.9962986775715051,
+        "upper": 1.0121853624901345,
+        "method": "exhaustive percentile bootstrap of paired trial units; median statistic",
+        "ordered_resamples": 46656,
+        "independent_units": 6,
+        "exploratory_unadjusted": true
+      },
+      "ratios_equal_one": 0,
+      "trial_ratios": [
+        0.9953733412018115,
+        0.9972240139411988,
+        1.003010996718219,
+        1.0213597282620501,
+        0.9994512015296444,
+        1.0004558073807872
+      ]
+    },
+    {
+      "channel": "gpu_event",
+      "measure": "default_latency",
+      "primary": false,
+      "ratio": "explicit_graph_objective / current_auto_objective",
+      "independent_trials": 6,
+      "median_ratio": 1.0026702695007281,
+      "min_ratio": 0.9958998190548328,
+      "max_ratio": 1.0249821267418169,
+      "ratios_below_one": 2,
+      "ratios_above_one": 4,
+      "exploratory_cluster_bootstrap_95_percent": {
+        "level": 0.95,
+        "lower": 0.9964544859491102,
+        "upper": 1.0172149901458707,
+        "method": "exhaustive percentile bootstrap of paired trial units; median statistic",
+        "ordered_resamples": 46656,
+        "independent_units": 6,
+        "exploratory_unadjusted": true
+      },
+      "ratios_equal_one": 0,
+      "trial_ratios": [
+        1.0094478535499245,
+        0.9970091528433876,
+        1.0049739483693878,
+        1.0249821267418169,
+        1.0003665906320685,
+        0.9958998190548328
+      ]
+    },
+    {
+      "channel": "wall",
+      "measure": "normalized_winner_default",
+      "primary": false,
+      "ratio": "explicit_graph_objective / current_auto_objective",
+      "independent_trials": 6,
+      "median_ratio": 0.9984693269054506,
+      "min_ratio": 0.9858736969307625,
+      "max_ratio": 1.0040664147960146,
+      "ratios_below_one": 4,
+      "ratios_above_one": 2,
+      "exploratory_cluster_bootstrap_95_percent": {
+        "level": 0.95,
+        "lower": 0.9910674835906417,
+        "upper": 1.002165706092954,
+        "method": "exhaustive percentile bootstrap of paired trial units; median statistic",
+        "ordered_resamples": 46656,
+        "independent_units": 6,
+        "exploratory_unadjusted": true
+      },
+      "ratios_equal_one": 0,
+      "trial_ratios": [
+        0.9858736969307625,
+        1.0002649973898936,
+        0.9975722251943545,
+        0.9962612702505208,
+        0.9993664286165468,
+        1.0040664147960146
+      ]
+    },
+    {
+      "channel": "wall",
+      "measure": "winner_latency",
+      "primary": false,
+      "ratio": "explicit_graph_objective / current_auto_objective",
+      "independent_trials": 6,
+      "median_ratio": 0.9999551539878928,
+      "min_ratio": 0.9953652662578341,
+      "max_ratio": 1.0213552548042366,
+      "ratios_below_one": 3,
+      "ratios_above_one": 3,
+      "exploratory_cluster_bootstrap_95_percent": {
+        "level": 0.95,
+        "lower": 0.9962936874310107,
+        "upper": 1.0121696079545885,
+        "method": "exhaustive percentile bootstrap of paired trial units; median statistic",
+        "ordered_resamples": 46656,
+        "independent_units": 6,
+        "exploratory_unadjusted": true
+      },
+      "ratios_equal_one": 0,
+      "trial_ratios": [
+        0.9953652662578341,
+        0.9972221086041871,
+        1.0029839611049403,
+        1.0213552548042366,
+        0.999457725863612,
+        1.0004525821121735
+      ]
+    },
+    {
+      "channel": "wall",
+      "measure": "default_latency",
+      "primary": false,
+      "ratio": "explicit_graph_objective / current_auto_objective",
+      "independent_trials": 6,
+      "median_ratio": 1.0026870829741368,
+      "min_ratio": 0.9959039719229142,
+      "max_ratio": 1.0249671081447493,
+      "ratios_below_one": 2,
+      "ratios_above_one": 4,
+      "exploratory_cluster_bootstrap_95_percent": {
+        "level": 0.95,
+        "lower": 0.9964437128718879,
+        "upper": 1.0172059412772028,
+        "method": "exhaustive percentile bootstrap of paired trial units; median statistic",
+        "ordered_resamples": 46656,
+        "independent_units": 6,
+        "exploratory_unadjusted": true
+      },
+      "ratios_equal_one": 0,
+      "trial_ratios": [
+        1.0094447744096562,
+        0.9969834538208615,
+        1.0050102546254707,
+        1.0249671081447493,
+        1.0003639113228031,
+        0.9959039719229142
+      ]
+    }
+  ],
+  "validation": {
+    "worker_exit_codes": "12/12 zero",
+    "profile_count": 972,
+    "finite_profiles": 972,
+    "default_profiles": 108,
+    "retained_graphs": 24,
+    "numerical_guards": 768,
+    "unexpected_profiling_attempts": 0,
+    "graph_replay_batches": 576,
+    "all_profiling_inputs_candidates_and_nonobjective_settings_match": true,
+    "frozen_analyzer_remote_and_local": "passed",
+    "independent_math_exact_agreements": 1001,
+    "independent_controls_assertions": 16013,
+    "preserved_private_files_rehashed": 103,
+    "policy_source_sha256": "7be4f83162ce3afada8593f5acd863769356da74102e6762ece133548a4d8bda",
+    "repository_checks": "Applicable repository hooks passed for source and final artifacts; diff checks passed."
+  },
+  "interpretation": [
+    "The primary normalized graph/auto ratio is 0.9984589784, with exploratory whole-trial 95% interval 0.9910689887\u20131.0021480534. This does not establish a benefit or formal equivalence.",
+    "All natural winners and independent default controls use tactic-1. Small timing differences therefore do not demonstrate improvement in the selected tactic.",
+    "Block order was balanced. Capture order and arm launch position both follow trial parity; their descriptive differences cannot identify a causal mechanism.",
+    "The prior occasional slower explicit selection did not recur in this batch. It is not shown to be fixed; this harness adds common profiling operand fingerprint observation outside timed calls.",
+    "No production measurement-policy change is justified by this fixture alone. Keep the scoped-cache proposal parked; use a reproducible selection-quality case before expanding adoption."
+  ],
+  "limitations": [
+    "One fixed checkpoint-derived static-FP8 layer on one H100. No full-model accuracy or serving-throughput inference.",
+    "Startup profiles use synthetic activations; actual defined profiling operands and candidate pools are required identical across objectives. Serving graphs use the frozen captured activation.",
+    "Twenty-four replay blocks and fifteen sequential samples are repeated observations within a process, not independent trials.",
+    "Exploratory unadjusted bootstrap resamples whole trial estimates only. A one-trial checkpoint has no uncertainty interval.",
+    "The primary cross-objective comparison is the paired trial ratio of within-process winner/default ratios. Absolute latency comparisons retain separate-process history and elapsed-time confounding.",
+    "Raw CUDA graph replay occurs outside policy scopes. Policy/cache identity is established at capture and no Python tactic lookup occurs during replay.",
+    "Public tactic IDs and equal source/build hashes do not establish physical kernel identity; this batch has no instrumented launch observation.",
+    "Memory-only scopes qualify tuning/capture lifecycle only. Incidental legacy saves are not a policy-aware persistence test.",
+    "Profiling operand fingerprints are collected outside each original profiler timing routine in both arms; their surrounding process history may differ from unobserved startup.",
+    "No speedup threshold gates acceptance; slower, unchanged and faster outcomes are all retained.",
+    "One device, one fixed layer and six fresh trials per arm; not a full-model serving benchmark or a universal v1/v2 comparison.",
+    "Profile-input fingerprinting is outside timing but can affect surrounding device state; it is common to both objectives.",
+    "No new native observer campaign establishes physical kernel identity between independent graphs.",
+    "No warm restart or graph-policy persistence qualification: auto incidental v1 files contain 9 entries, graph files 0, and neither is reloaded."
+  ],
+  "artifacts": {
+    "analysis_sha256": "69719d2fde5d8cb4a18f24174e98af26acb6bec8b10e53cf74b7d7792c2a5abd",
+    "public_raw_archive": "attempt01-raw.tar.gz",
+    "public_raw_sha256": "3ce18138fa1ee4e36eaf3caac86e9a48cfb4a45c4568c1934d40535c22e3e603",
+    "public_raw_members": 102,
+    "private_full_archive": "20261024T031500Z-h100-measurement-objective-attempt01-full-raw.tgz",
+    "private_full_archive_sha256": "9d33022486e72a0eedc8598a6470c526fb229db30385f9a6fa02fffd35be68c1",
+    "private_full_archive_size_bytes": 10919933,
+    "private_fixture_and_native_binary_excluded_from_git": true,
+    "node_durable_download_hash_agreement": true
+  },
+  "resource_cleanup": {
+    "allocation": 2786326,
+    "allocation_duration": "00:17:14",
+    "experiment_step_duration": "00:06:18",
+    "experiment_exit_code": "0:0",
+    "allocation_explicitly_released": true,
+    "final_user_queue_empty": true,
+    "remaining_experiment_containers": 0,
+    "preexisting_monitor_container_untouched": true
+  },
+  "publication": {
+    "branch": "experiment/flashinfer-candidate-selection",
+    "fork": "leejnau/sglang",
+    "pull_request_opened": false,
+    "scoped_cache_prototype": "parked"
+  }
+}
