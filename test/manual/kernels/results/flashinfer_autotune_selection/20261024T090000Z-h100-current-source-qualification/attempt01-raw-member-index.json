@@ -1,0 +1,350 @@
+{
+  "attempt": "attempt01",
+  "counts": {
+    "archive_members": 35,
+    "derived": 3,
+    "exact": 32,
+    "excluded_originals": 36
+  },
+  "excluded_originals": {
+    "callback-controls.bootstrap.json": {
+      "reason": "Inventory-bearing original stays private; explicitly derived record removes import.source_modules and import.aot_providers.",
+      "sha256": "9a8096824bdcd64e069e7dca586640cc8aeb4bdc00a241d37bdd15245f7c4abd",
+      "size_bytes": 629000
+    },
+    "fixture/fixture.safetensors": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "c30aa761eba827bb0b4eb6de0e99d9b8dda8243dd16d00146f9718d2abb05e8b",
+      "size_bytes": 12879616
+    },
+    "native-artifacts/gemm-608385e50034b2da.ninja": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "608385e50034b2da72dd191895059080ec6710b82dac0bd627df3a2ce34e78ab",
+      "size_bytes": 3360
+    },
+    "native-artifacts/gemm-cdbe6daeac3e3c19.so": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "cdbe6daeac3e3c1919fe88c99ebe392fee99c7037cc71c8effbbcb66ce86a7ee",
+      "size_bytes": 603248
+    },
+    "native-artifacts/trtllm_utils-964dc11ae0c7db16.ninja": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "964dc11ae0c7db16fa3cadfbf5ab0ac6a32d914f192600f16b00d28ec0721d8c",
+      "size_bytes": 4523
+    },
+    "native-artifacts/trtllm_utils-f4345e8b947aa475.so": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "f4345e8b947aa47559b440f991094c42d26b3bb9ce131494bfeb84d5c3bc8144",
+      "size_bytes": 186624
+    },
+    "native-build-cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/gemm/.ninja_deps": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "bd347f0f1cf76adf09dbdb2f5c572b1e284a30ad3436bca30f74a11fee1c6ad9",
+      "size_bytes": 112328
+    },
+    "native-build-cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/gemm/.ninja_log": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "cc95bd60a83a94aa46b28a260cf50d8c30daa3be265125568dd6368f369af355",
+      "size_bytes": 680
+    },
+    "native-build-cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/gemm/build.ninja": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "608385e50034b2da72dd191895059080ec6710b82dac0bd627df3a2ce34e78ab",
+      "size_bytes": 3360
+    },
+    "native-build-cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/gemm/csrc_bmm_fp8.cuda.o": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "1e60735886f9b5bb1a1d7a0265708124d015ed687b5638bd82d918e09d95e38f",
+      "size_bytes": 283016
+    },
+    "native-build-cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/gemm/csrc_flashinfer_gemm_binding.cuda.o": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "d6fdedcfaf394a6543db3ca6bcdd9048d5486e88a0b46bf7bd6837dc132d158a",
+      "size_bytes": 253152
+    },
+    "native-build-cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/gemm/csrc_group_gemm.cuda.o": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "9dd7fbeff1c85f0a230d34c146ddfa91527d6257c2430b03d0d48bec91f272f7",
+      "size_bytes": 363120
+    },
+    "native-build-cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/gemm/gemm.so": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "cdbe6daeac3e3c1919fe88c99ebe392fee99c7037cc71c8effbbcb66ce86a7ee",
+      "size_bytes": 603248
+    },
+    "native-build-cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/tmp/gemm.lock": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    "native-build-cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/tmp/trtllm_utils.lock": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    "native-build-cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/trtllm_utils/.ninja_deps": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "02c4a4501ff85c8d9a10bafe89999631b615e3edd1517f99f5d80df5b23363ab",
+      "size_bytes": 25436
+    },
+    "native-build-cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/trtllm_utils/.ninja_log": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "c1c7e230b27e9894642aff698d6c6dbf5978678489d8a57a6a3a2b93f8ac3389",
+      "size_bytes": 1045
+    },
+    "native-build-cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/trtllm_utils/build.ninja": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "964dc11ae0c7db16fa3cadfbf5ab0ac6a32d914f192600f16b00d28ec0721d8c",
+      "size_bytes": 4523
+    },
+    "native-build-cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/trtllm_utils/common_envUtils.o": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "69a7814c1783852eb2717bd5aa5e2fdb9e7af6394f325fff19102c53074a97a7",
+      "size_bytes": 180640
+    },
+    "native-build-cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/trtllm_utils/common_logger.o": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "3efcb7ffec4c55266ac445be3055e59dfcfcefee4033c0606a71bb521761c010",
+      "size_bytes": 136464
+    },
+    "native-build-cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/trtllm_utils/common_stringUtils.o": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "54822a3d31c26ee26e02631aeb71725d95082f8b97d9378d9bcf663eb5e2bde2",
+      "size_bytes": 16248
+    },
+    "native-build-cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/trtllm_utils/common_tllmException.o": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "0cc3a3e5dc3054a69030d224cb316b23c476cf529a2459ee94d1dc8cbb69e5ba",
+      "size_bytes": 15192
+    },
+    "native-build-cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/trtllm_utils/kernels_delayStream.cuda.o": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "1d685a280ecb57790989b0531405da1c1a9b4862d6ac7d268240bd692b11b5c1",
+      "size_bytes": 170688
+    },
+    "native-build-cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/trtllm_utils/trtllm_utils.so": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "f4345e8b947aa47559b440f991094c42d26b3bb9ce131494bfeb84d5c3bc8144",
+      "size_bytes": 186624
+    },
+    "native-build-cache/current/.cache/flashinfer/0.0.0+unknown/90a/flashinfer_jit.log": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "725907046dcac5a9cdf28b8bfe4bbee64917f0e85dd5962a1b0935a0c2eea6e4",
+      "size_bytes": 1800
+    },
+    "native-build-cache/triton/JL6KAO2SJTR64HFE4C5OJEKXXZIQV75CQPJADVQ6UL44Q4QKYKQA/cuda_utils.cpython-312-x86_64-linux-gnu.so": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "1011a6b4354d82c8735897dca5466b7f0b1d9223cb0cecaf3cc9c66f2423caa7",
+      "size_bytes": 60512
+    },
+    "native-build-cache/triton/KJYUO4PDNVDWIG6NX4GFHJO7BU2JTLCB3M26K52U6SYIQ5JDXBQA/__grp___static_quant_fp8.json": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "a57f19457e22058e003f847e258563bb509d63acf05b6037e33eb17c9bdef8a0",
+      "size_bytes": 1080
+    },
+    "native-build-cache/triton/KJYUO4PDNVDWIG6NX4GFHJO7BU2JTLCB3M26K52U6SYIQ5JDXBQA/_static_quant_fp8.cubin": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "7f451b2d5499d6b021cbe663f55565b749ce46717e1e88eff7d550430a995913",
+      "size_bytes": 8736
+    },
+    "native-build-cache/triton/KJYUO4PDNVDWIG6NX4GFHJO7BU2JTLCB3M26K52U6SYIQ5JDXBQA/_static_quant_fp8.json": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "075253d5a041b3c6689d2211ffcb070f85e30ed94bd6994fab06ee3e3720ecb6",
+      "size_bytes": 1108
+    },
+    "native-build-cache/triton/KJYUO4PDNVDWIG6NX4GFHJO7BU2JTLCB3M26K52U6SYIQ5JDXBQA/_static_quant_fp8.llir": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "a840617cd2d5223fc7365f45e1575c7ddb8fcd4216117c952bda177e75502f2c",
+      "size_bytes": 9339
+    },
+    "native-build-cache/triton/KJYUO4PDNVDWIG6NX4GFHJO7BU2JTLCB3M26K52U6SYIQ5JDXBQA/_static_quant_fp8.ptx": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "d12b9cf4a184e6e71f9e2a5d2b2898a860fb29d69fd808203775d562de60c5a6",
+      "size_bytes": 7841
+    },
+    "native-build-cache/triton/KJYUO4PDNVDWIG6NX4GFHJO7BU2JTLCB3M26K52U6SYIQ5JDXBQA/_static_quant_fp8.source": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "47909d5d05b53faaa48c3bc72386fcae0b39cf5308c865acd0a3c33536a8b2df",
+      "size_bytes": 6281
+    },
+    "native-build-cache/triton/KJYUO4PDNVDWIG6NX4GFHJO7BU2JTLCB3M26K52U6SYIQ5JDXBQA/_static_quant_fp8.ttgir": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "4e5c81519c845e9868e009c838d2b367e864a1f0f21bd6b65696360d025fdf2a",
+      "size_bytes": 5290
+    },
+    "native-build-cache/triton/KJYUO4PDNVDWIG6NX4GFHJO7BU2JTLCB3M26K52U6SYIQ5JDXBQA/_static_quant_fp8.ttir": {
+      "reason": "Private fixture tensor, native binary or native build cache.",
+      "sha256": "1e077601c682efbe6c5f6a081fde0cfa07156f2dd5529e3d5caaa55ca42cd57f",
+      "size_bytes": 4831
+    },
+    "native-facade.json": {
+      "reason": "Inventory-bearing original stays private; explicitly derived record removes import.source_modules and import.aot_providers.",
+      "sha256": "a5958e7a9048794fea2efb2f36dcaeeebdfa94902a4c11a63876e4e67a166d77",
+      "size_bytes": 680999
+    },
+    "retained-auto.bootstrap.json": {
+      "reason": "Inventory-bearing original stays private; explicitly derived record removes import.source_modules and import.aot_providers.",
+      "sha256": "caf141a6716f59ed4b1d8b75792842eb1987f93e1cd11cd3d3f358167cc45419",
+      "size_bytes": 631034
+    }
+  },
+  "full_private_archive": {
+    "durable_path": "/home/lnau/flashinfer-autotune-study/20261024T090000Z-h100-current-source-qualification-attempt01-full-raw.tgz",
+    "original_file_count": 68,
+    "preservation_manifest_sha256": "cc3ad7f6ccced9b74f250be2ecf533f1d0fdd361126b53160efacf120a12913a",
+    "sha256": "395c7e543cf701d194ed27d6698db5dec1599ece06399be496fcca7c2002bcbe",
+    "size_bytes": 11672121
+  },
+  "public_derived_members": {
+    "derived/callback-controls.bootstrap.json": {
+      "original": "callback-controls.bootstrap.json",
+      "original_sha256": "9a8096824bdcd64e069e7dca586640cc8aeb4bdc00a241d37bdd15245f7c4abd",
+      "sha256": "e1395fb984b6987f55d08e524a2347f99fcb5c29147a502c82f4c89f40b7719d",
+      "size_bytes": 22705
+    },
+    "derived/native-facade.json": {
+      "original": "native-facade.json",
+      "original_sha256": "a5958e7a9048794fea2efb2f36dcaeeebdfa94902a4c11a63876e4e67a166d77",
+      "sha256": "6a844d8b998fea81b2debc59d3a22fed419630afe06c166b2934b26b666a090b",
+      "size_bytes": 74690
+    },
+    "derived/retained-auto.bootstrap.json": {
+      "original": "retained-auto.bootstrap.json",
+      "original_sha256": "caf141a6716f59ed4b1d8b75792842eb1987f93e1cd11cd3d3f358167cc45419",
+      "sha256": "e987b030d274bd9113444dc67302c51ba50f99bca405e6720fe0a76c86e4cfb7",
+      "size_bytes": 24735
+    }
+  },
+  "public_exact_members": {
+    "callback-controls.container-id": {
+      "sha256": "e4a4dad474174ae6706312f157904e7fc7636ed5e77827b17eddf33f5025a248",
+      "size_bytes": 64
+    },
+    "callback-controls.exit-code": {
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "size_bytes": 2
+    },
+    "callback-controls.gate.exit-code": {
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "size_bytes": 2
+    },
+    "callback-controls.gate.json": {
+      "sha256": "82175c65c7b55d85044e71989f38ce7db3e55fe2d92a222db9518c2a7d49daaf",
+      "size_bytes": 390
+    },
+    "callback-controls.gate.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    "callback-controls.json": {
+      "sha256": "8d5bb7231e2767ebdee7326234e11e1a636415412a0716507531626c53b7ccbd",
+      "size_bytes": 3168
+    },
+    "callback-controls.log": {
+      "sha256": "8e6a950fc483a948b2fbb4c78a7e55c59a7f652456532908244ecc76149ee57c",
+      "size_bytes": 2935
+    },
+    "elapsed-seconds.txt": {
+      "sha256": "93a73825c1b761d11bf2b3f4dff760d07888d3fde05dcf55f1da84aa6041a5a8",
+      "size_bytes": 3
+    },
+    "execution-manifest.json": {
+      "sha256": "b6e4ab90d3d1491e96bf59e72b57517dcdb10ed9b4651d92b0432a176dfbe85d",
+      "size_bytes": 2397
+    },
+    "fixture/manifest.json": {
+      "sha256": "e13a86fab5db5796b22d8dab0f84080b8057b036ca7aef2c7be8832e76505bf1",
+      "size_bytes": 14473
+    },
+    "gpu-after.csv": {
+      "sha256": "42a48b89a06964860ee907b89d159724b901a25068d232f2c115b928901d5455",
+      "size_bytes": 298
+    },
+    "gpu-before.csv": {
+      "sha256": "f7600e517a840981a73c1ddb50818c633ce71d223dacaaf8713bd431d296934f",
+      "size_bytes": 297
+    },
+    "gpu-processes-before.csv": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    "host-cpu.json": {
+      "sha256": "7e45261a7a7be06fd92087f3d2608c155a0f3e601250e92807469886a6d5c59b",
+      "size_bytes": 5115
+    },
+    "image.json": {
+      "sha256": "e725c7ec8a88be13b6a6ab7e942f08c1e21e67b5688aeb28b4d99415fd492bdc",
+      "size_bytes": 318
+    },
+    "input-preflight.json": {
+      "sha256": "ce5eacb949622baa36079c3eb35cd68f4943fbf54af0892c3dd3e61c95632744",
+      "size_bytes": 2821
+    },
+    "launcher.exit-code": {
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "size_bytes": 2
+    },
+    "native-facade.container-id": {
+      "sha256": "575b25302cfe15fe755b4fd9b4469599f829b5ac54ddf5fe7f6193b08050b27b",
+      "size_bytes": 64
+    },
+    "native-facade.exit-code": {
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "size_bytes": 2
+    },
+    "native-facade.gate.exit-code": {
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "size_bytes": 2
+    },
+    "native-facade.gate.json": {
+      "sha256": "4cef1b6291fe0745320003b428812a9f53e8c61ef0f5550d48ef3047f47f5c1a",
+      "size_bytes": 390
+    },
+    "native-facade.gate.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    "native-facade.log": {
+      "sha256": "3e05f869b61119d9e891d50f323e1f17c2dbcf3ae761785f68ebb96d52d054fe",
+      "size_bytes": 14608
+    },
+    "preservation-manifest.json": {
+      "sha256": "cc3ad7f6ccced9b74f250be2ecf533f1d0fdd361126b53160efacf120a12913a",
+      "size_bytes": 14332
+    },
+    "retained-auto.container-id": {
+      "sha256": "26c751059f57dd58ec4d5d27317bd2479d9d238dd65f2580ce81edaa0032526f",
+      "size_bytes": 64
+    },
+    "retained-auto.exit-code": {
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "size_bytes": 2
+    },
+    "retained-auto.fixture-provenance.json": {
+      "sha256": "efd3156bb310c6b5b4806bcc0c5921b27f99f8cd536e9c5bd5b0d2add78cd5e7",
+      "size_bytes": 2782
+    },
+    "retained-auto.json": {
+      "sha256": "da84820dab33ccfb14749c807d3fbe51722ecfeb29a77d7c52fa657565fc15ae",
+      "size_bytes": 921
+    },
+    "retained-auto.log": {
+      "sha256": "2966586d3b13345dcbcf87ba9543641e749f60c1b45a04cb89b59eb95e4a35ad",
+      "size_bytes": 806
+    },
+    "sglang-commit-after.txt": {
+      "sha256": "06ba172bf47e858401ad981eedc42a009c6495b11f43b88954ec64330a76a30f",
+      "size_bytes": 41
+    },
+    "sglang-commit-before.txt": {
+      "sha256": "06ba172bf47e858401ad981eedc42a009c6495b11f43b88954ec64330a76a30f",
+      "size_bytes": 41
+    },
+    "sglang-status-after.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    }
+  },
+  "schema_version": 1,
+  "scope": "Exact members preserve their original bytes. Derived records are separately named and indexed; no claim that this is the unmodified full raw archive."
+}

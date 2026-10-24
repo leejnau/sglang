@@ -1,0 +1,20 @@
+{
+  "all_original_extracted_files_compared_with_full_archives": {
+    "attempt01": 68,
+    "attempt02": 81
+  },
+  "exact_and_derived_rule": "Only separately indexed public_exact_members are byte-identical. Derived raw copies remove import.source_modules and import.aot_providers, retain every other decoded field and record original/removed-field SHA and count. A derived audit separately omits exhaustive assertion labels.",
+  "followups": "Posthoc diagnostics and two source-only future-study designs are evidence/proposals, not extra qualification results.",
+  "full_preservation_members_rehashed": {
+    "attempt01": 67,
+    "attempt02": 80
+  },
+  "limits": "Full original records remain in the hash-verified private durable archives. Numerical tensors are not independently reconstructed from these JSON reports; source/control assertions and native binaries are independently audited against the originals.",
+  "packager_sha256": "a17fddbbd3bd2b8dac7781999ae6d28fde674b797d501dc5f6571009c8a1eacf",
+  "private_full_archive_hashes_verified": {
+    "attempt01": "395c7e543cf701d194ed27d6698db5dec1599ece06399be496fcca7c2002bcbe",
+    "attempt02": "f78f59b928f68ee6108121e0920ae462ab32caaa562b64fd8d31bc8870b7e7f1"
+  },
+  "scan": "Required case-insensitive byte pattern absent from every public file and every decompressed archive member. No fixture tensor, native binary/cache or whole upstream source included.",
+  "status": "success"
+}

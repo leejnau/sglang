@@ -1,0 +1,93 @@
+{
+  "attempt01": {
+    "frozen_sglang_commit": "24ef03964c06503e30aabffafb0ae0c31320e4d4",
+    "independent_audit_checks": 3440,
+    "independent_audit_status": "independent_audit_passed_partial_qualification_failed",
+    "result": "Native/facade and six callback controls passed. Retained fixture gate failed on an inference-allocated output refreshed outside InferenceMode. Synthesized gate was not launched; launcher failed fast."
+  },
+  "flashinfer_commit": "27c62fdf0ab1cd4014df8a15b66a975541fda83c",
+  "followups": {
+    "history_diagnostics": "Exact posthoc diagnostic script/report retained separately; descriptive mechanisms and three observed slower explicit winners, not a new cohort or causal proof.",
+    "native_acceptance_design": "Source-only design for guarding actual future selected-descriptor consumption outside timing; not implemented or established by the setup smokes.",
+    "next_study": "A proposed fixed objective-by-activation-values mechanism comparison is retained as a proposal, with individual timing deferred and rare-event/power limits explicit. No implementation or launch."
+  },
+  "limits": [
+    "No serving-throughput, model-performance or small selection-improvement claim; setup smoke timings are deliberately not interpreted.",
+    "Retained versus synthesized mode changes profile domain/cache keys and is not an activation-values-only contrast.",
+    "No graph-policy persistence/restart, production dependency change, managed-store migration, distributed GPU/EP/MegaMoE/BF16 or full-model qualification.",
+    "Public raw includes exact originals and clearly identified derived records. Exhaustive module manifests, private tensors, ELF/build cache and whole upstream source remain private."
+  ],
+  "provider_identity": {
+    "note": "Build locations and the delay-helper ELF differ across attempts and are retained explicitly. Each attempt's fresh workers are checked against its own exact provider bytes; do not claim universal binary identity across attempts.",
+    "providers": {
+      "gemm": {
+        "attempt01": {
+          "library_sha256": "cdbe6daeac3e3c1919fe88c99ebe392fee99c7037cc71c8effbbcb66ce86a7ee",
+          "ninja_sha256": "608385e50034b2da72dd191895059080ec6710b82dac0bd627df3a2ce34e78ab"
+        },
+        "attempt02": {
+          "library_sha256": "cdbe6daeac3e3c1919fe88c99ebe392fee99c7037cc71c8effbbcb66ce86a7ee",
+          "ninja_sha256": "adc3a2af783566bae2648a075bcefacb577f28f78e9ca5e5d92df71b33df51a7"
+        }
+      },
+      "trtllm_utils": {
+        "attempt01": {
+          "library_sha256": "f4345e8b947aa47559b440f991094c42d26b3bb9ce131494bfeb84d5c3bc8144",
+          "ninja_sha256": "964dc11ae0c7db16fa3cadfbf5ab0ac6a32d914f192600f16b00d28ec0721d8c"
+        },
+        "attempt02": {
+          "library_sha256": "feaf57dc67078616ccfaa13bfe84af73d099bf1a06edd0ad8e32b4ee00a5f036",
+          "ninja_sha256": "ebd88055ccec658413438c4b5ba1e683e3b7bc0c3e87aa31b99f4d99c8bce33a"
+        }
+      }
+    },
+    "source_difference_between_attempts": "Benchmark callback inference context only; exact native/runtime source hashes match."
+  },
+  "publication": {
+    "attempt01": {
+      "archive_members": 35,
+      "derived": 3,
+      "exact": 32,
+      "excluded_originals": 36
+    },
+    "attempt02": {
+      "archive_members": 48,
+      "derived": 4,
+      "exact": 44,
+      "excluded_originals": 37
+    }
+  },
+  "resources": {
+    "allocation": 2793046,
+    "deliberately_released_at_utc": "2026-10-24T09:23:46Z",
+    "extern_completed_at_utc": "2026-10-24T09:23:47Z",
+    "final_gpu": "No workload GPU processes and zero used memory; only the pre-existing monitor container remains.",
+    "queue": "The settled snapshot has empty squeue output. The earlier CG snapshot is preserved separately and is not used as empty-queue evidence."
+  },
+  "revision02": {
+    "change": "Only the already-owned output NaN fill enters inference_mode; every ownership guard and callback position remains unchanged. Standalone callback controls now cover both normal and inference tensor allocation.",
+    "frozen_sglang_commit": "12447b7d6219d54d1296401c0b8cfeeff1568931",
+    "independent_audit_checks": 5086,
+    "independent_audit_status": "independent_audit_passed_bounded_qualification_complete",
+    "native_control": "One explicit functionality descriptor is accepted at M144 and M129, with true memory hits and genuine default misses. Fifteen numerical guards and two retained graphs pass; zero profiling attempts.",
+    "result": "All four gates pass in four fresh containers: native-facade, twelve callback correctness controls plus four unsafe-role checks, retained-auto and synthesized-auto.",
+    "scope": "Two short validation rounds per smoke establish API/cache/numerics only. They are not independent performance trials and do not establish selected-descriptor acceptance for a future comparison.",
+    "setup_smokes": {
+      "retained": {
+        "default_profiles": 1,
+        "profiles": 9,
+        "runtime_key_m": 144,
+        "winner": -1
+      },
+      "synthesized": {
+        "default_profiles": 9,
+        "profiles": 81,
+        "runtime_key_m": 256,
+        "winner": -1
+      }
+    }
+  },
+  "schema_version": 1,
+  "source_variant": "FP8-only descriptor port plus optional benchmark fixture output-refresh callback; not stock released FlashInfer.",
+  "status": "Current-source correctness/provider and fixture API setup qualified on revision02; revision01 failure preserved."
+}

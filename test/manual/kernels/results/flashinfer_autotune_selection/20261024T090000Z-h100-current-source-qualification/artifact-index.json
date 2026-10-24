@@ -1,0 +1,97 @@
+{
+  "files": {
+    "attempt01-raw-member-index.json": {
+      "sha256": "2f5e1d8040951d45d71414691c2ac5ec24f45d978f3884987fd69d3832d0d908",
+      "size_bytes": 17165
+    },
+    "attempt01-raw.tar.gz": {
+      "sha256": "044a0d9f6d770f34dc323c72d16d874044c92a04bcd3d2e410df312f3ab8fd4f",
+      "size_bytes": 30258
+    },
+    "attempt02-raw-member-index.json": {
+      "sha256": "f1010889d96ffd5ef439a78742b118561d0146ae0f57648b5efba90b0efcb8f7",
+      "size_bytes": 19583
+    },
+    "attempt02-raw.tar.gz": {
+      "sha256": "9401848efef7b57c7e102f1863de62e2229a092dbb887a32dac292e42b1cc431",
+      "size_bytes": 37656
+    },
+    "independent-readiness-review.json": {
+      "sha256": "b0724f5eeca157b1df1ef4863414244206a5a3d185d975317f75cba07b01cded",
+      "size_bytes": 16721
+    },
+    "launcher-cpu-controls.json": {
+      "sha256": "102003a9756ff9d97a10bdde205b7751370470dfb635d201e30770c013ac9877",
+      "size_bytes": 1035
+    },
+    "plan.json": {
+      "sha256": "7b45150c7ddc79ac910ad08a8f14d20ad83de6e9f9bcb060f70f92074cdbeaec",
+      "size_bytes": 7829
+    },
+    "qualification-tools.tar.gz": {
+      "sha256": "a4f47b4189f89313acb93595695823bae5050a768557df604704db4aedaad048",
+      "size_bytes": 33361
+    },
+    "research-evidence-member-index.json": {
+      "sha256": "de06a75c02ca3d490aa20b4d4de7e87993e227c9c72870e9c394550b02b7c46c",
+      "size_bytes": 4150
+    },
+    "research-evidence.tar.gz": {
+      "sha256": "935ae06aa1f2a3ce889c4b5a74293d45e09f76cc5d14774cd5b477c6bae9aa71",
+      "size_bytes": 164921
+    },
+    "revision02/callback-revision.json": {
+      "sha256": "e12072dd1037d2a573779e644746b72562fbfcee7c2a485b2cbf99bdfebe3645",
+      "size_bytes": 3028
+    },
+    "revision02/callback-script-cpu-admission.json": {
+      "sha256": "20ac17fefe4d2144bd71726966ffe20d51dfced3be646ff8d325c19b9b0953a8",
+      "size_bytes": 5447
+    },
+    "revision02/derivation-report.json": {
+      "sha256": "119bcf5bc4ce0ac54f2c56a747581acd0cd674766284ed93084e2a43db6f1ae0",
+      "size_bytes": 5377
+    },
+    "revision02/inference-refresh-cpu-controls.json": {
+      "sha256": "bead4c3b681574ebbc2933f8f8741d1920da4bb4c695849cd970f958bbc1f981",
+      "size_bytes": 6055
+    },
+    "revision02/launcher-cpu-controls.json": {
+      "sha256": "23586a8bd71e9384fa409875d38209e23a8a9e98478a723db9fe61866faec910",
+      "size_bytes": 1153
+    },
+    "revision02/plan.json": {
+      "sha256": "11c3b41d9d9fe4d176789aae780b14d9d7af61fc8afb103ef4003ec0c64b551d",
+      "size_bytes": 8700
+    },
+    "revision02/qualification-tools.tar.gz": {
+      "sha256": "ae7159aba41c3f26199568f9742ab140e7c20985131dbdbd58d7af7c28246829",
+      "size_bytes": 33761
+    },
+    "revision02/revision-controls-index.json": {
+      "sha256": "63ada9ed14f15bb17e3831ed3c3110f80a88a5f309c815582e625cedc76a65ea",
+      "size_bytes": 390
+    },
+    "revision02/revision-controls.tar.gz": {
+      "sha256": "66f1bc5ddab9a4dc1e0eaa31ea73b2536c0043216c60ab4e5e6a0a61ffb89042",
+      "size_bytes": 3909
+    },
+    "source-stage.json": {
+      "sha256": "b69166d020abc5bc00bbb5e075c7e8bf25c12f63e1ca4bb41728b598664404f1",
+      "size_bytes": 9369
+    },
+    "source-transfer-validation.json": {
+      "sha256": "c253f1226e2a25f2dec64633328a65a8888b54739b005cfe3ff888c372404985",
+      "size_bytes": 586
+    },
+    "summary.json": {
+      "sha256": "dce7a2d76b1a9e1d9cf96f139f67d8791dff901f259e20ef2ccd9f70806ab297",
+      "size_bytes": 5471
+    },
+    "validation.json": {
+      "sha256": "bdd744eebcb429bccf9f4bf1552d0880eb5d7ab5994d313019b93d9b7fb1aa19",
+      "size_bytes": 1441
+    }
+  },
+  "schema_version": 1
+}

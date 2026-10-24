@@ -1,0 +1,100 @@
+{
+  "derived_members": [
+    "derived/attempt01-audit.json"
+  ],
+  "members": {
+    "current-source-acceptance-design/design.json": {
+      "sha256": "5b7c39b0c809c48a75340523e4724a12654394b3de24296cce14b898d536c660",
+      "size_bytes": 10733
+    },
+    "current-source-acceptance-design/write_design.py": {
+      "sha256": "57bcee2832d70353504f575c78344dcb3b6d24c799101a050bde14e82c91d0e8",
+      "size_bytes": 10676
+    },
+    "current-source-audit/attempt02-audit.json": {
+      "sha256": "73374c2518a171a194beed7ceacca11afd243f688dc9d1ce6df90f151fd790a5",
+      "size_bytes": 558546
+    },
+    "current-source-audit/attempt02-summary.json": {
+      "sha256": "689be5b960d0cc4b15bcc21b4ec013aca6ae527a83b2044b119a083bae35b48f",
+      "size_bytes": 4264
+    },
+    "current-source-audit/audit_attempt.py": {
+      "sha256": "6abb1dd44593c4d0a80e9dc437cc10b57c349e63ca7f1f04d541451045022e89",
+      "size_bytes": 15051
+    },
+    "current-source-audit/audit_attempt02.py": {
+      "sha256": "13607044601b979db4a6d691bf24bd86ddc5e04f2c956f1ac764932374cadb23",
+      "size_bytes": 22639
+    },
+    "current-source-coordinator/final-resource-check.log": {
+      "sha256": "2adb91ead039f0032f21d3e2e79d86b19b487b3926c76a3956dc05c8827404cf",
+      "size_bytes": 2875
+    },
+    "current-source-coordinator/package_qualification_results.py": {
+      "sha256": "a17fddbbd3bd2b8dac7781999ae6d28fde674b797d501dc5f6571009c8a1eacf",
+      "size_bytes": 22080
+    },
+    "current-source-coordinator/scheduler-final.log": {
+      "sha256": "938a5f23bc866ab727b86b734970c8c462718a71eb0f2ac893cce97e7d1cdb6d",
+      "size_bytes": 1114
+    },
+    "current-source-coordinator/scheduler-settled.log": {
+      "sha256": "7a0c52e62c36fa0b369b8a3164ef9ae0d7da5add90766d8eb7e2d415b7f7f827",
+      "size_bytes": 1033
+    },
+    "derived/attempt01-audit.json": {
+      "sha256": "2b1a55b920eefd6173fff3046b821bf73b4dc4fa4cecaadf2b34e4ba40614619",
+      "size_bytes": 12899
+    },
+    "final-next-step-audit/recommendation.json": {
+      "sha256": "35d14fe2dfcb29120f75b50c3bea54a9e8810fd494243fc8938cbc9733ce5308",
+      "size_bytes": 10390
+    },
+    "final-next-step-audit/write_recommendation.py": {
+      "sha256": "9d607412ae60cdfa89b2d61eb5ff267e05d8b7891c50b724aac5892d72e92c5c",
+      "size_bytes": 11085
+    },
+    "fixture-validation-callback-revision02/check_cuda_gate_cpu.py": {
+      "sha256": "6e05b8843047ae1f74f68d3c8893e7cd2f6073cdb30f91c889d076509889d42c",
+      "size_bytes": 4021
+    },
+    "fixture-validation-callback-revision02/check_inference_refresh.py": {
+      "sha256": "161840d33b1bfcacf55e97130264e7f32db672e0893b3c1bbd6d68ada9320624",
+      "size_bytes": 7028
+    },
+    "fixture-validation-callback-revision02/cuda-gate-cpu-admission.json": {
+      "sha256": "20ac17fefe4d2144bd71726966ffe20d51dfced3be646ff8d325c19b9b0953a8",
+      "size_bytes": 5447
+    },
+    "fixture-validation-callback-revision02/harness-only.patch": {
+      "sha256": "706ca4d91f3e6ef8c1643977beef72fa39af121e691f9380a175633787fe94ef",
+      "size_bytes": 3648
+    },
+    "fixture-validation-callback-revision02/inference-refresh-cpu-controls.json": {
+      "sha256": "bead4c3b681574ebbc2933f8f8741d1920da4bb4c695849cd970f958bbc1f981",
+      "size_bytes": 6055
+    },
+    "fixture-validation-callback-revision02/proposal.json": {
+      "sha256": "e12072dd1037d2a573779e644746b72562fbfcee7c2a485b2cbf99bdfebe3645",
+      "size_bytes": 3028
+    },
+    "fixture-validation-callback-revision02/revision02-only.patch": {
+      "sha256": "82eed25751b16c7cc543f7945a07542663d375df7a8155da666f1c819edf08ac",
+      "size_bytes": 368
+    },
+    "history-selection-diagnostics/diagnose.py": {
+      "sha256": "2b850dbf605ea4b8b833b7ce9ce21c7c5f3a89ca9da7049e4df831c7196b33c7",
+      "size_bytes": 16183
+    },
+    "history-selection-diagnostics/posthoc-diagnostics.json": {
+      "sha256": "2174f027e4b02e6d958a627dfa854d428ea26561e4362bd6051dd313b44496c6",
+      "size_bytes": 75842
+    },
+    "next-study-design/proposal.json": {
+      "sha256": "347b905b8b421f3f6d1160d3b40f3b7aa4348fbaf4fc0602bf5608f42932a45b",
+      "size_bytes": 15898
+    }
+  },
+  "schema_version": 1
+}
