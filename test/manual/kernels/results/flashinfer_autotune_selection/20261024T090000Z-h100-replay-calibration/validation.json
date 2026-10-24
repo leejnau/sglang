@@ -1,0 +1,321 @@
+{
+  "status": "passed",
+  "execution_source_commit": "e38fd25173543600dab03d3a757e27e45e0a3caf",
+  "protocol_sha256_unchanged": {
+    "plan.json": "1f263135413a4c331f0408961da46fa11718ae2f19332c8cc2edacc71e4424a6",
+    "analyze.py": "140bd5dffc9e7279f09fa16107f8754360222b2a035fb682f6d6488951fd8ffa",
+    "launch.sh": "2952b13d016f142383c6762bf017b1012831a676ca8a6c379890205b29a54434",
+    "collect_build_provenance.py": "fd73578a4cb581f161dd3766b6175008dff8970943c21c0397cea19afff1e319",
+    "fixture-manifest.json": "e13a86fab5db5796b22d8dab0f84080b8057b036ca7aef2c7be8832e76505bf1",
+    "cpu-validation.json": "e9c70d11801b6dda3c8a1cb09f4bbb31f8f90507056a7e8062c2278e04077494"
+  },
+  "all_six_worker_exits": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "final_integrity_gate_exit": 0,
+  "independently_derived_counts": {
+    "exact_zero_guards": 12,
+    "timed_batches": 864,
+    "workers": 6,
+    "startup_profiles": 486,
+    "default_profiles": 54,
+    "numerical_guards": 948,
+    "complete_rounds": 144,
+    "graph_captures": 12,
+    "trace_kernels": 72,
+    "trace_launches": 36
+  },
+  "independent_statistics": {
+    "source_sha256": "7eac37068fc7603adcc91c518acb41d3c32e6a1899f1f95c8dd21506b73b26e7",
+    "report_sha256": "6c4bde9668db163318e6dd006a865e7bb84d5917a7da46d915834f6f91842df5",
+    "comparisons": 117
+  },
+  "strict_local_frozen_analyzer_comparison": {
+    "passed": true,
+    "location_only_fields": [
+      {
+        "field": "/actual_native_build/file",
+        "cluster": "/study/results/20261024T090000Z-h100-replay-calibration/attempt01/native-build-provenance-final.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/calibration-raw/attempt01/native-build-provenance.json"
+      },
+      {
+        "field": "/validated_workers/0/file",
+        "cluster": "/study/results/20261024T090000Z-h100-replay-calibration/attempt01/trial0-calibration.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/calibration-raw/attempt01/trial0-calibration.json"
+      },
+      {
+        "field": "/validated_workers/0/actual_trace/file",
+        "cluster": "/study/results/20261024T090000Z-h100-replay-calibration/attempt01/trial0-calibration.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/calibration-raw/attempt01/trial0-calibration.trace.json"
+      },
+      {
+        "field": "/validated_workers/1/file",
+        "cluster": "/study/results/20261024T090000Z-h100-replay-calibration/attempt01/trial1-calibration.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/calibration-raw/attempt01/trial1-calibration.json"
+      },
+      {
+        "field": "/validated_workers/1/actual_trace/file",
+        "cluster": "/study/results/20261024T090000Z-h100-replay-calibration/attempt01/trial1-calibration.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/calibration-raw/attempt01/trial1-calibration.trace.json"
+      },
+      {
+        "field": "/validated_workers/2/file",
+        "cluster": "/study/results/20261024T090000Z-h100-replay-calibration/attempt01/trial2-calibration.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/calibration-raw/attempt01/trial2-calibration.json"
+      },
+      {
+        "field": "/validated_workers/2/actual_trace/file",
+        "cluster": "/study/results/20261024T090000Z-h100-replay-calibration/attempt01/trial2-calibration.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/calibration-raw/attempt01/trial2-calibration.trace.json"
+      },
+      {
+        "field": "/validated_workers/3/file",
+        "cluster": "/study/results/20261024T090000Z-h100-replay-calibration/attempt01/trial3-calibration.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/calibration-raw/attempt01/trial3-calibration.json"
+      },
+      {
+        "field": "/validated_workers/3/actual_trace/file",
+        "cluster": "/study/results/20261024T090000Z-h100-replay-calibration/attempt01/trial3-calibration.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/calibration-raw/attempt01/trial3-calibration.trace.json"
+      },
+      {
+        "field": "/validated_workers/4/file",
+        "cluster": "/study/results/20261024T090000Z-h100-replay-calibration/attempt01/trial4-calibration.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/calibration-raw/attempt01/trial4-calibration.json"
+      },
+      {
+        "field": "/validated_workers/4/actual_trace/file",
+        "cluster": "/study/results/20261024T090000Z-h100-replay-calibration/attempt01/trial4-calibration.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/calibration-raw/attempt01/trial4-calibration.trace.json"
+      },
+      {
+        "field": "/validated_workers/5/file",
+        "cluster": "/study/results/20261024T090000Z-h100-replay-calibration/attempt01/trial5-calibration.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/calibration-raw/attempt01/trial5-calibration.json"
+      },
+      {
+        "field": "/validated_workers/5/actual_trace/file",
+        "cluster": "/study/results/20261024T090000Z-h100-replay-calibration/attempt01/trial5-calibration.trace.json",
+        "local": "/private/tmp/fi-next-steps-20261024/coordinator/calibration-raw/attempt01/trial5-calibration.trace.json"
+      }
+    ],
+    "all_other_values_exact": true,
+    "canonical_final_build_file_byte_identical": true,
+    "local_rerun_sha256": "ff29f4a08977edad989c7253cbc23a186c836a0845f6ee16185debcab06dc29e"
+  },
+  "successful_full_private_raw": {
+    "archive_sha256": "c91907fede6170aaeda2974ca516fcda5f53b92e81dbd9cb222c203a31edfab2",
+    "archive_size_bytes": 10944287,
+    "preservation_manifest_members_verified": 80,
+    "archive_files_verified": 81,
+    "durable_path": "/home/lnau/flashinfer-autotune-study/20261024T090000Z-h100-replay-calibration-attempt01-full-raw.tgz"
+  },
+  "public_raw": {
+    "members": 79,
+    "excluded_private_binary_members": 2,
+    "archive_sha256": "1652f2346df4f06c82bca748c78235ee8c44ec64e7bef2123d7485a1245144c9",
+    "byte_identical_members": true
+  },
+  "audit_tools": [
+    {
+      "path": "calibration-statistics-audit/audit.py",
+      "sha256": "7eac37068fc7603adcc91c518acb41d3c32e6a1899f1f95c8dd21506b73b26e7",
+      "size_bytes": 22884
+    },
+    {
+      "path": "calibration-statistics-audit/cpu-controls.json",
+      "sha256": "244d7c7b5da82b4799f29440f7cdced9dd941d8ed659d72ef4df44cfc20713dc",
+      "size_bytes": 518
+    },
+    {
+      "path": "calibration-statistics-audit/summarize.py",
+      "sha256": "52bc486fdf818978b8ef66aa53aa301213ba448e334c6f3fdf77c47db6908417",
+      "size_bytes": 6650
+    },
+    {
+      "path": "coordinator/calibration-launcher-controls.json",
+      "sha256": "7b9dd77966954cb0b84048ecac30bd85733e87383dfbcdc91776829338593808",
+      "size_bytes": 3544
+    },
+    {
+      "path": "coordinator/check_calibration_launcher.py",
+      "sha256": "254ffca48ef8520e8a6b9e2afe7f800e412354735f4be959e0fe89385d152ed2",
+      "size_bytes": 7790
+    },
+    {
+      "path": "coordinator/package_calibration_results.py",
+      "sha256": "33d3d74bf1bcd328af7bc6fe492fdc3eee2b2817bed0e81828686dd23284075d",
+      "size_bytes": 28670
+    },
+    {
+      "path": "coordinator/package_public.py",
+      "sha256": "257433ed12e92c2f814a00dbfceda0c763e56e907eb013efd3abef713d3a4626",
+      "size_bytes": 1722
+    },
+    {
+      "path": "coordinator/preserve.py",
+      "sha256": "dfb9daec244f2cf7686472a9980f7caa7e9fbc68f6f1b340ff94dcb8612fe5f2",
+      "size_bytes": 2079
+    },
+    {
+      "path": "coordinator/scheduler-after-release.log",
+      "sha256": "597ced7ce60a61101bc729b3afe0f31f0252778dabd2f5df3a0464ba199c3609",
+      "size_bytes": 1999
+    },
+    {
+      "path": "coordinator/scheduler-final.log",
+      "sha256": "e298e6e450588b4f1115ad7d138914642f2509f24f66d82a8086d48fd1911442",
+      "size_bytes": 1810
+    },
+    {
+      "path": "history-statistics-audit/audit.py",
+      "sha256": "ac205eb5eb7fe6c81c6b7031cc151b346a621dfac4a0d55df2f93e2aed6f604c",
+      "size_bytes": 25812
+    },
+    {
+      "path": "selection-audit/check_oracle_calibration_worker.py",
+      "sha256": "128b489844d934fd97e12eb0766fc74f1cc348e29ced0d3cd037be6a539f96cf",
+      "size_bytes": 7965
+    },
+    {
+      "path": "selection-audit/oracle-calibration-worker-cpu-controls.json",
+      "sha256": "b28019952ee13317098b75cbcde692d4f530eac422fce8b6745ac8a1e83586b4",
+      "size_bytes": 6699
+    }
+  ],
+  "package_checks_by_category": {
+    "private_full_archive_SHA": 1,
+    "committed_protocol_unchanged": 6,
+    "complete_private_member_manifest": 1,
+    "no_raw_symlinks": 1,
+    "original_preservation_member": 80,
+    "full_archive_exact_file_set": 1,
+    "full_archive_downloaded_byte_identity": 81,
+    "frozen_successful_analysis": 1,
+    "rerun_same_types": 4298,
+    "rerun_same_keys": 201,
+    "rerun_same_lengths": 183,
+    "rerun_only_location_fields": 13,
+    "rerun_exact_thirteen_location_fields": 1,
+    "rerun_same_relocated_filename": 12,
+    "canonical_final_build_file_same_bytes": 1,
+    "retained_exact_independent_audit_sources": 1,
+    "private_native_actual_ELF": 1,
+    "six_fresh_containers": 1,
+    "successful_worker": 6,
+    "frozen_execution_source": 6,
+    "all_profiles_startup_only": 6,
+    "private_ELF_matches_every_worker": 6,
+    "finite_actual_profile": 486,
+    "fixed_H0F0_auto_hot_config": 486,
+    "default_in_nine_complete_candidate_races": 6,
+    "startup_winner_actual_finite_minimum": 6,
+    "natural_winner_not_measured": 6,
+    "original_v1_cache_bytes_unchanged": 6,
+    "actual_v1_cache_generation": 6,
+    "nine_incidental_saved_entries": 6,
+    "two_distinct_owned_default_graphs": 6,
+    "genuine_default_capture": 12,
+    "all_removed_cache_maps_restored": 6,
+    "complete_unique_numerical_guards": 6,
+    "actual_quantized_reference_guard": 948,
+    "correct_graph_output_allocation": 924,
+    "recomputed_positive_zero_hash": 12,
+    "explicit_acceptance_never_fallback": 30,
+    "all_completed_samples_retained": 6,
+    "complete_paired_round": 144,
+    "no_timing_profile_or_policy_scope": 864,
+    "same_original_measured_graph": 864,
+    "exact_raw_event_normalization": 864,
+    "query_outcome_preserved": 864,
+    "actual_original_trace_bytes": 6,
+    "no_trace_profiling": 6,
+    "trace_cache_state_unchanged": 6,
+    "independently_counted_complete_totals": 1,
+    "independent_statistics_agreement": 1,
+    "only_private_fixture_and_ELF_excluded": 1,
+    "no_raw_upstream_source_members": 1,
+    "all_result_products_new": 1,
+    "new_artifact_no_overwrite": 2,
+    "audit_source_prohibited_token_scan": 92,
+    "archive_regular_members": 2,
+    "archive_member_set": 2,
+    "archive_original_byte_identity": 92,
+    "archive_prohibited_token_scan": 92
+  },
+  "startup_winners_recorded_not_consumed": [
+    {
+      "trial": 0,
+      "tactic": [
+        893353197634,
+        4294967332,
+        0,
+        2533274790395907,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "trial": 1,
+      "tactic": -1
+    },
+    {
+      "trial": 2,
+      "tactic": -1
+    },
+    {
+      "trial": 3,
+      "tactic": [
+        841813590082,
+        4294967332,
+        0,
+        2533274790395906,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "trial": 4,
+      "tactic": -1
+    },
+    {
+      "trial": 5,
+      "tactic": -1
+    }
+  ],
+  "allocation": {
+    "job_id": 2792066,
+    "state": "Deliberately released after both full experiment archives were verified.",
+    "accounting_end_utc": "2026-10-24 08:36:29 UTC",
+    "extern_cleanup_end_utc": "2026-10-24 08:36:31 UTC",
+    "remaining_workers": 0,
+    "scheduler_final_sha256": "e298e6e450588b4f1115ad7d138914642f2509f24f66d82a8086d48fd1911442"
+  },
+  "limitations": [
+    "Six fresh processes are inferential units, not24rounds or144dependent batches.",
+    "Queued wall spans include deliberate delay and are diagnostic, not serving latency.",
+    "5120/noqueue versus16/queued compares complete recipes, not pure host submission cost.",
+    "Prequeue delay can change device state;10m/40m sensitivity is not an isolated causal mechanism.",
+    "Start.query True is inconclusive and retained; no outcome-based filtering/retries.",
+    "Bootstrap intervals are exploratory/unadjusted and crossing1 does not establish equivalence.",
+    "A single static-calibrated FP8 fixture/H100 does not establish fullmodel or universal ranking behavior.",
+    "General numerical metrics are preserved guard results; output arrays were not retained for independent recomputation. Exact-zero output digests were recomputed.",
+    "The public archive excludes the private captured fixture and actual native ELF. Full raw retains both, with indexed hashes.",
+    "The six-process analysis is exact apart from the 13 verified location-only fields; no floating-point tolerance was used for this comparison.",
+    "Audit sources retain their original path constants. Extract tools under the original research root, restore private members when needed, and use the frozen source checkout to reproduce full provider/fixture gates."
+  ],
+  "reproduction": {
+    "frozen_analyzer": "python3 test/manual/kernels/results/flashinfer_autotune_selection/20261024T090000Z-h100-replay-calibration/analyze.py --raw-root RAW --source-root SOURCE --expected-source-commit e38fd25173543600dab03d3a757e27e45e0a3caf --source-manifest SOURCE/test/manual/kernels/results/flashinfer_autotune_selection/20261019T232945Z-h100-descriptor-qualification/source-manifest.json --fixture-manifest SOURCE/test/manual/kernels/results/flashinfer_autotune_selection/20261024T090000Z-h100-replay-calibration/fixture-manifest.json --build-provenance RAW/native-build-provenance-final.json --output rerun.json",
+    "independent_math": "python3 calibration-statistics-audit/audit.py --raw-root RAW --source-commit e38fd25173543600dab03d3a757e27e45e0a3caf --plan SOURCE/test/manual/kernels/results/flashinfer_autotune_selection/20261024T090000Z-h100-replay-calibration/plan.json --official-analysis RAW/final-analysis.json --output independent.json",
+    "package_verification": "python3 coordinator/package_calibration_results.py --research-root RESEARCH --source-root SOURCE --verify-only"
+  }
+}

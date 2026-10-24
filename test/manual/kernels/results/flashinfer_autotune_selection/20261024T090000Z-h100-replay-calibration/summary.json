@@ -1,0 +1,244 @@
+{
+  "status": "complete",
+  "batch_id": "20261024T090000Z-h100-replay-calibration",
+  "execution_source_commit": "e38fd25173543600dab03d3a757e27e45e0a3caf",
+  "conclusion": "Replay recipes differ on the same retained graphs; subpercent capture and selection resolution remains unresolved.",
+  "scope": "Six fresh processes on one H100 NVL and one fixed captured static FP8 SGLang layer. Both measured graphs use genuine default misses; the startup winner is deliberately unused.",
+  "actual_counts": {
+    "exact_zero_guards": 12,
+    "timed_batches": 864,
+    "workers": 6,
+    "startup_profiles": 486,
+    "default_profiles": 54,
+    "numerical_guards": 948,
+    "complete_rounds": 144,
+    "graph_captures": 12,
+    "trace_kernels": 72,
+    "trace_launches": 36
+  },
+  "actual_signature_result": true,
+  "ratios": [
+    {
+      "kind": "same_graph_method_ratio",
+      "graph": "graph_a",
+      "numerator": "queued16_10m",
+      "denominator": "plain5120",
+      "method": null,
+      "independent_trials": 6,
+      "median_ratio": 1.0150547607495966,
+      "min_ratio": 1.0116901678632488,
+      "max_ratio": 1.0210147324583203,
+      "exploratory_cluster_bootstrap_95_percent": {
+        "level": 0.95,
+        "lower": 1.0125311734047977,
+        "upper": 1.0200574547937566,
+        "method": "exhaustive percentile bootstrap of paired trial units; median statistic",
+        "ordered_resamples": 46656,
+        "independent_units": 6,
+        "exploratory_unadjusted": true
+      },
+      "interval_width_ratio_units": 0.007526281388958944
+    },
+    {
+      "kind": "same_graph_method_ratio",
+      "graph": "graph_a",
+      "numerator": "queued16_40m",
+      "denominator": "queued16_10m",
+      "method": null,
+      "independent_trials": 6,
+      "median_ratio": 0.9988820245822045,
+      "min_ratio": 0.997365924203991,
+      "max_ratio": 0.9998612642032185,
+      "exploratory_cluster_bootstrap_95_percent": {
+        "level": 0.95,
+        "lower": 0.9979894752208244,
+        "upper": 0.9997900038332933,
+        "method": "exhaustive percentile bootstrap of paired trial units; median statistic",
+        "ordered_resamples": 46656,
+        "independent_units": 6,
+        "exploratory_unadjusted": true
+      },
+      "interval_width_ratio_units": 0.0018005286124689324
+    },
+    {
+      "kind": "same_graph_method_ratio",
+      "graph": "graph_a",
+      "numerator": "queued16_40m",
+      "denominator": "plain5120",
+      "method": null,
+      "independent_trials": 6,
+      "median_ratio": 1.0149080541964772,
+      "min_ratio": 1.010525136890053,
+      "max_ratio": 1.0193339947915765,
+      "exploratory_cluster_bootstrap_95_percent": {
+        "level": 0.95,
+        "lower": 1.0105425773697543,
+        "upper": 1.0186748243149415,
+        "method": "exhaustive percentile bootstrap of paired trial units; median statistic",
+        "ordered_resamples": 46656,
+        "independent_units": 6,
+        "exploratory_unadjusted": true
+      },
+      "interval_width_ratio_units": 0.008132246945187216
+    },
+    {
+      "kind": "same_graph_method_ratio",
+      "graph": "graph_b",
+      "numerator": "queued16_10m",
+      "denominator": "plain5120",
+      "method": null,
+      "independent_trials": 6,
+      "median_ratio": 1.0129848635888308,
+      "min_ratio": 1.00874265853215,
+      "max_ratio": 1.0200662604931825,
+      "exploratory_cluster_bootstrap_95_percent": {
+        "level": 0.95,
+        "lower": 1.0089769166075482,
+        "upper": 1.018183988659377,
+        "method": "exhaustive percentile bootstrap of paired trial units; median statistic",
+        "ordered_resamples": 46656,
+        "independent_units": 6,
+        "exploratory_unadjusted": true
+      },
+      "interval_width_ratio_units": 0.009207072051828913
+    },
+    {
+      "kind": "same_graph_method_ratio",
+      "graph": "graph_b",
+      "numerator": "queued16_40m",
+      "denominator": "queued16_10m",
+      "method": null,
+      "independent_trials": 6,
+      "median_ratio": 0.9996497977602747,
+      "min_ratio": 0.9980593252029597,
+      "max_ratio": 1.001108198296584,
+      "exploratory_cluster_bootstrap_95_percent": {
+        "level": 0.95,
+        "lower": 0.9983300619236365,
+        "upper": 1.000554252533034,
+        "method": "exhaustive percentile bootstrap of paired trial units; median statistic",
+        "ordered_resamples": 46656,
+        "independent_units": 6,
+        "exploratory_unadjusted": true
+      },
+      "interval_width_ratio_units": 0.0022241906093974917
+    },
+    {
+      "kind": "same_graph_method_ratio",
+      "graph": "graph_b",
+      "numerator": "queued16_40m",
+      "denominator": "plain5120",
+      "method": null,
+      "independent_trials": 6,
+      "median_ratio": 1.0112957085621734,
+      "min_ratio": 1.0084424156338536,
+      "max_ratio": 1.01824656278087,
+      "exploratory_cluster_bootstrap_95_percent": {
+        "level": 0.95,
+        "lower": 1.0084684233466974,
+        "upper": 1.0181441122107706,
+        "method": "exhaustive percentile bootstrap of paired trial units; median statistic",
+        "ordered_resamples": 46656,
+        "independent_units": 6,
+        "exploratory_unadjusted": true
+      },
+      "interval_width_ratio_units": 0.009675688864073217
+    },
+    {
+      "kind": "capture_order_ratio",
+      "graph": null,
+      "numerator": null,
+      "denominator": null,
+      "method": "plain5120",
+      "independent_trials": 6,
+      "median_ratio": 1.0015221117378288,
+      "min_ratio": 0.9966503240213173,
+      "max_ratio": 1.0102890855742745,
+      "exploratory_cluster_bootstrap_95_percent": {
+        "level": 0.95,
+        "lower": 0.9976610840662365,
+        "upper": 1.0094770922004894,
+        "method": "exhaustive percentile bootstrap of paired trial units; median statistic",
+        "ordered_resamples": 46656,
+        "independent_units": 6,
+        "exploratory_unadjusted": true
+      },
+      "interval_width_ratio_units": 0.011816008134252876
+    },
+    {
+      "kind": "capture_order_ratio",
+      "graph": null,
+      "numerator": null,
+      "denominator": null,
+      "method": "queued16_10m",
+      "independent_trials": 6,
+      "median_ratio": 1.00161218790477,
+      "min_ratio": 0.9983315309048226,
+      "max_ratio": 1.0083038438888106,
+      "exploratory_cluster_bootstrap_95_percent": {
+        "level": 0.95,
+        "lower": 0.9986812656431494,
+        "upper": 1.007603004863959,
+        "method": "exhaustive percentile bootstrap of paired trial units; median statistic",
+        "ordered_resamples": 46656,
+        "independent_units": 6,
+        "exploratory_unadjusted": true
+      },
+      "interval_width_ratio_units": 0.008921739220809632
+    },
+    {
+      "kind": "capture_order_ratio",
+      "graph": null,
+      "numerator": null,
+      "denominator": null,
+      "method": "queued16_40m",
+      "independent_trials": 6,
+      "median_ratio": 1.0023070351099255,
+      "min_ratio": 0.9977805347863495,
+      "max_ratio": 1.0069110520548379,
+      "exploratory_cluster_bootstrap_95_percent": {
+        "level": 0.95,
+        "lower": 0.9990992603061363,
+        "upper": 1.006409497961792,
+        "method": "exhaustive percentile bootstrap of paired trial units; median statistic",
+        "ordered_resamples": 46656,
+        "independent_units": 6,
+        "exploratory_unadjusted": true
+      },
+      "interval_width_ratio_units": 0.007310237655655638
+    }
+  ],
+  "queue_outcomes_all_retained": {
+    "plain5120": {
+      "complete_inconclusive": 288
+    },
+    "queued16_10m": {
+      "pending": 288
+    },
+    "queued16_40m": {
+      "pending": 288
+    }
+  },
+  "interpretation": [
+    "The 16-replay/10-million-cycle recipe reports about 1.30% to 1.51% higher GPU-event time than the 5120-replay/no-delay recipe on the same graphs. Batch length and delay change together; this is not a pure host-cost estimate.",
+    "At fixed 16 replays, increasing delay from 10 to 40 million cycles changes median event ratios by about -0.112% and -0.035% for the two graphs. No equivalence claim follows.",
+    "All 576 queued samples had pending start events after enqueue. All 288 plain samples had completed starts, which is inconclusive. No sample was excluded by query outcome.",
+    "First/second-capture exploratory interval widths are about 0.73% to 1.18%. The contextual 0.65% scale remains unresolved rather than an acceptance threshold.",
+    "This calibration does not negate the much larger 18.9% to 22.0% explicit-winner regressions with different BMM kernels in the prior fixed study."
+  ],
+  "limits": [
+    "Six fresh processes are inferential units, not24rounds or144dependent batches.",
+    "Queued wall spans include deliberate delay and are diagnostic, not serving latency.",
+    "5120/noqueue versus16/queued compares complete recipes, not pure host submission cost.",
+    "Prequeue delay can change device state;10m/40m sensitivity is not an isolated causal mechanism.",
+    "Start.query True is inconclusive and retained; no outcome-based filtering/retries.",
+    "Bootstrap intervals are exploratory/unadjusted and crossing1 does not establish equivalence.",
+    "A single static-calibrated FP8 fixture/H100 does not establish fullmodel or universal ranking behavior."
+  ],
+  "next_step": "Qualify the current-source native provider and fixture output ownership/numerics before an activation/objective matrix. This package authorizes no new experiment.",
+  "allocation": {
+    "job_id": 2792066,
+    "deliberately_released_utc": "2026-10-24 08:36:29 UTC",
+    "remaining_workers": 0
+  }
+}
