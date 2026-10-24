@@ -42,3 +42,5 @@ and state which source-inventory metadata was omitted. Historical batches are
 context only and are not pooled with this current-source cohort.
 
 At source freeze, GPU execution and performance results are pending.
+
+Attempt01 stopped at the first admission on a live-cache fingerprint guard; no timing workers ran. Its complete evidence is preserved in `attempt01/`. A CPU reproduction shows that the checker can hash equal nested sets differently after deep-copy restoration. A corrected checker will be frozen as a new source revision before a fresh admission sequence. The factor definitions, schedule, sample count and estimators remain unchanged. No failed performance trial is being replaced or excluded.

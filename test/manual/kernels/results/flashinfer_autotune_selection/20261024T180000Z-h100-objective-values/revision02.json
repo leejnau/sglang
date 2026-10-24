@@ -1,0 +1,30 @@
+{
+  "status": "new_source_revision_before_timing",
+  "prior_execution_commit": "c58cd3e0c149b6dcd12b2bf9bc0cca1172547664",
+  "prior_attempt": "attempt01",
+  "prior_timing_workers": 0,
+  "reason": "Recursive canonical cache-state serialization replaces order-sensitive nested repr hashing; per-field diagnostics are written before a failed guard.",
+  "worker_sha256": "979e28aeb3248b27cb27df21b98cf274442c0e6b92c4df3444c48f7214ce90ba",
+  "changes": [
+    "Canonicalize dictionary/set order recursively while preserving sequence order and type tags.",
+    "Emit field hashes at startup, before capture, and before the final guard.",
+    "Use commit-specific snapshot filenames to preserve the earlier source pack."
+  ],
+  "unchanged": [
+    "FlashInfer runtime and native source",
+    "SGLang production source",
+    "measurement objective and initializer factors",
+    "profile shapes/candidates and controlled random draws",
+    "miss-scope state restoration",
+    "capture/replay timing and native acceptance",
+    "frozen schedule, sample count and statistical estimators"
+  ],
+  "controls": {
+    "original_worker": 84,
+    "bootstrap": 22,
+    "canonical_cache_red_green": 34,
+    "analyzer": 58
+  },
+  "protocol_disposition": "The unsuccessful admission remains preserved and is not retried in place. A separately frozen corrected source begins a new admission sequence and, if admitted, the entire fixed timing cohort. No performance result was available for outcome-dependent stopping or substitution.",
+  "historical_cause_limit": "The CPU mechanism is reproduced with exact current cache paths and the failed admission profiling records; the first GPU record did not include its failing digest or per-field differences."
+}

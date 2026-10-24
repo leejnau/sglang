@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "status": "unsuccessful_admission_no_cohort_results",
+  "raw": {
+    "path": "/private/tmp/fi-objective-values-20261024/coordinator/admission-failure.json",
+    "sha256": "99242d5b31adcddef12491b4f66078fc163f687c228af98be1e4d0b63d44e8e6",
+    "worker_sha256": "3adf2314775574bc9f0f2c4a4b2aaaab8ed8f178f9949eb82070d912a45f95ab",
+    "analyzer_sha256": "321bd9d17d5f1cacc6a31b49b5a4173f34968ed47d54b9fe358f6b3540274e58",
+    "plan_sha256": "d13c06b45e57dbf2a4f864a161970749934337d2508d0b757467d02f4c98eb7d",
+    "schedule_sha256": "cca9dd435bd9c47192d4193153f94c801acb265ecc75bee86c4542482824da0d"
+  },
+  "attempt_scope": {
+    "mode": "admission",
+    "cell": "graph_captured",
+    "block": 0,
+    "startup_profile_attempts": 81,
+    "profile_rows": 81,
+    "serving_timing_rounds": 0,
+    "recorded_numeric_checks": 19,
+    "exact_zero_checks": 3,
+    "trace_present": false,
+    "pre_trace_checks_returned": false,
+    "final_checks_returned": false,
+    "other_cells_qualified": false,
+    "complete_timing_blocks": 0
+  },
+  "recorded_failure": {
+    "status": "error",
+    "error": "RuntimeError: live selection/cache state changed after startup",
+    "source_guard": "final_checks(\"pre_trace\") cache_state_sha comparison before returned metadata; failed computed digest and per-map contents are not emitted in this JSON."
+  },
+  "individual_partial_evidence": {
+    "frozen_profile_settings_domain_policy_minimum_guard": "passed",
+    "recorded_numerical_checks": "passed",
+    "three_distinct_capture_objects_and_outputs": true,
+    "exact_native_output_ownership": true,
+    "original_capture_hit_miss_records": true,
+    "all_three_capture_changed_zero_restored_owner_guards": "passed",
+    "admission_has_no_timing_rounds": "passed",
+    "post_timing_acceptance_individual_guard": "passed",
+    "known_explicit_control_individual_guard": "passed",
+    "both_miss_scopes_record_semantic_restoration": true,
+    "startup_and_pre_capture_live_hash_equal": true
+  },
+  "native_scope": {
+    "natural_selected_tactic": -1,
+    "natural_native_route": "native_default",
+    "natural_explicit_acceptance": "not applicable: default -1",
+    "forced_known_explicit_control_accepted": true,
+    "forced_control_used_descriptor": 1,
+    "forced_control_is_natural_winner": false
+  },
+  "cause_assessment": {
+    "production_tuner_defect_established": false,
+    "harness_fingerprint_hypothesis": "Cache digest only canonicalizes outer dict/set containers. Nested excluded-file-key sets are encoded by repr, while miss_scope deep-copies/restores dictionaries and checks semantic equality. A semantic-equal nested set can change repr order/hash. Source supports this possible checker artifact; failed JSON lacks per-map before/after state to confirm the exact cause.",
+    "other_possibility": "A state field outside the miss_scope snapshot set could have changed. Whole-state hashes alone cannot localize or distinguish this from repr instability.",
+    "needed_for_resolution": "Use the frozen worker methods and representative populated actual tuner state in a separate CPU diagnosis; compare recursive semantic state and field-level encoded digests without weakening genuine tactic/dirty/cache-change controls."
+  },
+  "limits": [
+    "Partial individual guards do not make this an admitted four-cell study.",
+    "No serving timing trial or paired block exists; no factor contrast, uncertainty interval, speedup or bad-selection frequency is estimated.",
+    "A later run requires a separately frozen revision and preservation of this failed attempt; do not alter or relabel the existing record."
+  ]
+}

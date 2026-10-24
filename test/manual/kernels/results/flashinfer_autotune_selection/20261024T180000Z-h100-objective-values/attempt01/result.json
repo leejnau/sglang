@@ -1,0 +1,20 @@
+{
+  "status": "stopped_at_first_admission",
+  "execution_commit": "c58cd3e0c149b6dcd12b2bf9bc0cca1172547664",
+  "allocation": "2803531",
+  "admission_cell": "graph_captured",
+  "completed_profile_attempts": 81,
+  "recorded_numerical_checks_passed": 19,
+  "natural_winner": -1,
+  "forced_explicit_native_used_descriptor": 1,
+  "complete_admission_cells": 0,
+  "timing_workers": 0,
+  "complete_blocks": 0,
+  "trace_collected": false,
+  "error": "RuntimeError: live selection/cache state changed after startup",
+  "scope": "No timing/performance or production tuner defect conclusion. Cache restoration equality and unchanged file hash passed; a separate CPU reproduction diagnoses an order-sensitive research-state fingerprint. The failed GPU record lacks the failing digest/per-field diff, so that exact historical cause remains inferred.",
+  "private_archive_sha256": "e08b2dd6baf8bd48ad78b75816af711ab24588c10047b653a1759513e462264e",
+  "preserved_private_files": 54,
+  "native_artifacts": 4,
+  "public_derivation": "Only six AOT import-inventory labels omitted from the bootstrap, with original hashes/counts recorded; worker result and log are byte-exact."
+}

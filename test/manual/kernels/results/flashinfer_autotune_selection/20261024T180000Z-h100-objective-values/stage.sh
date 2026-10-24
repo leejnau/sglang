@@ -11,7 +11,7 @@ source_commit=$2
 study=/tmp/fi-objective-values-$allocation
 durable=/home/lnau/flashinfer-autotune-study
 batch=20261024T180000Z-h100-objective-values
-pack="$durable/$batch-snapshot.pack"
+pack="$durable/$batch-$source_commit-snapshot.pack"
 [[ ! -e "$study" ]] || exit 1
 python3 - "$pack" "$source_commit" "$durable/fp8-current-source-private.tar.gz" <<'PY'
 import hashlib,json,sys

@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "status": "public_derived_evidence",
+  "private_archive_sha256": "bd3f44cad68e74a092011d44f970f8183fc2fb7fd3a32fed719a6b627a1b6d7a",
+  "private_archive_size_bytes": 403593,
+  "private_members_verified": 21,
+  "packager_sha256": "7324863cb8598251d977dfdb71102621562ee828deb0ab50fdc1ad1cd97bd33c",
+  "files": [
+    {
+      "path": "candidate/.pytest_cache/.gitignore",
+      "mode": "byte_exact",
+      "private_sha256": "3ed731b65d06150c138e2dadb0be0697550888a6b47eb8c45ecc9adba8b8e9bd",
+      "private_size_bytes": 37,
+      "public_sha256": "3ed731b65d06150c138e2dadb0be0697550888a6b47eb8c45ecc9adba8b8e9bd",
+      "public_size_bytes": 37
+    },
+    {
+      "path": "candidate/.pytest_cache/CACHEDIR.TAG",
+      "mode": "byte_exact",
+      "private_sha256": "37dc88ef9a0abeddbe81053a6dd8fdfb13afb613045ea1eb4a5c815a74a3bde4",
+      "private_size_bytes": 191,
+      "public_sha256": "37dc88ef9a0abeddbe81053a6dd8fdfb13afb613045ea1eb4a5c815a74a3bde4",
+      "public_size_bytes": 191
+    },
+    {
+      "path": "candidate/.pytest_cache/README.md",
+      "mode": "byte_exact",
+      "private_sha256": "73fd6fccdd802c419a6b2d983d6c3173b7da97558ac4b589edec2dfe443db9ad",
+      "private_size_bytes": 302,
+      "public_sha256": "73fd6fccdd802c419a6b2d983d6c3173b7da97558ac4b589edec2dfe443db9ad",
+      "public_size_bytes": 302
+    },
+    {
+      "path": "candidate/.pytest_cache/v/cache/nodeids",
+      "mode": "byte_exact",
+      "private_sha256": "10da7cbb102e1ddb84cae8aa713c099f99741a02a2b8957a17b6d0b4f9870c95",
+      "private_size_bytes": 2964,
+      "public_sha256": "10da7cbb102e1ddb84cae8aa713c099f99741a02a2b8957a17b6d0b4f9870c95",
+      "public_size_bytes": 2964
+    },
+    {
+      "path": "candidate/benchmarks/bench_autotuner_accuracy.py",
+      "mode": "byte_exact",
+      "private_sha256": "9f6f8db43d5b584fa07852e42c640f4c22a2ac8b535519bde637858841142efe",
+      "private_size_bytes": 38073,
+      "public_sha256": "9f6f8db43d5b584fa07852e42c640f4c22a2ac8b535519bde637858841142efe",
+      "public_size_bytes": 38073
+    },
+    {
+      "path": "candidate/run_cuda_tests.py",
+      "mode": "byte_exact",
+      "private_sha256": "eb1367c3d2d14f7292016f0abdba29ae887c38f764a8b775a2645c51d742a87f",
+      "private_size_bytes": 4146,
+      "public_sha256": "eb1367c3d2d14f7292016f0abdba29ae887c38f764a8b775a2645c51d742a87f",
+      "public_size_bytes": 4146
+    },
+    {
+      "path": "candidate/tests/autotuner/test_accuracy_harness.py",
+      "mode": "byte_exact",
+      "private_sha256": "8c69bce9eeae4b123992a85e9a475e352481c063856ffadb908c021a81a7463b",
+      "private_size_bytes": 17375,
+      "public_sha256": "8c69bce9eeae4b123992a85e9a475e352481c063856ffadb908c021a81a7463b",
+      "public_size_bytes": 17375
+    },
+    {
+      "path": "coordinator-launch.log",
+      "mode": "byte_exact",
+      "private_sha256": "da00514f63d12c61e6bc0a26b73ddd78d2276b553a28ae348239e2ad260d8bf1",
+      "private_size_bytes": 233,
+      "public_sha256": "da00514f63d12c61e6bc0a26b73ddd78d2276b553a28ae348239e2ad260d8bf1",
+      "public_size_bytes": 233
+    },
+    {
+      "path": "gate.bootstrap.json",
+      "mode": "derived_inventory_only",
+      "private_sha256": "2ad5a7eec5ea54f4e954bc88f9eeac24b5e1e68714bde5b75236505545fc08d3",
+      "private_size_bytes": 629430,
+      "public_sha256": "8fd15c481006a233a665aa152f81d46f61f66c9863aa12f2263c23126f2caa03",
+      "public_size_bytes": 631772,
+      "derivation": {
+        "private_file_sha256": "2ad5a7eec5ea54f4e954bc88f9eeac24b5e1e68714bde5b75236505545fc08d3",
+        "private_file_size_bytes": 629430,
+        "omitted_entries": 6,
+        "inventories": [
+          {
+            "path": "import.aot_providers[0].modules",
+            "original_count": 977,
+            "omitted_count": 1,
+            "original_inventory_sha256": "2796ed5b3c60c4707434d27ca27bd9a58b5337704b97676553d80dd1392d18c0",
+            "omitted_entry_sha256": [
+              "d463f2617aaef0af571e8c0cfd941a20b1a5f4000c7c41012f123cb455d1a7f0"
+            ]
+          },
+          {
+            "path": "import.aot_providers[1].modules",
+            "original_count": 972,
+            "omitted_count": 1,
+            "original_inventory_sha256": "5b15204e7a7b50e12756a3570ddb039862326ad3da91cdf1e3b09178f19b64b1",
+            "omitted_entry_sha256": [
+              "d463f2617aaef0af571e8c0cfd941a20b1a5f4000c7c41012f123cb455d1a7f0"
+            ]
+          },
+          {
+            "path": "import.aot_providers[2].modules",
+            "original_count": 566,
+            "omitted_count": 1,
+            "original_inventory_sha256": "9065d2ca53d92662f7c426047db80370cdd4bdd8553543eb01857fc124c0a375",
+            "omitted_entry_sha256": [
+              "d463f2617aaef0af571e8c0cfd941a20b1a5f4000c7c41012f123cb455d1a7f0"
+            ]
+          },
+          {
+            "path": "import.aot_providers[3].modules",
+            "original_count": 207,
+            "omitted_count": 1,
+            "original_inventory_sha256": "b224049c75f357f826e37b6ba2b0acffb49c029a17c477d96847824f8baadc61",
+            "omitted_entry_sha256": [
+              "d463f2617aaef0af571e8c0cfd941a20b1a5f4000c7c41012f123cb455d1a7f0"
+            ]
+          },
+          {
+            "path": "import.aot_providers[4].modules",
+            "original_count": 207,
+            "omitted_count": 1,
+            "original_inventory_sha256": "b224049c75f357f826e37b6ba2b0acffb49c029a17c477d96847824f8baadc61",
+            "omitted_entry_sha256": [
+              "d463f2617aaef0af571e8c0cfd941a20b1a5f4000c7c41012f123cb455d1a7f0"
+            ]
+          },
+          {
+            "path": "import.aot_providers[5].modules",
+            "original_count": 655,
+            "omitted_count": 1,
+            "original_inventory_sha256": "2aee368aafca5313b14b550bf7509b3c964c6e9cbe137bb7b40eb8d0fb0625b3",
+            "omitted_entry_sha256": [
+              "d463f2617aaef0af571e8c0cfd941a20b1a5f4000c7c41012f123cb455d1a7f0"
+            ]
+          }
+        ],
+        "scope": "Only prohibited inventory entries omitted; source-critical, provider/native, worker, error and timing evidence retained."
+      }
+    },
+    {
+      "path": "gate.container-id",
+      "mode": "byte_exact",
+      "private_sha256": "6b5c20a6c31a99a51cfc2c0c2412c5ae95efa6fb882e44eea49864f4e370d80c",
+      "private_size_bytes": 64,
+      "public_sha256": "6b5c20a6c31a99a51cfc2c0c2412c5ae95efa6fb882e44eea49864f4e370d80c",
+      "public_size_bytes": 64
+    },
+    {
+      "path": "gate.container.log",
+      "mode": "byte_exact",
+      "private_sha256": "1c1cd96573256732fab4cf87f093b7e99a2c2187558b22ec132685cd54ede1d7",
+      "private_size_bytes": 448,
+      "public_sha256": "1c1cd96573256732fab4cf87f093b7e99a2c2187558b22ec132685cd54ede1d7",
+      "public_size_bytes": 448
+    },
+    {
+      "path": "gate.exit-code",
+      "mode": "byte_exact",
+      "private_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "private_size_bytes": 2,
+      "public_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "public_size_bytes": 2
+    },
+    {
+      "path": "gate.json",
+      "mode": "byte_exact",
+      "private_sha256": "98aa8fc80c9ff95212e77a96d477cb866adf27e0d7cdb77531bc9db3d4037eaf",
+      "private_size_bytes": 5381,
+      "public_sha256": "98aa8fc80c9ff95212e77a96d477cb866adf27e0d7cdb77531bc9db3d4037eaf",
+      "public_size_bytes": 5381
+    },
+    {
+      "path": "gate.log",
+      "mode": "byte_exact",
+      "private_sha256": "a6506c77a5a16773c36c2539ad729bf17d52a1903dcb0ba4c11c2d0e3d7587c8",
+      "private_size_bytes": 12678,
+      "public_sha256": "a6506c77a5a16773c36c2539ad729bf17d52a1903dcb0ba4c11c2d0e3d7587c8",
+      "public_size_bytes": 12678
+    },
+    {
+      "path": "gpu-processes-after.csv",
+      "mode": "byte_exact",
+      "private_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "private_size_bytes": 0,
+      "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_size_bytes": 0
+    },
+    {
+      "path": "launcher.exit-code",
+      "mode": "byte_exact",
+      "private_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "private_size_bytes": 2,
+      "public_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "public_size_bytes": 2
+    },
+    {
+      "path": "native-artifacts/gemm-c266936a2901b659.ninja",
+      "mode": "byte_exact",
+      "private_sha256": "c266936a2901b659bb369302afab28ce6af44dbcd567b25449699a428c7e6a42",
+      "private_size_bytes": 3296,
+      "public_sha256": "c266936a2901b659bb369302afab28ce6af44dbcd567b25449699a428c7e6a42",
+      "public_size_bytes": 3296
+    },
+    {
+      "path": "native-artifacts/trtllm_utils-feee2d051c956b9f.ninja",
+      "mode": "byte_exact",
+      "private_sha256": "feee2d051c956b9f8a3c2eba733b54b42ec7bbf1814cc4f52d367bd28cf9d05b",
+      "private_size_bytes": 4427,
+      "public_sha256": "feee2d051c956b9f8a3c2eba733b54b42ec7bbf1814cc4f52d367bd28cf9d05b",
+      "public_size_bytes": 4427
+    },
+    {
+      "path": "preservation-manifest.json",
+      "mode": "byte_exact",
+      "private_sha256": "70e54708a10a506390cb8b8c1c03d678c309fb43f3cca58f59644dda065d9cb9",
+      "private_size_bytes": 4551,
+      "public_sha256": "70e54708a10a506390cb8b8c1c03d678c309fb43f3cca58f59644dda065d9cb9",
+      "public_size_bytes": 4551
+    }
+  ],
+  "excluded_private_files": [
+    {
+      "path": "native-artifacts/gemm-20fb6a5cf2579332.so",
+      "reason": "Private native/build/source material; identities remain in bootstrap evidence.",
+      "type": "file",
+      "size_bytes": 603248,
+      "sha256": "20fb6a5cf2579332d784585caa9785f46a7a8f7306040dfe30b3acc76b764f9d"
+    },
+    {
+      "path": "native-artifacts/trtllm_utils-dbd03ad0cc81c053.so",
+      "reason": "Private native/build/source material; identities remain in bootstrap evidence.",
+      "type": "file",
+      "size_bytes": 186624,
+      "sha256": "dbd03ad0cc81c05380760ceb98eb04a4cf11d378b1e2ed39d616d8919d69e966"
+    }
+  ],
+  "scope": "Worker JSON, traces, timing/error records and unaffected evidence are byte-exact. Only explicitly audited offending bootstrap import-inventory entries are omitted. Private tensor/native-build/source files remain in the preserved private archive; provider hashes and compile evidence remain public."
+}

@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "status": "success",
+  "archive_sha256": "0c18bddef2b0ad99da6b070f1bb9f68a253120ea824f8cf03357446c09ecf33a",
+  "members": [
+    {
+      "path": "bootstrap/bootstrap-controls.json",
+      "size_bytes": 1712,
+      "sha256": "5b09f8f7af531d5a6333fea9fe36ad3b4f686ca5484d83972b8bc33f90f5e3fb"
+    },
+    {
+      "path": "bootstrap/check_bootstrap_cpu.py",
+      "size_bytes": 5936,
+      "sha256": "e6b7c9151ace687711bf9da7d3d78014439e65bdc908ad94cbc3f9fd42a119ac"
+    },
+    {
+      "path": "cache-digest/check_regression.py",
+      "size_bytes": 5458,
+      "sha256": "45b3a85003c86366519f37f79d7048db39f2dcd6a2363deba046e3575f25f963"
+    },
+    {
+      "path": "cache-digest/frozen_worker.py",
+      "size_bytes": 56159,
+      "sha256": "3adf2314775574bc9f0f2c4a4b2aaaab8ed8f178f9949eb82070d912a45f95ab"
+    },
+    {
+      "path": "cache-digest/green/proof-4.json",
+      "size_bytes": 27397,
+      "sha256": "0fe19284b131f899568296301236020d07e225d53206d4b2ed68ffaeadaf4d8c"
+    },
+    {
+      "path": "cache-digest/prove_populated_cache.py",
+      "size_bytes": 7921,
+      "sha256": "cd1c4e241dc265c7e1df795de8dd4e1df63b91be58b888d9d4524d0b66c06d80"
+    },
+    {
+      "path": "cache-digest/red/proof-4.json",
+      "size_bytes": 27118,
+      "sha256": "862e20b5c2f227a372b5ab9190f23bf9154f60aba44bcc54b86da46db67bbd26"
+    },
+    {
+      "path": "cache-digest/regression-controls.json",
+      "size_bytes": 3601,
+      "sha256": "1c3ecc8e6ca2509c4cb27dd170c8fe9a9d21bda8dac46dd57a76dfafd9d78f30"
+    },
+    {
+      "path": "worker/check_worker_cpu.py",
+      "size_bytes": 13260,
+      "sha256": "39d4b8584896fb3cfc92d6a35d6a927c74133d5685f9eda03aa94938cdd62767"
+    },
+    {
+      "path": "worker/cpu-controls.json",
+      "size_bytes": 4215,
+      "sha256": "4efaf75563671697bcc7348b9943f4a453bdeb955c4c7b22e14f4557a6236215"
+    }
+  ],
+  "worker_controls": 84,
+  "bootstrap_controls": 22,
+  "populated_cache_regression_controls": 34,
+  "worker_sha256": "979e28aeb3248b27cb27df21b98cf274442c0e6b92c4df3444c48f7214ce90ba",
+  "original_worker_sha256": "3adf2314775574bc9f0f2c4a4b2aaaab8ed8f178f9949eb82070d912a45f95ab",
+  "scope": "Existing84 worker controls re-pass after the digest-only correction.22 bootstrap controls remain unchanged.34 exact-current populated-cache CPU controls reproduce the old repr-order false positive, show new order-invariant preservation, reject real state mutations, and preserve per-field diagnostics before raising. Native runners/profiling are controlled CPU stand-ins with original failed admission tactic/time rows. No new GPU result is claimed. Original attempt01 exact postguard fields were unavailable, so its cause is a strongly supported mechanism inference, not a directly reconstructed GPU state change. Scripts retain explicit local CPU-loader/fixture/failed-admission prerequisites.",
+  "prohibited_byte_scan": {
+    "pattern_hex": "766c6c6d",
+    "all_decompressed_members_safe": true
+  },
+  "pycache_included": false
+}

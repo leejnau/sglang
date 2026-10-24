@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "status": "ready_for_separate_frozen_admission_revision",
+  "source_sha256": {
+    "old_worker": "3adf2314775574bc9f0f2c4a4b2aaaab8ed8f178f9949eb82070d912a45f95ab",
+    "new_worker": "979e28aeb3248b27cb27df21b98cf274442c0e6b92c4df3444c48f7214ce90ba",
+    "analyzer": "321bd9d17d5f1cacc6a31b49b5a4173f34968ed47d54b9fe358f6b3540274e58",
+    "schedule": "cca9dd435bd9c47192d4193153f94c801acb265ecc75bee86c4542482824da0d",
+    "diagnosis_script": "cd1c4e241dc265c7e1df795de8dd4e1df63b91be58b888d9d4524d0b66c06d80",
+    "populated_cpu_proof": "18603a288adc202312681cfeb897faa80c0eb97bfc47362d60fb1ebd788437fe",
+    "analyzer_compatibility_controls": "3e5c6efb4fea3451296806212e7ddb46d06c34c3c1115456adb49e5f0696f0fc"
+  },
+  "minimal_change": {
+    "changed_Experiment_methods": [
+      "startup",
+      "cache_state_sha",
+      "capture_controls",
+      "final_checks"
+    ],
+    "added_or_removed_methods": false,
+    "tuner_state_field_set_unchanged": true,
+    "restoration_profiling_capture_timing_native_acceptance_methods_unchanged": true,
+    "schedule_unchanged": true
+  },
+  "canonicalization_review": {
+    "recursive_dict_key_and_value_encoding": true,
+    "recursive_set_frozenset_order_invariance": true,
+    "list_tuple_order_and_type_retained": true,
+    "dataclass_type_and_fields_retained": true,
+    "atom_type_and_repr_retained": true,
+    "scope": "Within-process fixed-source cache structures; not cross-worker identity or a universal serializer."
+  },
+  "cpu_evidence": {
+    "actual_current_cache_retirement_context_methods": true,
+    "actual_failed_GPU_profile_tactics_and_times_reused": true,
+    "profile_rows": 81,
+    "default_and_explicit_scopes_semantically_unchanged": true,
+    "old_repr_order_difference_localized": "_excluded_file_keys",
+    "new_digest_stable": true,
+    "negative_controls": [
+      "winner tactic replacement",
+      "winner deletion",
+      "exclusion addition",
+      "dirty sequence increment"
+    ],
+    "failure_diagnostics_emitted_before_raise": true,
+    "controlled_boundaries": "Native runner and profiler use CPU stand-ins; GPU import leaves use the disclosed loader. This proves a cache/checker mechanism, not the unrecorded exact historical GPU failure state."
+  },
+  "analyzer_compatibility": {
+    "unchanged_source": true,
+    "controls_passed": 58,
+    "source_worker_SHA_binding": "Analyzer binds the actual worker hash to checkout and requires committed execution source in real runs; CPU controls adapt only historical Git lookup.",
+    "existing_whole_state_equality_gate_preserved": true,
+    "new_per_field_diagnostics": "Extra raw evidence; existing analyzer does not separately validate the new maps."
+  },
+  "historical_attempt01": {
+    "status": "unsuccessful admission",
+    "timing_workers_completed": 0,
+    "cause": "Inferred matching harness fingerprint defect; failed GPU JSON did not record actual failing digest/per-field differences. No production tuner defect established.",
+    "preserve_without_relabeling": true
+  },
+  "next_boundary": "Freeze a distinct reviewed source revision before any new GPU admission. Re-run the complete four-cell admission and the unchanged fixed cohort gates; retain attempt01 separately. No timing estimate or factor conclusion exists yet."
+}

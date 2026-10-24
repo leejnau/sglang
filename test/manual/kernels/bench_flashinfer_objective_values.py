@@ -691,7 +691,9 @@ class Experiment:
         )
         self.cache_sha = sha(self.args.cache)
         self.memory_sha = self.cache_state_sha()
+        self.memory_fields = dict(self.cache_state_field_sha256)
         self.result["startup"]["cache_state_sha256"] = self.memory_sha
+        self.result["startup"]["cache_state_field_sha256"] = self.memory_fields
         self.startup_attempts = self.profile_attempts
         self.assert_bare()
 
@@ -707,9 +709,9 @@ class Experiment:
         )
 
     def cache_state_sha(self):
-        # These are selection/persistence maps and ancillary invalidation/log
-        # state, not lookup counters or pure configuration memoization. The
-        # digest is meaningful only inside this process, never across workers.
+        # Canonicalize every nested container; deepcopy/restore may change set
+        # or dictionary iteration order while preserving exactly equal values.
+        # Leaf representations/identities are meaningful only in this process.
         names = (
             "profiling_cache",
             "_winner_partitions",
@@ -727,18 +729,51 @@ class Experiment:
             "_dirty",
             "_dirty_seq",
         )
-        rows = []
-        for name in names:
-            value = getattr(self.tuner, name)
+
+        def canonical(value):
+            if dataclasses.is_dataclass(value) and not isinstance(value, type):
+                return [
+                    "dataclass",
+                    type(value).__module__ + "." + type(value).__qualname__,
+                    [
+                        [field.name, canonical(getattr(value, field.name))]
+                        for field in dataclasses.fields(value)
+                    ],
+                ]
             if isinstance(value, dict):
-                encoded = sorted((repr(key), repr(item)) for key, item in value.items())
-            elif isinstance(value, set):
-                encoded = sorted(repr(item) for item in value)
-            else:
-                encoded = repr(value)
-            rows.append((name, encoded))
+                rows = [
+                    [canonical(key), canonical(item)] for key, item in value.items()
+                ]
+                return [
+                    "dict",
+                    sorted(rows, key=lambda row: json.dumps(row[0], sort_keys=True)),
+                ]
+            if isinstance(value, (set, frozenset)):
+                return [
+                    type(value).__name__,
+                    sorted(
+                        (canonical(item) for item in value),
+                        key=lambda item: json.dumps(item, sort_keys=True),
+                    ),
+                ]
+            if isinstance(value, (tuple, list)):
+                return [type(value).__name__, [canonical(item) for item in value]]
+            return [
+                "atom",
+                type(value).__module__ + "." + type(value).__qualname__,
+                repr(value),
+            ]
+
+        fields = {name: canonical(getattr(self.tuner, name)) for name in names}
+        self.cache_state_field_sha256 = {
+            name: hashlib.sha256(
+                json.dumps(value, separators=(",", ":")).encode()
+            ).hexdigest()
+            for name, value in fields.items()
+        }
+        payload = canonical({name: getattr(self.tuner, name) for name in names})
         return hashlib.sha256(
-            json.dumps(rows, separators=(",", ":")).encode()
+            json.dumps(payload, separators=(",", ":")).encode()
         ).hexdigest()
 
     def choose_recorder(self, expected, tier, label, saved):
@@ -971,6 +1006,9 @@ class Experiment:
 
     def capture_controls(self):
         self.result["pre_capture_cache_state_sha256"] = self.cache_state_sha()
+        self.result["pre_capture_cache_state_field_sha256"] = dict(
+            self.cache_state_field_sha256
+        )
         require(
             self.result["pre_capture_cache_state_sha256"] == self.memory_sha,
             "winner state changed before capture",
@@ -1237,6 +1275,20 @@ class Experiment:
             "serving operands or incidental cache bytes changed",
         )
         memory_sha = self.cache_state_sha()
+        self.result.setdefault("cache_state_guard_checks", []).append(
+            {
+                "stage": prefix,
+                "expected_sha256": self.memory_sha,
+                "actual_sha256": memory_sha,
+                "expected_field_sha256": self.memory_fields,
+                "actual_field_sha256": dict(self.cache_state_field_sha256),
+                "changed_fields": [
+                    name
+                    for name in self.memory_fields
+                    if self.memory_fields[name] != self.cache_state_field_sha256[name]
+                ],
+            }
+        )
         require(
             memory_sha == self.memory_sha,
             "live selection/cache state changed after startup",

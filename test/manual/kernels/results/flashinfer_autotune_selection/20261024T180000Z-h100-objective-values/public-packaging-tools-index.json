@@ -1,0 +1,21 @@
+{
+  "files": [
+    {
+      "path": "package_results.py",
+      "sha256": "7324863cb8598251d977dfdb71102621562ee828deb0ab50fdc1ad1cd97bd33c",
+      "size_bytes": 13991
+    },
+    {
+      "path": "check_packager.py",
+      "sha256": "0588bfcf655942fbbc7764704a7959c0535c99193fc38cb678985893cc726916",
+      "size_bytes": 6596
+    },
+    {
+      "path": "packaging-controls.json",
+      "sha256": "3a42a9c74ffa48e7c71db9ba3ce641effd5cb6ec020c7207de1453e638b324ce",
+      "size_bytes": 1909
+    }
+  ],
+  "archive_sha256": "d99869728a6894a6351ee8ac38c2bde07371806a7893fc6ba7a281f8f17fdb3f",
+  "scope": "25 CPU controls pass; full private archives and public member manifests are verified separately."
+}
