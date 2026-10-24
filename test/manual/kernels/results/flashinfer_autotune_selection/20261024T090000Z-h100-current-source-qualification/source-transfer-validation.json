@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "archive_sha256": "209b2de9e76c358b94407202a4670613055e963200184e716b50eb67aad71c91",
+  "archive_bytes": 161190591,
+  "source_members_verified": 28813,
+  "expected_source_members": 28813,
+  "unexpected_source_members": 0,
+  "missing_source_members": 0,
+  "final_helper_sha256": "b8d0f6bbc85eaca0e3ef1419ab99a97d5340c96b3da382cba81d7896768287ba",
+  "final_stage_summary_sha256": "b69166d020abc5bc00bbb5e075c7e8bf25c12f63e1ca4bb41728b598664404f1",
+  "extra_metadata_and_patch_members": 11,
+  "no_GPU_import_native_compile_or_CUDA_qualification_executed": true
+}

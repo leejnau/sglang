@@ -1,0 +1,91 @@
+{
+  "archive_member_count": 55,
+  "components": {
+    "activation_values_design": {
+      "boundary": "Preserves nine profiles, runtime bucket256, keys and random draws while replacing only exact M144 activation values through the existing initializer contract. Physical GPU preparation history and performance remain unqualified.",
+      "cpu_controls": 216,
+      "status": "success"
+    },
+    "captured_fixture_adapter": {
+      "boundary": "Actual official capture hook and real tuner paths on CPU with disclosed import/kernel stand-ins. Separate integration patch is proposed; GPU execution remains a distinct gate.",
+      "cpu_controls": 38,
+      "original_adapter_refresh_enabled": false,
+      "status": "success"
+    },
+    "configured_timer_guard": {
+      "baseline": {
+        "accepted": 16,
+        "cases": 20,
+        "rejected": 4,
+        "result_sha256": "bb7c6c04d626d153e833b3bd82944f8b118f5bcbbd3d9a8376c3a1ec7eece751"
+      },
+      "candidate": {
+        "accepted": 10,
+        "cases": 20,
+        "rejected": 10,
+        "result_sha256": "5fbb88270082f58a36a6fae38af615dcd77e3791b6cb7b251b2018b3e50ff766"
+      },
+      "limits": [
+        "Dynamic CUPTI availability/infra fallback",
+        "Delegated protocol coordination",
+        "Private globaltimer settings",
+        "GPU/NCCL/model qualification",
+        "Configured-timer agreement is deliberately stricter than possible actual-path equivalence under some cold-L2/individual/fallback conditions.",
+        "The extra helper is only reached in the existing tuning plan gates; ordinary non-tuning choose_one returns before them. No single-rank steady-state performance claim is needed.",
+        "Current SGLang matching unspecified policies were already accepted; this is future distributed-policy defense, not a demonstrated current serving regression fix.",
+        "No disk roundtrip was executed here. Persistence preservation is supported by unchanged policy values, identities, serializer/loader AST and cache-module bytes."
+      ],
+      "new_coherent_rejections": 6,
+      "patch_sha256": "b9f96954f1db4c3b2f034dd29673a489202f49343d6a2020f616d74e341c6212",
+      "retained_accepted_cases": 10,
+      "status": "Scratch candidate with actual two-process CPU Gloo agreement."
+    },
+    "fixture_validation_callback": {
+      "boundary": "Optional fixture-owned output refresh after timing and before final replays. Declared floating output ownership and storage disjointness are validated before mutation; generic/in-place/integer fixtures stay unchanged.",
+      "cpu_controls": 60,
+      "cuda_regressions": "Prepared; not executed in this CPU/source preparation package.",
+      "status": "success"
+    },
+    "fp8_descriptor_port": {
+      "boundary": "Actual extracted ported Python bodies and unchanged full tuner/cache with native acceptance fixtures. CUDA build, actual decorated facade, AlgoCheck and descriptor execution are not qualified here.",
+      "changed_files": 4,
+      "cpu_controls": 36,
+      "original_diff_clean_apply": false,
+      "status": "success"
+    },
+    "no_write_proof": {
+      "before_correct_wrong_no_write": [
+        true,
+        false,
+        true
+      ],
+      "boundary": "Full unchanged harness/tuner with real CPU tensor writes; controlled GPU boundaries and times. This proves a validation gap, not an actual backend defect.",
+      "cases": 6,
+      "role_controls": 4,
+      "role_refresh_correct_wrong_no_write": [
+        true,
+        false,
+        false
+      ]
+    },
+    "routing_and_upstream_status": {
+      "recommendation": "Keep production policy changes separate. Any report-only replay-coverage integration requires a supported released dependency containing that API and actual release validation.",
+      "status": "Pinned public source review only."
+    }
+  },
+  "flashinfer_base_commit": "27c62fdf0ab1cd4014df8a15b66a975541fda83c",
+  "limits": [
+    "This package contains no new GPU measurements or serving-performance claim.",
+    "Current-source CUDA/native/adapter qualification is forthcoming in a separate batch and is not inferred from CPU admissions.",
+    "No scoped-cache production rollout, general v1 persistence migration, model matrix or distributed GPU qualification is approved by these proofs."
+  ],
+  "reproduction": {
+    "counts": "Control counts belong to their individual proofs and overlap; they are not summed as independent tests.",
+    "dependencies": "Fetch exact public upstream revisions separately. Full dependency source trees, private fixture tensors, native binaries and environment packages are intentionally omitted. Torch and NumPy versions are recorded per proof.",
+    "evidence": "Selected scripts, patches and final reports are exact original bytes. Only the explicitly derived upstream-status JSON is reconstructed from allowed public fields.",
+    "layout": "Archive paths retain the scratch-relative layout. Scripts preserve original source hashes and local defaults; use recorded source revisions/manifests and relocate paths explicitly when reproducing."
+  },
+  "schema_version": 1,
+  "scope": "Manual research evidence only. No production change, GPU execution, CI trigger, commit, push or PR was performed by this packaging task.",
+  "status": "CPU and source preparation complete; current-source CUDA qualification is separate."
+}

@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "launcher_sha256": "ba45937f135a22f56a0a9b05a622ed2d566d67be07facff47cf66f3eee151b2b",
+  "checks": [
+    {
+      "name": "existing_attempt_rejected_without_overwrite_or_new_container",
+      "passed": true
+    },
+    {
+      "name": "none",
+      "passed": true,
+      "containers_invoked": 4,
+      "exit_code": 0
+    },
+    {
+      "name": "callback_exit",
+      "passed": true,
+      "containers_invoked": 2,
+      "exit_code": 9
+    },
+    {
+      "name": "native_json",
+      "passed": true,
+      "containers_invoked": 1,
+      "exit_code": 1
+    },
+    {
+      "name": "synth_endpoint",
+      "passed": true,
+      "containers_invoked": 4,
+      "exit_code": 1
+    }
+  ],
+  "limits": [
+    "CPU orchestration controls only: Docker, Git, GPU metadata and container payloads are explicit fixtures.",
+    "No container, GPU, source import, native compile or real numerical worker executed.",
+    "Real immutable fixture files and pinned source/manifest bytes were used for host hash/layout checks."
+  ]
+}

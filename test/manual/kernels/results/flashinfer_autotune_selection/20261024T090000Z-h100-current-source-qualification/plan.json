@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "batch": "20261024T090000Z-h100-current-source-qualification",
+  "objective": "Qualify the pinned current-source FP8 native provider, original decorated SGLang facade and fixture output-refresh contract before proposing another measurement comparison.",
+  "scope": "Bounded correctness and API/cache setup; not a performance experiment or production adoption.",
+  "source": {
+    "flashinfer_commit": "27c62fdf0ab1cd4014df8a15b66a975541fda83c",
+    "variant": "FP8-only descriptor runtime port plus optional benchmark validation callback",
+    "port_patch_sha256": "e5c0a130690cd9fe9f1204b11368433430345f066ee8dc3bd376cf49c7ef4d64",
+    "harness_patch_sha256": "12947a8150ca1f09fb8294279027b8aa5d4d402de6f5eaa6022e6981e642b31c",
+    "private_source_archive_sha256": "209b2de9e76c358b94407202a4670613055e963200184e716b50eb67aad71c91",
+    "private_source_archive_bytes": 161190591,
+    "source_runtime_metadata": "No fabricated build metadata: official fallback0.0.0+unknown/unknown, exact source identity established through pinned exhaustive manifests.",
+    "new_tuner_cache_timer_unchanged": true,
+    "sglang": "Frozen research branch commit recorded by launcher; actual fixture-source hashes verified against unchanged SGLang facade and quantizer."
+  },
+  "environment": {
+    "image": "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
+    "gpu": "NVIDIA H100 NVL",
+    "uuid": "240958a2-e8e1-3bac-b767-365c9e0b97bd",
+    "driver": "580.159.04",
+    "power_limit_watts": 310,
+    "torch": "2.14.1+cu130",
+    "exclusive": true,
+    "network_in_container": "none",
+    "native_build": "Explicit current JitSpec build/load for GEMM and delay helper; one-time binding, installed AOT providers not used for those two modules.",
+    "shared_build_cache": "New unique owned directory shared by four fresh containers; separate HOME per container, no managed tuning persistence."
+  },
+  "fixture": {
+    "shape_m_n_k": [
+      144,
+      4096,
+      1024
+    ],
+    "tensor_file_sha256": "c30aa761eba827bb0b4eb6de0e99d9b8dda8243dd16d00146f9718d2abb05e8b",
+    "manifest_sha256": "e13a86fab5db5796b22d8dab0f84080b8057b036ca7aef2c7be8832e76505bf1",
+    "numerical_reference": "Actual static-quantized activation/weights dequantized into FP32 matmul with TF32 disabled; rtol0.02, atol0.125; exact zero on changed-zero-input controls."
+  },
+  "gates": [
+    {
+      "name": "native-facade",
+      "timeout_seconds": 900,
+      "checks": [
+        "Exact source/import/package/provider inventory and build artifacts.",
+        "Actual original decorated BMM and SGLang static FP8 facade.",
+        "One control descriptor accepted by actual native implementation at M144 and M129; same bucket256 enumeration and cache key.",
+        "Default true-miss and explicit real-memory-hit eager/graph numerics.",
+        "Original retained graphs, poisoned outputs, changed-zero/restored inputs, no profiling."
+      ],
+      "selection": "First native-accepted shared descriptor as functionality control; no fastest/natural-winner claim."
+    },
+    {
+      "name": "callback-controls",
+      "timeout_seconds": 300,
+      "checks": [
+        "Actual current harness/tuner plus actual CUDA capture/replay and tensor writes, controlled profile durations.",
+        "Correct/wrong/no-write cases with and without callback; four unsafe-role CPU checks.",
+        "Only callback-covered no-write case must reject; preserve legacy behavior without callback."
+      ]
+    },
+    {
+      "name": "retained-auto",
+      "timeout_seconds": 300,
+      "checks": [
+        "Official module:factory path, one fresh process/seed19, actual cache hit and output refresh.",
+        "One exactM144 profile; runtime normalized keyM144 while runner enumeration can remain256."
+      ],
+      "measurement": "Two short validation rounds only, not selection/performance inference."
+    },
+    {
+      "name": "synthesized-auto",
+      "timeout_seconds": 300,
+      "checks": [
+        "Official module:factory path, one fresh process/seed19, actual cache hit and output refresh.",
+        "Original nine actualMs1,2,4,8,16,32,64,128,144; runtime normalized key256."
+      ],
+      "measurement": "Two short validation rounds only, not selection/performance inference."
+    }
+  ],
+  "shared_smoke_settings": {
+    "policy": "auto; no measurement policy/coldL2 override",
+    "warmup": 3,
+    "tuner_repeat": 10,
+    "validation_replays": 16,
+    "oracle_rounds": 2,
+    "prequeue_cycles": 10000000
+  },
+  "stopping": {
+    "overall_launcher_seconds": 1800,
+    "allocation_minutes": 45,
+    "workers": 4,
+    "stop_on_any_gate_failure": true,
+    "automatic_retry": false,
+    "all_attempts_preserved": true,
+    "release_after_preservation": true
+  },
+  "limits": [
+    "No claim this is stock released FlashInfer; patches remain unmerged research changes.",
+    "Native acceptance proves the native-worker control descriptor only. The two setup smokes do not observe actual selected-descriptor acceptance and may exercise fallback. Each future measured selected descriptor needs an outside-timer acceptance check.",
+    "Retained versus synthesized fixture modes change profile domain and keys; they are not an activation-values-only contrast.",
+    "BMM harness timings omit SGLang quantization, allocation and lookup; no model-serving or throughput claim.",
+    "No fresh-process persistence, scoped-cache prototype, distributed GPU, BF16, EP/MegaMoE or full-model qualification.",
+    "Do not launch objective/input performance matrix automatically from passing these gates."
+  ],
+  "tools_archive": {
+    "sha256": "a4f47b4189f89313acb93595695823bae5050a768557df604704db4aedaad048",
+    "members": [
+      {
+        "path": "manifests/candidate-manifest.json",
+        "sha256": "7c68529cfcb89ab47f1cae5f08ee3187626c0a6f2dadac3e6c4f862f42ded974",
+        "bytes": 6565
+      },
+      {
+        "path": "manifests/port-manifest.json",
+        "sha256": "1ac5a30bb27519322e067b17f796a243bcec76814925a40c703797cfdfe31f14",
+        "bytes": 4437
+      },
+      {
+        "path": "patches/fp8-current-main.patch",
+        "sha256": "e5c0a130690cd9fe9f1204b11368433430345f066ee8dc3bd376cf49c7ef4d64",
+        "bytes": 22599
+      },
+      {
+        "path": "patches/harness-only.patch",
+        "sha256": "12947a8150ca1f09fb8294279027b8aa5d4d402de6f5eaa6022e6981e642b31c",
+        "bytes": 3610
+      },
+      {
+        "path": "tools/adapter/adapter-contract.json",
+        "sha256": "65d85839c072946a19ef20a564428232502ef35b1a0d689a8759bdf14a5c4d19",
+        "bytes": 1859
+      },
+      {
+        "path": "tools/adapter/sglang_captured_fixture.py",
+        "sha256": "f0e1cedbcb79b3934cce877e3b1780c315ebf32665ec4de6803267ccce5bb413",
+        "bytes": 10385
+      },
+      {
+        "path": "tools/container_preflight.py",
+        "sha256": "b8d0f6bbc85eaca0e3ef1419ab99a97d5340c96b3da382cba81d7896768287ba",
+        "bytes": 9900
+      },
+      {
+        "path": "tools/launch_current.sh",
+        "sha256": "ba45937f135a22f56a0a9b05a622ed2d566d67be07facff47cf66f3eee151b2b",
+        "bytes": 16141
+      },
+      {
+        "path": "tools/preserve_current.py",
+        "sha256": "93acf0f49038a56024b8a1934a6a83194bc43c81b597c9bb96cae52de503a09a",
+        "bytes": 3243
+      },
+      {
+        "path": "tools/qualify_cuda.py",
+        "sha256": "994bbb8d0fbdae65dc19d97e9d787b53df598ae26813fda9531cc507d6f5c715",
+        "bytes": 27655
+      },
+      {
+        "path": "tools/run_harness.py",
+        "sha256": "f406c9786f4af2480d134dbb861e404100ea0e1e3346d76774b26593cc8a435f",
+        "bytes": 4056
+      },
+      {
+        "path": "tools/test_output_refresh.py",
+        "sha256": "e9c3e4f411c15f45f0ec0925b53630d284f24d68146a14f000561141260865a0",
+        "bytes": 9619
+      }
+    ]
+  }
+}

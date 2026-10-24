@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "status": "source_staged_no_container_import_native_build_or_GPU_qualification",
+  "base_commit": "27c62fdf0ab1cd4014df8a15b66a975541fda83c",
+  "full_source_private": true,
+  "official_archive": {
+    "sha256": "8acc9ef2ed100b420d63278e8a92c01cdd2eb9157b3bc2930d8881d95e70369e",
+    "bytes": 76064701,
+    "url": "https://codeload.github.com/flashinfer-ai/flashinfer/tar.gz/27c62fdf0ab1cd4014df8a15b66a975541fda83c"
+  },
+  "tracked_source": {
+    "blobs": 11671,
+    "bytes": 561982326,
+    "manifest_sha256": "fec08384276b12a056288725e395c4a8f56ffa7ddb3d34374dcbcdae7f91b4c1"
+  },
+  "build_dependencies": [
+    {
+      "repository": "NVIDIA/cutlass",
+      "commit": "b46b16d003484063bca4ed365e44095c4c6ed633",
+      "source_url": "https://codeload.github.com/NVIDIA/cutlass/tar.gz/b46b16d003484063bca4ed365e44095c4c6ed633",
+      "archive_bytes": 39386118,
+      "archive_sha256": "eb32d2231412541cdaefedf82827903360b07762a0c8d554ca10a59951b321d0",
+      "tree_sha256": "314434bd02fe709eecd0366ca15504aa7b34ae1f271a71645f953adbb8371556",
+      "verified_blobs": 6899,
+      "verified_bytes": 152645111,
+      "nested_gitlinks": [],
+      "manifest_sha256": "788523ddee277a5cce291590f09d42cd840ab9673cc8d57e2f36861e12f88c6d"
+    },
+    {
+      "repository": "NVIDIA/cccl",
+      "commit": "16bd510c9b712e82b0ab6cbb630d8e29ba1f7116",
+      "source_url": "https://codeload.github.com/NVIDIA/cccl/tar.gz/16bd510c9b712e82b0ab6cbb630d8e29ba1f7116",
+      "archive_bytes": 12368664,
+      "archive_sha256": "8c4a1bebc5dfefaebbd40f21460951c62403f9c1f7c52b151b99cae82a02c844",
+      "tree_sha256": "400b7902d7405a397a5a34c60184dd27c76db684646066762f2511b2b08f822a",
+      "verified_blobs": 10071,
+      "verified_bytes": 63444854,
+      "nested_gitlinks": [],
+      "manifest_sha256": "308ddb534bf9ea9fd1df54e709513a74669438c52b3691b1b38dff5502fb8b6f"
+    },
+    {
+      "repository": "gabime/spdlog",
+      "commit": "c3aed4b68373955e1cc94307683d44dca1515d2b",
+      "source_url": "https://codeload.github.com/gabime/spdlog/tar.gz/c3aed4b68373955e1cc94307683d44dca1515d2b",
+      "archive_bytes": 269972,
+      "archive_sha256": "206184e0d3be5b4ea56343dca519d38d1fdf567b59dd9913e3e959ed4c6b0f4d",
+      "tree_sha256": "ad809bef222ecd9c0f8ac015b60e56f0e56048642acc8fe0d48a85a9ddad2557",
+      "verified_blobs": 172,
+      "verified_bytes": 1155849,
+      "nested_gitlinks": [],
+      "manifest_sha256": "d61b2209a11e03cd26c449e9c1de1c7642e0714fa091130c3a81b96b24a28dd2"
+    }
+  ],
+  "not_staged": [
+    {
+      "path": "3rdparty/nixl",
+      "commit": "b20f4d0adb95f53c4a1272915ef8d86cec304584",
+      "reason": "unrelated optional EP native build; not used by FP8 GEMM provider or PYTHONPATH packaging"
+    }
+  ],
+  "candidate_manifest_sha256": "7c68529cfcb89ab47f1cae5f08ee3187626c0a6f2dadac3e6c4f862f42ded974",
+  "variants": [
+    {
+      "name": "fp8-runtime",
+      "patches": [
+        {
+          "path": "/private/tmp/fi-next-steps-20261024/descriptor-port-27c62/fp8-current-main.patch",
+          "sha256": "e5c0a130690cd9fe9f1204b11368433430345f066ee8dc3bd376cf49c7ef4d64"
+        }
+      ],
+      "changed_files": [
+        {
+          "path": "csrc/bmm_fp8.cu",
+          "baseline_sha256": "f16abfac20f7d2d976b1ae0626f0da360f60f99cf619fec1bae910addf0b2fa1",
+          "candidate_sha256": "ac00c1cdba76e653ead25a77d2b1ca9d07f35a89f65221334fbbab1a695a4709",
+          "size": 7955
+        },
+        {
+          "path": "csrc/flashinfer_gemm_binding.cu",
+          "baseline_sha256": "73f3b51058dbd25cdc94a61c15aa3223a7a2b7f9c62a2584b239f32216a56e60",
+          "candidate_sha256": "4cfdde4e2d7928ffa442d4a386c8f545de61d68820a6d01e4bf78c1b4a490e8e",
+          "size": 1826
+        },
+        {
+          "path": "flashinfer/gemm/gemm_base.py",
+          "baseline_sha256": "f32bf0348f4434fa8c47723d54e2daebc52b23f92711e278850011a66ba6c68f",
+          "candidate_sha256": "0bba9240029a5e09f331e7a2267f7067e126d57a7a341ca535f7c9557599adca",
+          "size": 466507
+        },
+        {
+          "path": "include/flashinfer/gemm/bmm_fp8.cuh",
+          "baseline_sha256": "6f55c25e7bd0d10f02a7fe983ba41dc643ff766ef50bded82f473e41262b8b4b",
+          "candidate_sha256": "5a35da070efbc028e565721110e059c5b143d6a49697995e3c70fdae258eae72",
+          "size": 18238
+        }
+      ],
+      "expected_runtime_version": "0.0.0+unknown"
+    },
+    {
+      "name": "fp8-runtime-callback",
+      "patches": [
+        {
+          "path": "/private/tmp/fi-next-steps-20261024/descriptor-port-27c62/fp8-current-main.patch",
+          "sha256": "e5c0a130690cd9fe9f1204b11368433430345f066ee8dc3bd376cf49c7ef4d64"
+        },
+        {
+          "path": "/private/tmp/fi-next-steps-20261024/fixture-validation-callback/harness-only.patch",
+          "sha256": "12947a8150ca1f09fb8294279027b8aa5d4d402de6f5eaa6022e6981e642b31c"
+        }
+      ],
+      "changed_files": [
+        {
+          "path": "benchmarks/bench_autotuner_accuracy.py",
+          "baseline_sha256": "7947647d266ec6a837bedd8e9c87d7d4dcbb4683bb9d16fef4b2d01c3f43b0dd",
+          "candidate_sha256": "094f66306d6e6080cdb5b50915f21fb643cdb40cb82471b58e5bdce6f451ce86",
+          "size": 38036
+        },
+        {
+          "path": "csrc/bmm_fp8.cu",
+          "baseline_sha256": "f16abfac20f7d2d976b1ae0626f0da360f60f99cf619fec1bae910addf0b2fa1",
+          "candidate_sha256": "ac00c1cdba76e653ead25a77d2b1ca9d07f35a89f65221334fbbab1a695a4709",
+          "size": 7955
+        },
+        {
+          "path": "csrc/flashinfer_gemm_binding.cu",
+          "baseline_sha256": "73f3b51058dbd25cdc94a61c15aa3223a7a2b7f9c62a2584b239f32216a56e60",
+          "candidate_sha256": "4cfdde4e2d7928ffa442d4a386c8f545de61d68820a6d01e4bf78c1b4a490e8e",
+          "size": 1826
+        },
+        {
+          "path": "flashinfer/gemm/gemm_base.py",
+          "baseline_sha256": "f32bf0348f4434fa8c47723d54e2daebc52b23f92711e278850011a66ba6c68f",
+          "candidate_sha256": "0bba9240029a5e09f331e7a2267f7067e126d57a7a341ca535f7c9557599adca",
+          "size": 466507
+        },
+        {
+          "path": "include/flashinfer/gemm/bmm_fp8.cuh",
+          "baseline_sha256": "6f55c25e7bd0d10f02a7fe983ba41dc643ff766ef50bded82f473e41262b8b4b",
+          "candidate_sha256": "5a35da070efbc028e565721110e059c5b143d6a49697995e3c70fdae258eae72",
+          "size": 18238
+        }
+      ],
+      "expected_runtime_version": "0.0.0+unknown"
+    }
+  ],
+  "CPU_static_contract_checks": [
+    {
+      "variant": "fp8-runtime",
+      "source_contract_passed": true,
+      "critical_file_count": 16
+    },
+    {
+      "variant": "fp8-runtime-callback",
+      "source_contract_passed": true,
+      "critical_file_count": 17
+    }
+  ],
+  "packaging": {
+    "file": "build_backend.py",
+    "file_sha256": "54a69428da79de604d4b7d21d96cfa7574ca37c48191bcd391669af5cb28b20d",
+    "function": "_create_data_dir",
+    "function_source_sha256": "0a14b542e06e73f285f946ca26fd34004aa514399dc4b15bb93bc710efada574",
+    "execution_boundary": "exact AST function only; no module import, metadata writer, install, compiler/EP hooks or pip commands"
+  },
+  "installed_image_observation": {
+    "image": {
+      "Id": "sha256:2e152727f0a5ce999172ec48203b2b292d41b3cb370976827718870557899caa",
+      "RepoDigests": [
+        "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0"
+      ],
+      "Created": "2026-10-19T00:48:17.586753916Z",
+      "Architecture": "amd64",
+      "Os": "linux",
+      "Size": 39141723315
+    },
+    "image_record_sha256": "e725c7ec8a88be13b6a6ab7e942f08c1e21e67b5688aeb28b4d99415fd492bdc",
+    "torch": "2.14.1+cu130",
+    "cuda": "13.0",
+    "python": "3.12.15",
+    "inventory_limit": "Only observed retained worker metadata; installeddistribution inventory was not captured. No inference that current requirements are satisfied."
+  },
+  "pending_gates": [
+    "Actual pinned-container inventory and full-source module import.",
+    "Explicit current-source GEMM and trtllm_utils native build/load with ninja, compiler, ELF and linkage evidence.",
+    "Actual decorated public BMM and SGLang facade, native used-descriptor=1, numerics, poison/zero/restored graph replays."
+  ],
+  "limits": [
+    "No old 0.7.2 Python or header overlay reused.",
+    "Metadata file deliberately absent; official version fallback 0.0.0+unknown, exact commit proven separately.",
+    "Official data links are absolute and must be regenerated at the final container path by the exact official function.",
+    "No full general installation or EP build readiness claim.",
+    "Full source and exhaustive manifests remain private; publication must use only counts, hashes and relevant files."
+  ],
+  "container_preflight": {
+    "path": "container_preflight.py",
+    "sha256": "b8d0f6bbc85eaca0e3ef1419ab99a97d5340c96b3da382cba81d7896768287ba",
+    "syntax": "passed",
+    "phases": [
+      "inventory",
+      "import",
+      "build"
+    ],
+    "execution_status": "Not executed in target container. Only source and local packaging contracts checked.",
+    "native_callback": "Optional setup callback can install a forwarding native observer for correctness qualification; actual source and ELF evidence recorded before callback. No timing claim.",
+    "package_roots": [
+      "source root",
+      "flashinfer/experimental/b12x/_compat (official pyproject package-find root)"
+    ]
+  }
+}

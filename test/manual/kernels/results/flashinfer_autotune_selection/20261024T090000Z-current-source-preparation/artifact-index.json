@@ -1,0 +1,21 @@
+{
+  "files": {
+    "preparation-evidence-member-index.json": {
+      "sha256": "91120048a098149738541301d93ee16cd376e78c04063af6c7564827adaec28c",
+      "size_bytes": 9843
+    },
+    "preparation-evidence.tar.gz": {
+      "sha256": "2fb80d3073eccae25fdfde347fc36e20f0e35ddb58f8a7a33a7791aed3d5d8e3",
+      "size_bytes": 208963
+    },
+    "status.json": {
+      "sha256": "152b05b20a186e055329c2834d8f680679aaa058e03f7ffc5dfec6b4875b3934",
+      "size_bytes": 5347
+    },
+    "validation.json": {
+      "sha256": "0abb3e81e2c66510aec7fbdcb18f6d2bc9288c32b286abff24a13c62f83b44dc",
+      "size_bytes": 752
+    }
+  },
+  "schema_version": 1
+}

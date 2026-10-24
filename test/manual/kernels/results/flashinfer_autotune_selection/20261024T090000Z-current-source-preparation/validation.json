@@ -1,0 +1,10 @@
+{
+  "archive_safety": "Only regular .py/.json/.patch members. No model/native binaries or raw dependency source trees.",
+  "member_bytes": "All selected original members are byte-identical; derived upstream metadata is separately identified.",
+  "note": "CPU proof counts and limits are taken from the original retained reports, not from packaging assertions.",
+  "package_source_sha256": "cff0cb7a22f61be25a702e76c13b2666ebca1ac6d1ecf90d2a60bc75379a3eb7",
+  "proof_source_and_timer_result_hash_checks": 17,
+  "scope": "Publication packaging and existing CPU/source evidence; no proof rerun or GPU execution.",
+  "status": "success",
+  "token_scan": "Case-insensitive required byte-pattern check of every output file and decompressed member passes."
+}

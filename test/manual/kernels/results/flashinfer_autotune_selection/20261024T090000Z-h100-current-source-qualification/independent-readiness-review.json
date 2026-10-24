@@ -1,0 +1,175 @@
+{
+  "status": "independent_source_review_complete_conditional_GO_for_bounded_correctness_qualification_not_launch_ready",
+  "review_scope": "Read-only review of staged source, port/adapter/refresh contracts and completed measurement audits. No production or benchmark worker edits, CUDA execution, allocation, CI, PR or external message.",
+  "decision": {
+    "right_next_gate": true,
+    "reason": "Moving from the qualified old release overlay to current27c62 changes tuner/cache/timing/dependency behavior, and the two proposed research patches have only CPU contract evidence. Native provider acceptance and decorated public-path correctness should be established before candidate-quality experiments on that combined stack.",
+    "challenge": "The descriptor port is not a prerequisite for generic v2 API adoption or for the fixture hook. It is justified here by the narrower research requirement for stable explicit candidate identity across bucketedM and continuity with prior descriptor studies. Do not treat this as a production migration or a duplicate upstream feature proposal.",
+    "qualified_name": "Pinned FlashInfer27c62 plus FP8-only descriptor port plus fixture-validation callback; never describe this combined source as unmodified current upstream.",
+    "smallest_success": "Establish one bounded H100/fixture/provider correctness target and stop. No repeated performance cohort, extra model, broad backend matrix or speedup threshold is needed."
+  },
+  "source_status": {
+    "upstream_commit": "27c62fdf0ab1cd4014df8a15b66a975541fda83c",
+    "complete_archive": "The staging manifest reports all11671 tracked blobs verified; exact pinned dependency materialization and final container import/build inventory remain a separate staging gate.",
+    "FP8_port": {
+      "patch_sha256": "e5c0a130690cd9fe9f1204b11368433430345f066ee8dc3bd376cf49c7ef4d64",
+      "changed_files": 4,
+      "current_tuner_unchanged": true,
+      "CPU_contract_checks": 36,
+      "critical_candidate_file_hashes_independently_rechecked": 4,
+      "remaining": "No actual CUDA compile, cuBLASLt AlgoCheck, complete decorated public-call admission or opaque-descriptor validity has executed."
+    },
+    "refresh": {
+      "patch_sha256": "7c005b1f1b3f2c07ce4d1d22418109059db2b4330db866f0dd4c2bf06d58ccb1",
+      "harness_sha256": "094f66306d6e6080cdb5b50915f21fb643cdb40cb82471b58e5bdce6f451ce86",
+      "CPU_contract_checks": 60,
+      "remaining": "The three focused CUDA correct/wrong/no-write cases and actual fixture-owned CUDA output refresh have not executed."
+    },
+    "adapter": {
+      "original_sha256": "f7aa8cddddb5108f964c77337bd196b84b141fbc8e7b03ec54083693f5633c51",
+      "CPU_controls": 38,
+      "remaining": "Original contract intentionally pins stock gemm and original harness. It must reject the port/refresh until a reviewed combined contract is created; mechanically applying the callback adapter patch alone does not update the ported gemm hash."
+    },
+    "metadata": "A source archive lacking generated _build_meta may truthfully identify as0.0.0+unknown. Pin/hash the actual commit/tree instead of inventing package metadata or provider stubs."
+  },
+  "minimal_CUDA_gate": [
+    {
+      "order": 1,
+      "name": "Exact combined source and loaded provider",
+      "action": "Freeze complete27c62 source plus only the declared FP8 patch and callback patch, revised adapter contract, dependency gitlinks, fixture bytes, pinned container and helper scripts. Verify actual imports from that source. Explicitly build and load gen_gemm_module into an isolated workspace and bind its native module once before invoking the unmodified decorated public facade. Build/load or otherwise qualify the exact current timing helper used by profiling; retain its identity separately.",
+      "evidence": [
+        "Loaded Python file paths and source hashes including unchanged tuner/cache/_graph_timing/JIT source.",
+        "Actual H100 architecture flags, compiler versions, all3GEMM translation units and relevant headers, build.ninja commands, resulting ELF path/hash and required exports.",
+        "Pinned Torch/CUDA/driver/GPUUUID/fixture and dependency versions. No substituted old AOT provider or runtime shim."
+      ],
+      "scope_limit": "Candidate-only build is sufficient for this correctness qualification. A comparative baseline build or full throughput benchmark is unnecessary. Because the changed header is shared, a narrow BF16 include/module compile compatibility check is useful; no BF16 numerical matrix or descriptor feature claim is required."
+    },
+    {
+      "order": 2,
+      "name": "Actual facade/default/explicit/native acceptance",
+      "action": "Use the frozen actualM144/N4096/K1024 fixture through real apply_fp8_linear_bmm_flashinfer and the actual decorated flashinfer.bmm_fp8 backend=cublas path. Verify static-quantized activation bytes against the independent fixture reference, sole expected runner and original read/scale/layout roles. Exercise true default and at least one actual accepted explicit descriptor using genuine tuner keys, not a mocked choose_one result.",
+      "evidence": [
+        "Descriptor is eight unsigned64words and roundtrips through the actual runner byte helper.",
+        "In a fresh native problem cache, explicit binding returns used_descriptor=1 outside all timing; exact verified native source obtains this from successful AlgoCheck state/workspace validation. Numerical agreement with used_descriptor=0 is insufficient.",
+        "Default and explicit eager outputs agree with independent actual-quantizedFP32 reference using frozen tolerances.",
+        "Capture/replay both real helper paths with actual captured-output ownership. Poison output outside capture/timing; changed/zero/restored BF16 input must alter/zero/restore the output on replay with no additional profiling.",
+        "Record measuredM144, normalized/cacheM256 and native enumerationM256 independently for the descriptor provider. Add the tiny same-bucketM129 positive check using the same accepted descriptor when asserting bucket-stable execution."
+      ],
+      "scope_limit": "Forced explicit/default scopes are functionality controls and cannot be reported as natural winner or performance evidence. If no descriptor is valid for the target, stop full descriptor qualification rather than accepting heuristic fallback."
+    },
+    {
+      "order": 3,
+      "name": "Refresh catches actual CUDA wrong/no-write graphs",
+      "action": "Run the three focused patched-harness CUDA regression cases: correct writer passes, wrong writer fails numerics, no-write selected graph fails after refresh. A short same-source no-callback no-write invocation may preserve the expected false-pass reproduction without another build. Already passing CPU alias/integer/strided-role checks need not become a broad GPU matrix.",
+      "evidence": [
+        "The actual patched main propagates fixture.prepare_validation and reports fixture_callback; original no-callback behavior is explicitly unavailable coverage.",
+        "Callback validates declared floating output4, ptr/numel/layout/dtype/device and complete-storage disjointness from reads0..3 and scratch5 before mutation.",
+        "Output-only NaN fill occurs after all sampled windows and immediately before each independent validation replay; it is absent from captures and timed graph execution.",
+        "Wrong/no-write failures are expected assertion evidence, not failed qualification jobs being silently excluded."
+      ],
+      "scope_limit": "This validates the declared six-role FP8 contract, not arbitrary callbacks, integer/in-place operators or generic output trees."
+    },
+    {
+      "order": 4,
+      "name": "Official retained and original-domain setup checks",
+      "action": "Run one retained/auto and one synthesized/auto fresh process, fixed seed19 and immutable fixture, with one official trial each and no other policy/input factors. Retain source/profile/candidate/cache/output evidence; accept either a naturally selected default or descriptor after genuine cache-hit validation.",
+      "evidence": [
+        "Retained mode reaches exactly one choose_one operation through the actual decorated facade, preserves original captured tensor allocations and uses the official inputs_pre_hook without replacing the runner. It creates one exactM144 profile.",
+        "Synthesized mode preserves the original nine endpoints1,2,4,8,16,32,64,128,144 and runtime canonicalM256. Actual static weights/scales and provider remain unchanged.",
+        "All candidate attempts/failures are visible; selected result equals the finite profiling minimum and is a real cache hit, never fallback mislabeled as winner. For every explicit selected/control descriptor require actual native used_descriptor=1.",
+        "Final graph numerical checks use the enabled safe refresh; no profiling starts during capture or after tuning."
+      ],
+      "scope_limit": "These are setup/correctness checks, not a retained-versus-synthesized performance experiment. In retained mode the descriptor runner may still enumerate at globalM256 although the copied harness config keys the profile at exactM144; record that distinction."
+    }
+  ],
+  "stop_conditions": [
+    "Before execution: combined adapter/source/provider hashes are not assembled or do not match; package imports resolve to a different source or undeclared dependency shim; required source/dependency/provider is unavailable.",
+    "Explicit build/load fails, native exports/signatures do not match, old AOT substitution is detected, or actual loaded ELF/source provenance cannot be established.",
+    "Actual decorated public facade rejects this supported fixture, selects an unexpected runner/backend, or quantizer bytes/scales/layouts differ from the frozen reference.",
+    "A required explicit target descriptor falls back, fails AlgoCheck, or reports used_descriptor0. Preserve the failure; do not count matching default output as successful explicit execution.",
+    "Correct output/changed-input/zero/restore assertions fail; output ownership aliases input/workspace; no-write or wrong-write control is accepted with the callback; refresh enters a timed or captured window.",
+    "Profile endpoints/keys/sequence differ from the declared domain, a winner is not the measured finite minimum, a reported hit is a miss, or post-startup/capture profiling occurs.",
+    "After all bounded checks pass, stop and review. Unexpected winner identity or incidental timing is not a reason to expand or retry the cohort."
+  ],
+  "what_success_qualifies": [
+    "The exact declared current-source research stack can build/load on this H100/container and execute default plus accepted explicit FP8 paths through the real SGLang facade with controlled numerical/graph correctness.",
+    "The known stale-output hole is caught by a fixture-owned, safe, actual-CUDA validation callback.",
+    "The official retained-input hook and original synthesized profile domain work on this fixture, with explicit evidence about their different profile/key/enumeration domains."
+  ],
+  "what_success_does_not_qualify": [
+    "Any serving-performance improvement, current versus old release speed, general v2 superiority, statistical candidate-ranking quality or subpercent measurement equivalence.",
+    "Broad models, GPUs, BF16 numerical behavior, all cuBLASLt descriptors, TP/EP, distributed synchronization, managed-store migration, explicit serving policy routing or scoped-cache prototype.",
+    "Fresh-process descriptor save/load/restart persistence unless explicitly exercised. Current CPU serialization evidence and old-release lifecycle results do not become current-source CUDA restart evidence. If the next study claims warm-file reuse, add a separate bounded actual save/load consumer gate before that claim; it need not expand this provider/freshness gate.",
+    "Universal no-write correctness: callback coverage means the declared fixture callback ran; a malicious/no-op custom callback or unknown role contract remains outside scope."
+  ],
+  "remaining_confounders": [
+    "Two research source changes plus current upstream adoption are bundled in the setup target; qualification establishes functionality, not attribution of later speed changes to one fix.",
+    "Official harness times captured runner BMM graphs, excluding SGLang quantization/lookup/allocation. The separate actual helper graph correctness check does not change that timing scope.",
+    "Factory preflight and recapture retain extra allocations and introduce setup history. Retained versus synthesized also changes profile count/shapes/history/cache keys, so it is not activation-values-only.",
+    "Independent replay calibration found queued16 versus plain5120 recipe differences around1.3% to1.5% and first/second-capture confidence widths around0.73% to1.18%; sub0.65% resolution remains unresolved. Do not interpret incidental setup timings as a precise ranking study.",
+    "The prior roughly19% to22% explicit-winner regressions had different actual GEMM signatures and are not erased by this calibration or by a source upgrade. A future fixed comparison must preserve negative/neutral outcomes."
+  ],
+  "scope_controls": {
+    "do_not_add": [
+      "A full registered suite or broad model/shape/backend matrix for this narrow manual qualification.",
+      "A default/v1/v2 repeated performance cohort, policy matrix or activation-values arm before correctness gates.",
+      "Additional native interception solely to make a latency claim; the acceptance flag with verified native source and cold native key suffices for the core acceptance gate. If API-call counts are claimed, separately observe them.",
+      "Changes to SGLang production, v1 persistence ownership, managed store or distributed behavior."
+    ],
+    "next_after_success": "Review exact qualification evidence and select one new scientific question. For activation values, the separately reviewed M144-only initializer keeps the original nine-profile domain and is narrower than retained-versus-synthesized. It still requires its own frozen design and explicit authorization."
+  },
+  "evidence": [
+    {
+      "file": "/private/tmp/fi-next-steps-20261024/descriptor-port-27c62/readiness-report.json",
+      "sha256": "9adee3cdc3744cfc2ea22bbf24142059979c52a3b9ce9cadb931af2af1860cba"
+    },
+    {
+      "file": "/private/tmp/fi-next-steps-20261024/descriptor-port-27c62/port-manifest.json",
+      "sha256": "1ac5a30bb27519322e067b17f796a243bcec76814925a40c703797cfdfe31f14"
+    },
+    {
+      "file": "/private/tmp/fi-next-steps-20261024/descriptor-port-27c62/cpu-contract-result.json",
+      "sha256": "8b41d301bf8658f27d2df9f9116db2a98f0a12160d4c2af5f7e7a9ec5db9faea"
+    },
+    {
+      "file": "/private/tmp/fi-next-steps-20261024/fixture-adapter/qualification-plan.json",
+      "sha256": "8666a50d44b89ab822faad31e181666a3bd4042955f6d1a58f1abbd7396c8a9d"
+    },
+    {
+      "file": "/private/tmp/fi-next-steps-20261024/fixture-adapter/adapter-contract.json",
+      "sha256": "615c5cefd7553a275c4407aacb0933a8988f0207dd6f18ad40c071f246471735"
+    },
+    {
+      "file": "/private/tmp/fi-next-steps-20261024/fixture-adapter/cpu-controls.json",
+      "sha256": "560a2bd25d26f359a2a0b46bd7cc65b4182582ae47cf7aa993af7fc5250c78d8"
+    },
+    {
+      "file": "/private/tmp/fi-next-steps-20261024/fixture-validation-callback/proposal.json",
+      "sha256": "f3210027f2b2a22a22e09ab62599d5fc74ad4fdbc2302bf81d3dfaae9520d596"
+    },
+    {
+      "file": "/private/tmp/fi-next-steps-20261024/fixture-validation-callback/cpu-controls.json",
+      "sha256": "d881093f2e5a36b4a0656fe3fd56f1425d285697484d1537d0b6cc3597ac2aee"
+    },
+    {
+      "file": "/private/tmp/fi-next-steps-20261024/current-source-qualification/complete-source-manifest.json",
+      "sha256": "fec08384276b12a056288725e395c4a8f56ffa7ddb3d34374dcbcdae7f91b4c1"
+    },
+    {
+      "file": "/private/tmp/fi-next-steps-20261024/calibration-statistics-audit/final-audit.json",
+      "sha256": "6c4bde9668db163318e6dd006a865e7bb84d5917a7da46d915834f6f91842df5"
+    },
+    {
+      "file": "/private/tmp/fi-next-steps-20261024/calibration-statistics-audit/final-summary.json",
+      "sha256": "8f5b3d8f22f959eb867e0ad514328e9c97ddc05c2aad8ffddef5ebaef61d5961"
+    },
+    {
+      "file": "/private/tmp/fi-next-steps-20261024/activation-values-design/design.json",
+      "sha256": "b48cfbd1d84641e0ab47ed10475b77e6d774e62377d06a372579ff3b0f198b95"
+    },
+    {
+      "file": "/private/tmp/fi-next-steps-20261024/activation-values-design/cpu-proof.json",
+      "sha256": "b19dfa0c2f600c261a6998e20d4a4d9a69ddd316fd2b1d3931daf3039052cf03"
+    }
+  ]
+}
