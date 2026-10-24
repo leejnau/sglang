@@ -316,7 +316,10 @@ class HistoryExperiment(ObjectiveExperiment):
         rows = []
         for graph_id in GRAPH_IDS:
             markers = [
-                event for event in events if event.get("name") == "retained_" + graph_id
+                event
+                for event in events
+                if event.get("cat") == "user_annotation"
+                and event.get("name") == "retained_" + graph_id
             ]
             if len(markers) != 1:
                 raise RuntimeError("trace lacks an unambiguous retained graph range")
