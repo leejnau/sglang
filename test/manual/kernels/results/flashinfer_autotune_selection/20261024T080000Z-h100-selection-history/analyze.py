@@ -1271,6 +1271,17 @@ def control_worker(scheduled, root):
                 if signature not in signatures:
                     signatures.append(signature)
                 sequence.append(signatures.index(signature))
+        # Torch can emit a GPU annotation with the same label. It is not the
+        # CPU range containing cudaGraphLaunch calls and must not add a scope.
+        events.append(
+            {
+                "cat": "gpu_user_annotation",
+                "ph": "X",
+                "name": "retained_" + graph_id,
+                "ts": start + 1,
+                "dur": 98,
+            }
+        )
         trace_rows.append(
             {
                 "graph_id": graph_id,
@@ -1567,6 +1578,50 @@ def self_test():
             path.write_text(json.dumps(raw))
             trace["sha256"] = sha256(path)
 
+        reject(
+            "trace_missing_CPU_range_despite_GPU_label",
+            lambda d: mutate_trace(
+                d,
+                lambda t: t.update(
+                    traceEvents=[
+                        e
+                        for e in t["traceEvents"]
+                        if not (
+                            e.get("cat") == "user_annotation"
+                            and e.get("name") == "retained_winner"
+                        )
+                    ]
+                ),
+            ),
+        )
+        reject(
+            "trace_duplicate_CPU_range",
+            lambda d: mutate_trace(
+                d,
+                lambda t: t["traceEvents"].append(
+                    copy.deepcopy(
+                        next(
+                            e
+                            for e in t["traceEvents"]
+                            if e.get("cat") == "user_annotation"
+                            and e.get("name") == "retained_winner"
+                        )
+                    )
+                ),
+            ),
+        )
+        reject(
+            "trace_CPU_range_loses_launches",
+            lambda d: mutate_trace(
+                d,
+                lambda t: next(
+                    e
+                    for e in t["traceEvents"]
+                    if e.get("cat") == "user_annotation"
+                    and e.get("name") == "retained_winner"
+                ).update(dur=1),
+            ),
+        )
         reject(
             "trace_lost_kernel_correlation",
             lambda d: mutate_trace(

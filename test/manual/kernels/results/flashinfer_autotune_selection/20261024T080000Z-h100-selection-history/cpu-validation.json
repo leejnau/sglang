@@ -86,48 +86,10 @@
         "CPU boundary controls validate protocol/metadata/ownership/failure behavior only; CUDA execution, real trace compatibility, numerical results and performance remain unrun."
       ]
     },
-    "selection-history-analyzer-controls.json": {
-      "status": "success",
-      "scope": "stdlib CPU synthetic records only; no GPU/performance evidence",
-      "passed_controls": 30,
-      "controls": [
-        "full32_preregistered_launch_and_capture_counterbalance",
-        "all32_H_F_capture_order_payloads_no_GPU",
-        "successful_final_record_hash_and_full32_summary_branch",
-        "history_enabled_but_absent",
-        "H0_fabricated_history",
-        "F0_fabricated_byte_hash",
-        "F1_missing_byte_hash",
-        "profiling_input_references_retained",
-        "lost_true_winner_hit",
-        "default_did_not_participate",
-        "wrong_profiler_minimum",
-        "extra_profiling_attempt",
-        "history_advanced_rng",
-        "history_tuned",
-        "history_released_before_end",
-        "history_after_startup",
-        "wrong_scheduled_capture_order",
-        "shared_primary_output",
-        "cache_miss_not_restored",
-        "unbalanced_actual_block_order",
-        "wrong_timed_output_owner",
-        "trace_before_latency_ended",
-        "trace_replaced_graph",
-        "trace_accepted_wrong_output",
-        "trace_tuned_after_latency",
-        "trace_lost_kernel_correlation",
-        "trace_same_CUDA_graph_both_labels",
-        "known_history_fingerprint_interaction_log_contrasts",
-        "exact_compact8trial_bootstrap_weights",
-        "cluster_interval_bruteforce_and_n1_no_CI"
-      ],
-      "analyzer_sha256": "e1db4da97d5474d07cb173c375dd33f9986120653e8da8e6419d7cbd71d64d01"
-    },
     "selection-history-full-main-control.json": {
       "status": "success",
       "scope": "CPU-only full-main integration; no GPU/performance evidence",
-      "analyzer_sha256": "e1db4da97d5474d07cb173c375dd33f9986120653e8da8e6419d7cbd71d64d01",
+      "analyzer_sha256": "5eb00bfb7a68be662ba628b643149f49e4c7c1d0f283de5f6b3a99284f9e51f5",
       "plan_sha256": "44aed74be70eae283dab2fd4e2bcbefca5d906fc15eb35fbda775337ec9f4544",
       "control_source_sha256": "0e6599879edfec2b25ce2a4e66c881ecc7908a631b86c7b4ae19114438827c58",
       "passed_controls": 6,
@@ -284,13 +246,74 @@
         }
       ],
       "script_sha256": "af1e573ce286539e55642b221678db6835b1bd15d987bf815c750742177a59cd"
+    },
+    "history-trace-category-controls.json": {
+      "status": "success",
+      "scope": "stdlib CPU synthetic records only; no GPU/performance evidence",
+      "passed_controls": 33,
+      "controls": [
+        "full32_preregistered_launch_and_capture_counterbalance",
+        "all32_H_F_capture_order_payloads_no_GPU",
+        "successful_final_record_hash_and_full32_summary_branch",
+        "history_enabled_but_absent",
+        "H0_fabricated_history",
+        "F0_fabricated_byte_hash",
+        "F1_missing_byte_hash",
+        "profiling_input_references_retained",
+        "lost_true_winner_hit",
+        "default_did_not_participate",
+        "wrong_profiler_minimum",
+        "extra_profiling_attempt",
+        "history_advanced_rng",
+        "history_tuned",
+        "history_released_before_end",
+        "history_after_startup",
+        "wrong_scheduled_capture_order",
+        "shared_primary_output",
+        "cache_miss_not_restored",
+        "unbalanced_actual_block_order",
+        "wrong_timed_output_owner",
+        "trace_before_latency_ended",
+        "trace_replaced_graph",
+        "trace_accepted_wrong_output",
+        "trace_tuned_after_latency",
+        "trace_missing_CPU_range_despite_GPU_label",
+        "trace_duplicate_CPU_range",
+        "trace_CPU_range_loses_launches",
+        "trace_lost_kernel_correlation",
+        "trace_same_CUDA_graph_both_labels",
+        "known_history_fingerprint_interaction_log_contrasts",
+        "exact_compact8trial_bootstrap_weights",
+        "cluster_interval_bruteforce_and_n1_no_CI"
+      ],
+      "analyzer_sha256": "5eb00bfb7a68be662ba628b643149f49e4c7c1d0f283de5f6b3a99284f9e51f5"
+    },
+    "history-trace-category-actual.json": {
+      "status": "success",
+      "controls": [
+        "actual_Torch_trace_old_frozen_parser_accepts_CPU_ranges",
+        "actual_Torch_trace_new_reader_accepts_duplicate_GPU_annotations",
+        "reject_actual_trace_missing_CPU_range",
+        "reject_actual_trace_duplicate_CPU_range",
+        "reject_actual_trace_range_loses_launch_count",
+        "reject_actual_trace_invalid_kernel_correlation"
+      ],
+      "passed_controls": 6,
+      "actual_trace_sha256": "203852efb787360d3f36e1d87b08a4e85d42e459e1a024bf77bfb739fdc52999",
+      "analyzer_sha256": "5eb00bfb7a68be662ba628b643149f49e4c7c1d0f283de5f6b3a99284f9e51f5",
+      "source_sha256": "713d851b4618456ecd3a2cfc65fc19032d8ed7abef68357b0e2cc96baaa41fc7",
+      "actual_CUDA_graph_ids": {
+        "winner": 5,
+        "default": 2
+      },
+      "scope": "Actual raw trace parsing only. New reader uses a clearly synthetic completed-metadata envelope because the worker failed before emitting its final trace summary. The failed worker remains an error and is not qualified for the experiment cohort."
     }
   },
   "independent_review": "Separate read-only reviewer found and corrected a string/Path output bug before execution; final worker/launcher/collector/analyzer have no remaining identified blocker.",
   "source_sha256": {
     "test/manual/kernels/bench_flashinfer_selection_history.py": "d58e05e0874b2e01614a178e6245e4433cdf5d1516792f93ccf39d01b0f219e4",
     "test/manual/kernels/results/flashinfer_autotune_selection/20261024T080000Z-h100-selection-history/plan.json": "44aed74be70eae283dab2fd4e2bcbefca5d906fc15eb35fbda775337ec9f4544",
-    "test/manual/kernels/results/flashinfer_autotune_selection/20261024T080000Z-h100-selection-history/analyze.py": "e1db4da97d5474d07cb173c375dd33f9986120653e8da8e6419d7cbd71d64d01",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261024T080000Z-h100-selection-history/analyze.py": "5eb00bfb7a68be662ba628b643149f49e4c7c1d0f283de5f6b3a99284f9e51f5",
     "test/manual/kernels/results/flashinfer_autotune_selection/20261024T080000Z-h100-selection-history/launch.sh": "b5f25bd318fb22f05e4bced5d055f769034a5548cf35978c583d7763b115ee9f",
     "test/manual/kernels/results/flashinfer_autotune_selection/20261024T080000Z-h100-selection-history/collect_build_provenance.py": "8da31db36b9010247dc741d60ad79bf98888b0de4b9f8c675108c2e5e8dcaf96"
   },
@@ -300,6 +323,7 @@
     "cause": "Torch emits CPU user_annotation and GPU gpu_user_annotation events with the same retained graph label; original reader matched names alone.",
     "fix": "Require CPU user_annotation ranges when associating graph launches. No timing, policy, candidate or capture changes.",
     "original_archive_sha256": "7f1be8f20e678b3e530e4eb74d473e47d87bf8e969824fa3ed00b2155cbbd5e8",
-    "cohort_action": "Preserve failed attempt; restart all32 fresh workers as attempt02. No failed worker promoted into final cohort."
+    "cohort_action": "Preserve failed attempt; restart all32 fresh workers as attempt02. No failed worker promoted into final cohort.",
+    "native_supplement_sha256": "d3b45d8f01141d4e8043de3701607bd35543eaa0412798e9385813258397780b"
   }
 }
