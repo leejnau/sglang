@@ -1,0 +1,1654 @@
+{
+  "status": "passed",
+  "mode": "timing",
+  "plan_sha256": "e2ce825b78db2217227de7cdf52546004105332ad6d19bf4e3237afe18fb8b88",
+  "schedule_sha256": "d86fd380c5b12391d194ab2709a8cb549c1b5a0ed4f9b518683c3f1f247a98da",
+  "historical_contract_sha256": "b4e97dfc15646c0e4e46d4db240e7254b3381f494af227b2aca4d66f5a7908af",
+  "worker_sha256": "7c8c743fe08b898035bbdf693123ea7b0c8a2d49a29db801f0db3c81178abf42",
+  "analyzer_sha256": "b73acfc80a676ad24bb0358a6d66880531947f628783cba6fb1765c5154269ec",
+  "leaf_helpers_sha256": "cf72c74cf2e9c343e46af1b1b74a232a8b201de06dc2cd01bef6552f0981ce4f",
+  "distinct_container_ids": [
+    "64091b10315cdd9b7b9e8859bb57b28a1391247b4057cdcdea66560f12c5dfda",
+    "b523fb557a3a1254747e4cda44bf61fa5711e083a62d110058ef1bb28e8f388c",
+    "cf3648a6e3cbb8d02d3b911cf6358ac8661eb09e8c5232ef6fefe39369782091",
+    "020daa3e0c9ab25f6c7ce2fbb83e6c8249190a508a0d4eb3c7763579508b1b96",
+    "ad34c39c141b82313c4ede243d8b7588867ec3f4c61ad748af202956a0fd987d",
+    "62e7bad36f51a2804a7c6309b91b2c6e8490814429100603800817c061e84e2e",
+    "b7131b14d9c6159513e15ac122a820ae19d6307884606b82d1bddee0d5350b42",
+    "130ce031c0d399d3b08a88e761ddc2a7c06b9f686ba4741c0f3117fb9dd61485",
+    "5c9b8463240021bf52a62f4ab7db22e0d074b70f35369e92f127c891d1ae7b2d"
+  ],
+  "metrics": {
+    "original_history_profiler": {
+      "processes": 8,
+      "geometric_mean_ratio": 1.075124782574411,
+      "min": 1.0104101007077022,
+      "max": 1.1812373578404152,
+      "below_one": 0,
+      "above_one": 8,
+      "equal_one": 0,
+      "exploratory_process_bootstrap_95pct": [
+        1.0445710007301692,
+        1.1113466762121056
+      ]
+    },
+    "layer_graph": {
+      "processes": 8,
+      "geometric_mean_ratio": 1.1911266899958541,
+      "min": 1.1483436363447224,
+      "max": 1.2364395575842009,
+      "below_one": 0,
+      "above_one": 8,
+      "equal_one": 0,
+      "exploratory_process_bootstrap_95pct": [
+        1.1644978041598646,
+        1.2181200536230672
+      ]
+    },
+    "late_auto_profiler": {
+      "processes": 8,
+      "geometric_mean_ratio": 1.0680877881622617,
+      "min": 1.0506918997107562,
+      "max": 1.083795067835196,
+      "below_one": 0,
+      "above_one": 8,
+      "equal_one": 0,
+      "exploratory_process_bootstrap_95pct": [
+        1.0603426934181615,
+        1.0755210568085722
+      ]
+    },
+    "late_graph_profiler": {
+      "processes": 8,
+      "geometric_mean_ratio": 1.3446689521203228,
+      "min": 1.340870584856829,
+      "max": 1.349645034918846,
+      "below_one": 0,
+      "above_one": 8,
+      "equal_one": 0,
+      "exploratory_process_bootstrap_95pct": [
+        1.3429555779707234,
+        1.3465198708475181
+      ]
+    },
+    "late_graph_over_auto_profiler": {
+      "processes": 8,
+      "geometric_mean_ratio": 1.2589498419731429,
+      "min": 1.2371993789703464,
+      "max": 1.2803914536168917,
+      "below_one": 0,
+      "above_one": 8,
+      "equal_one": 0,
+      "exploratory_process_bootstrap_95pct": [
+        1.2494212389582673,
+        1.2689161160319655
+      ]
+    }
+  },
+  "process_rows": [
+    {
+      "block": 0,
+      "pid": 1,
+      "result_sha256": "7fd3aa92051d92b5eab19010b5059a49e066cdeaa7af5438d3dd7916644bcb6e",
+      "capture_order": "winner-first",
+      "profiler_objective_order": [
+        "auto",
+        "graph"
+      ],
+      "natural_tactic": -1,
+      "fixed_descriptor": [
+        77309411394,
+        4294967332,
+        0,
+        1407374883553283,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "original_history_profiler_ratio": 1.0337512385265795,
+      "layer_graph": {
+        "ratio": 1.1583647309141136,
+        "paired_ratios": [
+          1.163271008627795,
+          1.1629464327766814,
+          1.1620795835483688,
+          1.1545123736573368,
+          1.1503067215790306,
+          1.158805442999446,
+          1.1566601071840183,
+          1.1724329820973116,
+          1.1559709982932034,
+          1.1612272623182347,
+          1.1595981930419368,
+          1.160480030110077,
+          1.1667597447265647,
+          1.1539106150156384,
+          1.16554993109006,
+          1.154811657872358,
+          1.1594646466115126,
+          1.1568079932629831,
+          1.1556485492605337,
+          1.1562936273155375,
+          1.158291491093058,
+          1.1548549183816217,
+          1.152386257390732,
+          1.1584379707351693
+        ],
+        "first_position_medians": {
+          "winner": 1.1582030931524598,
+          "default": 1.1583647309141136
+        },
+        "queue_outcomes_all_retained": {
+          "start_pending_after_enqueue": 48
+        }
+      },
+      "profiler": {
+        "auto": {
+          "ratio": 1.0699288570914938,
+          "paired_ratios": [
+            1.1164880800042494,
+            1.1110719593659617,
+            1.0795334366709677,
+            1.0769230895624913,
+            1.0362194214009834,
+            1.1336788127325794,
+            1.0110331056222102,
+            1.079214809889255,
+            1.0542608777059275,
+            1.0512460321131396,
+            1.0410863397968697,
+            1.0629346246204965
+          ],
+          "first_position_medians": {
+            "winner": 1.0712340306457322,
+            "default": 1.0655919836342094
+          },
+          "median_duration_ms": {
+            "winner": 0.009769599884748459,
+            "default": 0.009195199981331826
+          }
+        },
+        "graph": {
+          "ratio": 1.34503165884566,
+          "paired_ratios": [
+            1.4348534317238693,
+            1.3453663033726762,
+            1.342005444198917,
+            1.334951426743839,
+            1.370842556537256,
+            1.3398907604401644,
+            1.3446970143186436,
+            1.3455040529661164,
+            1.3776683928249418,
+            1.3369624663571131,
+            1.352391483671999,
+            1.3408590027732616
+          ],
+          "first_position_medians": {
+            "winner": 1.3489477683190576,
+            "default": 1.3427780085459526
+          },
+          "median_duration_ms": {
+            "winner": 0.007916799932718276,
+            "default": 0.005875200033187866
+          }
+        }
+      },
+      "trace": {
+        "sha256": "13b32109303afd17b33aa3aaac5317089ec0a5425342d3addeee3bb0fbcb2079",
+        "original_graphs": {
+          "winner": {
+            "cuda_graph_id": 2,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_128x64_128x8_1x2_h_bz_TNT",
+                "grid": [
+                  2,
+                  64,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 213268,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "default": {
+            "cuda_graph_id": 5,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+                "grid": [
+                  2,
+                  64,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 225652,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "winner_default_signatures_equal": false
+        },
+        "timing_inference": false
+      }
+    },
+    {
+      "block": 1,
+      "pid": 1,
+      "result_sha256": "c4a6712a3f385fed360e39ae2d1186b77d13254e097bcd47bafd2d95d4a758cf",
+      "capture_order": "default-first",
+      "profiler_objective_order": [
+        "auto",
+        "graph"
+      ],
+      "natural_tactic": -1,
+      "fixed_descriptor": [
+        77309411394,
+        4294967332,
+        0,
+        1407374883553283,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "original_history_profiler_ratio": 1.0104101007077022,
+      "layer_graph": {
+        "ratio": 1.2308449201388587,
+        "paired_ratios": [
+          1.22770608989261,
+          1.229277860632513,
+          1.2341203026353313,
+          1.231200901166982,
+          1.2261771602400167,
+          1.2322435791765933,
+          1.2359233819384776,
+          1.2277450428029801,
+          1.2309637402426528,
+          1.2307261000350649,
+          1.2301632421869728,
+          1.2306826948873886,
+          1.227719950496161,
+          1.2348804006966188,
+          1.2282822263426691,
+          1.2318921234611575,
+          1.2276056601850551,
+          1.2325253646280117,
+          1.2253441415421866,
+          1.2341504099072358,
+          1.233652768925955,
+          1.2348634347640473,
+          1.2324795925876633,
+          1.2297297722481084
+        ],
+        "first_position_medians": {
+          "winner": 1.2313091117481112,
+          "default": 1.2303467562453805
+        },
+        "queue_outcomes_all_retained": {
+          "start_pending_after_enqueue": 48
+        }
+      },
+      "profiler": {
+        "auto": {
+          "ratio": 1.083795067835196,
+          "paired_ratios": [
+            1.061935057319445,
+            1.0715022178539242,
+            1.1069137426340132,
+            1.0699152955185773,
+            1.0847994277052246,
+            1.0843158900556855,
+            1.1513761531956666,
+            1.1309398244648707,
+            1.0809371214280807,
+            1.0832742456147066,
+            1.0623008628414914,
+            1.0880791620864423
+          ],
+          "first_position_medians": {
+            "winner": 1.083795067835196,
+            "default": 1.0845081417572615
+          },
+          "median_duration_ms": {
+            "winner": 0.009854399785399436,
+            "default": 0.009054400026798248
+          }
+        },
+        "graph": {
+          "ratio": 1.340870584856829,
+          "paired_ratios": [
+            1.2269363566014262,
+            1.3211601168354687,
+            1.3652792013577622,
+            1.3414096677669496,
+            1.3633333898163238,
+            1.3269650169412255,
+            1.1830918380821414,
+            1.3360522229375529,
+            1.3441629927353889,
+            1.3593835843887114,
+            1.3421927154434399,
+            1.3403315019467086
+          ],
+          "first_position_medians": {
+            "winner": 1.3477179036631322,
+            "default": 1.340870584856829
+          },
+          "median_duration_ms": {
+            "winner": 0.007844800129532814,
+            "default": 0.005828800052404404
+          }
+        }
+      },
+      "trace": {
+        "sha256": "67d88389f7b0a9c9789397968eb64e03fead2dfe093740237f8d783ee6452d2f",
+        "original_graphs": {
+          "winner": {
+            "cuda_graph_id": 5,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_128x64_128x8_1x2_h_bz_TNT",
+                "grid": [
+                  2,
+                  64,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 213268,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "default": {
+            "cuda_graph_id": 2,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+                "grid": [
+                  2,
+                  64,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 225652,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "winner_default_signatures_equal": false
+        },
+        "timing_inference": false
+      }
+    },
+    {
+      "block": 2,
+      "pid": 1,
+      "result_sha256": "3e685de88bdfeab7b4e4bbaf440b59b4d920a906616bd0362bfe2a2ba2837479",
+      "capture_order": "winner-first",
+      "profiler_objective_order": [
+        "graph",
+        "auto"
+      ],
+      "natural_tactic": -1,
+      "fixed_descriptor": [
+        77309411394,
+        4294967332,
+        0,
+        1407374883553283,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "original_history_profiler_ratio": 1.1812373578404152,
+      "layer_graph": {
+        "ratio": 1.1483436363447224,
+        "paired_ratios": [
+          1.1554750750552818,
+          1.1422594560738533,
+          1.1505436046934294,
+          1.1466815498209846,
+          1.1479108184723288,
+          1.1540389986777944,
+          1.1546391164035121,
+          1.1467634039865622,
+          1.1526887624607207,
+          1.148776454217116,
+          1.1550041905620443,
+          1.1436924877204695,
+          1.1491912641372706,
+          1.1526887624607207,
+          1.1473771462924127,
+          1.144011067432487,
+          1.1475911527729474,
+          1.1427375794233536,
+          1.153246024979633,
+          1.1469194435847532,
+          1.1502648829862143,
+          1.1447294343702306,
+          1.1530526193349522,
+          1.1477146225752406
+        ],
+        "first_position_medians": {
+          "winner": 1.1485510413047997,
+          "default": 1.1482455383961783
+        },
+        "queue_outcomes_all_retained": {
+          "start_pending_after_enqueue": 48
+        }
+      },
+      "profiler": {
+        "graph": {
+          "ratio": 1.3461699162096,
+          "paired_ratios": [
+            1.3191709974573205,
+            1.352051810600822,
+            1.349540744387615,
+            1.3523965323959235,
+            1.3709411848901494,
+            1.3479437923135522,
+            1.3516007486206552,
+            1.3381955650353783,
+            1.305057945143236,
+            1.3443960401056478,
+            1.3167835521298443,
+            1.3249591020442937
+          ],
+          "first_position_medians": {
+            "winner": 1.3430696786744654,
+            "default": 1.3469683922466316
+          },
+          "median_duration_ms": {
+            "winner": 0.0079584002494812,
+            "default": 0.00591839998960495
+          }
+        },
+        "auto": {
+          "ratio": 1.0801914901737462,
+          "paired_ratios": [
+            1.143198070609525,
+            1.0879613946065851,
+            1.088590174723308,
+            1.0975441238649406,
+            1.069458604939355,
+            1.1654577434487727,
+            1.078876151512694,
+            1.0689891205744684,
+            1.0815068288347982,
+            1.0574130808833693,
+            1.0766059995281,
+            0.9018212670320355
+          ],
+          "first_position_medians": {
+            "winner": 1.082598087125704,
+            "default": 1.0801914901737462
+          },
+          "median_duration_ms": {
+            "winner": 0.010105600208044052,
+            "default": 0.009356800094246864
+          }
+        }
+      },
+      "trace": {
+        "sha256": "73608d8475edff92ec94f5166ffe2bd94c9bde7d79417f4e7b0dcb84f6de903f",
+        "original_graphs": {
+          "winner": {
+            "cuda_graph_id": 2,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_128x64_128x8_1x2_h_bz_TNT",
+                "grid": [
+                  2,
+                  64,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 213268,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "default": {
+            "cuda_graph_id": 5,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+                "grid": [
+                  2,
+                  64,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 225652,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "winner_default_signatures_equal": false
+        },
+        "timing_inference": false
+      }
+    },
+    {
+      "block": 3,
+      "pid": 1,
+      "result_sha256": "774873c89e57e03091b0bb549752b3d91e6d09a2cb9e93c96097a40d01cc6adc",
+      "capture_order": "default-first",
+      "profiler_objective_order": [
+        "graph",
+        "auto"
+      ],
+      "natural_tactic": -1,
+      "fixed_descriptor": [
+        77309411394,
+        4294967332,
+        0,
+        1407374883553283,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "original_history_profiler_ratio": 1.052338912154605,
+      "layer_graph": {
+        "ratio": 1.2169085082950293,
+        "paired_ratios": [
+          1.2236553631138887,
+          1.2196325195773732,
+          1.2196261768971457,
+          1.2170817761363704,
+          1.2187414144100095,
+          1.216401520078833,
+          1.214364067594666,
+          1.2131687477275857,
+          1.2196261768971457,
+          1.2160679827162673,
+          1.2205720090563181,
+          1.2195657590131819,
+          1.2166895303605116,
+          1.2137967799644043,
+          1.214266149759223,
+          1.219050237604852,
+          1.2166163828243894,
+          1.2274358162153332,
+          1.2185868120933145,
+          1.2167352404536882,
+          1.2159122528066793,
+          1.2115490119989982,
+          1.2230195530821397,
+          1.2167352404536882
+        ],
+        "first_position_medians": {
+          "winner": 1.219307998309017,
+          "default": 1.21623475139755
+        },
+        "queue_outcomes_all_retained": {
+          "start_pending_after_enqueue": 48
+        }
+      },
+      "profiler": {
+        "graph": {
+          "ratio": 1.349645034918846,
+          "paired_ratios": [
+            1.3588266018464847,
+            1.3241233267539914,
+            1.3204857284894724,
+            1.3560523907035318,
+            1.36303988481948,
+            1.344715491989774,
+            1.3431952581201412,
+            1.3499188335247672,
+            1.3607628978342945,
+            1.3767876683771865,
+            1.3347778671388362,
+            1.3493712363129249
+          ],
+          "first_position_medians": {
+            "winner": 1.3470433641513493,
+            "default": 1.3529856121141495
+          },
+          "median_duration_ms": {
+            "winner": 0.007982399687170983,
+            "default": 0.0059055998921394345
+          }
+        },
+        "auto": {
+          "ratio": 1.054087819085581,
+          "paired_ratios": [
+            1.0401174177214036,
+            1.0247688590706412,
+            1.052489912957221,
+            1.0539629189125859,
+            1.0617072224590172,
+            1.0329147622603265,
+            1.0542790015062276,
+            1.0826101858272974,
+            1.0422100213854222,
+            1.054212719258576,
+            1.0669196561591696,
+            1.106786094965709
+          ],
+          "first_position_medians": {
+            "winner": 1.0532264159349034,
+            "default": 1.0579599708587966
+          },
+          "median_duration_ms": {
+            "winner": 0.00995520018041134,
+            "default": 0.009382400289177894
+          }
+        }
+      },
+      "trace": {
+        "sha256": "c250e6c4f3ee0fb7258e7cfbe906693603875f4bd6910e2366d99d44475c5285",
+        "original_graphs": {
+          "winner": {
+            "cuda_graph_id": 5,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_128x64_128x8_1x2_h_bz_TNT",
+                "grid": [
+                  2,
+                  64,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 213268,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "default": {
+            "cuda_graph_id": 2,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+                "grid": [
+                  2,
+                  64,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 225652,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "winner_default_signatures_equal": false
+        },
+        "timing_inference": false
+      }
+    },
+    {
+      "block": 4,
+      "pid": 1,
+      "result_sha256": "d8aedaeec27e690476c6cd931c282d5efa5b70b17592e9ac1a24d5173383ff78",
+      "capture_order": "winner-first",
+      "profiler_objective_order": [
+        "auto",
+        "graph"
+      ],
+      "natural_tactic": -1,
+      "fixed_descriptor": [
+        77309411394,
+        4294967332,
+        0,
+        1407374883553283,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "original_history_profiler_ratio": 1.0911238483016013,
+      "layer_graph": {
+        "ratio": 1.160225721206908,
+        "paired_ratios": [
+          1.1607898219709243,
+          1.158474535693596,
+          1.1599549130773255,
+          1.158533105200898,
+          1.1632307214942401,
+          1.1614907314076972,
+          1.1625211887077267,
+          1.1631787283390456,
+          1.1689781792274068,
+          1.1559064053633363,
+          1.1583098830245737,
+          1.1550125703044236,
+          1.1534778806628545,
+          1.1606891129612633,
+          1.158340413649961,
+          1.1563914778714748,
+          1.1586944555778924,
+          1.1601805231979032,
+          1.1635593202502679,
+          1.1602709192159126,
+          1.1548660061282077,
+          1.1665725133364895,
+          1.1644997885571304,
+          1.1603854076086597
+        ],
+        "first_position_medians": {
+          "winner": 1.160480016088588,
+          "default": 1.159324684327609
+        },
+        "queue_outcomes_all_retained": {
+          "start_pending_after_enqueue": 48
+        }
+      },
+      "profiler": {
+        "auto": {
+          "ratio": 1.0625361921586685,
+          "paired_ratios": [
+            1.0931571844306647,
+            1.068079145596464,
+            1.0660020841904072,
+            1.0908456064319183,
+            1.1929215931109276,
+            0.9536259042749388,
+            1.077136920920747,
+            1.0517776945506216,
+            1.0304709031845394,
+            1.0590703001269297,
+            1.0555941808843292,
+            1.0289213841278584
+          ],
+          "first_position_medians": {
+            "winner": 1.0482364936874733,
+            "default": 1.0635747228616967
+          },
+          "median_duration_ms": {
+            "winner": 0.009822399914264679,
+            "default": 0.009232000261545182
+          }
+        },
+        "graph": {
+          "ratio": 1.3422810366003861,
+          "paired_ratios": [
+            1.2293942565049227,
+            1.3257698804318425,
+            1.3412784584542656,
+            1.3760445032091388,
+            1.363285571604056,
+            1.3453037867394848,
+            1.348041946245914,
+            1.3213897031219781,
+            1.3384446416151865,
+            1.3657458021986673,
+            1.3394140441793885,
+            1.3432836147465068
+          ],
+          "first_position_medians": {
+            "winner": 1.3413488294629476,
+            "default": 1.343291122596875
+          },
+          "median_duration_ms": {
+            "winner": 0.007836800068616867,
+            "default": 0.005803199857473374
+          }
+        }
+      },
+      "trace": {
+        "sha256": "0150f82a2ec1e15eb7db1de7c8ebf9491e052be28f098f7020ca97183b80c9a2",
+        "original_graphs": {
+          "winner": {
+            "cuda_graph_id": 2,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_128x64_128x8_1x2_h_bz_TNT",
+                "grid": [
+                  2,
+                  64,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 213268,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "default": {
+            "cuda_graph_id": 5,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+                "grid": [
+                  2,
+                  64,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 225652,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "winner_default_signatures_equal": false
+        },
+        "timing_inference": false
+      }
+    },
+    {
+      "block": 5,
+      "pid": 1,
+      "result_sha256": "7c365ce0e0b1dbc0fdb72e5870b4546346104e414468ed59dee5c2c8fca0c3fa",
+      "capture_order": "default-first",
+      "profiler_objective_order": [
+        "auto",
+        "graph"
+      ],
+      "natural_tactic": -1,
+      "fixed_descriptor": [
+        77309411394,
+        4294967332,
+        0,
+        1407374883553283,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "original_history_profiler_ratio": 1.054274021755922,
+      "layer_graph": {
+        "ratio": 1.2308126475010686,
+        "paired_ratios": [
+          1.2259870819741223,
+          1.2336054103209178,
+          1.2302279571211543,
+          1.22975250810193,
+          1.2301632421869728,
+          1.227081618271573,
+          1.2323488013872121,
+          1.2336237814274724,
+          1.2267228796021956,
+          1.2310509872865547,
+          1.2260331229566361,
+          1.2332583043037506,
+          1.2315257001126994,
+          1.2323288525947307,
+          1.224152438380772,
+          1.2347972472496225,
+          1.232656513604703,
+          1.2280011538764404,
+          1.232308990091996,
+          1.2299495170135153,
+          1.2305743077155826,
+          1.2321980726236317,
+          1.2312025319070101,
+          1.2304654924952674
+        ],
+        "first_position_medians": {
+          "winner": 1.2312883436996271,
+          "default": 1.2301955996540634
+        },
+        "queue_outcomes_all_retained": {
+          "start_pending_after_enqueue": 48
+        }
+      },
+      "profiler": {
+        "auto": {
+          "ratio": 1.0741746715298994,
+          "paired_ratios": [
+            1.1202853872310552,
+            1.1145435424410008,
+            1.1020622643362767,
+            1.0735600208626592,
+            1.0636018008360333,
+            1.0807191110383065,
+            1.0570222001274874,
+            1.0747893221971396,
+            1.0497335350482075,
+            1.0684303649930456,
+            1.0536465629275007,
+            1.0776014287507005
+          ],
+          "first_position_medians": {
+            "winner": 1.0913906876872916,
+            "default": 1.0709951929278523
+          },
+          "median_duration_ms": {
+            "winner": 0.009803200140595436,
+            "default": 0.009120000153779983
+          }
+        },
+        "graph": {
+          "ratio": 1.342978851988402,
+          "paired_ratios": [
+            1.4048000490744919,
+            1.3353131480984544,
+            1.338411355244073,
+            1.3402512816176326,
+            1.3119564859782809,
+            1.3340634473687045,
+            1.3309897902692027,
+            1.3564301590024215,
+            1.3498350238635402,
+            1.3457064223591717,
+            1.3742953395022517,
+            1.3474152950711085
+          ],
+          "first_position_medians": {
+            "winner": 1.342978851988402,
+            "default": 1.3429133251575909
+          },
+          "median_duration_ms": {
+            "winner": 0.007841600105166435,
+            "default": 0.00585120003670454
+          }
+        }
+      },
+      "trace": {
+        "sha256": "50848a5e08da5b57ef7d3501a4005ee117d6437d5f038540de67da02f0286b4e",
+        "original_graphs": {
+          "winner": {
+            "cuda_graph_id": 5,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_128x64_128x8_1x2_h_bz_TNT",
+                "grid": [
+                  2,
+                  64,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 213268,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "default": {
+            "cuda_graph_id": 2,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+                "grid": [
+                  2,
+                  64,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 225652,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "winner_default_signatures_equal": false
+        },
+        "timing_inference": false
+      }
+    },
+    {
+      "block": 6,
+      "pid": 1,
+      "result_sha256": "a5c2f63561f241d74925ca9919af7ffd4591988552c700a9d643ac8514a9f578",
+      "capture_order": "winner-first",
+      "profiler_objective_order": [
+        "graph",
+        "auto"
+      ],
+      "natural_tactic": -1,
+      "fixed_descriptor": [
+        77309411394,
+        4294967332,
+        0,
+        1407374883553283,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "original_history_profiler_ratio": 1.0838731715193428,
+      "layer_graph": {
+        "ratio": 1.1518020825034987,
+        "paired_ratios": [
+          1.1560645340467592,
+          1.156170580897669,
+          1.1536289723646922,
+          1.1518058434185006,
+          1.149405860190663,
+          1.1583263551063012,
+          1.1581777911710671,
+          1.144829516338787,
+          1.1506347278630107,
+          1.1510284927893026,
+          1.153954858741515,
+          1.1507353260722128,
+          1.149325105428542,
+          1.1489964090628457,
+          1.151798321588497,
+          1.1502677946251239,
+          1.1513955167727665,
+          1.1587437264525793,
+          1.1503950631493998,
+          1.1515836829963302,
+          1.1541949276842425,
+          1.152130939276151,
+          1.1542809292883651,
+          1.1539332106766886
+        ],
+        "first_position_medians": {
+          "winner": 1.1518020825034987,
+          "default": 1.1518573111362405
+        },
+        "queue_outcomes_all_retained": {
+          "start_pending_after_enqueue": 48
+        }
+      },
+      "profiler": {
+        "graph": {
+          "ratio": 1.3439768604115625,
+          "paired_ratios": [
+            1.2724051465595292,
+            1.3115363746511175,
+            1.3455328407131335,
+            1.3262146988239814,
+            1.341369838966038,
+            1.32083551157394,
+            1.3512194804923567,
+            1.3676957486137493,
+            1.3424208801099915,
+            1.3776917908622912,
+            1.350413267985959,
+            1.4122516593520538
+          ],
+          "first_position_medians": {
+            "winner": 1.3479730543495463,
+            "default": 1.3418953595380148
+          },
+          "median_duration_ms": {
+            "winner": 0.007944000139832496,
+            "default": 0.005886399932205677
+          }
+        },
+        "auto": {
+          "ratio": 1.0506918997107562,
+          "paired_ratios": [
+            1.0082539571785274,
+            1.047489788781228,
+            1.0574907454344484,
+            1.0517655059456819,
+            1.0428571451750188,
+            1.034686031155049,
+            1.0661411354203778,
+            1.0496182934758302,
+            1.0634419827344617,
+            1.0521557640237151,
+            1.0474715809657145,
+            1.0883688688098092
+          ],
+          "first_position_medians": {
+            "winner": 1.0535545194551394,
+            "default": 1.0496185434556982
+          },
+          "median_duration_ms": {
+            "winner": 0.009780799970030785,
+            "default": 0.00926400013267994
+          }
+        }
+      },
+      "trace": {
+        "sha256": "083e467ba5db0e6904ecbbabaa55a0a4208032af02ae78540d26a1346197feeb",
+        "original_graphs": {
+          "winner": {
+            "cuda_graph_id": 2,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_128x64_128x8_1x2_h_bz_TNT",
+                "grid": [
+                  2,
+                  64,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 213268,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "default": {
+            "cuda_graph_id": 5,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+                "grid": [
+                  2,
+                  64,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 225652,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "winner_default_signatures_equal": false
+        },
+        "timing_inference": false
+      }
+    },
+    {
+      "block": 7,
+      "pid": 1,
+      "result_sha256": "25e0a2988e37511025b8180e3f73e86d5ac3b1dd91ba3f839c46f9ab031d756d",
+      "capture_order": "default-first",
+      "profiler_objective_order": [
+        "graph",
+        "auto"
+      ],
+      "natural_tactic": -1,
+      "fixed_descriptor": [
+        77309411394,
+        4294967332,
+        0,
+        1407374883553283,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "original_history_profiler_ratio": 1.1027026997264162,
+      "layer_graph": {
+        "ratio": 1.2364395575842009,
+        "paired_ratios": [
+          1.230747937159203,
+          1.2351306116521967,
+          1.234983361932137,
+          1.2363232361817662,
+          1.2316462952797664,
+          1.2306201687802987,
+          1.2364395575842009,
+          1.2377642508091125,
+          1.2392757657095987,
+          1.2409571788543643,
+          1.2337589958470563,
+          1.2344444227423286,
+          1.2364395575842009,
+          1.236636885908386,
+          1.2393543806280232,
+          1.2397660204465628,
+          1.2397660204465628,
+          1.2326678052941789,
+          1.2376844541378373,
+          1.2351794996013756,
+          1.2386648875253095,
+          1.2377642508091125,
+          1.229872365885152,
+          1.2374060682549566
+        ],
+        "first_position_medians": {
+          "winner": 1.2365382217462935,
+          "default": 1.2363813968829835
+        },
+        "queue_outcomes_all_retained": {
+          "start_pending_after_enqueue": 48
+        }
+      },
+      "profiler": {
+        "graph": {
+          "ratio": 1.3464176186088181,
+          "paired_ratios": [
+            1.3888593441698187,
+            1.3271078674955057,
+            1.3457188282312351,
+            1.358624519913883,
+            1.22920793551375,
+            1.352297610556348,
+            1.3303046684098474,
+            1.3471164089864012,
+            1.3648872036751105,
+            1.3510404475652589,
+            1.326619437239341,
+            1.342699710488238
+          ],
+          "first_position_medians": {
+            "winner": 1.3449080597373197,
+            "default": 1.348379637898247
+          },
+          "median_duration_ms": {
+            "winner": 0.007940800115466117,
+            "default": 0.005880000069737434
+          }
+        },
+        "auto": {
+          "ratio": 1.0697491642009873,
+          "paired_ratios": [
+            1.0367893447974263,
+            1.0594539062914978,
+            1.1254307306766411,
+            1.0538674127538294,
+            1.048999362487512,
+            1.06529330727321,
+            1.0886426054586529,
+            1.0742050211287648,
+            1.096219942544439,
+            1.1479556405198237,
+            1.0806675601016358,
+            1.0290148302280475
+          ],
+          "first_position_medians": {
+            "winner": 1.0846550827801442,
+            "default": 1.062373606782354
+          },
+          "median_duration_ms": {
+            "winner": 0.009864000231027603,
+            "default": 0.00926239974796772
+          }
+        }
+      },
+      "trace": {
+        "sha256": "f387031747372e19820eff55363648ea0d0a9da3d9d635a33fe5799ce19c9d89",
+        "original_graphs": {
+          "winner": {
+            "cuda_graph_id": 5,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_128x64_128x8_1x2_h_bz_TNT",
+                "grid": [
+                  2,
+                  64,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 213268,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "default": {
+            "cuda_graph_id": 2,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+                "grid": [
+                  2,
+                  64,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 225652,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "winner_default_signatures_equal": false
+        },
+        "timing_inference": false
+      }
+    }
+  ],
+  "bootstrap_replicates": 100000,
+  "bootstrap_seed": 202610262200,
+  "independent_unit": "fresh process (8), not paired measurements",
+  "limits": "Same physical GPU and fixed workload; exploratory descriptive intervals, no population or serving-performance claim. Historical and admission results excluded."
+}

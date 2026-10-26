@@ -1,0 +1,550 @@
+{
+  "status": "success",
+  "final": true,
+  "scope": "Independent raw interpretation and arithmetic check; all eight fresh timing processes retained. Admission excluded from estimates.",
+  "execution_commit": "a21cdf4ee624ebdb00b5d0e911ddbe3fd4648cfe",
+  "flashinfer_commit": "27c62fdf0ab1cd4014df8a15b66a975541fda83c",
+  "hardware": "H100 NVL, UUID240958a2-e8e1-3bac-b767-365c9e0b97bd, driver580.159.04,310W",
+  "shape_m_n_k": [
+    144,
+    4096,
+    1024
+  ],
+  "raw_archive_sha256": "84e44c807d2a897723e793eeb0dd676d1c254491fdf2c95149511953ee4272f5",
+  "official_analysis_sha256": "dbe35454a1016565a19d2a4da505f75d56b043d0b55978d341af48aada5e5742",
+  "arithmetic_matches_official": true,
+  "metrics": {
+    "original_history_profiler": {
+      "geometric_mean_ratio": 1.075124782574411,
+      "process_min": 1.0104101007077022,
+      "process_max": 1.1812373578404152,
+      "processes_above_one": 8,
+      "processes_below_one": 0,
+      "exploratory_whole_process_bootstrap_95pct": [
+        1.0445710007301692,
+        1.1113466762121056
+      ]
+    },
+    "layer_graph": {
+      "geometric_mean_ratio": 1.1911266899958541,
+      "process_min": 1.1483436363447224,
+      "process_max": 1.2364395575842009,
+      "processes_above_one": 8,
+      "processes_below_one": 0,
+      "exploratory_whole_process_bootstrap_95pct": [
+        1.1644978041598646,
+        1.2181200536230672
+      ]
+    },
+    "late_auto_profiler": {
+      "geometric_mean_ratio": 1.0680877881622617,
+      "process_min": 1.0506918997107562,
+      "process_max": 1.083795067835196,
+      "processes_above_one": 8,
+      "processes_below_one": 0,
+      "exploratory_whole_process_bootstrap_95pct": [
+        1.0603426934181615,
+        1.0755210568085722
+      ]
+    },
+    "late_graph_profiler": {
+      "geometric_mean_ratio": 1.3446689521203228,
+      "process_min": 1.340870584856829,
+      "process_max": 1.349645034918846,
+      "processes_above_one": 8,
+      "processes_below_one": 0,
+      "exploratory_whole_process_bootstrap_95pct": [
+        1.3429555779707234,
+        1.3465198708475181
+      ]
+    },
+    "late_graph_over_auto_profiler": {
+      "geometric_mean_ratio": 1.2589498419731429,
+      "process_min": 1.2371993789703464,
+      "process_max": 1.2803914536168917,
+      "processes_above_one": 8,
+      "processes_below_one": 0,
+      "exploratory_whole_process_bootstrap_95pct": [
+        1.2494212389582673,
+        1.2689161160319655
+      ]
+    }
+  },
+  "processes": [
+    {
+      "block": 0,
+      "raw_sha256": "7fd3aa92051d92b5eab19010b5059a49e066cdeaa7af5438d3dd7916644bcb6e",
+      "capture_order": "winner-first",
+      "profiler_objective_order": [
+        "auto",
+        "graph"
+      ],
+      "natural_tactic": -1,
+      "metrics": {
+        "original_history_profiler": 1.0337512385265795,
+        "layer_graph": 1.1583647309141136,
+        "late_auto_profiler": 1.0699288570914938,
+        "late_graph_profiler": 1.34503165884566,
+        "late_graph_over_auto_profiler": 1.2571225179419954
+      },
+      "layer_replay_order_strata": {
+        "winner": 1.1582030931524598,
+        "default": 1.1583647309141136
+      },
+      "late_pair_order_strata": {
+        "auto": {
+          "winner": 1.0712340306457322,
+          "default": 1.0655919836342094
+        },
+        "graph": {
+          "winner": 1.3489477683190576,
+          "default": 1.3427780085459526
+        }
+      },
+      "layer_per_role_median_us": {
+        "winner": 8.301000110805035,
+        "default": 7.168000098317862
+      },
+      "correctness_counts": {
+        "serving": 67,
+        "synthetic": 54
+      }
+    },
+    {
+      "block": 1,
+      "raw_sha256": "c4a6712a3f385fed360e39ae2d1186b77d13254e097bcd47bafd2d95d4a758cf",
+      "capture_order": "default-first",
+      "profiler_objective_order": [
+        "auto",
+        "graph"
+      ],
+      "natural_tactic": -1,
+      "metrics": {
+        "original_history_profiler": 1.0104101007077022,
+        "layer_graph": 1.2308449201388587,
+        "late_auto_profiler": 1.083795067835196,
+        "late_graph_profiler": 1.340870584856829,
+        "late_graph_over_auto_profiler": 1.2371993789703464
+      },
+      "layer_replay_order_strata": {
+        "winner": 1.2313091117481112,
+        "default": 1.2303467562453805
+      },
+      "late_pair_order_strata": {
+        "auto": {
+          "winner": 1.083795067835196,
+          "default": 1.0845081417572615
+        },
+        "graph": {
+          "winner": 1.3477179036631322,
+          "default": 1.340870584856829
+        }
+      },
+      "layer_per_role_median_us": {
+        "winner": 8.754999842494726,
+        "default": 7.114000152796507
+      },
+      "correctness_counts": {
+        "serving": 67,
+        "synthetic": 54
+      }
+    },
+    {
+      "block": 2,
+      "raw_sha256": "3e685de88bdfeab7b4e4bbaf440b59b4d920a906616bd0362bfe2a2ba2837479",
+      "capture_order": "winner-first",
+      "profiler_objective_order": [
+        "graph",
+        "auto"
+      ],
+      "natural_tactic": -1,
+      "metrics": {
+        "original_history_profiler": 1.1812373578404152,
+        "layer_graph": 1.1483436363447224,
+        "late_auto_profiler": 1.0801914901737462,
+        "late_graph_profiler": 1.3461699162096,
+        "late_graph_over_auto_profiler": 1.2462326619450332
+      },
+      "layer_replay_order_strata": {
+        "winner": 1.1485510413047997,
+        "default": 1.1482455383961783
+      },
+      "late_pair_order_strata": {
+        "graph": {
+          "winner": 1.3430696786744654,
+          "default": 1.3469683922466316
+        },
+        "auto": {
+          "winner": 1.082598087125704,
+          "default": 1.0801914901737462
+        }
+      },
+      "layer_per_role_median_us": {
+        "winner": 8.24700016528368,
+        "default": 7.177000166848302
+      },
+      "correctness_counts": {
+        "serving": 67,
+        "synthetic": 54
+      }
+    },
+    {
+      "block": 3,
+      "raw_sha256": "774873c89e57e03091b0bb549752b3d91e6d09a2cb9e93c96097a40d01cc6adc",
+      "capture_order": "default-first",
+      "profiler_objective_order": [
+        "graph",
+        "auto"
+      ],
+      "natural_tactic": -1,
+      "metrics": {
+        "original_history_profiler": 1.052338912154605,
+        "layer_graph": 1.2169085082950293,
+        "late_auto_profiler": 1.054087819085581,
+        "late_graph_profiler": 1.349645034918846,
+        "late_graph_over_auto_profiler": 1.2803914536168917
+      },
+      "layer_replay_order_strata": {
+        "winner": 1.219307998309017,
+        "default": 1.21623475139755
+      },
+      "late_pair_order_strata": {
+        "graph": {
+          "winner": 1.3470433641513493,
+          "default": 1.3529856121141495
+        },
+        "auto": {
+          "winner": 1.0532264159349034,
+          "default": 1.0579599708587966
+        }
+      },
+      "layer_per_role_median_us": {
+        "winner": 8.870000019669533,
+        "default": 7.290000095963478
+      },
+      "correctness_counts": {
+        "serving": 67,
+        "synthetic": 54
+      }
+    },
+    {
+      "block": 4,
+      "raw_sha256": "d8aedaeec27e690476c6cd931c282d5efa5b70b17592e9ac1a24d5173383ff78",
+      "capture_order": "winner-first",
+      "profiler_objective_order": [
+        "auto",
+        "graph"
+      ],
+      "natural_tactic": -1,
+      "metrics": {
+        "original_history_profiler": 1.0911238483016013,
+        "layer_graph": 1.160225721206908,
+        "late_auto_profiler": 1.0625361921586685,
+        "late_graph_profiler": 1.3422810366003861,
+        "late_graph_over_auto_profiler": 1.2632802971853436
+      },
+      "layer_replay_order_strata": {
+        "winner": 1.160480016088588,
+        "default": 1.159324684327609
+      },
+      "late_pair_order_strata": {
+        "auto": {
+          "winner": 1.0482364936874733,
+          "default": 1.0635747228616967
+        },
+        "graph": {
+          "winner": 1.3413488294629476,
+          "default": 1.343291122596875
+        }
+      },
+      "layer_per_role_median_us": {
+        "winner": 8.225999772548676,
+        "default": 7.084999931976199
+      },
+      "correctness_counts": {
+        "serving": 67,
+        "synthetic": 54
+      }
+    },
+    {
+      "block": 5,
+      "raw_sha256": "7c365ce0e0b1dbc0fdb72e5870b4546346104e414468ed59dee5c2c8fca0c3fa",
+      "capture_order": "default-first",
+      "profiler_objective_order": [
+        "auto",
+        "graph"
+      ],
+      "natural_tactic": -1,
+      "metrics": {
+        "original_history_profiler": 1.054274021755922,
+        "layer_graph": 1.2308126475010686,
+        "late_auto_profiler": 1.0741746715298994,
+        "late_graph_profiler": 1.342978851988402,
+        "late_graph_over_auto_profiler": 1.250242523476798
+      },
+      "layer_replay_order_strata": {
+        "winner": 1.2312883436996271,
+        "default": 1.2301955996540634
+      },
+      "late_pair_order_strata": {
+        "auto": {
+          "winner": 1.0913906876872916,
+          "default": 1.0709951929278523
+        },
+        "graph": {
+          "winner": 1.342978851988402,
+          "default": 1.3429133251575909
+        }
+      },
+      "layer_per_role_median_us": {
+        "winner": 8.74500023201108,
+        "default": 7.108000107109547
+      },
+      "correctness_counts": {
+        "serving": 67,
+        "synthetic": 54
+      }
+    },
+    {
+      "block": 6,
+      "raw_sha256": "a5c2f63561f241d74925ca9919af7ffd4591988552c700a9d643ac8514a9f578",
+      "capture_order": "winner-first",
+      "profiler_objective_order": [
+        "graph",
+        "auto"
+      ],
+      "natural_tactic": -1,
+      "metrics": {
+        "original_history_profiler": 1.0838731715193428,
+        "layer_graph": 1.1518020825034987,
+        "late_auto_profiler": 1.0506918997107562,
+        "late_graph_profiler": 1.3439768604115625,
+        "late_graph_over_auto_profiler": 1.2791350735468165
+      },
+      "layer_replay_order_strata": {
+        "winner": 1.1518020825034987,
+        "default": 1.1518573111362405
+      },
+      "late_pair_order_strata": {
+        "graph": {
+          "winner": 1.3479730543495463,
+          "default": 1.3418953595380148
+        },
+        "auto": {
+          "winner": 1.0535545194551394,
+          "default": 1.0496185434556982
+        }
+      },
+      "layer_per_role_median_us": {
+        "winner": 8.163999766111374,
+        "default": 7.078999886289239
+      },
+      "correctness_counts": {
+        "serving": 67,
+        "synthetic": 54
+      }
+    },
+    {
+      "block": 7,
+      "raw_sha256": "25e0a2988e37511025b8180e3f73e86d5ac3b1dd91ba3f839c46f9ab031d756d",
+      "capture_order": "default-first",
+      "profiler_objective_order": [
+        "graph",
+        "auto"
+      ],
+      "natural_tactic": -1,
+      "metrics": {
+        "original_history_profiler": 1.1027026997264162,
+        "layer_graph": 1.2364395575842009,
+        "late_auto_profiler": 1.0697491642009873,
+        "late_graph_profiler": 1.3464176186088181,
+        "late_graph_over_auto_profiler": 1.2586292784014268
+      },
+      "layer_replay_order_strata": {
+        "winner": 1.2365382217462935,
+        "default": 1.2363813968829835
+      },
+      "late_pair_order_strata": {
+        "graph": {
+          "winner": 1.3449080597373197,
+          "default": 1.348379637898247
+        },
+        "auto": {
+          "winner": 1.0846550827801442,
+          "default": 1.062373606782354
+        }
+      },
+      "layer_per_role_median_us": {
+        "winner": 8.8900001719594,
+        "default": 7.190999807789922
+      },
+      "correctness_counts": {
+        "serving": 67,
+        "synthetic": 54
+      }
+    }
+  ],
+  "natural_winner_counts": {
+    "default": 8,
+    "fixed_explicit": 0,
+    "other_explicit": 0
+  },
+  "layer_pair_signs": {
+    "explicit_slower": 192
+  },
+  "late_pair_signs": {
+    "auto:explicit_slower": 94,
+    "graph:explicit_slower": 96,
+    "auto:explicit_faster": 2
+  },
+  "queue_outcomes": {
+    "start_pending_after_enqueue": 384
+  },
+  "capture_order_association": {
+    "winner-first": {
+      "n": 4,
+      "layer_graph_geometric_mean": 1.1546739968448059,
+      "layer_default_median_us_range": [
+        7.078999886289239,
+        7.177000166848302
+      ],
+      "layer_fixed_median_us_range": [
+        8.163999766111374,
+        8.301000110805035
+      ]
+    },
+    "default-first": {
+      "n": 4,
+      "layer_graph_geometric_mean": 1.2287301831489772,
+      "layer_default_median_us_range": [
+        7.108000107109547,
+        7.290000095963478
+      ],
+      "layer_fixed_median_us_range": [
+        8.74500023201108,
+        8.8900001719594
+      ]
+    }
+  },
+  "profiler_objective_order_association": {
+    "auto": {
+      "late_auto_profiler": 1.072581193295819,
+      "late_graph_profiler": 1.3427896950891733,
+      "layer_graph": 1.1945264640997177
+    },
+    "graph": {
+      "late_auto_profiler": 1.0636132074215061,
+      "late_graph_profiler": 1.3465508392036705,
+      "layer_graph": 1.1877365920810954
+    }
+  },
+  "trace_signatures_equal_across_all_eight_processes": true,
+  "serving_trace_signatures": {
+    "winner": [
+      {
+        "name": "_static_quant_fp8",
+        "device": 0,
+        "grid": [
+          144,
+          1,
+          1
+        ],
+        "block": [
+          128,
+          1,
+          1
+        ],
+        "registers per thread": 25,
+        "shared memory": 0
+      },
+      {
+        "name": "nvjet_sm90_qqtst_128x64_128x8_1x2_h_bz_TNT",
+        "device": 0,
+        "grid": [
+          2,
+          64,
+          1
+        ],
+        "block": [
+          384,
+          1,
+          1
+        ],
+        "registers per thread": 168,
+        "shared memory": 213268
+      }
+    ],
+    "default": [
+      {
+        "name": "_static_quant_fp8",
+        "device": 0,
+        "grid": [
+          144,
+          1,
+          1
+        ],
+        "block": [
+          128,
+          1,
+          1
+        ],
+        "registers per thread": 25,
+        "shared memory": 0
+      },
+      {
+        "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+        "device": 0,
+        "grid": [
+          2,
+          64,
+          1
+        ],
+        "block": [
+          384,
+          1,
+          1
+        ],
+        "registers per thread": 168,
+        "shared memory": 225652
+      }
+    ]
+  },
+  "native_library_sha256": {
+    "gemm": [
+      "72690cacca4ce1d69ccaa6b9190475483d984bd58de0962d06c874c801c678d6"
+    ],
+    "trtllm_utils": [
+      "e442a689064fe3af4ab46510b2d5aaf3597b072949b84f13d14e9e53352109e4"
+    ]
+  },
+  "historical_gemm_library_sha256": "20fb6a5cf2579332d784585caa9785f46a7a8f7306040dfe30b3acc76b764f9d",
+  "findings": [
+    "The fixed historical descriptor remains slower than default in the actual retained SGLang layer graphs: all192 paired ratios exceed1, including both replay-order strata. Its physical GEMM launch signature differs from the default while quantizer signature matches.",
+    "The historical false-win did not recur: natural startup selected default in all8 processes, and the original fixed/default profiler contrast favored default in all8.",
+    "Late auto and explicit graph profiling agree on the slower candidate; graph profiling separates it more strongly. Both modes therefore have the same correct fixed-pair ranking in this cohort. No policy-driven serving improvement was demonstrated.",
+    "Capture-order association is substantial despite identical observed launch signatures: fixed-graph medians are about8.16\u20138.30us when captured first versus8.75\u20138.89us when captured second; default is about7.08\u20137.29us. This is an order/allocation/history association, not a proven capture mechanism.",
+    "Late profiler objective-block order changes little relative to the measured fixed-pair gaps; comparisons remain post-graph history diagnostics on synthetic values, not reproductions of the original historical measurement window.",
+    "Current GEMM ELF differs from the historical counterexample artifact, although qualified source contract and dependencies are pinned. ELF hashes can differ for build metadata/path reasons; this alone neither proves a runtime code change nor permits claiming byte-identical historical reproduction."
+  ],
+  "limitations": [
+    "One fixed input fixture, one candidate pair, same GPU and contiguous eight processes. Exploratory intervals resample processes, not rounds; no rare-error-rate, population or full-model serving claim.",
+    "Retaining profiling tensors extends allocation lifetime; shadow profiler preparation and numerical/reference work alter later history. Auto and graph objective blocks are sequential with balanced order, not simultaneous.",
+    "Synthetic profiler activations differ from serving captured activations; serving replay also includes quantization. Cross-domain absolute ratios do not isolate objective alone.",
+    "Post-timing native acceptance on exact captured/synthetic operands proves descriptor acceptance there; serving traces do not directly observe each timed profiler invocation.",
+    "NaN/output checks surround a full profiler invocation including warmups; they do not independently validate every inner timed iteration.",
+    "Capture-order subgroup is n4 per group and confounded with that declared capture/allocation/history bundle. Identical grid/block/register/shared signatures do not establish identical device execution conditions."
+  ],
+  "next_smallest_action": {
+    "recommendation": "Record this cohort and prepare a source-only design/CPU proof for a benchmark-only balanced confirmation of an explicit finalist against default; do not change production winner selection or force graph policy from this result.",
+    "why": "The slow fixed candidate is verified, but the current original search already rejects it8/8; this experiment does not reproduce the rare false-win mechanism. A confirmation design can test a concrete safeguard without claiming the current selector is uniformly wrong.",
+    "boundary": "No new GPU run is required to complete this checkpoint. If a confirmation experiment is later authorized, preregister its history and preserve first-pass winners; never add performance-conditioned retries or discard neutral outcomes.",
+    "capture_effect": "Do not chase the capture-order association merely to refine a speedup claim: the ranking is unchanged in both capture orders. Investigate it only if a later decision requires precise magnitude or comparable subpercent effects."
+  },
+  "reproducibility": {
+    "script_sha256": "bc3719e5981dd2450e6c94343556be8fe467e406c2964dfc0755989971e44668",
+    "bootstrap_replicates": 100000,
+    "seed": 202610262200,
+    "quantile": "linear type7",
+    "official_imported": false
+  }
+}

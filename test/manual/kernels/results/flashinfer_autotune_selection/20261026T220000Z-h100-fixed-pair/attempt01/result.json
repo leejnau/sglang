@@ -1,0 +1,201 @@
+{
+  "status": "completed_all_prespecified_workers",
+  "scope": "Research diagnostic using the actual FlashInfer profiler and SGLang FP8 layer wrapper; no production changes or PR.",
+  "execution_commit": "a21cdf4ee624ebdb00b5d0e911ddbe3fd4648cfe",
+  "independent_unit": "fresh process; n=8 on one H100 NVL with one fixed fixture and candidate pair",
+  "allocation": "2861566",
+  "allocation_release_status": "confirmed cancelled; empty user queue at 2026-10-26T22:24:19Z",
+  "admission_workers": 1,
+  "timing_workers": 8,
+  "startup_profile_measurements_per_worker": 81,
+  "late_profile_measurements_per_worker": 48,
+  "graph_paired_rounds_per_timing_worker": 24,
+  "total_graph_pairs": 192,
+  "retained_graph_samples": 384,
+  "excluded_graph_samples": 0,
+  "admission_numerical_checks": 73,
+  "timing_numerical_checks": 968,
+  "cpu_controls": {
+    "worker": 45,
+    "analyzer": 51,
+    "launcher": 8,
+    "total": 104
+  },
+  "validation": {
+    "frozen_admission_analyzer": "passed",
+    "frozen_cohort_analyzer": "passed",
+    "admission_provenance_checks": 725,
+    "full_provenance_checks": 5542,
+    "independent_arithmetic": "matched all process estimates and bootstrap intervals",
+    "independent_publication_checks": 2282,
+    "result_repository_hooks": "all applicable hooks passed; precommit-results.txt",
+    "final_artifact_integrity": "all JSON parsed; source/report/archive hashes verified; decompressed paths/payloads scanned; file-size check passed"
+  },
+  "natural_default_winners": 8,
+  "natural_fixed_descriptor_winners": 0,
+  "ratio_definition": "fixed historical explicit descriptor time / default tactic -1 time; above one means fixed descriptor slower",
+  "metrics": {
+    "original_history_profiler": {
+      "processes": 8,
+      "geometric_mean_ratio": 1.075124782574411,
+      "min": 1.0104101007077022,
+      "max": 1.1812373578404152,
+      "below_one": 0,
+      "above_one": 8,
+      "equal_one": 0,
+      "exploratory_process_bootstrap_95pct": [
+        1.0445710007301692,
+        1.1113466762121056
+      ]
+    },
+    "layer_graph": {
+      "processes": 8,
+      "geometric_mean_ratio": 1.1911266899958541,
+      "min": 1.1483436363447224,
+      "max": 1.2364395575842009,
+      "below_one": 0,
+      "above_one": 8,
+      "equal_one": 0,
+      "exploratory_process_bootstrap_95pct": [
+        1.1644978041598646,
+        1.2181200536230672
+      ]
+    },
+    "late_auto_profiler": {
+      "processes": 8,
+      "geometric_mean_ratio": 1.0680877881622617,
+      "min": 1.0506918997107562,
+      "max": 1.083795067835196,
+      "below_one": 0,
+      "above_one": 8,
+      "equal_one": 0,
+      "exploratory_process_bootstrap_95pct": [
+        1.0603426934181615,
+        1.0755210568085722
+      ]
+    },
+    "late_graph_profiler": {
+      "processes": 8,
+      "geometric_mean_ratio": 1.3446689521203228,
+      "min": 1.340870584856829,
+      "max": 1.349645034918846,
+      "below_one": 0,
+      "above_one": 8,
+      "equal_one": 0,
+      "exploratory_process_bootstrap_95pct": [
+        1.3429555779707234,
+        1.3465198708475181
+      ]
+    },
+    "late_graph_over_auto_profiler": {
+      "processes": 8,
+      "geometric_mean_ratio": 1.2589498419731429,
+      "min": 1.2371993789703464,
+      "max": 1.2803914536168917,
+      "below_one": 0,
+      "above_one": 8,
+      "equal_one": 0,
+      "exploratory_process_bootstrap_95pct": [
+        1.2494212389582673,
+        1.2689161160319655
+      ]
+    }
+  },
+  "exploratory_capture_order": {
+    "winner-first": {
+      "processes": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "geometric_mean_ratio": 1.1546739968448059,
+      "min": 1.1483436363447224,
+      "max": 1.160225721206908
+    },
+    "default-first": {
+      "processes": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "geometric_mean_ratio": 1.2287301831489772,
+      "min": 1.2169085082950293,
+      "max": 1.2364395575842009
+    }
+  },
+  "native_library_sha256": {
+    "gemm": [
+      "72690cacca4ce1d69ccaa6b9190475483d984bd58de0962d06c874c801c678d6"
+    ],
+    "trtllm_utils": [
+      "e442a689064fe3af4ab46510b2d5aaf3597b072949b84f13d14e9e53352109e4"
+    ]
+  },
+  "historical_gemm_library_sha256": "20fb6a5cf2579332d784585caa9785f46a7a8f7306040dfe30b3acc76b764f9d",
+  "native_identity_limit": "Rebuilt GEMM ELF differs from historical bytes; translation-unit sources and compiler commands match after runtime-cache path normalization. Same new native artifacts across all nine workers. Not byte-identical historical execution.",
+  "findings": [
+    "The fixed historical descriptor remains slower than default in the actual retained SGLang layer graphs: all192 paired ratios exceed1, including both replay-order strata. Its physical GEMM launch signature differs from the default while quantizer signature matches.",
+    "The historical false-win did not recur: natural startup selected default in all8 processes, and the original fixed/default profiler contrast favored default in all8.",
+    "Late auto and explicit graph profiling agree on the slower candidate; graph profiling separates it more strongly. Both modes therefore have the same correct fixed-pair ranking in this cohort. No policy-driven serving improvement was demonstrated.",
+    "Capture-order association is substantial despite identical observed launch signatures: fixed-graph medians are about8.16\u20138.30us when captured first versus8.75\u20138.89us when captured second; default is about7.08\u20137.29us. This is an order/allocation/history association, not a proven capture mechanism.",
+    "Late profiler objective-block order changes little relative to the measured fixed-pair gaps; comparisons remain post-graph history diagnostics on synthetic values, not reproductions of the original historical measurement window.",
+    "Current GEMM ELF differs from the historical counterexample artifact, although qualified source contract and dependencies are pinned. ELF hashes can differ for build metadata/path reasons; this alone neither proves a runtime code change nor permits claiming byte-identical historical reproduction."
+  ],
+  "limitations": [
+    "One fixed input fixture, one candidate pair, same GPU and contiguous eight processes. Exploratory intervals resample processes, not rounds; no rare-error-rate, population or full-model serving claim.",
+    "Retaining profiling tensors extends allocation lifetime; shadow profiler preparation and numerical/reference work alter later history. Auto and graph objective blocks are sequential with balanced order, not simultaneous.",
+    "Synthetic profiler activations differ from serving captured activations; serving replay also includes quantization. Cross-domain absolute ratios do not isolate objective alone.",
+    "Post-timing native acceptance on exact captured/synthetic operands proves descriptor acceptance there; serving traces do not directly observe each timed profiler invocation.",
+    "NaN/output checks surround a full profiler invocation including warmups; they do not independently validate every inner timed iteration.",
+    "Capture-order subgroup is n4 per group and confounded with that declared capture/allocation/history bundle. Identical grid/block/register/shared signatures do not establish identical device execution conditions."
+  ],
+  "next_action": {
+    "recommendation": "Record this cohort and prepare a source-only design/CPU proof for a benchmark-only balanced confirmation of an explicit finalist against default; do not change production winner selection or force graph policy from this result.",
+    "why": "The slow fixed candidate is verified, but the current original search already rejects it8/8; this experiment does not reproduce the rare false-win mechanism. A confirmation design can test a concrete safeguard without claiming the current selector is uniformly wrong.",
+    "boundary": "No new GPU run is required to complete this checkpoint. If a confirmation experiment is later authorized, preregister its history and preserve first-pass winners; never add performance-conditioned retries or discard neutral outcomes.",
+    "capture_effect": "Do not chase the capture-order association merely to refine a speedup claim: the ranking is unchanged in both capture orders. Investigate it only if a later decision requires precise magnitude or comparable subpercent effects."
+  },
+  "private_archives": [
+    {
+      "name": "20261026T220000Z-h100-fixed-pair-attempt01-admission-full-raw.tgz",
+      "sha256": "5a29d2de2a06fdcecb889f08492c53094eb1ced69ba6f150297a90503b887f19",
+      "bytes": 11242967
+    },
+    {
+      "name": "20261026T220000Z-h100-fixed-pair-attempt01-timing-full-raw.tgz",
+      "sha256": "84e44c807d2a897723e793eeb0dd676d1c254491fdf2c95149511953ee4272f5",
+      "bytes": 12703176
+    }
+  ],
+  "private_preservation": "Both full raw archives downloaded locally and stored under /home/lnau/flashinfer-autotune-study on the cluster; SHA256 checked at both locations.",
+  "public_archive": {
+    "file": "raw-public.tar.gz",
+    "sha256": "e458098e5bba7d35f7259dcb95f24b569c518cb231ed6f9ff0ce7fdb8b232342",
+    "bytes": 732398,
+    "manifest": "public-manifest.json",
+    "transformation": "Only nine bootstrap inventories have six unrelated entries omitted each; all result JSON, traces and measurement values are byte-exact. Binary fixtures/native artifacts remain private with hashes retained."
+  },
+  "evidence_sha256": {
+    "raw-public.tar.gz": "e458098e5bba7d35f7259dcb95f24b569c518cb231ed6f9ff0ce7fdb8b232342",
+    "public-manifest.json": "2189e622b62d8c2cba54d59f05aee6d2e871280c6a55d23474b108e51f62feaf",
+    "package-audit.json": "ec682d628abbc1118e7101c478e34c76a8f8fd15e957e600d45f3025d6803c70",
+    "admission-analysis.json": "372372793ba418bfcc720fca6d5c6a7b8fb8fd8874f00afaf5994b649b6618c4",
+    "timing-analysis.json": "dbe35454a1016565a19d2a4da505f75d56b043d0b55978d341af48aada5e5742",
+    "secondary-observations.json": "f147ddfec687544b1f5bb4720b6d428b30794fc7ebcfb92eef63d2a3f139463f",
+    "interpretation.json": "0de4e4f63f1ffc1b3e50613c93fee04788528ba868305d80ff6f911a5b58c467",
+    "admission-outer-audit.json": "62b202590846add4164ed52b649f7cb5bef3f990be6057369ac7dd33a6686869",
+    "timing-outer-audit.json": "e49d6923c1764c307174a241bbfb5666fc4e3b60efa8e89361ddf39221397e24",
+    "publication-independent-audit.json": "ca465fe692777c7a1dfd3ce3a02e7e53a57fb1eec65804f3881492252e9a2055",
+    "independent-audits.tar.gz": "e44ff3968e0872b80212efa5c4d3275870608ca36abefd2e6c7ab0938768b0cc",
+    "independent-audits-index.json": "4f50fbe086b467b1e6ed04bc4f0eb7aed256eb258b4925234669c66bd85c3fe9",
+    "reproduction.json": "db27c46fc506827c3befa6fffce0d745ac24942b7e6ef087cfcf22885ed7df65",
+    "precommit-results.txt": "54961a7440640572339ad40323a3b50e3337aca284c6b81b461049212c40cefb"
+  },
+  "no_serving_performance_claim": true,
+  "no_new_production_policy_justified": true,
+  "allocation_released": true,
+  "allocation_elapsed": "00:13:19",
+  "resource_evidence": "independent-audits.tar.gz contains exact allocation-state.txt and resource-release.txt"
+}

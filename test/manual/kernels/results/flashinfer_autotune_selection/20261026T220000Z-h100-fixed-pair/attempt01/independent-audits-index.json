@@ -1,0 +1,17 @@
+{
+  "archive_sha256": "e44ff3968e0872b80212efa5c4d3275870608ca36abefd2e6c7ab0938768b0cc",
+  "files": {
+    "audit_outer.py": "eb702721561a6b8b1e0f1c2c663055636dfa8dad7ded600f3f3c8f753e176beb",
+    "audit_public.py": "901e14e7e1e827ed0fcd5081d4440991b0bf8d0d8ef7fa0181cab8df07d40648",
+    "interpret_fixed_pair.py": "bc3719e5981dd2450e6c94343556be8fe467e406c2964dfc0755989971e44668",
+    "package_results.py": "7324863cb8598251d977dfdb71102621562ee828deb0ab50fdc1ad1cd97bd33c",
+    "allocation-state.txt": "f32b83fe27aaa28e20e3f55de975853e5aecc0dfd89f695ab2be43f7ad8d8648",
+    "resource-release.txt": "09162052d8153791967120b0a1e27ef297daf0af48f8c538dead78b54a464653"
+  },
+  "dependencies": {
+    "audit_outer.py": "Python standard library plus source checkout at frozen execution commit; native validator is prior result 20261024T180000Z-h100-objective-values/analyze.py already in branch; also requires private native/fixture evidence and exact prior bootstrap. See reproduction.json.",
+    "audit_public.py": "Python standard library only. Requires full private archive, public staging, and original packager bytes for hash verification; packager is not executed by this auditor.",
+    "interpret_fixed_pair.py": "Python standard library only, full worker/trace/bootstrap artifacts and official timing-analysis.json; no import of official analyzer."
+  },
+  "note": "Text resource evidence is archived byte-exact to preserve its hash and original whitespace."
+}

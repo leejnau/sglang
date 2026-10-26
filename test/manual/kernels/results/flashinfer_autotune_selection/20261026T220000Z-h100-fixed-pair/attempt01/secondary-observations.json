@@ -1,0 +1,319 @@
+{
+  "status": "observed",
+  "analysis_sha256": "dbe35454a1016565a19d2a4da505f75d56b043d0b55978d341af48aada5e5742",
+  "exploratory_only": true,
+  "new_measurements": false,
+  "natural_default_winners": 8,
+  "historical_wrong_sign_recurred": false,
+  "numerical_checks_passed": 968,
+  "queued_samples_all_retained": 384,
+  "capture_order_strata": {
+    "winner-first": {
+      "processes": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "geometric_mean_ratio": 1.1546739968448059,
+      "min": 1.1483436363447224,
+      "max": 1.160225721206908
+    },
+    "default-first": {
+      "processes": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "geometric_mean_ratio": 1.2287301831489772,
+      "min": 1.2169085082950293,
+      "max": 1.2364395575842009
+    }
+  },
+  "unique_trace_signatures_per_role": {
+    "winner": 1,
+    "default": 1
+  },
+  "synthetic_hashes_identical_across_processes": true,
+  "process_observations": [
+    {
+      "block": 0,
+      "raw_sha256": "7fd3aa92051d92b5eab19010b5059a49e066cdeaa7af5438d3dd7916644bcb6e",
+      "capture_order": "winner-first",
+      "numeric_checks": 121,
+      "graph_separate_median_us": {
+        "winner": 8.301000110805035,
+        "default": 7.168000098317862
+      },
+      "retained_synthetic_read_hashes": [
+        "4ea2df954b1f579d75038721f8ca796c11e8d899761d3dffd06d7f62857b63e3",
+        "f03d6e67c858d364c82a0c2b291836d290883711500944119e2a4104031cec6e",
+        "d90c7167bcc08674b3f2b333abf733cb676d2c42b6a59de6389c4f29558a1a07",
+        "3be9ce3eb8c6fe885b92b4481ce3cb14f0af2e2946ffbb1580d02b63de592d3d"
+      ],
+      "graph_operand_alignment_mod4096": {
+        "winner": [
+          0,
+          0,
+          0,
+          512,
+          0,
+          0
+        ],
+        "default": [
+          0,
+          0,
+          0,
+          512,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "block": 1,
+      "raw_sha256": "c4a6712a3f385fed360e39ae2d1186b77d13254e097bcd47bafd2d95d4a758cf",
+      "capture_order": "default-first",
+      "numeric_checks": 121,
+      "graph_separate_median_us": {
+        "winner": 8.754999842494726,
+        "default": 7.114000152796507
+      },
+      "retained_synthetic_read_hashes": [
+        "4ea2df954b1f579d75038721f8ca796c11e8d899761d3dffd06d7f62857b63e3",
+        "f03d6e67c858d364c82a0c2b291836d290883711500944119e2a4104031cec6e",
+        "d90c7167bcc08674b3f2b333abf733cb676d2c42b6a59de6389c4f29558a1a07",
+        "3be9ce3eb8c6fe885b92b4481ce3cb14f0af2e2946ffbb1580d02b63de592d3d"
+      ],
+      "graph_operand_alignment_mod4096": {
+        "default": [
+          0,
+          0,
+          0,
+          512,
+          0,
+          0
+        ],
+        "winner": [
+          0,
+          0,
+          0,
+          512,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "block": 2,
+      "raw_sha256": "3e685de88bdfeab7b4e4bbaf440b59b4d920a906616bd0362bfe2a2ba2837479",
+      "capture_order": "winner-first",
+      "numeric_checks": 121,
+      "graph_separate_median_us": {
+        "winner": 8.24700016528368,
+        "default": 7.177000166848302
+      },
+      "retained_synthetic_read_hashes": [
+        "4ea2df954b1f579d75038721f8ca796c11e8d899761d3dffd06d7f62857b63e3",
+        "f03d6e67c858d364c82a0c2b291836d290883711500944119e2a4104031cec6e",
+        "d90c7167bcc08674b3f2b333abf733cb676d2c42b6a59de6389c4f29558a1a07",
+        "3be9ce3eb8c6fe885b92b4481ce3cb14f0af2e2946ffbb1580d02b63de592d3d"
+      ],
+      "graph_operand_alignment_mod4096": {
+        "winner": [
+          0,
+          0,
+          0,
+          512,
+          0,
+          0
+        ],
+        "default": [
+          0,
+          0,
+          0,
+          512,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "block": 3,
+      "raw_sha256": "774873c89e57e03091b0bb549752b3d91e6d09a2cb9e93c96097a40d01cc6adc",
+      "capture_order": "default-first",
+      "numeric_checks": 121,
+      "graph_separate_median_us": {
+        "winner": 8.870000019669533,
+        "default": 7.290000095963478
+      },
+      "retained_synthetic_read_hashes": [
+        "4ea2df954b1f579d75038721f8ca796c11e8d899761d3dffd06d7f62857b63e3",
+        "f03d6e67c858d364c82a0c2b291836d290883711500944119e2a4104031cec6e",
+        "d90c7167bcc08674b3f2b333abf733cb676d2c42b6a59de6389c4f29558a1a07",
+        "3be9ce3eb8c6fe885b92b4481ce3cb14f0af2e2946ffbb1580d02b63de592d3d"
+      ],
+      "graph_operand_alignment_mod4096": {
+        "default": [
+          0,
+          0,
+          0,
+          512,
+          0,
+          0
+        ],
+        "winner": [
+          0,
+          0,
+          0,
+          512,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "block": 4,
+      "raw_sha256": "d8aedaeec27e690476c6cd931c282d5efa5b70b17592e9ac1a24d5173383ff78",
+      "capture_order": "winner-first",
+      "numeric_checks": 121,
+      "graph_separate_median_us": {
+        "winner": 8.225999772548676,
+        "default": 7.084999931976199
+      },
+      "retained_synthetic_read_hashes": [
+        "4ea2df954b1f579d75038721f8ca796c11e8d899761d3dffd06d7f62857b63e3",
+        "f03d6e67c858d364c82a0c2b291836d290883711500944119e2a4104031cec6e",
+        "d90c7167bcc08674b3f2b333abf733cb676d2c42b6a59de6389c4f29558a1a07",
+        "3be9ce3eb8c6fe885b92b4481ce3cb14f0af2e2946ffbb1580d02b63de592d3d"
+      ],
+      "graph_operand_alignment_mod4096": {
+        "winner": [
+          0,
+          0,
+          0,
+          512,
+          0,
+          0
+        ],
+        "default": [
+          0,
+          0,
+          0,
+          512,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "block": 5,
+      "raw_sha256": "7c365ce0e0b1dbc0fdb72e5870b4546346104e414468ed59dee5c2c8fca0c3fa",
+      "capture_order": "default-first",
+      "numeric_checks": 121,
+      "graph_separate_median_us": {
+        "winner": 8.74500023201108,
+        "default": 7.108000107109547
+      },
+      "retained_synthetic_read_hashes": [
+        "4ea2df954b1f579d75038721f8ca796c11e8d899761d3dffd06d7f62857b63e3",
+        "f03d6e67c858d364c82a0c2b291836d290883711500944119e2a4104031cec6e",
+        "d90c7167bcc08674b3f2b333abf733cb676d2c42b6a59de6389c4f29558a1a07",
+        "3be9ce3eb8c6fe885b92b4481ce3cb14f0af2e2946ffbb1580d02b63de592d3d"
+      ],
+      "graph_operand_alignment_mod4096": {
+        "default": [
+          0,
+          0,
+          0,
+          512,
+          0,
+          0
+        ],
+        "winner": [
+          0,
+          0,
+          0,
+          512,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "block": 6,
+      "raw_sha256": "a5c2f63561f241d74925ca9919af7ffd4591988552c700a9d643ac8514a9f578",
+      "capture_order": "winner-first",
+      "numeric_checks": 121,
+      "graph_separate_median_us": {
+        "winner": 8.163999766111374,
+        "default": 7.078999886289239
+      },
+      "retained_synthetic_read_hashes": [
+        "4ea2df954b1f579d75038721f8ca796c11e8d899761d3dffd06d7f62857b63e3",
+        "f03d6e67c858d364c82a0c2b291836d290883711500944119e2a4104031cec6e",
+        "d90c7167bcc08674b3f2b333abf733cb676d2c42b6a59de6389c4f29558a1a07",
+        "3be9ce3eb8c6fe885b92b4481ce3cb14f0af2e2946ffbb1580d02b63de592d3d"
+      ],
+      "graph_operand_alignment_mod4096": {
+        "winner": [
+          0,
+          0,
+          0,
+          512,
+          0,
+          0
+        ],
+        "default": [
+          0,
+          0,
+          0,
+          512,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "block": 7,
+      "raw_sha256": "25e0a2988e37511025b8180e3f73e86d5ac3b1dd91ba3f839c46f9ab031d756d",
+      "capture_order": "default-first",
+      "numeric_checks": 121,
+      "graph_separate_median_us": {
+        "winner": 8.8900001719594,
+        "default": 7.190999807789922
+      },
+      "retained_synthetic_read_hashes": [
+        "4ea2df954b1f579d75038721f8ca796c11e8d899761d3dffd06d7f62857b63e3",
+        "f03d6e67c858d364c82a0c2b291836d290883711500944119e2a4104031cec6e",
+        "d90c7167bcc08674b3f2b333abf733cb676d2c42b6a59de6389c4f29558a1a07",
+        "3be9ce3eb8c6fe885b92b4481ce3cb14f0af2e2946ffbb1580d02b63de592d3d"
+      ],
+      "graph_operand_alignment_mod4096": {
+        "default": [
+          0,
+          0,
+          0,
+          512,
+          0,
+          0
+        ],
+        "winner": [
+          0,
+          0,
+          0,
+          512,
+          0,
+          0
+        ]
+      }
+    }
+  ],
+  "interpretation": [
+    "The explicit descriptor lost to default under original startup, both later profiler objectives, and full-layer replay in all eight processes. The historical profile ranking inversion did not recur in this bounded cohort.",
+    "Capture-order groups have disjoint full-layer ratio ranges, while within-round pair-order medians are close. This is an exploratory association, not a controlled identification of allocation/capture causes.",
+    "Graph and auto profiler gaps differ in magnitude; both rank this pair correctly here. The profiler and full-layer graph differ in measured span and activation values. No universal policy superiority or serving-speedup claim follows.",
+    "Postgraph synthetic bytes and per-role graph signatures agree across processes. Retained input lifetime remains a declared intervention relative to historical execution."
+  ]
+}

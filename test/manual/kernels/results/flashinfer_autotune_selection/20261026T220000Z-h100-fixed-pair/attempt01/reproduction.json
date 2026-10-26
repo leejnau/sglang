@@ -1,0 +1,22 @@
+{
+  "scope": "Offline reproducibility; do not allocate or rerun GPU experiments to verify these reports.",
+  "execution_checkout": "a21cdf4ee624ebdb00b5d0e911ddbe3fd4648cfe",
+  "batch": "test/manual/kernels/results/flashinfer_autotune_selection/20261026T220000Z-h100-fixed-pair",
+  "extract_tools": "Extract independent-audits.tar.gz to <tools>. The source helper from the prior batch is already present in the frozen checkout.",
+  "private_raw": "Extract the full timing archive to <private>/attempt01; use the original private admission archive for the admission-only outer report.",
+  "public_raw": "Extract raw-public.tar.gz into <public>; it contains raw/ and its embedded public-manifest.json. Publication checking also needs the separately published manifest beside raw/.",
+  "prior_bootstrap": {
+    "member": "attempt03/block0-auto_synthetic-timing.bootstrap.json",
+    "archive_sha256": "e972e9fa9abc02f841867b6e2921e11825c926ff3a337d5efc210ce54c0d7ddb",
+    "member_sha256": "3faa45240c52fb84edfff1b9ff9ecb0b99d1c000c6e7355714483fbbeaa4f3ba",
+    "requirement": "Original complete inventory from the earlier private objective-values archive; public inventory-only derivation cannot reproduce exact provenance checks."
+  },
+  "commands": [
+    "python3 <batch>/analyzer.py --plan <batch>/plan.json --schedule <batch>/schedule.json --historical-contract <batch>/historical-contract.json --raw-root <private>/attempt01 --worker <checkout>/test/manual/kernels/bench_flashinfer_fixed_pair.py --output <new-timing-analysis.json>",
+    "python3 <tools>/audit_outer.py --raw-root <private>/attempt01 --source-root <frozen-checkout> --prior-bootstrap <prior-original-bootstrap.json> --allocation-evidence <tools>/allocation-state.txt --phase timing --output <new-outer-audit.json>",
+    "python3 <tools>/interpret_fixed_pair.py --raw <private>/attempt01 --official <timing-analysis.json> --output <new-interpretation.json>",
+    "python3 <tools>/audit_public.py --raw-root <private>/attempt01 --private-archive <timing-full-raw.tgz> --public <public> --packager <tools>/package_results.py --expected-private-sha 84e44c807d2a897723e793eeb0dd676d1c254491fdf2c95149511953ee4272f5 --expected-public-sha e458098e5bba7d35f7259dcb95f24b569c518cb231ed6f9ff0ce7fdb8b232342 --output <new-publication-audit.json>"
+  ],
+  "report_identity": "Output paths must be fresh; auditors reject overwrite. Reports bind the original source/inputs by SHA256. Preserve the exact archived scripts rather than reformatting them.",
+  "private_scope": "Full binary/native/fixture evidence remains in original private archives; public results support measurement reanalysis but do not substitute for every native/import provenance dependency."
+}
