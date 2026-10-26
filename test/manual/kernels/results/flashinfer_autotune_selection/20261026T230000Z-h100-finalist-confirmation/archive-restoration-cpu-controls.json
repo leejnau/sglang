@@ -1,0 +1,82 @@
+{
+  "status": "passed",
+  "helper_sha256": "6a186b40c153396bad48d92314c7747ace8ad78d1f717b999c8c5b7b581ac6cc",
+  "control_sha256": "9ea514242e175f69aae09ef1442f083a32c35e2a848e0bc22f647ddd0ac3672a",
+  "checks": {
+    "actual_cache_restored": "passed",
+    "changed_elf_rejected": "passed"
+  },
+  "positive_result": {
+    "status": "passed",
+    "method": "archive bytes unchanged; restore eight object timestamps from deps and reconstruct two library timestamps from build logs",
+    "archive_sha256": "84e44c807d2a897723e793eeb0dd676d1c254491fdf2c95149511953ee4272f5",
+    "preservation_manifest_sha256": "40e684976202ae6eca47e462e5da92efa35ccd2fa4cf1ccaaa8db0716936b6df",
+    "files_verified": 28,
+    "source_mtimes_modified": false,
+    "native_bytes_modified": false,
+    "changes": [
+      {
+        "path": "runtime-attempt01/cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/gemm/csrc_flashinfer_gemm_binding.cuda.o",
+        "old_mtime_ns": 1793052668000000000,
+        "new_mtime_ns": 1793052668880055669,
+        "basis": "exact object timestamp stored in unchanged .ninja_deps"
+      },
+      {
+        "path": "runtime-attempt01/cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/gemm/csrc_bmm_fp8.cuda.o",
+        "old_mtime_ns": 1793052669000000000,
+        "new_mtime_ns": 1793052669852055900,
+        "basis": "exact object timestamp stored in unchanged .ninja_deps"
+      },
+      {
+        "path": "runtime-attempt01/cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/gemm/csrc_group_gemm.cuda.o",
+        "old_mtime_ns": 1793052684000000000,
+        "new_mtime_ns": 1793052684137059295,
+        "basis": "exact object timestamp stored in unchanged .ninja_deps"
+      },
+      {
+        "path": "runtime-attempt01/cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/gemm/gemm.so",
+        "old_mtime_ns": 1793052684000000000,
+        "new_mtime_ns": 1793052684146059297,
+        "basis": "reconstructed library filesystem timestamp from .ninja_log; not claimed original stat timestamp"
+      },
+      {
+        "path": "runtime-attempt01/cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/trtllm_utils/common_stringUtils.o",
+        "old_mtime_ns": 1793052684000000000,
+        "new_mtime_ns": 1793052684628059412,
+        "basis": "exact object timestamp stored in unchanged .ninja_deps"
+      },
+      {
+        "path": "runtime-attempt01/cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/trtllm_utils/common_tllmException.o",
+        "old_mtime_ns": 1793052685000000000,
+        "new_mtime_ns": 1793052685011059503,
+        "basis": "exact object timestamp stored in unchanged .ninja_deps"
+      },
+      {
+        "path": "runtime-attempt01/cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/trtllm_utils/common_logger.o",
+        "old_mtime_ns": 1793052685000000000,
+        "new_mtime_ns": 1793052685670059659,
+        "basis": "exact object timestamp stored in unchanged .ninja_deps"
+      },
+      {
+        "path": "runtime-attempt01/cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/trtllm_utils/common_envUtils.o",
+        "old_mtime_ns": 1793052685000000000,
+        "new_mtime_ns": 1793052685887059711,
+        "basis": "exact object timestamp stored in unchanged .ninja_deps"
+      },
+      {
+        "path": "runtime-attempt01/cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/trtllm_utils/kernels_delayStream.cuda.o",
+        "old_mtime_ns": 1793052688000000000,
+        "new_mtime_ns": 1793052688224060265,
+        "basis": "exact object timestamp stored in unchanged .ninja_deps"
+      },
+      {
+        "path": "runtime-attempt01/cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/trtllm_utils/trtllm_utils.so",
+        "old_mtime_ns": 1793052688000000000,
+        "new_mtime_ns": 1793052688227060266,
+        "basis": "reconstructed library filesystem timestamp from .ninja_log; not claimed original stat timestamp"
+      }
+    ],
+    "limitation": "Filesystem timestamp reconstruction is operational metadata; actual pinned-container Ninja no-work and exact native identity remain mandatory before measurement."
+  },
+  "scope": "CPU filesystem/content probe only; pinned-container actual Ninja no-work remains a mandatory admission gate."
+}

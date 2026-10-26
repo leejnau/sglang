@@ -78,6 +78,8 @@ if [[ "$phase" == admission ]]; then
     mkdir -p "$results/native-build-cache"
     cp "$study/native-reference.bootstrap.json" "$results/"
     cp "$study/native-reuse.json" "$results/native-build-cache/reuse-manifest.json"
+    cp "$study/native-restoration.json" "$results/native-build-cache/restoration.json"
+    cp "$study/native-preservation.json" "$results/native-build-cache/prior-preservation.json"
     cp -a "$study/fixture" "$results/fixture"
     cp "$study/source-snapshot.json" "$results/source-snapshot.json"
 else

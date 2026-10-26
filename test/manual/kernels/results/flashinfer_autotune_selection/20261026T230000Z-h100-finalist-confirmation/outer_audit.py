@@ -147,11 +147,39 @@ def main():
         and reuse["native_reference_sha256"] == reference_sha,
         "reuse manifest bound to qualified bootstrap",
     )
+    restoration_path = raw / "native-build-cache/restoration.json"
+    restoration = read(restoration_path)
     require(
-        reuse["copy_preserves_mtime_ns"]
-        and reuse["source_files_verified"] > 0
-        and reuse["input_files"],
-        "source copy and complete source verification recorded",
+        reuse["restoration_method"]
+        == "archive-exact-bytes-with-recorded-timestamp-restoration"
+        and not reuse["copy_preserves_mtime_ns"],
+        "explicit archive restoration amendment",
+    )
+    require(
+        reuse["native_restoration_sha256"] == sha(restoration_path),
+        "restoration evidence bound to reuse manifest",
+    )
+    require(
+        restoration["status"] == "passed"
+        and restoration["archive_sha256"]
+        == plan["native_reuse"]["native_archive_sha256"],
+        "exact archived native input",
+    )
+    require(
+        restoration["preservation_manifest_sha256"]
+        == sha(raw / "native-build-cache/prior-preservation.json")
+        == "40e684976202ae6eca47e462e5da92efa35ccd2fa4cf1ccaaa8db0716936b6df",
+        "original preservation manifest retained",
+    )
+    require(
+        not restoration["native_bytes_modified"]
+        and not restoration["source_mtimes_modified"]
+        and len(restoration["changes"]) == 10,
+        "only ten native filesystem timestamps reconstructed",
+    )
+    require(
+        reuse["source_files_verified"] > 0 and reuse["input_files"],
+        "complete restored source verification recorded",
     )
     cache_prefix = "current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/"
     for provider, digest in plan["native_reuse"]["required_library_sha256"].items():

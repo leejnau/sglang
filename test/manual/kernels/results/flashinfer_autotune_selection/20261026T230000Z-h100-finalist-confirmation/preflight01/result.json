@@ -1,0 +1,20 @@
+{
+  "status": "stopped_before_profiling",
+  "source_commit": "40ae37e15db71a979ab659c1fc326754694a5638",
+  "allocation": "2862382",
+  "reason": "Cluster removed prior temporary study after its allocation; strict prior-directory requirement failed. No source checkout or worker started.",
+  "resource_state": "CANCELLED",
+  "elapsed": "00:01:04",
+  "profiling_calls": 0,
+  "next": "Explicit pre-measurement staging amendment to restore identical archived source and native bytes, preserving all no-rebuild gates.",
+  "files_sha256": {
+    "allocation.log": "192c8a40774e1e054f6e3ac0086a5e348628651e4a0e6b0c682aa1f81c14c3b1",
+    "allocation-state.txt": "63e659bf691ff883e6760556e6e961af5af1d74ccbabd7c5f80d88005f513233",
+    "allocation-release.txt": "59e06a422be520df331b055fd9a0dc44377e9d25a7c0d89778b96b0e4cead2fd",
+    "staging.log": "e5cdedf4a5c4f3837b19db972a4d7aa5591d6b2fa83827ef2207272c2266ae63",
+    "staging-diagnostic.log": "32f27531f77daf3f59e4da04bb85e27b0a9f1d19f7751a9fdcef4ddc323ce09e"
+  },
+  "evidence_archive_sha256": "3b764b267eb095f1dec19b1c87d12fe3931a1bc4c712ed961957b3e9762007a1",
+  "evidence_archive": "evidence.tar.gz",
+  "evidence_note": "Archive preserves original command output bytes, including scheduler whitespace."
+}

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Stage a frozen snapshot and copy the previous, qualified native build unchanged.
+# Restore exact qualified source/native bytes from preserved private archives.
 set -euo pipefail
 allocation=${1:?allocation required}
 source_commit=${2:?frozen source commit required}
@@ -10,33 +10,22 @@ allocation=$1
 source_commit=$2
 [[ "$(hostname -s)" == 1u1g-gen-0100 ]] || exit 1
 study=/tmp/fi-finalist-confirmation-$allocation
-previous=/tmp/fi-fixed-pair-2861566
 durable=/home/lnau/flashinfer-autotune-study
 batch=20261026T230000Z-h100-finalist-confirmation
 pack="$durable/$batch-$source_commit-snapshot.pack"
-[[ ! -e "$study" && -d "$previous/input/current/source" && -d "$previous/runtime-attempt01/cache" ]] || exit 1
-python3 - "$pack" "$source_commit" "$durable/fp8-current-source-private.tar.gz" "$previous" <<'VERIFY'
+archive="$durable/20261026T220000Z-h100-fixed-pair-attempt01-timing-full-raw.tgz"
+[[ ! -e "$study" ]] || exit 1
+python3 - "$pack" "$source_commit" "$durable/fp8-current-source-private.tar.gz" "$archive" <<'VERIFY'
 import hashlib,json,sys
 from pathlib import Path
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
-p=Path(sys.argv[1]);m=json.loads(Path(str(p)+'.json').read_text());old=Path(sys.argv[4])
+p=Path(sys.argv[1]);m=json.loads(Path(str(p)+'.json').read_text())
 assert m['source_commit']==sys.argv[2] and not m['history_walk'] and not m['lazy_fetch']
 assert sha(p)==m['sha256']
 assert sha(Path(sys.argv[3]))=='209b2de9e76c358b94407202a4670613055e963200184e716b50eb67aad71c91'
-r=old/'results/fixed-pair/attempt01'
-assert sha(r/'block0-auto_synthetic-timing.bootstrap.json')=='7c4727aca3d99adcb3fe2f35d06f4408b512baa4fe9a91b975bdf77358fe205d'
-assert sha(r/'preservation-manifest-timing.json')=='40e684976202ae6eca47e462e5da92efa35ccd2fa4cf1ccaaa8db0716936b6df'
-for row in json.loads((r/'preservation-manifest-timing.json').read_text())['files']:
-    prefix='native-build-cache/timing/'
-    if row['path'].startswith(prefix):
-        path=old/'runtime-attempt01/cache'/row['path'][len(prefix):]
-        assert path.is_file() and path.stat().st_size==row['size'] and sha(path)==row['sha256'],str(path)
+assert sha(Path(sys.argv[4]))=='84e44c807d2a897723e793eeb0dd676d1c254491fdf2c95149511953ee4272f5'
 VERIFY
-mkdir -p "$study/input" "$study/runtime-attempt01"
-cp -a "$previous/input/current" "$study/input/current"
-cp -a "$previous/runtime-attempt01/cache" "$study/runtime-attempt01/cache"
-cp -a "$previous/fixture" "$study/fixture"
-cp "$previous/results/fixed-pair/attempt01/block0-auto_synthetic-timing.bootstrap.json" "$study/native-reference.bootstrap.json"
+mkdir -p "$study/input/current/manifests" "$study/runtime-attempt01/cache"
 export GIT_NO_LAZY_FETCH=1 GIT_TERMINAL_PROMPT=0
 git init -q "$study/source"
 git -C "$study/source" index-pack --stdin < "$pack" > "$study/index-pack.txt"
@@ -51,10 +40,31 @@ git -C "$study/source" symbolic-ref HEAD refs/heads/frozen
 git -C "$study/source" read-tree -mu HEAD
 [[ "$(git -C "$study/source" rev-parse HEAD)" == "$source_commit" && -z "$(git -C "$study/source" status --porcelain)" ]] || exit 1
 cp "$pack.json" "$study/source-snapshot.json"
-python3 - "$study" "$previous" <<'REUSE'
+tar -xzf "$durable/fp8-current-source-private.tar.gz" -C "$study/input/current"
+for name in candidate-manifest complete-source-manifest dependency-manifest cutlass-source-manifest cccl-source-manifest spdlog-source-manifest; do
+    mv "$study/input/current/$name.json" "$study/input/current/manifests/$name.json"
+done
+qualified=test/manual/kernels/results/flashinfer_autotune_selection/20261024T090000Z-h100-current-source-qualification/revision02
+printf '%s  %s\n' ae7159aba41c3f26199568f9742ab140e7c20985131dbdbd58d7af7c28246829 "$study/source/$qualified/qualification-tools.tar.gz" | sha256sum -c -
+tar -xzf "$study/source/$qualified/qualification-tools.tar.gz" -C "$study/input/current"
+git -C "$study/input/current/source" apply "$study/input/current/patches/harness-only.patch"
+# Recreate only the five known official packaging links at the same container paths.
+mkdir "$study/input/current/source/flashinfer/data"
+for name in csrc include; do
+    ln -s "/study/input/current/source/$name" "$study/input/current/source/flashinfer/data/$name"
+done
+for name in cutlass cccl spdlog; do
+    ln -s "/study/input/current/source/3rdparty/$name" "$study/input/current/source/flashinfer/data/$name"
+done
+tar -xzf "$archive" -C "$study/runtime-attempt01/cache" --strip-components=3 attempt01/native-build-cache/timing
+tar -xzf "$archive" -C "$study" --strip-components=1 attempt01/fixture
+tar -xOf "$archive" attempt01/block0-auto_synthetic-timing.bootstrap.json > "$study/native-reference.bootstrap.json"
+tar -xOf "$archive" attempt01/preservation-manifest-timing.json > "$study/native-preservation.json"
+python3 "$study/source/test/manual/kernels/results/flashinfer_autotune_selection/$batch/restore_native_cache.py" --study "$study" --output "$study/native-restoration.json"
+python3 - "$study" <<'REUSE'
 import hashlib,json,os,subprocess,sys
 from pathlib import Path
-s,old=map(Path,sys.argv[1:]);sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+s=Path(sys.argv[1]);sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 root=s/'input/current'; manifests=root/'manifests'
 expected={
     'candidate-manifest.json':'9a4c51562d7410d785cc544c004bc4f92486f40311cb5c7a7328c2c1213160d5',
@@ -83,22 +93,10 @@ for name,rel in [('csrc','csrc'),('include','include'),('cutlass','3rdparty/cutl
     path=root/'source/flashinfer/data'/name
     assert path.is_symlink() and os.readlink(path)=='/study/input/current/source/'+rel,str(path)
     links[str(path.relative_to(root))]=os.readlink(path)
-def copied_tree(new,previous):
-    result={}
-    for path in sorted(new.rglob('*')):
-        rel=path.relative_to(new);other=previous/rel
-        if path.is_symlink():
-            assert other.is_symlink() and os.readlink(path)==os.readlink(other),str(rel)
-        elif path.is_file():
-            value=sha(path)
-            assert value==sha(other) and path.stat().st_mtime_ns==other.stat().st_mtime_ns,str(rel)
-            result[str(rel)]=value
-    assert set(result)=={str(p.relative_to(previous)) for p in previous.rglob('*') if p.is_file() and not p.is_symlink()}
-    return result
-input_files=copied_tree(root,old/'input/current')
+input_files={str(p.relative_to(root)):sha(p) for p in sorted(root.rglob('*')) if p.is_file() and not p.is_symlink()}
 links={str(p.relative_to(root)):os.readlink(p) for p in root.rglob('*') if p.is_symlink()}
 cache=s/'runtime-attempt01/cache'
-cache_files=copied_tree(cache,old/'runtime-attempt01/cache')
+cache_files={str(p.relative_to(cache)):sha(p) for p in sorted(cache.rglob('*')) if p.is_file() and not p.is_symlink()}
 native_prefix='current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/'
 native_files={p:h for p,h in cache_files.items() if p.startswith((native_prefix+'gemm/',native_prefix+'trtllm_utils/'))}
 assert native_files[native_prefix+'gemm/gemm.so']=='72690cacca4ce1d69ccaa6b9190475483d984bd58de0962d06c874c801c678d6'
@@ -109,7 +107,9 @@ fixture=json.loads((s/'fixture/manifest.json').read_text())
 for path,value in fixture['source']['sglang_source_sha256'].items():
     captured=subprocess.run(['git','-C',str(s/'source'),'show',fixture['source']['sglang_commit']+':'+path],check=True,capture_output=True).stdout
     assert hashlib.sha256(captured).hexdigest()==value and sha(s/'source'/path)==value
-record=dict(status='passed',previous_study=str(old),native_reference_sha256=sha(s/'native-reference.bootstrap.json'),source_files_verified=len(files),input_files=input_files,input_links=links,native_files=native_files,cache_files=cache_files,copy_preserves_mtime_ns=True)
+assert sha(s/'native-reference.bootstrap.json')=='7c4727aca3d99adcb3fe2f35d06f4408b512baa4fe9a91b975bdf77358fe205d'
+restoration=json.loads((s/'native-restoration.json').read_text());assert restoration['status']=='passed'
+record=dict(status='passed',restoration_method='archive-exact-bytes-with-recorded-timestamp-restoration',native_restoration_sha256=sha(s/'native-restoration.json'),native_reference_sha256=sha(s/'native-reference.bootstrap.json'),source_files_verified=len(files),input_files=input_files,input_links=links,native_files=native_files,cache_files=cache_files,copy_preserves_mtime_ns=False)
 (s/'native-reuse.json').write_text(json.dumps(record,indent=2)+'\n')
 print(json.dumps({'status':'staged','study':str(s),'source_files_verified':len(files),'native_files':len(native_files),'native_reuse_sha256':sha(s/'native-reuse.json')}))
 REUSE

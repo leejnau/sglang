@@ -43,16 +43,21 @@
   "schedule_sha256": "028d527022b448bd5bc95a8723a9f2ce92dd0d4bf713a611074676b102659543",
   "historical_contract_sha256": "b4e97dfc15646c0e4e46d4db240e7254b3381f494af227b2aca4d66f5a7908af",
   "native_reuse": {
-    "source": "/tmp/fi-fixed-pair-2861566/input/current",
-    "cache": "/tmp/fi-fixed-pair-2861566/runtime-attempt01/cache",
-    "copy": "cp -a entire source input and native cache into new study; preserve original container paths and timestamps; fresh process, home and tuner cache per worker",
+    "source_archive": "fp8-current-source-private.tar.gz",
+    "source_archive_sha256": "209b2de9e76c358b94407202a4670613055e963200184e716b50eb67aad71c91",
+    "native_archive": "20261026T220000Z-h100-fixed-pair-attempt01-timing-full-raw.tgz",
+    "native_archive_sha256": "84e44c807d2a897723e793eeb0dd676d1c254491fdf2c95149511953ee4272f5",
+    "restoration": "Restore exact source archive plus the already-qualified tools and Python-only callback patch; restore entire native cache from the prior private archive. Never rebuild or change native artifact contents.",
+    "timestamp_amendment": "Archive extraction loses subsecond cache mtimes. Restore eight object mtimes from their unchanged .ninja_deps records. Reconstruct two library filesystem mtimes from build-log timestamps; these are explicitly not claimed original library stat mtimes. Source archive mtimes remain unchanged; every source-owned dependency must precede its recorded build timestamp.",
+    "reason": "Previous node /tmp study was removed by cluster cleanup. Initial staging stopped before profiling; archive restoration replaces the unavailable directory-copy method.",
     "container_source": "/study/input/current/source",
     "container_cache": "/study/runtime-attempt01/cache",
     "required_library_sha256": {
       "gemm": "72690cacca4ce1d69ccaa6b9190475483d984bd58de0962d06c874c801c678d6",
       "trtllm_utils": "e442a689064fe3af4ab46510b2d5aaf3597b072949b84f13d14e9e53352109e4"
     },
-    "failure": "Stop before measurement if original study missing, build work occurs or qualified native identities differ; no implicit fallback/rebuild."
+    "isolation": "Fresh process, home and tuner cache per worker; only compiled native artifacts are reused.",
+    "failure": "Stop before measurement if archive/source/native hashes differ, a dependency timestamp is inconsistent, or actual pinned-container Ninja requires work. No implicit rebuild or load-only fallback."
   },
   "protocol": {
     "worker": "test/manual/kernels/bench_flashinfer_finalist_confirmation.py",
