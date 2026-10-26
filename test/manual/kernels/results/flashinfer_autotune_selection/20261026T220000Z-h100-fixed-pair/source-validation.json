@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "scope": "CPU and source checks only; CUDA admission and performance observations pending.",
+  "worker_controls": 45,
+  "analyzer_controls": 51,
+  "launcher_controls": 8,
+  "repository_hooks": "All applicable hooks passed; full output in precommit-source.txt.",
+  "prohibited_content_scan": "All new file paths and bytes passed.",
+  "production_files_changed": false,
+  "source_files_sha256": {
+    "test/manual/kernels/bench_flashinfer_fixed_pair.py": "7c8c743fe08b898035bbdf693123ea7b0c8a2d49a29db801f0db3c81178abf42",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261026T220000Z-h100-fixed-pair/analyzer-cpu-controls.json": "39f910b41e2283d862c2caa14e22d19c21ad3ccf9bcdd29ef106ae90eeb98476",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261026T220000Z-h100-fixed-pair/analyzer.py": "b73acfc80a676ad24bb0358a6d66880531947f628783cba6fb1765c5154269ec",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261026T220000Z-h100-fixed-pair/analyzer_controls.py": "4370ce82ab77b1b6484be25d9230c1e5bc274a60afbd1b1ee79fec8472ac11f9",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261026T220000Z-h100-fixed-pair/historical-contract.json": "b4e97dfc15646c0e4e46d4db240e7254b3381f494af227b2aca4d66f5a7908af",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261026T220000Z-h100-fixed-pair/launch.sh": "3bb96d1fe55fe8ff0f4ea07e8db704a14f2b91c7a378aa85c8716ffe9a48eec7",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261026T220000Z-h100-fixed-pair/launcher-cpu-controls.json": "0e7aea78942fe176516ecddb0740e8192c39c133136ec19b51c91806a786605a",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261026T220000Z-h100-fixed-pair/launcher_controls.py": "2211b315f8c1c0302ce1f758854d52baed520365e42672b9f202776e0e5cc953",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261026T220000Z-h100-fixed-pair/plan.json": "e2ce825b78db2217227de7cdf52546004105332ad6d19bf4e3237afe18fb8b88",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261026T220000Z-h100-fixed-pair/precommit-source.txt": "50943a9aadeb7872d8343caaa8e1bffe7e08433b17e14120976347228e56a7fe",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261026T220000Z-h100-fixed-pair/preserve.sh": "e852b0cb6a554edc05367c9140ca9246bc0e3cc13958b7cdfdf13651e7bae982",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261026T220000Z-h100-fixed-pair/run_current.py": "885ea02162670a40bcb880de5cadf3db1ef23eeab8fe3dfd09b65d3276f855b8",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261026T220000Z-h100-fixed-pair/schedule.json": "d86fd380c5b12391d194ab2709a8cb549c1b5a0ed4f9b518683c3f1f247a98da",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261026T220000Z-h100-fixed-pair/stage.sh": "f81b62f2b5242b3043bd9b05a47506aaeb97016fb36faefe8eca387ea295ae14",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261026T220000Z-h100-fixed-pair/worker-cpu-controls.json": "6d4b100da7e68f0b129767d100ecfe6d40820ac4d91b4c8525bbf7b4bb545aa4",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261026T220000Z-h100-fixed-pair/worker_controls.py": "da6ebbe30c2c36cfbc6f12ae0795c530795c2a2985106da285133a13370d90a3"
+  },
+  "worker_control_command": "uv run --offline --python 3.12 --with torch==2.14.1 <batch>/worker_controls.py --repo <checkout> --output <report>",
+  "analyzer_control_command": "python3 <batch>/analyzer_controls.py --analyzer <batch>/analyzer.py --leaf-helpers <prior-batch>/analyze.py --historical-result <original-block0-auto_synthetic-timing.json> --historical-contract <batch>/historical-contract.json --schedule <batch>/schedule.json --output <report>",
+  "launcher_control_command": "python3 <batch>/launcher_controls.py <batch>"
+}

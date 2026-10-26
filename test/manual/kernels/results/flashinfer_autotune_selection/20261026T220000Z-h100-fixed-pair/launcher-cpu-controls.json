@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "checks": {
+    "actual_schedule": "passed",
+    "valid": "passed",
+    "missing_analysis": "passed",
+    "failed_analysis": "passed",
+    "changed_result": "passed",
+    "changed_bootstrap": "passed",
+    "bad_bootstrap_result_binding": "passed",
+    "failed_worker": "passed"
+  },
+  "launcher_sha256": "3bb96d1fe55fe8ff0f4ea07e8db704a14f2b91c7a378aa85c8716ffe9a48eec7",
+  "scope": "Actual embedded launcher code with controlled JSON and the frozen schedule; no Docker, GPU, allocation or worker execution."
+}

@@ -1,0 +1,211 @@
+{
+  "status": "success",
+  "worker_sha256": "7c8c743fe08b898035bbdf693123ea7b0c8a2d49a29db801f0db3c81178abf42",
+  "controls": [
+    {
+      "control": "frozen_schedule_trial_0",
+      "passed": true
+    },
+    {
+      "control": "frozen_schedule_trial_1",
+      "passed": true
+    },
+    {
+      "control": "frozen_schedule_trial_2",
+      "passed": true
+    },
+    {
+      "control": "frozen_schedule_trial_3",
+      "passed": true
+    },
+    {
+      "control": "frozen_schedule_trial_4",
+      "passed": true
+    },
+    {
+      "control": "frozen_schedule_trial_5",
+      "passed": true
+    },
+    {
+      "control": "frozen_schedule_trial_6",
+      "passed": true
+    },
+    {
+      "control": "frozen_schedule_trial_7",
+      "passed": true
+    },
+    {
+      "control": "wrong_capture_order",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "wrong_profile_order",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "unbalanced_auto",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "unbalanced_graph",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "no_retention_after_index79",
+      "passed": true
+    },
+    {
+      "control": "retention_after_index80",
+      "passed": true
+    },
+    {
+      "control": "empty_partition_restored__winner_partitions",
+      "passed": true
+    },
+    {
+      "control": "nonempty_partition_rejected__winner_partitions",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "empty_partition_restored__protocol_record_partitions",
+      "passed": true
+    },
+    {
+      "control": "nonempty_partition_rejected__protocol_record_partitions",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "real_winner_mutation_rejected",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "empty_partition_restored_on_exception",
+      "passed": true
+    },
+    {
+      "control": "fixed_cache_insertion_exception_restores_natural",
+      "passed": true
+    },
+    {
+      "control": "actual_profiler_delegation_positive",
+      "passed": true
+    },
+    {
+      "control": "guard_disabled",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "rejected_attempt_counted_disabled",
+      "passed": true
+    },
+    {
+      "control": "guard_startup_overlap",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "rejected_attempt_counted_startup_overlap",
+      "passed": true
+    },
+    {
+      "control": "guard_no_v2",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "rejected_attempt_counted_no_v2",
+      "passed": true
+    },
+    {
+      "control": "guard_not_tuning",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "rejected_attempt_counted_not_tuning",
+      "passed": true
+    },
+    {
+      "control": "guard_wrong_stream",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "rejected_attempt_counted_wrong_stream",
+      "passed": true
+    },
+    {
+      "control": "wrong_tactic",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "wrong_objective",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "cold_l2",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "replaced_input_object",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "extra_input_batch",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "nonfinite_real_profiler_result",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "zero_real_profiler_result",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "real_tensor_numerical_positive",
+      "passed": true
+    },
+    {
+      "control": "real_tensor_no_write_nan_rejected",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "real_tensor_wrong_output_rejected",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "real_tensor_changed_input_exact_zero",
+      "passed": true
+    },
+    {
+      "control": "real_tensor_zero_tolerance_not_relaxed",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "real_tensor_replaced_output_rejected",
+      "passed": true,
+      "expected_rejection": true
+    }
+  ],
+  "count": 45,
+  "scope": "CPU controls exercise new worker guards and inherited miss restoration; no CUDA or performance qualification."
+}

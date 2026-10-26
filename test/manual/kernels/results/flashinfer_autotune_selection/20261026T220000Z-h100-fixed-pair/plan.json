@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "batch_id": "20261026T220000Z-h100-fixed-pair",
+  "scope": "Fixed-descriptor/default mechanism diagnostic through actual startup, profiler and SGLang layer graphs. Research only; no production change or serving-performance claim.",
+  "schedule_sha256": "d86fd380c5b12391d194ab2709a8cb549c1b5a0ed4f9b518683c3f1f247a98da",
+  "historical_contract_sha256": "b4e97dfc15646c0e4e46d4db240e7254b3381f494af227b2aca4d66f5a7908af",
+  "source_contract": {
+    "flashinfer_commit": "27c62fdf0ab1cd4014df8a15b66a975541fda83c",
+    "variant": "The same qualified FP8-only descriptor port plus fixture-owned validation callback in every cell; no configured-timer guard or old scoped-cache prototype.",
+    "runtime_sha256": {
+      "flashinfer/autotuner/autotuner.py": "0db42ad90d1a3fec6f81509a2c520c1892cea0a433f5dbd7f43468a2a10243ca",
+      "flashinfer/autotune_cache.py": "1ab2ed7208ed1bf1007b1f74de29fc818c93a5ab091beea0833474177fbb29ad",
+      "flashinfer/autotuner/_graph_timing.py": "5f3be31e17501ba11ee95327176ac4a4b95eeaee7be92c2bc7795bcbd30cefe3",
+      "flashinfer/gemm/gemm_base.py": "0bba9240029a5e09f331e7a2267f7067e126d57a7a341ca535f7c9557599adca"
+    },
+    "fixture": {
+      "shape_m_n_k": [
+        144,
+        4096,
+        1024
+      ],
+      "seed": 19,
+      "sha256": "c30aa761eba827bb0b4eb6de0e99d9b8dda8243dd16d00146f9718d2abb05e8b"
+    },
+    "no_historical_pooling": "Earlier source/hardware/protocol batches are context only, not additional trials in this current-source comparison."
+  },
+  "qualified_source": {
+    "candidate_manifest_sha256": "9a4c51562d7410d785cc544c004bc4f92486f40311cb5c7a7328c2c1213160d5",
+    "container_preflight_sha256": "b8d0f6bbc85eaca0e3ef1419ab99a97d5340c96b3da382cba81d7896768287ba",
+    "fp8_port_patch_sha256": "e5c0a130690cd9fe9f1204b11368433430345f066ee8dc3bd376cf49c7ef4d64",
+    "callback_patch_sha256": "706ca4d91f3e6ef8c1643977beef72fa39af121e691f9380a175633787fe94ef",
+    "qualification_execution_commit": "12447b7d6219d54d1296401c0b8cfeeff1568931",
+    "version_limit": "Official fallback package0.0.0+unknown/unknown; exact source manifests and native artifacts establish identity."
+  },
+  "environment": {
+    "image": "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
+    "gpu": "NVIDIA H100 NVL",
+    "uuid": "240958a2-e8e1-3bac-b767-365c9e0b97bd",
+    "driver": "580.159.04",
+    "power_limit_watts": 310,
+    "torch": "2.14.1+cu130",
+    "exclusive": true,
+    "image_id": "sha256:2e152727f0a5ce999172ec48203b2b292d41b3cb370976827718870557899caa"
+  },
+  "protocol": {
+    "worker": "test/manual/kernels/bench_flashinfer_fixed_pair.py",
+    "fresh_processes": 8,
+    "admission_workers": 1,
+    "seed": 19,
+    "original_profile_ms": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      144
+    ],
+    "original_measurements": 81,
+    "default_index": 72,
+    "fixed_explicit_index": 74,
+    "runtime_cache_m": 256,
+    "fixed_descriptor": [
+      77309411394,
+      4294967332,
+      0,
+      1407374883553283,
+      558779540176897,
+      120259084316,
+      292058693646,
+      0
+    ],
+    "graph_rounds": 24,
+    "graph_replays_per_sample": 16,
+    "graph_prequeue_cycles": 10000000,
+    "initial_warmup_ms": 500,
+    "rewarm_ms": 20,
+    "profiler_rounds_per_objective": 12,
+    "profiler_objectives": [
+      "auto",
+      "graph"
+    ],
+    "profiler_warmup": 3,
+    "profiler_repeat": 10,
+    "graph_profile_replays": 1,
+    "cold_l2": false,
+    "sequence": [
+      "original auto_synthetic startup: all9profiles and9tactics per profile",
+      "record natural winner; reversible real cache scope for fixed explicit graph, real miss for default graph",
+      "numerical and changed-input guards;24paired retained layer-graph timing windows",
+      "prepare retained-synthetic input hashes and numerical reference after graph timing",
+      "12paired auto and12paired graph profiler rounds on retained synthetic M144 profiling operands, balanced objective and pair orders; NaN output refresh before each timed profiler call, numerical check after",
+      "native acceptance on captured serving and retained synthetic operands; synthetic changed-input/restored-input guards",
+      "trace the SAME original layer graphs after all timing; final state and unchanged-read-operand/cache checks"
+    ],
+    "no_adaptive_expansion": true,
+    "admission": "One disposable block0 correctness-only process with profiling hashes and negative controls, excluded from all performance inference. Timing starts only after admission passes."
+  },
+  "analysis": {
+    "unit": "Fresh process, n=8; dependent within-process windows are not independent observations. Same physical GPU/time window; no population inference.",
+    "primary": "Original-history fixed-explicit/default profiler ratio from calls74/72 and median of24 paired layer-graph event ratios, reported jointly by process.",
+    "secondary": "Median of12 paired profiler ratios per objective on same retained synthetic operands, with first-position strata and within-process graph-vs-auto ratio.",
+    "estimator": "Geometric mean of8 process-level ratios; full range and signs.",
+    "uncertainty": {
+      "method": "Exploratory percentile bootstrap resampling entire processes, shared indices across metrics; 100000replicates, seed202610262200, type7 quantiles, nominal95% intervals.",
+      "limit": "Small fixed workload cohort, multiple exploratory metrics, possible process dependence; intervals are descriptive, not a guarantee or production margin."
+    },
+    "no_pooling": "Historical result and admission not pooled; retain every planned outcome; no significance-driven retries."
+  },
+  "stopping": {
+    "integrity": "Stop and preserve failed artifacts; revise source/protocol explicitly before a separately identified new attempt.",
+    "performance": "Do not stop, retry, discard or expand based on timing sign.",
+    "resource": "One exclusive H100 node; bounded allocation; release after preservation."
+  },
+  "limits": [
+    "Original candidate domain/order and recipe preserved; retaining references after final profile extends allocation lifetime into graph capture. This is not byte-identical historical execution.",
+    "Later direct pair measurements follow graph warmup/timing and use repeated preparation; they isolate the fixed pair under this declared history, not original search order.",
+    "Auto synthetic profiling uses generated activations; full SGLang graph uses captured serving activations plus quantization. This study does not isolate activation values.",
+    "Fixed explicit graph is deliberately selected through a reversible real cache insertion, irrespective of natural tuning winner; not a claim that startup chose it.",
+    "No synthetic bytes hashed inline during timing startup. Admission hashes and post-graph hashes establish recipe and retained operands, not original historical byte attestation.",
+    "Same qualified source with FP8-only descriptor port and validation callback; not a stock release comparison. No managed-cache migration, scoped prototype, distributed or full-model inference.",
+    "NaN refresh and comparison validate each full profiler invocation, not every internal warmup or timed iteration. Native acceptance and original serving-graph traces are separate controls."
+  ]
+}
