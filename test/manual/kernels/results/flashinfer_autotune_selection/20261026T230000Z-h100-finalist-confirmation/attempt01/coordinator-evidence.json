@@ -1,0 +1,15 @@
+{
+  "archive": "coordinator-evidence.tar.gz",
+  "archive_sha256": "4c62b88b0dd28d246969a416f91b9dde8c1baed3c5aa5ba37d7df90e4dd9dc66",
+  "files_sha256": {
+    "allocation02.log": "512b80ff0207219bfb83137b18fb7724daa76a9076dc9f33c4bfa6e65359cb13",
+    "allocation02-state.txt": "8103fb161304655904e7cd72671f240a6881b2ffda78dbb3ed00bfb051ddc311",
+    "allocation02-release.txt": "662fe91dfc6f2de2b581bf4211d6c75a171ec5f2a19a201d392a15c382aa4420",
+    "allocation02-release-final.txt": "c977f756078083e766d4a5877f0b5816946cff2bc6c98519adb7e902c938e7f9",
+    "staging02.log": "e400c755aa67323b00084f4af18f74edc89d57af48891896c3c96e2d70162f38",
+    "admission-launch.log": "02d9bc4b2996de965408a27ae098c9a71995174bd5b471487cd077dcdc7f22a2",
+    "admission-preservation.log": "74b15cb2d3bcc78405cc0c77dfcc5acacc42d1db9147f02e3a209eca67b4c5a3",
+    "timing-launch.log": "7472720680bd073b62c2c6f9359df8ecc2ffd0cbd52eecf1847bc211bda52993",
+    "timing-preservation.log": "ed9620d064155aec69f153fa21aa76279eb083684e5c833aa89bc9fc39e660a0"
+  }
+}

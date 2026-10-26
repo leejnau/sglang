@@ -1,0 +1,1253 @@
+{
+  "status": "success",
+  "final": true,
+  "execution_commit": "77ea4b9a6de1f03fdf8666cead7b27f4fbed4908",
+  "scope": "Independent raw arithmetic; eight current fresh-process units only; no admission or historical pooling.",
+  "metrics": {
+    "hypothetical_over_original": {
+      "geometric_mean_ratio": 1.0,
+      "min_ratio": 1.0,
+      "max_ratio": 1.0,
+      "below_one": 0,
+      "above_one": 0,
+      "equal_one": 8,
+      "exploratory_whole_process_bootstrap_95pct": [
+        1.0,
+        1.0
+      ]
+    },
+    "finalist_graph_over_default": {
+      "geometric_mean_ratio": 1.1807384667824636,
+      "min_ratio": 1.1322155236036702,
+      "max_ratio": 1.2221754030782666,
+      "below_one": 0,
+      "above_one": 8,
+      "equal_one": 0,
+      "exploratory_whole_process_bootstrap_95pct": [
+        1.1569023076423517,
+        1.2042168923937742
+      ]
+    },
+    "confirmation_finalist_over_default": {
+      "geometric_mean_ratio": 1.0723032721807477,
+      "min_ratio": 1.0587704316448638,
+      "max_ratio": 1.0892316500028563,
+      "below_one": 0,
+      "above_one": 8,
+      "equal_one": 0,
+      "exploratory_whole_process_bootstrap_95pct": [
+        1.065133331143779,
+        1.079620339936763
+      ]
+    },
+    "original_profile_finalist_over_default": {
+      "geometric_mean_ratio": 1.0631332052251234,
+      "min_ratio": 1.040937607229695,
+      "max_ratio": 1.078609957060656,
+      "below_one": 0,
+      "above_one": 8,
+      "equal_one": 0,
+      "exploratory_whole_process_bootstrap_95pct": [
+        1.0529704641844544,
+        1.0721108574122082
+      ]
+    },
+    "original_regret_two_candidate_only": {
+      "geometric_mean_ratio": 1.0,
+      "min_ratio": 1.0,
+      "max_ratio": 1.0,
+      "below_one": 0,
+      "above_one": 0,
+      "equal_one": 8,
+      "exploratory_whole_process_bootstrap_95pct": [
+        1.0,
+        1.0
+      ]
+    },
+    "confirmed_regret_two_candidate_only": {
+      "geometric_mean_ratio": 1.0,
+      "min_ratio": 1.0,
+      "max_ratio": 1.0,
+      "below_one": 0,
+      "above_one": 0,
+      "equal_one": 8,
+      "exploratory_whole_process_bootstrap_95pct": [
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "process_rows": [
+    {
+      "block": 0,
+      "raw_sha256": "7bb51b53113c3012c3aaadf735cf34ea1a99f29466dd34d632abf26d449a1fcc",
+      "capture_order": "default-first",
+      "finalist": [
+        893353197634,
+        4294967332,
+        0,
+        2533274790395907,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "finalist_profile_index": 80,
+      "natural_role": "default",
+      "confirmed_role": "default",
+      "transition": "default->default",
+      "original_profile_log_ratio": 0.0682007756851762,
+      "confirmation_log_ratio": 0.0614608696219093,
+      "layer_log_ratio": 0.19061814092348267,
+      "effect_log": 0.0,
+      "effect_ratio": 1.0,
+      "original_regret_log": 0.0,
+      "confirmed_regret_log": 0.0,
+      "outcome": "unchanged_choice",
+      "confirmation_order_strata": {
+        "winner": 0.058797484319399636,
+        "default": 0.0614608696219093
+      },
+      "graph_order_strata": {
+        "winner": 0.19032989072106762,
+        "default": 0.19103131033069623
+      },
+      "numerical_checks": {
+        "serving": 67,
+        "synthetic": 30
+      }
+    },
+    {
+      "block": 1,
+      "raw_sha256": "f2b187c92ef41160f09d2de531fae5909cd1fef8ea88832f0aeccc30cc5015e2",
+      "capture_order": "winner-first",
+      "finalist": [
+        120259084354,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "finalist_profile_index": 77,
+      "natural_role": "default",
+      "confirmed_role": "default",
+      "transition": "default->default",
+      "original_profile_log_ratio": 0.06879774415090388,
+      "confirmation_log_ratio": 0.07247424717525643,
+      "layer_log_ratio": 0.20063238815610834,
+      "effect_log": 0.0,
+      "effect_ratio": 1.0,
+      "original_regret_log": 0.0,
+      "confirmed_regret_log": 0.0,
+      "outcome": "unchanged_choice",
+      "confirmation_order_strata": {
+        "winner": 0.08245302343622543,
+        "default": 0.06722983236078073
+      },
+      "graph_order_strata": {
+        "winner": 0.20156690469881605,
+        "default": 0.200529944109749
+      },
+      "numerical_checks": {
+        "serving": 67,
+        "synthetic": 30
+      }
+    },
+    {
+      "block": 2,
+      "raw_sha256": "c9747ac9de420aecd035acdf1dcd96c4acb68693037247a266dff11e9b56e3ff",
+      "capture_order": "winner-first",
+      "finalist": [
+        579820585026,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "finalist_profile_index": 76,
+      "natural_role": "default",
+      "confirmed_role": "default",
+      "transition": "default->default",
+      "original_profile_log_ratio": 0.0406901548807981,
+      "confirmation_log_ratio": 0.05710826469153915,
+      "layer_log_ratio": 0.15504725545013953,
+      "effect_log": 0.0,
+      "effect_ratio": 1.0,
+      "original_regret_log": 0.0,
+      "confirmed_regret_log": 0.0,
+      "outcome": "unchanged_choice",
+      "confirmation_order_strata": {
+        "winner": 0.05710826469153915,
+        "default": 0.05611519467507741
+      },
+      "graph_order_strata": {
+        "winner": 0.1558242467732704,
+        "default": 0.15420979369473176
+      },
+      "numerical_checks": {
+        "serving": 67,
+        "synthetic": 30
+      }
+    },
+    {
+      "block": 3,
+      "raw_sha256": "6c70584fbb4591d9ab8da4190f1056b7a40ed4cb6bcf9e05394b772c0eb6de69",
+      "capture_order": "default-first",
+      "finalist": [
+        893353197634,
+        4294967332,
+        0,
+        2533274790395907,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "finalist_profile_index": 80,
+      "natural_role": "default",
+      "confirmed_role": "default",
+      "transition": "default->default",
+      "original_profile_log_ratio": 0.0683888551040494,
+      "confirmation_log_ratio": 0.08547253942215158,
+      "layer_log_ratio": 0.19945832185116152,
+      "effect_log": 0.0,
+      "effect_ratio": 1.0,
+      "original_regret_log": 0.0,
+      "confirmed_regret_log": 0.0,
+      "outcome": "unchanged_choice",
+      "confirmation_order_strata": {
+        "winner": 0.08240498327533693,
+        "default": 0.09881128676054532
+      },
+      "graph_order_strata": {
+        "winner": 0.19945832185116152,
+        "default": 0.1992087475698548
+      },
+      "numerical_checks": {
+        "serving": 67,
+        "synthetic": 30
+      }
+    },
+    {
+      "block": 4,
+      "raw_sha256": "998af4bc1b8de331b2722a598b86cdae736592980eac1a65aa16cf294cfeecc7",
+      "capture_order": "default-first",
+      "finalist": [
+        841813590082,
+        4294967332,
+        0,
+        2533274790395906,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "finalist_profile_index": 79,
+      "natural_role": "default",
+      "confirmed_role": "default",
+      "transition": "default->default",
+      "original_profile_log_ratio": 0.07101105096214552,
+      "confirmation_log_ratio": 0.07859746462483357,
+      "layer_log_ratio": 0.18339358632774078,
+      "effect_log": 0.0,
+      "effect_ratio": 1.0,
+      "original_regret_log": 0.0,
+      "confirmed_regret_log": 0.0,
+      "outcome": "unchanged_choice",
+      "confirmation_order_strata": {
+        "winner": 0.09189942540867975,
+        "default": 0.06837900602956008
+      },
+      "graph_order_strata": {
+        "winner": 0.18229714211129933,
+        "default": 0.18339358632774078
+      },
+      "numerical_checks": {
+        "serving": 67,
+        "synthetic": 30
+      }
+    },
+    {
+      "block": 5,
+      "raw_sha256": "bdcf07e5f97bf872f2bd459a03193b0ce55cbd0761c6185d466cdbd48da42da4",
+      "capture_order": "winner-first",
+      "finalist": [
+        828928688194,
+        4294967332,
+        0,
+        2533274790395906,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "finalist_profile_index": 78,
+      "natural_role": "default",
+      "confirmed_role": "default",
+      "transition": "default->default",
+      "original_profile_log_ratio": 0.05687964875685326,
+      "confirmation_log_ratio": 0.05857545012912602,
+      "layer_log_ratio": 0.14550029010857207,
+      "effect_log": 0.0,
+      "effect_ratio": 1.0,
+      "original_regret_log": 0.0,
+      "confirmed_regret_log": 0.0,
+      "outcome": "unchanged_choice",
+      "confirmation_order_strata": {
+        "winner": 0.06988021804888789,
+        "default": 0.033537273467006794
+      },
+      "graph_order_strata": {
+        "winner": 0.1453581426147803,
+        "default": 0.14669012606656745
+      },
+      "numerical_checks": {
+        "serving": 67,
+        "synthetic": 30
+      }
+    },
+    {
+      "block": 6,
+      "raw_sha256": "3c7cbde86b76476f55a76c991a3fae226fd1e570462cc6cdf42dd9a5ad39c956",
+      "capture_order": "winner-first",
+      "finalist": [
+        785979015234,
+        4294967332,
+        0,
+        2533274790395906,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "finalist_profile_index": 75,
+      "natural_role": "default",
+      "confirmed_role": "default",
+      "transition": "default->default",
+      "original_profile_log_ratio": 0.07567313534570415,
+      "confirmation_log_ratio": 0.0664564048483941,
+      "layer_log_ratio": 0.13029415998004842,
+      "effect_log": 0.0,
+      "effect_ratio": 1.0,
+      "original_regret_log": 0.0,
+      "confirmed_regret_log": 0.0,
+      "outcome": "unchanged_choice",
+      "confirmation_order_strata": {
+        "winner": 0.07688894363201196,
+        "default": 0.06390558020795907
+      },
+      "graph_order_strata": {
+        "winner": 0.12969644942456388,
+        "default": 0.13051097329413608
+      },
+      "numerical_checks": {
+        "serving": 67,
+        "synthetic": 30
+      }
+    },
+    {
+      "block": 7,
+      "raw_sha256": "b2dcb65b6719c6f2f605cc6aec3528f7cd9ee9c9cf037a69b2341a2a9e3b7800",
+      "capture_order": "default-first",
+      "finalist": [
+        828928688194,
+        4294967332,
+        0,
+        2533274790395906,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "finalist_profile_index": 78,
+      "natural_role": "default",
+      "confirmed_role": "default",
+      "transition": "default->default",
+      "original_profile_log_ratio": 0.04012185241847244,
+      "confirmation_log_ratio": 0.07832616582872076,
+      "layer_log_ratio": 0.12417635353479183,
+      "effect_log": 0.0,
+      "effect_ratio": 1.0,
+      "original_regret_log": 0.0,
+      "confirmed_regret_log": 0.0,
+      "outcome": "unchanged_choice",
+      "confirmation_order_strata": {
+        "winner": 0.08534023289976912,
+        "default": 0.06250547759005509
+      },
+      "graph_order_strata": {
+        "winner": 0.12411000791531987,
+        "default": 0.12504182153476406
+      },
+      "numerical_checks": {
+        "serving": 67,
+        "synthetic": 30
+      }
+    }
+  ],
+  "transitions": {
+    "default->default": 8
+  },
+  "outcomes": {
+    "unchanged_choice": 8
+  },
+  "capture_order_strata": {
+    "winner-first": {
+      "blocks": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "hypothetical_over_original": 1.0,
+      "finalist_graph_over_default": 1.1710122239081295,
+      "transitions": {
+        "default->default": 4
+      }
+    },
+    "default-first": {
+      "blocks": [
+        0,
+        3,
+        4,
+        7
+      ],
+      "hypothetical_over_original": 1.0,
+      "finalist_graph_over_default": 1.1905454942963762,
+      "transitions": {
+        "default->default": 4
+      }
+    }
+  },
+  "per_descriptor": [
+    {
+      "tactic": [
+        893353197634,
+        4294967332,
+        0,
+        2533274790395907,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "blocks": [
+        0,
+        3
+      ],
+      "n": 2,
+      "transitions": {
+        "default->default": 2
+      },
+      "graph_geometric_mean": 1.2153574504029563
+    },
+    {
+      "tactic": [
+        120259084354,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "blocks": [
+        1
+      ],
+      "n": 1,
+      "transitions": {
+        "default->default": 1
+      },
+      "graph_geometric_mean": 1.2221754030782666
+    },
+    {
+      "tactic": [
+        579820585026,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "blocks": [
+        2
+      ],
+      "n": 1,
+      "transitions": {
+        "default->default": 1
+      },
+      "graph_geometric_mean": 1.167713140611442
+    },
+    {
+      "tactic": [
+        841813590082,
+        4294967332,
+        0,
+        2533274790395906,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "blocks": [
+        4
+      ],
+      "n": 1,
+      "transitions": {
+        "default->default": 1
+      },
+      "graph_geometric_mean": 1.2012871252354076
+    },
+    {
+      "tactic": [
+        828928688194,
+        4294967332,
+        0,
+        2533274790395906,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "blocks": [
+        5,
+        7
+      ],
+      "n": 2,
+      "transitions": {
+        "default->default": 2
+      },
+      "graph_geometric_mean": 1.144351752687197
+    },
+    {
+      "tactic": [
+        785979015234,
+        4294967332,
+        0,
+        2533274790395906,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "blocks": [
+        6
+      ],
+      "n": 1,
+      "transitions": {
+        "default->default": 1
+      },
+      "graph_geometric_mean": 1.1391634303354343
+    }
+  ],
+  "queue_outcomes_all_retained": {
+    "start_pending_after_enqueue": 384
+  },
+  "retained_profile_read_hash_groups": [
+    {
+      "hashes": [
+        "4ea2df954b1f579d75038721f8ca796c11e8d899761d3dffd06d7f62857b63e3",
+        "f03d6e67c858d364c82a0c2b291836d290883711500944119e2a4104031cec6e",
+        "d90c7167bcc08674b3f2b333abf733cb676d2c42b6a59de6389c4f29558a1a07",
+        "3be9ce3eb8c6fe885b92b4481ce3cb14f0af2e2946ffbb1580d02b63de592d3d"
+      ],
+      "processes": 8
+    }
+  ],
+  "serving_trace_signatures": [
+    {
+      "block": 0,
+      "finalist": [
+        893353197634,
+        4294967332,
+        0,
+        2533274790395907,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "signatures": {
+        "winner": [
+          {
+            "name": "_static_quant_fp8",
+            "device": 0,
+            "grid": [
+              144,
+              1,
+              1
+            ],
+            "block": [
+              128,
+              1,
+              1
+            ],
+            "registers per thread": 25,
+            "shared memory": 0
+          },
+          {
+            "name": "nvjet_sm90_qqtst_192x64_128x6_2x4_h_bz_TNT",
+            "device": 0,
+            "grid": [
+              8,
+              11,
+              1
+            ],
+            "block": [
+              384,
+              1,
+              1
+            ],
+            "registers per thread": 168,
+            "shared memory": 213220
+          }
+        ],
+        "default": [
+          {
+            "name": "_static_quant_fp8",
+            "device": 0,
+            "grid": [
+              144,
+              1,
+              1
+            ],
+            "block": [
+              128,
+              1,
+              1
+            ],
+            "registers per thread": 25,
+            "shared memory": 0
+          },
+          {
+            "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+            "device": 0,
+            "grid": [
+              2,
+              64,
+              1
+            ],
+            "block": [
+              384,
+              1,
+              1
+            ],
+            "registers per thread": 168,
+            "shared memory": 225652
+          }
+        ]
+      }
+    },
+    {
+      "block": 1,
+      "finalist": [
+        120259084354,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "signatures": {
+        "winner": [
+          {
+            "name": "_static_quant_fp8",
+            "device": 0,
+            "grid": [
+              144,
+              1,
+              1
+            ],
+            "block": [
+              128,
+              1,
+              1
+            ],
+            "registers per thread": 25,
+            "shared memory": 0
+          },
+          {
+            "name": "nvjet_sm90_qqtst_96x128_128x7_4x2_h_bz_TNN",
+            "device": 0,
+            "grid": [
+              8,
+              11,
+              1
+            ],
+            "block": [
+              384,
+              1,
+              1
+            ],
+            "registers per thread": 168,
+            "shared memory": 217356
+          }
+        ],
+        "default": [
+          {
+            "name": "_static_quant_fp8",
+            "device": 0,
+            "grid": [
+              144,
+              1,
+              1
+            ],
+            "block": [
+              128,
+              1,
+              1
+            ],
+            "registers per thread": 25,
+            "shared memory": 0
+          },
+          {
+            "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+            "device": 0,
+            "grid": [
+              2,
+              64,
+              1
+            ],
+            "block": [
+              384,
+              1,
+              1
+            ],
+            "registers per thread": 168,
+            "shared memory": 225652
+          }
+        ]
+      }
+    },
+    {
+      "block": 2,
+      "finalist": [
+        579820585026,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "signatures": {
+        "winner": [
+          {
+            "name": "_static_quant_fp8",
+            "device": 0,
+            "grid": [
+              144,
+              1,
+              1
+            ],
+            "block": [
+              128,
+              1,
+              1
+            ],
+            "registers per thread": 25,
+            "shared memory": 0
+          },
+          {
+            "name": "nvjet_sm90_qqtst_80x128_128x8_4x2_h_bz_TNN",
+            "device": 0,
+            "grid": [
+              8,
+              13,
+              1
+            ],
+            "block": [
+              384,
+              1,
+              1
+            ],
+            "registers per thread": 168,
+            "shared memory": 229668
+          }
+        ],
+        "default": [
+          {
+            "name": "_static_quant_fp8",
+            "device": 0,
+            "grid": [
+              144,
+              1,
+              1
+            ],
+            "block": [
+              128,
+              1,
+              1
+            ],
+            "registers per thread": 25,
+            "shared memory": 0
+          },
+          {
+            "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+            "device": 0,
+            "grid": [
+              2,
+              64,
+              1
+            ],
+            "block": [
+              384,
+              1,
+              1
+            ],
+            "registers per thread": 168,
+            "shared memory": 225652
+          }
+        ]
+      }
+    },
+    {
+      "block": 3,
+      "finalist": [
+        893353197634,
+        4294967332,
+        0,
+        2533274790395907,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "signatures": {
+        "winner": [
+          {
+            "name": "_static_quant_fp8",
+            "device": 0,
+            "grid": [
+              144,
+              1,
+              1
+            ],
+            "block": [
+              128,
+              1,
+              1
+            ],
+            "registers per thread": 25,
+            "shared memory": 0
+          },
+          {
+            "name": "nvjet_sm90_qqtst_192x64_128x6_2x4_h_bz_TNT",
+            "device": 0,
+            "grid": [
+              8,
+              11,
+              1
+            ],
+            "block": [
+              384,
+              1,
+              1
+            ],
+            "registers per thread": 168,
+            "shared memory": 213220
+          }
+        ],
+        "default": [
+          {
+            "name": "_static_quant_fp8",
+            "device": 0,
+            "grid": [
+              144,
+              1,
+              1
+            ],
+            "block": [
+              128,
+              1,
+              1
+            ],
+            "registers per thread": 25,
+            "shared memory": 0
+          },
+          {
+            "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+            "device": 0,
+            "grid": [
+              2,
+              64,
+              1
+            ],
+            "block": [
+              384,
+              1,
+              1
+            ],
+            "registers per thread": 168,
+            "shared memory": 225652
+          }
+        ]
+      }
+    },
+    {
+      "block": 4,
+      "finalist": [
+        841813590082,
+        4294967332,
+        0,
+        2533274790395906,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "signatures": {
+        "winner": [
+          {
+            "name": "_static_quant_fp8",
+            "device": 0,
+            "grid": [
+              144,
+              1,
+              1
+            ],
+            "block": [
+              128,
+              1,
+              1
+            ],
+            "registers per thread": 25,
+            "shared memory": 0
+          },
+          {
+            "name": "nvjet_sm90_qqtst_168x64_128x7_2x4_h_bz_TNN",
+            "device": 0,
+            "grid": [
+              8,
+              13,
+              1
+            ],
+            "block": [
+              384,
+              1,
+              1
+            ],
+            "registers per thread": 168,
+            "shared memory": 224508
+          }
+        ],
+        "default": [
+          {
+            "name": "_static_quant_fp8",
+            "device": 0,
+            "grid": [
+              144,
+              1,
+              1
+            ],
+            "block": [
+              128,
+              1,
+              1
+            ],
+            "registers per thread": 25,
+            "shared memory": 0
+          },
+          {
+            "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+            "device": 0,
+            "grid": [
+              2,
+              64,
+              1
+            ],
+            "block": [
+              384,
+              1,
+              1
+            ],
+            "registers per thread": 168,
+            "shared memory": 225652
+          }
+        ]
+      }
+    },
+    {
+      "block": 5,
+      "finalist": [
+        828928688194,
+        4294967332,
+        0,
+        2533274790395906,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "signatures": {
+        "winner": [
+          {
+            "name": "_static_quant_fp8",
+            "device": 0,
+            "grid": [
+              144,
+              1,
+              1
+            ],
+            "block": [
+              128,
+              1,
+              1
+            ],
+            "registers per thread": 25,
+            "shared memory": 0
+          },
+          {
+            "name": "nvjet_sm90_qqtst_160x64_128x7_2x4_h_bz_TNN",
+            "device": 0,
+            "grid": [
+              8,
+              13,
+              1
+            ],
+            "block": [
+              384,
+              1,
+              1
+            ],
+            "registers per thread": 168,
+            "shared memory": 217340
+          }
+        ],
+        "default": [
+          {
+            "name": "_static_quant_fp8",
+            "device": 0,
+            "grid": [
+              144,
+              1,
+              1
+            ],
+            "block": [
+              128,
+              1,
+              1
+            ],
+            "registers per thread": 25,
+            "shared memory": 0
+          },
+          {
+            "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+            "device": 0,
+            "grid": [
+              2,
+              64,
+              1
+            ],
+            "block": [
+              384,
+              1,
+              1
+            ],
+            "registers per thread": 168,
+            "shared memory": 225652
+          }
+        ]
+      }
+    },
+    {
+      "block": 6,
+      "finalist": [
+        785979015234,
+        4294967332,
+        0,
+        2533274790395906,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "signatures": {
+        "winner": [
+          {
+            "name": "_static_quant_fp8",
+            "device": 0,
+            "grid": [
+              144,
+              1,
+              1
+            ],
+            "block": [
+              128,
+              1,
+              1
+            ],
+            "registers per thread": 25,
+            "shared memory": 0
+          },
+          {
+            "name": "nvjet_sm90_qqtst_144x64_128x8_2x4_h_bz_TNN",
+            "device": 0,
+            "grid": [
+              8,
+              15,
+              1
+            ],
+            "block": [
+              384,
+              1,
+              1
+            ],
+            "registers per thread": 168,
+            "shared memory": 229652
+          }
+        ],
+        "default": [
+          {
+            "name": "_static_quant_fp8",
+            "device": 0,
+            "grid": [
+              144,
+              1,
+              1
+            ],
+            "block": [
+              128,
+              1,
+              1
+            ],
+            "registers per thread": 25,
+            "shared memory": 0
+          },
+          {
+            "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+            "device": 0,
+            "grid": [
+              2,
+              64,
+              1
+            ],
+            "block": [
+              384,
+              1,
+              1
+            ],
+            "registers per thread": 168,
+            "shared memory": 225652
+          }
+        ]
+      }
+    },
+    {
+      "block": 7,
+      "finalist": [
+        828928688194,
+        4294967332,
+        0,
+        2533274790395906,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "signatures": {
+        "winner": [
+          {
+            "name": "_static_quant_fp8",
+            "device": 0,
+            "grid": [
+              144,
+              1,
+              1
+            ],
+            "block": [
+              128,
+              1,
+              1
+            ],
+            "registers per thread": 25,
+            "shared memory": 0
+          },
+          {
+            "name": "nvjet_sm90_qqtst_160x64_128x7_2x4_h_bz_TNN",
+            "device": 0,
+            "grid": [
+              8,
+              13,
+              1
+            ],
+            "block": [
+              384,
+              1,
+              1
+            ],
+            "registers per thread": 168,
+            "shared memory": 217340
+          }
+        ],
+        "default": [
+          {
+            "name": "_static_quant_fp8",
+            "device": 0,
+            "grid": [
+              144,
+              1,
+              1
+            ],
+            "block": [
+              128,
+              1,
+              1
+            ],
+            "registers per thread": 25,
+            "shared memory": 0
+          },
+          {
+            "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+            "device": 0,
+            "grid": [
+              2,
+              64,
+              1
+            ],
+            "block": [
+              384,
+              1,
+              1
+            ],
+            "registers per thread": 168,
+            "shared memory": 225652
+          }
+        ]
+      }
+    }
+  ],
+  "official_comparison": {
+    "all_six_metrics_and_bootstrap_intervals_match": true,
+    "analysis_sha256": "6818d86bbd4f4f4d2d987672c29f76297025924c204330b6238c90d8b5d0e410"
+  },
+  "bootstrap": {
+    "replicates": 100000,
+    "seed": 202610262300,
+    "unit": "fresh process",
+    "quantile": "type7"
+  },
+  "reproducibility": {
+    "script_sha256": "6425495b3288299982ba8494e430431751f1d4eda150ef6f3856b767d81acbc4",
+    "benchmark_or_analyzer_imports": false
+  },
+  "interpretation_limits": [
+    "The shadow decision was fixed before graph capture; both choices use the same post-confirmation graphs. This is not an implemented-policy throughput comparison.",
+    "Finalist identity is selected by the first pass and may vary across processes; two-candidate regret is not a full oracle.",
+    "Confirmation uses synthetic inputs; the serving graph uses captured activations and quantization.",
+    "First-position and capture-order strata are descriptive small-n evidence; capture/allocation/history remain bundled.",
+    "Fixed fixture and one device/time window; no general safety, rare-error-rate or equivalence inference."
+  ]
+}

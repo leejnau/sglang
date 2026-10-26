@@ -1,0 +1,91 @@
+{
+  "status": "passed",
+  "timing_analysis_sha256": "6818d86bbd4f4f4d2d987672c29f76297025924c204330b6238c90d8b5d0e410",
+  "counts": {
+    "numerical_checks": 776,
+    "startup_profiler_calls": 648,
+    "confirmation_profiler_calls": 192,
+    "paired_graph_rounds": 192,
+    "graph_samples": 384,
+    "start_pending_after_enqueue": 384
+  },
+  "unique_finalist_descriptors": 6,
+  "unique_original_graph_signatures": {
+    "winner": 6,
+    "default": 1
+  },
+  "synthetic_read_hashes_identical": true,
+  "process_integrity": [
+    {
+      "block": 0,
+      "raw_sha256": "7bb51b53113c3012c3aaadf735cf34ea1a99f29466dd34d632abf26d449a1fcc",
+      "numerical_checks": 97,
+      "native_serving_explicit_used": 1,
+      "native_synthetic_explicit_used": 1,
+      "decision_frozen_before_capture": true
+    },
+    {
+      "block": 1,
+      "raw_sha256": "f2b187c92ef41160f09d2de531fae5909cd1fef8ea88832f0aeccc30cc5015e2",
+      "numerical_checks": 97,
+      "native_serving_explicit_used": 1,
+      "native_synthetic_explicit_used": 1,
+      "decision_frozen_before_capture": true
+    },
+    {
+      "block": 2,
+      "raw_sha256": "c9747ac9de420aecd035acdf1dcd96c4acb68693037247a266dff11e9b56e3ff",
+      "numerical_checks": 97,
+      "native_serving_explicit_used": 1,
+      "native_synthetic_explicit_used": 1,
+      "decision_frozen_before_capture": true
+    },
+    {
+      "block": 3,
+      "raw_sha256": "6c70584fbb4591d9ab8da4190f1056b7a40ed4cb6bcf9e05394b772c0eb6de69",
+      "numerical_checks": 97,
+      "native_serving_explicit_used": 1,
+      "native_synthetic_explicit_used": 1,
+      "decision_frozen_before_capture": true
+    },
+    {
+      "block": 4,
+      "raw_sha256": "998af4bc1b8de331b2722a598b86cdae736592980eac1a65aa16cf294cfeecc7",
+      "numerical_checks": 97,
+      "native_serving_explicit_used": 1,
+      "native_synthetic_explicit_used": 1,
+      "decision_frozen_before_capture": true
+    },
+    {
+      "block": 5,
+      "raw_sha256": "bdcf07e5f97bf872f2bd459a03193b0ce55cbd0761c6185d466cdbd48da42da4",
+      "numerical_checks": 97,
+      "native_serving_explicit_used": 1,
+      "native_synthetic_explicit_used": 1,
+      "decision_frozen_before_capture": true
+    },
+    {
+      "block": 6,
+      "raw_sha256": "3c7cbde86b76476f55a76c991a3fae226fd1e570462cc6cdf42dd9a5ad39c956",
+      "numerical_checks": 97,
+      "native_serving_explicit_used": 1,
+      "native_synthetic_explicit_used": 1,
+      "decision_frozen_before_capture": true
+    },
+    {
+      "block": 7,
+      "raw_sha256": "b2dcb65b6719c6f2f605cc6aec3528f7cd9ee9c9cf037a69b2341a2a9e3b7800",
+      "numerical_checks": 97,
+      "native_serving_explicit_used": 1,
+      "native_synthetic_explicit_used": 1,
+      "decision_frozen_before_capture": true
+    }
+  ],
+  "interpretation": [
+    "All eight choices remained default; the shadow confirmation neither improved nor worsened a choice in this cohort.",
+    "The exact1 counterfactual and regret intervals result from choosing the same graph in every case; they do not establish production equivalence, safety or rare-error bounds.",
+    "All observed explicit finalists were slower than default under the original profiler, confirmation profiler and full-layer graph measurement. This is a bounded single-fixture result.",
+    "Capture-order strata contain varying finalist identities; do not attribute their difference causally to capture order.",
+    "No production confirmation policy, broader tuning-budget increase or serving-performance claim follows."
+  ]
+}

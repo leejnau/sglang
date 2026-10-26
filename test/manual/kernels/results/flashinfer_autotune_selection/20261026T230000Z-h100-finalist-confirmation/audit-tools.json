@@ -1,0 +1,39 @@
+{
+  "scope": "Independent arithmetic implementation and unchanged raw-evidence publication tools. Source-only commit-identity amendment occurred before full timing results were read; arithmetic unchanged.",
+  "archive": "audit-tools.tar.gz",
+  "archive_sha256": "6b959d2363315faa20c8c8913f071ecf86c5d4fcd488cb6e1764a9326a546fe8",
+  "files": [
+    {
+      "path": "interpret_results.py",
+      "size_bytes": 15529,
+      "sha256": "6425495b3288299982ba8494e430431751f1d4eda150ef6f3856b767d81acbc4"
+    },
+    {
+      "path": "interpretation-controls.json",
+      "size_bytes": 937,
+      "sha256": "18c38581a64463988ca1ad4cde51e484fd7d972a7b3f344e34d83650546cca25"
+    },
+    {
+      "path": "interpret_results.before_archive_amendment.py",
+      "size_bytes": 15529,
+      "sha256": "344be0b3b82b06b8971aca48a76b761c16190d909294b180c53add10d9ccdcf3"
+    },
+    {
+      "path": "interpreter-source-update.json",
+      "size_bytes": 588,
+      "sha256": "1805f7c99ee4236e5b0d1fde329bd4f34d526f2776254765cf42551c59bb728f"
+    },
+    {
+      "path": "audit_public.py",
+      "size_bytes": 12442,
+      "sha256": "901e14e7e1e827ed0fcd5081d4440991b0bf8d0d8ef7fa0181cab8df07d40648"
+    },
+    {
+      "path": "package_results.py",
+      "size_bytes": 13991,
+      "sha256": "7324863cb8598251d977dfdb71102621562ee828deb0ab50fdc1ad1cd97bd33c"
+    }
+  ],
+  "math_controls": 9,
+  "status": "tools_prepared_before_full_timing_results"
+}

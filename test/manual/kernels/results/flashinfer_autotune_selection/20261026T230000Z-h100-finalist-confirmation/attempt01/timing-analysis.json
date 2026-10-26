@@ -1,0 +1,1377 @@
+{
+  "status": "passed",
+  "mode": "timing",
+  "plan_sha256": "778efd2392a8df56ad735a7e40fb256947c12abd3bfd555a1ba5fea5152ae588",
+  "schedule_sha256": "028d527022b448bd5bc95a8723a9f2ce92dd0d4bf713a611074676b102659543",
+  "historical_contract_sha256": "b4e97dfc15646c0e4e46d4db240e7254b3381f494af227b2aca4d66f5a7908af",
+  "worker_sha256": "3ec7d31ea510b29b9e5e2c289e82a3cfe31867b11ba4a28d9d900d76c1fa6413",
+  "analyzer_sha256": "0369f0d952fc9f519c6a0d5511ab280afbe6065224b6a0d34db3f7fab0b74d98",
+  "prior_analyzer_sha256": "b73acfc80a676ad24bb0358a6d66880531947f628783cba6fb1765c5154269ec",
+  "leaf_helpers_sha256": "cf72c74cf2e9c343e46af1b1b74a232a8b201de06dc2cd01bef6552f0981ce4f",
+  "distinct_container_ids": [
+    "93b3784e699a6179ef683ad3c57dadf1a90ad4c9504202e942bbe3f150a49a39",
+    "f8cec7a185d0ef2e52286ac5001d7ae44463cdfde514d3889e5af313b7a0600a",
+    "2f16ab9a70aac1578e92bb68102df0cce16d6de30925909434cef888ea7fade6",
+    "92371f1da75d7d7f6ccd9d6f15ea0b2a59dc6998d7f35812b8fe6f8c3c974d48",
+    "7c08263d3555ddd9289fd66a8c04979cf45c98965d5be418fe880e02869ac620",
+    "fdd57fc38da4854fe197849ac817427fffe12fb8cd37859eba1551f143e6c4ba",
+    "e9e9e21536dce55dd6a9b3fc04da2e55808f29b2c7b0a0703132b16257e6f71a",
+    "7214c037e96bf66719dec57674cbc3360434fd80aff52bfaf73f3dbcd43e3eb0",
+    "ede67da5ec5f1367df4da0813c3190f89c67f8f045f3f783cff22e9096d26314"
+  ],
+  "metrics": {
+    "hypothetical_over_original": {
+      "processes": 8,
+      "geometric_mean_ratio": 1.0,
+      "min_ratio": 1.0,
+      "max_ratio": 1.0,
+      "below_one": 0,
+      "above_one": 0,
+      "equal_one": 8,
+      "exploratory_process_bootstrap_95pct": [
+        1.0,
+        1.0
+      ]
+    },
+    "finalist_graph_over_default": {
+      "processes": 8,
+      "geometric_mean_ratio": 1.1807384667824636,
+      "min_ratio": 1.1322155236036702,
+      "max_ratio": 1.2221754030782666,
+      "below_one": 0,
+      "above_one": 8,
+      "equal_one": 0,
+      "exploratory_process_bootstrap_95pct": [
+        1.1569023076423517,
+        1.2042168923937742
+      ]
+    },
+    "confirmation_finalist_over_default": {
+      "processes": 8,
+      "geometric_mean_ratio": 1.0723032721807477,
+      "min_ratio": 1.0587704316448638,
+      "max_ratio": 1.0892316500028563,
+      "below_one": 0,
+      "above_one": 8,
+      "equal_one": 0,
+      "exploratory_process_bootstrap_95pct": [
+        1.065133331143779,
+        1.079620339936763
+      ]
+    },
+    "original_profile_finalist_over_default": {
+      "processes": 8,
+      "geometric_mean_ratio": 1.0631332052251234,
+      "min_ratio": 1.040937607229695,
+      "max_ratio": 1.078609957060656,
+      "below_one": 0,
+      "above_one": 8,
+      "equal_one": 0,
+      "exploratory_process_bootstrap_95pct": [
+        1.0529704641844544,
+        1.0721108574122082
+      ]
+    },
+    "original_regret_two_candidate_only": {
+      "processes": 8,
+      "geometric_mean_ratio": 1.0,
+      "min_ratio": 1.0,
+      "max_ratio": 1.0,
+      "below_one": 0,
+      "above_one": 0,
+      "equal_one": 8,
+      "exploratory_process_bootstrap_95pct": [
+        1.0,
+        1.0
+      ]
+    },
+    "confirmed_regret_two_candidate_only": {
+      "processes": 8,
+      "geometric_mean_ratio": 1.0,
+      "min_ratio": 1.0,
+      "max_ratio": 1.0,
+      "below_one": 0,
+      "above_one": 0,
+      "equal_one": 8,
+      "exploratory_process_bootstrap_95pct": [
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "outcomes": {
+    "unchanged_choice": 8
+  },
+  "transitions": {
+    "default->default": 8
+  },
+  "capture_order_strata": {
+    "winner-first": {
+      "blocks": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "geometric_mean_hypothetical_over_original": 1.0,
+      "geometric_mean_finalist_graph_over_default": 1.1710122239081295,
+      "outcomes": {
+        "unchanged_choice": 4
+      },
+      "transitions": {
+        "default->default": 4
+      }
+    },
+    "default-first": {
+      "blocks": [
+        0,
+        3,
+        4,
+        7
+      ],
+      "geometric_mean_hypothetical_over_original": 1.0,
+      "geometric_mean_finalist_graph_over_default": 1.1905454942963762,
+      "outcomes": {
+        "unchanged_choice": 4
+      },
+      "transitions": {
+        "default->default": 4
+      }
+    }
+  },
+  "process_rows": [
+    {
+      "block": 0,
+      "pid_namespace_local": 1,
+      "result_sha256": "7bb51b53113c3012c3aaadf735cf34ea1a99f29466dd34d632abf26d449a1fcc",
+      "capture_order": "default-first",
+      "finalist": [
+        893353197634,
+        4294967332,
+        0,
+        2533274790395907,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "finalist_profile_index": 80,
+      "original_role": "default",
+      "confirmed_role": "default",
+      "original_profiler_ratio": 1.0705802333820984,
+      "confirmation_log_ratio": 0.0614608696219093,
+      "confirmation_ratio": 1.063388884905542,
+      "decision_sha256": "917954c2b799a07a369ebc6c7574ccc7ac9568841e69a360f8eefbb68ea1ea18",
+      "trace": {
+        "sha256": "49c417cd388ba5fca0030ce5aa3b4dbe364ddec07f7aefdbf883fcffd5cf04d2",
+        "original_graphs": {
+          "winner": {
+            "cuda_graph_id": 5,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_192x64_128x6_2x4_h_bz_TNT",
+                "grid": [
+                  8,
+                  11,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 213220,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "default": {
+            "cuda_graph_id": 2,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+                "grid": [
+                  2,
+                  64,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 225652,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "winner_default_signatures_equal": false
+        },
+        "timing_inference": false
+      },
+      "confirmation_first_position_median_logs": {
+        "winner": 0.058797484319399636,
+        "default": 0.0614608696219093
+      },
+      "graph_log_ratio": 0.19061814092348267,
+      "graph_ratio": 1.209997315393926,
+      "graph_first_position_median_logs": {
+        "winner": 0.19032989072106762,
+        "default": 0.19103131033069623
+      },
+      "queue_outcomes_all_retained": {
+        "start_pending_after_enqueue": 48
+      },
+      "graph_log_ratios": [
+        0.19774830864564252,
+        0.19879225774862552,
+        0.18744646315908883,
+        0.19077977040348754,
+        0.19214465811384976,
+        0.1884062007414179,
+        0.19045651144347778,
+        0.1885093064116267,
+        0.19305354939684624,
+        0.18895701740675616,
+        0.1903353879047951,
+        0.19449725671859674,
+        0.18542003372292992,
+        0.18970875659637434,
+        0.1926133104939677,
+        0.19554869655419535,
+        0.19032439353734015,
+        0.19022895373814933,
+        0.18896613949632857,
+        0.1925229525780203,
+        0.19160656469274903,
+        0.19128285025790492,
+        0.19246837345032738,
+        0.18452183711254674
+      ],
+      "log_hypothetical_over_original": 0.0,
+      "hypothetical_over_original": 1.0,
+      "original_log_regret_two_candidate_only": 0.0,
+      "confirmed_log_regret_two_candidate_only": 0.0,
+      "outcome": "unchanged_choice",
+      "transition": "default->default"
+    },
+    {
+      "block": 1,
+      "pid_namespace_local": 1,
+      "result_sha256": "f2b187c92ef41160f09d2de531fae5909cd1fef8ea88832f0aeccc30cc5015e2",
+      "capture_order": "winner-first",
+      "finalist": [
+        120259084354,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "finalist_profile_index": 77,
+      "original_role": "default",
+      "confirmed_role": "default",
+      "original_profiler_ratio": 1.0712195268214852,
+      "confirmation_log_ratio": 0.07247424717525643,
+      "confirmation_ratio": 1.0751651171947894,
+      "decision_sha256": "457ecf7bf286bac6bde9f038b6522d596a71adcf367f51a3e93db9ec87b7e036",
+      "trace": {
+        "sha256": "9f99f8d3fe089f457d9f35dc74e065a145830e8243a80fad18c2cce39861d3eb",
+        "original_graphs": {
+          "winner": {
+            "cuda_graph_id": 2,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_96x128_128x7_4x2_h_bz_TNN",
+                "grid": [
+                  8,
+                  11,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 217356,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "default": {
+            "cuda_graph_id": 5,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+                "grid": [
+                  2,
+                  64,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 225652,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "winner_default_signatures_equal": false
+        },
+        "timing_inference": false
+      },
+      "confirmation_first_position_median_logs": {
+        "winner": 0.08245302343622543,
+        "default": 0.06722983236078073
+      },
+      "graph_log_ratio": 0.20063238815610834,
+      "graph_ratio": 1.2221754030782666,
+      "graph_first_position_median_logs": {
+        "winner": 0.20156690469881605,
+        "default": 0.200529944109749
+      },
+      "queue_outcomes_all_retained": {
+        "start_pending_after_enqueue": 48
+      },
+      "graph_log_ratios": [
+        0.20013578898637202,
+        0.20534738649257636,
+        0.1949439152547445,
+        0.1999025695048602,
+        0.20386572123004254,
+        0.200465795431236,
+        0.20232784719165944,
+        0.20709219126944198,
+        0.1933991012292019,
+        0.20844860893198638,
+        0.2093470973447992,
+        0.19614946077617568,
+        0.20356182571118092,
+        0.20123201258031193,
+        0.20067068352395473,
+        0.20044050571680086,
+        0.19895683019993063,
+        0.197093771442535,
+        0.20460661959095863,
+        0.19972299103234073,
+        0.19926513768921694,
+        0.20509737133162412,
+        0.20059409278826199,
+        0.2024631258736774
+      ],
+      "log_hypothetical_over_original": 0.0,
+      "hypothetical_over_original": 1.0,
+      "original_log_regret_two_candidate_only": 0.0,
+      "confirmed_log_regret_two_candidate_only": 0.0,
+      "outcome": "unchanged_choice",
+      "transition": "default->default"
+    },
+    {
+      "block": 2,
+      "pid_namespace_local": 1,
+      "result_sha256": "c9747ac9de420aecd035acdf1dcd96c4acb68693037247a266dff11e9b56e3ff",
+      "capture_order": "winner-first",
+      "finalist": [
+        579820585026,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "finalist_profile_index": 76,
+      "original_role": "default",
+      "confirmed_role": "default",
+      "original_profiler_ratio": 1.041529342761465,
+      "confirmation_log_ratio": 0.05710826469153915,
+      "confirmation_ratio": 1.0587704316448638,
+      "decision_sha256": "5fb16f73ed1d069035998ca86aca3576074632bfbb7481b403098e5dae2cb887",
+      "trace": {
+        "sha256": "416c20a737fbb713050844a967bea0e166da304b41843b8c2c91a07eebe14c4c",
+        "original_graphs": {
+          "winner": {
+            "cuda_graph_id": 2,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_80x128_128x8_4x2_h_bz_TNN",
+                "grid": [
+                  8,
+                  13,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 229668,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "default": {
+            "cuda_graph_id": 5,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+                "grid": [
+                  2,
+                  64,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 225652,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "winner_default_signatures_equal": false
+        },
+        "timing_inference": false
+      },
+      "confirmation_first_position_median_logs": {
+        "winner": 0.05710826469153915,
+        "default": 0.05611519467507741
+      },
+      "graph_log_ratio": 0.15504725545013953,
+      "graph_ratio": 1.167713140611442,
+      "graph_first_position_median_logs": {
+        "winner": 0.1558242467732704,
+        "default": 0.15420979369473176
+      },
+      "queue_outcomes_all_retained": {
+        "start_pending_after_enqueue": 48
+      },
+      "graph_log_ratios": [
+        0.16180780653722185,
+        0.15813538635622287,
+        0.14694606689884177,
+        0.15024333283507427,
+        0.152034063840203,
+        0.15534646003624855,
+        0.1575008200007038,
+        0.1590810615787492,
+        0.15219832861022478,
+        0.14931462707780777,
+        0.1582512522816572,
+        0.1536313230712522,
+        0.15821033447403124,
+        0.15119665337622706,
+        0.1563020335102922,
+        0.15889201617037418,
+        0.1519553322723415,
+        0.15748407858174296,
+        0.1475539880182571,
+        0.15530624658206776,
+        0.1566579854011909,
+        0.15391138553948686,
+        0.15478826431821133,
+        0.15103504341294577
+      ],
+      "log_hypothetical_over_original": 0.0,
+      "hypothetical_over_original": 1.0,
+      "original_log_regret_two_candidate_only": 0.0,
+      "confirmed_log_regret_two_candidate_only": 0.0,
+      "outcome": "unchanged_choice",
+      "transition": "default->default"
+    },
+    {
+      "block": 3,
+      "pid_namespace_local": 1,
+      "result_sha256": "6c70584fbb4591d9ab8da4190f1056b7a40ed4cb6bcf9e05394b772c0eb6de69",
+      "capture_order": "default-first",
+      "finalist": [
+        893353197634,
+        4294967332,
+        0,
+        2533274790395907,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "finalist_profile_index": 80,
+      "original_role": "default",
+      "confirmed_role": "default",
+      "original_profiler_ratio": 1.070781606426719,
+      "confirmation_log_ratio": 0.08547253942215158,
+      "confirmation_ratio": 1.0892316500028563,
+      "decision_sha256": "f3d96b6bc1dfcafc6376a8b2462251f76ccb011cc402de9bfa96afaa3edd4e3f",
+      "trace": {
+        "sha256": "7fb08d599c5cb5b6cb7c5e2fe76c445067cabb0f9463248c6491cc12e515fce6",
+        "original_graphs": {
+          "winner": {
+            "cuda_graph_id": 5,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_192x64_128x6_2x4_h_bz_TNT",
+                "grid": [
+                  8,
+                  11,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 213220,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "default": {
+            "cuda_graph_id": 2,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+                "grid": [
+                  2,
+                  64,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 225652,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "winner_default_signatures_equal": false
+        },
+        "timing_inference": false
+      },
+      "confirmation_first_position_median_logs": {
+        "winner": 0.08240498327533693,
+        "default": 0.09881128676054532
+      },
+      "graph_log_ratio": 0.19945832185116152,
+      "graph_ratio": 1.2207413301318712,
+      "graph_first_position_median_logs": {
+        "winner": 0.19945832185116152,
+        "default": 0.1992087475698548
+      },
+      "queue_outcomes_all_retained": {
+        "start_pending_after_enqueue": 48
+      },
+      "graph_log_ratios": [
+        0.19842879089075835,
+        0.19531324788254006,
+        0.19562718226512288,
+        0.19771181897390722,
+        0.1967996113002701,
+        0.2015551972012911,
+        0.2010746098185363,
+        0.1983953760267085,
+        0.194319234905021,
+        0.19998870424895124,
+        0.20099917403543066,
+        0.19733461829598667,
+        0.19951007290175854,
+        0.20384749829987908,
+        0.2032697495950849,
+        0.20296925698173351,
+        0.20165677409033486,
+        0.1955466676901627,
+        0.20294087303452568,
+        0.19849540204752963,
+        0.20452687552631343,
+        0.1931424365352092,
+        0.19940657080056448,
+        0.2013523511425302
+      ],
+      "log_hypothetical_over_original": 0.0,
+      "hypothetical_over_original": 1.0,
+      "original_log_regret_two_candidate_only": 0.0,
+      "confirmed_log_regret_two_candidate_only": 0.0,
+      "outcome": "unchanged_choice",
+      "transition": "default->default"
+    },
+    {
+      "block": 4,
+      "pid_namespace_local": 1,
+      "result_sha256": "998af4bc1b8de331b2722a598b86cdae736592980eac1a65aa16cf294cfeecc7",
+      "capture_order": "default-first",
+      "finalist": [
+        841813590082,
+        4294967332,
+        0,
+        2533274790395906,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "finalist_profile_index": 79,
+      "original_role": "default",
+      "confirmed_role": "default",
+      "original_profiler_ratio": 1.0735930900393997,
+      "confirmation_log_ratio": 0.07859746462483357,
+      "confirmation_ratio": 1.0817687842131019,
+      "decision_sha256": "cbdd627e9108abcce1f5c4262fcc4d06a0ad32bde9a841c96f067c9ae281c52e",
+      "trace": {
+        "sha256": "6ec2ff1efc1c00c420846dd5fb8fe42f61de9919254650ad44968fd5faf2048c",
+        "original_graphs": {
+          "winner": {
+            "cuda_graph_id": 5,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_168x64_128x7_2x4_h_bz_TNN",
+                "grid": [
+                  8,
+                  13,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 224508,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "default": {
+            "cuda_graph_id": 2,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+                "grid": [
+                  2,
+                  64,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 225652,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "winner_default_signatures_equal": false
+        },
+        "timing_inference": false
+      },
+      "confirmation_first_position_median_logs": {
+        "winner": 0.09189942540867975,
+        "default": 0.06837900602956008
+      },
+      "graph_log_ratio": 0.18339358632774078,
+      "graph_ratio": 1.2012871252354076,
+      "graph_first_position_median_logs": {
+        "winner": 0.18229714211129933,
+        "default": 0.18339358632774078
+      },
+      "queue_outcomes_all_retained": {
+        "start_pending_after_enqueue": 48
+      },
+      "graph_log_ratios": [
+        0.17730627000068558,
+        0.18473750574699202,
+        0.17947054255363468,
+        0.1806446508655448,
+        0.18488953869477473,
+        0.18394963335705386,
+        0.18640768845600947,
+        0.17919054601606996,
+        0.18455560921173256,
+        0.17708934882352698,
+        0.18292706724369334,
+        0.17695339157567624,
+        0.1784935254573806,
+        0.1854938389567518,
+        0.1802675989448501,
+        0.18739594363606457,
+        0.18446741832037766,
+        0.18050877908166954,
+        0.18269478531916342,
+        0.18591188492696342,
+        0.18395190854937635,
+        0.18530000984186157,
+        0.17634969482543913,
+        0.1838601054117882
+      ],
+      "log_hypothetical_over_original": 0.0,
+      "hypothetical_over_original": 1.0,
+      "original_log_regret_two_candidate_only": 0.0,
+      "confirmed_log_regret_two_candidate_only": 0.0,
+      "outcome": "unchanged_choice",
+      "transition": "default->default"
+    },
+    {
+      "block": 5,
+      "pid_namespace_local": 1,
+      "result_sha256": "bdcf07e5f97bf872f2bd459a03193b0ce55cbd0761c6185d466cdbd48da42da4",
+      "capture_order": "winner-first",
+      "finalist": [
+        828928688194,
+        4294967332,
+        0,
+        2533274790395906,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "finalist_profile_index": 78,
+      "original_role": "default",
+      "confirmed_role": "default",
+      "original_profiler_ratio": 1.0585284075193555,
+      "confirmation_log_ratio": 0.05857545012912602,
+      "confirmation_ratio": 1.0603249843335891,
+      "decision_sha256": "7a1a21720487bc515797f114876d07d7fd9fd0ac9ebaaae15f183afad927b1c8",
+      "trace": {
+        "sha256": "a39be669b2ad41674eaa27962bb609475e34b0fbf7bb1632c7e2e20f8752b2a1",
+        "original_graphs": {
+          "winner": {
+            "cuda_graph_id": 2,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_160x64_128x7_2x4_h_bz_TNN",
+                "grid": [
+                  8,
+                  13,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 217340,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "default": {
+            "cuda_graph_id": 5,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+                "grid": [
+                  2,
+                  64,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 225652,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "winner_default_signatures_equal": false
+        },
+        "timing_inference": false
+      },
+      "confirmation_first_position_median_logs": {
+        "winner": 0.06988021804888789,
+        "default": 0.033537273467006794
+      },
+      "graph_log_ratio": 0.14550029010857207,
+      "graph_ratio": 1.1566180701269573,
+      "graph_first_position_median_logs": {
+        "winner": 0.1453581426147803,
+        "default": 0.14669012606656745
+      },
+      "queue_outcomes_all_retained": {
+        "start_pending_after_enqueue": 48
+      },
+      "graph_log_ratios": [
+        0.15180202607199408,
+        0.1454575117971995,
+        0.15317667815680994,
+        0.14166656672121394,
+        0.1406980746612825,
+        0.15118112921215707,
+        0.1452587734323611,
+        0.14943711360036802,
+        0.1412056153016059,
+        0.14425377696518396,
+        0.15058508414737776,
+        0.13539846750066103,
+        0.14829274006880291,
+        0.14955543261512633,
+        0.14598209610092727,
+        0.14517442399752348,
+        0.14739815603220763,
+        0.1383140262533396,
+        0.1455430684199446,
+        0.14211632421799303,
+        0.1499653326406723,
+        0.14380054865390637,
+        0.14879131778960789,
+        0.14175750518996647
+      ],
+      "log_hypothetical_over_original": 0.0,
+      "hypothetical_over_original": 1.0,
+      "original_log_regret_two_candidate_only": 0.0,
+      "confirmed_log_regret_two_candidate_only": 0.0,
+      "outcome": "unchanged_choice",
+      "transition": "default->default"
+    },
+    {
+      "block": 6,
+      "pid_namespace_local": 1,
+      "result_sha256": "3c7cbde86b76476f55a76c991a3fae226fd1e570462cc6cdf42dd9a5ad39c956",
+      "capture_order": "winner-first",
+      "finalist": [
+        785979015234,
+        4294967332,
+        0,
+        2533274790395906,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "finalist_profile_index": 75,
+      "original_role": "default",
+      "confirmed_role": "default",
+      "original_profiler_ratio": 1.078609957060656,
+      "confirmation_log_ratio": 0.0664564048483941,
+      "confirmation_ratio": 1.0687143722945094,
+      "decision_sha256": "c44097876b9cd6f382e41cf8f3c07cca673eedce2f52661e2ead8961f5dd0099",
+      "trace": {
+        "sha256": "bab58fab1875e34483e7632c0352027308f82c4f5121879916333c88aa792350",
+        "original_graphs": {
+          "winner": {
+            "cuda_graph_id": 2,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_144x64_128x8_2x4_h_bz_TNN",
+                "grid": [
+                  8,
+                  15,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 229652,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "default": {
+            "cuda_graph_id": 5,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+                "grid": [
+                  2,
+                  64,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 225652,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "winner_default_signatures_equal": false
+        },
+        "timing_inference": false
+      },
+      "confirmation_first_position_median_logs": {
+        "winner": 0.07688894363201196,
+        "default": 0.06390558020795907
+      },
+      "graph_log_ratio": 0.13029415998004842,
+      "graph_ratio": 1.1391634303354343,
+      "graph_first_position_median_logs": {
+        "winner": 0.12969644942456388,
+        "default": 0.13051097329413608
+      },
+      "queue_outcomes_all_retained": {
+        "start_pending_after_enqueue": 48
+      },
+      "graph_log_ratios": [
+        0.13709243903815546,
+        0.1368526565819539,
+        0.13090905744382234,
+        0.1264421598606083,
+        0.12722265545596184,
+        0.13638908900593869,
+        0.1397374163980299,
+        0.13862622965644777,
+        0.12837436870782956,
+        0.1286562595097945,
+        0.12466447940089816,
+        0.13066638335205727,
+        0.12943389653128098,
+        0.13023275672388193,
+        0.13891004052797876,
+        0.13035556323621492,
+        0.13512269539482674,
+        0.12845621672270957,
+        0.12772029549961716,
+        0.1291601421252458,
+        0.13723008123662866,
+        0.12704124401678366,
+        0.12899752093823086,
+        0.13512269539482674
+      ],
+      "log_hypothetical_over_original": 0.0,
+      "hypothetical_over_original": 1.0,
+      "original_log_regret_two_candidate_only": 0.0,
+      "confirmed_log_regret_two_candidate_only": 0.0,
+      "outcome": "unchanged_choice",
+      "transition": "default->default"
+    },
+    {
+      "block": 7,
+      "pid_namespace_local": 1,
+      "result_sha256": "b2dcb65b6719c6f2f605cc6aec3528f7cd9ee9c9cf037a69b2341a2a9e3b7800",
+      "capture_order": "default-first",
+      "finalist": [
+        828928688194,
+        4294967332,
+        0,
+        2533274790395906,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "finalist_profile_index": 78,
+      "original_role": "default",
+      "confirmed_role": "default",
+      "original_profiler_ratio": 1.040937607229695,
+      "confirmation_log_ratio": 0.07832616582872076,
+      "confirmation_ratio": 1.0814753414514062,
+      "decision_sha256": "5120e5b2ec9a205ae953335387ec190322ae8d6ff08f9d139cfae27f16d13a02",
+      "trace": {
+        "sha256": "05c0300e0679ca4ef58e5fd29301928d28ba025e592e66bb36c83be9cdd3ef93",
+        "original_graphs": {
+          "winner": {
+            "cuda_graph_id": 5,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_160x64_128x7_2x4_h_bz_TNN",
+                "grid": [
+                  8,
+                  13,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 217340,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "default": {
+            "cuda_graph_id": 2,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  128,
+                  1,
+                  1
+                ],
+                "registers per thread": 25,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_64x72_128x12_2x1_v_bz_TNT",
+                "grid": [
+                  2,
+                  64,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 225652,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "winner_default_signatures_equal": false
+        },
+        "timing_inference": false
+      },
+      "confirmation_first_position_median_logs": {
+        "winner": 0.08534023289976912,
+        "default": 0.06250547759005509
+      },
+      "graph_log_ratio": 0.12417635353479183,
+      "graph_ratio": 1.1322155236036702,
+      "graph_first_position_median_logs": {
+        "winner": 0.12411000791531987,
+        "default": 0.12504182153476406
+      },
+      "queue_outcomes_all_retained": {
+        "start_pending_after_enqueue": 48
+      },
+      "graph_log_ratios": [
+        0.13198320934593366,
+        0.12514696597619682,
+        0.12547115179952537,
+        0.12493667709333131,
+        0.12649502868888457,
+        0.11726181592877248,
+        0.13384357799302696,
+        0.12339620811619902,
+        0.12410786065971795,
+        0.11888259911372202,
+        0.1221884124804897,
+        0.12356285133415984,
+        0.12365243910082381,
+        0.12074041536229994,
+        0.12424055189866186,
+        0.12411215517092179,
+        0.1322874515755888,
+        0.12780039121980669,
+        0.1158575559682953,
+        0.11582755788153155,
+        0.12678455066104272,
+        0.13024193981502766,
+        0.1273694333945714,
+        0.12005048675840417
+      ],
+      "log_hypothetical_over_original": 0.0,
+      "hypothetical_over_original": 1.0,
+      "original_log_regret_two_candidate_only": 0.0,
+      "confirmed_log_regret_two_candidate_only": 0.0,
+      "outcome": "unchanged_choice",
+      "transition": "default->default"
+    }
+  ],
+  "bootstrap_replicates": 100000,
+  "bootstrap_seed": 202610262300,
+  "inference_unit": "Fresh process n=8; same GPU and fixed workload; pair counts do not increase n.",
+  "limits": [
+    "Both choices use common post-confirmation graphs, not untouched versus modified startup.",
+    "Capture-order associations remain possible; near-zero measured better/worse counts are descriptive, not proven improvements.",
+    "All eight outcomes retained, including unchanged and default-winning processes; historical/admission results excluded.",
+    "No global margin, production selection change, universal policy claim or serving-performance inference."
+  ]
+}

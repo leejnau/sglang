@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "checks": 197,
+  "scope": "Artifact hashes, JSON, decompressed archive content, publication restrictions, repository size limit and unchanged tracked execution source. No new GPU measurements.",
+  "public_archive_sha256": "1d7f3182fb025e5b2998ed5fa45d1dcc0201e79431d393a684765d3036850321"
+}

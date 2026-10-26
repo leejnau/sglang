@@ -1,0 +1,389 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "batch_id": "20261026T230000Z-h100-finalist-confirmation",
+  "execution_commit": "77ea4b9a6de1f03fdf8666cead7b27f4fbed4908",
+  "original_protocol_commit": "40ae37e15db71a979ab659c1fc326754694a5638",
+  "scope": "Benchmark-only shadow confirmation of each search best explicit finalist against default. SGLang production selection, policy and persistence unchanged; no PR.",
+  "environment": {
+    "gpu": "NVIDIA H100 NVL",
+    "uuid": "GPU-240958a2-e8e1-3bac-b767-365c9e0b97bd",
+    "fixture_m_n_k": [
+      144,
+      4096,
+      1024
+    ],
+    "seed": 19,
+    "native_identity": "Exact archived prior GEMM and delay binaries; all18 actual Ninja checks report no work."
+  },
+  "cohort": {
+    "admission_processes_excluded_from_inference": 1,
+    "fresh_timing_processes": 8,
+    "confirmation_pairs_per_process": 12,
+    "held_out_graph_pairs_per_process": 24,
+    "distinct_explicit_finalists": 6,
+    "all_prespecified_processes_retained": true,
+    "adaptive_expansion": false
+  },
+  "finding": "All eight original searches chose default -1 and balanced confirmation retained it. No additional selection benefit observed; no production confirmation change is justified by this cohort.",
+  "transitions": {
+    "default->default": 8
+  },
+  "outcomes": {
+    "unchanged_choice": 8,
+    "measured_better": 0,
+    "measured_worse": 0,
+    "changed_choice_measured_tie": 0
+  },
+  "metrics": {
+    "hypothetical_over_original": {
+      "processes": 8,
+      "geometric_mean_ratio": 1.0,
+      "min_ratio": 1.0,
+      "max_ratio": 1.0,
+      "below_one": 0,
+      "above_one": 0,
+      "equal_one": 8,
+      "exploratory_process_bootstrap_95pct": [
+        1.0,
+        1.0
+      ]
+    },
+    "finalist_graph_over_default": {
+      "processes": 8,
+      "geometric_mean_ratio": 1.1807384667824636,
+      "min_ratio": 1.1322155236036702,
+      "max_ratio": 1.2221754030782666,
+      "below_one": 0,
+      "above_one": 8,
+      "equal_one": 0,
+      "exploratory_process_bootstrap_95pct": [
+        1.1569023076423517,
+        1.2042168923937742
+      ]
+    },
+    "confirmation_finalist_over_default": {
+      "processes": 8,
+      "geometric_mean_ratio": 1.0723032721807477,
+      "min_ratio": 1.0587704316448638,
+      "max_ratio": 1.0892316500028563,
+      "below_one": 0,
+      "above_one": 8,
+      "equal_one": 0,
+      "exploratory_process_bootstrap_95pct": [
+        1.065133331143779,
+        1.079620339936763
+      ]
+    },
+    "original_profile_finalist_over_default": {
+      "processes": 8,
+      "geometric_mean_ratio": 1.0631332052251234,
+      "min_ratio": 1.040937607229695,
+      "max_ratio": 1.078609957060656,
+      "below_one": 0,
+      "above_one": 8,
+      "equal_one": 0,
+      "exploratory_process_bootstrap_95pct": [
+        1.0529704641844544,
+        1.0721108574122082
+      ]
+    },
+    "original_regret_two_candidate_only": {
+      "processes": 8,
+      "geometric_mean_ratio": 1.0,
+      "min_ratio": 1.0,
+      "max_ratio": 1.0,
+      "below_one": 0,
+      "above_one": 0,
+      "equal_one": 8,
+      "exploratory_process_bootstrap_95pct": [
+        1.0,
+        1.0
+      ]
+    },
+    "confirmed_regret_two_candidate_only": {
+      "processes": 8,
+      "geometric_mean_ratio": 1.0,
+      "min_ratio": 1.0,
+      "max_ratio": 1.0,
+      "below_one": 0,
+      "above_one": 0,
+      "equal_one": 8,
+      "exploratory_process_bootstrap_95pct": [
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "capture_order_strata": {
+    "winner-first": {
+      "blocks": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "geometric_mean_hypothetical_over_original": 1.0,
+      "geometric_mean_finalist_graph_over_default": 1.1710122239081295,
+      "outcomes": {
+        "unchanged_choice": 4
+      },
+      "transitions": {
+        "default->default": 4
+      }
+    },
+    "default-first": {
+      "blocks": [
+        0,
+        3,
+        4,
+        7
+      ],
+      "geometric_mean_hypothetical_over_original": 1.0,
+      "geometric_mean_finalist_graph_over_default": 1.1905454942963762,
+      "outcomes": {
+        "unchanged_choice": 4
+      },
+      "transitions": {
+        "default->default": 4
+      }
+    }
+  },
+  "process_summary": [
+    {
+      "block": 0,
+      "capture_order": "default-first",
+      "finalist_profile_index": 80,
+      "finalist": [
+        893353197634,
+        4294967332,
+        0,
+        2533274790395907,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "original_role": "default",
+      "confirmed_role": "default",
+      "original_profiler_ratio": 1.0705802333820984,
+      "confirmation_ratio": 1.063388884905542,
+      "graph_ratio": 1.209997315393926,
+      "hypothetical_over_original": 1.0
+    },
+    {
+      "block": 1,
+      "capture_order": "winner-first",
+      "finalist_profile_index": 77,
+      "finalist": [
+        120259084354,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "original_role": "default",
+      "confirmed_role": "default",
+      "original_profiler_ratio": 1.0712195268214852,
+      "confirmation_ratio": 1.0751651171947894,
+      "graph_ratio": 1.2221754030782666,
+      "hypothetical_over_original": 1.0
+    },
+    {
+      "block": 2,
+      "capture_order": "winner-first",
+      "finalist_profile_index": 76,
+      "finalist": [
+        579820585026,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "original_role": "default",
+      "confirmed_role": "default",
+      "original_profiler_ratio": 1.041529342761465,
+      "confirmation_ratio": 1.0587704316448638,
+      "graph_ratio": 1.167713140611442,
+      "hypothetical_over_original": 1.0
+    },
+    {
+      "block": 3,
+      "capture_order": "default-first",
+      "finalist_profile_index": 80,
+      "finalist": [
+        893353197634,
+        4294967332,
+        0,
+        2533274790395907,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "original_role": "default",
+      "confirmed_role": "default",
+      "original_profiler_ratio": 1.070781606426719,
+      "confirmation_ratio": 1.0892316500028563,
+      "graph_ratio": 1.2207413301318712,
+      "hypothetical_over_original": 1.0
+    },
+    {
+      "block": 4,
+      "capture_order": "default-first",
+      "finalist_profile_index": 79,
+      "finalist": [
+        841813590082,
+        4294967332,
+        0,
+        2533274790395906,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "original_role": "default",
+      "confirmed_role": "default",
+      "original_profiler_ratio": 1.0735930900393997,
+      "confirmation_ratio": 1.0817687842131019,
+      "graph_ratio": 1.2012871252354076,
+      "hypothetical_over_original": 1.0
+    },
+    {
+      "block": 5,
+      "capture_order": "winner-first",
+      "finalist_profile_index": 78,
+      "finalist": [
+        828928688194,
+        4294967332,
+        0,
+        2533274790395906,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "original_role": "default",
+      "confirmed_role": "default",
+      "original_profiler_ratio": 1.0585284075193555,
+      "confirmation_ratio": 1.0603249843335891,
+      "graph_ratio": 1.1566180701269573,
+      "hypothetical_over_original": 1.0
+    },
+    {
+      "block": 6,
+      "capture_order": "winner-first",
+      "finalist_profile_index": 75,
+      "finalist": [
+        785979015234,
+        4294967332,
+        0,
+        2533274790395906,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "original_role": "default",
+      "confirmed_role": "default",
+      "original_profiler_ratio": 1.078609957060656,
+      "confirmation_ratio": 1.0687143722945094,
+      "graph_ratio": 1.1391634303354343,
+      "hypothetical_over_original": 1.0
+    },
+    {
+      "block": 7,
+      "capture_order": "default-first",
+      "finalist_profile_index": 78,
+      "finalist": [
+        828928688194,
+        4294967332,
+        0,
+        2533274790395906,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "original_role": "default",
+      "confirmed_role": "default",
+      "original_profiler_ratio": 1.040937607229695,
+      "confirmation_ratio": 1.0814753414514062,
+      "graph_ratio": 1.1322155236036702,
+      "hypothetical_over_original": 1.0
+    }
+  ],
+  "validation": {
+    "source_and_setup_cpu_controls": 112,
+    "independent_arithmetic_controls": 9,
+    "admission_numerical_checks": 49,
+    "timing_numerical_checks": 776,
+    "timing_actual_profiler_calls": 840,
+    "retained_graph_samples": 384,
+    "admission_outer_checks": 785,
+    "final_outer_checks_including_admission": 5698,
+    "publication_audit_checks": 2411,
+    "independent_metric_and_bootstrap_agreement": true,
+    "repository_hooks": "All applicable execution-source and final artifact hooks passed; see precommit-source.txt, precommit-restoration.txt and attempt01/precommit-results.txt.",
+    "artifact_integrity_checks": 197
+  },
+  "resource_cleanup": {
+    "first_preflight_allocation": {
+      "id": "2862382",
+      "state": "CANCELLED",
+      "elapsed": "00:01:04",
+      "profiling_calls": 0,
+      "reason": "Prior temporary study removed by cluster cleanup; stopped before measurement."
+    },
+    "measurement_allocation": {
+      "id": "2862690",
+      "state": "CANCELLED",
+      "elapsed": "00:08:15",
+      "all_steps_completed": true,
+      "final_gpu_memory_mib": 0,
+      "final_visible_gpu_processes": 0
+    },
+    "empty_user_queue_verified_utc": "2026-10-26 23:28:46"
+  },
+  "raw_evidence": {
+    "public_archive_sha256": "1d7f3182fb025e5b2998ed5fa45d1dcc0201e79431d393a684765d3036850321",
+    "private_complete_archive_sha256": "3358e54e5114b3f449bb097cb46ff6f3c5f008e9cc16e3ebaebd95fe3ff0c3ef",
+    "worker_results_and_traces": "Byte-exact originals retained. Public bootstrap derivatives remove only unrelated inventory entries; private originals and all native artifacts are preserved and hash-bound.",
+    "public_members": 100,
+    "byte_exact_public_originals": 89,
+    "inventory_only_bootstrap_derivatives": 10,
+    "private_exclusions": 56
+  },
+  "limitations": [
+    "One FP8 fixture, one H100 NVL, one contiguous cohort; no model-throughput, general superiority, safety or rare-error-rate claim.",
+    "Both choices are scored on the same graphs after extra confirmation. This is selection-quality comparison, not untouched production startup versus an implemented confirmation policy.",
+    "Effect and two-candidate regret ratios of1 with bootstrap intervals[1,1] follow algebraically from identical choices; they do not prove equivalence or precise future error bounds.",
+    "Explicit/default replay ratios describe forced candidates already rejected by both searches, not a naturally selected performance regression.",
+    "Six dynamic explicit descriptors and their allocation/history vary across processes. Capture-order strata are descriptive, not causal.",
+    "Actual-source/native acceptance and full-invocation correctness checks do not independently validate every internal profiler iteration.",
+    "Historical cohorts and admission measurements are excluded from current performance estimates."
+  ],
+  "next_step": "Keep this as a reproducible research tool. Preserve current production policy; a production confirmation proposal needs a reproducible selection failure that confirmation fixes under a relevant held-out workload. No additional experiments launched.",
+  "artifacts_sha256": {
+    "admission-analysis.json": "0925c06866d30b3e3a0e066c5f5e4cb49c5988afa3c2b241435a25b2a4b1f21a",
+    "admission-outer-audit.json": "cbf1e5bff0823ecc23c14f38926657e5cf128057b02424f256acf3bafd167d2a",
+    "artifact-validation.json": "61f16c23bf3995dcc3eba9a1a6a44dd5489b57855c8478e8a3e68ffa707739c5",
+    "coordinator-evidence.json": "a5db1c2a763557a1dd534b406441d7b316248dff40310ee11e2c35d749edc6b7",
+    "coordinator-evidence.tar.gz": "4c62b88b0dd28d246969a416f91b9dde8c1baed3c5aa5ba37d7df90e4dd9dc66",
+    "independent-interpretation.json": "f80e7ef7a504492add618df56f3793b6ac5287837b42b25f5b49bb31825b9ada",
+    "package-audit.json": "ef0bab4b2f2ff1d715e11975b00eb7c9260ad1d3b6a69e28862aba3dae7cd6cc",
+    "precommit-results.txt": "50943a9aadeb7872d8343caaa8e1bffe7e08433b17e14120976347228e56a7fe",
+    "public-manifest.json": "aa25ac800abe5b42c24808781c44d20ca6e4ec5d314b3272248bb5c7436a864d",
+    "publication-audit.json": "4d52524f8864b04abd0bf4b6f70103256062a55211ea72708f29be4a28495d87",
+    "raw-public.tar.gz": "1d7f3182fb025e5b2998ed5fa45d1dcc0201e79431d393a684765d3036850321",
+    "secondary-observations.json": "e2c4bf7e4f94679254ead7e0800490516bdacd724066dc511b62e0886f6dfd6a",
+    "timing-analysis.json": "6818d86bbd4f4f4d2d987672c29f76297025924c204330b6238c90d8b5d0e410",
+    "timing-outer-audit.json": "83ded743680f965d1736bc915596b3c580790f7f6630b0e27019ac2ab10285ef"
+  }
+}
