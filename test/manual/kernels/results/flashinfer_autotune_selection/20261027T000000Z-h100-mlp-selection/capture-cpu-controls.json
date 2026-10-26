@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "checks": 11,
+  "passed": [
+    "real historical input manifest is accepted",
+    "real SGLang projection is accepted",
+    "reject changed implementation alias",
+    "reject changed linear class",
+    "reject reversed projection dimensions",
+    "reject projection bias",
+    "reject changed activation",
+    "reject historical manifest byte drift",
+    "help requires no accelerator dependency",
+    "capture source compiles",
+    "capture has no prohibited framework token"
+  ],
+  "scope": "CPU-only provenance and source-drift controls; no model capture, numerical GPU validation or timing"
+}

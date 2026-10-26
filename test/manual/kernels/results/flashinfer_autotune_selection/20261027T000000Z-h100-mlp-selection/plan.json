@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "study": "mlp_default_v1_v2",
+  "status": "implementation_protocol_fixture_pending",
+  "source_contract": {
+    "flashinfer_commit": "27c62fdf0ab1cd4014df8a15b66a975541fda83c",
+    "variant": "Same qualified FP8-only stable-descriptor port and fixture-owned validation callback in every arm; no configured-timer guard or scoped-cache prototype.",
+    "runtime_sha256": {
+      "flashinfer/autotuner/autotuner.py": "0db42ad90d1a3fec6f81509a2c520c1892cea0a433f5dbd7f43468a2a10243ca",
+      "flashinfer/autotune_cache.py": "1ab2ed7208ed1bf1007b1f74de29fc818c93a5ab091beea0833474177fbb29ad",
+      "flashinfer/autotuner/_graph_timing.py": "5f3be31e17501ba11ee95327176ac4a4b95eeaee7be92c2bc7795bcbd30cefe3",
+      "flashinfer/gemm/gemm_base.py": "0bba9240029a5e09f331e7a2267f7067e126d57a7a341ca535f7c9557599adca"
+    },
+    "no_historical_pooling": "Prior cohorts provide source/protocol context only; no historical or admission observations enter current estimates."
+  },
+  "qualified_source": {
+    "candidate_manifest_sha256": "9a4c51562d7410d785cc544c004bc4f92486f40311cb5c7a7328c2c1213160d5",
+    "container_preflight_sha256": "b8d0f6bbc85eaca0e3ef1419ab99a97d5340c96b3da382cba81d7896768287ba",
+    "fp8_port_patch_sha256": "e5c0a130690cd9fe9f1204b11368433430345f066ee8dc3bd376cf49c7ef4d64",
+    "callback_patch_sha256": "706ca4d91f3e6ef8c1643977beef72fa39af121e691f9380a175633787fe94ef",
+    "qualification_execution_commit": "12447b7d6219d54d1296401c0b8cfeeff1568931",
+    "version_limit": "Official fallback package0.0.0+unknown/unknown; exact source manifests and native artifacts establish identity."
+  },
+  "fixture_contract": {
+    "schema_version": 2,
+    "model": "Qwen/Qwen3-0.6B",
+    "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "layer": "model.layers.0.mlp.down_proj",
+    "shape_m_n_k": [
+      144,
+      1024,
+      3072
+    ],
+    "seed": 19,
+    "selection": "Prespecified first-layer MLP down projection from the same checkpoint and exact prior 144 input token IDs, before observing any tuning or execution timing. Verify actual dimensions and capture provenance.",
+    "source": "Dense BF16 reference forward with actual captured post-nonlinearity activation; benchmark uses static per-tensor FP8 weights/activations through the SGLang linear facade."
+  },
+  "fixture_sha256": null,
+  "fixture_manifest_sha256": null,
+  "schedule_sha256": "0fc8e8825238518f0126836757e5e56b9635abccdc7e68b96bcbc40aab3b0e07",
+  "timing": {
+    "blocks": 12,
+    "warmup_ms": 500,
+    "min_sample_ms": 20,
+    "iterations": 20,
+    "trials": 6
+  },
+  "protocol": {
+    "arms": {
+      "default": "Actual wrapper with tuning disabled and no v2 context; genuine fallback misses.",
+      "v1": "Actual legacy autotune(True) and existing save/load; v2 context replaced by nullcontext only in manual harness.",
+      "v2": "Unchanged SGLang wrapper: legacy persistence plus autotune_v2(mode=tune,persistent_cache=False)."
+    },
+    "measurement_policy": "unspecified in every arm",
+    "contexts": "No managed store, scoped-cache prototype, added confirmation or production changes.",
+    "processes": "Six blocks cover all six arm-order permutations. Every arm runs in a fresh cold process followed immediately by a fresh warm process against its saved cache: 36 timing processes. Caches are isolated by arm and trial. Six disposable trial-0 admission processes are excluded from performance estimates.",
+    "capture": "After actual startup, capture natural and independent default graphs in the declared order and retain both for paired replay. A natural -1 winner still gets independently captured default graphs; never impose an exact ratio of one. Capture and mode orders are separately balanced within each arm; this is not a fully crossed order-factor experiment.",
+    "measurement": "Twelve paired windows per mode, six with each role first. Warm up and calibrate both roles outside measured windows. Eager records synchronized batch wall time and GPU events; graph records GPU-event replay batch spans and wall time. Event spans may include host submission gaps. Lookup/native observers are absent from timed calls.",
+    "integrity": "Verify actual warm lookup tiers, save/load byte identity, native descriptor acceptance, and numerical outputs including poisoned output and changed-input graph checks. Require zero profiling during warm startup and serving. Preserve failed and incomplete data.",
+    "freeze": "Freeze capture source first. Bind generated fixture/manifest hashes and final worker sources in a second source freeze BEFORE any admission tuning or timing. Capture is excluded from performance estimates.",
+    "no_adaptive_expansion": true,
+    "fresh_processes": 36,
+    "admission_workers": 6
+  },
+  "analysis": {
+    "unit": "Six complete arm blocks on one fixed fixture, GPU and time window. Warm processes are primary; cold phases are descriptive. Within-process pairs are dependent repetitions.",
+    "within_process": "Median paired log(natural/default). Primary eager metric is wall time per call; primary graph metric is GPU-event replay batch span per call.",
+    "primary": "Report each arm warm natural/default ratio and its geometric mean across six blocks, then the block-paired difference of v2 and v1 log ratios. Normalization against each retained default reduces but does not eliminate process/capture/history differences.",
+    "secondary": "Absolute natural/default per-call latencies, absolute warm v2/v1 ratios, cold phase estimates, winner identities and profile margins, default-vs-default variation, capture/mode-order strata, and startup cost.",
+    "uncertainty": "100000 exploratory whole-block paired bootstrap resamples; seed 202610270000; type-7 percentile 95% intervals. No equivalence, safety or population claims from n=6.",
+    "no_pooling": "Exclude historical and admission results. This new geometry is a separate cohort."
+  },
+  "stopping": {
+    "integrity": "Stop on unexpected correctness, cache, source, native or protocol failure. Preserve evidence and explicitly amend before a separately identified attempt.",
+    "performance": "Do not stop, retry, discard or expand based on timing sign.",
+    "resource": "One exclusive H100 node, bounded allocation; release and verify the queue."
+  },
+  "limits": [
+    "One first-layer projection under captured dense-model activations; no full-model quantization accuracy or serving-throughput claim.",
+    "One physical GPU and time window with six blocks do not establish universal superiority or rare-failure safety.",
+    "Profiling retains original synthetic dynamic activations; serving uses captured real activations plus quantization.",
+    "The FP8 stable-descriptor port and fixture-validation callback are explicit research overlays over pinned 27c62, not a stock-release qualification.",
+    "Graph capture, allocation and history remain bundled; a ratio difference is not automatically a causal effect of candidate identity.",
+    "Existing v1 persistence remains in use. Managed stores, distributed behavior, MegaMoE and production policy are outside this checkpoint."
+  ],
+  "environment": {
+    "image": "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
+    "gpu": "NVIDIA H100 NVL",
+    "uuid": "240958a2-e8e1-3bac-b767-365c9e0b97bd",
+    "driver": "580.159.04",
+    "power_limit_watts": 310,
+    "torch": "2.14.1+cu130",
+    "exclusive": true,
+    "image_id": "sha256:2e152727f0a5ce999172ec48203b2b292d41b3cb370976827718870557899caa"
+  },
+  "native_reuse": {
+    "source_archive": "fp8-current-source-private.tar.gz",
+    "source_archive_sha256": "209b2de9e76c358b94407202a4670613055e963200184e716b50eb67aad71c91",
+    "native_archive": "20261026T220000Z-h100-fixed-pair-attempt01-timing-full-raw.tgz",
+    "native_archive_sha256": "84e44c807d2a897723e793eeb0dd676d1c254491fdf2c95149511953ee4272f5",
+    "restoration": "Restore exact source archive plus the already-qualified tools and Python-only callback patch; restore entire native cache from the prior private archive. Never rebuild or change native artifact contents.",
+    "timestamp_amendment": "Archive extraction loses subsecond cache mtimes. Restore eight object mtimes from their unchanged .ninja_deps records. Reconstruct two library filesystem mtimes from build-log timestamps; these are explicitly not claimed original library stat mtimes. Source archive mtimes remain unchanged; every source-owned dependency must precede its recorded build timestamp.",
+    "reason": "Prior finalist preflight showed node-local caches are cleared between allocations. Restore the preserved exact source/native bytes, then verify ordinary Ninja finds no rebuild work.",
+    "container_source": "/study/input/current/source",
+    "container_cache": "/study/runtime-attempt01/cache",
+    "required_library_sha256": {
+      "gemm": "72690cacca4ce1d69ccaa6b9190475483d984bd58de0962d06c874c801c678d6",
+      "trtllm_utils": "e442a689064fe3af4ab46510b2d5aaf3597b072949b84f13d14e9e53352109e4"
+    },
+    "isolation": "Separate tuner cache per mode/trial/arm, shared only from that cold process to its fresh warm process. Qualified native build cache is common; no winner cache is shared across arms or trials.",
+    "failure": "Stop before measurement if archive/source/native hashes differ, a dependency timestamp is inconsistent, or actual pinned-container Ninja requires work. No implicit rebuild or load-only fallback."
+  }
+}

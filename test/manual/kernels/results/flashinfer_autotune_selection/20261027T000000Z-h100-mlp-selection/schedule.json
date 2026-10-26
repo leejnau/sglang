@@ -1,0 +1,908 @@
+{
+  "schema_version": 1,
+  "seed": 202610270000,
+  "entries": [
+    {
+      "id": "trial0-default-cold",
+      "trial": 0,
+      "arm": "default",
+      "phase": "cold",
+      "capture_order": "natural-first",
+      "mode_order": "eager-first"
+    },
+    {
+      "id": "trial0-default-warm",
+      "trial": 0,
+      "arm": "default",
+      "phase": "warm",
+      "capture_order": "natural-first",
+      "mode_order": "eager-first"
+    },
+    {
+      "id": "trial0-v1-cold",
+      "trial": 0,
+      "arm": "v1",
+      "phase": "cold",
+      "capture_order": "default-first",
+      "mode_order": "eager-first"
+    },
+    {
+      "id": "trial0-v1-warm",
+      "trial": 0,
+      "arm": "v1",
+      "phase": "warm",
+      "capture_order": "default-first",
+      "mode_order": "eager-first"
+    },
+    {
+      "id": "trial0-v2-cold",
+      "trial": 0,
+      "arm": "v2",
+      "phase": "cold",
+      "capture_order": "natural-first",
+      "mode_order": "graph-first"
+    },
+    {
+      "id": "trial0-v2-warm",
+      "trial": 0,
+      "arm": "v2",
+      "phase": "warm",
+      "capture_order": "natural-first",
+      "mode_order": "graph-first"
+    },
+    {
+      "id": "trial1-default-cold",
+      "trial": 1,
+      "arm": "default",
+      "phase": "cold",
+      "capture_order": "default-first",
+      "mode_order": "eager-first"
+    },
+    {
+      "id": "trial1-default-warm",
+      "trial": 1,
+      "arm": "default",
+      "phase": "warm",
+      "capture_order": "default-first",
+      "mode_order": "eager-first"
+    },
+    {
+      "id": "trial1-v2-cold",
+      "trial": 1,
+      "arm": "v2",
+      "phase": "cold",
+      "capture_order": "default-first",
+      "mode_order": "eager-first"
+    },
+    {
+      "id": "trial1-v2-warm",
+      "trial": 1,
+      "arm": "v2",
+      "phase": "warm",
+      "capture_order": "default-first",
+      "mode_order": "eager-first"
+    },
+    {
+      "id": "trial1-v1-cold",
+      "trial": 1,
+      "arm": "v1",
+      "phase": "cold",
+      "capture_order": "natural-first",
+      "mode_order": "graph-first"
+    },
+    {
+      "id": "trial1-v1-warm",
+      "trial": 1,
+      "arm": "v1",
+      "phase": "warm",
+      "capture_order": "natural-first",
+      "mode_order": "graph-first"
+    },
+    {
+      "id": "trial2-v1-cold",
+      "trial": 2,
+      "arm": "v1",
+      "phase": "cold",
+      "capture_order": "default-first",
+      "mode_order": "eager-first"
+    },
+    {
+      "id": "trial2-v1-warm",
+      "trial": 2,
+      "arm": "v1",
+      "phase": "warm",
+      "capture_order": "default-first",
+      "mode_order": "eager-first"
+    },
+    {
+      "id": "trial2-default-cold",
+      "trial": 2,
+      "arm": "default",
+      "phase": "cold",
+      "capture_order": "natural-first",
+      "mode_order": "graph-first"
+    },
+    {
+      "id": "trial2-default-warm",
+      "trial": 2,
+      "arm": "default",
+      "phase": "warm",
+      "capture_order": "natural-first",
+      "mode_order": "graph-first"
+    },
+    {
+      "id": "trial2-v2-cold",
+      "trial": 2,
+      "arm": "v2",
+      "phase": "cold",
+      "capture_order": "natural-first",
+      "mode_order": "graph-first"
+    },
+    {
+      "id": "trial2-v2-warm",
+      "trial": 2,
+      "arm": "v2",
+      "phase": "warm",
+      "capture_order": "natural-first",
+      "mode_order": "graph-first"
+    },
+    {
+      "id": "trial3-v1-cold",
+      "trial": 3,
+      "arm": "v1",
+      "phase": "cold",
+      "capture_order": "natural-first",
+      "mode_order": "graph-first"
+    },
+    {
+      "id": "trial3-v1-warm",
+      "trial": 3,
+      "arm": "v1",
+      "phase": "warm",
+      "capture_order": "natural-first",
+      "mode_order": "graph-first"
+    },
+    {
+      "id": "trial3-v2-cold",
+      "trial": 3,
+      "arm": "v2",
+      "phase": "cold",
+      "capture_order": "default-first",
+      "mode_order": "graph-first"
+    },
+    {
+      "id": "trial3-v2-warm",
+      "trial": 3,
+      "arm": "v2",
+      "phase": "warm",
+      "capture_order": "default-first",
+      "mode_order": "graph-first"
+    },
+    {
+      "id": "trial3-default-cold",
+      "trial": 3,
+      "arm": "default",
+      "phase": "cold",
+      "capture_order": "default-first",
+      "mode_order": "eager-first"
+    },
+    {
+      "id": "trial3-default-warm",
+      "trial": 3,
+      "arm": "default",
+      "phase": "warm",
+      "capture_order": "default-first",
+      "mode_order": "eager-first"
+    },
+    {
+      "id": "trial4-v2-cold",
+      "trial": 4,
+      "arm": "v2",
+      "phase": "cold",
+      "capture_order": "natural-first",
+      "mode_order": "eager-first"
+    },
+    {
+      "id": "trial4-v2-warm",
+      "trial": 4,
+      "arm": "v2",
+      "phase": "warm",
+      "capture_order": "natural-first",
+      "mode_order": "eager-first"
+    },
+    {
+      "id": "trial4-default-cold",
+      "trial": 4,
+      "arm": "default",
+      "phase": "cold",
+      "capture_order": "natural-first",
+      "mode_order": "graph-first"
+    },
+    {
+      "id": "trial4-default-warm",
+      "trial": 4,
+      "arm": "default",
+      "phase": "warm",
+      "capture_order": "natural-first",
+      "mode_order": "graph-first"
+    },
+    {
+      "id": "trial4-v1-cold",
+      "trial": 4,
+      "arm": "v1",
+      "phase": "cold",
+      "capture_order": "default-first",
+      "mode_order": "graph-first"
+    },
+    {
+      "id": "trial4-v1-warm",
+      "trial": 4,
+      "arm": "v1",
+      "phase": "warm",
+      "capture_order": "default-first",
+      "mode_order": "graph-first"
+    },
+    {
+      "id": "trial5-v2-cold",
+      "trial": 5,
+      "arm": "v2",
+      "phase": "cold",
+      "capture_order": "default-first",
+      "mode_order": "eager-first"
+    },
+    {
+      "id": "trial5-v2-warm",
+      "trial": 5,
+      "arm": "v2",
+      "phase": "warm",
+      "capture_order": "default-first",
+      "mode_order": "eager-first"
+    },
+    {
+      "id": "trial5-v1-cold",
+      "trial": 5,
+      "arm": "v1",
+      "phase": "cold",
+      "capture_order": "natural-first",
+      "mode_order": "eager-first"
+    },
+    {
+      "id": "trial5-v1-warm",
+      "trial": 5,
+      "arm": "v1",
+      "phase": "warm",
+      "capture_order": "natural-first",
+      "mode_order": "eager-first"
+    },
+    {
+      "id": "trial5-default-cold",
+      "trial": 5,
+      "arm": "default",
+      "phase": "cold",
+      "capture_order": "default-first",
+      "mode_order": "graph-first"
+    },
+    {
+      "id": "trial5-default-warm",
+      "trial": 5,
+      "arm": "default",
+      "phase": "warm",
+      "capture_order": "default-first",
+      "mode_order": "graph-first"
+    }
+  ],
+  "round_schedules": {
+    "0": {
+      "eager": [
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "natural",
+          "default"
+        ]
+      ],
+      "cuda_graph": [
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ]
+      ]
+    },
+    "1": {
+      "eager": [
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ]
+      ],
+      "cuda_graph": [
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ]
+      ]
+    },
+    "2": {
+      "eager": [
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ]
+      ],
+      "cuda_graph": [
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "default",
+          "natural"
+        ]
+      ]
+    },
+    "3": {
+      "eager": [
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "default",
+          "natural"
+        ]
+      ],
+      "cuda_graph": [
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ]
+      ]
+    },
+    "4": {
+      "eager": [
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "natural",
+          "default"
+        ]
+      ],
+      "cuda_graph": [
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ]
+      ]
+    },
+    "5": {
+      "eager": [
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "natural",
+          "default"
+        ]
+      ],
+      "cuda_graph": [
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "default",
+          "natural"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "natural",
+          "default"
+        ],
+        [
+          "default",
+          "natural"
+        ]
+      ]
+    }
+  }
+}
