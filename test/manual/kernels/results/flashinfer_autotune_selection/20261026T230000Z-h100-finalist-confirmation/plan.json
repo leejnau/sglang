@@ -1,0 +1,130 @@
+{
+  "source_contract": {
+    "flashinfer_commit": "27c62fdf0ab1cd4014df8a15b66a975541fda83c",
+    "variant": "The same qualified FP8-only descriptor port plus fixture-owned validation callback in every cell; no configured-timer guard or old scoped-cache prototype.",
+    "runtime_sha256": {
+      "flashinfer/autotuner/autotuner.py": "0db42ad90d1a3fec6f81509a2c520c1892cea0a433f5dbd7f43468a2a10243ca",
+      "flashinfer/autotune_cache.py": "1ab2ed7208ed1bf1007b1f74de29fc818c93a5ab091beea0833474177fbb29ad",
+      "flashinfer/autotuner/_graph_timing.py": "5f3be31e17501ba11ee95327176ac4a4b95eeaee7be92c2bc7795bcbd30cefe3",
+      "flashinfer/gemm/gemm_base.py": "0bba9240029a5e09f331e7a2267f7067e126d57a7a341ca535f7c9557599adca"
+    },
+    "fixture": {
+      "shape_m_n_k": [
+        144,
+        4096,
+        1024
+      ],
+      "seed": 19,
+      "sha256": "c30aa761eba827bb0b4eb6de0e99d9b8dda8243dd16d00146f9718d2abb05e8b"
+    },
+    "no_historical_pooling": "Prior cohorts provide source/protocol context only; no historical or admission observations enter current estimates."
+  },
+  "qualified_source": {
+    "candidate_manifest_sha256": "9a4c51562d7410d785cc544c004bc4f92486f40311cb5c7a7328c2c1213160d5",
+    "container_preflight_sha256": "b8d0f6bbc85eaca0e3ef1419ab99a97d5340c96b3da382cba81d7896768287ba",
+    "fp8_port_patch_sha256": "e5c0a130690cd9fe9f1204b11368433430345f066ee8dc3bd376cf49c7ef4d64",
+    "callback_patch_sha256": "706ca4d91f3e6ef8c1643977beef72fa39af121e691f9380a175633787fe94ef",
+    "qualification_execution_commit": "12447b7d6219d54d1296401c0b8cfeeff1568931",
+    "version_limit": "Official fallback package0.0.0+unknown/unknown; exact source manifests and native artifacts establish identity."
+  },
+  "environment": {
+    "image": "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
+    "gpu": "NVIDIA H100 NVL",
+    "uuid": "240958a2-e8e1-3bac-b767-365c9e0b97bd",
+    "driver": "580.159.04",
+    "power_limit_watts": 310,
+    "torch": "2.14.1+cu130",
+    "exclusive": true,
+    "image_id": "sha256:2e152727f0a5ce999172ec48203b2b292d41b3cb370976827718870557899caa"
+  },
+  "schema_version": 1,
+  "batch_id": "20261026T230000Z-h100-finalist-confirmation",
+  "scope": "Benchmark-only confirmation of each fresh search best explicit finalist against default; original winner and production behavior unchanged.",
+  "schedule_sha256": "028d527022b448bd5bc95a8723a9f2ce92dd0d4bf713a611074676b102659543",
+  "historical_contract_sha256": "b4e97dfc15646c0e4e46d4db240e7254b3381f494af227b2aca4d66f5a7908af",
+  "native_reuse": {
+    "source": "/tmp/fi-fixed-pair-2861566/input/current",
+    "cache": "/tmp/fi-fixed-pair-2861566/runtime-attempt01/cache",
+    "copy": "cp -a entire source input and native cache into new study; preserve original container paths and timestamps; fresh process, home and tuner cache per worker",
+    "container_source": "/study/input/current/source",
+    "container_cache": "/study/runtime-attempt01/cache",
+    "required_library_sha256": {
+      "gemm": "72690cacca4ce1d69ccaa6b9190475483d984bd58de0962d06c874c801c678d6",
+      "trtllm_utils": "e442a689064fe3af4ab46510b2d5aaf3597b072949b84f13d14e9e53352109e4"
+    },
+    "failure": "Stop before measurement if original study missing, build work occurs or qualified native identities differ; no implicit fallback/rebuild."
+  },
+  "protocol": {
+    "worker": "test/manual/kernels/bench_flashinfer_finalist_confirmation.py",
+    "fresh_processes": 8,
+    "admission_workers": 1,
+    "seed": 19,
+    "original_profile_ms": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      144
+    ],
+    "original_measurements": 81,
+    "default_index": 72,
+    "runtime_cache_m": 256,
+    "finalist_selection": "First minimum among the eight explicit candidates of the target M144 profile, keeping observed enumeration tie order. All original 81 measurements must be finite positive, as in qualified baseline. No replacement if finalist invalid.",
+    "natural_selection": "Original first-pass actual cache winner; freeze before confirmation, verify actual memory lookup afterward and unchanged cache/file state. Natural choice must equal default or the chosen explicit finalist.",
+    "confirmation_pairs": 12,
+    "confirmation_actual_profile_calls": 24,
+    "confirmation_objective": "auto; no explicit measurement policy; same original warmup/repeat/L2/config",
+    "confirmation_decision": "median(log(explicit_time/default_time)) < 0 selects explicit, otherwise default. No rounding or margin. Hypothetical decision only; never update original cache winner.",
+    "decision_freeze": "Record original choice and cache hashes before confirmation; freeze confirmation role, descriptor, paired log ratios and median with timestamp/hash before any graph capture.",
+    "profiler_warmup": 3,
+    "profiler_repeat": 10,
+    "cold_l2": false,
+    "graph_profile_replays": 1,
+    "graph_rounds": 24,
+    "graph_replays_per_sample": 16,
+    "graph_prequeue_cycles": 10000000,
+    "initial_warmup_ms": 500,
+    "rewarm_ms": 20,
+    "sequence": [
+      "Original auto/synthetic startup through SGLang wrapper: all nine profiles and nine candidates per profile; retain six target inputs only after final profile.",
+      "Freeze actual original cache choice and dynamically select best explicit finalist using only original target profiling results.",
+      "Prepare reference and read hashes on retained synthetic inputs. Twelve balanced auto-profiler pairs on the same six tensor objects; NaN output refresh before and numerical check after every complete invocation.",
+      "Freeze hypothetical choice; verify original natural winner and cache state unchanged. Capture both explicit cache-hit and default cache-miss graphs in scheduled independent order.",
+      "Numerical/changed-input checks and 24 paired actual SGLang full-layer replay windows, retaining all outcomes.",
+      "Post-timing native acceptance on exact serving/synthetic operands; synthetic changed-input/restoration checks; trace the SAME original graphs; final cache/input/source checks."
+    ],
+    "admission": "One disposable process with startup input hashes and integrity controls, excluded from performance estimates; timing requires independent admission audit.",
+    "no_adaptive_expansion": true
+  },
+  "analysis": {
+    "unit": "Fresh process, n=8; same physical GPU, one fixture and contiguous time window. Within-process pairs are dependent repetitions.",
+    "graph_log_ratio": "L=median(log(explicit_graph_time/default_graph_time)) across all24 paired graph windows.",
+    "counterfactual_comparison": "Let original and confirmation indicators be1 for explicit and0 for default. Confirmation/original choice latency ratio is exp((confirmation-original)*L), computed from the SAME post-confirmation graphs. Unchanged choice is exactly1.",
+    "primary": "Geometric mean of eight confirmation/original ratios, full range and per-process values, all original-to-confirmation choice transitions, and directional helped/hurt/unchanged counts.",
+    "secondary": "Original finalist/default profile ratio, confirmation paired log ratio, held-out graph paired log ratio, original and hypothetical regret relative to measured best of the TWO candidates; not a full candidate oracle.",
+    "capture_order": "Predeclared4/4 capture order and within-graph first-position strata; report all groups even when near zero or no decisions change. Capture/allocation/history are bundled; no causal attribution.",
+    "uncertainty": {
+      "method": "100000 exploratory whole-process bootstrap resamples shared across metrics; seed202610262300; percentile95%, type7 quantiles.",
+      "limits": "n8 within one fixed fixture/device/time window; no population, safety, equivalence or rare-error-rate inference. Directional helped/hurt counts are descriptive, not significance decisions."
+    },
+    "no_pooling": "No historical/admission pooling; preserve neutral and adverse outcomes. No timing-sign retries or expansion."
+  },
+  "stopping": {
+    "integrity": "Stop and preserve failed artifacts; revise source/protocol explicitly before a separately identified new attempt.",
+    "performance": "Do not stop, retry, discard or expand based on timing sign.",
+    "resource": "One exclusive H100 node; bounded allocation; release after preservation."
+  },
+  "limits": [
+    "Both original and hypothetical choices are scored using the same graphs AFTER extra confirmation; this is a choice screen, not unchanged-startup versus implemented-policy runtime measurement.",
+    "Dynamic finalist depends on first-pass profiling; confirmation candidate identity may vary across processes and is reported per process. It is not the fixed historical counterexample.",
+    "Retained tensor lifetime, reference preparation, NaN refresh and extra profiling change post-startup allocation/history; every process follows this declared sequence.",
+    "Profiler uses synthetic quantized inputs; full-layer serving graph uses captured activations plus quantization. This does not isolate input values, objective or host costs.",
+    "NaN checks surround full profiler invocations, including warmups, and do not validate every internal timed iteration independently. Serving graph traces do not observe every synthetic profiler invocation.",
+    "This no-margin median-log confirmation is a benchmark hypothesis only. No production selection rule, increased production tuning budget or general graph-policy recommendation follows.",
+    "No production changes, managed-store migration, scoped-cache prototype, distributed testing, model throughput test or PR."
+  ]
+}

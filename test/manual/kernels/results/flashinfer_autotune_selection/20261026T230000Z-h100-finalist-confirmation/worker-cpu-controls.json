@@ -1,0 +1,246 @@
+{
+  "status": "success",
+  "count": 54,
+  "worker_sha256": "3ec7d31ea510b29b9e5e2c289e82a3cfe31867b11ba4a28d9d900d76c1fa6413",
+  "controls": [
+    {
+      "control": "actual_best_explicit_not_default_or_fixed_ordinal",
+      "passed": true
+    },
+    {
+      "control": "first_observed_exact_tie_retained",
+      "passed": true
+    },
+    {
+      "control": "invalid_elapsed_excluded_None",
+      "passed": true
+    },
+    {
+      "control": "invalid_elapsed_excluded_inf",
+      "passed": true
+    },
+    {
+      "control": "invalid_elapsed_excluded_nan",
+      "passed": true
+    },
+    {
+      "control": "invalid_elapsed_excluded_0",
+      "passed": true
+    },
+    {
+      "control": "invalid_elapsed_excluded_-1",
+      "passed": true
+    },
+    {
+      "control": "failed_measurement_excluded",
+      "passed": true
+    },
+    {
+      "control": "other_endpoint_excluded",
+      "passed": true
+    },
+    {
+      "control": "no_explicit_candidate_rejected",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "all_explicit_failed_rejected",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "decision_faster",
+      "passed": true
+    },
+    {
+      "control": "decision_slower",
+      "passed": true
+    },
+    {
+      "control": "decision_exact_tie",
+      "passed": true
+    },
+    {
+      "control": "decision_even_log_median_not_arithmetic_ratio",
+      "passed": true
+    },
+    {
+      "control": "decision_incomplete",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "decision_nonfinite",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "decision_zero",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "decision_digest_positive",
+      "passed": true
+    },
+    {
+      "control": "final_decision_mutation_raw_measurement",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "final_decision_mutation_timestamp",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "final_decision_mutation_choice",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "final_decision_mutation_initial_digest",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "final_decision_mutation_payload",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "final_decision_mutation_digest",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "coordinated_postdecision_evidence_rewrite_rejected",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "actual_frozen_assignment_0",
+      "passed": true
+    },
+    {
+      "control": "actual_frozen_assignment_1",
+      "passed": true
+    },
+    {
+      "control": "actual_frozen_assignment_2",
+      "passed": true
+    },
+    {
+      "control": "actual_frozen_assignment_3",
+      "passed": true
+    },
+    {
+      "control": "actual_frozen_assignment_4",
+      "passed": true
+    },
+    {
+      "control": "actual_frozen_assignment_5",
+      "passed": true
+    },
+    {
+      "control": "actual_frozen_assignment_6",
+      "passed": true
+    },
+    {
+      "control": "actual_frozen_assignment_7",
+      "passed": true
+    },
+    {
+      "control": "unbalanced_confirmation_schedule_rejected",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "duplicate_confirmation_role_rejected",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "actual_run_sequence_both_graphs_decision_winner",
+      "passed": true
+    },
+    {
+      "control": "actual_run_sequence_both_graphs_decision_default",
+      "passed": true
+    },
+    {
+      "control": "admission_confirms_without_latency_cohort",
+      "passed": true
+    },
+    {
+      "control": "confirmation_failure_stops_and_restores",
+      "passed": true
+    },
+    {
+      "control": "dynamic_finalist_real_profiler_delegation",
+      "passed": true
+    },
+    {
+      "control": "diagnostic_undeclared",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "denial_recorded_undeclared",
+      "passed": true
+    },
+    {
+      "control": "diagnostic_startup_overlap",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "denial_recorded_startup_overlap",
+      "passed": true
+    },
+    {
+      "control": "diagnostic_explicit_policy",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "denial_recorded_explicit_policy",
+      "passed": true
+    },
+    {
+      "control": "diagnostic_timer_changed",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "denial_recorded_timer_changed",
+      "passed": true
+    },
+    {
+      "control": "diagnostic_wrong_stream",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "denial_recorded_wrong_stream",
+      "passed": true
+    },
+    {
+      "control": "other_descriptor_rejected",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "replaced_profiling_operand_rejected",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "nonfinite_profiler_result_retained",
+      "passed": true,
+      "expected_rejection": true
+    }
+  ],
+  "scope": "CPU-only actual new worker branches; inherited CUDA/numerical/native behavior remains for the disposable admission gate."
+}

@@ -1,0 +1,964 @@
+{
+  "schema_version": 1,
+  "historical_result_sha256": "fed1517860d8de5c3b1b25e1eaba7aac1df573b4b190bcc9b1655fdb3fa97980",
+  "historical_result_path": "20261024T180000Z-h100-objective-values/attempt03/block0-auto_synthetic-timing.json",
+  "candidate_order": {
+    "1": [
+      -1,
+      [
+        42949673026,
+        4294967332,
+        0,
+        1125899906842625,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        395136991298,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        446676598850,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        51539607618,
+        4294967332,
+        0,
+        844424930131968,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        343597383746,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        532575944770,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        1924145348674,
+        4294967332,
+        0,
+        1125899906842625,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        614180323394,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    ],
+    "2": [
+      -1,
+      [
+        42949673026,
+        4294967332,
+        0,
+        1125899906842625,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        395136991298,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        446676598850,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        51539607618,
+        4294967332,
+        0,
+        844424930131968,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        343597383746,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        532575944770,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        1924145348674,
+        4294967332,
+        0,
+        1125899906842625,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        614180323394,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    ],
+    "4": [
+      -1,
+      [
+        42949673026,
+        4294967332,
+        0,
+        1125899906842625,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        395136991298,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        446676598850,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        51539607618,
+        4294967332,
+        0,
+        844424930131968,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        343597383746,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        532575944770,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        1924145348674,
+        4294967332,
+        0,
+        1125899906842625,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        614180323394,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    ],
+    "8": [
+      -1,
+      [
+        42949673026,
+        4294967332,
+        0,
+        1125899906842625,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        395136991298,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        446676598850,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        1924145348674,
+        4294967332,
+        0,
+        1125899906842625,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        51539607618,
+        4294967332,
+        0,
+        844424930131968,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        343597383746,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        532575944770,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        614180323394,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    ],
+    "16": [
+      -1,
+      [
+        42949673026,
+        4294967332,
+        0,
+        1407374883553283,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        1924145348674,
+        4294967332,
+        0,
+        1970324836974595,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        395136991298,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        446676598850,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        51539607618,
+        4294967332,
+        0,
+        844424930131968,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        343597383746,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        532575944770,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        614180323394,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    ],
+    "32": [
+      -1,
+      [
+        1340029796418,
+        4294967332,
+        0,
+        1407374883553283,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        395136991298,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        446676598850,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        51539607618,
+        4294967332,
+        0,
+        844424930131968,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        343597383746,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        1687922147394,
+        4294967332,
+        0,
+        1407374883553283,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        1924145348674,
+        4294967332,
+        0,
+        2533274790395907,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        532575944770,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    ],
+    "64": [
+      -1,
+      [
+        395136991298,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        446676598850,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        55834574914,
+        4294967332,
+        0,
+        1407374883553283,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        51539607618,
+        4294967332,
+        0,
+        844424930131968,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        343597383746,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        532575944770,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        614180323394,
+        4294967332,
+        0,
+        1125899906842624,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        1692217114690,
+        4294967332,
+        0,
+        1407374883553283,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    ],
+    "128": [
+      -1,
+      [
+        64424509506,
+        4294967332,
+        0,
+        1407374883553283,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        115964117058,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        532575944770,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        614180323394,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        575525617730,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        704374636610,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        68719476802,
+        4294967332,
+        0,
+        1407374883553283,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        1705102016578,
+        4294967332,
+        0,
+        1125899906842625,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    ],
+    "144": [
+      -1,
+      [
+        73014444098,
+        4294967332,
+        0,
+        844424930131968,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        77309411394,
+        4294967332,
+        0,
+        1407374883553283,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        785979015234,
+        4294967332,
+        0,
+        2533274790395906,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        579820585026,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        120259084354,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        828928688194,
+        4294967332,
+        0,
+        2533274790395906,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        841813590082,
+        4294967332,
+        0,
+        2533274790395906,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      [
+        893353197634,
+        4294967332,
+        0,
+        2533274790395907,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    ]
+  },
+  "profile_keys": [
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 1, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 1, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 1, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 1, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 1, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 1, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 1, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 1, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 1, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 2, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 2, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 2, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 2, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 2, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 2, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 2, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 2, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 2, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 4, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 4, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 4, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 4, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 4, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 4, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 4, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 4, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 4, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 8, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 8, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 8, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 8, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 8, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 8, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 8, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 8, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 8, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 16, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 16, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 16, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 16, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 16, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 16, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 16, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 16, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 16, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 32, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 32, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 32, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 32, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 32, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 32, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 32, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 32, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 32, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 64, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 64, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 64, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 64, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 64, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 64, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 64, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 64, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 64, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 128, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 128, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 128, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 128, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 128, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 128, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 128, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 128, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 128, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 256, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 256, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 256, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 256, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 256, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 256, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 256, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 256, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+    "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 256, 1024), (1, 1024, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))"
+  ],
+  "original_settings": {
+    "warmup": 3,
+    "repeat": 10,
+    "stream_delay_micro_secs": 5000,
+    "cuda_graph_delay_micro_secs": 100,
+    "use_global_timer": false,
+    "measurement_policy": null,
+    "effective_policy_timer": null,
+    "config": {
+      "use_cuda_graph": false,
+      "use_cold_l2_cache": false,
+      "use_cuda_graph_individual_timing": false,
+      "cuda_graph_profile_replays": 1,
+      "profiling_repeat": null,
+      "effective_profiling_repeat": 10
+    }
+  },
+  "fixed_descriptor": [
+    77309411394,
+    4294967332,
+    0,
+    1407374883553283,
+    558779540176897,
+    120259084316,
+    292058693646,
+    0
+  ],
+  "original_default_index": 72,
+  "original_explicit_index": 74,
+  "environment": {
+    "torch": "2.14.1+cu130",
+    "cuda": "13.0",
+    "gpu": "NVIDIA H100 NVL",
+    "gpu_uuid": "240958a2-e8e1-3bac-b767-365c9e0b97bd",
+    "inference_mode": true,
+    "grad_enabled": false,
+    "allow_tf32": false,
+    "flashinfer_version": "0.0.0+unknown"
+  },
+  "fixture": {
+    "manifest_sha256": "e13a86fab5db5796b22d8dab0f84080b8057b036ca7aef2c7be8832e76505bf1",
+    "tensor_file_sha256": "c30aa761eba827bb0b4eb6de0e99d9b8dda8243dd16d00146f9718d2abb05e8b",
+    "shape": [
+      144,
+      4096,
+      1024
+    ],
+    "quantized_input_sha256": "879f7986dc7a53da6a9ad1c813773267997fbcc0c3d257fdcd612ca4152c57c3",
+    "tensors": {
+      "input_bf16": {
+        "dtype": "torch.bfloat16",
+        "shape": [
+          144,
+          1024
+        ],
+        "sha256": "189d0b8b23d60c4731ceee930afa1f526e9a99ed8f7db5078b017d06bcc9412f",
+        "nbytes": 294912
+      },
+      "weight_fp8_rowmajor": {
+        "dtype": "torch.float8_e4m3fn",
+        "shape": [
+          4096,
+          1024
+        ],
+        "sha256": "10a5bab88ff22484e35bdbf143c20e26b28f2bb88fb173728007c80448556d36",
+        "nbytes": 4194304
+      },
+      "weight_bf16_rowmajor": {
+        "dtype": "torch.bfloat16",
+        "shape": [
+          4096,
+          1024
+        ],
+        "sha256": "63e3c4278e121c311023bd1e204bb19d61b28f049427ad2c58b81a48eeb6a2b3",
+        "nbytes": 8388608
+      },
+      "input_scale": {
+        "dtype": "torch.float32",
+        "shape": [
+          1
+        ],
+        "sha256": "d90c7167bcc08674b3f2b333abf733cb676d2c42b6a59de6389c4f29558a1a07",
+        "nbytes": 4
+      },
+      "weight_scale": {
+        "dtype": "torch.float32",
+        "shape": [
+          1
+        ],
+        "sha256": "3be9ce3eb8c6fe885b92b4481ce3cb14f0af2e2946ffbb1580d02b63de592d3d",
+        "nbytes": 4
+      },
+      "input_ids": {
+        "dtype": "torch.int64",
+        "shape": [
+          1,
+          144
+        ],
+        "sha256": "416be52bdc364342c8e86489df49bfdf07904873e4cf7cb5d55f44d406133a47",
+        "nbytes": 1152
+      }
+    }
+  },
+  "source": {
+    "commit": "27c62fdf0ab1cd4014df8a15b66a975541fda83c",
+    "critical_sha256": {
+      "flashinfer/autotuner/autotuner.py": "0db42ad90d1a3fec6f81509a2c520c1892cea0a433f5dbd7f43468a2a10243ca",
+      "flashinfer/autotune_cache.py": "1ab2ed7208ed1bf1007b1f74de29fc818c93a5ab091beea0833474177fbb29ad",
+      "flashinfer/autotuner/_graph_timing.py": "5f3be31e17501ba11ee95327176ac4a4b95eeaee7be92c2bc7795bcbd30cefe3",
+      "flashinfer/gemm/gemm_base.py": "0bba9240029a5e09f331e7a2267f7067e126d57a7a341ca535f7c9557599adca"
+    },
+    "sglang_source_sha256": {
+      "python/sglang/srt/models/qwen3.py": "bc6b5d40731d21d9be6ba287fd9983810ca7998f2ff394a251bc6ee357ad1121",
+      "python/sglang/srt/layers/linear.py": "3ce31df0a8aab09ed8afa0ada8c0ce30ca207a748c02c3073d7f53648b9b7c3c",
+      "python/sglang/srt/layers/quantization/fp8_utils.py": "bf82147d19bf4d9e51647a3b20267386312f808833103d59a1bb0a1171c6c4c8",
+      "python/sglang/kernels/ops/quantization/fp8_kernel.py": "1913b690b331170ae722874a3e27ca41fadbcc560ab0c0490e62e482d2c7fe67",
+      "python/sglang/srt/utils/custom_op.py": "16ce982c284ac85d437b9a6d3ccbe12e92b3ba59c9c1e3dbe0d54be48d8e0166",
+      "python/sglang/srt/runtime_context.py": "17c498293ca672c39fea298fa104d5b5603323581cb18d695e5d8fc4f06d1bc6"
+    },
+    "bootstrap_helper_sha256": "b8d0f6bbc85eaca0e3ef1419ab99a97d5340c96b3da382cba81d7896768287ba",
+    "candidate_manifest_sha256": "9a4c51562d7410d785cc544c004bc4f92486f40311cb5c7a7328c2c1213160d5",
+    "facade_source_sha256": "e212a78bd560b3891ea9b6c366eec792417b0c88c5cf4e3e90ee64fa9bb68366",
+    "native_identity_passthrough": true,
+    "startup_wrapper_sha256": "64deff581665bd04830535baccfdfbdfa72794d919bc462fc469a4c42bdd68f5"
+  },
+  "original_profile_ratio": 0.993688886087182,
+  "original_graph_ratio": 1.160214079060569
+}
