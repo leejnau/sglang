@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "checks": {
+    "actual_schedule": "passed",
+    "valid": "passed",
+    "missing_analysis": "passed",
+    "missing_outer_audit": "passed",
+    "failed_outer_audit": "passed",
+    "wrong_outer_phase": "passed",
+    "changed_outer_result": "passed",
+    "changed_outer_bootstrap": "passed",
+    "failed_analysis": "passed",
+    "changed_result": "passed",
+    "changed_bootstrap": "passed",
+    "bad_bootstrap_result_binding": "passed",
+    "failed_worker": "passed",
+    "changed_native_reference": "passed",
+    "changed_reuse_manifest": "passed",
+    "failed_post_worker_native_guard": "passed",
+    "wrong_native_elf": "passed",
+    "native_valid_files": "passed",
+    "native_changed_bytes": "passed",
+    "native_extra_file": "passed",
+    "native_missing_file": "passed",
+    "native_wrong_reference": "passed",
+    "ninja_no_work": "passed",
+    "ninja_rebuild_rejected": "passed",
+    "ninja_warning_rejected": "passed"
+  },
+  "launcher_sha256": "0172f85d3473807b356e8738adcbde17615c75549f0c7c25ce1a75caf07255eb",
+  "bootstrap_sha256": "6e127764cdce1398e924d451ecdb8ebb557623ea5dd05f1181a6d5c775660781",
+  "scope": "Actual embedded launcher code with controlled JSON and the frozen schedule; no Docker, GPU, allocation or worker execution."
+}

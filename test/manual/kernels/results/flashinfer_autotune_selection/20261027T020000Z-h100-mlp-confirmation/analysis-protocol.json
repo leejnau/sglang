@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "fresh_timing_processes": 8,
+  "admission_processes": 1,
+  "fixture_shape_m_n_k": [
+    144,
+    1024,
+    3072
+  ],
+  "source_contract": "Same qualified source/native binaries and captured MLP fixture as the completed three-arm cohort; no historical timing or admission pooling.",
+  "startup": "Original synthetic initializer returns its generated object without clone/copy. Actual first-pass default-inclusive search and original winner/cache remain intact.",
+  "confirmation": {
+    "pairs": 12,
+    "order": "Balanced six explicit-first and six default-first per process, frozen before execution.",
+    "candidate": "First minimum of the eight original explicit M144 candidates.",
+    "decision": "median(log(explicit/default))<0 selects explicit; zero selects default. No margin or rounding.",
+    "scope": "Hypothetical decision frozen before graph capture; never publish a new winner."
+  },
+  "held_out_score": {
+    "paired_graph_windows": 24,
+    "replays_per_window": 16,
+    "unit": "Fresh process; all within-process windows retained.",
+    "graph_log": "L=median(log(explicit_graph/default_graph)) across all24 windows.",
+    "choice_log_effect": "(confirmed_explicit_indicator-original_explicit_indicator)*L.",
+    "unchanged_choice": "Exactly1, even if independently captured graphs differ.",
+    "two_candidate_regret": "selected_indicator*L-min(0,L); not an all-candidate oracle."
+  },
+  "counts": {
+    "original_slow": "Original two-candidate log regret>0.",
+    "confirmed_slow": "Confirmed two-candidate log regret>0.",
+    "corrected": "Original slow and confirmed not slow.",
+    "introduced": "Original not slow and confirmed slow.",
+    "remaining_slow": "Both slow.",
+    "neither_slow": "Neither slow.",
+    "interpretation": "Directional counts use measured point estimates without a margin; not per-process significance claims. Report all unchanged, improved, adverse, and tied results."
+  },
+  "uncertainty": {
+    "resamples": 100000,
+    "seed": 202610262300,
+    "unit": "Complete fresh processes; shared indices across metrics.",
+    "interval": "Exploratory95% percentile interval with type7 interpolation; eight processes on one device/fixture/time window."
+  },
+  "review_gate": {
+    "supports_focused_review": "corrected>0 AND introduced=0 AND whole-process95%CI upper for confirmation/original graph ratio<1.",
+    "otherwise": "Stop this bounded checkpoint. Classify promising but inconclusive, introduced slow choices, or neutral/ineffective as appropriate.",
+    "automatic_production_change_or_pr": false,
+    "adaptive_expansion": false
+  },
+  "limitations": [
+    "Both decisions use the same post-confirmation graphs; this is not untouched startup versus a deployed policy.",
+    "Synthetic profiling operands and captured serving operands remain different. This does not isolate noise, input values, or measurement objective.",
+    "Capture/history effects remain possible; retain capture-order and first-position strata.",
+    "No eager performance, full-model serving, universal safety, graph-policy adoption, or managed-cache claim."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "controls": 19,
+  "cases": [
+    "all nine original draws return the identical tensor without copy or hash",
+    "original profile endpoints and exact runtime target are preserved",
+    "admission attests the original tensor once without replacement",
+    "captured-value initializer substitution rejected",
+    "scoped MLP setup executes actual adapter substitutions",
+    "all fixture and initializer helper globals restore after setup failure",
+    "parent validation receives the MLP startup bridge",
+    "startup bridge restores the original helper after exceptions",
+    "MLP public operand guards accept an actual memory winner",
+    "MLP public operand guards preserve genuine default miss",
+    "old QKV shape cannot pass the MLP guard",
+    "wrong weight layout rejected",
+    "different static weight allocation rejected",
+    "lost natural cache hit rejected",
+    "frozen MLP manifest and adapter evidence accepted",
+    "wrong fixture shape rejected",
+    "wrong fixture fixture_kind rejected",
+    "unverified captured activation rejected",
+    "unfrozen fixture byte hash rejected"
+  ],
+  "worker_sha256": "a8532276afc70ae1b70e12eaf9fc722fa7b29ed6102407360dd93708a7789157",
+  "controls_sha256": "c4db17a86707359cd99cfefdb8479e3a2c845fe0284ccca7417d95172f5544e9",
+  "scope": "MLP adapter identity, original initializer and exception restoration; parent confirmation protocol controls remain separate."
+}
