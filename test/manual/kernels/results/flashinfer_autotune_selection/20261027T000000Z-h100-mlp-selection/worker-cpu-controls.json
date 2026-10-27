@@ -1,0 +1,348 @@
+{
+  "status": "success",
+  "count": 80,
+  "worker_sha256": "ffd68fd070fc330d46d876f1892a236748aed781c5f8d2097542465e910a6ae4",
+  "controls": [
+    {
+      "control": "actual_assignment_trial0-default-cold",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial0-default-warm",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial0-v1-cold",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial0-v1-warm",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial0-v2-cold",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial0-v2-warm",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial1-default-cold",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial1-default-warm",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial1-v2-cold",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial1-v2-warm",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial1-v1-cold",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial1-v1-warm",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial2-v1-cold",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial2-v1-warm",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial2-default-cold",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial2-default-warm",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial2-v2-cold",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial2-v2-warm",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial3-v1-cold",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial3-v1-warm",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial3-v2-cold",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial3-v2-warm",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial3-default-cold",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial3-default-warm",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial4-v2-cold",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial4-v2-warm",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial4-default-cold",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial4-default-warm",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial4-v1-cold",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial4-v1-warm",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial5-v2-cold",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial5-v2-warm",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial5-v1-cold",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial5-v1-warm",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial5-default-cold",
+      "passed": true
+    },
+    {
+      "control": "actual_assignment_trial5-default-warm",
+      "passed": true
+    },
+    {
+      "control": "wrong_assignment_capture_order",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "wrong_assignment_mode_order",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "wrong_assignment_arm",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "unbalanced_eager",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "unbalanced_cuda_graph",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "actual_sampler_calls_and_priming_order",
+      "passed": true
+    },
+    {
+      "control": "actual_sampler_normalization",
+      "passed": true
+    },
+    {
+      "control": "invalid_event_duration_0",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "invalid_event_duration_-1",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "invalid_event_duration_nan",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "invalid_event_duration_inf",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "invalid_iteration_count_0",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "invalid_iteration_count_-1",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "invalid_iteration_count_65537",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "invalid_iteration_count_True",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "default_measurement_failure_restores_real_cache_fields",
+      "passed": true
+    },
+    {
+      "control": "natural_scope_preserves_actual_lookup_state",
+      "passed": true
+    },
+    {
+      "control": "warm_unexpected_profiling_rejected",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "warm_forbidden_attempt_counted_before_throw",
+      "passed": true
+    },
+    {
+      "control": "actual_arm_context_default",
+      "passed": true
+    },
+    {
+      "control": "wrong_actual_arm_context_default",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "actual_arm_context_v1",
+      "passed": true
+    },
+    {
+      "control": "wrong_actual_arm_context_v1",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "actual_arm_context_v2",
+      "passed": true
+    },
+    {
+      "control": "wrong_actual_arm_context_v2",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "setup_cannot_redefine_qualified_provider_identity",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "natural_tactic_preserved_-1",
+      "passed": true
+    },
+    {
+      "control": "warm_natural_file_default_miss_-1",
+      "passed": true
+    },
+    {
+      "control": "natural_tactic_preserved_(1, 1, 1, 1, 1, 1, 1, 1)",
+      "passed": true
+    },
+    {
+      "control": "warm_natural_file_default_miss_(1, 1, 1, 1, 1, 1, 1, 1)",
+      "passed": true
+    },
+    {
+      "control": "actual_retained_owner_positive",
+      "passed": true
+    },
+    {
+      "control": "different_graph_output_rejected",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "wrong_native_output_view_rejected",
+      "passed": true,
+      "expected_rejection": true
+    },
+    {
+      "control": "common_iterations_cover_both_eager",
+      "passed": true
+    },
+    {
+      "control": "actual_balanced_pair_order_eager",
+      "passed": true
+    },
+    {
+      "control": "common_iterations_cover_both_cuda_graph",
+      "passed": true
+    },
+    {
+      "control": "actual_balanced_pair_order_cuda_graph",
+      "passed": true
+    },
+    {
+      "control": "graph_query_all_outcomes_retained_False",
+      "passed": true
+    },
+    {
+      "control": "graph_delay_and_query_order_False",
+      "passed": true
+    },
+    {
+      "control": "graph_event_excludes_queue_wall_diagnostic_False",
+      "passed": true
+    },
+    {
+      "control": "graph_query_all_outcomes_retained_True",
+      "passed": true
+    },
+    {
+      "control": "graph_delay_and_query_order_True",
+      "passed": true
+    },
+    {
+      "control": "graph_event_excludes_queue_wall_diagnostic_True",
+      "passed": true
+    },
+    {
+      "control": "graph_query_error_partial_preserved",
+      "passed": true
+    }
+  ],
+  "scope": "CPU-only actual schedule, sampler, calibration, profile-denial, owner and inherited-cache branches. Actual arm/persistence/native/numerical behavior requires disposable CUDA admission."
+}

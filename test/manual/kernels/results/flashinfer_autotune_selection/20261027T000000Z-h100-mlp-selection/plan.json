@@ -43,7 +43,10 @@
     "warmup_ms": 500,
     "min_sample_ms": 20,
     "iterations": 20,
-    "trials": 6
+    "trials": 6,
+    "graph_replays": 16,
+    "graph_prequeue_cycles": 10000000,
+    "rewarm_ms": 20
   },
   "protocol": {
     "arms": {
@@ -55,7 +58,7 @@
     "contexts": "No managed store, scoped-cache prototype, added confirmation or production changes.",
     "processes": "Six blocks cover all six arm-order permutations. Every arm runs in a fresh cold process followed immediately by a fresh warm process against its saved cache: 36 timing processes. Caches are isolated by arm and trial. Six disposable trial-0 admission processes are excluded from performance estimates.",
     "capture": "After actual startup, capture natural and independent default graphs in the declared order and retain both for paired replay. A natural -1 winner still gets independently captured default graphs; never impose an exact ratio of one. Capture and mode orders are separately balanced within each arm; this is not a fully crossed order-factor experiment.",
-    "measurement": "Twelve paired windows per mode, six with each role first. Warm up and calibrate both roles outside measured windows. Eager records synchronized batch wall time and GPU events; graph records GPU-event replay batch spans and wall time. Event spans may include host submission gaps. Lookup/native observers are absent from timed calls.",
+    "measurement": "Twelve paired windows per mode, six with each role first. Warm both roles for 500 ms and rewarm 20 ms before each sample. Eager uses common batch lengths calibrated to at least 20 ms and records synchronized wall time plus GPU events. Graph uses the prior qualified fixed 16-replay window queued behind 10 million sleep cycles, with the delay BEFORE the start event; GPU-event time is primary and wall time including delay is diagnostic. Prime the sleep helper before startup in every arm. Query the start event after enqueueing and retain all pending/inconclusive outcomes. Lookup/native observers are absent from timed calls.",
     "integrity": "Verify actual warm lookup tiers, save/load byte identity, native descriptor acceptance, and numerical outputs including poisoned output and changed-input graph checks. Require zero profiling during warm startup and serving. Preserve failed and incomplete data.",
     "freeze": "Freeze capture source first. Bind generated fixture/manifest hashes and final worker sources in a second source freeze BEFORE any admission tuning or timing. Capture is excluded from performance estimates.",
     "no_adaptive_expansion": true,
@@ -64,7 +67,7 @@
   },
   "analysis": {
     "unit": "Six complete arm blocks on one fixed fixture, GPU and time window. Warm processes are primary; cold phases are descriptive. Within-process pairs are dependent repetitions.",
-    "within_process": "Median paired log(natural/default). Primary eager metric is wall time per call; primary graph metric is GPU-event replay batch span per call.",
+    "within_process": "Median paired log(natural/default). Primary eager metric is synchronized wall time per call; primary graph metric is queued GPU-event replay time per call. Report queue-completion evidence without using it to exclude samples.",
     "primary": "Report each arm warm natural/default ratio and its geometric mean across six blocks, then the block-paired difference of v2 and v1 log ratios. Normalization against each retained default reduces but does not eliminate process/capture/history differences.",
     "secondary": "Absolute natural/default per-call latencies, absolute warm v2/v1 ratios, cold phase estimates, winner identities and profile margins, default-vs-default variation, capture/mode-order strata, and startup cost.",
     "uncertainty": "100000 exploratory whole-block paired bootstrap resamples; seed 202610270000; type-7 percentile 95% intervals. No equivalence, safety or population claims from n=6.",
@@ -81,7 +84,8 @@
     "Profiling retains original synthetic dynamic activations; serving uses captured real activations plus quantization.",
     "The FP8 stable-descriptor port and fixture-validation callback are explicit research overlays over pinned 27c62, not a stock-release qualification.",
     "Graph capture, allocation and history remain bundled; a ratio difference is not automatically a causal effect of candidate identity.",
-    "Existing v1 persistence remains in use. Managed stores, distributed behavior, MegaMoE and production policy are outside this checkpoint."
+    "Existing v1 persistence remains in use. Managed stores, distributed behavior, MegaMoE and production policy are outside this checkpoint.",
+    "A pending start event after enqueue supports queued execution. A completed start event is inconclusive; retain and report it without filtering. The queue delay is excluded from graph event time but included in diagnostic wall time."
   ],
   "environment": {
     "image": "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
@@ -109,5 +113,21 @@
     },
     "isolation": "Separate tuner cache per mode/trial/arm, shared only from that cold process to its fresh warm process. Qualified native build cache is common; no winner cache is shared across arms or trials.",
     "failure": "Stop before measurement if archive/source/native hashes differ, a dependency timestamp is inconsistent, or actual pinned-container Ninja requires work. No implicit rebuild or load-only fallback."
-  }
+  },
+  "protocol_amendments": [
+    {
+      "stage": "Before fixture capture and all admission/timing",
+      "reason": "Independent review identified that long Python-driven replay batches could hide small GPU tactic differences behind host submission gaps.",
+      "change": "Use the previously qualified queued fixed-16 graph timing for graph primary; retain calibrated 20 ms wall batches for eager. Geometry, arms, six blocks, 12 balanced pairs and source/native identities unchanged.",
+      "initial_capture_commit": "d3a3445ff3c8ca93200f5f490259adcc9f382137",
+      "measurement_results_observed": false
+    },
+    {
+      "stage": "Capture setup failed before GPU execution or tuning",
+      "reason": "Docker daemon could not stat the shared-filesystem model cache; launcher exited 126 before creating the container.",
+      "change": "Stage an exact hash-verified copy of the seven pinned checkpoint files in node-local storage, then bind it read-only. Preserve failed setup separately as preflight01; use a fresh study directory for the successful capture.",
+      "failed_capture_source_commit": "d3a3445ff3c8ca93200f5f490259adcc9f382137",
+      "measurement_results_observed": false
+    }
+  ]
 }

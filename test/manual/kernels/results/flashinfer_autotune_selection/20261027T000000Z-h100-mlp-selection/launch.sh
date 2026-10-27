@@ -84,7 +84,7 @@ if [[ "$phase" == capture ]]; then
     cp "$study/native-restoration.json" "$results/native-build-cache/restoration.json"
     cp "$study/native-preservation.json" "$results/native-build-cache/prior-preservation.json"
     cp "$study/capture-source-snapshot.json" "$results/capture-source-snapshot.json"
-    cp /home/lnau/flashinfer-autotune-study/model-cache/20261027T000000Z-h100-mlp-selection-checkpoint-verification.json "$results/checkpoint-verification.json"
+    cp "$study/checkpoint-verification.json" "$results/checkpoint-verification.json"
     cp "$source_dir/$batch/plan.json" "$results/capture-plan.json"
 else
     [[ -d "$results" && -d "$runtime" && ! -e "$results/$phase.started" ]] || exit 1
@@ -182,7 +182,7 @@ if [[ "$phase" == capture ]]; then
     if timeout --kill-after=15s 900 docker run --rm --name "$active_name" --cidfile "$active_cid" \
         --gpus all --user "$(id -u):$(id -g)" --network none \
         --mount "type=bind,source=$source_dir,target=/workspace,readonly" \
-        --mount "type=bind,source=/home/lnau/flashinfer-autotune-study/model-cache,target=/model-cache,readonly" \
+        --mount "type=bind,source=$study/model-cache,target=/model-cache,readonly" \
         --mount "type=bind,source=$results,target=$cr" --mount "type=bind,source=$runtime,target=$ct" \
         --env PYTHONNOUSERSITE=1 --env PYTHONDONTWRITEBYTECODE=1 --env CUDA_VISIBLE_DEVICES=0 \
         --env HF_HUB_OFFLINE=1 --env TRANSFORMERS_OFFLINE=1 --env "HOME=$ct/home/capture" \

@@ -96,6 +96,8 @@ done
 tar -xzf "$archive" -C "$study/runtime-attempt01/cache" --strip-components=3 attempt01/native-build-cache/timing
 tar -xzf "$archive" -C "$study" --strip-components=1 attempt01/fixture
 mv "$study/fixture" "$study/prior-fixture"
+# Docker cannot traverse this shared home mount; retain the exact cache locally.
+cp -a "$durable/model-cache" "$study/model-cache"
 tar -xOf "$archive" attempt01/block0-auto_synthetic-timing.bootstrap.json > "$study/native-reference.bootstrap.json"
 tar -xOf "$archive" attempt01/preservation-manifest-timing.json > "$study/native-preservation.json"
 python3 "$study/source/test/manual/kernels/results/flashinfer_autotune_selection/$batch/restore_native_cache.py" --study "$study" --output "$study/native-restoration.json"
@@ -142,6 +144,19 @@ assert native_files[native_prefix+'trtllm_utils/trtllm_utils.so']=='e442a689064f
 assert sha(s/'prior-fixture/manifest.json')=='e13a86fab5db5796b22d8dab0f84080b8057b036ca7aef2c7be8832e76505bf1'
 assert sha(s/'prior-fixture/fixture.safetensors')=='c30aa761eba827bb0b4eb6de0e99d9b8dda8243dd16d00146f9718d2abb05e8b'
 fixture=json.loads((s/'prior-fixture/manifest.json').read_text())
+model_cache=s/'model-cache'
+checkpoint=json.loads((model_cache/'20261027T000000Z-h100-mlp-selection-checkpoint-verification.json').read_text())
+assert checkpoint['status']=='passed' and checkpoint['revision']=='c1899de289a04d12100db370d81485cdf75e47ca'
+snapshot=model_cache/'models--Qwen--Qwen3-0.6B/snapshots'/checkpoint['revision']
+assert {name:{key:row[key] for key in ('sha256','size_bytes')} for name,row in checkpoint['files'].items()}==fixture['checkpoint_files']
+for name,row in fixture['checkpoint_files'].items():
+    path=snapshot/name
+    digest=hashlib.sha256()
+    with path.open('rb') as handle:
+        for chunk in iter(lambda:handle.read(8*1024*1024),b''): digest.update(chunk)
+    assert path.stat().st_size==row['size_bytes'] and digest.hexdigest()==row['sha256'],name
+checkpoint.update(node_cache_root=str(model_cache),node_local_copy=True,copy_verified_files=sorted(fixture['checkpoint_files']))
+(s/'checkpoint-verification.json').write_text(json.dumps(checkpoint,indent=2)+'\n')
 for path,value in fixture['source']['sglang_source_sha256'].items():
     captured=subprocess.run(['git','-C',str(s/'source'),'show',fixture['source']['sglang_commit']+':'+path],check=True,capture_output=True).stdout
     assert hashlib.sha256(captured).hexdigest()==value and sha(s/'source'/path)==value

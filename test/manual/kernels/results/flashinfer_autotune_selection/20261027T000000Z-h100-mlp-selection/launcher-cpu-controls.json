@@ -27,7 +27,7 @@
     "ninja_rebuild_rejected": "passed",
     "ninja_warning_rejected": "passed"
   },
-  "launcher_sha256": "74397308c5912e28421fca264d07ff7e8e581d3605f01eeebbdcf9544748f9e4",
+  "launcher_sha256": "190c5218561798a35eb98227b601ab381623a60428694ddd0bc290dff6bab2ad",
   "bootstrap_sha256": "6e127764cdce1398e924d451ecdb8ebb557623ea5dd05f1181a6d5c775660781",
   "scope": "Actual embedded launcher code with controlled JSON and the frozen schedule; no Docker, GPU, allocation or worker execution."
 }
