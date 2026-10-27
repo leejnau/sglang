@@ -1,0 +1,2763 @@
+{
+  "status": "passed",
+  "immutable": true,
+  "execution_source": "a028b55b9c359568aa959e23e00b99a1824e89aa",
+  "report_sha256": "b7e314b16f1ba8edf29d09628ff293ee967120a089f53ec98960d96bfc05c6e0",
+  "audit_source_sha256": "d939d82153c3ef4ed58df18a48edd0d82666f66b510409e1fd273aaab93513b3",
+  "processes": 36,
+  "checks": 19261,
+  "numerical_checks": 6648,
+  "native_acceptance_checks": 4360,
+  "accepted_explicit_binding_calls": 1146,
+  "default_binding_controls": 3214,
+  "cold_profiles": 918,
+  "warm_profile_attempts": 0,
+  "all_18_cold_warm_pairs_exact_key_tactic_and_file_hash_match": true,
+  "all_12_tuned_warm_processes_file_hits_with_empty_memory": true,
+  "queue_query_pending": 864,
+  "queue_query_complete": 0,
+  "original_graph_launches": 216,
+  "observed_quantizer_plus_gemm_kernel_events": 432,
+  "natural_default_same_full_launch_signature": 18,
+  "choices": {
+    "default": {
+      "default_winners": 6,
+      "tactics_by_trial": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "runtime_best_explicit_over_default_profile": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ]
+    },
+    "v1": {
+      "default_winners": 0,
+      "tactics_by_trial": [
+        [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      ],
+      "runtime_best_explicit_over_default_profile": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ]
+    },
+    "v2": {
+      "default_winners": 3,
+      "tactics_by_trial": [
+        -1,
+        [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        [
+          446676598850,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        -1,
+        -1
+      ],
+      "runtime_best_explicit_over_default_profile": [
+        1.0055811326148656,
+        0.9899966670825374,
+        0.9937582416237567,
+        0.99015101888252,
+        1.009897606961843,
+        1.0157401628660534
+      ]
+    }
+  },
+  "trace_identities": [
+    {
+      "name": "trial0-default-cold",
+      "same_full_launch_signature": true,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial0-default-warm",
+      "same_full_launch_signature": true,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial0-v1-cold",
+      "same_full_launch_signature": false,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+          "grid": [
+            8,
+            14,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 229844,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial0-v1-warm",
+      "same_full_launch_signature": false,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+          "grid": [
+            8,
+            14,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 229844,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial0-v2-cold",
+      "same_full_launch_signature": true,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial0-v2-warm",
+      "same_full_launch_signature": true,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial1-default-cold",
+      "same_full_launch_signature": true,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial1-default-warm",
+      "same_full_launch_signature": true,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial1-v2-cold",
+      "same_full_launch_signature": false,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+          "grid": [
+            8,
+            14,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 229844,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial1-v2-warm",
+      "same_full_launch_signature": false,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+          "grid": [
+            8,
+            14,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 229844,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial1-v1-cold",
+      "same_full_launch_signature": false,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+          "grid": [
+            8,
+            14,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 229844,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial1-v1-warm",
+      "same_full_launch_signature": false,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+          "grid": [
+            8,
+            14,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 229844,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial2-v1-cold",
+      "same_full_launch_signature": false,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+          "grid": [
+            8,
+            14,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 229844,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial2-v1-warm",
+      "same_full_launch_signature": false,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+          "grid": [
+            8,
+            14,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 229844,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial2-default-cold",
+      "same_full_launch_signature": true,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial2-default-warm",
+      "same_full_launch_signature": true,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial2-v2-cold",
+      "same_full_launch_signature": false,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_56x64_128x14_4x2_h_bz_TNN",
+          "grid": [
+            8,
+            10,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 231844,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial2-v2-warm",
+      "same_full_launch_signature": false,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_56x64_128x14_4x2_h_bz_TNN",
+          "grid": [
+            8,
+            10,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 231844,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial3-v1-cold",
+      "same_full_launch_signature": false,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+          "grid": [
+            8,
+            14,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 229844,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial3-v1-warm",
+      "same_full_launch_signature": false,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+          "grid": [
+            8,
+            14,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 229844,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial3-v2-cold",
+      "same_full_launch_signature": false,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+          "grid": [
+            8,
+            14,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 229844,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial3-v2-warm",
+      "same_full_launch_signature": false,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+          "grid": [
+            8,
+            14,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 229844,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial3-default-cold",
+      "same_full_launch_signature": true,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial3-default-warm",
+      "same_full_launch_signature": true,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial4-v2-cold",
+      "same_full_launch_signature": true,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial4-v2-warm",
+      "same_full_launch_signature": true,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial4-default-cold",
+      "same_full_launch_signature": true,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial4-default-warm",
+      "same_full_launch_signature": true,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial4-v1-cold",
+      "same_full_launch_signature": false,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+          "grid": [
+            8,
+            14,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 229844,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial4-v1-warm",
+      "same_full_launch_signature": false,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+          "grid": [
+            8,
+            14,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 229844,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial5-v2-cold",
+      "same_full_launch_signature": true,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial5-v2-warm",
+      "same_full_launch_signature": true,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial5-v1-cold",
+      "same_full_launch_signature": false,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+          "grid": [
+            8,
+            14,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 229844,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial5-v1-warm",
+      "same_full_launch_signature": false,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+          "grid": [
+            8,
+            14,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 229844,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial5-default-cold",
+      "same_full_launch_signature": true,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    },
+    {
+      "name": "trial5-default-warm",
+      "same_full_launch_signature": true,
+      "natural_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ],
+      "default_signature": [
+        {
+          "name": "_static_quant_fp8",
+          "grid": [
+            144,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers per thread": 32,
+          "shared memory": 0,
+          "device": 0
+        },
+        {
+          "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+          "grid": [
+            8,
+            12,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers per thread": 168,
+          "shared memory": 213460,
+          "device": 0
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Identity evidence concerns actual retained graphs in each timing worker; it does not establish a physical implementation guarantee across machines.",
+    "Different capture and allocation histories remain bundled even with matching public tactics and launch signatures.",
+    "Graph event time excludes the prequeue delay; wall time including the delay is diagnostic only.",
+    "Eager wall includes recurring whole-helper CPU submission and allocation work.",
+    "This audit verifies integrity and candidate identity; the separate arithmetic audit owns cohort effect estimates."
+  ]
+}

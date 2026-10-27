@@ -1,0 +1,856 @@
+{
+  "status": "passed",
+  "scope": "independent raw cache/native/trace/timing audit",
+  "mode": "admission",
+  "checks": 3211,
+  "processes": 6,
+  "source_sha256": "d939d82153c3ef4ed58df18a48edd0d82666f66b510409e1fd273aaab93513b3",
+  "workers": [
+    {
+      "name": "admission-trial0-default-cold",
+      "trial": 0,
+      "arm": "default",
+      "phase": "cold",
+      "key": "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 256, 3072), (1, 3072, 1024), (1,), (1,), (1, -1, 1024), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+      "tactic": -1,
+      "tier": "miss",
+      "cache_sha256": "487bb4eecc2951e12db2581714c629a2862d8d8e983390b4f3e7fe6d1aebd2c9",
+      "profiles": 0,
+      "runtime_best_explicit_over_default_profile": [],
+      "correctness_checks": 183,
+      "native_acceptance_checks": 120,
+      "queue_start_outcomes": {
+        "False": 24
+      },
+      "modes": {
+        "eager": {
+          "median_log_natural_over_default": 0.0011149649047788117,
+          "ratio": 1.0011155867092234,
+          "pair_logs": [
+            0.0038859896751343645,
+            -0.006645042855210116,
+            0.019537241130199803,
+            -0.0010742440903893904,
+            0.011267901534535853,
+            0.0033041738999470137,
+            -0.003739830764309807,
+            -0.023675166209637666,
+            0.027737149332869866,
+            0.004756747153452238,
+            -0.03128624803580588,
+            -0.012657636538552714
+          ]
+        },
+        "cuda_graph": {
+          "median_log_natural_over_default": -0.004828052008097281,
+          "ratio": 0.995183584300566,
+          "pair_logs": [
+            -0.017082057220968887,
+            -0.0031283543418089655,
+            0.0004825127424457261,
+            -0.005063284333495057,
+            -0.012305657850998785,
+            -0.0048321311425114245,
+            0.00120782845365468,
+            -0.001202888488671102,
+            -0.006290785825221094,
+            -0.004823972873683138,
+            -0.0016919124775202454,
+            -0.007765203802629361
+          ]
+        }
+      },
+      "trace": {
+        "natural": {
+          "cuda_graph_id": 2,
+          "launches": 3,
+          "signature": [
+            {
+              "name": "_static_quant_fp8",
+              "grid": [
+                144,
+                1,
+                1
+              ],
+              "block": [
+                256,
+                1,
+                1
+              ],
+              "registers per thread": 32,
+              "shared memory": 0,
+              "device": 0
+            },
+            {
+              "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+              "grid": [
+                8,
+                12,
+                1
+              ],
+              "block": [
+                384,
+                1,
+                1
+              ],
+              "registers per thread": 168,
+              "shared memory": 213460,
+              "device": 0
+            }
+          ]
+        },
+        "default": {
+          "cuda_graph_id": 5,
+          "launches": 3,
+          "signature": [
+            {
+              "name": "_static_quant_fp8",
+              "grid": [
+                144,
+                1,
+                1
+              ],
+              "block": [
+                256,
+                1,
+                1
+              ],
+              "registers per thread": 32,
+              "shared memory": 0,
+              "device": 0
+            },
+            {
+              "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+              "grid": [
+                8,
+                12,
+                1
+              ],
+              "block": [
+                384,
+                1,
+                1
+              ],
+              "registers per thread": 168,
+              "shared memory": 213460,
+              "device": 0
+            }
+          ]
+        },
+        "same_signatures": true
+      }
+    },
+    {
+      "name": "admission-trial0-default-warm",
+      "trial": 0,
+      "arm": "default",
+      "phase": "warm",
+      "key": "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 256, 3072), (1, 3072, 1024), (1,), (1,), (1, -1, 1024), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+      "tactic": -1,
+      "tier": "miss",
+      "cache_sha256": "487bb4eecc2951e12db2581714c629a2862d8d8e983390b4f3e7fe6d1aebd2c9",
+      "profiles": 0,
+      "runtime_best_explicit_over_default_profile": [],
+      "correctness_checks": 183,
+      "native_acceptance_checks": 120,
+      "queue_start_outcomes": {
+        "False": 24
+      },
+      "modes": {
+        "eager": {
+          "median_log_natural_over_default": 4.319005707528983e-05,
+          "ratio": 1.0000431909897793,
+          "pair_logs": [
+            -0.0026035922575501245,
+            -0.009133326640268627,
+            0.010609799882258747,
+            0.000659307977168801,
+            -0.005623273646575815,
+            -0.0005729278630182213,
+            0.00734784949250608,
+            0.005912043780145496,
+            0.0067056918147290305,
+            0.009530669946579745,
+            -0.003004201837872309,
+            -0.00577508408534107
+          ]
+        },
+        "cuda_graph": {
+          "median_log_natural_over_default": -0.006642251123449048,
+          "ratio": 0.9933797598654092,
+          "pair_logs": [
+            -0.006940314502125281,
+            -0.012711456802174913,
+            -0.019338208746757176,
+            -0.0021699431369670004,
+            -0.005063284333495057,
+            -0.006764996236287366,
+            -0.0009657245027225438,
+            0.0004811198636296046,
+            -0.008959994521509572,
+            -0.0055202207441319125,
+            -0.006519506010610731,
+            -0.013075346324896056
+          ]
+        }
+      },
+      "trace": {
+        "natural": {
+          "cuda_graph_id": 2,
+          "launches": 3,
+          "signature": [
+            {
+              "name": "_static_quant_fp8",
+              "grid": [
+                144,
+                1,
+                1
+              ],
+              "block": [
+                256,
+                1,
+                1
+              ],
+              "registers per thread": 32,
+              "shared memory": 0,
+              "device": 0
+            },
+            {
+              "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+              "grid": [
+                8,
+                12,
+                1
+              ],
+              "block": [
+                384,
+                1,
+                1
+              ],
+              "registers per thread": 168,
+              "shared memory": 213460,
+              "device": 0
+            }
+          ]
+        },
+        "default": {
+          "cuda_graph_id": 5,
+          "launches": 3,
+          "signature": [
+            {
+              "name": "_static_quant_fp8",
+              "grid": [
+                144,
+                1,
+                1
+              ],
+              "block": [
+                256,
+                1,
+                1
+              ],
+              "registers per thread": 32,
+              "shared memory": 0,
+              "device": 0
+            },
+            {
+              "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+              "grid": [
+                8,
+                12,
+                1
+              ],
+              "block": [
+                384,
+                1,
+                1
+              ],
+              "registers per thread": 168,
+              "shared memory": 213460,
+              "device": 0
+            }
+          ]
+        },
+        "same_signatures": true
+      }
+    },
+    {
+      "name": "admission-trial0-v1-cold",
+      "trial": 0,
+      "arm": "v1",
+      "phase": "cold",
+      "key": "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 256, 3072), (1, 3072, 1024), (1,), (1,), (1, -1, 1024), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "tier": "memory",
+      "cache_sha256": "1c1b206f893f770724537ae016a7ce28e150f06e0380bf1f82c5cfb90e8f6e28",
+      "profiles": 72,
+      "runtime_best_explicit_over_default_profile": [],
+      "correctness_checks": 186,
+      "native_acceptance_checks": 122,
+      "queue_start_outcomes": {
+        "False": 24
+      },
+      "modes": {
+        "eager": {
+          "median_log_natural_over_default": -0.10380409617635762,
+          "ratio": 0.9014018681978133,
+          "pair_logs": [
+            -0.10358173933051246,
+            -0.09752615517696141,
+            -0.09597965115894405,
+            -0.09075818147104862,
+            -0.09842932028870595,
+            -0.10954348219597736,
+            -0.10821339544700492,
+            -0.10483536709423144,
+            -0.1133054134241475,
+            -0.10831257574091006,
+            -0.10402645302220279,
+            -0.08794268875127752
+          ]
+        },
+        "cuda_graph": {
+          "median_log_natural_over_default": 0.0718600996479893,
+          "ratio": 1.074505009919034,
+          "pair_logs": [
+            0.08016893090848899,
+            0.072277277770026,
+            0.07037407687063552,
+            0.08036534544424608,
+            0.06963061140270552,
+            0.07414152967209196,
+            0.0714429215259526,
+            0.0745588845648908,
+            0.07966207305499445,
+            0.06751719270303043,
+            0.06883760285971399,
+            0.06807494438837354
+          ]
+        }
+      },
+      "trace": {
+        "natural": {
+          "cuda_graph_id": 5,
+          "launches": 3,
+          "signature": [
+            {
+              "name": "_static_quant_fp8",
+              "grid": [
+                144,
+                1,
+                1
+              ],
+              "block": [
+                256,
+                1,
+                1
+              ],
+              "registers per thread": 32,
+              "shared memory": 0,
+              "device": 0
+            },
+            {
+              "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+              "grid": [
+                8,
+                14,
+                1
+              ],
+              "block": [
+                384,
+                1,
+                1
+              ],
+              "registers per thread": 168,
+              "shared memory": 229844,
+              "device": 0
+            }
+          ]
+        },
+        "default": {
+          "cuda_graph_id": 2,
+          "launches": 3,
+          "signature": [
+            {
+              "name": "_static_quant_fp8",
+              "grid": [
+                144,
+                1,
+                1
+              ],
+              "block": [
+                256,
+                1,
+                1
+              ],
+              "registers per thread": 32,
+              "shared memory": 0,
+              "device": 0
+            },
+            {
+              "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+              "grid": [
+                8,
+                12,
+                1
+              ],
+              "block": [
+                384,
+                1,
+                1
+              ],
+              "registers per thread": 168,
+              "shared memory": 213460,
+              "device": 0
+            }
+          ]
+        },
+        "same_signatures": false
+      }
+    },
+    {
+      "name": "admission-trial0-v1-warm",
+      "trial": 0,
+      "arm": "v1",
+      "phase": "warm",
+      "key": "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 256, 3072), (1, 3072, 1024), (1,), (1,), (1, -1, 1024), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "tier": "file",
+      "cache_sha256": "1c1b206f893f770724537ae016a7ce28e150f06e0380bf1f82c5cfb90e8f6e28",
+      "profiles": 0,
+      "runtime_best_explicit_over_default_profile": [],
+      "correctness_checks": 186,
+      "native_acceptance_checks": 122,
+      "queue_start_outcomes": {
+        "False": 24
+      },
+      "modes": {
+        "eager": {
+          "median_log_natural_over_default": -0.07326105262424425,
+          "ratio": 0.9293581869622971,
+          "pair_logs": [
+            -0.07766946680589426,
+            -0.07346868744113397,
+            -0.06899610375507718,
+            -0.07753014238140497,
+            -0.06917244383045387,
+            -0.08397164447333226,
+            -0.06808714848977485,
+            -0.08384716519552686,
+            -0.07305341780735453,
+            -0.06581044235056205,
+            -0.06519666222538448,
+            -0.0764349532837544
+          ]
+        },
+        "cuda_graph": {
+          "median_log_natural_over_default": 0.07089103872266259,
+          "ratio": 1.0734642534595085,
+          "pair_logs": [
+            0.0714505924649665,
+            0.06836473059791308,
+            0.06876906412995897,
+            0.07310679746315948,
+            0.07214107296043701,
+            0.06678481362479996,
+            0.07009839705966356,
+            0.07018383502433355,
+            0.07787660888146566,
+            0.07033148498035867,
+            0.07683558971025362,
+            0.07791920977555944
+          ]
+        }
+      },
+      "trace": {
+        "natural": {
+          "cuda_graph_id": 5,
+          "launches": 3,
+          "signature": [
+            {
+              "name": "_static_quant_fp8",
+              "grid": [
+                144,
+                1,
+                1
+              ],
+              "block": [
+                256,
+                1,
+                1
+              ],
+              "registers per thread": 32,
+              "shared memory": 0,
+              "device": 0
+            },
+            {
+              "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+              "grid": [
+                8,
+                14,
+                1
+              ],
+              "block": [
+                384,
+                1,
+                1
+              ],
+              "registers per thread": 168,
+              "shared memory": 229844,
+              "device": 0
+            }
+          ]
+        },
+        "default": {
+          "cuda_graph_id": 2,
+          "launches": 3,
+          "signature": [
+            {
+              "name": "_static_quant_fp8",
+              "grid": [
+                144,
+                1,
+                1
+              ],
+              "block": [
+                256,
+                1,
+                1
+              ],
+              "registers per thread": 32,
+              "shared memory": 0,
+              "device": 0
+            },
+            {
+              "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+              "grid": [
+                8,
+                12,
+                1
+              ],
+              "block": [
+                384,
+                1,
+                1
+              ],
+              "registers per thread": 168,
+              "shared memory": 213460,
+              "device": 0
+            }
+          ]
+        },
+        "same_signatures": false
+      }
+    },
+    {
+      "name": "admission-trial0-v2-cold",
+      "trial": 0,
+      "arm": "v2",
+      "phase": "cold",
+      "key": "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 256, 3072), (1, 3072, 1024), (1,), (1,), (1, -1, 1024), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "tier": "memory",
+      "cache_sha256": "c14f62155604e24e22bfd4df67ecbf033b600c3e4a9f7fc1bc941e05532a5bf3",
+      "profiles": 81,
+      "runtime_best_explicit_over_default_profile": 0.9560439771311413,
+      "correctness_checks": 186,
+      "native_acceptance_checks": 122,
+      "queue_start_outcomes": {
+        "False": 24
+      },
+      "modes": {
+        "eager": {
+          "median_log_natural_over_default": -0.1260125671379162,
+          "ratio": 0.8816037674776652,
+          "pair_logs": [
+            -0.13047575010857898,
+            -0.10126010386577386,
+            -0.138737047621384,
+            -0.13470878298051436,
+            -0.13077366788068967,
+            -0.09973786151264318,
+            -0.09803608507960303,
+            -0.09408360423724794,
+            -0.13790482408729574,
+            -0.1407206371671787,
+            -0.12154938416725339,
+            -0.07580870678912699
+          ]
+        },
+        "cuda_graph": {
+          "median_log_natural_over_default": 0.06883015690377914,
+          "ratio": 1.0712542485579937,
+          "pair_logs": [
+            0.0674261090180717,
+            0.06581472739037558,
+            0.06815447436121118,
+            0.06871389043393124,
+            0.07032651612799869,
+            0.07068104232122915,
+            0.06894642337362705,
+            0.06752204127352321,
+            0.07357424752359669,
+            0.0591835955875679,
+            0.07088159354863761,
+            0.07389148523113412
+          ]
+        }
+      },
+      "trace": {
+        "natural": {
+          "cuda_graph_id": 2,
+          "launches": 3,
+          "signature": [
+            {
+              "name": "_static_quant_fp8",
+              "grid": [
+                144,
+                1,
+                1
+              ],
+              "block": [
+                256,
+                1,
+                1
+              ],
+              "registers per thread": 32,
+              "shared memory": 0,
+              "device": 0
+            },
+            {
+              "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+              "grid": [
+                8,
+                14,
+                1
+              ],
+              "block": [
+                384,
+                1,
+                1
+              ],
+              "registers per thread": 168,
+              "shared memory": 229844,
+              "device": 0
+            }
+          ]
+        },
+        "default": {
+          "cuda_graph_id": 5,
+          "launches": 3,
+          "signature": [
+            {
+              "name": "_static_quant_fp8",
+              "grid": [
+                144,
+                1,
+                1
+              ],
+              "block": [
+                256,
+                1,
+                1
+              ],
+              "registers per thread": 32,
+              "shared memory": 0,
+              "device": 0
+            },
+            {
+              "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+              "grid": [
+                8,
+                12,
+                1
+              ],
+              "block": [
+                384,
+                1,
+                1
+              ],
+              "registers per thread": 168,
+              "shared memory": 213460,
+              "device": 0
+            }
+          ]
+        },
+        "same_signatures": false
+      }
+    },
+    {
+      "name": "admission-trial0-v2-warm",
+      "trial": 0,
+      "arm": "v2",
+      "phase": "warm",
+      "key": "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 256, 3072), (1, 3072, 1024), (1,), (1,), (1, -1, 1024), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "tier": "file",
+      "cache_sha256": "c14f62155604e24e22bfd4df67ecbf033b600c3e4a9f7fc1bc941e05532a5bf3",
+      "profiles": 0,
+      "runtime_best_explicit_over_default_profile": [],
+      "correctness_checks": 186,
+      "native_acceptance_checks": 122,
+      "queue_start_outcomes": {
+        "False": 24
+      },
+      "modes": {
+        "eager": {
+          "median_log_natural_over_default": -0.06870206800924897,
+          "ratio": 0.9336047893807906,
+          "pair_logs": [
+            -0.07974811340770417,
+            -0.053271185387002894,
+            -0.10800801902377508,
+            -0.06469499096733188,
+            -0.06195933663887195,
+            -0.07435568160405538,
+            -0.06887617075665294,
+            -0.0657271164574807,
+            -0.0630915137917952,
+            -0.07352735919816036,
+            -0.06852796526184499,
+            -0.06893471611680141
+          ]
+        },
+        "cuda_graph": {
+          "median_log_natural_over_default": 0.07377640156891677,
+          "ratio": 1.0765660601000806,
+          "pair_logs": [
+            0.07865133585291131,
+            0.06878160403567753,
+            0.07594409647248607,
+            0.07102184257870107,
+            0.07811493561549798,
+            0.07452766010900222,
+            0.06965892095986322,
+            0.08042046272624108,
+            0.06991908685096337,
+            0.07302514302883131,
+            0.07174578131485218,
+            0.07568117777772325
+          ]
+        }
+      },
+      "trace": {
+        "natural": {
+          "cuda_graph_id": 2,
+          "launches": 3,
+          "signature": [
+            {
+              "name": "_static_quant_fp8",
+              "grid": [
+                144,
+                1,
+                1
+              ],
+              "block": [
+                256,
+                1,
+                1
+              ],
+              "registers per thread": 32,
+              "shared memory": 0,
+              "device": 0
+            },
+            {
+              "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+              "grid": [
+                8,
+                14,
+                1
+              ],
+              "block": [
+                384,
+                1,
+                1
+              ],
+              "registers per thread": 168,
+              "shared memory": 229844,
+              "device": 0
+            }
+          ]
+        },
+        "default": {
+          "cuda_graph_id": 5,
+          "launches": 3,
+          "signature": [
+            {
+              "name": "_static_quant_fp8",
+              "grid": [
+                144,
+                1,
+                1
+              ],
+              "block": [
+                256,
+                1,
+                1
+              ],
+              "registers per thread": 32,
+              "shared memory": 0,
+              "device": 0
+            },
+            {
+              "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+              "grid": [
+                8,
+                12,
+                1
+              ],
+              "block": [
+                384,
+                1,
+                1
+              ],
+              "registers per thread": 168,
+              "shared memory": 213460,
+              "device": 0
+            }
+          ]
+        },
+        "same_signatures": false
+      }
+    }
+  ],
+  "limits": [
+    "Per-worker trace launch signatures do not prove universal physical identity.",
+    "Event graph replay span excludes prequeue delay; diagnostic wall includes it.",
+    "Eager wall includes recurring public-facade host/setup work.",
+    "One fixed fixture and research source overlay; no full-model serving claim."
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "status": "passed",
+  "checks": 5453,
+  "audit_source_sha256": "f8430d217ce02f4569ec0d34486b5c5da40db690b481a6e411db441a09fabe2f",
+  "execution_commit": "a028b55b9c359568aa959e23e00b99a1824e89aa",
+  "publication_master_sha256": "31d4bb491b6818c8b4c9da1efb16565b49f4c2f495ed764aa2ab992b272d65df",
+  "public_members": 344,
+  "assembled_file_count": 31,
+  "largest_repository_file_bytes": 1400000,
+  "copied_reports_exact": 13,
+  "outer_uncompressed_sha256": "99ba0c15fc53551d1c62afffc0cc5f4a39128d3531cfa7368cf8fac9a0788d0c",
+  "coordinator_members": 29,
+  "nested_archives_checked": [
+    {
+      "name": "attempt01/coordinator-evidence.tar.gz",
+      "members": 29,
+      "sha256": "d00e153b12faaa4905b25606d28df6623d2449a36e67a7e24a2619f75ce48071"
+    },
+    {
+      "name": "attempt01/independent-trace-tools.tar.gz",
+      "members": 4,
+      "sha256": "d11edbcdd504041d864c0b731ebe80120946be5897d03ea488e450d417da9e87"
+    },
+    {
+      "name": "attempt01/publication-tools.tar.gz",
+      "members": 2,
+      "sha256": "3e7bd4feab33fd7596d54067c2d06ced86695b45134f7994b9431239a3f66f39"
+    },
+    {
+      "name": "preflight01/raw-public.tar.gz",
+      "members": 25,
+      "sha256": "e55bf0d2869cdb2cc8db764770a4e865ba30c73b50d9625cc78062e9079eee0f"
+    },
+    {
+      "name": "attempt01/raw-public.tar.gz",
+      "members": 344,
+      "sha256": "31d4bb491b6818c8b4c9da1efb16565b49f4c2f495ed764aa2ab992b272d65df"
+    }
+  ],
+  "result_checks": "Complete published estimate tables match official and independent analyses; all 36 winners/result hashes/startup values match raw workers; audit counts and released allocation verified.",
+  "limits": [
+    "Read-only publication assembly check; no GPU execution or new performance study.",
+    "Result artifact hooks remain a separate root-owned check."
+  ],
+  "file_inventory": [
+    {
+      "path": "attempt01/admission-analysis.json",
+      "size_bytes": 75051,
+      "sha256": "149ad62099d322258a8027731da62db3372d952aea3e08ce627db4ab1d2c8fa3"
+    },
+    {
+      "path": "attempt01/admission-outer-audit.json",
+      "size_bytes": 370477,
+      "sha256": "ffd2e97f3f86d1f9821311c7886d9795070cc9122c14915abb293bd9a1b13004"
+    },
+    {
+      "path": "attempt01/coordinator-evidence.json",
+      "size_bytes": 5537,
+      "sha256": "6f3e784fcecfcefa79275a0b86baa1b9a2ee335f110de1f6d3931c251c2ad732"
+    },
+    {
+      "path": "attempt01/coordinator-evidence.tar.gz",
+      "size_bytes": 13314,
+      "sha256": "d00e153b12faaa4905b25606d28df6623d2449a36e67a7e24a2619f75ce48071"
+    },
+    {
+      "path": "attempt01/default-hit-miss-interpretation.json",
+      "size_bytes": 4160,
+      "sha256": "4506ca2912a02a8f6abfaa6b203955e87fd739dcc26db69b864a4fe0c37ac209"
+    },
+    {
+      "path": "attempt01/independent-admission-audit.json",
+      "size_bytes": 23372,
+      "sha256": "ec3aae1692ddc9c420795cfa2145ded35293796526d069d8b3e7f6b44141885f"
+    },
+    {
+      "path": "attempt01/independent-arithmetic.json",
+      "size_bytes": 116558,
+      "sha256": "9f459817b89514b4bb8d3a7316ab27b0f36d7e781c5a2824764496c12da604ae"
+    },
+    {
+      "path": "attempt01/independent-fixture-audit.json",
+      "size_bytes": 3826,
+      "sha256": "b2e381bb809739f95105ec4e293240080a6fcec5a9a701925fa9ea85b18e238e"
+    },
+    {
+      "path": "attempt01/independent-timing-audit.json",
+      "size_bytes": 135911,
+      "sha256": "b7e314b16f1ba8edf29d09628ff293ee967120a089f53ec98960d96bfc05c6e0"
+    },
+    {
+      "path": "attempt01/independent-trace-tools-index.json",
+      "size_bytes": 429,
+      "sha256": "f37a12538247c9f75ed8157d07621a88bd1edb56169180e9b8774ca021c25b99"
+    },
+    {
+      "path": "attempt01/independent-trace-tools.tar.gz",
+      "size_bytes": 6768,
+      "sha256": "d11edbcdd504041d864c0b731ebe80120946be5897d03ea488e450d417da9e87"
+    },
+    {
+      "path": "attempt01/package-audit.json",
+      "size_bytes": 518,
+      "sha256": "5b8969da55288eade12ac6e0a7aa4027181988a72ecfcf7a6cb32b996a0dca1c"
+    },
+    {
+      "path": "attempt01/precommit-results.txt",
+      "size_bytes": 2542,
+      "sha256": "54961a7440640572339ad40323a3b50e3337aca284c6b81b461049212c40cefb"
+    },
+    {
+      "path": "attempt01/public-manifest.json",
+      "size_bytes": 269083,
+      "sha256": "1847428356f4d6eb06ae19e7447c5b5ff33004e91f825080930949c48984a9d0"
+    },
+    {
+      "path": "attempt01/publication-audit.json",
+      "size_bytes": 1728,
+      "sha256": "b2e88ebf7a9150133f3645595f27237f464dfdb085b92b0221c1fdf2018ac3de"
+    },
+    {
+      "path": "attempt01/publication-tools.tar.gz",
+      "size_bytes": 7257,
+      "sha256": "3e7bd4feab33fd7596d54067c2d06ced86695b45134f7994b9431239a3f66f39"
+    },
+    {
+      "path": "attempt01/raw-public-parts.json",
+      "size_bytes": 767,
+      "sha256": "02f226f9f997c503f697f80e478086ba5ed5bfe131f639724592512d60acee00"
+    },
+    {
+      "path": "attempt01/raw-public.tar.gz.part-00",
+      "size_bytes": 1400000,
+      "sha256": "705e8511699baa960bae9329a6ce9135eb3504705ac1a167c0164de9a0132dde"
+    },
+    {
+      "path": "attempt01/raw-public.tar.gz.part-01",
+      "size_bytes": 1400000,
+      "sha256": "97375d96e01dee13c889788c5d7d79289eebf9185409a4274dded342291137c5"
+    },
+    {
+      "path": "attempt01/raw-public.tar.gz.part-02",
+      "size_bytes": 727470,
+      "sha256": "4575b2aa7c6615df7ef23fcc73d1d2a46e3263e12026e2532f59e3d58a2655eb"
+    },
+    {
+      "path": "attempt01/result.json",
+      "size_bytes": 22274,
+      "sha256": "4cf7da4c2328957207ea5206d7ddc7d19c409f7c35ee93451a14cd6bcead2a16"
+    },
+    {
+      "path": "attempt01/source-validation-summary.json",
+      "size_bytes": 824,
+      "sha256": "f70221d9b2c1570b51d01115ecfeafb5cd53cac5c0ba8411adb01e8ef3fdeba3"
+    },
+    {
+      "path": "attempt01/timing-analysis.json",
+      "size_bytes": 420072,
+      "sha256": "d6a788c51d45304eecf9eaca511243953768ce650423479002c516623416bc5f"
+    },
+    {
+      "path": "attempt01/timing-artifact-validation.json",
+      "size_bytes": 227,
+      "sha256": "987dcb6aa8881dec0e40fba24ab3d994d38ae5b1b810b45286c5cd8152e5bb0b"
+    },
+    {
+      "path": "attempt01/timing-identity-summary.json",
+      "size_bytes": 56618,
+      "sha256": "f7837a6c43748a9af70d2b819acd2ecb0f420a8013923ee019f776e4190c3f49"
+    },
+    {
+      "path": "attempt01/timing-outer-audit-index.json",
+      "size_bytes": 404,
+      "sha256": "2ad1e972309c6e3dcceb7c2ea535ddc0c4e64d8d855821a42df4afe39afa3c32"
+    },
+    {
+      "path": "attempt01/timing-outer-audit.json.gz",
+      "size_bytes": 178427,
+      "sha256": "09c211d95f0c3cc4e1909998357f2b0213535d0b9920c84e7b02ddf97f460883"
+    },
+    {
+      "path": "preflight01/package-audit.json",
+      "size_bytes": 513,
+      "sha256": "e76cc42b9b298928a507e20156e0cf912d0c1bf393881f9ee4d389624c328b65"
+    },
+    {
+      "path": "preflight01/public-manifest.json",
+      "size_bytes": 22006,
+      "sha256": "854686d65533c5578505312a97155007b2daf0713c28cb62afc29f3367854977"
+    },
+    {
+      "path": "preflight01/publication-audit.json",
+      "size_bytes": 1672,
+      "sha256": "1f305eb2260d68d195586c5b6ce27d442ea984189ff20da86164f7dacb442ae2"
+    },
+    {
+      "path": "preflight01/raw-public.tar.gz",
+      "size_bytes": 66624,
+      "sha256": "e55bf0d2869cdb2cc8db764770a4e865ba30c73b50d9625cc78062e9079eee0f"
+    }
+  ]
+}

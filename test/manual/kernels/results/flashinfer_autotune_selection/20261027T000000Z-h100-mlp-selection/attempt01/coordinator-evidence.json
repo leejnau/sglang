@@ -1,0 +1,151 @@
+{
+  "archive": "coordinator-evidence.tar.gz",
+  "sha256": "d00e153b12faaa4905b25606d28df6623d2449a36e67a7e24a2619f75ce48071",
+  "files": [
+    {
+      "path": "analysis/independent_arithmetic.py",
+      "size_bytes": 11149,
+      "sha256": "1c065075f7fdc4c861e590109fc082032a20ef2a920db7b9829293e2d70b84f4"
+    },
+    {
+      "path": "coordinator/20261027T000000Z-h100-mlp-selection-a028b55b9c359568aa959e23e00b99a1824e89aa-snapshot.pack.json",
+      "size_bytes": 894,
+      "sha256": "57ee9ae80d448ba3be6cafe7a14d56f1d5ff9b67f8ba446448d8e085e50f702c"
+    },
+    {
+      "path": "coordinator/20261027T000000Z-h100-mlp-selection-attempt01-admission-preservation.json",
+      "size_bytes": 249,
+      "sha256": "7d33aae63af7f968f7be842a9dce6788fe4b71e5e20ae4e3eda7a6a0e98c636f"
+    },
+    {
+      "path": "coordinator/20261027T000000Z-h100-mlp-selection-attempt01-capture-preservation.json",
+      "size_bytes": 245,
+      "sha256": "44599c4f99489b9250c365318d1b525960eb22ca6b230d5ba07cc196dc232ee2"
+    },
+    {
+      "path": "coordinator/20261027T000000Z-h100-mlp-selection-attempt01-timing-preservation.json",
+      "size_bytes": 243,
+      "sha256": "6967712182926219b3f1a5af40f43810ff4643d47095a1d04f2eb57a48d9b1f1"
+    },
+    {
+      "path": "coordinator/20261027T000000Z-h100-mlp-selection-d3a3445ff3c8ca93200f5f490259adcc9f382137-snapshot.pack.json",
+      "size_bytes": 894,
+      "sha256": "a872efb995a495e5a25e04899d744493a8991c850f23fad20b508ed864c5de6d"
+    },
+    {
+      "path": "coordinator/20261027T000000Z-h100-mlp-selection-fb57a74b14b03ec5a35cfc4b43828e46e11261e3-snapshot.pack.json",
+      "size_bytes": 895,
+      "sha256": "21c0607d92129c43e5aee11859217f7e255764d33a8cb5e51fec2cc9a6b90b12"
+    },
+    {
+      "path": "coordinator/admission-artifact-validation.json",
+      "size_bytes": 230,
+      "sha256": "03f9ba851d3038310ebd89fb0e62dcb6a53d74aaca261b36cb98399b86e4b343"
+    },
+    {
+      "path": "coordinator/admission-launch.log",
+      "size_bytes": 275,
+      "sha256": "4329c2edaf12fe40d44e886d3800fbaf27ccf3cdc5cfed850a1f6de4101fb55e"
+    },
+    {
+      "path": "coordinator/admission-preservation.log",
+      "size_bytes": 250,
+      "sha256": "b8cee775ed4b2a5854e32814028c2cce6c6a6ecde8be829a18543a52e68da3d7"
+    },
+    {
+      "path": "coordinator/allocation-release-final.txt",
+      "size_bytes": 250,
+      "sha256": "73d8c47d131e793a6b18d9be11a257b12ff951a93f5150c48f75b57aaee899b8"
+    },
+    {
+      "path": "coordinator/allocation-release.txt",
+      "size_bytes": 1676,
+      "sha256": "59441e85729e22e7e1ca107bbbb73e6f8dbff13d94399024056cbb4c7f4ffb85"
+    },
+    {
+      "path": "coordinator/allocation-state.txt",
+      "size_bytes": 2336,
+      "sha256": "995cbc3e08f69d930fe0a562b4793d2218f3475759f19bf1346c6314d8b6ae03"
+    },
+    {
+      "path": "coordinator/allocation.log",
+      "size_bytes": 368,
+      "sha256": "5693fc3b3669a620ac08b7054b236e2bcf8ee06d687ac99c406aa98f8217409e"
+    },
+    {
+      "path": "coordinator/audit_mlp_fixture.py",
+      "size_bytes": 9753,
+      "sha256": "76a4bdea03a8c9869c5dc6fa3b20adbce38bed4a42409da963fcc75caa0f1274"
+    },
+    {
+      "path": "coordinator/capture-artifact-validation.json",
+      "size_bytes": 412,
+      "sha256": "97098fd233e0103fdbcb951313e831143aac854984415ea1d3b05f1b97bc114c"
+    },
+    {
+      "path": "coordinator/capture-launch.log",
+      "size_bytes": 255,
+      "sha256": "c842bd3b89a972c731c96cc7c75c31664bfd1fe6f016d1070a0de6fe3bfbc703"
+    },
+    {
+      "path": "coordinator/capture-preservation.log",
+      "size_bytes": 563,
+      "sha256": "d155861c7c2bdc377ed71d37acf32c0c9b4d7677e783a95d208990bdef8d3e88"
+    },
+    {
+      "path": "coordinator/capture02-launch.log",
+      "size_bytes": 76,
+      "sha256": "252287849a47cf17de1b3376958152110a736c5ba5a07181284000b958d48c35"
+    },
+    {
+      "path": "coordinator/checkpoint-verification.json",
+      "size_bytes": 1658,
+      "sha256": "8cd55c9d6bc39864407ae5d96023e41cd087f966684571841892422012671f3f"
+    },
+    {
+      "path": "coordinator/delta-transfer.log",
+      "size_bytes": 416,
+      "sha256": "4e58bfad80c531afd14ae14ce371280183507e2e18656e9e7c827f7901092e82"
+    },
+    {
+      "path": "coordinator/independent-checkpoint-slice.json",
+      "size_bytes": 587,
+      "sha256": "643c826b3254bb06e55094a92cb5e2e02bbac27cd3ba910f3af1fd1325ab3940"
+    },
+    {
+      "path": "coordinator/precommit-capture.txt",
+      "size_bytes": 2542,
+      "sha256": "50943a9aadeb7872d8343caaa8e1bffe7e08433b17e14120976347228e56a7fe"
+    },
+    {
+      "path": "coordinator/precommit-worker-final.txt",
+      "size_bytes": 2542,
+      "sha256": "50943a9aadeb7872d8343caaa8e1bffe7e08433b17e14120976347228e56a7fe"
+    },
+    {
+      "path": "coordinator/staging-final.log",
+      "size_bytes": 617,
+      "sha256": "00c68007b2d6c05a9f382a9479bbba545c293a100a11dbb72f8defe5df38c214"
+    },
+    {
+      "path": "coordinator/staging.log",
+      "size_bytes": 686,
+      "sha256": "527e9bc446a2474ffd556459a4f6e77e513de0caaf07f2c5a940e11141bfa4b1"
+    },
+    {
+      "path": "coordinator/staging02.log",
+      "size_bytes": 686,
+      "sha256": "527e9bc446a2474ffd556459a4f6e77e513de0caaf07f2c5a940e11141bfa4b1"
+    },
+    {
+      "path": "coordinator/timing-launch.log",
+      "size_bytes": 1054,
+      "sha256": "be40411339eaf32428359061607be4fc0b413a9262f00b1bc6e0c8668b041b86"
+    },
+    {
+      "path": "coordinator/timing-preservation.log",
+      "size_bytes": 244,
+      "sha256": "a052358783052017c4a478882c6a960df86d2f5da555deca668c03ed3e127b6c"
+    }
+  ]
+}

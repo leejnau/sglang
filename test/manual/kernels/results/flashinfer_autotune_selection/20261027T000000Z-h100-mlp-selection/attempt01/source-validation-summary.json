@@ -1,0 +1,26 @@
+{
+  "execution_commit": "a028b55b9c359568aa959e23e00b99a1824e89aa",
+  "cpu_controls": {
+    "capture-cpu-controls.json": {
+      "status": "passed",
+      "count": 11,
+      "sha256": "06935379fdd8d84dec87ebfb22462be6ee819c9efcf87b9b665d3f622e859c32"
+    },
+    "launcher-cpu-controls.json": {
+      "status": "passed",
+      "count": 25,
+      "sha256": "759ecb66e0e84af31e0e00281f5b76697fa43196c7c4de3cb29c0d0de22cede0"
+    },
+    "worker-cpu-controls.json": {
+      "status": "success",
+      "count": 80,
+      "sha256": "ba9d103c2a603804209ca8f5e479f5f510111246f500df975106d7c872584349"
+    },
+    "analyzer-cpu-controls.json": {
+      "status": "passed",
+      "count": 43,
+      "sha256": "c9257d3c153ac938639215e58217e1f23927a86f1bf400c97bd75777742be7cc"
+    }
+  },
+  "total_distinct_implementation_controls": 159
+}

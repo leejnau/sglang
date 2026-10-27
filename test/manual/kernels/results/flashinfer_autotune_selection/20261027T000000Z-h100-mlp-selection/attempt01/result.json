@@ -1,0 +1,803 @@
+{
+  "status": "completed",
+  "study": "mlp_default_v1_v2",
+  "execution_commit": "a028b55b9c359568aa959e23e00b99a1824e89aa",
+  "capture_commit": "fb57a74b14b03ec5a35cfc4b43828e46e11261e3",
+  "branch": "leejnau/sglang:experiment/flashinfer-candidate-selection",
+  "scope": "Benchmark-only; one captured first-layer MLP down projection, M144/N1024/K3072, one H100 NVL and one time window. No PR or production change.",
+  "qualified_flashinfer": "27c62fdf0ab1cd4014df8a15b66a975541fda83c plus the same explicit FP8 stable-descriptor port and validation callback in all arms; not a stock-release qualification.",
+  "cohort": {
+    "blocks": 6,
+    "timing_workers": 36,
+    "disposable_admission_workers": 6,
+    "historical_or_admission_pooling": false,
+    "retries": 0,
+    "adaptive_expansion": false
+  },
+  "warm_estimates": {
+    "eager": {
+      "natural_over_own_default": {
+        "default": {
+          "n_blocks": 6,
+          "geometric_mean_ratio": 1.0022525186056492,
+          "per_block_ratios": [
+            1.0053923769785345,
+            0.9998239330788414,
+            1.002620097879435,
+            1.0018387078125661,
+            1.0031896788762082,
+            1.0006600294025068
+          ],
+          "range": [
+            0.9998239330788414,
+            1.0053923769785345
+          ],
+          "exploratory_block_bootstrap_95": [
+            1.0008945510764016,
+            1.0037333396888952
+          ]
+        },
+        "v1": {
+          "n_blocks": 6,
+          "geometric_mean_ratio": 0.9313021089708376,
+          "per_block_ratios": [
+            0.9334630120568609,
+            0.9286103752457708,
+            0.9285156117047062,
+            0.925555887735139,
+            0.9334273730668752,
+            0.938297334032155
+          ],
+          "range": [
+            0.925555887735139,
+            0.938297334032155
+          ],
+          "exploratory_block_bootstrap_95": [
+            0.9280532379014841,
+            0.9350366208373847
+          ]
+        },
+        "v2": {
+          "n_blocks": 6,
+          "geometric_mean_ratio": 0.9242707844048453,
+          "per_block_ratios": [
+            0.9238132532767963,
+            0.9311960713962942,
+            0.9253144506430963,
+            0.9264971107023009,
+            0.9202202893817427,
+            0.918638855963025
+          ],
+          "range": [
+            0.918638855963025,
+            0.9311960713962942
+          ],
+          "exploratory_block_bootstrap_95": [
+            0.9211227056233791,
+            0.9276121840959911
+          ]
+        }
+      },
+      "v2_over_v1_normalized_to_own_default": {
+        "n_blocks": 6,
+        "geometric_mean_ratio": 0.9924500068256449,
+        "per_block_ratios": [
+          0.9896624090559286,
+          1.002784479066195,
+          0.9965523885422531,
+          1.0010169272105924,
+          0.9858509788054114,
+          0.9790487755255027
+        ],
+        "range": [
+          0.9790487755255027,
+          1.002784479066195
+        ],
+        "exploratory_block_bootstrap_95": [
+          0.9855805530063555,
+          0.9989587220108923
+        ]
+      },
+      "v2_over_v1_absolute_natural_latency_secondary": {
+        "n_blocks": 6,
+        "geometric_mean_ratio": 0.9917468346540459,
+        "per_block_ratios": [
+          0.9872408920930256,
+          0.9942629149401515,
+          1.0054811839097617,
+          1.0050670266253223,
+          0.9807928018732509,
+          0.9779897844467514
+        ],
+        "range": [
+          0.9779897844467514,
+          1.0054811839097617
+        ],
+        "exploratory_block_bootstrap_95": [
+          0.9833891675295945,
+          1.0004764590324025
+        ]
+      }
+    },
+    "cuda_graph": {
+      "natural_over_own_default": {
+        "default": {
+          "n_blocks": 6,
+          "geometric_mean_ratio": 0.9997001867369117,
+          "per_block_ratios": [
+            0.9962100455864364,
+            1.0,
+            0.9932752990849927,
+            1.0055513799648848,
+            0.9946430343130178,
+            1.00861767683889
+          ],
+          "range": [
+            0.9932752990849927,
+            1.00861767683889
+          ],
+          "exploratory_block_bootstrap_95": [
+            0.9953713205463303,
+            1.0043271572298782
+          ]
+        },
+        "v1": {
+          "n_blocks": 6,
+          "geometric_mean_ratio": 1.0705411678129464,
+          "per_block_ratios": [
+            1.0700315164752414,
+            1.0771586220674652,
+            1.0755228187753698,
+            1.0667630420833285,
+            1.0657227192472114,
+            1.0681006782463665
+          ],
+          "range": [
+            1.0657227192472114,
+            1.0771586220674652
+          ],
+          "exploratory_block_bootstrap_95": [
+            1.067232242331789,
+            1.0741552787669453
+          ]
+        },
+        "v2": {
+          "n_blocks": 6,
+          "geometric_mean_ratio": 1.0348856102628687,
+          "per_block_ratios": [
+            0.9949404932827778,
+            1.0800771840392824,
+            1.0598328085778297,
+            1.0777507370874084,
+            0.9954977895575937,
+            1.0053243524995308
+          ],
+          "range": [
+            0.9949404932827778,
+            1.0800771840392824
+          ],
+          "exploratory_block_bootstrap_95": [
+            1.0074025889630138,
+            1.0643492168428974
+          ]
+        }
+      },
+      "v2_over_v1_normalized_to_own_default": {
+        "n_blocks": 6,
+        "geometric_mean_ratio": 0.9666938940583482,
+        "per_block_ratios": [
+          0.929823540674934,
+          1.0027095006362345,
+          0.9854117365771882,
+          1.0103000334381866,
+          0.9341058153107386,
+          0.9412262092653068
+        ],
+        "range": [
+          0.929823540674934,
+          1.0103000334381866
+        ],
+        "exploratory_block_bootstrap_95": [
+          0.9422167664045791,
+          0.9930542988044812
+        ]
+      },
+      "v2_over_v1_absolute_natural_latency_secondary": {
+        "n_blocks": 6,
+        "geometric_mean_ratio": 0.9649905428746456,
+        "per_block_ratios": [
+          0.9365974135626786,
+          1.0125113634702487,
+          0.9802861658360617,
+          1.0017970112117476,
+          0.9264555866090376,
+          0.9358974694670305
+        ],
+        "range": [
+          0.9264555866090376,
+          1.0125113634702487
+        ],
+        "exploratory_block_bootstrap_95": [
+          0.9400881906954317,
+          0.9923402384176068
+        ]
+      }
+    }
+  },
+  "cold_estimates_secondary": {
+    "eager": {
+      "natural_over_own_default": {
+        "default": {
+          "n_blocks": 6,
+          "geometric_mean_ratio": 1.0034840775042342,
+          "per_block_ratios": [
+            1.0052757282931326,
+            1.0031056444839639,
+            1.0039826649193375,
+            1.006092465818577,
+            0.9996528185204949,
+            1.0028078802803269
+          ],
+          "range": [
+            0.9996528185204949,
+            1.006092465818577
+          ],
+          "exploratory_block_bootstrap_95": [
+            1.0017384758956243,
+            1.0050000200730866
+          ]
+        },
+        "v1": {
+          "n_blocks": 6,
+          "geometric_mean_ratio": 0.9010518000154117,
+          "per_block_ratios": [
+            0.9029062312037505,
+            0.9024497547818875,
+            0.900654692076127,
+            0.9023854185478758,
+            0.8961248878977162,
+            0.9018077143293105
+          ],
+          "range": [
+            0.8961248878977162,
+            0.9029062312037505
+          ],
+          "exploratory_block_bootstrap_95": [
+            0.8989727047194348,
+            0.9024829232087181
+          ]
+        },
+        "v2": {
+          "n_blocks": 6,
+          "geometric_mean_ratio": 0.8993024190940053,
+          "per_block_ratios": [
+            0.8925995293747859,
+            0.901984816318801,
+            0.9078110388452008,
+            0.8996094338403017,
+            0.8943896664140306,
+            0.8995026688916005
+          ],
+          "range": [
+            0.8925995293747859,
+            0.9078110388452008
+          ],
+          "exploratory_block_bootstrap_95": [
+            0.8955102304671047,
+            0.9033150178203005
+          ]
+        }
+      },
+      "v2_over_v1_normalized_to_own_default": {
+        "n_blocks": 6,
+        "geometric_mean_ratio": 0.9980585123725668,
+        "per_block_ratios": [
+          0.9885849698753063,
+          0.999484804045186,
+          1.0079457164127767,
+          0.9969237261035963,
+          0.9980636387772286,
+          0.997443972366743
+        ],
+        "range": [
+          0.9885849698753063,
+          1.0079457164127767
+        ],
+        "exploratory_block_bootstrap_95": [
+          0.9933593758015409,
+          1.0028483132380732
+        ]
+      },
+      "v2_over_v1_absolute_natural_latency_secondary": {
+        "n_blocks": 6,
+        "geometric_mean_ratio": 0.9913616355330114,
+        "per_block_ratios": [
+          1.000920932073727,
+          0.9953839983026842,
+          1.0002833115565544,
+          0.9845932663296665,
+          0.9696885872110547,
+          0.9976772158402946
+        ],
+        "range": [
+          0.9696885872110547,
+          1.000920932073727
+        ],
+        "exploratory_block_bootstrap_95": [
+          0.981576208489373,
+          0.9991367308697972
+        ]
+      }
+    },
+    "cuda_graph": {
+      "natural_over_own_default": {
+        "default": {
+          "n_blocks": 6,
+          "geometric_mean_ratio": 0.9969593772177866,
+          "per_block_ratios": [
+            0.9982054323701276,
+            0.9964582567748533,
+            0.9934851704682988,
+            0.9967039179785684,
+            0.9943860573641877,
+            1.002543339209307
+          ],
+          "range": [
+            0.9934851704682988,
+            1.002543339209307
+          ],
+          "exploratory_block_bootstrap_95": [
+            0.9948165865741232,
+            0.9994412163955716
+          ]
+        },
+        "v1": {
+          "n_blocks": 6,
+          "geometric_mean_ratio": 1.0683882513721863,
+          "per_block_ratios": [
+            1.0645423249880344,
+            1.0742627803681737,
+            1.0675769646710824,
+            1.0734869393932156,
+            1.0595460738548481,
+            1.0709898465474317
+          ],
+          "range": [
+            1.0595460738548481,
+            1.0742627803681737
+          ],
+          "exploratory_block_bootstrap_95": [
+            1.0641198559383072,
+            1.072341686863587
+          ]
+        },
+        "v2": {
+          "n_blocks": 6,
+          "geometric_mean_ratio": 1.0300348409908133,
+          "per_block_ratios": [
+            0.9972125743744439,
+            1.0661092740688014,
+            1.055856736024877,
+            1.0644441371502757,
+            0.99635784085991,
+            1.0031798736403308
+          ],
+          "range": [
+            0.99635784085991,
+            1.0661092740688014
+          ],
+          "exploratory_block_bootstrap_95": [
+            1.0074689354887443,
+            1.0536047240497914
+          ]
+        }
+      },
+      "v2_over_v1_normalized_to_own_default": {
+        "n_blocks": 6,
+        "geometric_mean_ratio": 0.9641016172425018,
+        "per_block_ratios": [
+          0.93675239675008,
+          0.9924101379584446,
+          0.989021654612212,
+          0.9915762345016966,
+          0.9403629209204218,
+          0.9366847658493673
+        ],
+        "range": [
+          0.9366847658493673,
+          0.9924101379584446
+        ],
+        "exploratory_block_bootstrap_95": [
+          0.9457842790026906,
+          0.9827598133214069
+        ]
+      },
+      "v2_over_v1_absolute_natural_latency_secondary": {
+        "n_blocks": 6,
+        "geometric_mean_ratio": 0.9561445719040891,
+        "per_block_ratios": [
+          0.9381893510887738,
+          0.9868520318745373,
+          0.9872119994513298,
+          0.9741462930868989,
+          0.9304947498421207,
+          0.9222534945746027
+        ],
+        "range": [
+          0.9222534945746027,
+          0.9872119994513298
+        ],
+        "exploratory_block_bootstrap_95": [
+          0.935545400655555,
+          0.97663660882895
+        ]
+      }
+    }
+  },
+  "winners": {
+    "default": {
+      "warm": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "cold": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ]
+    },
+    "v1": {
+      "warm": [
+        [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      ],
+      "cold": [
+        [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      ]
+    },
+    "v2": {
+      "warm": [
+        -1,
+        [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        [
+          446676598850,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        -1,
+        -1
+      ],
+      "cold": [
+        -1,
+        [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        [
+          446676598850,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        -1,
+        -1
+      ]
+    }
+  },
+  "startup_ms_secondary": {
+    "default": {
+      "cold": {
+        "median_ms": 94.10936245694757,
+        "range_ms": [
+          93.00743043422699,
+          94.75400950759649
+        ],
+        "values_ms": [
+          94.75400950759649,
+          93.77998858690262,
+          94.24342401325703,
+          94.21983361244202,
+          93.99889130145311,
+          93.00743043422699
+        ]
+      },
+      "warm": {
+        "median_ms": 94.82632717117667,
+        "range_ms": [
+          93.77352148294449,
+          95.87167017161846
+        ],
+        "values_ms": [
+          95.87167017161846,
+          95.5389104783535,
+          93.82730256766081,
+          93.77352148294449,
+          94.82400212436914,
+          94.8286522179842
+        ]
+      }
+    },
+    "v1": {
+      "cold": {
+        "median_ms": 469.89273745566607,
+        "range_ms": [
+          469.2876851186156,
+          471.5500781312585
+        ],
+        "values_ms": [
+          469.8757566511631,
+          471.5500781312585,
+          470.67047748714685,
+          469.2876851186156,
+          469.90971826016903,
+          469.5297051221132
+        ]
+      },
+      "warm": {
+        "median_ms": 97.07728866487741,
+        "range_ms": [
+          95.69792542606592,
+          98.12342189252377
+        ],
+        "values_ms": [
+          98.12342189252377,
+          97.15729206800461,
+          95.69792542606592,
+          96.99728526175022,
+          96.53614368289709,
+          97.34629467129707
+        ]
+      }
+    },
+    "v2": {
+      "cold": {
+        "median_ms": 515.9488064236939,
+        "range_ms": [
+          515.2289588004351,
+          516.5083967149258
+        ],
+        "values_ms": [
+          516.3611611351371,
+          515.266040340066,
+          515.5364517122507,
+          515.2289588004351,
+          516.5083967149258,
+          516.3918025791645
+        ]
+      },
+      "warm": {
+        "median_ms": 96.426444593817,
+        "range_ms": [
+          95.81601340323687,
+          98.19708671420813
+        ],
+        "values_ms": [
+          96.0687194019556,
+          97.5200617685914,
+          96.6788250952959,
+          98.19708671420813,
+          96.17406409233809,
+          95.81601340323687
+        ]
+      }
+    }
+  },
+  "findings": [
+    "V2 selected default in three of six cold searches; every selected winner survived fresh-process warm reuse.",
+    "V1 selected the same explicit descriptor in all six searches. V2 selected that descriptor twice, a different descriptor once, and default three times.",
+    "Warm queued graph v2/v1 normalized latency ratio is 0.9666938940583482; exploratory six-block 95% bootstrap interval [0.9422167664045791,0.9930542988044812]. Absolute natural-latency ratio is 0.9649905428746456.",
+    "V2 remains 3.49% slower than its own default controls by geometric mean across six warm processes. Its three explicit winners were 8.01%,5.98%,7.78% slower than their default graphs; default winners measured near parity.",
+    "Both warm normalized v2/v1 comparisons retain two adverse blocks out of six. All observations are retained; the aggregate improvement is not universal superiority.",
+    "Eager normalized v2/v1 ratio is 0.9924500068256449. Its secondary absolute-latency interval crosses one. Natural cached-default versus uncached-default-miss comparisons include different host lookup/dispatch paths and do not establish a GPU tactic speedup; no CPU profiling attributes the full magnitude.",
+    "Retain current production policy and v1 persistence. This bounded result supports a partial candidate-selection improvement and preserves evidence of imperfect selection; it does not justify a general serving-speedup claim or an automatic production confirmation change."
+  ],
+  "validation": {
+    "implementation_cpu_controls": 159,
+    "independent_fixture_checks": 56,
+    "admission_numerical_checks": 1110,
+    "timing_numerical_checks": 6648,
+    "independent_timing_integrity_checks": 19261,
+    "independent_arithmetic_checks": 17779,
+    "outer_checks_all42workers": 25664,
+    "publication_checks": 7456,
+    "failed_setup_publication_checks": 729,
+    "warm_profile_attempts": 0,
+    "additional_serving_profile_attempts": 0,
+    "queue_queries_pending": 864,
+    "queue_queries_completed": 0,
+    "queue_queries_excluded": 0,
+    "source_hooks": "passed",
+    "result_artifact_hooks": "passed"
+  },
+  "preservation": {
+    "full_private_archive_sha256": "b7debedf154902e24a830ca6adb35b4893def640e1f211b186efc11730c1ba73",
+    "public_reconstructed_archive_sha256": "31d4bb491b6818c8b4c9da1efb16565b49f4c2f495ed764aa2ab992b272d65df",
+    "public_derivation": "Only prohibited unrelated import-inventory labels omitted with original hashes. Results, timings, errors and traces remain byte-exact; private tensor/native material stays in the full archive.",
+    "preserved_preflight": "Docker setup failure before container creation/GPU execution, followed by frozen node-local checkpoint staging amendment; separately retained in preflight01."
+  },
+  "resources": {
+    "allocation": "2863544",
+    "elapsed": "00:46:40",
+    "released": true,
+    "queue_empty": true,
+    "experiments_running": false
+  },
+  "limits": [
+    "Six blocks on one fixture, GPU and time window; within-process pairs are dependent.",
+    "Block bootstrap intervals are exploratory, not equivalence, safety or population guarantees.",
+    "Normalizing against own retained default does not eliminate capture/allocation/history effects.",
+    "Default-vs-default independent graphs remain measured; their ratios are never forced to one.",
+    "Queued graph timing reports start-event evidence; completed queries are inconclusive and never excluded.",
+    "Admission and historical cohorts excluded.",
+    "Graph capture, allocation and execution history remain bundled; normalization does not isolate tactic identity causally.",
+    "One model projection, one GPU and one time window; no full-model throughput, quantization accuracy or universal superiority claim."
+  ]
+}

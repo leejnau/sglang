@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "checks": 7456,
+  "errors": [],
+  "audit_source_sha256": "ab4e8167f078c218eeff77578999a105016320e50de0cdd4785f576667c224b1",
+  "packager_source_sha256": "7324863cb8598251d977dfdb71102621562ee828deb0ab50fdc1ad1cd97bd33c",
+  "critical_byte_exact_evidence_files": 137,
+  "source_dependencies": [
+    "Python standard library only; no import or execution of the packager."
+  ],
+  "public_archive": {
+    "sha256": "31d4bb491b6818c8b4c9da1efb16565b49f4c2f495ed764aa2ab992b272d65df",
+    "size_bytes": 3527470,
+    "members": 344,
+    "exact_originals": 300,
+    "derived_bootstraps": 43,
+    "omitted_inventory_labels": 258,
+    "manifest_sha256": "1847428356f4d6eb06ae19e7447c5b5ff33004e91f825080930949c48984a9d0"
+  },
+  "private_archive": {
+    "sha256": "b7debedf154902e24a830ca6adb35b4893def640e1f211b186efc11730c1ba73",
+    "size_bytes": 15795774,
+    "files_including_preservation_manifest": 441,
+    "preservation_inventory_rows": {
+      "admission": 150,
+      "capture": 55,
+      "timing": 440
+    },
+    "private_exclusions": 98
+  },
+  "derivation_scope": "Only independently identified offending inventory entries were removed, with original inventory and omitted-entry hashes. Every other original bootstrap field is preserved; worker results, errors, timings and traces are exact original bytes.",
+  "scan": "All public decompressed names and payloads checked; no prohibited token, private tensor/native binary or build-source payload.",
+  "limitations": [
+    "Package integrity and disclosure audit only; no numerical/performance reanalysis or experiment execution.",
+    "This audits the complete public master archive; later splitting or repository copying must preserve that SHA."
+  ]
+}

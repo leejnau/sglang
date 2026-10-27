@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "scope": "independent cache/native/trace raw auditor and six parser controls",
+  "members": {
+    "audit_results.py": "d939d82153c3ef4ed58df18a48edd0d82666f66b510409e1fd273aaab93513b3",
+    "check_audit.py": "8dc2c3f6994c704cca5c5a5d8b5d0cbd356a53fa9a54d79e27d94937a8777c13",
+    "audit-cpu-controls.json": "310009cfe37fdc5ac45899377fce4851fccae2541af2fcd6ebe672dce8683f9f"
+  }
+}

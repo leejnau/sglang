@@ -1,0 +1,63 @@
+{
+  "status": "source_verified",
+  "immutable": true,
+  "execution_source": "a028b55b9c359568aa959e23e00b99a1824e89aa",
+  "runtime_base": "27c62fdf0ab1cd4014df8a15b66a975541fda83c",
+  "runtime_overlay": "Qualified FP8 stable-descriptor port and independent fixture callback, identical in all arms.",
+  "source_sha256": {
+    "autotuner": {
+      "path": "flashinfer/autotuner/autotuner.py",
+      "sha256": "0db42ad90d1a3fec6f81509a2c520c1892cea0a433f5dbd7f43468a2a10243ca"
+    },
+    "python_runner": {
+      "path": "flashinfer/gemm/gemm_base.py",
+      "sha256": "0bba9240029a5e09f331e7a2267f7067e126d57a7a341ca535f7c9557599adca"
+    },
+    "native_entry": {
+      "path": "csrc/bmm_fp8.cu",
+      "sha256": "ac00c1cdba76e653ead25a77d2b1ca9d07f35a89f65221334fbbab1a695a4709"
+    },
+    "native_implementation": {
+      "path": "include/flashinfer/gemm/bmm_fp8.cuh",
+      "sha256": "5a35da070efbc028e565721110e059c5b143d6a49697995e3c70fdae258eae72"
+    }
+  },
+  "actual_paths": {
+    "cached_default": "search_cache returns True with tactic -1 from live winner bank (cold) or legacy loaded-file map (warm), then choose_one returns it without miss handling.",
+    "uncached_default": "Manual role_scope clears winner/file maps before the measured batch; search_cache returns False,0,-1,None; choose_one additionally executes miss handling before returning the same tactic.",
+    "python_native_dispatch": "CublasFp8GemmRunner.forward has an early tactic==-1 branch that calls module.bmm_fp8 for BOTH paths.",
+    "native": "bmm_fp8 invokes bmm_fp8_internal_cublaslt, which creates descriptors, asks cuBLASLt for one heuristic and runs it. A cached -1 does not bypass this heuristic or use the explicit-descriptor resolved cache.",
+    "timing": "Each eager public call repeats Python lookup/dispatch. Graph replay repeats captured GPU work without those Python decisions. Context snapshot/restore and native/lookup observation are outside timed batches."
+  },
+  "source_locations": {
+    "search_cache_memory_hit": "autotuner.py:2177-2237",
+    "search_cache_file_hit": "autotuner.py:2239-2290",
+    "search_cache_miss": "autotuner.py:2397-2416",
+    "choose_one_serving_and_miss_handling": "autotuner.py:2666-2731",
+    "runner_default_dispatch": "gemm_base.py:338-359",
+    "ordinary_native_entry": "csrc/bmm_fp8.cu:49-84",
+    "ordinary_native_heuristic": "include/flashinfer/gemm/bmm_fp8.cuh:361-417"
+  },
+  "interpretation": "When v2 selected -1, the eager comparison measured a cached-default hit against an uncached-default miss. Both reach the same native heuristic-default GEMM path; source inspection confirms extra Python cache-miss handling in the control. The observed eager improvement includes host lookup/dispatch behavior and is not evidence of a faster selected GPU kernel. Its full magnitude has not been causally attributed by CPU profiling. Matching replay signatures and near-one graph ratios support keeping those conclusions separate.",
+  "extra_python_work_on_miss": [
+    "Remaining cache-source checks after no memory/file hit.",
+    "Formatting two debug message strings, including repeated key construction and representation, before logger.debug is called.",
+    "Scanning whether this operation has tuned data before any out-of-range warning decision."
+  ],
+  "limits": [
+    "No new CPU timing or profiler was run. Source establishes different host code paths, not the share of measured latency caused by each statement.",
+    "Separate graph capture/allocation history remains bundled.",
+    "Matching observed launch signatures are not a universal implementation or equivalence guarantee."
+  ],
+  "worker": {
+    "path": "test/manual/kernels/bench_flashinfer_mlp_selection.py",
+    "sha256": "ffd68fd070fc330d46d876f1892a236748aed781c5f8d2097542465e910a6ae4",
+    "locations": {
+      "cache_control_scope": "728-736",
+      "sample_control_and_observers_outside_timing": "810-879",
+      "pure_eager_timing": "114-152",
+      "actual_graph_replay_timing": "154-207"
+    }
+  },
+  "actions": "Read-only source inspection and existing immutable result/trace inspection only; no source edits, new CPU profiling or GPU runs."
+}
