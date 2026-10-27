@@ -1,0 +1,320 @@
+{
+  "status": "completed_read_only",
+  "execution_commit": "3cae7f706d2aa2bfc2268f13597a3d1706432410",
+  "raw_path": "/private/tmp/fi-mlp-confirmation-20261027/coordinator/raw-timing/attempt01/block5-auto_synthetic-timing.json",
+  "raw_sha256": "36384d90b5b855ec1957c82fb1a2ac0b450f79852295dd223844c07383c26299",
+  "source_identity_checks": [
+    {
+      "path": "test/manual/kernels/bench_flashinfer_mlp_confirmation.py",
+      "sha256": "a8532276afc70ae1b70e12eaf9fc722fa7b29ed6102407360dd93708a7789157",
+      "matches_execution_commit": true
+    },
+    {
+      "path": "test/manual/kernels/bench_flashinfer_finalist_confirmation.py",
+      "sha256": "3ec7d31ea510b29b9e5e2c289e82a3cfe31867b11ba4a28d9d900d76c1fa6413",
+      "matches_execution_commit": true
+    },
+    {
+      "path": "test/manual/kernels/bench_flashinfer_fixed_pair.py",
+      "sha256": "7c8c743fe08b898035bbdf693123ea7b0c8a2d49a29db801f0db3c81178abf42",
+      "matches_execution_commit": true
+    },
+    {
+      "path": "test/manual/kernels/bench_flashinfer_objective_values.py",
+      "sha256": "979e28aeb3248b27cb27df21b98cf274442c0e6b92c4df3444c48f7214ce90ba",
+      "matches_execution_commit": true
+    },
+    {
+      "path": "flashinfer/autotuner/autotuner.py",
+      "sha256": "0db42ad90d1a3fec6f81509a2c520c1892cea0a433f5dbd7f43468a2a10243ca",
+      "matches_worker_record": true
+    },
+    {
+      "path": "flashinfer/autotune_cache.py",
+      "sha256": "1ab2ed7208ed1bf1007b1f74de29fc818c93a5ab091beea0833474177fbb29ad",
+      "matches_worker_record": true
+    },
+    {
+      "path": "flashinfer/autotuner/_graph_timing.py",
+      "sha256": "5f3be31e17501ba11ee95327176ac4a4b95eeaee7be92c2bc7795bcbd30cefe3",
+      "matches_worker_record": true
+    },
+    {
+      "path": "flashinfer/gemm/gemm_base.py",
+      "sha256": "0bba9240029a5e09f331e7a2267f7067e126d57a7a341ca535f7c9557599adca",
+      "matches_worker_record": true
+    }
+  ],
+  "matrix": [
+    {
+      "status": "fixed",
+      "factor": "Geometry and profiling buffers",
+      "initial": "Actual M144,N1024,K3072; nine candidates share six buffers",
+      "confirmation": "Same six retained tensor objects, addresses, shape, dtype and strides; no new initializer draw",
+      "source_refs": [
+        "bench_flashinfer_finalist_confirmation.py:216-222,279-303,330-340",
+        "bench_flashinfer_fixed_pair.py:133-152",
+        "bench_flashinfer_mlp_confirmation.py:28-49"
+      ],
+      "limit": "M256 is canonical cache/candidate-enumeration bucket, not actual profiling M. Timing-mode original operand bytes were not fingerprinted before each initial call; admission hashes are separate-process evidence."
+    },
+    {
+      "status": "fixed",
+      "factor": "Runner and explicit tactic",
+      "initial": "One CublasFp8GemmRunner; explicit finalist is observed index75 descriptor",
+      "confirmation": "Same retained runner and exact descriptor; default remains -1",
+      "source_refs": [
+        "bench_flashinfer_finalist_confirmation.py:224-260,279-303",
+        "flashinfer/gemm/gemm_base.py:338-359"
+      ],
+      "limit": "Native default algorithm identity during profiling is not traced; -1 alone does not identify its physical kernel."
+    },
+    {
+      "status": "fixed",
+      "factor": "Configured measurement",
+      "initial": "No explicit policy; non-graph hot-L2 CUDA-event timing, warmup3,repeat10,requested delay5000us",
+      "confirmation": "Identical recorded settings; same original _profile_single_kernel via profile_tactic",
+      "source_refs": [
+        "bench_flashinfer_objective_values.py:210-232,542-590",
+        "bench_flashinfer_finalist_confirmation.py:263-305",
+        "flashinfer/autotuner/autotuner.py:3636-3726,3780-3841,3877-3916"
+      ],
+      "limit": "Each profiler result is one event window averaging10 kernel launches, not10 independent measurements. Achieved delay is not measured."
+    },
+    {
+      "status": "fixed",
+      "factor": "Input batch schedule",
+      "initial": "Hot-L2 path returns one list containing original tensors",
+      "confirmation": "prepare_tactic_profile returns one list and enforces object identity",
+      "source_refs": [
+        "flashinfer/autotuner/autotuner.py:2829-2840,4669-4676",
+        "bench_flashinfer_finalist_confirmation.py:330-340"
+      ]
+    },
+    {
+      "status": "changed",
+      "factor": "Order and estimator",
+      "initial": "72 preceding profiles across M1..128; M144 order default(index72),8explicit candidates; finalist index75; one averaged window each",
+      "confirmation": "Only default/finalist,12 pairs,6first positions each; median of12 paired log ratios",
+      "source_refs": [
+        "bench_flashinfer_objective_values.py:39",
+        "flashinfer/autotuner/autotuner.py:2895-2904,2974-2983,3052-3054",
+        "bench_flashinfer_finalist_confirmation.py:55-110,361-394"
+      ]
+    },
+    {
+      "status": "same_operation_different_history",
+      "factor": "Preparation",
+      "initial": "Once per runner/profile before candidate loop: inherited precompile=False, then default forward(do_preparation=True)",
+      "confirmation": "Once before24 confirmation calls: inherited precompile=False, then same default forward, explicit synchronize",
+      "source_refs": [
+        "flashinfer/autotuner/autotuner.py:843-856,2932-2947,2974",
+        "flashinfer/gemm/gemm_base.py:338-359",
+        "bench_flashinfer_finalist_confirmation.py:349-355"
+      ],
+      "limit": "Not once per candidate. CublasFp8GemmRunner ignores do_preparation, so this executes a real default GEMM."
+    },
+    {
+      "status": "changed",
+      "factor": "Intervening work",
+      "initial": "No confirmation reference/numerical guards between startup candidates",
+      "confirmation": "After all81 startup profiles: actual operation completes, context exits and cache saves; host validation/cache hashing; read-tensor hashes and FP32bmm reference; confirmation preparation",
+      "source_refs": [
+        "bench_flashinfer_mlp_confirmation.py:125-169",
+        "bench_flashinfer_fixed_pair.py:242-258",
+        "bench_flashinfer_finalist_confirmation.py:321-355"
+      ],
+      "limit": "Reference allocation lifetime/history changes; no causality established."
+    },
+    {
+      "status": "changed",
+      "factor": "Between-call work and buffer contents",
+      "initial": "Output/workspace reused across startup candidates; no worker poison/check between each call",
+      "confirmation": "Before every confirmation call, output filled NaN and device synchronized; after each call, float conversion, finite/allclose/error reductions and synchronization",
+      "source_refs": [
+        "bench_flashinfer_finalist_confirmation.py:361-395",
+        "bench_flashinfer_fixed_pair.py:260-295"
+      ],
+      "limit": "Same output address, different preceding contents/accesses. Scratch workspace contents were neither reset nor hashed; read operands were checked before/after confirmation."
+    },
+    {
+      "status": "fixed",
+      "factor": "Delay helper source and native provider",
+      "initial": "Exact qualified helper and shared library; 5000 forwarded without conversion",
+      "confirmation": "Same source/native helper; no worker delay monkeypatch",
+      "source_refs": [
+        "flashinfer/tllm_utils.py:11-12",
+        "csrc/nv_internal/tensorrt_llm/kernels/delayStream.cu:24-38",
+        "run_current.py:17-23,128-168"
+      ],
+      "limit": "Native helper loops __nanosleep(1000), not a wall-clock deadline. First confirmation total host interval350.1us despite requested5000us: actual delay/queue behavior is an unresolved observation, not diagnosed cause."
+    },
+    {
+      "status": "unobserved",
+      "factor": "Per-call physical execution state",
+      "initial": "No profiling-phase trace, clocks, effective delay duration, queue occupancy or per-launch timings",
+      "confirmation": "Same missing observations; later serving graph queue diagnostics do not measure these calls",
+      "source_refs": [
+        "bench_flashinfer_objective_values.py:542-606",
+        "bench_flashinfer_finalist_confirmation.py:263-318,568-592"
+      ],
+      "limit": "Cannot distinguish profiler-window variation, device/history effects, or a changed physical default kernel using saved data alone."
+    },
+    {
+      "status": "different_validation_domain",
+      "factor": "Later retained graphs",
+      "initial": "Startup/confirmation use synthetic FP8 inputs and event-timed eager runner loop",
+      "confirmation": "Scoring graphs use captured BF16 activation plus actual quantizer/wrapper, queued graph replay; both decisions use same post-confirmation graphs",
+      "source_refs": [
+        "bench_flashinfer_finalist_confirmation.py:155-160,435-494,568-592"
+      ],
+      "limit": "Agreement of graph ranking and confirmation supports the observed slower explicit choice but does not identify why startup ranking reversed."
+    }
+  ],
+  "block5": {
+    "original_history": {
+      "default_index": 72,
+      "explicit_index": 75,
+      "default_ms": 0.010198400169610978,
+      "explicit_ms": 0.009564799815416336,
+      "explicit_over_default": 0.9378725737706749,
+      "actual_m": 144,
+      "canonical_cache_m": 256,
+      "all_81_candidate_order_keys_settings_match": true
+    },
+    "confirmation_ratio": 1.0682724117827245,
+    "confirmation_pairs": [
+      {
+        "index": 0,
+        "order": [
+          "default",
+          "winner"
+        ],
+        "default_us": 10.809600353240967,
+        "explicit_us": 10.400000214576721,
+        "explicit_over_default": 0.9621077444790603
+      },
+      {
+        "index": 1,
+        "order": [
+          "winner",
+          "default"
+        ],
+        "default_us": 9.359999746084213,
+        "explicit_us": 10.252799838781357,
+        "explicit_over_default": 1.0953846278757273
+      },
+      {
+        "index": 2,
+        "order": [
+          "default",
+          "winner"
+        ],
+        "default_us": 9.340800344944,
+        "explicit_us": 9.964799880981445,
+        "explicit_over_default": 1.0668036477597131
+      },
+      {
+        "index": 3,
+        "order": [
+          "winner",
+          "default"
+        ],
+        "default_us": 14.019200205802917,
+        "explicit_us": 9.913600236177444,
+        "explicit_over_default": 0.7071444940256965
+      },
+      {
+        "index": 4,
+        "order": [
+          "winner",
+          "default"
+        ],
+        "default_us": 10.047999769449234,
+        "explicit_us": 9.971199929714203,
+        "explicit_over_default": 0.9923567036726515
+      },
+      {
+        "index": 5,
+        "order": [
+          "default",
+          "winner"
+        ],
+        "default_us": 9.436800330877304,
+        "explicit_us": 10.227199643850327,
+        "explicit_over_default": 1.0837571300927953
+      },
+      {
+        "index": 6,
+        "order": [
+          "default",
+          "winner"
+        ],
+        "default_us": 9.312000125646591,
+        "explicit_us": 9.92320030927658,
+        "explicit_over_default": 1.0656357576657087
+      },
+      {
+        "index": 7,
+        "order": [
+          "winner",
+          "default"
+        ],
+        "default_us": 9.222400188446045,
+        "explicit_us": 9.865599870681763,
+        "explicit_over_default": 1.0697431979845686
+      },
+      {
+        "index": 8,
+        "order": [
+          "winner",
+          "default"
+        ],
+        "default_us": 9.107200056314468,
+        "explicit_us": 9.894400089979172,
+        "explicit_over_default": 1.086437107870371
+      },
+      {
+        "index": 9,
+        "order": [
+          "default",
+          "winner"
+        ],
+        "default_us": 10.492800176143646,
+        "explicit_us": 9.852799773216248,
+        "explicit_over_default": 0.9390057570730738
+      },
+      {
+        "index": 10,
+        "order": [
+          "default",
+          "winner"
+        ],
+        "default_us": 9.206400066614151,
+        "explicit_us": 9.935999661684036,
+        "explicit_over_default": 1.0792491733783856
+      },
+      {
+        "index": 11,
+        "order": [
+          "winner",
+          "default"
+        ],
+        "default_us": 9.15839970111847,
+        "explicit_us": 10.630399733781815,
+        "explicit_over_default": 1.1607267733121078
+      }
+    ],
+    "explicit_slower_pairs": 8,
+    "explicit_faster_pairs": 4,
+    "first_confirmation_total_host_us": 350.1
+  },
+  "conclusion": "No geometry/policy/tactic identity switch found between original and confirmation profiling. Order, repetition/statistic, intervening work and per-call output checks changed together; saved evidence does not isolate their causes.",
+  "smallest_missing_observation": "An unperturbed profiling-phase execution/timing record spanning initial default and finalist: actual delay duration/queue occupancy and physical kernel identity. Current later serving traces do not cover that window; no new run is authorized or proposed by this audit.",
+  "actions": {
+    "gpu_runs": 0,
+    "ci_runs": 0,
+    "production_edits": 0,
+    "external_messages": 0
+  }
+}

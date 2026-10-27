@@ -1,0 +1,5530 @@
+{
+  "all_192_profiler_host_envelopes": [
+    {
+      "attempt_index": 0,
+      "block": 0,
+      "correctness_checked_ns": 5293896275173351,
+      "host_profile_envelope_us": 356.88,
+      "post_return_to_correctness_us": 43370.41,
+      "returned_ns": 5293896231802941,
+      "returned_profiler_average_us": 10.393600165843964,
+      "role": "winner",
+      "stage": "confirmation_00_winner",
+      "started_ns": 5293896231446061,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 1,
+      "block": 0,
+      "correctness_checked_ns": 5293896281054486,
+      "host_profile_envelope_us": 411.99,
+      "post_return_to_correctness_us": 5288.615,
+      "returned_ns": 5293896275765871,
+      "returned_profiler_average_us": 9.66079980134964,
+      "role": "default",
+      "stage": "confirmation_00_default",
+      "started_ns": 5293896275353881,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 2,
+      "block": 0,
+      "correctness_checked_ns": 5293896286887461,
+      "host_profile_envelope_us": 292.48,
+      "post_return_to_correctness_us": 5475.825,
+      "returned_ns": 5293896281411636,
+      "returned_profiler_average_us": 9.97759997844696,
+      "role": "winner",
+      "stage": "confirmation_01_winner",
+      "started_ns": 5293896281119156,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 3,
+      "block": 0,
+      "correctness_checked_ns": 5293896292658837,
+      "host_profile_envelope_us": 418.11,
+      "post_return_to_correctness_us": 5189.125,
+      "returned_ns": 5293896287469712,
+      "returned_profiler_average_us": 9.443199634552002,
+      "role": "default",
+      "stage": "confirmation_01_default",
+      "started_ns": 5293896287051602,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 4,
+      "block": 0,
+      "correctness_checked_ns": 5293896298203272,
+      "host_profile_envelope_us": 253.95,
+      "post_return_to_correctness_us": 5231.085,
+      "returned_ns": 5293896292972187,
+      "returned_profiler_average_us": 9.359999746084213,
+      "role": "default",
+      "stage": "confirmation_02_default",
+      "started_ns": 5293896292718237,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 5,
+      "block": 0,
+      "correctness_checked_ns": 5293896303749847,
+      "host_profile_envelope_us": 273.07,
+      "post_return_to_correctness_us": 5214.275,
+      "returned_ns": 5293896298535572,
+      "returned_profiler_average_us": 9.964799880981445,
+      "role": "winner",
+      "stage": "confirmation_02_winner",
+      "started_ns": 5293896298262502,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 6,
+      "block": 0,
+      "correctness_checked_ns": 5293896309277732,
+      "host_profile_envelope_us": 262.99,
+      "post_return_to_correctness_us": 5204.675,
+      "returned_ns": 5293896304073057,
+      "returned_profiler_average_us": 10.419200360774994,
+      "role": "winner",
+      "stage": "confirmation_03_winner",
+      "started_ns": 5293896303810067,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 7,
+      "block": 0,
+      "correctness_checked_ns": 5293896314806747,
+      "host_profile_envelope_us": 250.01,
+      "post_return_to_correctness_us": 5219.795,
+      "returned_ns": 5293896309586952,
+      "returned_profiler_average_us": 9.26399976015091,
+      "role": "default",
+      "stage": "confirmation_03_default",
+      "started_ns": 5293896309336942,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 8,
+      "block": 0,
+      "correctness_checked_ns": 5293896320323182,
+      "host_profile_envelope_us": 250.421,
+      "post_return_to_correctness_us": 5211.774,
+      "returned_ns": 5293896315111408,
+      "returned_profiler_average_us": 9.71520021557808,
+      "role": "default",
+      "stage": "confirmation_04_default",
+      "started_ns": 5293896314860987,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 9,
+      "block": 0,
+      "correctness_checked_ns": 5293896325843697,
+      "host_profile_envelope_us": 259.301,
+      "post_return_to_correctness_us": 5205.314,
+      "returned_ns": 5293896320638383,
+      "returned_profiler_average_us": 9.824000298976898,
+      "role": "winner",
+      "stage": "confirmation_04_winner",
+      "started_ns": 5293896320379082,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 10,
+      "block": 0,
+      "correctness_checked_ns": 5293896331453582,
+      "host_profile_envelope_us": 335.061,
+      "post_return_to_correctness_us": 5217.974,
+      "returned_ns": 5293896326235608,
+      "returned_profiler_average_us": 9.683199971914291,
+      "role": "default",
+      "stage": "confirmation_05_default",
+      "started_ns": 5293896325900547,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 11,
+      "block": 0,
+      "correctness_checked_ns": 5293896336975498,
+      "host_profile_envelope_us": 258.34,
+      "post_return_to_correctness_us": 5205.275,
+      "returned_ns": 5293896331770223,
+      "returned_profiler_average_us": 9.753599762916565,
+      "role": "winner",
+      "stage": "confirmation_05_winner",
+      "started_ns": 5293896331511883,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 12,
+      "block": 0,
+      "correctness_checked_ns": 5293896342503733,
+      "host_profile_envelope_us": 249.62,
+      "post_return_to_correctness_us": 5215.185,
+      "returned_ns": 5293896337288548,
+      "returned_profiler_average_us": 9.302400052547455,
+      "role": "default",
+      "stage": "confirmation_06_default",
+      "started_ns": 5293896337038928,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 13,
+      "block": 0,
+      "correctness_checked_ns": 5293896348037618,
+      "host_profile_envelope_us": 257.18,
+      "post_return_to_correctness_us": 5220.445,
+      "returned_ns": 5293896342817173,
+      "returned_profiler_average_us": 9.849599748849869,
+      "role": "winner",
+      "stage": "confirmation_06_winner",
+      "started_ns": 5293896342559993,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 14,
+      "block": 0,
+      "correctness_checked_ns": 5293896353558993,
+      "host_profile_envelope_us": 253.49,
+      "post_return_to_correctness_us": 5208.675,
+      "returned_ns": 5293896348350318,
+      "returned_profiler_average_us": 9.743999689817429,
+      "role": "winner",
+      "stage": "confirmation_07_winner",
+      "started_ns": 5293896348096828,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 15,
+      "block": 0,
+      "correctness_checked_ns": 5293896359079278,
+      "host_profile_envelope_us": 250.71,
+      "post_return_to_correctness_us": 5214.165,
+      "returned_ns": 5293896353865113,
+      "returned_profiler_average_us": 9.312000125646591,
+      "role": "default",
+      "stage": "confirmation_07_default",
+      "started_ns": 5293896353614403,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 16,
+      "block": 0,
+      "correctness_checked_ns": 5293896364597433,
+      "host_profile_envelope_us": 247.41,
+      "post_return_to_correctness_us": 5216.145,
+      "returned_ns": 5293896359381288,
+      "returned_profiler_average_us": 9.171199798583984,
+      "role": "default",
+      "stage": "confirmation_08_default",
+      "started_ns": 5293896359133878,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 17,
+      "block": 0,
+      "correctness_checked_ns": 5293896370150528,
+      "host_profile_envelope_us": 260.68,
+      "post_return_to_correctness_us": 5236.615,
+      "returned_ns": 5293896364913913,
+      "returned_profiler_average_us": 9.92640033364296,
+      "role": "winner",
+      "stage": "confirmation_08_winner",
+      "started_ns": 5293896364653233,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 18,
+      "block": 0,
+      "correctness_checked_ns": 5293896375686723,
+      "host_profile_envelope_us": 255.85,
+      "post_return_to_correctness_us": 5218.835,
+      "returned_ns": 5293896370467888,
+      "returned_profiler_average_us": 9.79200005531311,
+      "role": "winner",
+      "stage": "confirmation_09_winner",
+      "started_ns": 5293896370212038,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 19,
+      "block": 0,
+      "correctness_checked_ns": 5293896381211858,
+      "host_profile_envelope_us": 243.96,
+      "post_return_to_correctness_us": 5225.565,
+      "returned_ns": 5293896375986293,
+      "returned_profiler_average_us": 9.126400202512741,
+      "role": "default",
+      "stage": "confirmation_09_default",
+      "started_ns": 5293896375742333,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 20,
+      "block": 0,
+      "correctness_checked_ns": 5293896386727653,
+      "host_profile_envelope_us": 247.471,
+      "post_return_to_correctness_us": 5213.944,
+      "returned_ns": 5293896381513709,
+      "returned_profiler_average_us": 9.26399976015091,
+      "role": "default",
+      "stage": "confirmation_10_default",
+      "started_ns": 5293896381266238,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 21,
+      "block": 0,
+      "correctness_checked_ns": 5293896392248838,
+      "host_profile_envelope_us": 260.471,
+      "post_return_to_correctness_us": 5203.234,
+      "returned_ns": 5293896387045604,
+      "returned_profiler_average_us": 10.13759970664978,
+      "role": "winner",
+      "stage": "confirmation_10_winner",
+      "started_ns": 5293896386785133,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 22,
+      "block": 0,
+      "correctness_checked_ns": 5293896397770103,
+      "host_profile_envelope_us": 250.111,
+      "post_return_to_correctness_us": 5211.244,
+      "returned_ns": 5293896392558859,
+      "returned_profiler_average_us": 9.676799923181534,
+      "role": "winner",
+      "stage": "confirmation_11_winner",
+      "started_ns": 5293896392308748,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 23,
+      "block": 0,
+      "correctness_checked_ns": 5293896403283358,
+      "host_profile_envelope_us": 247.111,
+      "post_return_to_correctness_us": 5211.804,
+      "returned_ns": 5293896398071554,
+      "returned_profiler_average_us": 9.673599898815155,
+      "role": "default",
+      "stage": "confirmation_11_default",
+      "started_ns": 5293896397824443,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 0,
+      "block": 1,
+      "correctness_checked_ns": 5293922369357571,
+      "host_profile_envelope_us": 342.97,
+      "post_return_to_correctness_us": 43186.87,
+      "returned_ns": 5293922326170701,
+      "returned_profiler_average_us": 9.939199686050415,
+      "role": "default",
+      "stage": "confirmation_00_default",
+      "started_ns": 5293922325827731,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 1,
+      "block": 1,
+      "correctness_checked_ns": 5293922375257587,
+      "host_profile_envelope_us": 429.111,
+      "post_return_to_correctness_us": 5291.145,
+      "returned_ns": 5293922369966442,
+      "returned_profiler_average_us": 10.416000336408615,
+      "role": "winner",
+      "stage": "confirmation_00_winner",
+      "started_ns": 5293922369537331,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 2,
+      "block": 1,
+      "correctness_checked_ns": 5293922380822482,
+      "host_profile_envelope_us": 276.41,
+      "post_return_to_correctness_us": 5220.975,
+      "returned_ns": 5293922375601507,
+      "returned_profiler_average_us": 9.958399832248688,
+      "role": "winner",
+      "stage": "confirmation_01_winner",
+      "started_ns": 5293922375325097,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 3,
+      "block": 1,
+      "correctness_checked_ns": 5293922386371187,
+      "host_profile_envelope_us": 271.87,
+      "post_return_to_correctness_us": 5215.875,
+      "returned_ns": 5293922381155312,
+      "returned_profiler_average_us": 9.50080007314682,
+      "role": "default",
+      "stage": "confirmation_01_default",
+      "started_ns": 5293922380883442,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 4,
+      "block": 1,
+      "correctness_checked_ns": 5293922391931822,
+      "host_profile_envelope_us": 285.67,
+      "post_return_to_correctness_us": 5214.245,
+      "returned_ns": 5293922386717577,
+      "returned_profiler_average_us": 9.920000284910202,
+      "role": "winner",
+      "stage": "confirmation_02_winner",
+      "started_ns": 5293922386431907,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 5,
+      "block": 1,
+      "correctness_checked_ns": 5293922397480057,
+      "host_profile_envelope_us": 261.17,
+      "post_return_to_correctness_us": 5227.945,
+      "returned_ns": 5293922392252112,
+      "returned_profiler_average_us": 9.379199892282486,
+      "role": "default",
+      "stage": "confirmation_02_default",
+      "started_ns": 5293922391990942,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 6,
+      "block": 1,
+      "correctness_checked_ns": 5293922403016222,
+      "host_profile_envelope_us": 260.65,
+      "post_return_to_correctness_us": 5215.925,
+      "returned_ns": 5293922397800297,
+      "returned_profiler_average_us": 9.759999811649323,
+      "role": "winner",
+      "stage": "confirmation_03_winner",
+      "started_ns": 5293922397539647,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 7,
+      "block": 1,
+      "correctness_checked_ns": 5293922408547197,
+      "host_profile_envelope_us": 251.41,
+      "post_return_to_correctness_us": 5222.255,
+      "returned_ns": 5293922403324942,
+      "returned_profiler_average_us": 9.267199784517288,
+      "role": "default",
+      "stage": "confirmation_03_default",
+      "started_ns": 5293922403073532,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 8,
+      "block": 1,
+      "correctness_checked_ns": 5293922414071882,
+      "host_profile_envelope_us": 244.93,
+      "post_return_to_correctness_us": 5223.755,
+      "returned_ns": 5293922408848127,
+      "returned_profiler_average_us": 9.142400324344635,
+      "role": "default",
+      "stage": "confirmation_04_default",
+      "started_ns": 5293922408603197,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 9,
+      "block": 1,
+      "correctness_checked_ns": 5293922419603667,
+      "host_profile_envelope_us": 257.431,
+      "post_return_to_correctness_us": 5218.384,
+      "returned_ns": 5293922414385283,
+      "returned_profiler_average_us": 9.839999675750732,
+      "role": "winner",
+      "stage": "confirmation_04_winner",
+      "started_ns": 5293922414127852,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 10,
+      "block": 1,
+      "correctness_checked_ns": 5293922425201142,
+      "host_profile_envelope_us": 319.071,
+      "post_return_to_correctness_us": 5220.744,
+      "returned_ns": 5293922419980398,
+      "returned_profiler_average_us": 9.484799951314926,
+      "role": "default",
+      "stage": "confirmation_05_default",
+      "started_ns": 5293922419661327,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 11,
+      "block": 1,
+      "correctness_checked_ns": 5293922430745608,
+      "host_profile_envelope_us": 274.47,
+      "post_return_to_correctness_us": 5210.825,
+      "returned_ns": 5293922425534783,
+      "returned_profiler_average_us": 10.00640019774437,
+      "role": "winner",
+      "stage": "confirmation_05_winner",
+      "started_ns": 5293922425260313,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 12,
+      "block": 1,
+      "correctness_checked_ns": 5293922436274223,
+      "host_profile_envelope_us": 265.12,
+      "post_return_to_correctness_us": 5205.435,
+      "returned_ns": 5293922431068788,
+      "returned_profiler_average_us": 10.502400249242783,
+      "role": "winner",
+      "stage": "confirmation_06_winner",
+      "started_ns": 5293922430803668,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 13,
+      "block": 1,
+      "correctness_checked_ns": 5293922441802098,
+      "host_profile_envelope_us": 253.95,
+      "post_return_to_correctness_us": 5220.635,
+      "returned_ns": 5293922436581463,
+      "returned_profiler_average_us": 9.39520001411438,
+      "role": "default",
+      "stage": "confirmation_06_default",
+      "started_ns": 5293922436327513,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 14,
+      "block": 1,
+      "correctness_checked_ns": 5293922447321873,
+      "host_profile_envelope_us": 254.5,
+      "post_return_to_correctness_us": 5211.355,
+      "returned_ns": 5293922442110518,
+      "returned_profiler_average_us": 9.782399982213974,
+      "role": "default",
+      "stage": "confirmation_07_default",
+      "started_ns": 5293922441856018,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 15,
+      "block": 1,
+      "correctness_checked_ns": 5293922452849968,
+      "host_profile_envelope_us": 258.17,
+      "post_return_to_correctness_us": 5213.885,
+      "returned_ns": 5293922447636083,
+      "returned_profiler_average_us": 9.779199957847595,
+      "role": "winner",
+      "stage": "confirmation_07_winner",
+      "started_ns": 5293922447377913,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 16,
+      "block": 1,
+      "correctness_checked_ns": 5293922458382943,
+      "host_profile_envelope_us": 261.8,
+      "post_return_to_correctness_us": 5213.845,
+      "returned_ns": 5293922453169098,
+      "returned_profiler_average_us": 9.359999746084213,
+      "role": "default",
+      "stage": "confirmation_08_default",
+      "started_ns": 5293922452907298,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 17,
+      "block": 1,
+      "correctness_checked_ns": 5293922463912588,
+      "host_profile_envelope_us": 258.45,
+      "post_return_to_correctness_us": 5212.185,
+      "returned_ns": 5293922458700403,
+      "returned_profiler_average_us": 9.87199991941452,
+      "role": "winner",
+      "stage": "confirmation_08_winner",
+      "started_ns": 5293922458441953,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 18,
+      "block": 1,
+      "correctness_checked_ns": 5293922469455643,
+      "host_profile_envelope_us": 262.37,
+      "post_return_to_correctness_us": 5221.895,
+      "returned_ns": 5293922464233748,
+      "returned_profiler_average_us": 9.89760011434555,
+      "role": "winner",
+      "stage": "confirmation_09_winner",
+      "started_ns": 5293922463971378,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 19,
+      "block": 1,
+      "correctness_checked_ns": 5293922474981548,
+      "host_profile_envelope_us": 251.88,
+      "post_return_to_correctness_us": 5215.735,
+      "returned_ns": 5293922469765813,
+      "returned_profiler_average_us": 9.26079973578453,
+      "role": "default",
+      "stage": "confirmation_09_default",
+      "started_ns": 5293922469513933,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 20,
+      "block": 1,
+      "correctness_checked_ns": 5293922480502393,
+      "host_profile_envelope_us": 242.2,
+      "post_return_to_correctness_us": 5220.635,
+      "returned_ns": 5293922475281758,
+      "returned_profiler_average_us": 9.177599847316742,
+      "role": "default",
+      "stage": "confirmation_10_default",
+      "started_ns": 5293922475039558,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 21,
+      "block": 1,
+      "correctness_checked_ns": 5293922486038388,
+      "host_profile_envelope_us": 258.201,
+      "post_return_to_correctness_us": 5220.904,
+      "returned_ns": 5293922480817484,
+      "returned_profiler_average_us": 9.79200005531311,
+      "role": "winner",
+      "stage": "confirmation_10_winner",
+      "started_ns": 5293922480559283,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 22,
+      "block": 1,
+      "correctness_checked_ns": 5293922491571753,
+      "host_profile_envelope_us": 256.221,
+      "post_return_to_correctness_us": 5216.454,
+      "returned_ns": 5293922486355299,
+      "returned_profiler_average_us": 9.82080027461052,
+      "role": "winner",
+      "stage": "confirmation_11_winner",
+      "started_ns": 5293922486099078,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 23,
+      "block": 1,
+      "correctness_checked_ns": 5293922497097039,
+      "host_profile_envelope_us": 249.511,
+      "post_return_to_correctness_us": 5218.865,
+      "returned_ns": 5293922491878174,
+      "returned_profiler_average_us": 9.203200042247772,
+      "role": "default",
+      "stage": "confirmation_11_default",
+      "started_ns": 5293922491628663,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 0,
+      "block": 2,
+      "correctness_checked_ns": 5293948375024185,
+      "host_profile_envelope_us": 366.321,
+      "post_return_to_correctness_us": 43904.84,
+      "returned_ns": 5293948331119345,
+      "returned_profiler_average_us": 11.529599875211716,
+      "role": "winner",
+      "stage": "confirmation_00_winner",
+      "started_ns": 5293948330753024,
+      "tactic": [
+        446676598850,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 1,
+      "block": 2,
+      "correctness_checked_ns": 5293948380912750,
+      "host_profile_envelope_us": 416.93,
+      "post_return_to_correctness_us": 5287.675,
+      "returned_ns": 5293948375625075,
+      "returned_profiler_average_us": 9.504000097513199,
+      "role": "default",
+      "stage": "confirmation_00_default",
+      "started_ns": 5293948375208145,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 2,
+      "block": 2,
+      "correctness_checked_ns": 5293948386490745,
+      "host_profile_envelope_us": 293.981,
+      "post_return_to_correctness_us": 5218.164,
+      "returned_ns": 5293948381272581,
+      "returned_profiler_average_us": 9.961599856615067,
+      "role": "winner",
+      "stage": "confirmation_01_winner",
+      "started_ns": 5293948380978600,
+      "tactic": [
+        446676598850,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 3,
+      "block": 2,
+      "correctness_checked_ns": 5293948392034760,
+      "host_profile_envelope_us": 247.521,
+      "post_return_to_correctness_us": 5236.174,
+      "returned_ns": 5293948386798586,
+      "returned_profiler_average_us": 9.196799993515015,
+      "role": "default",
+      "stage": "confirmation_01_default",
+      "started_ns": 5293948386551065,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 4,
+      "block": 2,
+      "correctness_checked_ns": 5293948397577356,
+      "host_profile_envelope_us": 261.94,
+      "post_return_to_correctness_us": 5221.225,
+      "returned_ns": 5293948392356131,
+      "returned_profiler_average_us": 9.904000163078308,
+      "role": "winner",
+      "stage": "confirmation_02_winner",
+      "started_ns": 5293948392094191,
+      "tactic": [
+        446676598850,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 5,
+      "block": 2,
+      "correctness_checked_ns": 5293948403122341,
+      "host_profile_envelope_us": 248.77,
+      "post_return_to_correctness_us": 5237.755,
+      "returned_ns": 5293948397884586,
+      "returned_profiler_average_us": 9.219200164079666,
+      "role": "default",
+      "stage": "confirmation_02_default",
+      "started_ns": 5293948397635816,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 6,
+      "block": 2,
+      "correctness_checked_ns": 5293948408640676,
+      "host_profile_envelope_us": 245.62,
+      "post_return_to_correctness_us": 5215.905,
+      "returned_ns": 5293948403424771,
+      "returned_profiler_average_us": 9.07839983701706,
+      "role": "default",
+      "stage": "confirmation_03_default",
+      "started_ns": 5293948403179151,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 7,
+      "block": 2,
+      "correctness_checked_ns": 5293948414172871,
+      "host_profile_envelope_us": 263.97,
+      "post_return_to_correctness_us": 5211.515,
+      "returned_ns": 5293948408961356,
+      "returned_profiler_average_us": 9.881599992513657,
+      "role": "winner",
+      "stage": "confirmation_03_winner",
+      "started_ns": 5293948408697386,
+      "tactic": [
+        446676598850,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 8,
+      "block": 2,
+      "correctness_checked_ns": 5293948419698906,
+      "host_profile_envelope_us": 240.73,
+      "post_return_to_correctness_us": 5225.745,
+      "returned_ns": 5293948414473161,
+      "returned_profiler_average_us": 8.975999802350998,
+      "role": "default",
+      "stage": "confirmation_04_default",
+      "started_ns": 5293948414232431,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 9,
+      "block": 2,
+      "correctness_checked_ns": 5293948425224591,
+      "host_profile_envelope_us": 259.44,
+      "post_return_to_correctness_us": 5210.585,
+      "returned_ns": 5293948420014006,
+      "returned_profiler_average_us": 9.753599762916565,
+      "role": "winner",
+      "stage": "confirmation_04_winner",
+      "started_ns": 5293948419754566,
+      "tactic": [
+        446676598850,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 10,
+      "block": 2,
+      "correctness_checked_ns": 5293948430820496,
+      "host_profile_envelope_us": 322.57,
+      "post_return_to_correctness_us": 5215.075,
+      "returned_ns": 5293948425605421,
+      "returned_profiler_average_us": 10.044799745082855,
+      "role": "winner",
+      "stage": "confirmation_05_winner",
+      "started_ns": 5293948425282851,
+      "tactic": [
+        446676598850,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 11,
+      "block": 2,
+      "correctness_checked_ns": 5293948436343771,
+      "host_profile_envelope_us": 271.48,
+      "post_return_to_correctness_us": 5195.345,
+      "returned_ns": 5293948431148426,
+      "returned_profiler_average_us": 9.583999961614609,
+      "role": "default",
+      "stage": "confirmation_05_default",
+      "started_ns": 5293948430876946,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 12,
+      "block": 2,
+      "correctness_checked_ns": 5293948441869836,
+      "host_profile_envelope_us": 256.32,
+      "post_return_to_correctness_us": 5211.245,
+      "returned_ns": 5293948436658591,
+      "returned_profiler_average_us": 9.708800166845322,
+      "role": "winner",
+      "stage": "confirmation_06_winner",
+      "started_ns": 5293948436402271,
+      "tactic": [
+        446676598850,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 13,
+      "block": 2,
+      "correctness_checked_ns": 5293948447399281,
+      "host_profile_envelope_us": 257.3,
+      "post_return_to_correctness_us": 5215.395,
+      "returned_ns": 5293948442183886,
+      "returned_profiler_average_us": 9.18079987168312,
+      "role": "default",
+      "stage": "confirmation_06_default",
+      "started_ns": 5293948441926586,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 14,
+      "block": 2,
+      "correctness_checked_ns": 5293948452919976,
+      "host_profile_envelope_us": 244.901,
+      "post_return_to_correctness_us": 5221.244,
+      "returned_ns": 5293948447698732,
+      "returned_profiler_average_us": 9.097599983215332,
+      "role": "default",
+      "stage": "confirmation_07_default",
+      "started_ns": 5293948447453831,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 15,
+      "block": 2,
+      "correctness_checked_ns": 5293948458447211,
+      "host_profile_envelope_us": 265.551,
+      "post_return_to_correctness_us": 5208.334,
+      "returned_ns": 5293948453238877,
+      "returned_profiler_average_us": 9.89760011434555,
+      "role": "winner",
+      "stage": "confirmation_07_winner",
+      "started_ns": 5293948452973326,
+      "tactic": [
+        446676598850,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 16,
+      "block": 2,
+      "correctness_checked_ns": 5293948463974617,
+      "host_profile_envelope_us": 249.441,
+      "post_return_to_correctness_us": 5219.765,
+      "returned_ns": 5293948458754852,
+      "returned_profiler_average_us": 9.043200314044952,
+      "role": "default",
+      "stage": "confirmation_08_default",
+      "started_ns": 5293948458505411,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 17,
+      "block": 2,
+      "correctness_checked_ns": 5293948469521192,
+      "host_profile_envelope_us": 258.98,
+      "post_return_to_correctness_us": 5220.535,
+      "returned_ns": 5293948464300657,
+      "returned_profiler_average_us": 9.689600020647049,
+      "role": "winner",
+      "stage": "confirmation_08_winner",
+      "started_ns": 5293948464041677,
+      "tactic": [
+        446676598850,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 18,
+      "block": 2,
+      "correctness_checked_ns": 5293948475046477,
+      "host_profile_envelope_us": 242.79,
+      "post_return_to_correctness_us": 5224.465,
+      "returned_ns": 5293948469822012,
+      "returned_profiler_average_us": 9.097599983215332,
+      "role": "default",
+      "stage": "confirmation_09_default",
+      "started_ns": 5293948469579222,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 19,
+      "block": 2,
+      "correctness_checked_ns": 5293948480567522,
+      "host_profile_envelope_us": 254.58,
+      "post_return_to_correctness_us": 5210.615,
+      "returned_ns": 5293948475356907,
+      "returned_profiler_average_us": 9.830400347709656,
+      "role": "winner",
+      "stage": "confirmation_09_winner",
+      "started_ns": 5293948475102327,
+      "tactic": [
+        446676598850,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 20,
+      "block": 2,
+      "correctness_checked_ns": 5293948486100957,
+      "host_profile_envelope_us": 249.99,
+      "post_return_to_correctness_us": 5225.695,
+      "returned_ns": 5293948480875262,
+      "returned_profiler_average_us": 9.638399630784988,
+      "role": "winner",
+      "stage": "confirmation_10_winner",
+      "started_ns": 5293948480625272,
+      "tactic": [
+        446676598850,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 21,
+      "block": 2,
+      "correctness_checked_ns": 5293948491630592,
+      "host_profile_envelope_us": 242.53,
+      "post_return_to_correctness_us": 5230.555,
+      "returned_ns": 5293948486400037,
+      "returned_profiler_average_us": 9.10400003194809,
+      "role": "default",
+      "stage": "confirmation_10_default",
+      "started_ns": 5293948486157507,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 22,
+      "block": 2,
+      "correctness_checked_ns": 5293948497165507,
+      "host_profile_envelope_us": 246.33,
+      "post_return_to_correctness_us": 5234.275,
+      "returned_ns": 5293948491931232,
+      "returned_profiler_average_us": 9.07839983701706,
+      "role": "default",
+      "stage": "confirmation_11_default",
+      "started_ns": 5293948491684902,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 23,
+      "block": 2,
+      "correctness_checked_ns": 5293948502696592,
+      "host_profile_envelope_us": 259.8,
+      "post_return_to_correctness_us": 5214.825,
+      "returned_ns": 5293948497481767,
+      "returned_profiler_average_us": 9.808000177145004,
+      "role": "winner",
+      "stage": "confirmation_11_winner",
+      "started_ns": 5293948497221967,
+      "tactic": [
+        446676598850,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 0,
+      "block": 3,
+      "correctness_checked_ns": 5293974490341785,
+      "host_profile_envelope_us": 340.431,
+      "post_return_to_correctness_us": 43580.43,
+      "returned_ns": 5293974446761355,
+      "returned_profiler_average_us": 9.734400361776352,
+      "role": "default",
+      "stage": "confirmation_00_default",
+      "started_ns": 5293974446420924,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 1,
+      "block": 3,
+      "correctness_checked_ns": 5293974496242290,
+      "host_profile_envelope_us": 428.55,
+      "post_return_to_correctness_us": 5290.565,
+      "returned_ns": 5293974490951725,
+      "returned_profiler_average_us": 10.579200088977814,
+      "role": "winner",
+      "stage": "confirmation_00_winner",
+      "started_ns": 5293974490523175,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 2,
+      "block": 3,
+      "correctness_checked_ns": 5293974501800955,
+      "host_profile_envelope_us": 276.4,
+      "post_return_to_correctness_us": 5217.145,
+      "returned_ns": 5293974496583810,
+      "returned_profiler_average_us": 9.964799880981445,
+      "role": "default",
+      "stage": "confirmation_01_default",
+      "started_ns": 5293974496307410,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 3,
+      "block": 3,
+      "correctness_checked_ns": 5293974507337270,
+      "host_profile_envelope_us": 273.56,
+      "post_return_to_correctness_us": 5204.135,
+      "returned_ns": 5293974502133135,
+      "returned_profiler_average_us": 10.71999967098236,
+      "role": "winner",
+      "stage": "confirmation_01_winner",
+      "started_ns": 5293974501859575,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 4,
+      "block": 3,
+      "correctness_checked_ns": 5293974512867495,
+      "host_profile_envelope_us": 248.49,
+      "post_return_to_correctness_us": 5220.995,
+      "returned_ns": 5293974507646500,
+      "returned_profiler_average_us": 9.23520028591156,
+      "role": "default",
+      "stage": "confirmation_02_default",
+      "started_ns": 5293974507398010,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 5,
+      "block": 3,
+      "correctness_checked_ns": 5293974518398600,
+      "host_profile_envelope_us": 267.44,
+      "post_return_to_correctness_us": 5206.235,
+      "returned_ns": 5293974513192365,
+      "returned_profiler_average_us": 9.961599856615067,
+      "role": "winner",
+      "stage": "confirmation_02_winner",
+      "started_ns": 5293974512924925,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 6,
+      "block": 3,
+      "correctness_checked_ns": 5293974523913985,
+      "host_profile_envelope_us": 250.921,
+      "post_return_to_correctness_us": 5207.824,
+      "returned_ns": 5293974518706161,
+      "returned_profiler_average_us": 9.20960009098053,
+      "role": "default",
+      "stage": "confirmation_03_default",
+      "started_ns": 5293974518455240,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 7,
+      "block": 3,
+      "correctness_checked_ns": 5293974529440170,
+      "host_profile_envelope_us": 266.261,
+      "post_return_to_correctness_us": 5204.364,
+      "returned_ns": 5293974524235806,
+      "returned_profiler_average_us": 9.916800260543823,
+      "role": "winner",
+      "stage": "confirmation_03_winner",
+      "started_ns": 5293974523969545,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 8,
+      "block": 3,
+      "correctness_checked_ns": 5293974534960675,
+      "host_profile_envelope_us": 258.731,
+      "post_return_to_correctness_us": 5205.114,
+      "returned_ns": 5293974529755561,
+      "returned_profiler_average_us": 9.910400211811066,
+      "role": "winner",
+      "stage": "confirmation_04_winner",
+      "started_ns": 5293974529496830,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 9,
+      "block": 3,
+      "correctness_checked_ns": 5293974540495841,
+      "host_profile_envelope_us": 254.221,
+      "post_return_to_correctness_us": 5219.895,
+      "returned_ns": 5293974535275946,
+      "returned_profiler_average_us": 9.171199798583984,
+      "role": "default",
+      "stage": "confirmation_04_default",
+      "started_ns": 5293974535021725,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 10,
+      "block": 3,
+      "correctness_checked_ns": 5293974546100576,
+      "host_profile_envelope_us": 315.53,
+      "post_return_to_correctness_us": 5235.875,
+      "returned_ns": 5293974540864701,
+      "returned_profiler_average_us": 9.433600306510925,
+      "role": "default",
+      "stage": "confirmation_05_default",
+      "started_ns": 5293974540549171,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 11,
+      "block": 3,
+      "correctness_checked_ns": 5293974551630321,
+      "host_profile_envelope_us": 264.54,
+      "post_return_to_correctness_us": 5205.865,
+      "returned_ns": 5293974546424456,
+      "returned_profiler_average_us": 10.038399696350098,
+      "role": "winner",
+      "stage": "confirmation_05_winner",
+      "started_ns": 5293974546159916,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 12,
+      "block": 3,
+      "correctness_checked_ns": 5293974557164716,
+      "host_profile_envelope_us": 252.62,
+      "post_return_to_correctness_us": 5222.495,
+      "returned_ns": 5293974551942221,
+      "returned_profiler_average_us": 9.811200201511383,
+      "role": "winner",
+      "stage": "confirmation_06_winner",
+      "started_ns": 5293974551689601,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 13,
+      "block": 3,
+      "correctness_checked_ns": 5293974562696461,
+      "host_profile_envelope_us": 245.04,
+      "post_return_to_correctness_us": 5231.795,
+      "returned_ns": 5293974557464666,
+      "returned_profiler_average_us": 9.190399944782257,
+      "role": "default",
+      "stage": "confirmation_06_default",
+      "started_ns": 5293974557219626,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 14,
+      "block": 3,
+      "correctness_checked_ns": 5293974568223076,
+      "host_profile_envelope_us": 244.23,
+      "post_return_to_correctness_us": 5228.645,
+      "returned_ns": 5293974562994431,
+      "returned_profiler_average_us": 9.206400066614151,
+      "role": "default",
+      "stage": "confirmation_07_default",
+      "started_ns": 5293974562750201,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 15,
+      "block": 3,
+      "correctness_checked_ns": 5293974573752051,
+      "host_profile_envelope_us": 254.89,
+      "post_return_to_correctness_us": 5216.145,
+      "returned_ns": 5293974568535906,
+      "returned_profiler_average_us": 9.865599870681763,
+      "role": "winner",
+      "stage": "confirmation_07_winner",
+      "started_ns": 5293974568281016,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 16,
+      "block": 3,
+      "correctness_checked_ns": 5293974579276046,
+      "host_profile_envelope_us": 263.9,
+      "post_return_to_correctness_us": 5203.915,
+      "returned_ns": 5293974574072131,
+      "returned_profiler_average_us": 10.678400099277496,
+      "role": "winner",
+      "stage": "confirmation_08_winner",
+      "started_ns": 5293974573808231,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 17,
+      "block": 3,
+      "correctness_checked_ns": 5293974584799351,
+      "host_profile_envelope_us": 242.95,
+      "post_return_to_correctness_us": 5224.585,
+      "returned_ns": 5293974579574766,
+      "returned_profiler_average_us": 9.052799642086029,
+      "role": "default",
+      "stage": "confirmation_08_default",
+      "started_ns": 5293974579331816,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 18,
+      "block": 3,
+      "correctness_checked_ns": 5293974590329666,
+      "host_profile_envelope_us": 263.43,
+      "post_return_to_correctness_us": 5210.365,
+      "returned_ns": 5293974585119301,
+      "returned_profiler_average_us": 10.505600273609161,
+      "role": "winner",
+      "stage": "confirmation_09_winner",
+      "started_ns": 5293974584855871,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 19,
+      "block": 3,
+      "correctness_checked_ns": 5293974595839791,
+      "host_profile_envelope_us": 240.45,
+      "post_return_to_correctness_us": 5213.955,
+      "returned_ns": 5293974590625836,
+      "returned_profiler_average_us": 9.107200056314468,
+      "role": "default",
+      "stage": "confirmation_09_default",
+      "started_ns": 5293974590385386,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 20,
+      "block": 3,
+      "correctness_checked_ns": 5293974601375466,
+      "host_profile_envelope_us": 269.9,
+      "post_return_to_correctness_us": 5209.545,
+      "returned_ns": 5293974596165921,
+      "returned_profiler_average_us": 10.012800246477127,
+      "role": "winner",
+      "stage": "confirmation_10_winner",
+      "started_ns": 5293974595896021,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 21,
+      "block": 3,
+      "correctness_checked_ns": 5293974606892921,
+      "host_profile_envelope_us": 243.731,
+      "post_return_to_correctness_us": 5219.534,
+      "returned_ns": 5293974601673387,
+      "returned_profiler_average_us": 9.12960022687912,
+      "role": "default",
+      "stage": "confirmation_10_default",
+      "started_ns": 5293974601429656,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 22,
+      "block": 3,
+      "correctness_checked_ns": 5293974612424826,
+      "host_profile_envelope_us": 261.781,
+      "post_return_to_correctness_us": 5215.514,
+      "returned_ns": 5293974607209312,
+      "returned_profiler_average_us": 9.827200323343277,
+      "role": "winner",
+      "stage": "confirmation_11_winner",
+      "started_ns": 5293974606947531,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 23,
+      "block": 3,
+      "correctness_checked_ns": 5293974617939081,
+      "host_profile_envelope_us": 245.341,
+      "post_return_to_correctness_us": 5215.004,
+      "returned_ns": 5293974612724077,
+      "returned_profiler_average_us": 9.187199920415878,
+      "role": "default",
+      "stage": "confirmation_11_default",
+      "started_ns": 5293974612478736,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 0,
+      "block": 4,
+      "correctness_checked_ns": 5294000580407816,
+      "host_profile_envelope_us": 341.381,
+      "post_return_to_correctness_us": 43435.029,
+      "returned_ns": 5294000536972787,
+      "returned_profiler_average_us": 9.942399710416794,
+      "role": "default",
+      "stage": "confirmation_00_default",
+      "started_ns": 5294000536631406,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 1,
+      "block": 4,
+      "correctness_checked_ns": 5294000586322492,
+      "host_profile_envelope_us": 447.96,
+      "post_return_to_correctness_us": 5280.375,
+      "returned_ns": 5294000581042117,
+      "returned_profiler_average_us": 11.327999830245972,
+      "role": "winner",
+      "stage": "confirmation_00_winner",
+      "started_ns": 5294000580594157,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 2,
+      "block": 4,
+      "correctness_checked_ns": 5294000591873277,
+      "host_profile_envelope_us": 277.26,
+      "post_return_to_correctness_us": 5206.435,
+      "returned_ns": 5294000586666842,
+      "returned_profiler_average_us": 10.37760004401207,
+      "role": "winner",
+      "stage": "confirmation_01_winner",
+      "started_ns": 5294000586389582,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 3,
+      "block": 4,
+      "correctness_checked_ns": 5294000597411262,
+      "host_profile_envelope_us": 268.38,
+      "post_return_to_correctness_us": 5212.685,
+      "returned_ns": 5294000592198577,
+      "returned_profiler_average_us": 9.590400010347366,
+      "role": "default",
+      "stage": "confirmation_01_default",
+      "started_ns": 5294000591930197,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 4,
+      "block": 4,
+      "correctness_checked_ns": 5294000602948577,
+      "host_profile_envelope_us": 274.61,
+      "post_return_to_correctness_us": 5203.715,
+      "returned_ns": 5294000597744862,
+      "returned_profiler_average_us": 10.32639965415001,
+      "role": "winner",
+      "stage": "confirmation_02_winner",
+      "started_ns": 5294000597470252,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 5,
+      "block": 4,
+      "correctness_checked_ns": 5294000608483532,
+      "host_profile_envelope_us": 253.25,
+      "post_return_to_correctness_us": 5219.215,
+      "returned_ns": 5294000603264317,
+      "returned_profiler_average_us": 9.513600170612335,
+      "role": "default",
+      "stage": "confirmation_02_default",
+      "started_ns": 5294000603011067,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 6,
+      "block": 4,
+      "correctness_checked_ns": 5294000614006787,
+      "host_profile_envelope_us": 251.1,
+      "post_return_to_correctness_us": 5217.595,
+      "returned_ns": 5294000608789192,
+      "returned_profiler_average_us": 9.52640026807785,
+      "role": "default",
+      "stage": "confirmation_03_default",
+      "started_ns": 5294000608538092,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 7,
+      "block": 4,
+      "correctness_checked_ns": 5294000619532012,
+      "host_profile_envelope_us": 265.461,
+      "post_return_to_correctness_us": 5202.964,
+      "returned_ns": 5294000614329048,
+      "returned_profiler_average_us": 10.313600301742554,
+      "role": "winner",
+      "stage": "confirmation_03_winner",
+      "started_ns": 5294000614063587,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 8,
+      "block": 4,
+      "correctness_checked_ns": 5294000625052027,
+      "host_profile_envelope_us": 260.221,
+      "post_return_to_correctness_us": 5202.114,
+      "returned_ns": 5294000619849913,
+      "returned_profiler_average_us": 10.204800218343735,
+      "role": "winner",
+      "stage": "confirmation_04_winner",
+      "started_ns": 5294000619589692,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 9,
+      "block": 4,
+      "correctness_checked_ns": 5294000630577462,
+      "host_profile_envelope_us": 255.601,
+      "post_return_to_correctness_us": 5213.214,
+      "returned_ns": 5294000625364248,
+      "returned_profiler_average_us": 9.523200243711472,
+      "role": "default",
+      "stage": "confirmation_04_default",
+      "started_ns": 5294000625108647,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 10,
+      "block": 4,
+      "correctness_checked_ns": 5294000636176228,
+      "host_profile_envelope_us": 337.571,
+      "post_return_to_correctness_us": 5205.235,
+      "returned_ns": 5294000630970993,
+      "returned_profiler_average_us": 10.755199939012527,
+      "role": "winner",
+      "stage": "confirmation_05_winner",
+      "started_ns": 5294000630633422,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 11,
+      "block": 4,
+      "correctness_checked_ns": 5294000641708213,
+      "host_profile_envelope_us": 255.66,
+      "post_return_to_correctness_us": 5214.075,
+      "returned_ns": 5294000636494138,
+      "returned_profiler_average_us": 9.593600034713745,
+      "role": "default",
+      "stage": "confirmation_05_default",
+      "started_ns": 5294000636238478,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 12,
+      "block": 4,
+      "correctness_checked_ns": 5294000647229558,
+      "host_profile_envelope_us": 259.37,
+      "post_return_to_correctness_us": 5203.525,
+      "returned_ns": 5294000642026033,
+      "returned_profiler_average_us": 9.44639965891838,
+      "role": "default",
+      "stage": "confirmation_06_default",
+      "started_ns": 5294000641766663,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 13,
+      "block": 4,
+      "correctness_checked_ns": 5294000652765363,
+      "host_profile_envelope_us": 266.65,
+      "post_return_to_correctness_us": 5213.015,
+      "returned_ns": 5294000647552348,
+      "returned_profiler_average_us": 10.335999727249146,
+      "role": "winner",
+      "stage": "confirmation_06_winner",
+      "started_ns": 5294000647285698,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 14,
+      "block": 4,
+      "correctness_checked_ns": 5294000658288558,
+      "host_profile_envelope_us": 263.69,
+      "post_return_to_correctness_us": 5203.505,
+      "returned_ns": 5294000653085053,
+      "returned_profiler_average_us": 10.53759977221489,
+      "role": "default",
+      "stage": "confirmation_07_default",
+      "started_ns": 5294000652821363,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 15,
+      "block": 4,
+      "correctness_checked_ns": 5294000663810013,
+      "host_profile_envelope_us": 261.07,
+      "post_return_to_correctness_us": 5204.625,
+      "returned_ns": 5294000658605388,
+      "returned_profiler_average_us": 10.320000350475311,
+      "role": "winner",
+      "stage": "confirmation_07_winner",
+      "started_ns": 5294000658344318,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 16,
+      "block": 4,
+      "correctness_checked_ns": 5294000669335198,
+      "host_profile_envelope_us": 258.37,
+      "post_return_to_correctness_us": 5212.145,
+      "returned_ns": 5294000664123053,
+      "returned_profiler_average_us": 10.543999820947647,
+      "role": "default",
+      "stage": "confirmation_08_default",
+      "started_ns": 5294000663864683,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 17,
+      "block": 4,
+      "correctness_checked_ns": 5294000674862083,
+      "host_profile_envelope_us": 264.37,
+      "post_return_to_correctness_us": 5205.235,
+      "returned_ns": 5294000669656848,
+      "returned_profiler_average_us": 10.249599814414978,
+      "role": "winner",
+      "stage": "confirmation_08_winner",
+      "started_ns": 5294000669392478,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 18,
+      "block": 4,
+      "correctness_checked_ns": 5294000680395428,
+      "host_profile_envelope_us": 263.82,
+      "post_return_to_correctness_us": 5213.025,
+      "returned_ns": 5294000675182403,
+      "returned_profiler_average_us": 10.281600058078766,
+      "role": "winner",
+      "stage": "confirmation_09_winner",
+      "started_ns": 5294000674918583,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 19,
+      "block": 4,
+      "correctness_checked_ns": 5294000685907043,
+      "host_profile_envelope_us": 244.41,
+      "post_return_to_correctness_us": 5211.775,
+      "returned_ns": 5294000680695268,
+      "returned_profiler_average_us": 9.468799829483032,
+      "role": "default",
+      "stage": "confirmation_09_default",
+      "started_ns": 5294000680450858,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 20,
+      "block": 4,
+      "correctness_checked_ns": 5294000691439208,
+      "host_profile_envelope_us": 269.18,
+      "post_return_to_correctness_us": 5208.275,
+      "returned_ns": 5294000686230933,
+      "returned_profiler_average_us": 10.134399682283401,
+      "role": "winner",
+      "stage": "confirmation_10_winner",
+      "started_ns": 5294000685961753,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 21,
+      "block": 4,
+      "correctness_checked_ns": 5294000696967323,
+      "host_profile_envelope_us": 252.68,
+      "post_return_to_correctness_us": 5218.695,
+      "returned_ns": 5294000691748628,
+      "returned_profiler_average_us": 9.491200000047684,
+      "role": "default",
+      "stage": "confirmation_10_default",
+      "started_ns": 5294000691495948,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 22,
+      "block": 4,
+      "correctness_checked_ns": 5294000702496798,
+      "host_profile_envelope_us": 248.941,
+      "post_return_to_correctness_us": 5222.494,
+      "returned_ns": 5294000697274304,
+      "returned_profiler_average_us": 9.372799843549728,
+      "role": "default",
+      "stage": "confirmation_11_default",
+      "started_ns": 5294000697025363,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 23,
+      "block": 4,
+      "correctness_checked_ns": 5294000708022593,
+      "host_profile_envelope_us": 260.851,
+      "post_return_to_correctness_us": 5211.204,
+      "returned_ns": 5294000702811389,
+      "returned_profiler_average_us": 10.118400305509567,
+      "role": "winner",
+      "stage": "confirmation_11_winner",
+      "started_ns": 5294000702550538,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 0,
+      "block": 5,
+      "correctness_checked_ns": 5294026667131731,
+      "host_profile_envelope_us": 350.1,
+      "post_return_to_correctness_us": 42989.979,
+      "returned_ns": 5294026624141752,
+      "returned_profiler_average_us": 10.809600353240967,
+      "role": "default",
+      "stage": "confirmation_00_default",
+      "started_ns": 5294026623791652,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 1,
+      "block": 5,
+      "correctness_checked_ns": 5294026673027797,
+      "host_profile_envelope_us": 428.781,
+      "post_return_to_correctness_us": 5286.435,
+      "returned_ns": 5294026667741362,
+      "returned_profiler_average_us": 10.400000214576721,
+      "role": "winner",
+      "stage": "confirmation_00_winner",
+      "started_ns": 5294026667312581,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 2,
+      "block": 5,
+      "correctness_checked_ns": 5294026678596992,
+      "host_profile_envelope_us": 283.72,
+      "post_return_to_correctness_us": 5216.455,
+      "returned_ns": 5294026673380537,
+      "returned_profiler_average_us": 10.252799838781357,
+      "role": "winner",
+      "stage": "confirmation_01_winner",
+      "started_ns": 5294026673096817,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 3,
+      "block": 5,
+      "correctness_checked_ns": 5294026684138167,
+      "host_profile_envelope_us": 263.54,
+      "post_return_to_correctness_us": 5217.595,
+      "returned_ns": 5294026678920572,
+      "returned_profiler_average_us": 9.359999746084213,
+      "role": "default",
+      "stage": "confirmation_01_default",
+      "started_ns": 5294026678657032,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 4,
+      "block": 5,
+      "correctness_checked_ns": 5294026689663332,
+      "host_profile_envelope_us": 250.11,
+      "post_return_to_correctness_us": 5219.675,
+      "returned_ns": 5294026684443657,
+      "returned_profiler_average_us": 9.340800344944,
+      "role": "default",
+      "stage": "confirmation_02_default",
+      "started_ns": 5294026684193547,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 5,
+      "block": 5,
+      "correctness_checked_ns": 5294026695199287,
+      "host_profile_envelope_us": 259.63,
+      "post_return_to_correctness_us": 5218.165,
+      "returned_ns": 5294026689981122,
+      "returned_profiler_average_us": 9.964799880981445,
+      "role": "winner",
+      "stage": "confirmation_02_winner",
+      "started_ns": 5294026689721492,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 6,
+      "block": 5,
+      "correctness_checked_ns": 5294026700716302,
+      "host_profile_envelope_us": 258.13,
+      "post_return_to_correctness_us": 5199.245,
+      "returned_ns": 5294026695517057,
+      "returned_profiler_average_us": 9.913600236177444,
+      "role": "winner",
+      "stage": "confirmation_03_winner",
+      "started_ns": 5294026695258927,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 7,
+      "block": 5,
+      "correctness_checked_ns": 5294026706241577,
+      "host_profile_envelope_us": 302.74,
+      "post_return_to_correctness_us": 5168.105,
+      "returned_ns": 5294026701073472,
+      "returned_profiler_average_us": 14.019200205802917,
+      "role": "default",
+      "stage": "confirmation_03_default",
+      "started_ns": 5294026700770732,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 8,
+      "block": 5,
+      "correctness_checked_ns": 5294026711764662,
+      "host_profile_envelope_us": 261.91,
+      "post_return_to_correctness_us": 5203.795,
+      "returned_ns": 5294026706560867,
+      "returned_profiler_average_us": 9.971199929714203,
+      "role": "winner",
+      "stage": "confirmation_04_winner",
+      "started_ns": 5294026706298957,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 9,
+      "block": 5,
+      "correctness_checked_ns": 5294026717287567,
+      "host_profile_envelope_us": 257.73,
+      "post_return_to_correctness_us": 5206.465,
+      "returned_ns": 5294026712081102,
+      "returned_profiler_average_us": 10.047999769449234,
+      "role": "default",
+      "stage": "confirmation_04_default",
+      "started_ns": 5294026711823372,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 10,
+      "block": 5,
+      "correctness_checked_ns": 5294026722884222,
+      "host_profile_envelope_us": 319.65,
+      "post_return_to_correctness_us": 5221.555,
+      "returned_ns": 5294026717662667,
+      "returned_profiler_average_us": 9.436800330877304,
+      "role": "default",
+      "stage": "confirmation_05_default",
+      "started_ns": 5294026717343017,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 11,
+      "block": 5,
+      "correctness_checked_ns": 5294026728434117,
+      "host_profile_envelope_us": 274.131,
+      "post_return_to_correctness_us": 5217.614,
+      "returned_ns": 5294026723216503,
+      "returned_profiler_average_us": 10.227199643850327,
+      "role": "winner",
+      "stage": "confirmation_05_winner",
+      "started_ns": 5294026722942372,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 12,
+      "block": 5,
+      "correctness_checked_ns": 5294026733953652,
+      "host_profile_envelope_us": 248.661,
+      "post_return_to_correctness_us": 5214.434,
+      "returned_ns": 5294026728739218,
+      "returned_profiler_average_us": 9.312000125646591,
+      "role": "default",
+      "stage": "confirmation_06_default",
+      "started_ns": 5294026728490557,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 13,
+      "block": 5,
+      "correctness_checked_ns": 5294026739496837,
+      "host_profile_envelope_us": 259.121,
+      "post_return_to_correctness_us": 5223.334,
+      "returned_ns": 5294026734273503,
+      "returned_profiler_average_us": 9.92320030927658,
+      "role": "winner",
+      "stage": "confirmation_06_winner",
+      "started_ns": 5294026734014382,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 14,
+      "block": 5,
+      "correctness_checked_ns": 5294026745029503,
+      "host_profile_envelope_us": 258.361,
+      "post_return_to_correctness_us": 5213.215,
+      "returned_ns": 5294026739816288,
+      "returned_profiler_average_us": 9.865599870681763,
+      "role": "winner",
+      "stage": "confirmation_07_winner",
+      "started_ns": 5294026739557927,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 15,
+      "block": 5,
+      "correctness_checked_ns": 5294026750557198,
+      "host_profile_envelope_us": 247.48,
+      "post_return_to_correctness_us": 5223.485,
+      "returned_ns": 5294026745333713,
+      "returned_profiler_average_us": 9.222400188446045,
+      "role": "default",
+      "stage": "confirmation_07_default",
+      "started_ns": 5294026745086233,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 16,
+      "block": 5,
+      "correctness_checked_ns": 5294026756098403,
+      "host_profile_envelope_us": 258.37,
+      "post_return_to_correctness_us": 5226.905,
+      "returned_ns": 5294026750871498,
+      "returned_profiler_average_us": 9.894400089979172,
+      "role": "winner",
+      "stage": "confirmation_08_winner",
+      "started_ns": 5294026750613128,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 17,
+      "block": 5,
+      "correctness_checked_ns": 5294026761625088,
+      "host_profile_envelope_us": 247.54,
+      "post_return_to_correctness_us": 5219.395,
+      "returned_ns": 5294026756405693,
+      "returned_profiler_average_us": 9.107200056314468,
+      "role": "default",
+      "stage": "confirmation_08_default",
+      "started_ns": 5294026756158153,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 18,
+      "block": 5,
+      "correctness_checked_ns": 5294026767149523,
+      "host_profile_envelope_us": 259.24,
+      "post_return_to_correctness_us": 5211.935,
+      "returned_ns": 5294026761937588,
+      "returned_profiler_average_us": 10.492800176143646,
+      "role": "default",
+      "stage": "confirmation_09_default",
+      "started_ns": 5294026761678348,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 19,
+      "block": 5,
+      "correctness_checked_ns": 5294026772673248,
+      "host_profile_envelope_us": 258.65,
+      "post_return_to_correctness_us": 5208.745,
+      "returned_ns": 5294026767464503,
+      "returned_profiler_average_us": 9.852799773216248,
+      "role": "winner",
+      "stage": "confirmation_09_winner",
+      "started_ns": 5294026767205853,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 20,
+      "block": 5,
+      "correctness_checked_ns": 5294026778199543,
+      "host_profile_envelope_us": 241.96,
+      "post_return_to_correctness_us": 5228.095,
+      "returned_ns": 5294026772971448,
+      "returned_profiler_average_us": 9.206400066614151,
+      "role": "default",
+      "stage": "confirmation_10_default",
+      "started_ns": 5294026772729488,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 21,
+      "block": 5,
+      "correctness_checked_ns": 5294026783725068,
+      "host_profile_envelope_us": 258.87,
+      "post_return_to_correctness_us": 5210.925,
+      "returned_ns": 5294026778514143,
+      "returned_profiler_average_us": 9.935999661684036,
+      "role": "winner",
+      "stage": "confirmation_10_winner",
+      "started_ns": 5294026778255273,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 22,
+      "block": 5,
+      "correctness_checked_ns": 5294026789253773,
+      "host_profile_envelope_us": 267.52,
+      "post_return_to_correctness_us": 5205.245,
+      "returned_ns": 5294026784048528,
+      "returned_profiler_average_us": 10.630399733781815,
+      "role": "winner",
+      "stage": "confirmation_11_winner",
+      "started_ns": 5294026783781008,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 23,
+      "block": 5,
+      "correctness_checked_ns": 5294026794769238,
+      "host_profile_envelope_us": 247.43,
+      "post_return_to_correctness_us": 5213.985,
+      "returned_ns": 5294026789555253,
+      "returned_profiler_average_us": 9.15839970111847,
+      "role": "default",
+      "stage": "confirmation_11_default",
+      "started_ns": 5294026789307823,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 0,
+      "block": 6,
+      "correctness_checked_ns": 5294052775434581,
+      "host_profile_envelope_us": 386.14,
+      "post_return_to_correctness_us": 43371.03,
+      "returned_ns": 5294052732063551,
+      "returned_profiler_average_us": 11.369600147008896,
+      "role": "winner",
+      "stage": "confirmation_00_winner",
+      "started_ns": 5294052731677411,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 1,
+      "block": 6,
+      "correctness_checked_ns": 5294052781328796,
+      "host_profile_envelope_us": 426.86,
+      "post_return_to_correctness_us": 5280.795,
+      "returned_ns": 5294052776048001,
+      "returned_profiler_average_us": 9.76639986038208,
+      "role": "default",
+      "stage": "confirmation_00_default",
+      "started_ns": 5294052775621141,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 2,
+      "block": 6,
+      "correctness_checked_ns": 5294052786873341,
+      "host_profile_envelope_us": 265.66,
+      "post_return_to_correctness_us": 5217.275,
+      "returned_ns": 5294052781656066,
+      "returned_profiler_average_us": 9.267199784517288,
+      "role": "default",
+      "stage": "confirmation_01_default",
+      "started_ns": 5294052781390406,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 3,
+      "block": 6,
+      "correctness_checked_ns": 5294052792423796,
+      "host_profile_envelope_us": 284.83,
+      "post_return_to_correctness_us": 5204.665,
+      "returned_ns": 5294052787219131,
+      "returned_profiler_average_us": 10.096000134944916,
+      "role": "winner",
+      "stage": "confirmation_01_winner",
+      "started_ns": 5294052786934301,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 4,
+      "block": 6,
+      "correctness_checked_ns": 5294052797960081,
+      "host_profile_envelope_us": 254.791,
+      "post_return_to_correctness_us": 5221.494,
+      "returned_ns": 5294052792738587,
+      "returned_profiler_average_us": 9.286399930715561,
+      "role": "default",
+      "stage": "confirmation_02_default",
+      "started_ns": 5294052792483796,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 5,
+      "block": 6,
+      "correctness_checked_ns": 5294052803494846,
+      "host_profile_envelope_us": 263.341,
+      "post_return_to_correctness_us": 5208.184,
+      "returned_ns": 5294052798286662,
+      "returned_profiler_average_us": 10.108800232410431,
+      "role": "winner",
+      "stage": "confirmation_02_winner",
+      "started_ns": 5294052798023321,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 6,
+      "block": 6,
+      "correctness_checked_ns": 5294052809045541,
+      "host_profile_envelope_us": 260.261,
+      "post_return_to_correctness_us": 5230.974,
+      "returned_ns": 5294052803814567,
+      "returned_profiler_average_us": 10.03199964761734,
+      "role": "winner",
+      "stage": "confirmation_03_winner",
+      "started_ns": 5294052803554306,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 7,
+      "block": 6,
+      "correctness_checked_ns": 5294052814590956,
+      "host_profile_envelope_us": 257.561,
+      "post_return_to_correctness_us": 5226.264,
+      "returned_ns": 5294052809364692,
+      "returned_profiler_average_us": 9.286399930715561,
+      "role": "default",
+      "stage": "confirmation_03_default",
+      "started_ns": 5294052809107131,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 8,
+      "block": 6,
+      "correctness_checked_ns": 5294052820142372,
+      "host_profile_envelope_us": 257.781,
+      "post_return_to_correctness_us": 5232.655,
+      "returned_ns": 5294052814909717,
+      "returned_profiler_average_us": 9.337600320577621,
+      "role": "default",
+      "stage": "confirmation_04_default",
+      "started_ns": 5294052814651936,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 9,
+      "block": 6,
+      "correctness_checked_ns": 5294052825693437,
+      "host_profile_envelope_us": 271.46,
+      "post_return_to_correctness_us": 5211.835,
+      "returned_ns": 5294052820481602,
+      "returned_profiler_average_us": 10.182400047779083,
+      "role": "winner",
+      "stage": "confirmation_04_winner",
+      "started_ns": 5294052820210142,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 10,
+      "block": 6,
+      "correctness_checked_ns": 5294052831301762,
+      "host_profile_envelope_us": 348.12,
+      "post_return_to_correctness_us": 5197.495,
+      "returned_ns": 5294052826104267,
+      "returned_profiler_average_us": 11.09120026230812,
+      "role": "winner",
+      "stage": "confirmation_05_winner",
+      "started_ns": 5294052825756147,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 11,
+      "block": 6,
+      "correctness_checked_ns": 5294052836849197,
+      "host_profile_envelope_us": 260.29,
+      "post_return_to_correctness_us": 5223.535,
+      "returned_ns": 5294052831625662,
+      "returned_profiler_average_us": 9.350399672985077,
+      "role": "default",
+      "stage": "confirmation_05_default",
+      "started_ns": 5294052831365372,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 12,
+      "block": 6,
+      "correctness_checked_ns": 5294052842395982,
+      "host_profile_envelope_us": 258.51,
+      "post_return_to_correctness_us": 5229.395,
+      "returned_ns": 5294052837166587,
+      "returned_profiler_average_us": 9.308800101280212,
+      "role": "default",
+      "stage": "confirmation_06_default",
+      "started_ns": 5294052836908077,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 13,
+      "block": 6,
+      "correctness_checked_ns": 5294052847937987,
+      "host_profile_envelope_us": 269.62,
+      "post_return_to_correctness_us": 5211.905,
+      "returned_ns": 5294052842726082,
+      "returned_profiler_average_us": 9.92640033364296,
+      "role": "winner",
+      "stage": "confirmation_06_winner",
+      "started_ns": 5294052842456462,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 14,
+      "block": 6,
+      "correctness_checked_ns": 5294052853474942,
+      "host_profile_envelope_us": 261.76,
+      "post_return_to_correctness_us": 5217.235,
+      "returned_ns": 5294052848257707,
+      "returned_profiler_average_us": 9.849599748849869,
+      "role": "winner",
+      "stage": "confirmation_07_winner",
+      "started_ns": 5294052847995947,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 15,
+      "block": 6,
+      "correctness_checked_ns": 5294052858994287,
+      "host_profile_envelope_us": 245.01,
+      "post_return_to_correctness_us": 5218.855,
+      "returned_ns": 5294052853775432,
+      "returned_profiler_average_us": 9.20960009098053,
+      "role": "default",
+      "stage": "confirmation_07_default",
+      "started_ns": 5294052853530422,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 16,
+      "block": 6,
+      "correctness_checked_ns": 5294052864527062,
+      "host_profile_envelope_us": 245.12,
+      "post_return_to_correctness_us": 5226.355,
+      "returned_ns": 5294052859300707,
+      "returned_profiler_average_us": 9.081599861383438,
+      "role": "default",
+      "stage": "confirmation_08_default",
+      "started_ns": 5294052859055587,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 17,
+      "block": 6,
+      "correctness_checked_ns": 5294052870051927,
+      "host_profile_envelope_us": 263.36,
+      "post_return_to_correctness_us": 5202.785,
+      "returned_ns": 5294052864849142,
+      "returned_profiler_average_us": 9.955199807882309,
+      "role": "winner",
+      "stage": "confirmation_08_winner",
+      "started_ns": 5294052864585782,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 18,
+      "block": 6,
+      "correctness_checked_ns": 5294052875577952,
+      "host_profile_envelope_us": 255.65,
+      "post_return_to_correctness_us": 5211.165,
+      "returned_ns": 5294052870366787,
+      "returned_profiler_average_us": 9.74079966545105,
+      "role": "winner",
+      "stage": "confirmation_09_winner",
+      "started_ns": 5294052870111137,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 19,
+      "block": 6,
+      "correctness_checked_ns": 5294052881114857,
+      "host_profile_envelope_us": 253.97,
+      "post_return_to_correctness_us": 5226.745,
+      "returned_ns": 5294052875888112,
+      "returned_profiler_average_us": 9.273599833250046,
+      "role": "default",
+      "stage": "confirmation_09_default",
+      "started_ns": 5294052875634142,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 20,
+      "block": 6,
+      "correctness_checked_ns": 5294052886655902,
+      "host_profile_envelope_us": 262.741,
+      "post_return_to_correctness_us": 5217.614,
+      "returned_ns": 5294052881438288,
+      "returned_profiler_average_us": 9.763199836015701,
+      "role": "winner",
+      "stage": "confirmation_10_winner",
+      "started_ns": 5294052881175547,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 21,
+      "block": 6,
+      "correctness_checked_ns": 5294052892188477,
+      "host_profile_envelope_us": 249.211,
+      "post_return_to_correctness_us": 5223.824,
+      "returned_ns": 5294052886964653,
+      "returned_profiler_average_us": 9.238400310277939,
+      "role": "default",
+      "stage": "confirmation_10_default",
+      "started_ns": 5294052886715442,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 22,
+      "block": 6,
+      "correctness_checked_ns": 5294052897710522,
+      "host_profile_envelope_us": 245.091,
+      "post_return_to_correctness_us": 5223.024,
+      "returned_ns": 5294052892487498,
+      "returned_profiler_average_us": 9.059199690818787,
+      "role": "default",
+      "stage": "confirmation_11_default",
+      "started_ns": 5294052892242407,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 23,
+      "block": 6,
+      "correctness_checked_ns": 5294052903247767,
+      "host_profile_envelope_us": 269.651,
+      "post_return_to_correctness_us": 5209.104,
+      "returned_ns": 5294052898038663,
+      "returned_profiler_average_us": 9.84639972448349,
+      "role": "winner",
+      "stage": "confirmation_11_winner",
+      "started_ns": 5294052897769012,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 0,
+      "block": 7,
+      "correctness_checked_ns": 5294078811063379,
+      "host_profile_envelope_us": 377.04,
+      "post_return_to_correctness_us": 43770.28,
+      "returned_ns": 5294078767293099,
+      "returned_profiler_average_us": 10.88320016860962,
+      "role": "winner",
+      "stage": "confirmation_00_winner",
+      "started_ns": 5294078766916059,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 1,
+      "block": 7,
+      "correctness_checked_ns": 5294078816951775,
+      "host_profile_envelope_us": 418.911,
+      "post_return_to_correctness_us": 5287.455,
+      "returned_ns": 5294078811664320,
+      "returned_profiler_average_us": 9.705600142478943,
+      "role": "default",
+      "stage": "confirmation_00_default",
+      "started_ns": 5294078811245409,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 2,
+      "block": 7,
+      "correctness_checked_ns": 5294078822493960,
+      "host_profile_envelope_us": 259.83,
+      "post_return_to_correctness_us": 5218.385,
+      "returned_ns": 5294078817275575,
+      "returned_profiler_average_us": 9.15839970111847,
+      "role": "default",
+      "stage": "confirmation_01_default",
+      "started_ns": 5294078817015745,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 3,
+      "block": 7,
+      "correctness_checked_ns": 5294078828052645,
+      "host_profile_envelope_us": 283.54,
+      "post_return_to_correctness_us": 5216.125,
+      "returned_ns": 5294078822836520,
+      "returned_profiler_average_us": 9.932799637317657,
+      "role": "winner",
+      "stage": "confirmation_01_winner",
+      "started_ns": 5294078822552980,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 4,
+      "block": 7,
+      "correctness_checked_ns": 5294078833598300,
+      "host_profile_envelope_us": 264.57,
+      "post_return_to_correctness_us": 5216.995,
+      "returned_ns": 5294078828381305,
+      "returned_profiler_average_us": 9.971199929714203,
+      "role": "winner",
+      "stage": "confirmation_02_winner",
+      "started_ns": 5294078828116735,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 5,
+      "block": 7,
+      "correctness_checked_ns": 5294078839141895,
+      "host_profile_envelope_us": 248.96,
+      "post_return_to_correctness_us": 5235.405,
+      "returned_ns": 5294078833906490,
+      "returned_profiler_average_us": 9.116800129413605,
+      "role": "default",
+      "stage": "confirmation_02_default",
+      "started_ns": 5294078833657530,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 6,
+      "block": 7,
+      "correctness_checked_ns": 5294078844668560,
+      "host_profile_envelope_us": 249.83,
+      "post_return_to_correctness_us": 5221.745,
+      "returned_ns": 5294078839446815,
+      "returned_profiler_average_us": 9.120000153779984,
+      "role": "default",
+      "stage": "confirmation_03_default",
+      "started_ns": 5294078839196985,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 7,
+      "block": 7,
+      "correctness_checked_ns": 5294078850200905,
+      "host_profile_envelope_us": 260.6,
+      "post_return_to_correctness_us": 5214.165,
+      "returned_ns": 5294078844986740,
+      "returned_profiler_average_us": 9.974399954080582,
+      "role": "winner",
+      "stage": "confirmation_03_winner",
+      "started_ns": 5294078844726140,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 8,
+      "block": 7,
+      "correctness_checked_ns": 5294078855725820,
+      "host_profile_envelope_us": 252.34,
+      "post_return_to_correctness_us": 5212.675,
+      "returned_ns": 5294078850513145,
+      "returned_profiler_average_us": 9.196799993515015,
+      "role": "default",
+      "stage": "confirmation_04_default",
+      "started_ns": 5294078850260805,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 9,
+      "block": 7,
+      "correctness_checked_ns": 5294078861267965,
+      "host_profile_envelope_us": 268.48,
+      "post_return_to_correctness_us": 5209.545,
+      "returned_ns": 5294078856058420,
+      "returned_profiler_average_us": 10.601600259542465,
+      "role": "winner",
+      "stage": "confirmation_04_winner",
+      "started_ns": 5294078855789940,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 10,
+      "block": 7,
+      "correctness_checked_ns": 5294078866858700,
+      "host_profile_envelope_us": 331.081,
+      "post_return_to_correctness_us": 5201.094,
+      "returned_ns": 5294078861657606,
+      "returned_profiler_average_us": 10.18880009651184,
+      "role": "winner",
+      "stage": "confirmation_05_winner",
+      "started_ns": 5294078861326525,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 11,
+      "block": 7,
+      "correctness_checked_ns": 5294078872391015,
+      "host_profile_envelope_us": 269.521,
+      "post_return_to_correctness_us": 5204.984,
+      "returned_ns": 5294078867186031,
+      "returned_profiler_average_us": 9.558399766683578,
+      "role": "default",
+      "stage": "confirmation_05_default",
+      "started_ns": 5294078866916510,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 12,
+      "block": 7,
+      "correctness_checked_ns": 5294078877925880,
+      "host_profile_envelope_us": 262.091,
+      "post_return_to_correctness_us": 5213.804,
+      "returned_ns": 5294078872712076,
+      "returned_profiler_average_us": 10.035199671983719,
+      "role": "winner",
+      "stage": "confirmation_06_winner",
+      "started_ns": 5294078872449985,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 13,
+      "block": 7,
+      "correctness_checked_ns": 5294078883458265,
+      "host_profile_envelope_us": 263.511,
+      "post_return_to_correctness_us": 5211.884,
+      "returned_ns": 5294078878246381,
+      "returned_profiler_average_us": 9.484799951314926,
+      "role": "default",
+      "stage": "confirmation_06_default",
+      "started_ns": 5294078877982870,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 14,
+      "block": 7,
+      "correctness_checked_ns": 5294078888989881,
+      "host_profile_envelope_us": 247.021,
+      "post_return_to_correctness_us": 5229.725,
+      "returned_ns": 5294078883760156,
+      "returned_profiler_average_us": 8.99519994854927,
+      "role": "default",
+      "stage": "confirmation_07_default",
+      "started_ns": 5294078883513135,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 15,
+      "block": 7,
+      "correctness_checked_ns": 5294078894518576,
+      "host_profile_envelope_us": 264.53,
+      "post_return_to_correctness_us": 5199.675,
+      "returned_ns": 5294078889318901,
+      "returned_profiler_average_us": 10.06079986691475,
+      "role": "winner",
+      "stage": "confirmation_07_winner",
+      "started_ns": 5294078889054371,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 16,
+      "block": 7,
+      "correctness_checked_ns": 5294078900048771,
+      "host_profile_envelope_us": 254.37,
+      "post_return_to_correctness_us": 5216.375,
+      "returned_ns": 5294078894832396,
+      "returned_profiler_average_us": 9.855999797582626,
+      "role": "winner",
+      "stage": "confirmation_08_winner",
+      "started_ns": 5294078894578026,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 17,
+      "block": 7,
+      "correctness_checked_ns": 5294078905584836,
+      "host_profile_envelope_us": 254.63,
+      "post_return_to_correctness_us": 5219.935,
+      "returned_ns": 5294078900364901,
+      "returned_profiler_average_us": 9.28959995508194,
+      "role": "default",
+      "stage": "confirmation_08_default",
+      "started_ns": 5294078900110271,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 18,
+      "block": 7,
+      "correctness_checked_ns": 5294078911123811,
+      "host_profile_envelope_us": 262.14,
+      "post_return_to_correctness_us": 5220.635,
+      "returned_ns": 5294078905903176,
+      "returned_profiler_average_us": 9.92640033364296,
+      "role": "winner",
+      "stage": "confirmation_09_winner",
+      "started_ns": 5294078905641036,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 19,
+      "block": 7,
+      "correctness_checked_ns": 5294078916659406,
+      "host_profile_envelope_us": 248.9,
+      "post_return_to_correctness_us": 5227.095,
+      "returned_ns": 5294078911432311,
+      "returned_profiler_average_us": 9.161599725484848,
+      "role": "default",
+      "stage": "confirmation_09_default",
+      "started_ns": 5294078911183411,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 20,
+      "block": 7,
+      "correctness_checked_ns": 5294078922196361,
+      "host_profile_envelope_us": 246.56,
+      "post_return_to_correctness_us": 5234.555,
+      "returned_ns": 5294078916961806,
+      "returned_profiler_average_us": 9.081599861383438,
+      "role": "default",
+      "stage": "confirmation_10_default",
+      "started_ns": 5294078916715246,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 21,
+      "block": 7,
+      "correctness_checked_ns": 5294078927729116,
+      "host_profile_envelope_us": 260.84,
+      "post_return_to_correctness_us": 5213.785,
+      "returned_ns": 5294078922515331,
+      "returned_profiler_average_us": 9.891200065612793,
+      "role": "winner",
+      "stage": "confirmation_10_winner",
+      "started_ns": 5294078922254491,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    },
+    {
+      "attempt_index": 22,
+      "block": 7,
+      "correctness_checked_ns": 5294078933252551,
+      "host_profile_envelope_us": 260.33,
+      "post_return_to_correctness_us": 5206.975,
+      "returned_ns": 5294078928045576,
+      "returned_profiler_average_us": 10.771200060844421,
+      "role": "default",
+      "stage": "confirmation_11_default",
+      "started_ns": 5294078927785246,
+      "tactic": -1
+    },
+    {
+      "attempt_index": 23,
+      "block": 7,
+      "correctness_checked_ns": 5294078938775026,
+      "host_profile_envelope_us": 255.26,
+      "post_return_to_correctness_us": 5211.895,
+      "returned_ns": 5294078933563131,
+      "returned_profiler_average_us": 9.836799651384354,
+      "role": "winner",
+      "stage": "confirmation_11_winner",
+      "started_ns": 5294078933307871,
+      "tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ]
+    }
+  ],
+  "all_eight_process_comparison": [
+    {
+      "block": 0,
+      "capture_order": "default-first",
+      "confirmation_average_us_by_role": {
+        "default": {
+          "maximum": 9.71520021557808,
+          "median": 9.335999935865402,
+          "minimum": 9.126400202512741
+        },
+        "winner": {
+          "maximum": 10.419200360774994,
+          "median": 9.888000041246414,
+          "minimum": 9.676799923181534
+        }
+      },
+      "confirmation_default_first_ratio": 1.0617154990909181,
+      "confirmation_explicit_faster_pairs": 0,
+      "confirmation_explicit_first_ratio": 1.0647297957316109,
+      "confirmation_finalist_over_default": 1.0617154990909181,
+      "finalist_profile_index": 75,
+      "finalist_tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "first_pass_default_us": 9.414400160312653,
+      "first_pass_finalist_over_default": 1.0458871045222802,
+      "first_pass_finalist_us": 9.84639972448349,
+      "native_elf_sha256": {
+        "gemm": "72690cacca4ce1d69ccaa6b9190475483d984bd58de0962d06c874c801c678d6",
+        "trtllm_utils": "e442a689064fe3af4ab46510b2d5aaf3597b072949b84f13d14e9e53352109e4"
+      },
+      "original_choice": "default",
+      "retained_layer_graph_finalist_over_default": 1.0690371205390257
+    },
+    {
+      "block": 1,
+      "capture_order": "winner-first",
+      "confirmation_average_us_by_role": {
+        "default": {
+          "maximum": 9.939199686050415,
+          "median": 9.36959981918335,
+          "minimum": 9.142400324344635
+        },
+        "winner": {
+          "maximum": 10.502400249242783,
+          "median": 9.884800016880035,
+          "minimum": 9.759999811649323
+        }
+      },
+      "confirmation_default_first_ratio": 1.054847066532406,
+      "confirmation_explicit_faster_pairs": 1,
+      "confirmation_explicit_first_ratio": 1.062372829275245,
+      "confirmation_finalist_over_default": 1.0563255702747685,
+      "finalist_profile_index": 75,
+      "finalist_tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "first_pass_default_us": 9.481599926948547,
+      "first_pass_finalist_over_default": 1.0219372358358345,
+      "first_pass_finalist_us": 9.689600020647049,
+      "native_elf_sha256": {
+        "gemm": "72690cacca4ce1d69ccaa6b9190475483d984bd58de0962d06c874c801c678d6",
+        "trtllm_utils": "e442a689064fe3af4ab46510b2d5aaf3597b072949b84f13d14e9e53352109e4"
+      },
+      "original_choice": "default",
+      "retained_layer_graph_finalist_over_default": 1.0755208183976799
+    },
+    {
+      "block": 2,
+      "capture_order": "winner-first",
+      "confirmation_average_us_by_role": {
+        "default": {
+          "maximum": 9.583999961614609,
+          "median": 9.10080000758171,
+          "minimum": 8.975999802350998
+        },
+        "winner": {
+          "maximum": 11.529599875211716,
+          "median": 9.856000170111656,
+          "minimum": 9.638399630784988
+        }
+      },
+      "confirmation_default_first_ratio": 1.083585617438491,
+      "confirmation_explicit_faster_pairs": 0,
+      "confirmation_explicit_first_ratio": 1.0664611435201774,
+      "confirmation_finalist_over_default": 1.0804576860057291,
+      "finalist_profile_index": 74,
+      "finalist_tactic": [
+        446676598850,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "first_pass_default_us": 9.247999638319016,
+      "first_pass_finalist_over_default": 1.0280277350451623,
+      "first_pass_finalist_us": 9.507200121879578,
+      "native_elf_sha256": {
+        "gemm": "72690cacca4ce1d69ccaa6b9190475483d984bd58de0962d06c874c801c678d6",
+        "trtllm_utils": "e442a689064fe3af4ab46510b2d5aaf3597b072949b84f13d14e9e53352109e4"
+      },
+      "original_choice": "default",
+      "retained_layer_graph_finalist_over_default": 1.0689002321374188
+    },
+    {
+      "block": 3,
+      "capture_order": "default-first",
+      "confirmation_average_us_by_role": {
+        "default": {
+          "maximum": 9.964799880981445,
+          "median": 9.198400005698204,
+          "minimum": 9.052799642086029
+        },
+        "winner": {
+          "maximum": 10.71999967098236,
+          "median": 9.987200051546097,
+          "minimum": 9.811200201511383
+        }
+      },
+      "confirmation_default_first_ratio": 1.076287985241592,
+      "confirmation_explicit_faster_pairs": 0,
+      "confirmation_explicit_first_ratio": 1.08864031873725,
+      "confirmation_finalist_over_default": 1.0777220883605383,
+      "finalist_profile_index": 75,
+      "finalist_tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "first_pass_default_us": 9.564799815416336,
+      "first_pass_finalist_over_default": 1.0066912521498277,
+      "first_pass_finalist_us": 9.628800302743912,
+      "native_elf_sha256": {
+        "gemm": "72690cacca4ce1d69ccaa6b9190475483d984bd58de0962d06c874c801c678d6",
+        "trtllm_utils": "e442a689064fe3af4ab46510b2d5aaf3597b072949b84f13d14e9e53352109e4"
+      },
+      "original_choice": "default",
+      "retained_layer_graph_finalist_over_default": 1.068155625138012
+    },
+    {
+      "block": 4,
+      "capture_order": "default-first",
+      "confirmation_average_us_by_role": {
+        "default": {
+          "maximum": 10.543999820947647,
+          "median": 9.524800255894661,
+          "minimum": 9.372799843549728
+        },
+        "winner": {
+          "maximum": 11.327999830245972,
+          "median": 10.316800326108932,
+          "minimum": 10.118400305509567
+        }
+      },
+      "confirmation_default_first_ratio": 1.0810903550687383,
+      "confirmation_explicit_faster_pairs": 2,
+      "confirmation_explicit_first_ratio": 1.0837575112567293,
+      "confirmation_finalist_over_default": 1.0823577700785054,
+      "finalist_profile_index": 75,
+      "finalist_tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "first_pass_default_us": 9.616000205278397,
+      "first_pass_finalist_over_default": 1.0146422191138535,
+      "first_pass_finalist_us": 9.756799787282944,
+      "native_elf_sha256": {
+        "gemm": "72690cacca4ce1d69ccaa6b9190475483d984bd58de0962d06c874c801c678d6",
+        "trtllm_utils": "e442a689064fe3af4ab46510b2d5aaf3597b072949b84f13d14e9e53352109e4"
+      },
+      "original_choice": "default",
+      "retained_layer_graph_finalist_over_default": 1.0782314040634868
+    },
+    {
+      "block": 5,
+      "capture_order": "winner-first",
+      "confirmation_average_us_by_role": {
+        "default": {
+          "maximum": 14.019200205802917,
+          "median": 9.350400045514107,
+          "minimum": 9.107200056314468
+        },
+        "winner": {
+          "maximum": 10.630399733781815,
+          "median": 9.95039977133274,
+          "minimum": 9.852799773216248
+        }
+      },
+      "confirmation_default_first_ratio": 1.0662195428057788,
+      "confirmation_explicit_faster_pairs": 4,
+      "confirmation_explicit_first_ratio": 1.0780578399057985,
+      "confirmation_finalist_over_default": 1.0682724117827245,
+      "finalist_profile_index": 75,
+      "finalist_tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "first_pass_default_us": 10.198400169610977,
+      "first_pass_finalist_over_default": 0.9378725737706749,
+      "first_pass_finalist_us": 9.564799815416336,
+      "native_elf_sha256": {
+        "gemm": "72690cacca4ce1d69ccaa6b9190475483d984bd58de0962d06c874c801c678d6",
+        "trtllm_utils": "e442a689064fe3af4ab46510b2d5aaf3597b072949b84f13d14e9e53352109e4"
+      },
+      "original_choice": "explicit",
+      "retained_layer_graph_finalist_over_default": 1.0690340967933976
+    },
+    {
+      "block": 6,
+      "capture_order": "winner-first",
+      "confirmation_average_us_by_role": {
+        "default": {
+          "maximum": 9.76639986038208,
+          "median": 9.279999881982803,
+          "minimum": 9.059199690818787
+        },
+        "winner": {
+          "maximum": 11.369600147008896,
+          "median": 9.993599727749825,
+          "minimum": 9.74079966545105
+        }
+      },
+      "confirmation_default_first_ratio": 1.0889966066791807,
+      "confirmation_explicit_faster_pairs": 0,
+      "confirmation_explicit_first_ratio": 1.0748774894317352,
+      "confirmation_finalist_over_default": 1.0877270535738768,
+      "finalist_profile_index": 75,
+      "finalist_tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "first_pass_default_us": 9.36959981918335,
+      "first_pass_finalist_over_default": 1.0153688902629716,
+      "first_pass_finalist_us": 9.513600170612335,
+      "native_elf_sha256": {
+        "gemm": "72690cacca4ce1d69ccaa6b9190475483d984bd58de0962d06c874c801c678d6",
+        "trtllm_utils": "e442a689064fe3af4ab46510b2d5aaf3597b072949b84f13d14e9e53352109e4"
+      },
+      "original_choice": "default",
+      "retained_layer_graph_finalist_over_default": 1.0681954504954327
+    },
+    {
+      "block": 7,
+      "capture_order": "default-first",
+      "confirmation_average_us_by_role": {
+        "default": {
+          "maximum": 10.771200060844421,
+          "median": 9.179199859499931,
+          "minimum": 8.99519994854927
+        },
+        "winner": {
+          "maximum": 10.88320016860962,
+          "median": 9.972799941897392,
+          "minimum": 9.836799651384354
+        }
+      },
+      "confirmation_default_first_ratio": 1.0914133914554445,
+      "confirmation_explicit_faster_pairs": 1,
+      "confirmation_explicit_first_ratio": 1.0746799887961387,
+      "confirmation_finalist_over_default": 1.0868493562281518,
+      "finalist_profile_index": 75,
+      "finalist_tactic": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "first_pass_default_us": 9.414400160312653,
+      "first_pass_finalist_over_default": 1.0458871045222802,
+      "first_pass_finalist_us": 9.84639972448349,
+      "native_elf_sha256": {
+        "gemm": "72690cacca4ce1d69ccaa6b9190475483d984bd58de0962d06c874c801c678d6",
+        "trtllm_utils": "e442a689064fe3af4ab46510b2d5aaf3597b072949b84f13d14e9e53352109e4"
+      },
+      "original_choice": "default",
+      "retained_layer_graph_finalist_over_default": 1.0780649751723441
+    }
+  ],
+  "block5": {
+    "chronology_ns": {
+      "confirmation_ended": 5294026794772958,
+      "confirmation_started": 5294026621671350,
+      "decision_finalized": 5294026806288758,
+      "reference_preparation_ended": 5294026618056786,
+      "reference_preparation_started": 5294026614736253,
+      "retained_after_last_profile": 5294026517995305,
+      "startup_ended": 5294026611370770,
+      "startup_started": 5294026067460113
+    },
+    "confirmation_pairs": [
+      {
+        "default_us": 10.809600353240967,
+        "explicit_over_default": 0.9621077444790603,
+        "explicit_us": 10.400000214576721,
+        "index": 0,
+        "order": [
+          "default",
+          "winner"
+        ]
+      },
+      {
+        "default_us": 9.359999746084213,
+        "explicit_over_default": 1.0953846278757273,
+        "explicit_us": 10.252799838781357,
+        "index": 1,
+        "order": [
+          "winner",
+          "default"
+        ]
+      },
+      {
+        "default_us": 9.340800344944,
+        "explicit_over_default": 1.0668036477597131,
+        "explicit_us": 9.964799880981445,
+        "index": 2,
+        "order": [
+          "default",
+          "winner"
+        ]
+      },
+      {
+        "default_us": 14.019200205802917,
+        "explicit_over_default": 0.7071444940256965,
+        "explicit_us": 9.913600236177444,
+        "index": 3,
+        "order": [
+          "winner",
+          "default"
+        ]
+      },
+      {
+        "default_us": 10.047999769449234,
+        "explicit_over_default": 0.9923567036726515,
+        "explicit_us": 9.971199929714203,
+        "index": 4,
+        "order": [
+          "winner",
+          "default"
+        ]
+      },
+      {
+        "default_us": 9.436800330877304,
+        "explicit_over_default": 1.0837571300927953,
+        "explicit_us": 10.227199643850327,
+        "index": 5,
+        "order": [
+          "default",
+          "winner"
+        ]
+      },
+      {
+        "default_us": 9.312000125646591,
+        "explicit_over_default": 1.0656357576657087,
+        "explicit_us": 9.92320030927658,
+        "index": 6,
+        "order": [
+          "default",
+          "winner"
+        ]
+      },
+      {
+        "default_us": 9.222400188446045,
+        "explicit_over_default": 1.0697431979845686,
+        "explicit_us": 9.865599870681763,
+        "index": 7,
+        "order": [
+          "winner",
+          "default"
+        ]
+      },
+      {
+        "default_us": 9.107200056314468,
+        "explicit_over_default": 1.086437107870371,
+        "explicit_us": 9.894400089979172,
+        "index": 8,
+        "order": [
+          "winner",
+          "default"
+        ]
+      },
+      {
+        "default_us": 10.492800176143646,
+        "explicit_over_default": 0.9390057570730738,
+        "explicit_us": 9.852799773216248,
+        "index": 9,
+        "order": [
+          "default",
+          "winner"
+        ]
+      },
+      {
+        "default_us": 9.206400066614151,
+        "explicit_over_default": 1.0792491733783856,
+        "explicit_us": 9.935999661684036,
+        "index": 10,
+        "order": [
+          "default",
+          "winner"
+        ]
+      },
+      {
+        "default_us": 9.15839970111847,
+        "explicit_over_default": 1.1607267733121078,
+        "explicit_us": 10.630399733781815,
+        "index": 11,
+        "order": [
+          "winner",
+          "default"
+        ]
+      }
+    ],
+    "confirmation_ratio": 1.0682724117827245,
+    "default_first_ratio": 1.0662195428057788,
+    "explicit_first_ratio": 1.0780578399057985,
+    "original_full_sequence": [
+      {
+        "elapsed_us": 10.98880022764206,
+        "error": null,
+        "index": 0,
+        "m": 1,
+        "position_in_bucket": 0,
+        "tactic": -1
+      },
+      {
+        "elapsed_us": 10.13759970664978,
+        "error": null,
+        "index": 1,
+        "m": 1,
+        "position_in_bucket": 1,
+        "tactic": [
+          42949673026,
+          4294967332,
+          0,
+          1125899906842625,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 10.470400005578995,
+        "error": null,
+        "index": 2,
+        "m": 1,
+        "position_in_bucket": 2,
+        "tactic": [
+          253403070530,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 13.558399677276611,
+        "error": null,
+        "index": 3,
+        "m": 1,
+        "position_in_bucket": 3,
+        "tactic": [
+          30064771138,
+          4294967332,
+          0,
+          844424930131968,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 10.425599664449692,
+        "error": null,
+        "index": 4,
+        "m": 1,
+        "position_in_bucket": 4,
+        "tactic": [
+          343597383746,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 10.307200253009796,
+        "error": null,
+        "index": 5,
+        "m": 1,
+        "position_in_bucket": 5,
+        "tactic": [
+          446676598850,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 10.43199971318245,
+        "error": null,
+        "index": 6,
+        "m": 1,
+        "position_in_bucket": 6,
+        "tactic": [
+          1924145348674,
+          4294967332,
+          0,
+          1125899906842625,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 10.361599922180176,
+        "error": null,
+        "index": 7,
+        "m": 1,
+        "position_in_bucket": 7,
+        "tactic": [
+          532575944770,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 10.275200009346008,
+        "error": null,
+        "index": 8,
+        "m": 1,
+        "position_in_bucket": 8,
+        "tactic": [
+          614180323394,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.513600170612335,
+        "error": null,
+        "index": 9,
+        "m": 2,
+        "position_in_bucket": 0,
+        "tactic": -1
+      },
+      {
+        "elapsed_us": 10.076799988746643,
+        "error": null,
+        "index": 10,
+        "m": 2,
+        "position_in_bucket": 1,
+        "tactic": [
+          42949673026,
+          4294967332,
+          0,
+          1125899906842625,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.731200337409973,
+        "error": null,
+        "index": 11,
+        "m": 2,
+        "position_in_bucket": 2,
+        "tactic": [
+          253403070530,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 13.795199990272522,
+        "error": null,
+        "index": 12,
+        "m": 2,
+        "position_in_bucket": 3,
+        "tactic": [
+          30064771138,
+          4294967332,
+          0,
+          844424930131968,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.753599762916565,
+        "error": null,
+        "index": 13,
+        "m": 2,
+        "position_in_bucket": 4,
+        "tactic": [
+          343597383746,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.60640013217926,
+        "error": null,
+        "index": 14,
+        "m": 2,
+        "position_in_bucket": 5,
+        "tactic": [
+          446676598850,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.583999961614609,
+        "error": null,
+        "index": 15,
+        "m": 2,
+        "position_in_bucket": 6,
+        "tactic": [
+          1924145348674,
+          4294967332,
+          0,
+          1125899906842625,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.58079993724823,
+        "error": null,
+        "index": 16,
+        "m": 2,
+        "position_in_bucket": 7,
+        "tactic": [
+          532575944770,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.625600278377533,
+        "error": null,
+        "index": 17,
+        "m": 2,
+        "position_in_bucket": 8,
+        "tactic": [
+          614180323394,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.270399808883667,
+        "error": null,
+        "index": 18,
+        "m": 4,
+        "position_in_bucket": 0,
+        "tactic": -1
+      },
+      {
+        "elapsed_us": 9.843199700117111,
+        "error": null,
+        "index": 19,
+        "m": 4,
+        "position_in_bucket": 1,
+        "tactic": [
+          42949673026,
+          4294967332,
+          0,
+          1125899906842625,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.878399968147278,
+        "error": null,
+        "index": 20,
+        "m": 4,
+        "position_in_bucket": 2,
+        "tactic": [
+          253403070530,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 13.407999277114868,
+        "error": null,
+        "index": 21,
+        "m": 4,
+        "position_in_bucket": 3,
+        "tactic": [
+          30064771138,
+          4294967332,
+          0,
+          844424930131968,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.824000298976898,
+        "error": null,
+        "index": 22,
+        "m": 4,
+        "position_in_bucket": 4,
+        "tactic": [
+          343597383746,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.644799679517746,
+        "error": null,
+        "index": 23,
+        "m": 4,
+        "position_in_bucket": 5,
+        "tactic": [
+          446676598850,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.667199850082397,
+        "error": null,
+        "index": 24,
+        "m": 4,
+        "position_in_bucket": 6,
+        "tactic": [
+          1924145348674,
+          4294967332,
+          0,
+          1125899906842625,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.507200121879578,
+        "error": null,
+        "index": 25,
+        "m": 4,
+        "position_in_bucket": 7,
+        "tactic": [
+          532575944770,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 10.224000364542007,
+        "error": null,
+        "index": 26,
+        "m": 4,
+        "position_in_bucket": 8,
+        "tactic": [
+          614180323394,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.273599833250046,
+        "error": null,
+        "index": 27,
+        "m": 8,
+        "position_in_bucket": 0,
+        "tactic": -1
+      },
+      {
+        "elapsed_us": 10.7744000852108,
+        "error": null,
+        "index": 28,
+        "m": 8,
+        "position_in_bucket": 1,
+        "tactic": [
+          42949673026,
+          4294967332,
+          0,
+          1125899906842625,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.577599912881851,
+        "error": null,
+        "index": 29,
+        "m": 8,
+        "position_in_bucket": 2,
+        "tactic": [
+          253403070530,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 12.483199685811996,
+        "error": null,
+        "index": 30,
+        "m": 8,
+        "position_in_bucket": 3,
+        "tactic": [
+          30064771138,
+          4294967332,
+          0,
+          844424930131968,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.747199714183807,
+        "error": null,
+        "index": 31,
+        "m": 8,
+        "position_in_bucket": 4,
+        "tactic": [
+          343597383746,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 10.550399869680405,
+        "error": null,
+        "index": 32,
+        "m": 8,
+        "position_in_bucket": 5,
+        "tactic": [
+          446676598850,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.638399630784988,
+        "error": null,
+        "index": 33,
+        "m": 8,
+        "position_in_bucket": 6,
+        "tactic": [
+          532575944770,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.750399738550186,
+        "error": null,
+        "index": 34,
+        "m": 8,
+        "position_in_bucket": 7,
+        "tactic": [
+          1924145348674,
+          4294967332,
+          0,
+          1125899906842625,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 10.099200159311295,
+        "error": null,
+        "index": 35,
+        "m": 8,
+        "position_in_bucket": 8,
+        "tactic": [
+          614180323394,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.830400347709656,
+        "error": null,
+        "index": 36,
+        "m": 16,
+        "position_in_bucket": 0,
+        "tactic": -1
+      },
+      {
+        "elapsed_us": 10.153599828481674,
+        "error": null,
+        "index": 37,
+        "m": 16,
+        "position_in_bucket": 1,
+        "tactic": [
+          42949673026,
+          4294967332,
+          0,
+          1970324836974595,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.833600372076035,
+        "error": null,
+        "index": 38,
+        "m": 16,
+        "position_in_bucket": 2,
+        "tactic": [
+          253403070530,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 11.833599954843521,
+        "error": null,
+        "index": 39,
+        "m": 16,
+        "position_in_bucket": 3,
+        "tactic": [
+          30064771138,
+          4294967332,
+          0,
+          844424930131968,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.814400225877762,
+        "error": null,
+        "index": 40,
+        "m": 16,
+        "position_in_bucket": 4,
+        "tactic": [
+          343597383746,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 10.819199681282043,
+        "error": null,
+        "index": 41,
+        "m": 16,
+        "position_in_bucket": 5,
+        "tactic": [
+          1924145348674,
+          4294967332,
+          0,
+          1970324836974595,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.92640033364296,
+        "error": null,
+        "index": 42,
+        "m": 16,
+        "position_in_bucket": 6,
+        "tactic": [
+          446676598850,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.750399738550186,
+        "error": null,
+        "index": 43,
+        "m": 16,
+        "position_in_bucket": 7,
+        "tactic": [
+          532575944770,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 10.26879996061325,
+        "error": null,
+        "index": 44,
+        "m": 16,
+        "position_in_bucket": 8,
+        "tactic": [
+          614180323394,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 10.499200224876404,
+        "error": null,
+        "index": 45,
+        "m": 32,
+        "position_in_bucket": 0,
+        "tactic": -1
+      },
+      {
+        "elapsed_us": 10.076799988746643,
+        "error": null,
+        "index": 46,
+        "m": 32,
+        "position_in_bucket": 1,
+        "tactic": [
+          42949673026,
+          4294967332,
+          0,
+          2533274790395907,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 10.438399761915207,
+        "error": null,
+        "index": 47,
+        "m": 32,
+        "position_in_bucket": 2,
+        "tactic": [
+          1340029796418,
+          4294967332,
+          0,
+          1970324836974595,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.98080000281334,
+        "error": null,
+        "index": 48,
+        "m": 32,
+        "position_in_bucket": 3,
+        "tactic": [
+          253403070530,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 10.153599828481674,
+        "error": null,
+        "index": 49,
+        "m": 32,
+        "position_in_bucket": 4,
+        "tactic": [
+          30064771138,
+          4294967332,
+          0,
+          844424930131968,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.852799773216248,
+        "error": null,
+        "index": 50,
+        "m": 32,
+        "position_in_bucket": 5,
+        "tactic": [
+          343597383746,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 11.161600053310394,
+        "error": null,
+        "index": 51,
+        "m": 32,
+        "position_in_bucket": 6,
+        "tactic": [
+          1924145348674,
+          4294967332,
+          0,
+          2533274790395907,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.907200187444687,
+        "error": null,
+        "index": 52,
+        "m": 32,
+        "position_in_bucket": 7,
+        "tactic": [
+          446676598850,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.785600006580353,
+        "error": null,
+        "index": 53,
+        "m": 32,
+        "position_in_bucket": 8,
+        "tactic": [
+          532575944770,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.382399916648865,
+        "error": null,
+        "index": 54,
+        "m": 64,
+        "position_in_bucket": 0,
+        "tactic": -1
+      },
+      {
+        "elapsed_us": 10.038399696350098,
+        "error": null,
+        "index": 55,
+        "m": 64,
+        "position_in_bucket": 1,
+        "tactic": [
+          253403070530,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 10.384000092744827,
+        "error": null,
+        "index": 56,
+        "m": 64,
+        "position_in_bucket": 2,
+        "tactic": [
+          55834574914,
+          4294967332,
+          0,
+          1970324836974595,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.878399968147278,
+        "error": null,
+        "index": 57,
+        "m": 64,
+        "position_in_bucket": 3,
+        "tactic": [
+          30064771138,
+          4294967332,
+          0,
+          844424930131968,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 10.556799918413162,
+        "error": null,
+        "index": 58,
+        "m": 64,
+        "position_in_bucket": 4,
+        "tactic": [
+          42949673026,
+          4294967332,
+          0,
+          1407374883553283,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 10.169599950313568,
+        "error": null,
+        "index": 59,
+        "m": 64,
+        "position_in_bucket": 5,
+        "tactic": [
+          343597383746,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.948799759149551,
+        "error": null,
+        "index": 60,
+        "m": 64,
+        "position_in_bucket": 6,
+        "tactic": [
+          446676598850,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 11.052799969911575,
+        "error": null,
+        "index": 61,
+        "m": 64,
+        "position_in_bucket": 7,
+        "tactic": [
+          1924145348674,
+          4294967332,
+          0,
+          2533274790395907,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.616000205278397,
+        "error": null,
+        "index": 62,
+        "m": 64,
+        "position_in_bucket": 8,
+        "tactic": [
+          532575944770,
+          4294967332,
+          0,
+          1125899906842624,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.747199714183807,
+        "error": null,
+        "index": 63,
+        "m": 128,
+        "position_in_bucket": 0,
+        "tactic": -1
+      },
+      {
+        "elapsed_us": 10.025600343942642,
+        "error": null,
+        "index": 64,
+        "m": 128,
+        "position_in_bucket": 1,
+        "tactic": [
+          253403070530,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 10.489600151777267,
+        "error": null,
+        "index": 65,
+        "m": 128,
+        "position_in_bucket": 2,
+        "tactic": [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 10.230399668216705,
+        "error": null,
+        "index": 66,
+        "m": 128,
+        "position_in_bucket": 3,
+        "tactic": [
+          1348619731010,
+          4294967332,
+          0,
+          2533274790395907,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 10.675200074911118,
+        "error": null,
+        "index": 67,
+        "m": 128,
+        "position_in_bucket": 4,
+        "tactic": [
+          1344324763714,
+          4294967332,
+          0,
+          1970324836974595,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 10.265599936246872,
+        "error": null,
+        "index": 68,
+        "m": 128,
+        "position_in_bucket": 5,
+        "tactic": [
+          201863462978,
+          4294967332,
+          0,
+          844424930131968,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 10.18880009651184,
+        "error": null,
+        "index": 69,
+        "m": 128,
+        "position_in_bucket": 6,
+        "tactic": [
+          1340029796418,
+          4294967332,
+          0,
+          1407374883553283,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 10.284800082445145,
+        "error": null,
+        "index": 70,
+        "m": 128,
+        "position_in_bucket": 7,
+        "tactic": [
+          446676598850,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 10.716799646615982,
+        "error": null,
+        "index": 71,
+        "m": 128,
+        "position_in_bucket": 8,
+        "tactic": [
+          1687922147394,
+          4294967332,
+          0,
+          1407374883553283,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 10.198400169610977,
+        "error": null,
+        "index": 72,
+        "m": 144,
+        "position_in_bucket": 0,
+        "tactic": -1
+      },
+      {
+        "elapsed_us": 10.470400005578995,
+        "error": null,
+        "index": 73,
+        "m": 144,
+        "position_in_bucket": 1,
+        "tactic": [
+          395136991298,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.84639972448349,
+        "error": null,
+        "index": 74,
+        "m": 144,
+        "position_in_bucket": 2,
+        "tactic": [
+          446676598850,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 9.564799815416336,
+        "error": null,
+        "index": 75,
+        "m": 144,
+        "position_in_bucket": 3,
+        "tactic": [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 10.496000200510025,
+        "error": null,
+        "index": 76,
+        "m": 144,
+        "position_in_bucket": 4,
+        "tactic": [
+          51539607618,
+          4294967332,
+          0,
+          844424930131968,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 10.559999942779541,
+        "error": null,
+        "index": 77,
+        "m": 144,
+        "position_in_bucket": 5,
+        "tactic": [
+          55834574914,
+          4294967332,
+          0,
+          1407374883553283,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 10.29760017991066,
+        "error": null,
+        "index": 78,
+        "m": 144,
+        "position_in_bucket": 6,
+        "tactic": [
+          1352914698306,
+          4294967332,
+          0,
+          1970324836974595,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 10.249599814414978,
+        "error": null,
+        "index": 79,
+        "m": 144,
+        "position_in_bucket": 7,
+        "tactic": [
+          532575944770,
+          4294967332,
+          0,
+          2533274790395906,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      },
+      {
+        "elapsed_us": 10.255999863147736,
+        "error": null,
+        "index": 80,
+        "m": 144,
+        "position_in_bucket": 8,
+        "tactic": [
+          1348619731010,
+          4294967332,
+          0,
+          1125899906842625,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      }
+    ],
+    "original_ratio": 0.9378725737706749,
+    "serving_graph_ratio": 1.0690340967933976,
+    "trace": {
+      "calls_per_graph": 3,
+      "ended_ns": 5294030348899499,
+      "graphs": [
+        {
+          "graph_id": "winner",
+          "graph_launch_events": 3,
+          "graph_object_id": 133180065289168,
+          "kernel_events": 6,
+          "kernel_sequence": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "output_data_ptr": 133181116694528,
+          "signatures": [
+            {
+              "block": [
+                256,
+                1,
+                1
+              ],
+              "device": 0,
+              "grid": [
+                144,
+                1,
+                1
+              ],
+              "name": "_static_quant_fp8",
+              "registers per thread": 32,
+              "shared memory": 0
+            },
+            {
+              "block": [
+                384,
+                1,
+                1
+              ],
+              "device": 0,
+              "grid": [
+                8,
+                14,
+                1
+              ],
+              "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+              "registers per thread": 168,
+              "shared memory": 229844
+            }
+          ]
+        },
+        {
+          "graph_id": "default",
+          "graph_launch_events": 3,
+          "graph_object_id": 133180065292528,
+          "kernel_events": 6,
+          "kernel_sequence": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "output_data_ptr": 133181120888832,
+          "signatures": [
+            {
+              "block": [
+                256,
+                1,
+                1
+              ],
+              "device": 0,
+              "grid": [
+                144,
+                1,
+                1
+              ],
+              "name": "_static_quant_fp8",
+              "registers per thread": 32,
+              "shared memory": 0
+            },
+            {
+              "block": [
+                384,
+                1,
+                1
+              ],
+              "device": 0,
+              "grid": [
+                8,
+                12,
+                1
+              ],
+              "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+              "registers per thread": 168,
+              "shared memory": 213460
+            }
+          ]
+        }
+      ],
+      "path": "/study/results/mlp-confirmation/attempt01/block5-auto_synthetic-timing.trace.json",
+      "scope": "Same retained objects after all primary timings; no latency inference.",
+      "sha256": "e4f6d4eedf98ebeab4845fcd7416f8db41b0e698900544f26100fb2f886eff3f",
+      "started_ns": 5294030321907854
+    }
+  },
+  "changed_execution_context": [
+    "Initial target default follows72 earlier candidate profiles and is always first within its bucket; finalist follows two other explicit candidates. Initial order was not counterbalanced.",
+    "Confirmation follows completion of all81 original profiles, original cache publication/return, retention of final operands, GPU-to-CPU read hashes and an FP32 reference bmm.",
+    "Confirmation uses12 balanced two-candidate pairs, with output NaN fill and device-wide synchronization before each profiler call and device-wide synchronization/numerical checks after return.",
+    "The initial race has one returned average per candidate. Confirmation has12 returned averages per candidate; it is a changed-history repeated comparison, not12 untouched reproductions of the initial race.",
+    "Serving graphs are captured only after confirmation. They include real captured-activation quantization plus GEMM, new input/output/workspace allocations and a separate queued16-replay measurement objective."
+  ],
+  "envelope_interpretation": "Host profiler envelopes omit most of the subsequent roughly5ms synchronization/check interval despite a configured5000us delay. This exposes a stream/measurement-boundary observation gap. The post-return interval includes GPU-wide synchronization AND numerical work; it is not a direct measurement of the delay kernel or proof of a wrong stream.",
+  "fixed_observations": {
+    "actual_profile_m": 144,
+    "canonical_cache_m": 256,
+    "earlier_identical_descriptor_records": [
+      {
+        "elapsed_us": 10.489600151777267,
+        "index": 65,
+        "m": 128
+      },
+      {
+        "elapsed_us": 9.564799815416336,
+        "index": 75,
+        "m": 144
+      }
+    ],
+    "finalist_is_third_explicit": true,
+    "fixture": {
+      "manifest_sha256": "e5e39380e83c45c9f4678b0c9b76aa04c1bae6523d434a275f7fc8955c5bd518",
+      "quantized_input_sha256": "5ec46a643350ef9fcea8ab05e7dfaf0eaff4a9c4a934b50c6e79cf047cf2ee1c",
+      "shape": [
+        144,
+        1024,
+        3072
+      ],
+      "tensor_file_sha256": "0e456c2d371906be235c5fb405fc20c0a969f672ee26722264ae6761b1838809",
+      "tensors": {
+        "input_bf16": {
+          "dtype": "torch.bfloat16",
+          "nbytes": 884736,
+          "sha256": "698daa5825575e55fa8886657b0cb34a1c9a009f4fb7beb24c8f3b982a9a8776",
+          "shape": [
+            144,
+            3072
+          ]
+        },
+        "input_ids": {
+          "dtype": "torch.int64",
+          "nbytes": 1152,
+          "sha256": "416be52bdc364342c8e86489df49bfdf07904873e4cf7cb5d55f44d406133a47",
+          "shape": [
+            1,
+            144
+          ]
+        },
+        "input_scale": {
+          "dtype": "torch.float32",
+          "nbytes": 4,
+          "sha256": "d7a840a667701b4039deab73345fa3623ebc09ee3b2ad592f0f86ca74f09375a",
+          "shape": [
+            1
+          ]
+        },
+        "weight_bf16_rowmajor": {
+          "dtype": "torch.bfloat16",
+          "nbytes": 6291456,
+          "sha256": "01cc5c354c8ac9cf4917157d74beceb0b3ce3f38d9bdec271ae691bded0b2e3b",
+          "shape": [
+            1024,
+            3072
+          ]
+        },
+        "weight_fp8_rowmajor": {
+          "dtype": "torch.float8_e4m3fn",
+          "nbytes": 3145728,
+          "sha256": "f7c7c6c5e4e2601fbed88b7d8dad38ace00bd2f81582d67d0b16627732c6e85f",
+          "shape": [
+            1024,
+            3072
+          ]
+        },
+        "weight_scale": {
+          "dtype": "torch.float32",
+          "nbytes": 4,
+          "sha256": "cc7ad7ff820b05d09a7b7de4b46424139cf074af5d25e3c23ba8eae1c320e620",
+          "shape": [
+            1
+          ]
+        }
+      }
+    },
+    "geometry": [
+      144,
+      1024,
+      3072
+    ],
+    "native_explicit_acceptance_after_all_timings": {
+      "retained_synthetic_inputs": 1,
+      "serving_inputs": 1
+    },
+    "original_cached_choice_preserved": true,
+    "original_default_index": 72,
+    "original_default_position_zero_based": 0,
+    "original_finalist_index": 75,
+    "original_finalist_position_zero_based": 3,
+    "qualified_source": {
+      "bootstrap_helper_sha256": "b8d0f6bbc85eaca0e3ef1419ab99a97d5340c96b3da382cba81d7896768287ba",
+      "candidate_manifest_sha256": "9a4c51562d7410d785cc544c004bc4f92486f40311cb5c7a7328c2c1213160d5",
+      "commit": "27c62fdf0ab1cd4014df8a15b66a975541fda83c",
+      "critical_sha256": {
+        "flashinfer/autotune_cache.py": "1ab2ed7208ed1bf1007b1f74de29fc818c93a5ab091beea0833474177fbb29ad",
+        "flashinfer/autotuner/_graph_timing.py": "5f3be31e17501ba11ee95327176ac4a4b95eeaee7be92c2bc7795bcbd30cefe3",
+        "flashinfer/autotuner/autotuner.py": "0db42ad90d1a3fec6f81509a2c520c1892cea0a433f5dbd7f43468a2a10243ca",
+        "flashinfer/gemm/gemm_base.py": "0bba9240029a5e09f331e7a2267f7067e126d57a7a341ca535f7c9557599adca"
+      },
+      "facade_source_sha256": "e212a78bd560b3891ea9b6c366eec792417b0c88c5cf4e3e90ee64fa9bb68366",
+      "native_identity_passthrough": true,
+      "sglang_source_sha256": {
+        "python/sglang/kernels/ops/quantization/fp8_kernel.py": "1913b690b331170ae722874a3e27ca41fadbcc560ab0c0490e62e482d2c7fe67",
+        "python/sglang/srt/layers/linear.py": "3ce31df0a8aab09ed8afa0ada8c0ce30ca207a748c02c3073d7f53648b9b7c3c",
+        "python/sglang/srt/layers/quantization/fp8_utils.py": "bf82147d19bf4d9e51647a3b20267386312f808833103d59a1bb0a1171c6c4c8",
+        "python/sglang/srt/models/qwen2.py": "7e31800e4562c87121d50aea9059b9c6a70f8bd0a6bd45486a848f02c4f6e817",
+        "python/sglang/srt/models/qwen3.py": "bc6b5d40731d21d9be6ba287fd9983810ca7998f2ff394a251bc6ee357ad1121",
+        "python/sglang/srt/runtime_context.py": "17c498293ca672c39fea298fa104d5b5603323581cb18d695e5d8fc4f06d1bc6",
+        "python/sglang/srt/utils/custom_op.py": "16ce982c284ac85d437b9a6d3ccbe12e92b3ba59c9c1e3dbe0d54be48d8e0166"
+      },
+      "startup_wrapper_sha256": "64deff581665bd04830535baccfdfbdfa72794d919bc462fc469a4c42bdd68f5"
+    },
+    "retained_tensor_object_ids_unchanged_during_confirmation": true,
+    "same_finalist_descriptor_initial_and_confirmation": [
+      343597383746,
+      4294967332,
+      0,
+      1970324836974594,
+      558779540176897,
+      120259084316,
+      292058693646,
+      0
+    ],
+    "same_settings_for_nine_original_target_calls_and_24_confirmation_calls": true,
+    "same_six_shapes_strides_dtypes_and_pointers_for_original_target_and_confirmation": true,
+    "same_synthetic_hashes_across_eight_processes": true,
+    "settings": {
+      "config": {
+        "cuda_graph_profile_replays": 1,
+        "effective_profiling_repeat": 10,
+        "profiling_repeat": null,
+        "use_cold_l2_cache": false,
+        "use_cuda_graph": false,
+        "use_cuda_graph_individual_timing": false
+      },
+      "cuda_graph_delay_micro_secs": 100,
+      "effective_policy_timer": null,
+      "measurement_policy": null,
+      "repeat": 10,
+      "stream_delay_micro_secs": 5000,
+      "use_global_timer": false,
+      "warmup": 3
+    },
+    "synthetic_pointer_metadata": [
+      {
+        "alignment_mod256": 0,
+        "alignment_mod4096": 0,
+        "data_ptr": 133180903079936,
+        "device": "cuda:0",
+        "dtype": "torch.float8_e4m3fn",
+        "shape": [
+          1,
+          144,
+          3072
+        ],
+        "stride": [
+          442368,
+          3072,
+          1
+        ]
+      },
+      {
+        "alignment_mod256": 0,
+        "alignment_mod4096": 0,
+        "data_ptr": 133181239984128,
+        "device": "cuda:0",
+        "dtype": "torch.float8_e4m3fn",
+        "shape": [
+          1,
+          3072,
+          1024
+        ],
+        "stride": [
+          3072,
+          1,
+          3072
+        ]
+      },
+      {
+        "alignment_mod256": 0,
+        "alignment_mod4096": 0,
+        "data_ptr": 133181164158976,
+        "device": "cuda:0",
+        "dtype": "torch.float32",
+        "shape": [
+          1
+        ],
+        "stride": [
+          1
+        ]
+      },
+      {
+        "alignment_mod256": 0,
+        "alignment_mod4096": 512,
+        "data_ptr": 133181164159488,
+        "device": "cuda:0",
+        "dtype": "torch.float32",
+        "shape": [
+          1
+        ],
+        "stride": [
+          1
+        ]
+      },
+      {
+        "alignment_mod256": 0,
+        "alignment_mod4096": 0,
+        "data_ptr": 133180904112128,
+        "device": "cuda:0",
+        "dtype": "torch.bfloat16",
+        "shape": [
+          1,
+          144,
+          1024
+        ],
+        "stride": [
+          147456,
+          1024,
+          1
+        ]
+      },
+      {
+        "alignment_mod256": 0,
+        "alignment_mod4096": 0,
+        "data_ptr": 133179788754944,
+        "device": "cuda:0",
+        "dtype": "torch.uint8",
+        "shape": [
+          41943040
+        ],
+        "stride": [
+          1
+        ]
+      }
+    ],
+    "synthetic_read_operand_hashes_before_confirmation": [
+      "3cef2eb9873b78210ace00bd2d2c5ab811aeb19f85534d34133fbc386be3ea23",
+      "121b6994946a480b0fec5e561831661c73329c02a1daf9471855d94038114d30",
+      "d7a840a667701b4039deab73345fa3623ebc09ee3b2ad592f0f86ca74f09375a",
+      "cc7ad7ff820b05d09a7b7de4b46424139cf074af5d25e3c23ba8eae1c320e620"
+    ],
+    "synthetic_read_operands_unchanged_at_end": true
+  },
+  "host_envelope_us": {
+    "maximum": 447.96,
+    "median": 259.53499999999997,
+    "minimum": 240.45
+  },
+  "input_sha256": {
+    "block0-auto_synthetic-timing.bootstrap.json": "efa9670915b8539d23ca75d23631589e2555d56863faee4aa58432b22a909a3e",
+    "block0-auto_synthetic-timing.json": "262507aba2b283c846abf2045f81f9db72f383b7b73a13e5e887e68c1e6b00d9",
+    "block1-auto_synthetic-timing.bootstrap.json": "16deb9419e3386cca9d058b18bb208c9fba6d7f749e119e962284c34ea2c4c69",
+    "block1-auto_synthetic-timing.json": "b24b0fad47afe6827d976ede7ece7d424d2df9142eb889dcc604a460a75d8b13",
+    "block2-auto_synthetic-timing.bootstrap.json": "6157e377cc9bce3d9bd35c0361e66b8a77e37eb39a8b936265d853dc88ba8d97",
+    "block2-auto_synthetic-timing.json": "496c7edf021ace5bf78b1704db0cd358cd19dfe5104b9d45dc684512d576b7f4",
+    "block3-auto_synthetic-timing.bootstrap.json": "d37003b27f22c04109124351f4068669dbefe4d6ca0deddc1ea9cddb6a910d53",
+    "block3-auto_synthetic-timing.json": "abe8c8c97d3a6b40ee2fb05d871ee54c0f8a08cdb09a812b8b1d0a55220382ff",
+    "block4-auto_synthetic-timing.bootstrap.json": "17adf640d3b2bf2151835cd2a3e845d53d344d91cf3b113659051f483eb03ca5",
+    "block4-auto_synthetic-timing.json": "6d3873e63a887bfae46b08f4917e7eed0be0101765c675c2bb5a50538e67f097",
+    "block5-auto_synthetic-timing.bootstrap.json": "d6d6973331abb8f58aff09a39d2996f2f1318bb7d7b9d1fd58f4dbfd6468560b",
+    "block5-auto_synthetic-timing.json": "36384d90b5b855ec1957c82fb1a2ac0b450f79852295dd223844c07383c26299",
+    "block6-auto_synthetic-timing.bootstrap.json": "10c290d91dd9249698e43a9c8bb5cfe75d7c27d19e5833a7a4c11c8fcb392505",
+    "block6-auto_synthetic-timing.json": "070e581ac5f2ae94e21c151879f7e26a6ddee18b98aec17cf4ec54eb2edf4bce",
+    "block7-auto_synthetic-timing.bootstrap.json": "e76e6ef43eff741dbb51f396baf9d45c1960187bc2de7f0383ed21bab757209c",
+    "block7-auto_synthetic-timing.json": "0a3a35f99bff9392c7322bc480c675dd25235c5d71514d91ca0f03c9e4043f3e"
+  },
+  "post_return_to_correctness_us": {
+    "maximum": 43904.84,
+    "median": 5216.26,
+    "minimum": 5168.105
+  },
+  "retained_decision": "Preserve the inconclusive-stop outcome and unchanged production selection. Do not diagnose history, noise, input distribution or stream behavior as the cause from this audit alone.",
+  "schema_version": 1,
+  "scope": "Descriptive audit of the prespecified eight-process cohort; no new tests, exclusion, trimming, hypothesis test, protocol change or experiment.",
+  "smallest_missing_observation": "Observe the actual configured delay-kernel stream and completion relative to the timed-event stream in the original/confirmation profiler, including the first measured window. Bind that to the actual native algorithm/kernel identities rather than adding more candidate-average samples. Saved data alone cannot supply it; no new run is proposed or authorized here.",
+  "status": "complete_existing_data_only",
+  "strongest_descriptive_pattern": "Block5 initial default10.1984us is higher than the other seven initial default averages9.2480\u20139.6160us. Its finalist9.5648us is within the other seven finalist range9.5072\u20139.8464us. Every process later favors default by its median confirmation ratio; block5 both pair-order strata also favor default. These comparisons do not identify the cause.",
+  "target_block": 5,
+  "unobserved": [
+    "No individual warmup or measured-kernel durations are logged inside any returned profiler average; each value summarizes ten calls after three warmups.",
+    "Original81 rows have no per-candidate host start/end timestamp. Index establishes order but not precise timing gaps.",
+    "No actual profiler-window delay-kernel duration/stream, start-event queue-completion query or per-window device clock/power/temperature is recorded.",
+    "Actual submitted algorithms and CUDA kernel identities were not traced during original or confirmation profiling. Public default tactic -1 alone is not a native algorithm identity.",
+    "Synthetic values were not byte-hashed during original profiling. Pointer/layout equality and the source read-only contract are observed; direct byte attestation starts only after the initial race.",
+    "The post-timing trace identifies the two retained serving graphs only; it cannot retrospectively identify every original/confirmation profiler launch."
+  ]
+}

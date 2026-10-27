@@ -1,0 +1,425 @@
+{
+  "status": "completed_existing_data_review",
+  "new_gpu_runs": 0,
+  "new_tests": 0,
+  "root_cause_established": false,
+  "scope": "Eight existing timing processes, 192 confirmation calls, exact qualified FlashInfer source/native records and saved graph-attribution traces.",
+  "configured_delay_microseconds": 5000,
+  "observations": {
+    "profile_host_us": {
+      "count": 192,
+      "min": 240.45,
+      "median": 259.53499999999997,
+      "max": 447.96
+    },
+    "profile_return_to_correctness_complete_us": {
+      "count": 192,
+      "min": 5168.105,
+      "median": 5216.26,
+      "max": 43904.84
+    },
+    "profile_entry_to_correctness_complete_us": {
+      "count": 192,
+      "min": 5454.405,
+      "median": 5474.575,
+      "max": 44271.161
+    },
+    "by_process": [
+      {
+        "block": 0,
+        "profile_host_us": {
+          "count": 24,
+          "min": 243.96,
+          "median": 256.515,
+          "max": 418.11
+        },
+        "profile_return_to_correctness_complete_us": {
+          "count": 24,
+          "min": 5189.125,
+          "median": 5214.73,
+          "max": 43370.41
+        }
+      },
+      {
+        "block": 1,
+        "profile_host_us": {
+          "count": 24,
+          "min": 242.2,
+          "median": 259.54999999999995,
+          "max": 429.111
+        },
+        "profile_return_to_correctness_complete_us": {
+          "count": 24,
+          "min": 5205.435,
+          "median": 5218.6245,
+          "max": 43186.87
+        }
+      },
+      {
+        "block": 2,
+        "profile_host_us": {
+          "count": 24,
+          "min": 240.73,
+          "median": 256.81,
+          "max": 416.93
+        },
+        "profile_return_to_correctness_complete_us": {
+          "count": 24,
+          "min": 5195.345,
+          "median": 5220.15,
+          "max": 43904.84
+        }
+      },
+      {
+        "block": 3,
+        "profile_host_us": {
+          "count": 24,
+          "min": 240.45,
+          "median": 260.256,
+          "max": 428.55
+        },
+        "profile_return_to_correctness_complete_us": {
+          "count": 24,
+          "min": 5203.915,
+          "median": 5215.8295,
+          "max": 43580.43
+        }
+      },
+      {
+        "block": 4,
+        "profile_host_us": {
+          "count": 24,
+          "min": 244.41,
+          "median": 262.38,
+          "max": 447.96
+        },
+        "profile_return_to_correctness_complete_us": {
+          "count": 24,
+          "min": 5202.114,
+          "median": 5211.96,
+          "max": 43435.029
+        }
+      },
+      {
+        "block": 5,
+        "profile_host_us": {
+          "count": 24,
+          "min": 241.96,
+          "median": 258.9955,
+          "max": 428.781
+        },
+        "profile_return_to_correctness_complete_us": {
+          "count": 24,
+          "min": 5168.105,
+          "median": 5217.025,
+          "max": 42989.979
+        }
+      },
+      {
+        "block": 6,
+        "profile_host_us": {
+          "count": 24,
+          "min": 245.01,
+          "median": 261.025,
+          "max": 426.86
+        },
+        "profile_return_to_correctness_complete_us": {
+          "count": 24,
+          "min": 5197.495,
+          "median": 5220.174499999999,
+          "max": 43371.03
+        }
+      },
+      {
+        "block": 7,
+        "profile_host_us": {
+          "count": 24,
+          "min": 246.56,
+          "median": 260.72,
+          "max": 418.911
+        },
+        "profile_return_to_correctness_complete_us": {
+          "count": 24,
+          "min": 5199.675,
+          "median": 5216.25,
+          "max": 43770.28
+        }
+      }
+    ],
+    "settings_verified": "policy=None; eager event timing; hot L2; global timer disabled; delay configured5000; 24 successful calls per process"
+  },
+  "source_chain": [
+    {
+      "file": "flashinfer/autotuner/autotuner.py",
+      "lines": "3533; 3680-3726",
+      "behavior": "Gets PyTorch current stream; enters that stream; synchronizes it before timing; calls delay_kernel(5000) before start event; records start/end and synchronizes that same PyTorch stream."
+    },
+    {
+      "file": "flashinfer/tllm_utils.py",
+      "lines": "6-12",
+      "behavior": "Cached qualified module; forwards the integer delay argument without tensor or explicit stream argument."
+    },
+    {
+      "file": "csrc/nv_internal/tensorrt_llm/kernels/delayStream.cu",
+      "lines": "24-38",
+      "behavior": "Single block, single thread; loops5000 times over __nanosleep(1000); native wrapper resolves get_current_stream()."
+    },
+    {
+      "file": "csrc/tvm_ffi_utils.h",
+      "lines": "403-406",
+      "behavior": "get_current_stream reads CUDA current device then TVMFFIEnvGetStream(kDLCUDA, device). Archived Ninja dependency record confirms this exact header path."
+    }
+  ],
+  "native_binding": {
+    "source_commit": "27c62fdf0ab1cd4014df8a15b66a975541fda83c",
+    "qualified_overlay": "fp8-runtime-callback",
+    "source_sha256": {
+      "flashinfer/autotuner/autotuner.py": "0db42ad90d1a3fec6f81509a2c520c1892cea0a433f5dbd7f43468a2a10243ca",
+      "flashinfer/tllm_utils.py": "5eaaa6773f5d7b5bc00de2183eef488f5b2497d7efc687ebf45f97d7f2fd3593",
+      "flashinfer/jit/tllm_utils.py": "0408cf7103eff9d8c989f7208a9f21cb2dd0c4b445c4ed4bafed4805b472eff7",
+      "csrc/nv_internal/tensorrt_llm/kernels/delayStream.cu": "1e71e749603313c24a53404ad330d793a8b8bc3ac9770df5668fe502094b84c6",
+      "csrc/tvm_ffi_utils.h": "d07494e507f49ae64d11f6fed7c342dc2c90e46fe90dd016ff586ca830172826"
+    },
+    "delay_library_sha256": "e442a689064fe3af4ab46510b2d5aaf3597b072949b84f13d14e9e53352109e4",
+    "build_ninja_sha256": "feee2d051c956b9f8a3c2eba733b54b42ec7bbf1814cc4f52d367bd28cf9d05b",
+    "ninja_dependencies_sha256": "9cc72e344bea16b6d4edd8b51f1b7a5997b96ac52b7f78fb9a1b42e9b697bda1",
+    "qualification": "All eight bootstrap records name the same source module hashes and explicit native provider; archived ELF bytes match. Qualified helper explicitly loads that JIT library and binds its factory; no delay/timer forwarding shim was introduced.",
+    "limitation": "No recorded per-call TVM FFI stream handle or delay-kernel duration; binary/source qualification does not establish runtime stream equality."
+  },
+  "trace_review": [
+    {
+      "block": 0,
+      "events": 108,
+      "kernels": 12,
+      "delay_events": 0,
+      "recorded_kernel_streams": [
+        7
+      ],
+      "scope": "Three replays of each retained graph after profiling and correctness work; does not trace confirmation profiler calls."
+    },
+    {
+      "block": 1,
+      "events": 108,
+      "kernels": 12,
+      "delay_events": 0,
+      "recorded_kernel_streams": [
+        7
+      ],
+      "scope": "Three replays of each retained graph after profiling and correctness work; does not trace confirmation profiler calls."
+    },
+    {
+      "block": 2,
+      "events": 108,
+      "kernels": 12,
+      "delay_events": 0,
+      "recorded_kernel_streams": [
+        7
+      ],
+      "scope": "Three replays of each retained graph after profiling and correctness work; does not trace confirmation profiler calls."
+    },
+    {
+      "block": 3,
+      "events": 108,
+      "kernels": 12,
+      "delay_events": 0,
+      "recorded_kernel_streams": [
+        7
+      ],
+      "scope": "Three replays of each retained graph after profiling and correctness work; does not trace confirmation profiler calls."
+    },
+    {
+      "block": 4,
+      "events": 108,
+      "kernels": 12,
+      "delay_events": 0,
+      "recorded_kernel_streams": [
+        7
+      ],
+      "scope": "Three replays of each retained graph after profiling and correctness work; does not trace confirmation profiler calls."
+    },
+    {
+      "block": 5,
+      "events": 108,
+      "kernels": 12,
+      "delay_events": 0,
+      "recorded_kernel_streams": [
+        7
+      ],
+      "scope": "Three replays of each retained graph after profiling and correctness work; does not trace confirmation profiler calls."
+    },
+    {
+      "block": 6,
+      "events": 108,
+      "kernels": 12,
+      "delay_events": 0,
+      "recorded_kernel_streams": [
+        7
+      ],
+      "scope": "Three replays of each retained graph after profiling and correctness work; does not trace confirmation profiler calls."
+    },
+    {
+      "block": 7,
+      "events": 108,
+      "kernels": 12,
+      "delay_events": 0,
+      "recorded_kernel_streams": [
+        7
+      ],
+      "scope": "Three replays of each retained graph after profiling and correctness work; does not trace confirmation profiler calls."
+    }
+  ],
+  "nvidia_primary_documentation": [
+    {
+      "url": "https://docs.nvidia.com/cuda/archive/13.0.0/parallel-thread-execution/index.html#miscellaneous-instructions-nanosleep",
+      "section": "PTX ISA9.0 9.7.19.2",
+      "summary": "nanosleep is approximate. Its permitted sleep interval is [0,2*t], so there is no positive minimum equal to t. Warp implementation may shorten individual sleeps; maximum sleep is1ms."
+    },
+    {
+      "url": "https://docs.nvidia.com/cuda/archive/13.0.0/cuda-c-programming-guide/index.html#nanosleep-function",
+      "section": "CUDA13.0 C++ Programming Guide10.23",
+      "summary": "__nanosleep(ns) specifies an approximate nanosecond sleep, with approximately1ms maximum per call."
+    }
+  ],
+  "conclusions": [
+    "The configured value5000 is a request expressed through5000 approximate nanosleeps; it is not proof of an actual5ms delay.",
+    "The enclosing host intervals include the real profiler call and its final stream synchronization. They do not support a claim that a full5ms delay completed on that synchronized stream during those calls.",
+    "The native delay and event profiler resolve current streams through different APIs. A stream mismatch is a concrete hypothesis, not demonstrated by saved stream handles or a delay trace.",
+    "The following correctness routine begins with device-wide synchronization. Its >=5.168ms post-return interval is consistent with outstanding work outside the profiled stream; it also includes numerical operations and substantial first-use overhead, so it is not an isolated measurement of delay or synchronization.",
+    "Saved traces were captured only for later retained-graph replays; their absence of delay events cannot establish absence of delay execution during earlier profiling.",
+    "Neither the short host durations nor the approximate nanosleep contract identifies the cause of the candidate-ranking reversal. Do not label existing auto timing as proven host-overhead-free."
+  ],
+  "unresolved_without_additional_instrumented_execution": [
+    "Actual native delay stream versus PyTorch event stream at each call.",
+    "Actual delay kernel start/end duration and event ordering.",
+    "Whether host submission stalls contaminate the measured event window and affect candidate ranking."
+  ],
+  "inputs": [
+    {
+      "block": 0,
+      "result_sha256": "262507aba2b283c846abf2045f81f9db72f383b7b73a13e5e887e68c1e6b00d9",
+      "bootstrap_sha256": "efa9670915b8539d23ca75d23631589e2555d56863faee4aa58432b22a909a3e",
+      "trace_sha256": "e86c0e383e20edcdd8be67fd464bff60f834829462d31a6684e5e5ef9fac9a4c"
+    },
+    {
+      "block": 1,
+      "result_sha256": "b24b0fad47afe6827d976ede7ece7d424d2df9142eb889dcc604a460a75d8b13",
+      "bootstrap_sha256": "16deb9419e3386cca9d058b18bb208c9fba6d7f749e119e962284c34ea2c4c69",
+      "trace_sha256": "1832ed1b65300f62b57f654fc9afe625b53e442671df97ad34b45ab5aacc4e6e"
+    },
+    {
+      "block": 2,
+      "result_sha256": "496c7edf021ace5bf78b1704db0cd358cd19dfe5104b9d45dc684512d576b7f4",
+      "bootstrap_sha256": "6157e377cc9bce3d9bd35c0361e66b8a77e37eb39a8b936265d853dc88ba8d97",
+      "trace_sha256": "d058acd343a1830bee1592de14ff0325c90c3d8aeb7c18d2bb5a2d3e2adaa46b"
+    },
+    {
+      "block": 3,
+      "result_sha256": "abe8c8c97d3a6b40ee2fb05d871ee54c0f8a08cdb09a812b8b1d0a55220382ff",
+      "bootstrap_sha256": "d37003b27f22c04109124351f4068669dbefe4d6ca0deddc1ea9cddb6a910d53",
+      "trace_sha256": "37a38d0480e273c40c4e8ffcbba0c63c4b5f972c79f652ea98f7e8ade27b1e23"
+    },
+    {
+      "block": 4,
+      "result_sha256": "6d3873e63a887bfae46b08f4917e7eed0be0101765c675c2bb5a50538e67f097",
+      "bootstrap_sha256": "17adf640d3b2bf2151835cd2a3e845d53d344d91cf3b113659051f483eb03ca5",
+      "trace_sha256": "b1c629cfc70289970eb34b36efd13547b186c3b83abb40368acce00910b8a8d5"
+    },
+    {
+      "block": 5,
+      "result_sha256": "36384d90b5b855ec1957c82fb1a2ac0b450f79852295dd223844c07383c26299",
+      "bootstrap_sha256": "d6d6973331abb8f58aff09a39d2996f2f1318bb7d7b9d1fd58f4dbfd6468560b",
+      "trace_sha256": "e4f6d4eedf98ebeab4845fcd7416f8db41b0e698900544f26100fb2f886eff3f"
+    },
+    {
+      "block": 6,
+      "result_sha256": "070e581ac5f2ae94e21c151879f7e26a6ddee18b98aec17cf4ec54eb2edf4bce",
+      "bootstrap_sha256": "10c290d91dd9249698e43a9c8bb5cfe75d7c27d19e5833a7a4c11c8fcb392505",
+      "trace_sha256": "594e3e6085bad4a1406437a33c7324f231592d1216213ac726dd2f2ebbf8d619"
+    },
+    {
+      "block": 7,
+      "result_sha256": "0a3a35f99bff9392c7322bc480c675dd25235c5d71514d91ca0f03c9e4043f3e",
+      "bootstrap_sha256": "e76e6ef43eff741dbb51f396baf9d45c1960187bc2de7f0383ed21bab757209c",
+      "trace_sha256": "0e55336ce77e01662baa419cba4ea01c4a3176d3457be478cc444a1f7cabf2d5"
+    }
+  ],
+  "source_notes": [
+    "Private helper /private/tmp/fi-next-steps-20261024/current-source-qualification/container_preflight.py:76-102 binds native factories directly.",
+    "Execution worker inherits diagnostic_profile and confirm from bench_flashinfer_finalist_confirmation.py; timestamps bracket original_profile.",
+    "check_profile_output in bench_flashinfer_fixed_pair.py:260-294 begins device-wide synchronize after profiler return.",
+    "trace() in bench_flashinfer_objective_values.py:1313-1333 records only retained graph replay."
+  ],
+  "tvm_ffi_stream_review": {
+    "official_source_commit": "ded7531f1bbc5b43da7929f155ac890bfe31d82a",
+    "source_refs": [
+      {
+        "url": "https://github.com/apache/tvm-ffi/blob/ded7531f1bbc5b43da7929f155ac890bfe31d82a/python/tvm_ffi/cython/function.pxi#L203",
+        "lines": "203-231",
+        "sha256": "163a7172dad0c3141cc5694c7a7baad57acd03a63825b0d2c835f789d199099c"
+      },
+      {
+        "url": "https://github.com/apache/tvm-ffi/blob/ded7531f1bbc5b43da7929f155ac890bfe31d82a/python/tvm_ffi/cython/function.pxi#L280",
+        "lines": "280-300",
+        "sha256": "163a7172dad0c3141cc5694c7a7baad57acd03a63825b0d2c835f789d199099c"
+      },
+      {
+        "url": "https://github.com/apache/tvm-ffi/blob/ded7531f1bbc5b43da7929f155ac890bfe31d82a/python/tvm_ffi/cython/tvm_ffi_python_helpers.h#L148",
+        "lines": "148-157",
+        "sha256": "5e9b6f581dada9d9e1d1b66b455aa553573844f36119852465109c0b29b56fd3"
+      },
+      {
+        "url": "https://github.com/apache/tvm-ffi/blob/ded7531f1bbc5b43da7929f155ac890bfe31d82a/python/tvm_ffi/cython/tvm_ffi_python_helpers.h#L571",
+        "lines": "571-611",
+        "sha256": "5e9b6f581dada9d9e1d1b66b455aa553573844f36119852465109c0b29b56fd3"
+      },
+      {
+        "url": "https://github.com/apache/tvm-ffi/blob/ded7531f1bbc5b43da7929f155ac890bfe31d82a/src/ffi/extra/env_context.cc#L34",
+        "lines": "34-55",
+        "sha256": "1f86e463a1bade715e970e3bc6824cff22a1ca58cafa01cf4466bc9f2e8ab44c"
+      },
+      {
+        "url": "https://github.com/apache/tvm-ffi/blob/ded7531f1bbc5b43da7929f155ac890bfe31d82a/python/tvm_ffi/stream.py#L57",
+        "lines": "57-112",
+        "sha256": "586413f5558bd8682f31280743cf7fe6581a17b7e2eb270e19ffcceba12c2f0c"
+      },
+      {
+        "url": "https://github.com/apache/tvm-ffi/blob/ded7531f1bbc5b43da7929f155ac890bfe31d82a/python/tvm_ffi/cython/tvm_ffi_python_helpers.h#L362",
+        "lines": "362-371",
+        "sha256": "5e9b6f581dada9d9e1d1b66b455aa553573844f36119852465109c0b29b56fd3"
+      }
+    ],
+    "observed_installed_identity": {
+      "path": "/opt/sglang/lib/python3.12/site-packages/tvm_ffi/__init__.py",
+      "sha256": "bdb390cbf41acf57ef4a21f27b868dc2f607f0009c302922e67a7da7e118cf15"
+    },
+    "inspected_upstream_init_sha256": "31e769eba2013f8249df26bbfda0d6d135a80e1103c086b7fccfe5f134c0ac84",
+    "provenance_limit": "Official source is pinned for this review but is not proven identical to the installed package. Its __init__.py hash differs from the recorded runtime package; no historical compiled call-wrapper source/hash was saved. These semantics corroborate a concrete hypothesis, not an observed historical stream ID.",
+    "source_established_semantics": [
+      "TVMFFIPyCallContext begins with device_type=-1 and stream=nullptr.",
+      "TVMFFIPyArgSetterInt_ converts5000 to an integer argument without modifying the device or stream context.",
+      "TVMFFIPyArgSetterDLPackExchangeAPI_ obtains current_work_stream from a non-CPU tensor producer; Torch fallback obtains torch._C._cuda_getCurrentRawStream for the tensor device.",
+      "The native call dispatcher sets TVMFFIEnvSetStream only when argument conversion detected a device; it restores the previous FFI stream after the call.",
+      "An integer-only delay call supplies no tensor-derived device/stream. With no outer FFI scope, it retains the ambient FFI stream; EnvContext::GetStream returns nullptr when unset.",
+      "TorchStreamContext.__enter__ optionally enters the Torch context, reads torch.cuda.current_stream(), and explicitly sets an FFI StreamContext; exit restores both contexts."
+    ],
+    "application_to_saved_experiment": "Exact FlashInfer delay_kernel passes only the integer delay; actual GEMM calls pass CUDA tensors. The profiler uses only torch.cuda.stream(stream), with no explicit FFI scope. Under the inspected binding semantics, GEMM tensor calls temporarily align streams and then restore ambient FFI state, so their warmups do not establish the same stream for the subsequent tensor-free delay call.",
+    "required_invariant": "To guarantee a tensor-free native helper follows a custom PyTorch stream under this binding model, establish the corresponding FFI stream context explicitly (for example use_torch_stream), pass an explicit native stream, or provide an equivalent guaranteed binding mechanism. Merely entering torch.cuda.stream does not itself set FFI context.",
+    "primary_docs": [
+      {
+        "url": "https://tvm.apache.org/ffi/concepts/tensor.html",
+        "summary": "Documents automatic framework stream discovery during tensor conversion and manual stream scopes when discovery is insufficient."
+      },
+      {
+        "url": "https://tvm.apache.org/ffi/_modules/tvm_ffi/stream.html",
+        "summary": "Official Python source for StreamContext, TorchStreamContext and use_torch_stream."
+      }
+    ],
+    "root_cause_claim": false
+  },
+  "public_artifact_check": {
+    "forbidden_bytes_hex": "766c6c6d",
+    "scan_case_insensitive": true,
+    "result": "passed",
+    "content": "Concise derived evidence and source/documentation links; no complete webpages, external inventories or binary payloads."
+  }
+}

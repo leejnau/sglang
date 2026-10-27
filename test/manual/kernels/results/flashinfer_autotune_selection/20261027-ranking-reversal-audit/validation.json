@@ -1,0 +1,27 @@
+{
+  "ci_runs": 0,
+  "gpu_runs": 0,
+  "independent_interval_aggregates": "Data review and independently computed delay review agree on all six min/median/max values.",
+  "independent_review": {
+    "scope": "Evidence hashes, all192 interval recomputations, source/provenance distinctions and unchanged scientific stopping decision.",
+    "status": "approved_no_material_findings"
+  },
+  "input_files_verified": 16,
+  "private_public_comparison": "Only the eight expected derived bootstrap hashes differ; scientific content and all eight worker hashes match exactly.",
+  "production_edits": 0,
+  "publication_scan": {
+    "case_insensitive_forbidden_bytes_hex": "766c6c6d",
+    "result": "passed"
+  },
+  "raw_archive_sha256": "9fd9bad91ab53bbc314c52962825b21533ce807d459b3b0a2bac7edfcb91ffa3",
+  "repository_checks": "Applicable pre-commit hooks passed, including AST, import order, Ruff, formatting, spelling, merge-marker and private-key checks.",
+  "reproduction": "Fresh selected-file extraction from committed public archive; stdlib script output byte-identical to data-review.json.",
+  "retained_records": {
+    "block5_confirmation_pairs": 12,
+    "block5_original_profiles": 81,
+    "confirmation_calls": 192,
+    "processes": 8
+  },
+  "source_checks": "code-review.json and delay-review.json bind qualified worker, FlashInfer and native sources; external FFI corroboration retains its distinct provenance.",
+  "status": "passed"
+}

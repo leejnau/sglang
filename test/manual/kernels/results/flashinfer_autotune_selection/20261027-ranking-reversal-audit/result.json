@@ -1,0 +1,83 @@
+{
+  "decision": "Retain the prior inconclusive-stop decision, unspecified production measurement policy and v1 persistence. Keep scoped-cache work parked. Neither a generic confirmation rule nor a default preference follows from this audit.",
+  "evidence": {
+    "audit_saved_records.py": {
+      "bytes": 14252,
+      "sha256": "4b9dcaef898e06edcab0a2925fa99189ff74c91c9cc2aa9d6dbc4767baa3fb7d"
+    },
+    "code-review.json": {
+      "bytes": 13034,
+      "sha256": "8e86d0d5343dc39feb2ebdf5f8bb1d6662451d0ea98d976af0f4c0d6b1627053"
+    },
+    "data-review.json": {
+      "bytes": 154245,
+      "sha256": "3915a239d8be9d9297d867deda01bf380e0081fada1969466bc95a094f0eab4e"
+    },
+    "delay-review.json": {
+      "bytes": 19020,
+      "sha256": "74a5f2a5ea0456c972be788a7317c83c5ef6a69a8c8afadf77c0efa7c0176b91"
+    }
+  },
+  "execution_commit": "3cae7f706d2aa2bfc2268f13597a3d1706432410",
+  "findings": [
+    {
+      "classification": "observed",
+      "statement": "Original and confirmation profiling retain the same actual M144/N1024/K3072 geometry, six tensor buffers, runner, finalist descriptor and nominal settings. M256 is the lookup/enumeration bucket, not actual measured M."
+    },
+    {
+      "classification": "source_and_records",
+      "statement": "Settings remain unspecified-policy, hot-L2 non-graph event timing, three warmups, ten timed launches and a requested5000us delay. Each returned average is one event window, not ten independent observations."
+    },
+    {
+      "classification": "changed_context",
+      "statement": "Confirmation occurs after all81 original profiles and cache publication, operand hashing, FP32 reference work and repeated preparation. It uses twelve balanced pairs and adds NaN output fill/device synchronization before each call and numerical checks/device synchronization after. Preparation is once per runner/profile or confirmation group, not once per candidate."
+    },
+    {
+      "classification": "observed",
+      "statement": "Block5 initial explicit/default ratio0.9378725738 becomes1.0682724118 in confirmation and1.0690340966 in retained graph scoring. All12 confirmation pairs are retained: explicit slower8, faster4. Both first-position strata favor default descriptively. No cause is identified."
+    },
+    {
+      "classification": "new_observation_gap",
+      "statement": "All192 confirmation profiler host envelopes are240.450\u2013447.960us (median259.535us) despite the requested5000us delay. All subsequent correctness intervals are at least5168.105us (median5216.260us); those intervals include device-wide synchronization and numerical work, not isolated delay timing."
+    },
+    {
+      "classification": "source_supported_hypothesis",
+      "statement": "Exact FlashInfer delay code passes only an integer and reads the FFI current stream; profiling events use the PyTorch current stream. Reviewed upstream FFI source derives streams from tensor arguments and restores ambient state after each call. This can leave a tensor-free delay on a different stream. The reviewed FFI binding is not proven identical to the historical installed binding, and no runtime stream handles/delay trace were saved."
+    },
+    {
+      "classification": "documentation_limit",
+      "statement": "The native delay uses approximate nanosleep calls; its configured integer is not a guaranteed wall-clock delay. Short host envelopes and later synchronization work do not independently prove wrong-stream execution."
+    }
+  ],
+  "limitations": [
+    "No original per-candidate host timestamps or inner per-launch samples",
+    "No profiling-phase native trace, achieved delay or queue-state observation",
+    "No per-call operand-byte attestation during initial timing",
+    "Later serving graphs use real captured activations/quantization and a distinct objective",
+    "Single device/workload cohort; no serving-throughput or general selection-quality claim"
+  ],
+  "public_raw_archive": "../20261027T020000Z-h100-mlp-confirmation/attempt01/raw-public.tar.gz",
+  "public_raw_archive_sha256": "9fd9bad91ab53bbc314c52962825b21533ce807d459b3b0a2bac7edfcb91ffa3",
+  "question": "Which recorded conditions differ between original selection and the later ranking reversal, and which observation is missing?",
+  "reproduction": {
+    "bootstrap_note": "Public bootstraps are previously documented derived inventories; their hashes differ from private originals. All eight worker JSONs are byte-identical, and all derived scientific findings match.",
+    "command": "python3 audit_saved_records.py --raw-root <extraction>/raw --output <new-output>.json",
+    "expected": "Output is byte-identical to data-review.json for the public inputs.",
+    "input": "Extract the referenced committed raw-public.tar.gz into a temporary directory; pass its raw/ subdirectory."
+  },
+  "results_commit": "1f4a810aa5c9ed3fca638d4bda464b10aa001cc4",
+  "schema_version": 1,
+  "scope": "Saved eight-process H100 MLP confirmation cohort, with block5 as the already identified reversal. No new GPU work, sample expansion, CI, production edits, PR or external message.",
+  "smallest_next_observation": {
+    "interpretation": "A pending start event queried after enqueueing the end event would certify enqueueing completed before the timed window began; a completed start event alone would not prove queue starvation.",
+    "launch_status": "Not launched or authorized by this audit. Await Yang before choosing an instrumented experiment or production fix.",
+    "needed": [
+      "Exact historical or newly qualified FFI binding identity",
+      "Delay-kernel stream and start/end relative to the profiled events",
+      "Whether host enqueueing finishes before the timed GPU window begins",
+      "Native default/finalist algorithm and kernel identities during these same profiling calls"
+    ],
+    "priority": "Verify the achieved profiling delay and its stream/event ordering before collecting more candidate averages."
+  },
+  "status": "completed_existing_data_only"
+}
