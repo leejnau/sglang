@@ -1,0 +1,76 @@
+{
+  "baseline_sglang_commit": "2efaa891339f901d9d1af71e646dd9d4d741a816",
+  "case_families": [
+    {
+      "name": "eligibility_and_lifecycle",
+      "oracle": "Disabled tuning/deterministic/disabled graph avoids managed work; eligible path after consumed legacy warmup performs tune then replay/capture callbacks."
+    },
+    {
+      "name": "skip_handoff",
+      "oracle": "Resolved skips survive startup-to-graph handoff; cached explicit tactic is quarantined to -1 and skipped report, companion remains hit; true unskipped miss rejects."
+    },
+    {
+      "name": "reuse_off",
+      "oracle": "Stable v1/managed files unchanged; existing legacy memory remains eligible; dirty snapshot isolated; graph tune/replay share one run identity; v1 save omits identified winners."
+    },
+    {
+      "name": "error_restoration",
+      "oracle": "Failure restores effective controls, ambient identity and legacy choice; completion false; valid graph publications remain replayable."
+    }
+  ],
+  "environment": {
+    "cuda_available": false,
+    "dependency_source": "isolated virtual environment; local wheel cache except psutil 7.2.2 installed from package index",
+    "execution_device": "CPU",
+    "machine": "arm64",
+    "msgspec": "0.22.0",
+    "numpy": "2.5.4",
+    "platform": "Darwin",
+    "psutil": "7.2.2",
+    "python": "3.12.12",
+    "torch": "2.14.1",
+    "torch_cuda_version": null
+  },
+  "execution": "fresh local CPU process; actual selected source modules; explicitly listed CUDA/import/metadata boundaries; controlled profiling times",
+  "flashinfer_base_commit": "27c62fdf0ab1cd4014df8a15b66a975541fda83c",
+  "flashinfer_core_sha256": {
+    "flashinfer/autotune_cache.py": "1ab2ed7208ed1bf1007b1f74de29fc818c93a5ab091beea0833474177fbb29ad",
+    "flashinfer/autotuner/autotuner.py": "0db42ad90d1a3fec6f81509a2c520c1892cea0a433f5dbd7f43468a2a10243ca"
+  },
+  "flashinfer_overlay_scope": [
+    "previously qualified explicit FP8 descriptor",
+    "previously qualified benchmark-validation"
+  ],
+  "limits": [
+    "No GPU kernels or CUDA capture execution",
+    "No numerical model output comparison",
+    "No performance measurement",
+    "No production integration or registered CI test",
+    "No distributed/speculative/prefill/MegaMoE qualification",
+    "No PR"
+  ],
+  "negative_controls": [
+    {
+      "expected": "nonzero assertion rejecting cached explicit winner instead of configured default",
+      "mutation": "omit-skips"
+    },
+    {
+      "expected": "nonzero real strict replay miss after successful preparation",
+      "mutation": "replay-new-root"
+    }
+  ],
+  "publication": "Source and exact results on existing research branch; one living Markdown record outside public result directory.",
+  "reproduction": {
+    "command": "python test/manual/kernels/audit_flashinfer_scoped_handoff_controls.py --flashinfer-source <qualified-source-root> --output <result.json>",
+    "negative_suffix": "--mutation omit-skips OR --mutation replay-new-root",
+    "requirements": "CPU Python 3.12, torch 2.14.1, msgspec 0.22.0, numpy 2.5.4, psutil 7.2.2; qualified FlashInfer source including the two pinned core hashes"
+  },
+  "source_roles": {
+    "audit_flashinfer_scoped_handoff.py": "research-only adapter with no production caller",
+    "audit_flashinfer_scoped_handoff_bootstrap.py": "explicit process-isolated import/hardware boundaries",
+    "audit_flashinfer_scoped_handoff_controls.py": "four real tuner/cache control families and faulty-adapter controls"
+  },
+  "status": "protocol_ready_for_frozen_source_execution",
+  "study": "scoped_control_handoff_cpu",
+  "validation": "Frozen manual CPU checks plus expected-failure controls against faulty research adapter variants; applicable repository hooks; no production/test suite claims."
+}
