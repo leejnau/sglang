@@ -1,0 +1,88 @@
+{
+  "boundary_summary": "Real SGLang runtime configuration, central startup helper and real FlashInfer tuner/cache. CPU tensors with synthetic capability/metadata/stream/dummy-forward boundaries and controlled timing callback. See positive.json controls and boundaries.",
+  "development": "Initial development run and both fault probes preceded source freeze; final run uses frozen source with the preparation-exception case inside the actual tune context. No failed authoritative positive run.",
+  "family_results": {
+    "error_restoration": {
+      "assertions": 65,
+      "controlled_profiles": 6,
+      "status": "passed"
+    },
+    "gate_and_sequence": {
+      "assertions": 32,
+      "controlled_profiles": 3,
+      "status": "passed"
+    },
+    "reuse_off": {
+      "assertions": 44,
+      "controlled_profiles": 18,
+      "status": "passed"
+    },
+    "skips_after_startup": {
+      "assertions": 23,
+      "controlled_profiles": 6,
+      "status": "passed"
+    }
+  },
+  "independent_review": {
+    "checks": 124,
+    "findings": 0,
+    "limit": "Compares recorded file contents and byte digests; original temporary cache files were removed by the CPU fixtures.",
+    "sha256": "85a676bd0bf1d5e8dd342d7f613f988084b1806efe8f50126f3f862ad5823214"
+  },
+  "negative_controls": [
+    {
+      "mechanism": "cached explicit winner was selected instead of configured fallback",
+      "mutation": "omit-skips",
+      "status": "expected failure"
+    },
+    {
+      "mechanism": "prepared identity lost; real strict replay miss before callback completion",
+      "mutation": "replay-new-root",
+      "status": "expected failure"
+    }
+  ],
+  "raw_logs": [
+    {
+      "gzip_sha256": "9249780f485fc64bcc6d05fe1e050f89b13ac7a790e85f1c87c3594013c86bb7",
+      "path": "omit-skips.stderr.txt.gz",
+      "raw_bytes": 529,
+      "raw_sha256": "e29b4eb00b4c6d2a7c9861c53d7fd40591884349ac61b43343d5ac26cfb3c9d9"
+    },
+    {
+      "gzip_sha256": "9e35ba661e08144080a323b26d95e9e50bf7cae2edfdf0fea509c53fb0b7a40a",
+      "path": "omit-skips.stdout.txt.gz",
+      "raw_bytes": 1028,
+      "raw_sha256": "e3ee850c65cccba87ff7eba88db0da946c37a7b0d550c2ad693502581f5c1372"
+    },
+    {
+      "gzip_sha256": "cfffbf6e803c7f1d7d25744d8f4d3c23816d5230c0e25866251b8404804e2e4c",
+      "path": "positive.stderr.txt.gz",
+      "raw_bytes": 1968,
+      "raw_sha256": "a95d1dbb284181e7404eb79b96499ea111d8d647d7c7ca9ccff7e8827a4d1606"
+    },
+    {
+      "gzip_sha256": "57e5feb2ea35d31d2859439644feedd36acbf2dd044a805d4bd4da5d20262cca",
+      "path": "positive.stdout.txt.gz",
+      "raw_bytes": 39,
+      "raw_sha256": "9a6d94cfd505aa5c5752aa31c987c1d50fcdd50f45bbcdf18add9ea08926939b"
+    },
+    {
+      "gzip_sha256": "0c178c7a7752058beeff7a070f8666300d4ed69b1676a12d67c7a739c5e1136e",
+      "path": "replay-new-root.stderr.txt.gz",
+      "raw_bytes": 176,
+      "raw_sha256": "0e3fd94e7b1ef116e71de3d968860c1695871d0ffc7c4c001c758c0e4483dfe2"
+    },
+    {
+      "gzip_sha256": "5bb52d0f6e927e18ba36937c7029a4134660db4ad24cc81c4ec02559d5c953ca",
+      "path": "replay-new-root.stdout.txt.gz",
+      "raw_bytes": 1639,
+      "raw_sha256": "5a9438ed000394f8fb656c56aa8016355d343a16e603f5c47eab2e2e317881ed"
+    }
+  ],
+  "repository_checks": "All applicable repository hooks passed for source and recorded JSON artifacts; no production or registered CI files changed.",
+  "scope": "research adapter without a production caller; no real graph/kernel/model/performance qualification",
+  "source_commit": "02b783334418af5cddc711611e4b6a8b9b48905f",
+  "status": "passed",
+  "total_assertions": 164,
+  "total_controlled_profiles": 33
+}

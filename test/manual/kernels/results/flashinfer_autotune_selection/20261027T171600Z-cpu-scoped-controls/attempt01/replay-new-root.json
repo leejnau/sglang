@@ -1,0 +1,159 @@
+{
+  "status": "failed",
+  "mutation": "replay-new-root",
+  "families": {
+    "gate_and_sequence": {
+      "checks": [
+        "disable_flashinfer_autotune: graph preparation is ineligible",
+        "disable_flashinfer_autotune: no profiling",
+        "disable_flashinfer_autotune: no cache publication",
+        "disable_flashinfer_autotune: no cache directory created",
+        "enable_deterministic_inference: graph preparation is ineligible",
+        "enable_deterministic_inference: no profiling",
+        "enable_deterministic_inference: no cache publication",
+        "enable_deterministic_inference: no cache directory created",
+        "disable_cuda_graph: graph preparation is ineligible",
+        "disable_cuda_graph: no profiling",
+        "disable_cuda_graph: no cache publication",
+        "disable_cuda_graph: no cache directory created",
+        "eligible graph region exists",
+        "active capture rejects preparation",
+        "active capture has no profiling or publication",
+        "active capture rejection leaves region incomplete",
+        "sequence: actual runner selected",
+        "preparation chooses explicit winner"
+      ],
+      "profiles": [
+        {
+          "op": "sequence",
+          "tactic": -1,
+          "controlled_time": 10.0,
+          "identity": [
+            "/private/var/folders/g7/n31j1mzn7hlfly2gqx47r39c0000gp/T/scoped-handoff-nfiqp8x1/gate_and_sequence/graph",
+            "718e181cd6acb8c5"
+          ]
+        },
+        {
+          "op": "sequence",
+          "tactic": 1,
+          "controlled_time": 10.0,
+          "identity": [
+            "/private/var/folders/g7/n31j1mzn7hlfly2gqx47r39c0000gp/T/scoped-handoff-nfiqp8x1/gate_and_sequence/graph",
+            "718e181cd6acb8c5"
+          ]
+        },
+        {
+          "op": "sequence",
+          "tactic": 2,
+          "controlled_time": 1.0,
+          "identity": [
+            "/private/var/folders/g7/n31j1mzn7hlfly2gqx47r39c0000gp/T/scoped-handoff-nfiqp8x1/gate_and_sequence/graph",
+            "718e181cd6acb8c5"
+          ]
+        }
+      ],
+      "persisted": {
+        "graph/v2/718e181cd6acb8c5/entries/463d668299c4f9ee002e5350.json": {
+          "sha256": "8b1ce4ac967a8942ccca44f7a2688eaccdb4ad8dcd13c81c31215c648e6467e0",
+          "contents": {
+            "key": "('sequence', 'CpuRunner', ((2,),), ())",
+            "key_fields": {
+              "__tuple__": [
+                "sequence",
+                "CpuRunner",
+                {
+                  "__tuple__": [
+                    {
+                      "__tuple__": [
+                        2
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "__tuple__": []
+                }
+              ]
+            },
+            "profiling_policy": [
+              "cuda_graph_profile_replays",
+              1,
+              "l2_cache_policy",
+              "hot"
+            ],
+            "runner": "CpuRunner",
+            "tactic": 2
+          }
+        },
+        "graph/v2/718e181cd6acb8c5/manifest.json": {
+          "sha256": "d8e17baa137f86497d9708de7eab0e853bdf233e263f0b938563247e89fe4fe8",
+          "contents": {
+            "cache_schema": "v2",
+            "device": "synthetic-sm90",
+            "measure_execution_mode": "cuda_graph",
+            "qualification": "cpu-scoped-control"
+          }
+        }
+      }
+    }
+  },
+  "limits": "CPU control flow and persistence only; synthetic profiling times, no kernel or CUDA capture execution; research adapter has no production caller",
+  "flashinfer_source_sha256": {
+    "flashinfer/autotuner/autotuner.py": "0db42ad90d1a3fec6f81509a2c520c1892cea0a433f5dbd7f43468a2a10243ca",
+    "flashinfer/autotune_cache.py": "1ab2ed7208ed1bf1007b1f74de29fc818c93a5ab091beea0833474177fbb29ad"
+  },
+  "sglang_source_sha256": {
+    "python/sglang/srt/model_executor/runner/flashinfer_autotune.py": "64deff581665bd04830535baccfdfbdfa72794d919bc462fc469a4c42bdd68f5",
+    "python/sglang/srt/runtime_context.py": "17c498293ca672c39fea298fa104d5b5603323581cb18d695e5d8fc4f06d1bc6",
+    "test/manual/kernels/audit_flashinfer_scoped_handoff.py": "220db222d71c89ad8c392eb9d818fcb7b38797fee38a1ca63536bf276e123ffa",
+    "test/manual/kernels/audit_flashinfer_scoped_handoff_bootstrap.py": "72b517cf64966e4d29c001de0cb9cebfbe5ce4c0a8865184eb406afb6d9451b2",
+    "test/manual/kernels/audit_flashinfer_scoped_handoff_controls.py": "17b1d780b7ab98bba323be5b8308684a302bdd980f1c42e0c976d0dd495425db"
+  },
+  "boundaries": [
+    "sglang",
+    "sglang.srt",
+    "sglang.srt.utils",
+    "sglang.srt.hardware_backend",
+    "sglang.srt.layers",
+    "sglang.srt.layers.moe",
+    "sglang.srt.layers.quantization",
+    "sglang.srt.model_executor",
+    "sglang.srt.model_executor.runner",
+    "sglang.srt.speculative",
+    "sglang.srt.configs",
+    "sglang.srt.arg_groups.model_overrides",
+    "sglang.srt.utils.common",
+    "sglang.srt.utils.network",
+    "sglang.srt.distributed.device_communicators.mooncake_transfer_engine",
+    "sglang.srt.configs.model_config",
+    "sglang.srt.configs.hybrid_arch",
+    "sglang.srt.connector",
+    "sglang.utils",
+    "sglang.srt.model_executor.forward_batch_info",
+    "sglang.srt.layers.logits_processor",
+    "sglang.srt.layers.moe.flashinfer_megamoe_autotune",
+    "sglang.srt.layers.quantization.fp4_utils",
+    "sglang.srt.layers.quantization.fp8_utils",
+    "flashinfer",
+    "flashinfer.jit",
+    "flashinfer.jit.core",
+    "flashinfer.utils",
+    "flashinfer.tllm_utils"
+  ],
+  "controls": {
+    "torch": "real CPU tensors; no CUDA execution",
+    "metadata": "synthetic fixed manifest in both API and tuner module",
+    "capability": "synthetic sm90; per-tensor FP8 support true",
+    "streams": "recorded waits and no-op stream contexts",
+    "dummy_mode": "recorded entry only; no model execution",
+    "runtime": "real dummy ServerArgs resolution and namespace publication",
+    "imports": "explicit namespace/peripheral shims; unused calls fail closed",
+    "media_defaults": "empty domain policy passthrough for dummy resolution",
+    "environment": "timer cuda_event; bundled file reuse disabled; blocklist unset"
+  },
+  "error": {
+    "type": "RuntimeError",
+    "message": "autotune strict replay miss for sequence: input_shapes=((2,),), reasons=('not_found',)"
+  },
+  "traceback": "Traceback (most recent call last):\n  File \"/private/tmp/sglang-scoped-cache-study/test/manual/kernels/audit_flashinfer_scoped_handoff_controls.py\", line 515, in run\n    case(fixture)\n  File \"/private/tmp/sglang-scoped-cache-study/test/manual/kernels/audit_flashinfer_scoped_handoff_controls.py\", line 190, in gate_and_sequence\n    returned = region.run(\n               ^^^^^^^^^^^\n  File \"/private/tmp/sglang-scoped-cache-study/test/manual/kernels/audit_flashinfer_scoped_handoff.py\", line 146, in run\n    result = capture_callback()\n             ^^^^^^^^^^^^^^^^^^\n  File \"/private/tmp/sglang-scoped-cache-study/test/manual/kernels/audit_flashinfer_scoped_handoff_controls.py\", line 187, in capture\n    f.check(f.choose(\"sequence\") == 2, f\"{stage}: cached explicit winner\")\n            ^^^^^^^^^^^^^^^^^^^^\n  File \"/private/tmp/sglang-scoped-cache-study/test/manual/kernels/audit_flashinfer_scoped_handoff_controls.py\", line 101, in choose\n    runner, tactic = self.tuner.choose_one(\n                     ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/tmp/fi-next-steps-20261024/current-source-qualification/fp8-runtime-callback/flashinfer/autotuner/autotuner.py\", line 2667, in choose_one\n    is_cache_hit, runner_id, tactic, _ = self.search_cache(\n                                         ^^^^^^^^^^^^^^^^^^\n  File \"/private/tmp/fi-next-steps-20261024/current-source-qualification/fp8-runtime-callback/flashinfer/autotuner/autotuner.py\", line 2412, in search_cache\n    raise RuntimeError(\nRuntimeError: autotune strict replay miss for sequence: input_shapes=((2,),), reasons=('not_found',)\n"
+}

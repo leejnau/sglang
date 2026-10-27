@@ -1,0 +1,73 @@
+{
+  "execution": "local CPU subprocesses",
+  "expected_returncodes": [
+    0,
+    1,
+    1
+  ],
+  "python": "3.12.12",
+  "runs": [
+    {
+      "command": [
+        "/private/tmp/fi-scoped-controls-20261027/venv/bin/python",
+        "test/manual/kernels/audit_flashinfer_scoped_handoff_controls.py",
+        "--flashinfer-source",
+        "/private/tmp/fi-next-steps-20261024/current-source-qualification/fp8-runtime-callback",
+        "--output",
+        "/private/tmp/sglang-scoped-cache-study/test/manual/kernels/results/flashinfer_autotune_selection/20261027T171600Z-cpu-scoped-controls/attempt01/positive.json"
+      ],
+      "error": null,
+      "finished_at_utc": "2026-10-27T17:25:10.935049+00:00",
+      "name": "positive",
+      "returncode": 0,
+      "sha256": "e9a94e4e8c193967833eecf0bc1b409b135ff1d2287e6b935e3f100908df5780",
+      "started_at_utc": "2026-10-27T17:25:09.600407+00:00",
+      "status": "passed"
+    },
+    {
+      "command": [
+        "/private/tmp/fi-scoped-controls-20261027/venv/bin/python",
+        "test/manual/kernels/audit_flashinfer_scoped_handoff_controls.py",
+        "--flashinfer-source",
+        "/private/tmp/fi-next-steps-20261024/current-source-qualification/fp8-runtime-callback",
+        "--output",
+        "/private/tmp/sglang-scoped-cache-study/test/manual/kernels/results/flashinfer_autotune_selection/20261027T171600Z-cpu-scoped-controls/attempt01/omit-skips.json",
+        "--mutation",
+        "omit-skips"
+      ],
+      "error": {
+        "message": "handoff skip overrides cached explicit",
+        "type": "AssertionError"
+      },
+      "finished_at_utc": "2026-10-27T17:25:11.783586+00:00",
+      "name": "omit-skips",
+      "returncode": 1,
+      "sha256": "db3eedaeaa0f28a7da1d342336d904ff68b501b1a23aaa831924fc39988865b9",
+      "started_at_utc": "2026-10-27T17:25:10.935171+00:00",
+      "status": "failed"
+    },
+    {
+      "command": [
+        "/private/tmp/fi-scoped-controls-20261027/venv/bin/python",
+        "test/manual/kernels/audit_flashinfer_scoped_handoff_controls.py",
+        "--flashinfer-source",
+        "/private/tmp/fi-next-steps-20261024/current-source-qualification/fp8-runtime-callback",
+        "--output",
+        "/private/tmp/sglang-scoped-cache-study/test/manual/kernels/results/flashinfer_autotune_selection/20261027T171600Z-cpu-scoped-controls/attempt01/replay-new-root.json",
+        "--mutation",
+        "replay-new-root"
+      ],
+      "error": {
+        "message": "autotune strict replay miss for sequence: input_shapes=((2,),), reasons=('not_found',)",
+        "type": "RuntimeError"
+      },
+      "finished_at_utc": "2026-10-27T17:25:12.619442+00:00",
+      "name": "replay-new-root",
+      "returncode": 1,
+      "sha256": "1386ed7a45427aaaf07a9d72d49f83e4eb2cd6dd4aaa769750b249ad65ec0cc9",
+      "started_at_utc": "2026-10-27T17:25:11.783679+00:00",
+      "status": "failed"
+    }
+  ],
+  "source_commit": "02b783334418af5cddc711611e4b6a8b9b48905f"
+}
