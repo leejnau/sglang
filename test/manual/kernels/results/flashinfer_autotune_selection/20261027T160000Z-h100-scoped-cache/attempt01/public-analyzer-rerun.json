@@ -1,0 +1,492 @@
+{
+  "findings": [],
+  "interpretation": "One model's managed graph-cache lifecycle only. Valid negative outcomes are retained; no performance or general policy claim follows.",
+  "limits": [
+    "One H100 NVL, one actual dense FP8 model, TP1, batch-one full decode and one cold/fresh-warm pair.",
+    "Qualified pinned source overlays, not an unmodified release or latest-main claim.",
+    "No selection-quality, profiling-objective superiority, latency, throughput or general model-quality claim.",
+    "Cache selection reports do not prove every backend physical kernel identity; graph replay does not perform Python tactic lookup.",
+    "No TP/EP, concurrent tuning/stores, prefill graphs, speculative decoding or MegaMoE qualification.",
+    "Production SGLang startup policy and v1 persistence remain unchanged; no production code edits, CI triggers, external messages or PR.",
+    "Ranking/measurement-causality investigation remains paused for owner feedback; old scoped-cache prototype remains parked."
+  ],
+  "phase_requirements_met": true,
+  "plan_sha256": "0c453321d9269b410931c20f5df76a6e53f85977b81e30d4f50a971a9eea6d81",
+  "qualification_complete": true,
+  "schema": 1,
+  "source_commit": "7ee6c24fe02ec72d6f8c35fd2e4070aa097aa4d8",
+  "status": "valid_evidence",
+  "study": "actual_model_scoped_graph_cache",
+  "workers": [
+    {
+      "bootstrap_sha256": "dcda5b3dd58805ef79be41262ee9b5dc73aac9f8bca4db5ea376ee8a9e3cb57b",
+      "cache_after_startup": {
+        "flashinfer/autotune/0.0.0+unknown/sm90/17a026c01f4e2d07/rank_tp0_pp0_dp0.json": "d7a954302abde6e1aa1a49d1ec93d2299311cb0af018969fb3a187537d4b8f24"
+      },
+      "cache_before_startup": {},
+      "container_id": "bbc853fed86137f06ffe3b204c6b2a1cebef12727b38e586e74f7359c10c5e0c",
+      "coverage": [
+        {
+          "cached_default_hits": 0,
+          "default_fallback_misses": 0,
+          "dropped_records": 0,
+          "fp8_lookups": 128,
+          "hits": 128,
+          "lookups": 128,
+          "misses": 0,
+          "skipped": 0,
+          "sources": {
+            "memory": 128
+          },
+          "stage": "legacy_before"
+        },
+        {
+          "cached_default_hits": 0,
+          "default_fallback_misses": 0,
+          "dropped_records": 0,
+          "fp8_lookups": 128,
+          "hits": 128,
+          "lookups": 128,
+          "misses": 0,
+          "skipped": 0,
+          "sources": {
+            "memory": 128
+          },
+          "stage": "legacy_after"
+        },
+        {
+          "cached_default_hits": 0,
+          "default_fallback_misses": 0,
+          "dropped_records": 0,
+          "fp8_lookups": 128,
+          "hits": 128,
+          "lookups": 128,
+          "misses": 0,
+          "skipped": 0,
+          "sources": {
+            "memory": 128
+          },
+          "stage": "scoped_warmup_0"
+        },
+        {
+          "cached_default_hits": 0,
+          "default_fallback_misses": 0,
+          "dropped_records": 0,
+          "fp8_lookups": 128,
+          "hits": 128,
+          "lookups": 128,
+          "misses": 0,
+          "skipped": 0,
+          "sources": {
+            "memory": 128
+          },
+          "stage": "scoped_warmup_1"
+        },
+        {
+          "cached_default_hits": 0,
+          "default_fallback_misses": 0,
+          "dropped_records": 0,
+          "fp8_lookups": 128,
+          "hits": 128,
+          "lookups": 128,
+          "misses": 0,
+          "skipped": 0,
+          "sources": {
+            "memory": 128
+          },
+          "stage": "scoped_capture_2"
+        },
+        {
+          "cached_default_hits": 0,
+          "default_fallback_misses": 0,
+          "dropped_records": 0,
+          "fp8_lookups": 128,
+          "hits": 128,
+          "lookups": 128,
+          "misses": 0,
+          "skipped": 0,
+          "sources": {
+            "memory": 128
+          },
+          "stage": "numerical_0_eager"
+        },
+        {
+          "cached_default_hits": 0,
+          "default_fallback_misses": 0,
+          "dropped_records": 0,
+          "fp8_lookups": 0,
+          "hits": 0,
+          "lookups": 0,
+          "misses": 0,
+          "skipped": 0,
+          "sources": {},
+          "stage": "numerical_1_graph"
+        },
+        {
+          "cached_default_hits": 0,
+          "default_fallback_misses": 0,
+          "dropped_records": 0,
+          "fp8_lookups": 128,
+          "hits": 128,
+          "lookups": 128,
+          "misses": 0,
+          "skipped": 0,
+          "sources": {
+            "memory": 128
+          },
+          "stage": "numerical_2_eager"
+        },
+        {
+          "cached_default_hits": 0,
+          "default_fallback_misses": 0,
+          "dropped_records": 0,
+          "fp8_lookups": 0,
+          "hits": 0,
+          "lookups": 0,
+          "misses": 0,
+          "skipped": 0,
+          "sources": {},
+          "stage": "numerical_3_graph"
+        },
+        {
+          "cached_default_hits": 0,
+          "default_fallback_misses": 0,
+          "dropped_records": 0,
+          "fp8_lookups": 128,
+          "hits": 128,
+          "lookups": 128,
+          "misses": 0,
+          "skipped": 0,
+          "sources": {
+            "memory": 128
+          },
+          "stage": "numerical_4_eager"
+        },
+        {
+          "cached_default_hits": 0,
+          "default_fallback_misses": 0,
+          "dropped_records": 0,
+          "fp8_lookups": 0,
+          "hits": 0,
+          "lookups": 0,
+          "misses": 0,
+          "skipped": 0,
+          "sources": {},
+          "stage": "numerical_5_graph"
+        }
+      ],
+      "eligible_linear_layers": 128,
+      "findings": [],
+      "graph_profile_count": 36,
+      "legacy_profile_count": 36,
+      "managed_after_numerics": {
+        "v2/cef00a54daa82fc5/entries/402d0d6c1908a56bedc5123e.json": "86440d65b6f7df086f7a6ed155bea6aaa118cb84ab5c90abe39ccdbee5e88bb8",
+        "v2/cef00a54daa82fc5/entries/50cf908289a68d95eb237cac.json": "084327470cad28c36c1aa0337124554367b05e779bf9b56b554a4d33e264b087",
+        "v2/cef00a54daa82fc5/entries/9e7e4eeaf7d2513a6e2ff209.json": "2c1cbf87d060f56f04bed12a2e4ad3274d064e6a26d11239b36977f1fe144243",
+        "v2/cef00a54daa82fc5/entries/a9fde641697e2870bec801e2.json": "6550e2e8a8940090fed8c608c4f58a7c61d1bad829b39b7f3025e5607a576269",
+        "v2/cef00a54daa82fc5/manifest.json": "ae560a5a664ace45e4174c0c80d33adb70e968922c862724d0f66d15a228909b"
+      },
+      "managed_before_startup": {},
+      "managed_identity": [
+        "/study/runtime-attempt01/managed-cache",
+        "cef00a54daa82fc5"
+      ],
+      "phase": "cold",
+      "post_startup_profile_count": 0,
+      "report_controls": [
+        {
+          "cached_default_hits": 0,
+          "dropped_records": 0,
+          "fallback_default_misses": 1,
+          "groups": [
+            {
+              "count": 1,
+              "op": "replay_coverage_cpu_control",
+              "source": "fallback",
+              "status": "miss",
+              "tactic_repr": "-1"
+            }
+          ],
+          "hits": 0,
+          "intended_fp8_gemm_records": 0,
+          "lookups": 1,
+          "misses": 1,
+          "skipped": 0
+        },
+        {
+          "cached_default_hits": 1,
+          "dropped_records": 0,
+          "fallback_default_misses": 0,
+          "groups": [
+            {
+              "count": 1,
+              "op": "replay_coverage_cpu_control",
+              "source": "memory",
+              "status": "hit",
+              "tactic_repr": "-1"
+            }
+          ],
+          "hits": 1,
+          "intended_fp8_gemm_records": 0,
+          "lookups": 1,
+          "misses": 0,
+          "skipped": 0
+        }
+      ],
+      "result_file": "cold.json",
+      "result_sha256": "528a8583ddd8416efa9ee8da46c49fcf7c239574bc3f9b1b33d76c3b75301f43",
+      "strict_negative": {
+        "cached_default_hits": 0,
+        "default_fallback_misses": 1,
+        "dropped_records": 0,
+        "fp8_lookups": 1,
+        "hits": 0,
+        "lookups": 1,
+        "misses": 1,
+        "skipped": 0,
+        "sources": {
+          "fallback": 1
+        }
+      }
+    },
+    {
+      "bootstrap_sha256": "057cca6ec6a0b252a2da065942c0c4b89d91238f702a117ae8334a9b3ef44c34",
+      "cache_after_startup": {
+        "flashinfer/autotune/0.0.0+unknown/sm90/17a026c01f4e2d07/rank_tp0_pp0_dp0.json": "d7a954302abde6e1aa1a49d1ec93d2299311cb0af018969fb3a187537d4b8f24"
+      },
+      "cache_before_startup": {
+        "flashinfer/autotune/0.0.0+unknown/sm90/17a026c01f4e2d07/rank_tp0_pp0_dp0.json": "d7a954302abde6e1aa1a49d1ec93d2299311cb0af018969fb3a187537d4b8f24"
+      },
+      "container_id": "d726ce1d577057e53badc01d90c6fe6589ce79a6dcecd5e44ad249f16b544204",
+      "coverage": [
+        {
+          "cached_default_hits": 0,
+          "default_fallback_misses": 0,
+          "dropped_records": 0,
+          "fp8_lookups": 128,
+          "hits": 128,
+          "lookups": 128,
+          "misses": 0,
+          "skipped": 0,
+          "sources": {
+            "legacy": 128
+          },
+          "stage": "legacy_before"
+        },
+        {
+          "cached_default_hits": 0,
+          "default_fallback_misses": 0,
+          "dropped_records": 0,
+          "fp8_lookups": 128,
+          "hits": 128,
+          "lookups": 128,
+          "misses": 0,
+          "skipped": 0,
+          "sources": {
+            "legacy": 128
+          },
+          "stage": "legacy_after"
+        },
+        {
+          "cached_default_hits": 0,
+          "default_fallback_misses": 0,
+          "dropped_records": 0,
+          "fp8_lookups": 128,
+          "hits": 128,
+          "lookups": 128,
+          "misses": 0,
+          "skipped": 0,
+          "sources": {
+            "memory": 128
+          },
+          "stage": "scoped_warmup_0"
+        },
+        {
+          "cached_default_hits": 0,
+          "default_fallback_misses": 0,
+          "dropped_records": 0,
+          "fp8_lookups": 128,
+          "hits": 128,
+          "lookups": 128,
+          "misses": 0,
+          "skipped": 0,
+          "sources": {
+            "memory": 128
+          },
+          "stage": "scoped_warmup_1"
+        },
+        {
+          "cached_default_hits": 0,
+          "default_fallback_misses": 0,
+          "dropped_records": 0,
+          "fp8_lookups": 128,
+          "hits": 128,
+          "lookups": 128,
+          "misses": 0,
+          "skipped": 0,
+          "sources": {
+            "memory": 128
+          },
+          "stage": "scoped_capture_2"
+        },
+        {
+          "cached_default_hits": 0,
+          "default_fallback_misses": 0,
+          "dropped_records": 0,
+          "fp8_lookups": 128,
+          "hits": 128,
+          "lookups": 128,
+          "misses": 0,
+          "skipped": 0,
+          "sources": {
+            "legacy": 128
+          },
+          "stage": "numerical_0_eager"
+        },
+        {
+          "cached_default_hits": 0,
+          "default_fallback_misses": 0,
+          "dropped_records": 0,
+          "fp8_lookups": 0,
+          "hits": 0,
+          "lookups": 0,
+          "misses": 0,
+          "skipped": 0,
+          "sources": {},
+          "stage": "numerical_1_graph"
+        },
+        {
+          "cached_default_hits": 0,
+          "default_fallback_misses": 0,
+          "dropped_records": 0,
+          "fp8_lookups": 128,
+          "hits": 128,
+          "lookups": 128,
+          "misses": 0,
+          "skipped": 0,
+          "sources": {
+            "legacy": 128
+          },
+          "stage": "numerical_2_eager"
+        },
+        {
+          "cached_default_hits": 0,
+          "default_fallback_misses": 0,
+          "dropped_records": 0,
+          "fp8_lookups": 0,
+          "hits": 0,
+          "lookups": 0,
+          "misses": 0,
+          "skipped": 0,
+          "sources": {},
+          "stage": "numerical_3_graph"
+        },
+        {
+          "cached_default_hits": 0,
+          "default_fallback_misses": 0,
+          "dropped_records": 0,
+          "fp8_lookups": 128,
+          "hits": 128,
+          "lookups": 128,
+          "misses": 0,
+          "skipped": 0,
+          "sources": {
+            "legacy": 128
+          },
+          "stage": "numerical_4_eager"
+        },
+        {
+          "cached_default_hits": 0,
+          "default_fallback_misses": 0,
+          "dropped_records": 0,
+          "fp8_lookups": 0,
+          "hits": 0,
+          "lookups": 0,
+          "misses": 0,
+          "skipped": 0,
+          "sources": {},
+          "stage": "numerical_5_graph"
+        }
+      ],
+      "eligible_linear_layers": 128,
+      "findings": [],
+      "graph_profile_count": 0,
+      "legacy_profile_count": 0,
+      "managed_after_numerics": {
+        "v2/cef00a54daa82fc5/entries/402d0d6c1908a56bedc5123e.json": "86440d65b6f7df086f7a6ed155bea6aaa118cb84ab5c90abe39ccdbee5e88bb8",
+        "v2/cef00a54daa82fc5/entries/50cf908289a68d95eb237cac.json": "084327470cad28c36c1aa0337124554367b05e779bf9b56b554a4d33e264b087",
+        "v2/cef00a54daa82fc5/entries/9e7e4eeaf7d2513a6e2ff209.json": "2c1cbf87d060f56f04bed12a2e4ad3274d064e6a26d11239b36977f1fe144243",
+        "v2/cef00a54daa82fc5/entries/a9fde641697e2870bec801e2.json": "6550e2e8a8940090fed8c608c4f58a7c61d1bad829b39b7f3025e5607a576269",
+        "v2/cef00a54daa82fc5/manifest.json": "ae560a5a664ace45e4174c0c80d33adb70e968922c862724d0f66d15a228909b"
+      },
+      "managed_before_startup": {
+        "v2/cef00a54daa82fc5/entries/402d0d6c1908a56bedc5123e.json": "86440d65b6f7df086f7a6ed155bea6aaa118cb84ab5c90abe39ccdbee5e88bb8",
+        "v2/cef00a54daa82fc5/entries/50cf908289a68d95eb237cac.json": "084327470cad28c36c1aa0337124554367b05e779bf9b56b554a4d33e264b087",
+        "v2/cef00a54daa82fc5/entries/9e7e4eeaf7d2513a6e2ff209.json": "2c1cbf87d060f56f04bed12a2e4ad3274d064e6a26d11239b36977f1fe144243",
+        "v2/cef00a54daa82fc5/entries/a9fde641697e2870bec801e2.json": "6550e2e8a8940090fed8c608c4f58a7c61d1bad829b39b7f3025e5607a576269",
+        "v2/cef00a54daa82fc5/manifest.json": "ae560a5a664ace45e4174c0c80d33adb70e968922c862724d0f66d15a228909b"
+      },
+      "managed_identity": [
+        "/study/runtime-attempt01/managed-cache",
+        "cef00a54daa82fc5"
+      ],
+      "phase": "warm",
+      "post_startup_profile_count": 0,
+      "report_controls": [
+        {
+          "cached_default_hits": 0,
+          "dropped_records": 0,
+          "fallback_default_misses": 1,
+          "groups": [
+            {
+              "count": 1,
+              "op": "replay_coverage_cpu_control",
+              "source": "fallback",
+              "status": "miss",
+              "tactic_repr": "-1"
+            }
+          ],
+          "hits": 0,
+          "intended_fp8_gemm_records": 0,
+          "lookups": 1,
+          "misses": 1,
+          "skipped": 0
+        },
+        {
+          "cached_default_hits": 1,
+          "dropped_records": 0,
+          "fallback_default_misses": 0,
+          "groups": [
+            {
+              "count": 1,
+              "op": "replay_coverage_cpu_control",
+              "source": "memory",
+              "status": "hit",
+              "tactic_repr": "-1"
+            }
+          ],
+          "hits": 1,
+          "intended_fp8_gemm_records": 0,
+          "lookups": 1,
+          "misses": 0,
+          "skipped": 0
+        }
+      ],
+      "result_file": "warm.json",
+      "result_sha256": "0ef33bb713c71177b79078fa633389253f820aa44c0c70b4575f825665a653f1",
+      "strict_negative": {
+        "cached_default_hits": 0,
+        "default_fallback_misses": 1,
+        "dropped_records": 0,
+        "fp8_lookups": 1,
+        "hits": 0,
+        "lookups": 1,
+        "misses": 1,
+        "skipped": 0,
+        "sources": {
+          "fallback": 1
+        }
+      }
+    }
+  ]
+}

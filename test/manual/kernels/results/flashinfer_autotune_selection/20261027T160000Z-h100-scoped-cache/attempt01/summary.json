@@ -1,0 +1,122 @@
+{
+  "schema": 1,
+  "study": "actual_model_scoped_graph_cache",
+  "status": "passed",
+  "execution_commit": "7ee6c24fe02ec72d6f8c35fd2e4070aa097aa4d8",
+  "qualification_complete": true,
+  "findings": [],
+  "question": "Can managed graph winners coexist with legacy startup/eager winners through actual SGLang cold/warm startup and retained graph replay?",
+  "environment": {
+    "gpu": "NVIDIA H100 NVL",
+    "tensor_parallel_size": 1,
+    "model": "nvidia/Llama-3.1-8B-Instruct-FP8",
+    "revision": "42d9515ebd69eea3a87351d079c671c3c5ff0a31",
+    "decode_batch_size": 1,
+    "flashinfer": "Pinned base 27c62fdf0ab1cd4014df8a15b66a975541fda83c with previously qualified explicit-FP8 descriptor and benchmark-validation overlays; exact source/native/container hashes are in the frozen plan and raw provenance."
+  },
+  "outcomes": {
+    "cold_profiles": {
+      "legacy_startup": 36,
+      "managed_graph_tuning": 36
+    },
+    "warm_profiles_total": 0,
+    "strict_graph_hits": {
+      "per_process": 384,
+      "pair": 768,
+      "actual_capture_per_process": 128
+    },
+    "legacy_decode_hits": {
+      "prepared_before_after_per_process": 256,
+      "numerical_eager_per_process": 384,
+      "pair": 1280
+    },
+    "empty_store_negative": {
+      "processes": 2,
+      "misses_per_process": 1,
+      "profiling": 0,
+      "publication": 0,
+      "legacy_state_restored": true
+    },
+    "legacy_persisted_winners": 4,
+    "managed_persisted_winners": 4,
+    "cold_to_warm_files_byte_exact": true,
+    "graph_and_legacy_different_tactics": {
+      "gemm_geometries": 2,
+      "total_gemm_geometries": 4,
+      "layer_calls_per_forward": 64,
+      "total_layer_calls_per_forward": 128,
+      "interpretation": "Natural distinct choices strengthen isolation evidence; no performance conclusion."
+    },
+    "numerics": {
+      "eager_graph_comparisons": 6,
+      "maximum_absolute_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "changed_input_changed_output": true,
+      "restored_input_restored_output": true,
+      "retained_graph_replays": 6,
+      "python_lookup_calls_during_graph_replay": 0,
+      "serving_profiles": 0
+    },
+    "local_controls": {
+      "worker_orchestration": 9,
+      "analyzer": 25,
+      "launcher": 16,
+      "transport": 5
+    },
+    "pinned_api_checks_in_preflight": 10,
+    "independent_raw_checks": 517
+  },
+  "scope_details": [
+    "Actual legacy startup finishes before graph-scoped tuning. Existing two backend warmups and actual capture remain intact; extra prepared calls restore supplied attention state.",
+    "Explicit graph policy identifies the research managed store; production policy and v1 persistence are unchanged.",
+    "Numerical execution is outside the identified graph scope. Legacy lookup reports use a nonpersistent no-policy diagnostic scope whose effective legacy identity and controls are checked; this is not a literally context-free Python call.",
+    "Fresh identical prefix/KV state, changed/restored tokens, output poisoning and original graph/output owner checks prevent stale-output numerical passes.",
+    "Numerical-prefix M=13 eager fallback warnings are retained. Prefill cache coverage is outside this batch-one decode qualification."
+  ],
+  "preservation": {
+    "original_private_archive_sha256": "e9d62a769d78bf20dbec12683f92970caf151d40b49e21968f932c7ff81e2710",
+    "public_archive_sha256": "1d6a0f77be4b3fb0a9ecce52841fede0af698e3691f67748997a23c04a9bd57f",
+    "private_archive_preserved_durably": true,
+    "derived_bootstrap_files": 4,
+    "scientific_fields_modified": 0,
+    "mapping": "public-manifest.json",
+    "public_reproduction": "The frozen analyzer passes on curated raw. Only two worker bootstrap file hashes differ from original analysis, with original/derived hashes explicitly mapped. Full native-provider outer audit also needs the privately preserved native files.",
+    "public_byte_exact_files": 70
+  },
+  "reproduction": {
+    "extract": "Extract raw-public.tar.gz into an empty directory.",
+    "analyze_argv": [
+      "python3",
+      "test/manual/kernels/results/flashinfer_autotune_selection/20261027T160000Z-h100-scoped-cache/analyze.py",
+      "--raw-root",
+      "<extracted>/raw",
+      "--source-root",
+      "<repository>",
+      "--expected-source-commit",
+      "7ee6c24fe02ec72d6f8c35fd2e4070aa097aa4d8",
+      "--phases",
+      "cold",
+      "warm",
+      "--output",
+      "<new-analysis.json>"
+    ]
+  },
+  "resources": {
+    "allocation": "2880325",
+    "elapsed": "00:11:27",
+    "released": true,
+    "gpu_processes_after": 0,
+    "user_queue_empty": true,
+    "attempts": 1,
+    "retries": 0
+  },
+  "decision": "The merged scoped-cache API passed this bounded SGLang lifecycle qualification. No lifecycle fix is indicated for this configuration. Production adoption and measurement-policy choice still need separate evidence and a decision; ranking investigation remains paused for owner feedback.",
+  "limits": [
+    "One dense FP8 model, one H100, TP1 and ordinary batch-one full decode.",
+    "No serving-performance, candidate-selection superiority or general model-quality claim.",
+    "No distributed, concurrent-store, speculative, prefill-graph or MegaMoE qualification.",
+    "Qualified source overlays; not a stock-release or latest-main result.",
+    "No production code changes, CI triggers, external messages or PR."
+  ]
+}

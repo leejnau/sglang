@@ -1,0 +1,170 @@
+{
+  "status": "passed",
+  "execution_commit": "7ee6c24fe02ec72d6f8c35fd2e4070aa097aa4d8",
+  "control_results": {
+    "worker": {
+      "errors": 0,
+      "failures": 0,
+      "tests": 9
+    },
+    "analyzer": {
+      "analyzer_sha256": "fcba6f380455a601b7091378b0a9c80c1a8c63e8a2207c6b615138cd6872ccfc",
+      "controls": [
+        {
+          "name": "complete_cold_phase",
+          "passed": true
+        },
+        {
+          "name": "complete_fresh_warm_phase",
+          "passed": true
+        },
+        {
+          "name": "count_conservation",
+          "passed": true
+        },
+        {
+          "name": "missing_capture",
+          "passed": true
+        },
+        {
+          "name": "capture_flag",
+          "passed": true
+        },
+        {
+          "name": "false_fallback_hit",
+          "passed": true
+        },
+        {
+          "name": "aggregate_disagreement",
+          "passed": true
+        },
+        {
+          "name": "missing_scope_snapshot",
+          "passed": true
+        },
+        {
+          "name": "policy_mismatch_is_finding",
+          "passed": true
+        },
+        {
+          "name": "negative_did_not_raise",
+          "passed": true
+        },
+        {
+          "name": "negative_profiled",
+          "passed": true
+        },
+        {
+          "name": "legacy_restoration_failed",
+          "passed": true
+        },
+        {
+          "name": "managed_file_rewritten",
+          "passed": true
+        },
+        {
+          "name": "numerical_difference_retained",
+          "passed": true
+        },
+        {
+          "name": "unchanged_input_challenge",
+          "passed": true
+        },
+        {
+          "name": "changed_graph_owner",
+          "passed": true
+        },
+        {
+          "name": "missing_numerical_reports",
+          "passed": true
+        },
+        {
+          "name": "numerical_profiled",
+          "passed": true
+        },
+        {
+          "name": "warm_missing_load",
+          "passed": true
+        },
+        {
+          "name": "wrong_warm_load_bytes",
+          "passed": true
+        },
+        {
+          "name": "missing_target_op",
+          "passed": true
+        },
+        {
+          "name": "fresh_warm_graph_decisions_bound",
+          "passed": true
+        },
+        {
+          "name": "fresh_warm_legacy_decisions_bound",
+          "passed": true
+        },
+        {
+          "name": "fresh_warm_requires_exact_files",
+          "passed": true
+        },
+        {
+          "name": "cached_default_is_genuine_hit",
+          "passed": true
+        }
+      ],
+      "count": 25,
+      "status": "passed"
+    },
+    "launcher": {
+      "status": "passed",
+      "checks": 16,
+      "cases": [
+        "complete cold qualification proceeds to fresh warm",
+        "reject stale/invalid cold record 0",
+        "reject stale/invalid cold record 1",
+        "reject stale/invalid cold record 2",
+        "reject stale/invalid cold record 3",
+        "reject stale/invalid cold record 4",
+        "reject stale/invalid cold record 5",
+        "reject stale/invalid cold record 6",
+        "reject failed process cold.exit-code",
+        "reject failed process launcher-cold.exit-code",
+        "both warm persistent roots equal cold snapshots",
+        "reject altered warm bytes sglang-cache/winners.json",
+        "reject altered warm bytes managed-cache/winner.json",
+        "reject persistent-cache symlink",
+        "cold requires both persistent roots absent",
+        "reject preexisting cold managed root"
+      ]
+    },
+    "stream": {
+      "status": "passed",
+      "checks": 5,
+      "cases": [
+        "exact ordered piece bytes and manifest streamed",
+        "reject frozen manifest mismatch",
+        "reject frozen stream-plan mismatch",
+        "reject modified piece with original length and timestamp",
+        "reject symlink piece"
+      ]
+    }
+  },
+  "source_sha256": {
+    "test/manual/kernels/audit_flashinfer_scoped_cache.py": "74d183e09cd3b7af61d16451b16daf8011954643073c75fd1bc26489b58df46f",
+    "test/manual/kernels/audit_flashinfer_scoped_cache_controls.py": "9c7e9224c523f08cb8cb13f2351fb82519273891cba24442ff577bc35dd155e9",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261027T160000Z-h100-scoped-cache/analyze.py": "fcba6f380455a601b7091378b0a9c80c1a8c63e8a2207c6b615138cd6872ccfc",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261027T160000Z-h100-scoped-cache/analyzer_controls.py": "2dd2f52b216abe2b062f6623c8083a7a98213edd14b8eca08b3599e6bf3c7b2b",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261027T160000Z-h100-scoped-cache/import_preflight.py": "99589a907c281d7a9e9ac842fde0b156fa46b48b70d431294ca61315c9dc10be",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261027T160000Z-h100-scoped-cache/launch.sh": "1045a4d31cadc16b7266d94f928f9cf861b15991869d61f382ccfc4b83e0b7d4",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261027T160000Z-h100-scoped-cache/launcher_controls.py": "0ebd4f0f39a3d568eaa20e2c3476b805fc3b347edfc6cb77700dad5576afdf4b",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261027T160000Z-h100-scoped-cache/make_provenance.py": "dc07f719ba6402c2f488c470da9d32a708e1effaefa1b9648b982d1ec778b999",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261027T160000Z-h100-scoped-cache/model-manifest.json": "d8a4e2c07bfc6193653f3381e41e3fe23ddf923f5e8082fe2c5c6db55df680a9",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261027T160000Z-h100-scoped-cache/outer_audit.py": "172e9154c3725ec103eae8a39403eac33014a4ed580ff51b481cbaa860f0cf3b",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261027T160000Z-h100-scoped-cache/plan.json": "0c453321d9269b410931c20f5df76a6e53f85977b81e30d4f50a971a9eea6d81",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261027T160000Z-h100-scoped-cache/preserve.sh": "f06a7318141bd881d1af3ff01e5a13b1f6ffa9391b954ea7e8ef0c9fafcc9a08",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261027T160000Z-h100-scoped-cache/stage.sh": "ffcb2dd8d6628b7b800bed91cb13bad2b94b471730614fc8ef90054489115738",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261027T160000Z-h100-scoped-cache/stream_controls.py": "107c52bbc23b3539c49a16a1131a12cc5aedb49cfdb4c7afba4f7de830c27b60",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261027T160000Z-h100-scoped-cache/stream_model.py": "68aef5e46417db78bf405c6b3eeec2e4e795842e73e8463858a64f168f7ab813"
+  },
+  "repository_checks": "All applicable commit hooks passed; analyzer executable-bit failure corrected before frozen commit.",
+  "production_files_changed": false
+}

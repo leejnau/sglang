@@ -1,0 +1,27 @@
+{
+  "comparison_source_sha256": "3928222d29d94c635a4cf9dd8b253d0095363c096a9bd6106b9a86e69a4b735a",
+  "differences": [
+    {
+      "derived": "dcda5b3dd58805ef79be41262ee9b5dc73aac9f8bca4db5ea376ee8a9e3cb57b",
+      "original": "c6659dc364b509d5ba3a50b515428b1a280be99f34b8a12eeefcd9016a99457e",
+      "path": "workers[0].bootstrap_sha256"
+    },
+    {
+      "derived": "057cca6ec6a0b252a2da065942c0c4b89d91238f702a117ae8334a9b3ef44c34",
+      "original": "3f02ef3e78eb9bc9961768ceb62c912c12b092d405e1b6e791b0871aa739d84d",
+      "path": "workers[1].bootstrap_sha256"
+    }
+  ],
+  "findings": [],
+  "limits": [
+    "No original raw, frozen source, protocol or scientific result was modified. Private ELF/build artifacts remain required for full provider audit."
+  ],
+  "original_analysis_sha256": "670b797de1046ee992650031f0572101f44b43a361f55991bdfb815ad40b4754",
+  "other_fields_equal": true,
+  "public_manifest_sha256": "f052b2ff3222036c3f419f6b57bf78747a6532d307f8765266d22c46e537b5da",
+  "public_rerun_analysis_sha256": "368426730901f172cad5392917592f3d3f587020c2c8c974b58b2cbe3598dafb",
+  "qualification_complete": true,
+  "scope": "Exact scientific analyzer output comparison; documented bootstrap file-hash substitution only",
+  "source_commit": "7ee6c24fe02ec72d6f8c35fd2e4070aa097aa4d8",
+  "status": "passed"
+}

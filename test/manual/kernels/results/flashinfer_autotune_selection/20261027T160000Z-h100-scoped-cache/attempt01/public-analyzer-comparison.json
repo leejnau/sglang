@@ -1,0 +1,59 @@
+{
+  "analyzer_source_sha256": "fcba6f380455a601b7091378b0a9c80c1a8c63e8a2207c6b615138cd6872ccfc",
+  "differences": [
+    {
+      "derived": "dcda5b3dd58805ef79be41262ee9b5dc73aac9f8bca4db5ea376ee8a9e3cb57b",
+      "original": "c6659dc364b509d5ba3a50b515428b1a280be99f34b8a12eeefcd9016a99457e",
+      "path": "workers[0].bootstrap_sha256"
+    },
+    {
+      "derived": "057cca6ec6a0b252a2da065942c0c4b89d91238f702a117ae8334a9b3ef44c34",
+      "original": "3f02ef3e78eb9bc9961768ceb62c912c12b092d405e1b6e791b0871aa739d84d",
+      "path": "workers[1].bootstrap_sha256"
+    }
+  ],
+  "findings": [],
+  "frozen_source": "7ee6c24fe02ec72d6f8c35fd2e4070aa097aa4d8",
+  "limits": [
+    "Only bootstrap file hashes change because explicitly indexed unrelated import-inventory entries are omitted. Original bootstrap/native/source/worker bindings remain available and unchanged outside the documented inventory derivation.",
+    "Public replay is scientific analyzer validation; omitted private ELF/build files are required to rerun full native-provider outer audit.",
+    "No new model/GPU experiment or source modification."
+  ],
+  "numerics_descriptive": [
+    {
+      "allclose": true,
+      "argmax_equal": true,
+      "graph_profiles": 36,
+      "legacy_profiles": 36,
+      "maximum_abs_errors": {
+        "changed": 0.0,
+        "original": 0.0,
+        "restored": 0.0
+      },
+      "phase": "cold"
+    },
+    {
+      "allclose": true,
+      "argmax_equal": true,
+      "graph_profiles": 0,
+      "legacy_profiles": 0,
+      "maximum_abs_errors": {
+        "changed": 0.0,
+        "original": 0.0,
+        "restored": 0.0
+      },
+      "phase": "warm"
+    }
+  ],
+  "original_analysis_sha256": "670b797de1046ee992650031f0572101f44b43a361f55991bdfb815ad40b4754",
+  "other_fields_equal": true,
+  "public_rerun_analysis_sha256": "368426730901f172cad5392917592f3d3f587020c2c8c974b58b2cbe3598dafb",
+  "qualification_complete": true,
+  "scope": "Frozen analyzer reproduced on curated public evidence; exact scientific-output comparison",
+  "status": "passed",
+  "worker_original_sha256": {
+    "cold": "528a8583ddd8416efa9ee8da46c49fcf7c239574bc3f9b1b33d76c3b75301f43",
+    "warm": "0ef33bb713c71177b79078fa633389253f820aa44c0c70b4575f825665a653f1"
+  },
+  "worker_source_sha256": "74d183e09cd3b7af61d16451b16daf8011954643073c75fd1bc26489b58df46f"
+}
