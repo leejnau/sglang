@@ -1,0 +1,70 @@
+{
+  "controls": [
+    {
+      "name": "real_default_miss",
+      "passed": true
+    },
+    {
+      "name": "cached_default_is_a_hit",
+      "passed": true
+    },
+    {
+      "name": "isolated_control_normalization",
+      "passed": true
+    },
+    {
+      "name": "empty_report_rejected",
+      "passed": true
+    },
+    {
+      "name": "missing_record_rejected",
+      "passed": true
+    },
+    {
+      "name": "fallback_relabel_rejected",
+      "passed": true
+    },
+    {
+      "name": "explicit_truncation_preserves_total",
+      "passed": true
+    },
+    {
+      "name": "complete_worker_payload",
+      "passed": true
+    },
+    {
+      "name": "valid_capture_miss_is_a_finding",
+      "passed": true
+    },
+    {
+      "name": "warm_profiling_is_a_finding",
+      "passed": true
+    },
+    {
+      "name": "startup_only_protocol_is_outside_report_scope",
+      "passed": true
+    },
+    {
+      "name": "observed_protocol_rejected",
+      "passed": true
+    },
+    {
+      "name": "missing_actual_capture_rejected",
+      "passed": true
+    },
+    {
+      "name": "observer_control_change_rejected",
+      "passed": true
+    },
+    {
+      "name": "different_kv_prefix_rejected",
+      "passed": true
+    },
+    {
+      "name": "control_state_mutation_rejected",
+      "passed": true
+    }
+  ],
+  "count": 16,
+  "status": "passed"
+}

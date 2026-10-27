@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "batch_id": "20261027T030000Z-h100-replay-coverage",
+  "question": "Does ordinary SGLang decode capture consume startup-tuned FlashInfer winners, including after a fresh-process warm restart?",
+  "scope": "Report-only qualification of one actual dense FP8 model startup and batch-one full decode graph; no performance comparison.",
+  "research_parent": "1f4a810aa5c9ed3fca638d4bda464b10aa001cc4",
+  "research_branch": "leejnau/sglang:experiment/flashinfer-candidate-selection",
+  "model": {
+    "repository": "nvidia/Llama-3.1-8B-Instruct-FP8",
+    "revision": "42d9515ebd69eea3a87351d079c671c3c5ff0a31",
+    "quantization": "modelopt_fp8",
+    "weights": "Real serialized checkpoint, with file hashes bound before execution; no dummy weights or predicate overrides.",
+    "manifest_sha256": "d8a4e2c07bfc6193653f3381e41e3fe23ddf923f5e8082fe2c5c6db55df680a9",
+    "stream_plan_sha256": "734f8e8d83f560f6c3e19063736149d238f34cf46adba3b1b557652d6523fb47"
+  },
+  "environment": {
+    "image": "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
+    "gpu": "NVIDIA H100 NVL",
+    "gpu_uuid": "GPU-240958a2-e8e1-3bac-b767-365c9e0b97bd",
+    "driver": "580.159.04",
+    "torch": "2.14.1+cu130",
+    "tensor_parallel_size": 1,
+    "pipeline_parallel_size": 1,
+    "data_parallel_size": 1,
+    "attention_backend": "triton",
+    "kv_cache_dtype": "bfloat16",
+    "model_dtype": "bfloat16",
+    "context_length": 256,
+    "max_total_tokens": 512,
+    "max_running_requests": 1,
+    "mem_fraction_static": 0.7,
+    "disable_overlap_schedule": true,
+    "speculation": false,
+    "prefill_graph": false,
+    "decode_graph_batch_sizes": [
+      1
+    ],
+    "flashinfer": "Base 27c62fdf0ab1cd4014df8a15b66a975541fda83c plus the qualified explicit-FP8 descriptor and benchmark-validation overlays; reuse exact prior native GEMM. This is not a stock-release claim. The #7521 debug guard is not overlaid.",
+    "flashinfer_source_sha256": {
+      "autotuner/autotuner.py": "0db42ad90d1a3fec6f81509a2c520c1892cea0a433f5dbd7f43468a2a10243ca",
+      "autotune_cache.py": "1ab2ed7208ed1bf1007b1f74de29fc818c93a5ab091beea0833474177fbb29ad",
+      "gemm/gemm_base.py": "0bba9240029a5e09f331e7a2267f7067e126d57a7a341ca535f7c9557599adca"
+    }
+  },
+  "protocol": {
+    "processes": [
+      "cold",
+      "warm"
+    ],
+    "cold": "Start with an empty isolated SGLang autotune directory and run the actual startup tuner, existing decode warmups and capture.",
+    "warm": "Start a new process with the cold process's v1 cache, using the same checkpoint, configuration, source, environment and cache path.",
+    "observation": "Wrap only the existing forward calls in the ordinary full decode capture backend. Separate prepared warmup calls from actual CUDA capture using capture state. Do not add coverage forwards.",
+    "replay_context": {
+      "mode": "replay",
+      "persistent_cache": false,
+      "cache_scope": "context",
+      "strict_replay": false,
+      "measurement_policy": "unspecified",
+      "skip_ops": "unspecified; preserve actual serving state",
+      "tuning_buckets": "unspecified; preserve actual serving state",
+      "round_up": "unspecified; preserve actual serving state"
+    },
+    "numerics": "After startup coverage is recorded, compare eager execution and actual retained graph replay on matching fresh request/KV state. Check original, changed and restored token inputs; clone outputs and poison graph-owned logits before replay.",
+    "numerical_calls_are_coverage": false,
+    "numerical_atol": 0.05,
+    "numerical_rtol": 0.01,
+    "numerical_additional_checks": [
+      "finite outputs",
+      "matching argmax",
+      "changed input changes output",
+      "restored input restores output within fixed tolerance"
+    ],
+    "resource_bound_minutes": 30,
+    "source_freeze": "Commit and push the complete worker, launcher, model manifest and protocol before GPU execution. Preserve every failed setup/admission attempt with its original source attribution."
+  },
+  "validity_requirements": [
+    "Real ModelRunner startup and ordinary full decode capture, using the intended ModelOpt FP8 linear path.",
+    "Positive expected FlashInfer operation coverage in both warmup and actual capture; empty reports cannot pass.",
+    "Cached default tactic -1 and fallback misses remain distinct in analysis.",
+    "No explicit timing policy, new managed store, changed skip/bucket controls or selection rule.",
+    "Observer entry/exit preserves legacy cache identity, tuning state and serving controls; original results are returned unchanged.",
+    "No ambient managed store or protocol-based operations in the observed region; such consumers require a separate neutrality proof.",
+    "Source, container, checkpoint, native provider and cache provenance are retained.",
+    "Numerical checks cover actual retained graphs with changed inputs and output-freshness protection."
+  ],
+  "coverage_requirements": [
+    "Every expected non-skipped capture lookup resolves to a cached winner.",
+    "Warm startup and post-startup serving/capture perform zero additional profiling for the covered workload.",
+    "Cold saved winners are genuinely loaded and reused by the fresh warm process.",
+    "Capture and post-startup execution do not overwrite saved winners."
+  ],
+  "decision_rule": "A valid miss, warm reprofile or routing discrepancy is an audit finding to preserve and explain, not an invalid sample to discard or repair before reporting. Complete coverage closes this bounded question. Either outcome needs a separate decision before a production fix, permanent diagnostic flag or policy change.",
+  "limits": [
+    "One model, one decode batch size, one device and one cold/warm pair.",
+    "Cache selection evidence is not proof of the physical kernel chosen by every backend.",
+    "Subsequent graph replay does not perform Python tactic lookup.",
+    "No serving-performance, model-quality benchmark, distributed, prefill-graph, speculative or MegaMoE claim.",
+    "The previous confirmation experiment remains stopped; the old scoped-cache prototype remains parked.",
+    "No research PR or production code change."
+  ]
+}

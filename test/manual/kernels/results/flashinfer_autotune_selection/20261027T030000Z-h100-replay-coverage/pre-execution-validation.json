@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "worker_cpu_controls": 8,
+  "analyzer_cpu_controls": 16,
+  "launcher_cpu_controls": 9,
+  "applicable_pre_commit_hooks": "passed",
+  "scope": "CPU harness and evidence controls; no CUDA result yet",
+  "worker_sha256": "fb61879daa2ca483485b23826a2a1f2f90d0e23502ba1d65c253d051ec715a7a",
+  "source_sha256": {
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261027T030000Z-h100-replay-coverage/analyze.py": "fdaa962debbbc6f38d6241b0dd8f9b6bc535bc9b78eeb862e7f9fe3dfdcb7697",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261027T030000Z-h100-replay-coverage/import_preflight.py": "3b0a1911c54364f81fd5365cae1c4bd5410860a7e3a0d015fee97d09982a10d6",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261027T030000Z-h100-replay-coverage/launch.sh": "260d21933552edfda743ff88ba11109f9ab3796498772517b7653d70572fbe80",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261027T030000Z-h100-replay-coverage/launcher_controls.py": "043b5da6e37152e4d9058e0ca7472abcccb7b87a33105d7df527ebae653c167e",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261027T030000Z-h100-replay-coverage/make_provenance.py": "b680c19f01931b5c2d71e8037b49095d545445cc2cb334d823dd075ae5134455",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261027T030000Z-h100-replay-coverage/outer_audit.py": "be15e9b6813c79ba96018300c6b1a2c2e97160d82b014e1fc24fd35272a6f4c5",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261027T030000Z-h100-replay-coverage/preserve.sh": "f01d7b22df7c3188810fea2bbd0fb72f2cd2d1c4a9593e7b35e0f861cb5a4629",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261027T030000Z-h100-replay-coverage/stage.sh": "626e2cc4041699562037aa95b7c9304da42af536b21ddd1d169ed307239968b6",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261027T030000Z-h100-replay-coverage/stream_controls.py": "107c52bbc23b3539c49a16a1131a12cc5aedb49cfdb4c7afba4f7de830c27b60",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261027T030000Z-h100-replay-coverage/stream_model.py": "68aef5e46417db78bf405c6b3eeec2e4e795842e73e8463858a64f168f7ab813"
+  },
+  "stream_cpu_controls": 5,
+  "total_cpu_controls": 38
+}

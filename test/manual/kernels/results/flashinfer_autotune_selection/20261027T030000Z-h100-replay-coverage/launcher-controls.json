@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "checks": 9,
+  "cases": [
+    "valid incomplete coverage proceeds to fresh warm",
+    "reject stale/invalid cold record 0",
+    "reject stale/invalid cold record 1",
+    "reject stale/invalid cold record 2",
+    "reject stale/invalid cold record 3",
+    "reject stale/invalid cold record 4",
+    "reject stale/invalid cold record 5",
+    "reject failed process cold.exit-code",
+    "reject failed process launcher-cold.exit-code"
+  ]
+}
