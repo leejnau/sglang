@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "batch_id": "20261027T160000Z-h100-scoped-cache",
+  "question": "Can merged context-scoped managed graph winners coexist with SGLang legacy startup/eager winners, persist across fresh processes, and serve a retained decode graph after scope exit?",
+  "scope": "Bounded lifecycle qualification through one actual dense FP8 SGLang model; no ranking or performance comparison.",
+  "research_parent": "a586993e679d24571e91962302080cc079c9a6e1",
+  "research_branch": "leejnau/sglang:experiment/flashinfer-candidate-selection",
+  "model": {
+    "repository": "nvidia/Llama-3.1-8B-Instruct-FP8",
+    "revision": "42d9515ebd69eea3a87351d079c671c3c5ff0a31",
+    "quantization": "modelopt_fp8",
+    "weights": "Real serialized checkpoint, with file hashes bound before execution; no dummy weights or predicate overrides.",
+    "manifest_sha256": "d8a4e2c07bfc6193653f3381e41e3fe23ddf923f5e8082fe2c5c6db55df680a9",
+    "stream_plan_sha256": "734f8e8d83f560f6c3e19063736149d238f34cf46adba3b1b557652d6523fb47"
+  },
+  "environment": {
+    "image": "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
+    "gpu": "NVIDIA H100 NVL",
+    "gpu_uuid": "GPU-240958a2-e8e1-3bac-b767-365c9e0b97bd",
+    "driver": "580.159.04",
+    "torch": "2.14.1+cu130",
+    "tensor_parallel_size": 1,
+    "pipeline_parallel_size": 1,
+    "data_parallel_size": 1,
+    "attention_backend": "triton",
+    "kv_cache_dtype": "bfloat16",
+    "model_dtype": "bfloat16",
+    "context_length": 256,
+    "max_total_tokens": 512,
+    "max_running_requests": 1,
+    "mem_fraction_static": 0.7,
+    "disable_overlap_schedule": true,
+    "speculation": false,
+    "prefill_graph": false,
+    "decode_graph_batch_sizes": [
+      1
+    ],
+    "flashinfer": "Base 27c62fdf0ab1cd4014df8a15b66a975541fda83c plus the qualified explicit-FP8 descriptor and benchmark-validation overlays; reuse exact prior native GEMM. This is not a stock-release claim. The #7521 debug guard is not overlaid.",
+    "flashinfer_source_sha256": {
+      "autotuner/autotuner.py": "0db42ad90d1a3fec6f81509a2c520c1892cea0a433f5dbd7f43468a2a10243ca",
+      "autotune_cache.py": "1ab2ed7208ed1bf1007b1f74de29fc818c93a5ab091beea0833474177fbb29ad",
+      "gemm/gemm_base.py": "0bba9240029a5e09f331e7a2267f7067e126d57a7a341ca535f7c9557599adca",
+      "autotuner/_graph_timing.py": "5f3be31e17501ba11ee95327176ac4a4b95eeaee7be92c2bc7795bcbd30cefe3"
+    },
+    "native_sha256": {
+      "gemm": "72690cacca4ce1d69ccaa6b9190475483d984bd58de0962d06c874c801c678d6",
+      "delay": "e442a689064fe3af4ab46510b2d5aaf3597b072949b84f13d14e9e53352109e4"
+    }
+  },
+  "protocol": {
+    "processes": [
+      "cold",
+      "warm"
+    ],
+    "cold": "Fresh isolated legacy and managed roots; run actual SGLang startup and graph-region tuning on the real prepared decode closure.",
+    "warm": "Fresh process and container with the identical cold legacy and graph cache bytes, same paths, checkpoint, source, controls, policy and hardware; require zero profiling.",
+    "prepared_forward_sequence": [
+      "Actual completed legacy startup outside any v2 scope.",
+      "Legacy report-only prepared decode forward: genuine hits, record keys/winners/files/controls.",
+      "Strict replay with a separate empty managed root and graph policy must raise on the first actual miss despite populated legacy winners, perform zero profiling/publication and restore legacy state.",
+      "One prepared decode forward in the identified graph tuning context.",
+      "One strict replay context around the unchanged backend capture routine: its two warmups are preflight, followed by actual CUDA graph capture.",
+      "Exit the graph scope, then repeat legacy prepared forward and compare actual winners and legacy file bytes/state.",
+      "Run the fresh-prefix original/changed/restored numerical comparisons outside identified graph scopes."
+    ],
+    "prepared_forward_reset": "Synchronize and invoke the supplied attention post_warmup_hook after every added attempt, including expected strict miss; retain the backend original warmups/reset hooks.",
+    "graph_tuning_context": {
+      "mode": "tune",
+      "persistent_cache": true,
+      "cache_scope": "context",
+      "cache_root": "dedicated managed root, stable across both processes",
+      "measurement_policy": {
+        "execution_mode": "cuda_graph"
+      },
+      "replay_report": null,
+      "strict_replay": false
+    },
+    "graph_capture_context": {
+      "mode": "replay",
+      "persistent_cache": true,
+      "cache_scope": "context",
+      "cache_root": "same managed root as graph tuning",
+      "measurement_policy": {
+        "execution_mode": "cuda_graph"
+      },
+      "replay_report": "bounded complete per-invocation report",
+      "strict_replay": true
+    },
+    "legacy_observer_context": {
+      "mode": "replay",
+      "persistent_cache": false,
+      "cache_scope": "context",
+      "measurement_policy": "unspecified",
+      "strict_replay": false
+    },
+    "inherited_controls": "Do not override skip_ops, tuning_buckets, round_up or profiler settings. Explicit graph policy is only the separately identified scope under test; no optimal-policy claim.",
+    "capture_context_placement": "Resolve/hydrate the managed scope before original capture_one so filesystem/store setup occurs before actual CUDA capture.",
+    "numerics": "Fresh identical prefixes and KV state for each eager/retained-graph arm; original, changed and restored decode token. Clone outputs; poison retained graph output before replay; require original graph and output owner unchanged, real replay, no new profiling.",
+    "numerical_atol": 0.05,
+    "numerical_rtol": 0.01,
+    "numerical_additional_checks": [
+      "finite outputs",
+      "matching argmax",
+      "changed input changes output",
+      "restored input restores output within fixed tolerance"
+    ],
+    "expected_fp8_lookups_per_prepared_forward": 128,
+    "resource_bound_minutes": 30,
+    "source_freeze": "Commit and push worker, launcher, analyzer, exact model manifest and protocol before GPU execution. Preserve failed setup/admission attempts with their original source attribution. Do not adapt samples or thresholds after observations."
+  },
+  "validity_requirements": [
+    "Actual ModelRunner and real serialized ModelOpt FP8 checkpoint with 128 eligible FlashInfer linear layers; no predicate overrides or dummy weights.",
+    "One ordinary batch-one full decode graph, two existing warmups and actual capture distinguished by CUDA capture state.",
+    "Legacy before/after and numerical eager reports remain legacy identity with genuine same winners; cached -1 is a hit only when lookup status says hit.",
+    "Empty identified-store strict control cannot fall through to legacy/bundled/default selection; expected exception, one miss, no profiling/publication and restored controls.",
+    "Graph tuning and strict preflight/capture share a nonlegacy managed root/policy identity and matching stored profiling provenance; no nested v2 or ambient store attachment.",
+    "Scope exit restores legacy active partition, controls and v1 bytes; managed registry/identified partitions may persist intentionally.",
+    "No delegated protocol consumers in observed region; these require separate qualification.",
+    "Exact source, helper, container, checkpoint, native provider and persisted cache provenance bound to frozen execution commit.",
+    "Numerics use actual retained graph after scope exit with output freshness and changed/restored inputs; no retuning or recapture."
+  ],
+  "coverage_requirements": [
+    "Cold legacy startup and graph tuning each profile actual candidates and publish their own winners.",
+    "All 128 expected FP8 selections in each of the two existing warmups and actual capture are strict hits in the same graph identity, with zero misses/skips/dropped records.",
+    "Fresh warm process loads exact cold legacy and managed winner files and performs zero profiling during startup, graph tuning, capture and serving.",
+    "Managed winner files survive scope exit and are unchanged by capture/serving/warm reuse.",
+    "Legacy actual eager selections, live cache, controls and v1 files survive graph tuning/scope exit unchanged.",
+    "All six eager-versus-retained-graph numerical comparisons pass the frozen finite/allclose/argmax gates, changed inputs change results and restored inputs restore results."
+  ],
+  "decision_rule": "Preserve valid lifecycle misses, reprofile, restoration or numerical failures as findings; do not treat them as discardable samples. Stop after one cold/fresh-warm pair, or an admission failure. Repair only demonstrated harness/setup defects under a new frozen source/attempt without deleting prior evidence. A pass qualifies this bounded lifecycle only and does not automatically authorize a production policy/ownership change.",
+  "limits": [
+    "One H100 NVL, one actual dense FP8 model, TP1, batch-one full decode and one cold/fresh-warm pair.",
+    "Qualified pinned source overlays, not an unmodified release or latest-main claim.",
+    "No selection-quality, profiling-objective superiority, latency, throughput or general model-quality claim.",
+    "Cache selection reports do not prove every backend physical kernel identity; graph replay does not perform Python tactic lookup.",
+    "No TP/EP, concurrent tuning/stores, prefill graphs, speculative decoding or MegaMoE qualification.",
+    "Production SGLang startup policy and v1 persistence remain unchanged; no production code edits, CI triggers, external messages or PR.",
+    "Ranking/measurement-causality investigation remains paused for owner feedback; old scoped-cache prototype remains parked."
+  ]
+}
