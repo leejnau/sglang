@@ -1,0 +1,84 @@
+{
+  "status": "passed",
+  "immutable": true,
+  "scope": "One admission process, independent identity/decision/cache/output evidence; excluded from timing estimates.",
+  "execution_commit": "3cae7f706d2aa2bfc2268f13597a3d1706432410",
+  "raw_sha256": "bdd7b92c513121ba320693b35df1419d461792390813487bfebc35318be3650f",
+  "source_sha256": "6be5647742abc43793f7484bb72d8fef402c80d8135ff69967d1d73b52ce0811",
+  "math_source_sha256": "715d659f3e993883e2c0d054db8141cfce58b6d897d9972afd47d1803ad4ac70",
+  "numerical_checks": 49,
+  "startup_profiles": 81,
+  "confirmation_profiler_calls": 24,
+  "decision_sha256": "c368b0248b5c720b630321ef0777bc20e4cb5535e289f58edb75c58f56849654",
+  "original_cache_unchanged": true,
+  "traces": {
+    "winner": [
+      {
+        "name": "_static_quant_fp8",
+        "device": 0,
+        "grid": [
+          144,
+          1,
+          1
+        ],
+        "block": [
+          256,
+          1,
+          1
+        ],
+        "registers per thread": 32,
+        "shared memory": 0
+      },
+      {
+        "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+        "device": 0,
+        "grid": [
+          8,
+          14,
+          1
+        ],
+        "block": [
+          384,
+          1,
+          1
+        ],
+        "registers per thread": 168,
+        "shared memory": 229844
+      }
+    ],
+    "default": [
+      {
+        "name": "_static_quant_fp8",
+        "device": 0,
+        "grid": [
+          144,
+          1,
+          1
+        ],
+        "block": [
+          256,
+          1,
+          1
+        ],
+        "registers per thread": 32,
+        "shared memory": 0
+      },
+      {
+        "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+        "device": 0,
+        "grid": [
+          8,
+          12,
+          1
+        ],
+        "block": [
+          384,
+          1,
+          1
+        ],
+        "registers per thread": 168,
+        "shared memory": 213460
+      }
+    ]
+  }
+}

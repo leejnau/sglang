@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "scope": "Independent admission and full-eight arithmetic/coverage readers; no official benchmark/analyzer imports.",
+  "files": {
+    "interpret_results.py": "715d659f3e993883e2c0d054db8141cfce58b6d897d9972afd47d1803ad4ac70",
+    "audit_admission.py": "6be5647742abc43793f7484bb72d8fef402c80d8135ff69967d1d73b52ce0811",
+    "math-controls-final.json": "88b19370d0363c73727544cf9e7e5e70452c56edde5c25bcd9640b5b8d9c12df"
+  }
+}

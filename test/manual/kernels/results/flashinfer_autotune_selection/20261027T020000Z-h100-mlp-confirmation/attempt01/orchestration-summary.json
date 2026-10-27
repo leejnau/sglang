@@ -1,0 +1,70 @@
+{
+  "status": "complete",
+  "execution_commit": "3cae7f706d2aa2bfc2268f13597a3d1706432410",
+  "allocation_id": 2865829,
+  "allocation_elapsed": "00:07:48",
+  "allocation_time_limit": "00:30:00",
+  "resource_status": "released; lnau queue empty",
+  "workers": {
+    "admission": 1,
+    "timing": 8,
+    "status": "all success",
+    "experiment_retries": 0
+  },
+  "admission_gate": {
+    "official_analysis_sha256": "48d56853ab26e1afe714ea84e95451ac78a2bb8e11047b27d83fbfc0fc8688cd",
+    "outer_audit_sha256": "272602a7cdb01c01200dead0cf5fa27c9460f355fd1e0b4b33b322f863b5925f",
+    "outer_checks": 788,
+    "ran_on_allocated_node_before_timing": true
+  },
+  "final_outer_audit": {
+    "sha256": "c864ef84f2284207286d38da1482498e65441a3054f69bac0be54967c8f40fab",
+    "checks": 5704,
+    "workers": 9
+  },
+  "archives": [
+    {
+      "status": "passed",
+      "archive": "/private/tmp/fi-mlp-confirmation-20261027/coordinator/20261027T020000Z-h100-mlp-confirmation-attempt01-admission-full-raw.tgz",
+      "archive_sha256": "3216dc3ef6e984f7f1056a11b494d3c69a2d60708a68488ac7798f3cf9c054b4",
+      "record_sha256": "b6f77221fce8fa4e38f30f7bb0292138b48fbfa70cf876b065a574bc56d4fe3d",
+      "raw_root": "/private/tmp/fi-mlp-confirmation-20261027/coordinator/raw-admission/attempt01",
+      "rows_verified": 67,
+      "preservation_manifest_sha256": "4d990a21ea64695cd1b68975dd20408e2997018e229bf4701baf3e118ff5a4cb"
+    },
+    {
+      "status": "passed",
+      "archive": "/private/tmp/fi-mlp-confirmation-20261027/coordinator/20261027T020000Z-h100-mlp-confirmation-attempt01-timing-full-raw.tgz",
+      "archive_sha256": "ea1a11eb275c8cde719c443bde15506287b41f7fb49402cb52329ad3afa0eec1",
+      "record_sha256": "6ad37e091e7e66102729185bf3fdc1d044bc8b702e5a840e7d0efccea589900c",
+      "raw_root": "/private/tmp/fi-mlp-confirmation-20261027/coordinator/raw-timing/attempt01",
+      "rows_verified": 169,
+      "preservation_manifest_sha256": "c7a86094145257b2d16b98022d21e1a7e85eb84d3d2ece7aed5778db3d4cc9a6"
+    }
+  ],
+  "preallocation_storage_recovery": {
+    "error": "Initial rsync temporary-file close hit the 5-GiB home quota before allocation.",
+    "action": "Removed only two root-approved duplicate generated snapshot packs after matching remote bytes with retained local copies; metadata retained; then resumed the same frozen-source upload.",
+    "unique_evidence_removed": false,
+    "receipt_sha256": "d66174f13625f271ab18c286548e26cdc8af979fcce346fbcc5888530bcb2a64"
+  },
+  "evidence_sha256": {
+    "allocation.log": "c9b0720b00c3e807a6684f30813131d0eac06d102cfcb3d2989c6cde150903d0",
+    "allocation-state.txt": "9eec323f850b421d6f76b59c9cc6b41c4b6d111bddab35dcf3717928f4c39a57",
+    "stage.log": "f76360c17f216e628add4e254bd1dcb1d3861ccfed27a64fd4d4630a4da48331",
+    "admission-launch.log": "02d9bc4b2996de965408a27ae098c9a71995174bd5b471487cd077dcdc7f22a2",
+    "admission-audits.log": "a9df162d2a40c0c874cb90e2169d6bb66c5a3ce3b76ced9bd045eff1ab828e19",
+    "admission-preserve.log": "a0fd1c83561fb0e1af293cf0d39967bb2816ef1cdce0b5faa7585cebfa71494f",
+    "timing-launch.log": "7472720680bd073b62c2c6f9359df8ecc2ffd0cbd52eecf1847bc211bda52993",
+    "timing-preserve.log": "b71844b142a1b110b3e0ee7f3a4fceb19393c7406c49933da4911efe7a607e54",
+    "release.log": "d8ed1300c0a792419150bca4f181b92422d62f2585f2cb349f93cec1fbf26736",
+    "released-state.txt": "b41fac96058ed6614e5427d0c9a161b06f93d01fcf552d02566550d9341d8c8d",
+    "remote-snapshot-verification.json": "29bbada74511263ce25a9f89d4a1558fd002c1e02113736837d4a38ee24c5871",
+    "storage-cleanup-receipt.json": "d66174f13625f271ab18c286548e26cdc8af979fcce346fbcc5888530bcb2a64",
+    "storage-probe.txt": "8788743a3e5b8d717a432798e3186946bba356b0818ab18464c8c87dc22a2ed6",
+    "transfer.log": "8729c86250b5e5b25dae4e7a61074e347783ad8dd9d1df611dad26d5a2e17186",
+    "transfer-after-storage-cleanup.log": "538bfb86da288914fe26b306c1912bd8e2a42a85480e51dc85af971b5751c432",
+    "verify_archive.py": "6f0e5f8b3bdb939dc47593e246049204d3ded8f0cbb556ae9ecbd07927eb08c4",
+    "audit-admission-on-node.sh": "19eeb354fa2e490a52416b004bea16cf9d0a3611cb0d5b620952fb6ca801b64a"
+  }
+}

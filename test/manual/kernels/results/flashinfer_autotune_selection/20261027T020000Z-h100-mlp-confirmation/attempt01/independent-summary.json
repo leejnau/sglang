@@ -1,0 +1,157 @@
+{
+  "status": "passed",
+  "immutable": true,
+  "execution_commit": "3cae7f706d2aa2bfc2268f13597a3d1706432410",
+  "cohort": {
+    "timing_processes": 8,
+    "admission_processes_excluded": 1,
+    "fixture_shape_m_n_k": [
+      144,
+      1024,
+      3072
+    ],
+    "model_projection": "Qwen3-0.6B first-layer MLP down projection",
+    "source": "Pinned qualified 27c62 plus FP8 descriptor/callback research overlay; unchanged current SGLang policy and legacy persistence.",
+    "raw_timing_archive_sha256": "ea1a11eb275c8cde719c443bde15506287b41f7fb49402cb52329ad3afa0eec1"
+  },
+  "decision_counts": {
+    "original_slow": 1,
+    "confirmed_slow": 0,
+    "corrected": 1,
+    "introduced": 0,
+    "remaining_slow": 0,
+    "neither_slow": 7,
+    "graph_point_ties": 0
+  },
+  "transitions": {
+    "default->default": 7,
+    "winner->default": 1
+  },
+  "primary_hypothetical_over_original": {
+    "geometric_mean_ratio": 0.9916902772961791,
+    "min_ratio": 0.9354238589572402,
+    "max_ratio": 1.0,
+    "below_one": 1,
+    "above_one": 0,
+    "equal_one": 7,
+    "exploratory_whole_process_bootstrap_95pct": [
+      0.9752774125640346,
+      1.0
+    ]
+  },
+  "finalist_graph_over_default": {
+    "geometric_mean_ratio": 1.0718840464988975,
+    "min_ratio": 1.068155600713343,
+    "max_ratio": 1.0782313405141086,
+    "below_one": 0,
+    "above_one": 8,
+    "equal_one": 0,
+    "exploratory_whole_process_bootstrap_95pct": [
+      1.0692918229948314,
+      1.0750582865356595
+    ]
+  },
+  "confirmation_finalist_over_default": {
+    "geometric_mean_ratio": 1.0751221985289143,
+    "min_ratio": 1.0563255702747685,
+    "max_ratio": 1.0877270535738768,
+    "below_one": 0,
+    "above_one": 8,
+    "equal_one": 0,
+    "exploratory_whole_process_bootstrap_95pct": [
+      1.0672110910478285,
+      1.0823563279743145
+    ]
+  },
+  "original_profile_finalist_over_default": {
+    "geometric_mean_ratio": 1.0140209975076735,
+    "min_ratio": 0.9378725737706749,
+    "max_ratio": 1.0458871045222802,
+    "below_one": 1,
+    "above_one": 7,
+    "equal_one": 0,
+    "exploratory_whole_process_bootstrap_95pct": [
+      0.98888707844149,
+      1.0328520928180784
+    ]
+  },
+  "corrected_processes": [
+    {
+      "block": 5,
+      "raw_sha256": "36384d90b5b855ec1957c82fb1a2ac0b450f79852295dd223844c07383c26299",
+      "capture_order": "winner-first",
+      "finalist": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "finalist_profile_index": 75,
+      "natural_role": "winner",
+      "confirmed_role": "default",
+      "transition": "winner->default",
+      "original_profile_log_ratio": -0.06414118806275988,
+      "confirmation_log_ratio": 0.06604277522618096,
+      "layer_log_ratio": 0.06675552732626755,
+      "effect_log": -0.06675552732626755,
+      "effect_ratio": 0.9354238589572402,
+      "original_regret_log": 0.06675552732626755,
+      "confirmed_regret_log": 0.0,
+      "outcome": "measured_better",
+      "confirmation_order_strata": {
+        "winner": 0.07516112587656322,
+        "default": 0.06411925463807204
+      },
+      "graph_order_strata": {
+        "winner": 0.06838492746977151,
+        "default": 0.06651843633075474
+      },
+      "numerical_checks": {
+        "serving": 67,
+        "synthetic": 30
+      }
+    }
+  ],
+  "integrity": {
+    "all_eight_retained": true,
+    "startup_profiles": 648,
+    "confirmation_profiler_calls": 192,
+    "serving_numerical_checks": 536,
+    "synthetic_numerical_checks": 240,
+    "original_cache_hashes_preserved": true,
+    "queue_outcomes": {
+      "start_pending_after_enqueue": 384
+    },
+    "poststartup_synthetic_read_hash_groups": 1,
+    "explicit_accepted_on_serving_and_synthetic_problems": true,
+    "original_serving_graph_traces_have_different_explicit_default_signatures": true
+  },
+  "official_comparison": {
+    "all_six_metrics_and_bootstrap_intervals_match": true,
+    "analysis_sha256": "4ce7a5f9a4a7fa7bf384b84dcd97f8d233af0fe3312710a89a9034bc508fc8ee"
+  },
+  "checkpoint_disposition": {
+    "result": "promising_but_inconclusive_stop",
+    "fixed_cohort_complete": true,
+    "additional_processes": 0,
+    "automatic_production_change_or_pr": false,
+    "rule": "Review only if corrected>0, introduced=0, and whole-process ratio CI upper<1; otherwise stop this bounded checkpoint.",
+    "counts_are_descriptive": true
+  },
+  "interpretation": "One measured slow original choice was corrected; seven choices were unchanged and no new measured slow choice appeared. The aggregate ratio is0.9916903 with exploratory95%CI[0.9752774,1.0]. The preregistered strict upper<1 review gate is unmet, so this is promising but inconclusive and the bounded checkpoint stops.",
+  "limits": [
+    "No implemented confirmation policy or production speedup was tested; both choices are scored on the same post-confirmation graphs.",
+    "One correction among eight fixed-fixture processes does not establish general effectiveness or safety. Seven exact-one effects mean unchanged choice, not performance equivalence.",
+    "The first-pass and paired-confirmation objectives remain auto/synthetic; later preparation, retained operands, and measurement history prevent unique causal attribution to order, noise, input values, or objective.",
+    "Two-candidate regret is not an exhaustive graph oracle; candidate identity varies by process.",
+    "Queue outcomes were all pending and retained. Graph event timings exclude the10M-cycle prequeue; wall is diagnostic.",
+    "Cache preservation here is recorded within-process byte/state-hash conservation and source guards; this study does not test a fresh warm restart.",
+    "Previous QKV/MLP/admission cohorts are not pooled. No further experiment, adaptive expansion, production change or PR follows automatically."
+  ],
+  "report_sha256": "458a1dba490af9f8d26b160cbe89e1dfd0f4705e0f055593b54e0868393bec3f",
+  "independent_source_sha256": "715d659f3e993883e2c0d054db8141cfce58b6d897d9972afd47d1803ad4ac70"
+}

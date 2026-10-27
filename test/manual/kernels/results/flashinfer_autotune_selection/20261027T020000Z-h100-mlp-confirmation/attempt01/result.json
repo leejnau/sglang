@@ -1,0 +1,290 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "batch_id": "20261027T020000Z-h100-mlp-confirmation",
+  "execution_commit": "3cae7f706d2aa2bfc2268f13597a3d1706432410",
+  "research_branch": "leejnau/sglang:experiment/flashinfer-candidate-selection",
+  "research_pr_opened": false,
+  "question": "Does balanced default-versus-finalist confirmation improve the original selection on the captured MLP fixture?",
+  "scope": "One admission and eight fresh timing processes on the qualified H100 NVL; original and hypothetical choices scored on the same retained post-confirmation graphs.",
+  "upstream_fix_completed_first": {
+    "pr": "https://github.com/flashinfer-ai/flashinfer/pull/7521",
+    "head": "99042795aed76d443bc39c913241e775e8b6d451",
+    "change": "Skip non-tuning miss diagnostic work when DEBUG is disabled.",
+    "validation": "8 focused tests and repository hooks pass; pre-fix INFO fails the duplicate-key assertion and DEBUG passes.",
+    "host_miss_us_per_call_before_after": [
+      9.297190003333334,
+      6.216972258333334
+    ],
+    "limit": "CPU dispatch microbenchmark only. The fix was not overlaid into this separately qualified selection experiment.",
+    "pending": "Complete core-file and multi-architecture CI await authorization; automatic lint/docs/API checks passed."
+  },
+  "fixture": {
+    "schema_version": 2,
+    "model": "Qwen/Qwen3-0.6B",
+    "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "layer": "model.layers.0.mlp.down_proj",
+    "shape_m_n_k": [
+      144,
+      1024,
+      3072
+    ],
+    "seed": 19,
+    "selection": "Prespecified first-layer MLP down projection from the same checkpoint and exact prior 144 input token IDs, before observing any tuning or execution timing. Verify actual dimensions and capture provenance.",
+    "source": "Dense BF16 reference forward with actual captured post-nonlinearity activation; benchmark uses static per-tensor FP8 weights/activations through the SGLang linear facade.",
+    "sha256": "0e456c2d371906be235c5fb405fc20c0a969f672ee26722264ae6761b1838809"
+  },
+  "protocol": {
+    "original_profiles_per_process": 81,
+    "confirmation_pairs_per_process": 12,
+    "balanced_first_positions": [
+      6,
+      6
+    ],
+    "rule": "median(log(explicit/default))<0 chooses explicit, otherwise default; no margin.",
+    "graph_windows_per_process": 24,
+    "replays_per_sample": 16,
+    "original_cache_unchanged": true,
+    "profile_objective": "Original auto/synthetic objective, no explicit measurement policy; original initializer without extra clone/copy.",
+    "retained_graph_score": "Both original and hypothetical choices use the same two graphs after confirmation; this is not an end-to-end deployed policy comparison."
+  },
+  "outcomes": {
+    "original_default": 7,
+    "original_explicit": 1,
+    "confirmed_default": 8,
+    "confirmed_explicit": 0,
+    "original_slow": 1,
+    "confirmed_slow": 0,
+    "corrected": 1,
+    "introduced": 0,
+    "remaining_slow": 0,
+    "neither_slow": 7,
+    "graph_point_ties": 0,
+    "transitions": {
+      "default->default": 7,
+      "winner->default": 1
+    }
+  },
+  "metrics": {
+    "hypothetical_over_original": {
+      "processes": 8,
+      "geometric_mean_ratio": 0.9916902772961791,
+      "min_ratio": 0.9354238589572402,
+      "max_ratio": 1.0,
+      "below_one": 1,
+      "above_one": 0,
+      "equal_one": 7,
+      "exploratory_process_bootstrap_95pct": [
+        0.9752774125640346,
+        1.0
+      ]
+    },
+    "finalist_graph_over_default": {
+      "processes": 8,
+      "geometric_mean_ratio": 1.0718840464988975,
+      "min_ratio": 1.068155600713343,
+      "max_ratio": 1.0782313405141086,
+      "below_one": 0,
+      "above_one": 8,
+      "equal_one": 0,
+      "exploratory_process_bootstrap_95pct": [
+        1.0692918229948314,
+        1.0750582865356595
+      ]
+    },
+    "confirmation_finalist_over_default": {
+      "processes": 8,
+      "geometric_mean_ratio": 1.0751221985289143,
+      "min_ratio": 1.0563255702747685,
+      "max_ratio": 1.0877270535738768,
+      "below_one": 0,
+      "above_one": 8,
+      "equal_one": 0,
+      "exploratory_process_bootstrap_95pct": [
+        1.0672110910478285,
+        1.0823563279743145
+      ]
+    },
+    "original_profile_finalist_over_default": {
+      "processes": 8,
+      "geometric_mean_ratio": 1.0140209975076735,
+      "min_ratio": 0.9378725737706749,
+      "max_ratio": 1.0458871045222802,
+      "below_one": 1,
+      "above_one": 7,
+      "equal_one": 0,
+      "exploratory_process_bootstrap_95pct": [
+        0.98888707844149,
+        1.0328520928180784
+      ]
+    },
+    "original_regret_two_candidate_only": {
+      "processes": 8,
+      "geometric_mean_ratio": 1.0083793528020433,
+      "min_ratio": 1.0,
+      "max_ratio": 1.0690340966016687,
+      "below_one": 0,
+      "above_one": 1,
+      "equal_one": 7,
+      "exploratory_process_bootstrap_95pct": [
+        1.0,
+        1.0253492874104086
+      ]
+    },
+    "confirmed_regret_two_candidate_only": {
+      "processes": 8,
+      "geometric_mean_ratio": 1.0,
+      "min_ratio": 1.0,
+      "max_ratio": 1.0,
+      "below_one": 0,
+      "above_one": 0,
+      "equal_one": 8,
+      "exploratory_process_bootstrap_95pct": [
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "per_process": [
+    {
+      "block": 0,
+      "capture_order": "default-first",
+      "original_role": "default",
+      "confirmed_role": "default",
+      "original_profiler_ratio": 1.0458871045222802,
+      "confirmation_ratio": 1.0617154990909181,
+      "graph_ratio": 1.0690371200636544,
+      "hypothetical_over_original": 1.0,
+      "transition": "default->default"
+    },
+    {
+      "block": 1,
+      "capture_order": "winner-first",
+      "original_role": "default",
+      "confirmed_role": "default",
+      "original_profiler_ratio": 1.0219372358358345,
+      "confirmation_ratio": 1.0563255702747685,
+      "graph_ratio": 1.0755208178032463,
+      "hypothetical_over_original": 1.0,
+      "transition": "default->default"
+    },
+    {
+      "block": 2,
+      "capture_order": "winner-first",
+      "original_role": "default",
+      "confirmed_role": "default",
+      "original_profiler_ratio": 1.0280277350451623,
+      "confirmation_ratio": 1.0804576860057291,
+      "graph_ratio": 1.0689002321062817,
+      "hypothetical_over_original": 1.0,
+      "transition": "default->default"
+    },
+    {
+      "block": 3,
+      "capture_order": "default-first",
+      "original_role": "default",
+      "confirmed_role": "default",
+      "original_profiler_ratio": 1.0066912521498277,
+      "confirmation_ratio": 1.0777220883605383,
+      "graph_ratio": 1.068155600713343,
+      "hypothetical_over_original": 1.0,
+      "transition": "default->default"
+    },
+    {
+      "block": 4,
+      "capture_order": "default-first",
+      "original_role": "default",
+      "confirmed_role": "default",
+      "original_profiler_ratio": 1.0146422191138535,
+      "confirmation_ratio": 1.0823577700785054,
+      "graph_ratio": 1.0782313405141086,
+      "hypothetical_over_original": 1.0,
+      "transition": "default->default"
+    },
+    {
+      "block": 5,
+      "capture_order": "winner-first",
+      "original_role": "winner",
+      "confirmed_role": "default",
+      "original_profiler_ratio": 0.9378725737706749,
+      "confirmation_ratio": 1.0682724117827245,
+      "graph_ratio": 1.0690340966016687,
+      "hypothetical_over_original": 0.9354238589572402,
+      "transition": "winner->default"
+    },
+    {
+      "block": 6,
+      "capture_order": "winner-first",
+      "original_role": "default",
+      "confirmed_role": "default",
+      "original_profiler_ratio": 1.0153688902629716,
+      "confirmation_ratio": 1.0877270535738768,
+      "graph_ratio": 1.0681954277070655,
+      "hypothetical_over_original": 1.0,
+      "transition": "default->default"
+    },
+    {
+      "block": 7,
+      "capture_order": "default-first",
+      "original_role": "default",
+      "confirmed_role": "default",
+      "original_profiler_ratio": 1.0458871045222802,
+      "confirmation_ratio": 1.0868493562281518,
+      "graph_ratio": 1.0780649686489707,
+      "hypothetical_over_original": 1.0,
+      "transition": "default->default"
+    }
+  ],
+  "interpretation": {
+    "disposition": "promising_but_inconclusive_stop",
+    "review_gate_met": false,
+    "finding": "Confirmation corrected one slower explicit choice and introduced none; seven original choices already used default. The geometric mean hypothetical graph benefit is 0.83%, but its exploratory whole-process 95% interval reaches parity.",
+    "specific_case": "Block 5 originally measured explicit at 9.5648 us versus default 10.1984 us (6.21% apparent advantage), then confirmation and held-out graph replay favored default. The explicit graph was 6.90% slower; switching that case gives a 6.46% same-graph counterfactual reduction.",
+    "additional_insight": "The observed incorrect original winner was not merely a sub-1% profiling win. A small arbitrary winning margin would not have prevented this case. This does not identify noise, warming/history, inputs or objective as the cause.",
+    "decision": "Stop this bounded confirmation checkpoint as promising but inconclusive. Do not open a production selection PR or change SGLang policy from this evidence.",
+    "no_adaptive_expansion": true
+  },
+  "validation": {
+    "frozen_cpu_controls": 103,
+    "independent_math_controls": 10,
+    "admission_numerical_checks": 49,
+    "timing_numerical_checks": 776,
+    "original_timing_profile_calls": 648,
+    "confirmation_timing_profile_calls": 192,
+    "pending_and_retained_queue_outcomes": 384,
+    "outer_checks_all_nine_workers": 5704,
+    "publication_checks": 2550,
+    "independent_analysis_matches": true,
+    "source_native_cache_and_trace_audits": "passed",
+    "experiment_retries": 0
+  },
+  "evidence": {
+    "official_analysis_sha256": "4ce7a5f9a4a7fa7bf384b84dcd97f8d233af0fe3312710a89a9034bc508fc8ee",
+    "independent_analysis_sha256": "458a1dba490af9f8d26b160cbe89e1dfd0f4705e0f055593b54e0868393bec3f",
+    "outer_audit_sha256": "c864ef84f2284207286d38da1482498e65441a3054f69bac0be54967c8f40fab",
+    "public_archive_sha256": "9fd9bad91ab53bbc314c52962825b21533ce807d459b3b0a2bac7edfcb91ffa3",
+    "public_archive_bytes": 779337,
+    "complete_raw_archive_sha256": "ea1a11eb275c8cde719c443bde15506287b41f7fb49402cb52329ad3afa0eec1",
+    "complete_raw_archive_bytes": 12142898,
+    "durable_root": "/home/lnau/flashinfer-autotune-study",
+    "archive_publication": "All 9 worker results and traces retained; only unrelated bootstrap import labels omitted from public inventories. Original private native/fixture payloads remain preserved in full raw."
+  },
+  "resources": {
+    "allocation": "2865829",
+    "status": "released",
+    "elapsed": "7:48",
+    "queue": "empty at release verification",
+    "preallocation_recovery": "Home quota stopped initial snapshot upload before allocation. Removed exactly two SHA-matched duplicate generated packs while retaining their local copies/metadata; no raw evidence removed. Receipt preserved."
+  },
+  "limits": [
+    "Both choices use common post-confirmation graphs, not untouched versus modified startup.",
+    "Capture-order associations remain possible; near-zero measured better/worse counts are descriptive, not proven improvements.",
+    "All eight outcomes retained, including unchanged and default-winning processes; historical/admission results excluded.",
+    "No global margin, production selection change, universal policy claim or serving-performance inference.",
+    "Slow-choice counts use the measured faster of two graphs without a margin; they are descriptive, not per-process significance or a full candidate oracle.",
+    "One fixture/device/time window; one corrected case is too little evidence for a robust production selection rule.",
+    "No v1 comparison arm ran here, and no serving-throughput or eager-performance claim is made.",
+    "Original live/file caches were preserved; this experiment does not implement or validate persistence of a newly published confirmation winner.",
+    "Managed-store migration, explicit production policy adoption and the parked scoped-cache prototype remain outside this experiment."
+  ]
+}

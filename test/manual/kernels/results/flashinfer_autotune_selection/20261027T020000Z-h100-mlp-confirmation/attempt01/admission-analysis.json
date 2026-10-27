@@ -1,0 +1,134 @@
+{
+  "status": "passed",
+  "mode": "admission",
+  "plan_sha256": "33444f5372ebcf5e9813ea32f914cb9729c7a465ff4b616dfa434b5fc0f196e8",
+  "schedule_sha256": "028d527022b448bd5bc95a8723a9f2ce92dd0d4bf713a611074676b102659543",
+  "historical_contract_sha256": "8518320ae4089c97861759b0145b6b12d99941c03001d38c5450d4940d44e4b9",
+  "worker_sha256": "a8532276afc70ae1b70e12eaf9fc722fa7b29ed6102407360dd93708a7789157",
+  "analyzer_sha256": "1fa9a5ea7312dc4fb3e5fb5766c95fc9c64b5ac9d91095a59a72655f3847542e",
+  "prior_analyzer_sha256": "b73acfc80a676ad24bb0358a6d66880531947f628783cba6fb1765c5154269ec",
+  "leaf_helpers_sha256": "cf72c74cf2e9c343e46af1b1b74a232a8b201de06dc2cd01bef6552f0981ce4f",
+  "distinct_container_ids": [
+    "9be2ed1c7b568c162feb955c37faf8bf93154be087fda5fc01722c8984ee8f67"
+  ],
+  "admission_result_sha256": "bdd7b92c513121ba320693b35df1419d461792390813487bfebc35318be3650f",
+  "admission_bootstrap_sha256": "79afbaa22413713395a684c5534a5ed2745936ebc7e12d54a5af03e1353aabdd",
+  "integrity_only": true,
+  "performance_inference": false,
+  "process_integrity": [
+    {
+      "block": 0,
+      "pid_namespace_local": 1,
+      "result_sha256": "bdd7b92c513121ba320693b35df1419d461792390813487bfebc35318be3650f",
+      "capture_order": "default-first",
+      "finalist": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "finalist_profile_index": 75,
+      "original_role": "default",
+      "confirmed_role": "default",
+      "original_profiler_ratio": 1.0221031609762732,
+      "confirmation_log_ratio": 0.07128093608601478,
+      "confirmation_ratio": 1.0738828759461838,
+      "decision_sha256": "c368b0248b5c720b630321ef0777bc20e4cb5535e289f58edb75c58f56849654",
+      "trace": {
+        "sha256": "b0c324c126d479dc467e185f3620e50d8e79b8d207b71a49dc732c4ed0a4bc11",
+        "original_graphs": {
+          "winner": {
+            "cuda_graph_id": 5,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  256,
+                  1,
+                  1
+                ],
+                "registers per thread": 32,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+                "grid": [
+                  8,
+                  14,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 229844,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "default": {
+            "cuda_graph_id": 2,
+            "graph_launches": 3,
+            "ordered_launch_signature": [
+              {
+                "name": "_static_quant_fp8",
+                "grid": [
+                  144,
+                  1,
+                  1
+                ],
+                "block": [
+                  256,
+                  1,
+                  1
+                ],
+                "registers per thread": 32,
+                "shared memory": 0,
+                "device": 0
+              },
+              {
+                "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+                "grid": [
+                  8,
+                  12,
+                  1
+                ],
+                "block": [
+                  384,
+                  1,
+                  1
+                ],
+                "registers per thread": 168,
+                "shared memory": 213460,
+                "device": 0
+              }
+            ],
+            "kernel_events": 6
+          },
+          "winner_default_signatures_equal": false
+        },
+        "timing_inference": false
+      },
+      "confirmation_first_position_median_logs": {
+        "winner": 0.06504520441273257,
+        "default": 0.07128093608601478
+      }
+    }
+  ],
+  "parent_confirmation_analyzer_sha256": "0369f0d952fc9f519c6a0d5511ab280afbe6065224b6a0d34db3f7fab0b74d98",
+  "analysis_protocol_sha256": "46652941d0749af30d8ce4204b8328de6a5074be3f727f667684dd23a1bba268"
+}
