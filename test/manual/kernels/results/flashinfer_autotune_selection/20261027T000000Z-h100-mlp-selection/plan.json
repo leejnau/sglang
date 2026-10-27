@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "study": "mlp_default_v1_v2",
-  "status": "implementation_protocol_fixture_pending",
+  "status": "frozen_before_admission",
   "source_contract": {
     "flashinfer_commit": "27c62fdf0ab1cd4014df8a15b66a975541fda83c",
     "variant": "Same qualified FP8-only stable-descriptor port and fixture-owned validation callback in every arm; no configured-timer guard or scoped-cache prototype.",
@@ -35,8 +35,8 @@
     "selection": "Prespecified first-layer MLP down projection from the same checkpoint and exact prior 144 input token IDs, before observing any tuning or execution timing. Verify actual dimensions and capture provenance.",
     "source": "Dense BF16 reference forward with actual captured post-nonlinearity activation; benchmark uses static per-tensor FP8 weights/activations through the SGLang linear facade."
   },
-  "fixture_sha256": null,
-  "fixture_manifest_sha256": null,
+  "fixture_sha256": "0e456c2d371906be235c5fb405fc20c0a969f672ee26722264ae6761b1838809",
+  "fixture_manifest_sha256": "e5e39380e83c45c9f4678b0c9b76aa04c1bae6523d434a275f7fc8955c5bd518",
   "schedule_sha256": "0fc8e8825238518f0126836757e5e56b9635abccdc7e68b96bcbc40aab3b0e07",
   "timing": {
     "blocks": 12,
