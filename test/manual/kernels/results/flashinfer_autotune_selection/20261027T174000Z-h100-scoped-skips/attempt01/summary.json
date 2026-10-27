@@ -1,0 +1,109 @@
+{
+  "schema": 1,
+  "study": "actual_model_scoped_skip_handoff",
+  "status": "passed",
+  "execution_commit": "a676eb9d8ebdda7347ed0e0db01bddf414ac6ce9",
+  "qualification_complete": true,
+  "findings": [],
+  "question": "Does scoped graph preparation/capture preserve configured FP8 exclusions while restoring legacy behavior for subsequent eager and retained-graph execution?",
+  "environment": {
+    "gpu": "NVIDIA H100 NVL",
+    "tensor_parallel_size": 1,
+    "model": "nvidia/Llama-3.1-8B-Instruct-FP8",
+    "revision": "42d9515ebd69eea3a87351d079c671c3c5ff0a31",
+    "decode_batch_size": 1,
+    "flashinfer": "Qualified base 27c62fdf0ab1cd4014df8a15b66a975541fda83c plus recorded explicit-FP8 descriptor and benchmark-validation overlays; exact source/native/container hashes in frozen plan and raw provenance."
+  },
+  "outcomes": {
+    "startup_skipped_calls": 128,
+    "prepared_skips": 128,
+    "strict_graph_skips": 384,
+    "strict_graph_hits": 0,
+    "strict_graph_misses": 0,
+    "actual_capture_skips": 128,
+    "profile_calls": 0,
+    "neutral_decode_default_misses": 640,
+    "managed_persisted_winners": 0,
+    "legacy_metadata_only_files_unchanged": true,
+    "previous_controls_and_legacy_identity_restored": true,
+    "numerics": {
+      "eager_graph_comparisons": 3,
+      "maximum_absolute_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "changed_input_changed_output": true,
+      "restored_input_restored_output": true,
+      "retained_graph_replays": 3,
+      "python_lookup_calls_during_graph_replay": 0,
+      "serving_profiles": 0
+    }
+  },
+  "validation": {
+    "preparation_cpu_configuration_report_controls": 12,
+    "preflight_pinned_tuner_checks": 10,
+    "frozen_analyzer_checks": 133,
+    "independent_original_raw_checks": 1750,
+    "public_archive_analyzer_checks": 133,
+    "scope": "Preparation, container preflight, GPU observations and offline review have separate attribution. Offline review checks recorded numerical observations and hashes, not retained full output arrays."
+  },
+  "scope_details": [
+    "Actual ServerArgs configured skip before resolution/publication; unchanged research adapter reapplies it after legacy startup exits.",
+    "Original backend two warmups and actual capture retained; the three extra prepared calls invoke the supplied attention reset hook.",
+    "All relevant FP8 operations intentionally skipped: returned runner zero/default -1; no winner publication. Neutral no-policy diagnostic contexts retain legacy identity and report misses, not cache hits.",
+    "Original, changed and restored decode tokens use fresh identical prefixes/KV state; cloned outputs, poisoned graph output and retained graph/output owner checks guard output freshness.",
+    "No native kernel trace; skip reports describe tuner choices, not every backend-internal physical choice."
+  ],
+  "preservation": {
+    "original_private_archive_sha256": "d844cdc239bfbd1521ada3e2150bfdbbeec1f1cd37e03ae6b40ccef51b38fffe",
+    "public_archive_sha256": "8037b4bad49c2a8ea652ad4a491ff4a73a30f284d4b182ce5fc13d0ccbb758c4",
+    "original_raw_and_operations_preserved_durably": true,
+    "public_byte_exact_files": 42,
+    "derived_bootstrap_files": 3,
+    "omitted_unrelated_inventory_labels": 18,
+    "scientific_fields_modified": 0,
+    "private_payload_exclusions": 18,
+    "mapping": "public-manifest.json",
+    "public_reproduction": "Same 133 checks and scientific fields; only the documented cold bootstrap file hash differs. Native-provider outer revalidation requires the privately preserved binaries."
+  },
+  "reproduction": {
+    "extract": "Extract raw-public.tar.gz into an empty directory.",
+    "analyze_argv": [
+      "python3",
+      "test/manual/kernels/results/flashinfer_autotune_selection/20261027T174000Z-h100-scoped-skips/analyze.py",
+      "--raw-root",
+      "<extracted>/raw",
+      "--source-root",
+      "<repository>",
+      "--expected-source-commit",
+      "a676eb9d8ebdda7347ed0e0db01bddf414ac6ce9",
+      "--output",
+      "<new-analysis.json>"
+    ]
+  },
+  "resources": {
+    "allocation": "2881755",
+    "started_utc": "2026-10-27T18:10:30Z",
+    "ended_utc": "2026-10-27T18:37:20Z",
+    "elapsed": "00:26:50",
+    "allocation_limit_minutes": 30,
+    "released": true,
+    "gpu_processes_after": 0,
+    "user_queue_empty": true,
+    "model_attempts": 1,
+    "model_retries": 0,
+    "scheduled_availability_checks_utc": [
+      "2026-10-27T17:55:07Z",
+      "2026-10-27T18:10:07Z"
+    ],
+    "availability_monitor_stopped": true,
+    "setup_note": "Checkpoint streaming took 19 min 29 s; completed within original resource bound. No experiment threshold/source amendment."
+  },
+  "decision": "The configured-skip handoff passed for this research adapter and configuration. No production defect or fix identified. Keep production policy/v1 persistence unchanged; ranking investigation remains paused for owner feedback. No automatic further experiment or PR.",
+  "limits": [
+    "One H100, dense FP8 model, TP1 and batch-one full decode.",
+    "No warm-restart/cache-reuse, selection-quality, latency, throughput or general model-quality claim.",
+    "No distributed, speculative, prefill-graph, concurrent-store or MegaMoE qualification.",
+    "Qualified source overlays, not an unmodified stable release or latest-main result.",
+    "No production or registered-test changes, CI triggers, external messages or PR."
+  ]
+}

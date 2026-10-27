@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "members_checked": 46,
+  "archive_sha256": "8037b4bad49c2a8ea652ad4a491ff4a73a30f284d4b182ce5fc13d0ccbb758c4",
+  "private_archive_sha256": "d844cdc239bfbd1521ada3e2150bfdbbeec1f1cd37e03ae6b40ccef51b38fffe",
+  "manifest_sha256": "d8dd92a5b228d4f9e6a53736b4f638b138b1f23287878538fe02c44455e9d2ae",
+  "exact_files": 42,
+  "derived_bootstrap_files": 3,
+  "omitted_inventory_entries": 18,
+  "excluded_private_files": 18,
+  "scan_pattern_hex": "766c6c6d",
+  "decompressed_member_scan": true
+}

@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "archives": [
+    {
+      "local": "/private/tmp/fi-scoped-skip-20261027/coordinator/20261027T174000Z-h100-scoped-skips-attempt01-cold-full-raw.tgz",
+      "status": "verified",
+      "path": "/home/lnau/flashinfer-autotune-study/20261027T174000Z-h100-scoped-skips-attempt01-cold-full-raw.tgz",
+      "size": 2438324,
+      "sha256": "d844cdc239bfbd1521ada3e2150bfdbbeec1f1cd37e03ae6b40ccef51b38fffe"
+    },
+    {
+      "local": "/private/tmp/fi-scoped-skip-20261027/coordinator/20261027T174000Z-h100-scoped-skips-attempt01-preflight-full-raw.tgz",
+      "status": "verified",
+      "path": "/home/lnau/flashinfer-autotune-study/20261027T174000Z-h100-scoped-skips-attempt01-preflight-full-raw.tgz",
+      "size": 2303662,
+      "sha256": "5c7e97e1d426c3760c000901f59d16bd6c3a78ac8c836069cc97f88fff857480"
+    },
+    {
+      "local": "/private/tmp/fi-scoped-skip-20261027/operational-preservation/20261027T183748Z-nn1ddvht/20261027T174000Z-h100-scoped-skips-operations-20261027T183748Z-nn1ddvht.tar.gz",
+      "status": "verified",
+      "path": "/home/lnau/flashinfer-autotune-study/20261027T174000Z-h100-scoped-skips-operations-20261027T183748Z-nn1ddvht.tar.gz",
+      "size": 27808,
+      "sha256": "efbc5246f6fa34309ae865650105e8d4a4290d48b758c0422518b4fd476cba80"
+    }
+  ]
+}

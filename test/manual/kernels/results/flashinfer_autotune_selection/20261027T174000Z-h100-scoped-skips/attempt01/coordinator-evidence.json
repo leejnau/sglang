@@ -1,0 +1,76 @@
+{
+  "archive": "coordinator-evidence.tar.gz",
+  "sha256": "685cfc1d8ce128837082d88bc86e74f7de8464d58a4cebcb09951544fd7a1bb9",
+  "files": [
+    {
+      "path": "operational-preservation-summary.json",
+      "size_bytes": 767,
+      "sha256": "1838fe4cf7b36228a5e3293423d8fe1ab5d23b2833cf834764de51f526fdbce3"
+    },
+    {
+      "path": "publication/assemble_public.py",
+      "size_bytes": 6483,
+      "sha256": "c96c507702ab345cc4ac7bad36aef857788acda9982b54d3dae2faa01ab028a0"
+    },
+    {
+      "path": "publication/check_publication.py",
+      "size_bytes": 6057,
+      "sha256": "696da761542a429316b042796a6c29c0e89743b908a44e68d13a1799b6a449e6"
+    },
+    {
+      "path": "publication/complete.json",
+      "size_bytes": 1413,
+      "sha256": "5667d805ad44133d423e2d785d6d97f4f384e49abc5df2bdce088c58e88565e8"
+    },
+    {
+      "path": "publication/controls.json",
+      "size_bytes": 506,
+      "sha256": "2913c3c2e866d24477890db89a0a2aeef6b38bbaa0b02c5de010297901b263d6"
+    },
+    {
+      "path": "publication/package_base.py",
+      "size_bytes": 13991,
+      "sha256": "7324863cb8598251d977dfdb71102621562ee828deb0ab50fdc1ad1cd97bd33c"
+    },
+    {
+      "path": "publication/prepare_public.py",
+      "size_bytes": 5833,
+      "sha256": "6a71590727b088f9778b29cd9fa62617cca31419851937334dd8f701798c7f4d"
+    },
+    {
+      "path": "publication/publication-difference-audit.json",
+      "size_bytes": 741,
+      "sha256": "e9a6e990bb4b989e952442011683c6f8c852c408e305db75624449447fb49fb4"
+    },
+    {
+      "path": "publication/publication_controls.py",
+      "size_bytes": 4599,
+      "sha256": "79fd1898413b0e0bce3af3f189c8787eac1975f430068152b04f954f54cd4ac9"
+    },
+    {
+      "path": "publication/reproduce_public.py",
+      "size_bytes": 4260,
+      "sha256": "11fe5b7bfc72f146908c25ecf43b294733146a0e0750f789ff8681df6228d82e"
+    },
+    {
+      "path": "publication/tooling-provenance.json",
+      "size_bytes": 1301,
+      "sha256": "1d729138d9ea48c343d22dc2190a3b76c6dd9dc7955c44be5a8ace7da00bc681"
+    },
+    {
+      "path": "review/execution.json",
+      "size_bytes": 1108,
+      "sha256": "55369a836f9f64adbf96c2ccbbc89b5fc91412a5298265d0d43e6c24e5cd0e2a"
+    },
+    {
+      "path": "review/review.json",
+      "size_bytes": 70783,
+      "sha256": "06c9ffbd261b36c8978896ce03afd190bd4149fce1b6dddae6cc9f65e028100b"
+    },
+    {
+      "path": "review/review_saved.py",
+      "size_bytes": 17407,
+      "sha256": "dc93d143f7dce1e9b2a706fc7081a20276892f1c5c02e674836d29d6003d8f98"
+    }
+  ]
+}

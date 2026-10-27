@@ -1,0 +1,34 @@
+{
+  "all_other_fields_equal": true,
+  "analyzer_command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "/private/tmp/sglang-scoped-cache-study/test/manual/kernels/results/flashinfer_autotune_selection/20261027T174000Z-h100-scoped-skips/analyze.py",
+    "--raw-root",
+    "/private/tmp/fi-scoped-skip-20261027/publication/reproduction/extracted/raw",
+    "--source-root",
+    "/private/tmp/sglang-scoped-cache-study",
+    "--expected-source-commit",
+    "a676eb9d8ebdda7347ed0e0db01bddf414ac6ce9",
+    "--output",
+    "/private/tmp/fi-scoped-skip-20261027/publication/reproduction/public-analyzer-rerun.json"
+  ],
+  "analyzer_returncode": 0,
+  "differences": [
+    {
+      "derived": "0aa99b8dc63bde5e082c98d24bf454dd08621850740335dd88643031f284510c",
+      "original": "f437923dc8fd07ce819f0a6f94229294ffefe39b9a93dfc48ce917efe5e030a8",
+      "path": "bootstrap_sha256"
+    }
+  ],
+  "findings": [],
+  "limits": "No scientific field, original raw record or frozen protocol changed; native/build payloads remain in the preserved private archive.",
+  "original_analysis_sha256": "0a0ead8bd21be047d350dab4f27fe727a61640db605c9991a1451dbd49249b25",
+  "public_archive_sha256": "8037b4bad49c2a8ea652ad4a491ff4a73a30f284d4b182ce5fc13d0ccbb758c4",
+  "public_manifest_sha256": "d8dd92a5b228d4f9e6a53736b4f638b138b1f23287878538fe02c44455e9d2ae",
+  "public_rerun_analysis_sha256": "54b42c6c478fe85b00f66d7a223d10cbbcc698029797a174eabf4424f93f21c7",
+  "qualification_complete": true,
+  "reproduction_source_sha256": "11fe5b7bfc72f146908c25ecf43b294733146a0e0750f789ff8681df6228d82e",
+  "scope": "Exact frozen analyzer reproduction; indexed bootstrap file-hash substitution only",
+  "source_commit": "a676eb9d8ebdda7347ed0e0db01bddf414ac6ce9",
+  "status": "passed"
+}
