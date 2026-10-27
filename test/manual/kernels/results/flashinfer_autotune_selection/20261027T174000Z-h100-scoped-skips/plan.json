@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "batch_id": "20261027T174000Z-h100-scoped-skips",
+  "question": "Does the research graph adapter preserve configured fp8_gemm exclusions through actual model preparation, warmups, CUDA capture and subsequent eager/retained-graph execution?",
+  "scope": "One real-model H100 skip/correctness qualification; no ranking, policy superiority, performance or cache-reuse claim.",
+  "research_parent": "ff16d59accc58a3ea7a50eb6dea232665da31311",
+  "research_branch": "leejnau/sglang:experiment/flashinfer-candidate-selection",
+  "model": {
+    "repository": "nvidia/Llama-3.1-8B-Instruct-FP8",
+    "revision": "42d9515ebd69eea3a87351d079c671c3c5ff0a31",
+    "quantization": "modelopt_fp8",
+    "weights": "Real serialized checkpoint, with file hashes bound before execution; no dummy weights or predicate overrides.",
+    "manifest_sha256": "d8a4e2c07bfc6193653f3381e41e3fe23ddf923f5e8082fe2c5c6db55df680a9",
+    "stream_plan_sha256": "734f8e8d83f560f6c3e19063736149d238f34cf46adba3b1b557652d6523fb47"
+  },
+  "environment": {
+    "image": "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
+    "gpu": "NVIDIA H100 NVL",
+    "gpu_uuid": "Recorded from the allocated device before execution; a different H100 NVL is permitted for this correctness-only check.",
+    "driver": "580.159.04",
+    "torch": "2.14.1+cu130",
+    "tensor_parallel_size": 1,
+    "pipeline_parallel_size": 1,
+    "data_parallel_size": 1,
+    "attention_backend": "triton",
+    "kv_cache_dtype": "bfloat16",
+    "model_dtype": "bfloat16",
+    "context_length": 256,
+    "max_total_tokens": 512,
+    "max_running_requests": 1,
+    "mem_fraction_static": 0.7,
+    "disable_overlap_schedule": true,
+    "speculation": false,
+    "prefill_graph": false,
+    "decode_graph_batch_sizes": [
+      1
+    ],
+    "flashinfer": "Base 27c62fdf0ab1cd4014df8a15b66a975541fda83c plus the qualified explicit-FP8 descriptor and benchmark-validation overlays; reuse exact prior native GEMM. This is not a stock-release claim. The #7521 debug guard is not overlaid.",
+    "flashinfer_source_sha256": {
+      "autotuner/autotuner.py": "0db42ad90d1a3fec6f81509a2c520c1892cea0a433f5dbd7f43468a2a10243ca",
+      "autotune_cache.py": "1ab2ed7208ed1bf1007b1f74de29fc818c93a5ab091beea0833474177fbb29ad",
+      "gemm/gemm_base.py": "0bba9240029a5e09f331e7a2267f7067e126d57a7a341ca535f7c9557599adca",
+      "autotuner/_graph_timing.py": "5f3be31e17501ba11ee95327176ac4a4b95eeaee7be92c2bc7795bcbd30cefe3"
+    },
+    "native_sha256": {
+      "gemm": "72690cacca4ce1d69ccaa6b9190475483d984bd58de0962d06c874c801c678d6",
+      "delay": "e442a689064fe3af4ab46510b2d5aaf3597b072949b84f13d14e9e53352109e4"
+    },
+    "visible_gpu_index": 0,
+    "allocation": "One exclusive host for at most30 minutes; GPU index0 only exposed. If using a two-GPU host, the second GPU remains unused. Actual hardware admission is pending.",
+    "power_limit": "Record actual positive limit; no timing comparisons.",
+    "allowed_nodes": [
+      "1u1g-gen-0100",
+      "a1u1g-mil-0836",
+      "2u2g-gen-0664"
+    ]
+  },
+  "protocol": {
+    "processes": [
+      "cold"
+    ],
+    "configured_skip_ops": [
+      "fp8_gemm"
+    ],
+    "configuration": "Pass flashinfer_autotune_skip_ops=[fp8_gemm] to the actual ServerArgs constructor before resolve_once and publication. Do not override eligibility predicates.",
+    "adapter": "Unchanged research ScopedGraphRegion.create/run from CPU-qualified source 02b783334418af5cddc711e4b6a8b9b48905f.",
+    "sequence": [
+      "Actual skipped legacy startup",
+      "Neutral prepared legacy decode before region",
+      "Adapter preparation with resolved configured skip",
+      "Adapter strict replay around unchanged backend two warmups plus CUDA capture",
+      "Neutral legacy decode after region",
+      "Fresh-prefix original/changed/restored eager-versus-retained-graph numerics after scope exit"
+    ],
+    "numerics": "Fresh identical prefixes and KV state for each eager/retained-graph arm; original, changed and restored decode token. Clone outputs; poison retained graph output before replay; require original graph and output owner unchanged, real replay, no new profiling.",
+    "numerical_atol": 0.05,
+    "numerical_rtol": 0.01,
+    "expected_fp8_lookups_per_prepared_forward": 128,
+    "resource_bound_minutes": 30,
+    "source_freeze": "Commit and push source and protocol before model execution. Preserve all setup/admission failures; no changed thresholds or discarded numerical failures.",
+    "zero_profile_expectation": "All relevant operations are skipped; profiling and graph winner publication must be absent. This is not cache-hit or warm-restart evidence.",
+    "admission": "Original host occupied; attempts2881263(Priority) and2881312(Resources) canceled without allocation. Resume on an allowed host only after exact x86_64/H100 NVL/driver/image/source/native checks. No further allocation currently active."
+  },
+  "validity_requirements": [
+    "Pinned real checkpoint, image and qualified FlashInfer source/native bytes; actual eligibility and resolved skip controls.",
+    "One ordinary batch-one full decode graph; distinguish two existing warmups from actual CUDA recording.",
+    "Actual research adapter invoked, configuration and immutable graph identity recorded.",
+    "Scope/reset handling, original backend hooks/streams and legacy state/files preserved.",
+    "All raw outcomes retained, including admission and harness failures; no new production policy."
+  ],
+  "coverage_requirements": [
+    "All 384 fp8_gemm lookups across two warmups and capture explicitly report skipped and tactic -1, with zero hits/misses/dropped records.",
+    "Preparation actual choose_one returns -1 for 128 expected operations under the same skip/identity controls.",
+    "Zero profiling throughout startup, adapter preparation, capture and numerical execution.",
+    "Legacy neutral observations after startup/region are unskipped default misses, not fictitious cache hits.",
+    "No managed winner publication; existing v1 metadata-only save is allowed.",
+    "Three original/changed/restored eager-versus-graph numerical comparisons pass frozen finite/allclose/argmax gates, actual input changes affect output, restoration restores output.",
+    "Three retained graph replays occur after scope exit with no Python tactic selection, profiling, recapture or stale-output acceptance."
+  ],
+  "decision_rule": "Stop after one admitted model run. Preserve any lifecycle/numerical failure. Repair demonstrated harness/setup defects only under a new frozen attempt. A pass qualifies this skip/control contract only; no automatic production PR or ranking experiment.",
+  "limits": [
+    "One H100, dense FP8 model, TP1 and batch-one full decode.",
+    "All relevant FP8 operations deliberately skipped: no winner selection-quality, cache-hit/reuse or performance evidence.",
+    "Qualified pinned overlays, not stock release/latest main.",
+    "No distributed, speculative, prefill graph, MegaMoE or general model-quality qualification.",
+    "No serving production changes, PR, CI triggers or external messages; ranking remains paused."
+  ],
+  "preparation_status": "Prepared; GPU resource admission blocked. No container preflight, model run or GPU result exists for this batch."
+}

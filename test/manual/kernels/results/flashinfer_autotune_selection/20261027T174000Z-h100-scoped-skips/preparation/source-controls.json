@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "checks": [
+    "benchmark preloads before factory patch",
+    "cache env selected before benchmark import",
+    "factory returns real ServerArgs",
+    "class symbol restored before resolution",
+    "real resolved namespace receives configured skip",
+    "artifact records configured skip",
+    "stopped before any model execution",
+    "class symbol restored after exception",
+    "skipped: accepted complete default coverage",
+    "skipped: rejected explicit tactic",
+    "miss: accepted complete default coverage",
+    "miss: rejected explicit tactic"
+  ],
+  "worker_sha256": "368db1a858f74b35fe62ecc0e693846b3118dfcf01feeab1a3657d3e4c2f2f7d",
+  "script_sha256": "37123d3bc0e24f3b56e12b16bce92e62616fbd866e28fd5e5e366f0a3d32713e",
+  "boundaries": "Actual CPU SGLang constructor/resolution/publication with prior documented bootstrap shims; benchmark import and base execution replaced solely to stop before model/GPU work. Synthetic report-oracle fixtures; no CUDA claim."
+}

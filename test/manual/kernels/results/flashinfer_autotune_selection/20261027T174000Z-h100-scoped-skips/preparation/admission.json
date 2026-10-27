@@ -1,0 +1,117 @@
+{
+  "status": "blocked_on_gpu_admission",
+  "gpu_experiments": 0,
+  "containers_started": 0,
+  "own_queue_empty": true,
+  "allocations": [
+    {
+      "job_id": 2881263,
+      "node": "a1u1g-mil-0836",
+      "state": "CANCELLED",
+      "scheduler_reason": "Priority",
+      "allocated_node": null,
+      "allocated_tres": null,
+      "runtime_seconds": 0
+    },
+    {
+      "job_id": 2881312,
+      "node": "2u2g-gen-0664",
+      "state": "CANCELLED",
+      "scheduler_reason": "Resources",
+      "allocated_node": null,
+      "allocated_tres": null,
+      "runtime_seconds": 0
+    }
+  ],
+  "raw_evidence": {
+    "storage": "Private local environment/ subtree; original scheduler receipts retained without modification. No model data exists.",
+    "files": [
+      {
+        "relative": "admission-review.exit.json",
+        "size": 50,
+        "sha256": "9f6d77d3138b30208b585450f9057c3759a103ecada997e19668e8c3a2c5020f"
+      },
+      {
+        "relative": "admission-review.log",
+        "size": 2717,
+        "sha256": "f87b0b2ebd03b8fb8f1e5ae17af4c82c5aedffb55bfd39fb54fa9c4637ff8a9a"
+      },
+      {
+        "relative": "admission-review.started.json",
+        "size": 276,
+        "sha256": "5725e316937d3c1419bdb7ccedc277df67081b7891d0843ff273f325e24b85e0"
+      },
+      {
+        "relative": "allocate.exit.json",
+        "size": 50,
+        "sha256": "21abdd015b2e484a7ad69ea907af22fe36cb60510ea526f7163550105b951923"
+      },
+      {
+        "relative": "allocate.log",
+        "size": 231,
+        "sha256": "cf81162c163b203a55822589d096053038df05c565d031ea328789437550e620"
+      },
+      {
+        "relative": "allocate.started.json",
+        "size": 533,
+        "sha256": "b58f5ca6d675656a79a4c9968e65b2bb02d87546d0496fd5a9ac1cc52008d0f7"
+      },
+      {
+        "relative": "attempt02/admission-review.exit.json",
+        "size": 50,
+        "sha256": "2efe472efd7fd90461ffe8ce3564aa1b9d3773410fb36b5ed575c71bedb7cdbb"
+      },
+      {
+        "relative": "attempt02/admission-review.log",
+        "size": 2768,
+        "sha256": "12879ed81163aa372c9898c68a3bfa6004ab249304b0265d5cdd9209cdae66c0"
+      },
+      {
+        "relative": "attempt02/admission-review.started.json",
+        "size": 276,
+        "sha256": "e7f57b1e16c3717d05ecbcf986d2135bf4e11e1a1cd3507572751bb0a01ec0f3"
+      },
+      {
+        "relative": "attempt02/allocate.exit.json",
+        "size": 50,
+        "sha256": "ab4f7e216f0cd1d993a011f35b3474f6b16797f32660e542352e102b20579b17"
+      },
+      {
+        "relative": "attempt02/allocate.log",
+        "size": 231,
+        "sha256": "07cd42a36ba7f4de536e5149eb4d1e5956c7dd96cfcfc0037189c6477bdfb419"
+      },
+      {
+        "relative": "attempt02/allocate.started.json",
+        "size": 554,
+        "sha256": "bf695fdc3b0f1aef48e9438abdc6e670c1ec4605fab248422671eb80ef08a039"
+      },
+      {
+        "relative": "cancel.exit.json",
+        "size": 50,
+        "sha256": "712f956a3a80f6c66e1a10ddec77da61bc9e3b7e65f29ef134341fcb6ee46517"
+      },
+      {
+        "relative": "cancel.log",
+        "size": 75,
+        "sha256": "396e68b8ca49c4e553be6d411b2ee7e123cb502445574cbe9204db915093da81"
+      },
+      {
+        "relative": "cancel.started.json",
+        "size": 393,
+        "sha256": "5429c70d20350308a3ba59429af7b3fe54a1e28111aca576025b54034e9c5883"
+      }
+    ]
+  },
+  "pending": [
+    "Allocated-device hardware/image admission",
+    "Container full-model import/native no-rebuild preflight",
+    "Single skipped actual-model startup/capture/numerical run",
+    "Frozen evidence analysis and independent result review"
+  ],
+  "not_claimed": [
+    "CUDA pass",
+    "Warm reuse",
+    "Performance improvement"
+  ]
+}

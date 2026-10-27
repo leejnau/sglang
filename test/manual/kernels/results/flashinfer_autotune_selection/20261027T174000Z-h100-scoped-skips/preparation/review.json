@@ -1,0 +1,18 @@
+{
+  "status": "source_review_passed_gpu_pending",
+  "worker_source_sha256": "368db1a858f74b35fe62ecc0e693846b3118dfcf01feeab1a3657d3e4c2f2f7d",
+  "reviews": [
+    "Independent adapter/call-site review passed after correcting constructor symbol restoration and preloading transitive imports.",
+    "Independent launch review: new worker CLI, visible GPU0, exact qualified source/native/model checks. Corrected streamer bundling and removed stale warm-phase controls."
+  ],
+  "local_validation": [
+    "12 CPU source/configuration/report-oracle controls passed; actual CPU ServerArgs resolution/publication with explicit bootstrap boundaries, no model execution.",
+    "Worker syntax and CLI help passed.",
+    "Applicable repository hooks, Python AST, shell syntax and prohibited-name scan passed on final prepared files; commit hooks run separately."
+  ],
+  "limits": [
+    "Container imports, hardware and CUDA numerics remain untested for this new worker.",
+    "Prior passing actual-model scoped cache run and prior164check CPU adapter evidence remain separate.",
+    "New analyzer has syntax/help and source review only; it has not processed a valid new GPU result."
+  ]
+}

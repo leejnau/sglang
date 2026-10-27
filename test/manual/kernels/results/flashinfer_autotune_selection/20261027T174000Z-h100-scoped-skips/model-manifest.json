@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "model": "nvidia/Llama-3.1-8B-Instruct-FP8",
+  "revision": "42d9515ebd69eea3a87351d079c671c3c5ff0a31",
+  "files": [
+    {
+      "path": "config.json",
+      "size_bytes": 879,
+      "sha256": "60c4b66789dfbb8a44e5fc7664b572250337bc2d372defce618c990c5b261d78",
+      "expected_lfs_sha256": null,
+      "git_blob_id": "d38365647a5937abca76292f13c82840f9c501b4"
+    },
+    {
+      "path": "generation_config.json",
+      "size_bytes": 189,
+      "sha256": "480863d702952a5ab17e65bb8f78cc3733edf3679f8570459ee9b0d54653da24",
+      "expected_lfs_sha256": null,
+      "git_blob_id": "cdc216a585ae6830faf9299531045698094eb109"
+    },
+    {
+      "path": "hf_quant_config.json",
+      "size_bytes": 241,
+      "sha256": "67af064d00f30442be00b6b0296f0cc9ede7ffef22b31d3c0b809895a792a7a9",
+      "expected_lfs_sha256": null,
+      "git_blob_id": "7b6b743d2ba6f1cb43610dc800f2e325de64d941"
+    },
+    {
+      "path": "model-00001-of-00002.safetensors",
+      "size_bytes": 4997857256,
+      "sha256": "499ce93537438acbb81ac5bf6f6890d0501b572d85405866705b700f08644a24",
+      "expected_lfs_sha256": "499ce93537438acbb81ac5bf6f6890d0501b572d85405866705b700f08644a24",
+      "git_blob_id": "89780d9bc8783bc4cab8dfbc379476a3c8cf519e"
+    },
+    {
+      "path": "model-00002-of-00002.safetensors",
+      "size_bytes": 4083429784,
+      "sha256": "62e7244fe8487c09413cd9ed683d94d580dca68a4562549f7b62c8f8c0ba5246",
+      "expected_lfs_sha256": "62e7244fe8487c09413cd9ed683d94d580dca68a4562549f7b62c8f8c0ba5246",
+      "git_blob_id": "2f65ffa265981420ff1e462ad20c9c14acef438c"
+    },
+    {
+      "path": "model.safetensors.index.json",
+      "size_bytes": 68109,
+      "sha256": "3e691ab73ae0c10cb57703169d31d14c72b13dbcda46d495c53e294457c09ac1",
+      "expected_lfs_sha256": null,
+      "git_blob_id": "ceaffa54daa778bbd22eddef6f33444a27d2a131"
+    },
+    {
+      "path": "special_tokens_map.json",
+      "size_bytes": 325,
+      "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+      "expected_lfs_sha256": null,
+      "git_blob_id": "b43be96621d147110fb8a18b5776ec6e38516127"
+    },
+    {
+      "path": "tokenizer.json",
+      "size_bytes": 9085822,
+      "sha256": "0803c172634381f61d26d56949fa9d2ddfaccdb6a840b0a9e70b21fc593e8750",
+      "expected_lfs_sha256": null,
+      "git_blob_id": "17d62efaca62253d7e7663e9de73c2b2d5456c73"
+    },
+    {
+      "path": "tokenizer_config.json",
+      "size_bytes": 50925,
+      "sha256": "90e7e4aeeb12f9a8d882bdab84283d20a33813d7acff36227cc6042682d39ad7",
+      "expected_lfs_sha256": null,
+      "git_blob_id": "524d7cb3573c7967a7ef09dc51328e6d8979b2f8"
+    }
+  ],
+  "metadata_sha256": "42bd81b855ce21f50c96be5bd218333446778b14abd53f1da2f43ea297e5a0d5",
+  "gpu_used": false,
+  "transport": "Logical checkpoint files verified over ordered preserved pieces; exact pieces stream to node and assembled files are rehashed before model execution. One short HTTP response was resumed at its missing suffix; all original bytes and setup logs retained."
+}
