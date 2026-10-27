@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "execution_commit": "b2b52b4b6b109941e8df34df59f19b6f437445fa",
+  "provenance_sha256": "b67ae11e972aadab6b2ebecd3c0c8878be3b7559469eccf253fc63e726f5ae84",
+  "phases": [
+    "preflight",
+    "cold",
+    "warm"
+  ],
+  "workers": {
+    "preflight": {
+      "result_sha256": "c7197f66b1744bb1b9a5d0b37f9bd9799d6ee0ecea14664b26381d6f9fd996dd",
+      "bootstrap_sha256": "1145f36b4ae3e569201ca3c13541ce938e8f8f9aa8a1f96bb2c4093fc51bd867",
+      "container_id": "5a02236abd4bf71845ca4d225c2cd623fce39534027adc9dcd90b80fa2dd7666",
+      "native_files_verified": 16,
+      "model_files_verified": 9
+    },
+    "cold": {
+      "result_sha256": "6b13d49cc3c7de83b18704704134c8bc92ec6b782b887e264a17ac8d8fed1724",
+      "bootstrap_sha256": "5448b108767d1eaede53bb56f216f3b2099ab249e1cd85370d7128a9b4418b36",
+      "container_id": "b4d5cd2ff4169239959c0b7f1cdd840857674fb5bed9ce7d43541f027bf7f5c2",
+      "native_files_verified": 16,
+      "model_files_verified": 9
+    },
+    "warm": {
+      "result_sha256": "a0f087049b0ad4893ac0dbe7314ee1d4531954eebc5e1a7f102fd44a050e5fcf",
+      "bootstrap_sha256": "85a6c9a32adec3e84a84fcdcad923f6142d2ad94554669ee1d66eeb6825f598c",
+      "container_id": "311d11c5af396bd5bf3583106f3146969800e68fa6cba9bf68bacf083b93ee79",
+      "native_files_verified": 16,
+      "model_files_verified": 9
+    }
+  },
+  "limitation": "Checkpoint/source bytes verified on node; raw archive retains their hashes and the exact controlled native providers. Other imported native kernels are not individually qualified."
+}

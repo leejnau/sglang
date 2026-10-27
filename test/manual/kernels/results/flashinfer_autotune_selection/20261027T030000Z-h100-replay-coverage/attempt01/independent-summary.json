@@ -1,0 +1,60 @@
+{
+  "coverage": {
+    "actual_capture_lookups": 256,
+    "all_model_winners_nondefault": true,
+    "cold_source": "memory",
+    "dropped_records": 0,
+    "eligible_linear_layers": 128,
+    "existing_forward_invocations": 6,
+    "fresh_warm_source": "legacy file",
+    "hits": 768,
+    "hits_per_forward": 128,
+    "misses": 0,
+    "skipped": 0,
+    "total_lookups": 768
+  },
+  "decision": "Close this bounded coverage question without a coverage-specific fix, policy change, permanent diagnostic flag or further GPU run.",
+  "execution_commit": "b2b52b4b6b109941e8df34df59f19b6f437445fa",
+  "limits": [
+    "One dense static-FP8 model, batch-one ordinary full decode, TP1 and one cold/warm process pair.",
+    "Tuner hits establish selection reuse, not every backend physical kernel or performance improvement.",
+    "Eager/graph agreement is execution consistency, not independent model-quality validation.",
+    "Distributed, speculative, prefill-graph, other backend/model and policy-isolation paths remain unqualified by this audit."
+  ],
+  "numerics": {
+    "actual_retained_graph_replays": 6,
+    "cases_per_process": [
+      "original",
+      "changed",
+      "restored"
+    ],
+    "changed_outputs": true,
+    "eager_graph_case_pairs": 6,
+    "fresh_identical_prefix_KV_state_per_arm": true,
+    "graph_output_nan_poisoning": true,
+    "max_abs_error_all_cases": 0.0,
+    "restored_outputs": true
+  },
+  "persistence": {
+    "cold_saved_entries": 4,
+    "fresh_warm_loaded_exact_same_keys_and_tactics": true,
+    "saved_file_bytes_unchanged_through_warm_save_and_numerics": true
+  },
+  "profiling": {
+    "cold_startup": 36,
+    "fresh_warm_startup": 0,
+    "post_startup": 0
+  },
+  "scope": {
+    "decode_backend": "full CUDA graph",
+    "decode_batch_size": 1,
+    "gpu": "NVIDIA H100 NVL",
+    "measurement_policy": "unspecified",
+    "model": "nvidia/Llama-3.1-8B-Instruct-FP8",
+    "persistence": "existing v1 JSON",
+    "ranks": 1,
+    "revision": "42d9515ebd69eea3a87351d079c671c3c5ff0a31",
+    "source": "previously qualified exact research overlay; not a stock-release claim"
+  },
+  "status": "complete_no_bounded_gap_found"
+}

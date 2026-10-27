@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "decision": "No coverage gap found in this bounded startup-to-decode-capture audit.",
+  "execution_commit": "b2b52b4b6b109941e8df34df59f19b6f437445fa",
+  "question": "Does actual SGLang startup populate the FlashInfer choices used by ordinary decode capture, and does a fresh process reuse those choices through existing v1 persistence?",
+  "model": {
+    "repository": "nvidia/Llama-3.1-8B-Instruct-FP8",
+    "revision": "42d9515ebd69eea3a87351d079c671c3c5ff0a31",
+    "quantization": "modelopt_fp8",
+    "tensor_parallel_size": 1,
+    "decode_batch_size": 1,
+    "attention_backend": "triton",
+    "kv_cache_dtype": "bfloat16"
+  },
+  "environment": {
+    "container": "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
+    "gpu": "NVIDIA H100 NVL",
+    "torch": "2.14.1+cu130",
+    "flashinfer_runtime_version": "0.0.0+unknown",
+    "flashinfer_source": "27c62fdf0ab1cd4014df8a15b66a975541fda83c plus the previously qualified FP8 descriptor and benchmark-validation overlays; exact source/native hashes are preserved. The #7521 debug guard was not overlaid."
+  },
+  "policy": {
+    "measurement_policy": "unspecified",
+    "production_selection_change": false,
+    "managed_persistence": false,
+    "existing_v1_persistence": true,
+    "strict_replay": false,
+    "new_pr_opened": false
+  },
+  "processes": [
+    {
+      "phase": "cold",
+      "startup_profile_calls": 36,
+      "post_startup_profile_calls": 0,
+      "observed_forwards": 3,
+      "eligible_fp8_linears": 128,
+      "lookups": 384,
+      "status_counts": {
+        "hit": 384
+      },
+      "source_counts": {
+        "memory": 384
+      },
+      "default_tactic_hits": 0,
+      "actual_capture_lookups": 128,
+      "graph_replays_in_numerical_check": 3
+    },
+    {
+      "phase": "warm",
+      "startup_profile_calls": 0,
+      "post_startup_profile_calls": 0,
+      "observed_forwards": 3,
+      "eligible_fp8_linears": 128,
+      "lookups": 384,
+      "status_counts": {
+        "hit": 384
+      },
+      "source_counts": {
+        "legacy": 384
+      },
+      "default_tactic_hits": 0,
+      "actual_capture_lookups": 128,
+      "graph_replays_in_numerical_check": 3
+    }
+  ],
+  "coverage": {
+    "lookups": 768,
+    "hits": 768,
+    "misses": 0,
+    "skips": 0,
+    "dropped_records": 0,
+    "actual_capture_lookups": 256,
+    "cached_default_observed_in_model": false,
+    "default_control": "An isolated actual-tuner lookup distinguishes a fallback -1 miss from a seeded cached -1 hit in each process; the model observations used explicit cached tactics."
+  },
+  "persistence": {
+    "saved_files": 1,
+    "saved_winner_entries": 4,
+    "cold_to_warm_file_bytes_unchanged": true,
+    "warm_resave_file_bytes_unchanged": true,
+    "cache_file_sha256": {
+      "flashinfer/autotune/0.0.0+unknown/sm90/17a026c01f4e2d07/rank_tp0_pp0_dp0.json": "d7a954302abde6e1aa1a49d1ec93d2299311cb0af018969fb3a187537d4b8f24"
+    },
+    "warm_startup_profile_calls": 0
+  },
+  "numerics": {
+    "comparison_pairs": 6,
+    "cases_per_process": [
+      "original",
+      "changed",
+      "restored"
+    ],
+    "max_absolute_error": 0.0,
+    "all_argmax_equal": true,
+    "changed_input_changed_output_in_both_processes": true,
+    "restored_input_restored_output_in_both_processes": true,
+    "cold_warm_output_hashes_identical": true,
+    "retained_graph_output_poison_and_owner_checks": "passed"
+  },
+  "validation": {
+    "frozen_cpu_controls": 38,
+    "independent_raw_checks": 179,
+    "frozen_analyzer": "valid_evidence, coverage_complete=true, findings=[]; independent rerun byte-identical",
+    "outer_native_source_model_audit": "passed",
+    "publication_cpu_controls": 8,
+    "independent_publication_audit": "passed"
+  },
+  "resources": {
+    "id": 2867587,
+    "node": "1u1g-gen-0100",
+    "start_utc": "2026-10-27T03:32:34Z",
+    "end_utc": "2026-10-27T03:50:44Z",
+    "elapsed": "00:18:10",
+    "released": true,
+    "queue_empty": true
+  },
+  "experimental_retries": 0,
+  "additional_experiments": 0,
+  "evidence": {
+    "public_archive": "raw-public.tar.gz",
+    "public_archive_sha256": "f3ad634b0b94a4fc04ef91d0851562eb8deff0e2f04a29aeed12be612737d05c",
+    "complete_private_archive_sha256": "4b170853ea7d44f8d4299b51be994933dd186419ea05cb587bbe810bb2568308",
+    "durable_private_archive": "/home/lnau/flashinfer-autotune-study/20261027T030000Z-h100-replay-coverage-attempt01-warm-full-raw.tgz",
+    "public_derivation": "59 scientific/diagnostic files byte-exact; four bootstrap inventories omit 24 unrelated labels with original hashes; 18 private files indexed/excluded, including model stream plan and native payloads. Full private evidence remains unchanged."
+  },
+  "next_step": "Close this bounded cache-coverage question. No coverage-specific production fix or permanent diagnostic flag is justified by these results. Keep the current selection policy and v1 persistence unchanged.",
+  "limits": [
+    "One dense FP8 checkpoint, one H100 NVL, TP1, batch-one ordinary decode and one cold/warm pair.",
+    "This is the actual benchmark ModelRunner startup/capture path, not a complete HTTP serving benchmark.",
+    "The qualified FlashInfer source overlays and native provider make this a pinned-build result, not stock-release qualification.",
+    "Replay coverage reports tuner choices and does not prove every backend physical kernel selection.",
+    "Numerics establish eager/graph and restart consistency, not an independent model-quality oracle.",
+    "No v1-versus-v2 speedup, throughput, latency or selection-optimality claim.",
+    "Distributed, speculative, prefill-graph, other quantization and MegaMoE paths remain outside scope."
+  ]
+}

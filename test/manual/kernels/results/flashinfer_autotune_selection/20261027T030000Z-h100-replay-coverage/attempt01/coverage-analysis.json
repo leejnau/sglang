@@ -1,0 +1,428 @@
+{
+  "coverage_complete": true,
+  "findings": [],
+  "interpretation": "Coverage gaps are preserved audit findings, not excluded samples. Selection hits do not prove every backend's physical kernel identity. Numerical checks establish eager/graph consistency for one model and workload.",
+  "limits": [
+    "One model, one decode batch size, one device and one cold/warm pair.",
+    "Cache selection evidence is not proof of the physical kernel chosen by every backend.",
+    "Subsequent graph replay does not perform Python tactic lookup.",
+    "No serving-performance, model-quality benchmark, distributed, prefill-graph, speculative or MegaMoE claim.",
+    "The previous confirmation experiment remains stopped; the old scoped-cache prototype remains parked.",
+    "No research PR or production code change."
+  ],
+  "plan_sha256": "90fb32c8d857720bc07dfef7dcc6c257303df7e20aeaf228093b126cf253c437",
+  "schema": 1,
+  "source_commit": "b2b52b4b6b109941e8df34df59f19b6f437445fa",
+  "status": "valid_evidence",
+  "study": "actual_model_decode_replay_coverage",
+  "workers": [
+    {
+      "bootstrap_sha256": "5448b108767d1eaede53bb56f216f3b2099ab249e1cd85370d7128a9b4418b36",
+      "cache_after_startup": {
+        "flashinfer/autotune/0.0.0+unknown/sm90/17a026c01f4e2d07/rank_tp0_pp0_dp0.json": "d7a954302abde6e1aa1a49d1ec93d2299311cb0af018969fb3a187537d4b8f24"
+      },
+      "cache_before_startup": {},
+      "container_id": "b4d5cd2ff4169239959c0b7f1cdd840857674fb5bed9ce7d43541f027bf7f5c2",
+      "coverage": [
+        {
+          "cached_default_hits": 0,
+          "dropped_records": 0,
+          "fallback_default_misses": 0,
+          "groups": [
+            {
+              "count": 32,
+              "op": "fp8_gemm",
+              "source": "memory",
+              "status": "hit",
+              "tactic_repr": "(1687922147394, 17179869220, 2, 844424930131969, 558779540176897, 120259084316, 292058693646, 0)"
+            },
+            {
+              "count": 32,
+              "op": "fp8_gemm",
+              "source": "memory",
+              "status": "hit",
+              "tactic_repr": "(1687922147394, 4294967332, 0, 844424930131969, 558779540176897, 120259084316, 292058693646, 0)"
+            },
+            {
+              "count": 32,
+              "op": "fp8_gemm",
+              "source": "memory",
+              "status": "hit",
+              "tactic_repr": "(1924145348674, 4294967332, 0, 1125899906842625, 558779540176897, 120259084316, 292058693646, 0)"
+            },
+            {
+              "count": 32,
+              "op": "fp8_gemm",
+              "source": "memory",
+              "status": "hit",
+              "tactic_repr": "(614180323394, 4294967332, 0, 1125899906842624, 558779540176897, 120259084316, 292058693646, 0)"
+            }
+          ],
+          "hits": 128,
+          "intended_fp8_gemm_records": 128,
+          "lookups": 128,
+          "misses": 0,
+          "ordinal": 0,
+          "shape_key": {
+            "attention_variant": null,
+            "size": 1,
+            "stream_idx": null,
+            "variant_label": null
+          },
+          "skipped": 0,
+          "stage": "capture_warmup"
+        },
+        {
+          "cached_default_hits": 0,
+          "dropped_records": 0,
+          "fallback_default_misses": 0,
+          "groups": [
+            {
+              "count": 32,
+              "op": "fp8_gemm",
+              "source": "memory",
+              "status": "hit",
+              "tactic_repr": "(1687922147394, 17179869220, 2, 844424930131969, 558779540176897, 120259084316, 292058693646, 0)"
+            },
+            {
+              "count": 32,
+              "op": "fp8_gemm",
+              "source": "memory",
+              "status": "hit",
+              "tactic_repr": "(1687922147394, 4294967332, 0, 844424930131969, 558779540176897, 120259084316, 292058693646, 0)"
+            },
+            {
+              "count": 32,
+              "op": "fp8_gemm",
+              "source": "memory",
+              "status": "hit",
+              "tactic_repr": "(1924145348674, 4294967332, 0, 1125899906842625, 558779540176897, 120259084316, 292058693646, 0)"
+            },
+            {
+              "count": 32,
+              "op": "fp8_gemm",
+              "source": "memory",
+              "status": "hit",
+              "tactic_repr": "(614180323394, 4294967332, 0, 1125899906842624, 558779540176897, 120259084316, 292058693646, 0)"
+            }
+          ],
+          "hits": 128,
+          "intended_fp8_gemm_records": 128,
+          "lookups": 128,
+          "misses": 0,
+          "ordinal": 1,
+          "shape_key": {
+            "attention_variant": null,
+            "size": 1,
+            "stream_idx": null,
+            "variant_label": null
+          },
+          "skipped": 0,
+          "stage": "capture_warmup"
+        },
+        {
+          "cached_default_hits": 0,
+          "dropped_records": 0,
+          "fallback_default_misses": 0,
+          "groups": [
+            {
+              "count": 32,
+              "op": "fp8_gemm",
+              "source": "memory",
+              "status": "hit",
+              "tactic_repr": "(1687922147394, 17179869220, 2, 844424930131969, 558779540176897, 120259084316, 292058693646, 0)"
+            },
+            {
+              "count": 32,
+              "op": "fp8_gemm",
+              "source": "memory",
+              "status": "hit",
+              "tactic_repr": "(1687922147394, 4294967332, 0, 844424930131969, 558779540176897, 120259084316, 292058693646, 0)"
+            },
+            {
+              "count": 32,
+              "op": "fp8_gemm",
+              "source": "memory",
+              "status": "hit",
+              "tactic_repr": "(1924145348674, 4294967332, 0, 1125899906842625, 558779540176897, 120259084316, 292058693646, 0)"
+            },
+            {
+              "count": 32,
+              "op": "fp8_gemm",
+              "source": "memory",
+              "status": "hit",
+              "tactic_repr": "(614180323394, 4294967332, 0, 1125899906842624, 558779540176897, 120259084316, 292058693646, 0)"
+            }
+          ],
+          "hits": 128,
+          "intended_fp8_gemm_records": 128,
+          "lookups": 128,
+          "misses": 0,
+          "ordinal": 2,
+          "shape_key": {
+            "attention_variant": null,
+            "size": 1,
+            "stream_idx": null,
+            "variant_label": null
+          },
+          "skipped": 0,
+          "stage": "capture"
+        }
+      ],
+      "eligible_linear_layers": 128,
+      "findings": [],
+      "phase": "cold",
+      "pid": 1,
+      "post_startup_profile_count": 0,
+      "report_controls": [
+        {
+          "cached_default_hits": 0,
+          "dropped_records": 0,
+          "fallback_default_misses": 1,
+          "groups": [
+            {
+              "count": 1,
+              "op": "replay_coverage_cpu_control",
+              "source": "fallback",
+              "status": "miss",
+              "tactic_repr": "-1"
+            }
+          ],
+          "hits": 0,
+          "intended_fp8_gemm_records": 0,
+          "lookups": 1,
+          "misses": 1,
+          "skipped": 0
+        },
+        {
+          "cached_default_hits": 1,
+          "dropped_records": 0,
+          "fallback_default_misses": 0,
+          "groups": [
+            {
+              "count": 1,
+              "op": "replay_coverage_cpu_control",
+              "source": "memory",
+              "status": "hit",
+              "tactic_repr": "-1"
+            }
+          ],
+          "hits": 1,
+          "intended_fp8_gemm_records": 0,
+          "lookups": 1,
+          "misses": 0,
+          "skipped": 0
+        }
+      ],
+      "result_file": "cold.json",
+      "result_sha256": "6b13d49cc3c7de83b18704704134c8bc92ec6b782b887e264a17ac8d8fed1724",
+      "startup_profile_count": 36,
+      "unobserved_protocol_calls": 0
+    },
+    {
+      "bootstrap_sha256": "85a6c9a32adec3e84a84fcdcad923f6142d2ad94554669ee1d66eeb6825f598c",
+      "cache_after_startup": {
+        "flashinfer/autotune/0.0.0+unknown/sm90/17a026c01f4e2d07/rank_tp0_pp0_dp0.json": "d7a954302abde6e1aa1a49d1ec93d2299311cb0af018969fb3a187537d4b8f24"
+      },
+      "cache_before_startup": {
+        "flashinfer/autotune/0.0.0+unknown/sm90/17a026c01f4e2d07/rank_tp0_pp0_dp0.json": "d7a954302abde6e1aa1a49d1ec93d2299311cb0af018969fb3a187537d4b8f24"
+      },
+      "container_id": "311d11c5af396bd5bf3583106f3146969800e68fa6cba9bf68bacf083b93ee79",
+      "coverage": [
+        {
+          "cached_default_hits": 0,
+          "dropped_records": 0,
+          "fallback_default_misses": 0,
+          "groups": [
+            {
+              "count": 32,
+              "op": "fp8_gemm",
+              "source": "legacy",
+              "status": "hit",
+              "tactic_repr": "(1687922147394, 17179869220, 2, 844424930131969, 558779540176897, 120259084316, 292058693646, 0)"
+            },
+            {
+              "count": 32,
+              "op": "fp8_gemm",
+              "source": "legacy",
+              "status": "hit",
+              "tactic_repr": "(1687922147394, 4294967332, 0, 844424930131969, 558779540176897, 120259084316, 292058693646, 0)"
+            },
+            {
+              "count": 32,
+              "op": "fp8_gemm",
+              "source": "legacy",
+              "status": "hit",
+              "tactic_repr": "(1924145348674, 4294967332, 0, 1125899906842625, 558779540176897, 120259084316, 292058693646, 0)"
+            },
+            {
+              "count": 32,
+              "op": "fp8_gemm",
+              "source": "legacy",
+              "status": "hit",
+              "tactic_repr": "(614180323394, 4294967332, 0, 1125899906842624, 558779540176897, 120259084316, 292058693646, 0)"
+            }
+          ],
+          "hits": 128,
+          "intended_fp8_gemm_records": 128,
+          "lookups": 128,
+          "misses": 0,
+          "ordinal": 0,
+          "shape_key": {
+            "attention_variant": null,
+            "size": 1,
+            "stream_idx": null,
+            "variant_label": null
+          },
+          "skipped": 0,
+          "stage": "capture_warmup"
+        },
+        {
+          "cached_default_hits": 0,
+          "dropped_records": 0,
+          "fallback_default_misses": 0,
+          "groups": [
+            {
+              "count": 32,
+              "op": "fp8_gemm",
+              "source": "legacy",
+              "status": "hit",
+              "tactic_repr": "(1687922147394, 17179869220, 2, 844424930131969, 558779540176897, 120259084316, 292058693646, 0)"
+            },
+            {
+              "count": 32,
+              "op": "fp8_gemm",
+              "source": "legacy",
+              "status": "hit",
+              "tactic_repr": "(1687922147394, 4294967332, 0, 844424930131969, 558779540176897, 120259084316, 292058693646, 0)"
+            },
+            {
+              "count": 32,
+              "op": "fp8_gemm",
+              "source": "legacy",
+              "status": "hit",
+              "tactic_repr": "(1924145348674, 4294967332, 0, 1125899906842625, 558779540176897, 120259084316, 292058693646, 0)"
+            },
+            {
+              "count": 32,
+              "op": "fp8_gemm",
+              "source": "legacy",
+              "status": "hit",
+              "tactic_repr": "(614180323394, 4294967332, 0, 1125899906842624, 558779540176897, 120259084316, 292058693646, 0)"
+            }
+          ],
+          "hits": 128,
+          "intended_fp8_gemm_records": 128,
+          "lookups": 128,
+          "misses": 0,
+          "ordinal": 1,
+          "shape_key": {
+            "attention_variant": null,
+            "size": 1,
+            "stream_idx": null,
+            "variant_label": null
+          },
+          "skipped": 0,
+          "stage": "capture_warmup"
+        },
+        {
+          "cached_default_hits": 0,
+          "dropped_records": 0,
+          "fallback_default_misses": 0,
+          "groups": [
+            {
+              "count": 32,
+              "op": "fp8_gemm",
+              "source": "legacy",
+              "status": "hit",
+              "tactic_repr": "(1687922147394, 17179869220, 2, 844424930131969, 558779540176897, 120259084316, 292058693646, 0)"
+            },
+            {
+              "count": 32,
+              "op": "fp8_gemm",
+              "source": "legacy",
+              "status": "hit",
+              "tactic_repr": "(1687922147394, 4294967332, 0, 844424930131969, 558779540176897, 120259084316, 292058693646, 0)"
+            },
+            {
+              "count": 32,
+              "op": "fp8_gemm",
+              "source": "legacy",
+              "status": "hit",
+              "tactic_repr": "(1924145348674, 4294967332, 0, 1125899906842625, 558779540176897, 120259084316, 292058693646, 0)"
+            },
+            {
+              "count": 32,
+              "op": "fp8_gemm",
+              "source": "legacy",
+              "status": "hit",
+              "tactic_repr": "(614180323394, 4294967332, 0, 1125899906842624, 558779540176897, 120259084316, 292058693646, 0)"
+            }
+          ],
+          "hits": 128,
+          "intended_fp8_gemm_records": 128,
+          "lookups": 128,
+          "misses": 0,
+          "ordinal": 2,
+          "shape_key": {
+            "attention_variant": null,
+            "size": 1,
+            "stream_idx": null,
+            "variant_label": null
+          },
+          "skipped": 0,
+          "stage": "capture"
+        }
+      ],
+      "eligible_linear_layers": 128,
+      "findings": [],
+      "phase": "warm",
+      "pid": 1,
+      "post_startup_profile_count": 0,
+      "report_controls": [
+        {
+          "cached_default_hits": 0,
+          "dropped_records": 0,
+          "fallback_default_misses": 1,
+          "groups": [
+            {
+              "count": 1,
+              "op": "replay_coverage_cpu_control",
+              "source": "fallback",
+              "status": "miss",
+              "tactic_repr": "-1"
+            }
+          ],
+          "hits": 0,
+          "intended_fp8_gemm_records": 0,
+          "lookups": 1,
+          "misses": 1,
+          "skipped": 0
+        },
+        {
+          "cached_default_hits": 1,
+          "dropped_records": 0,
+          "fallback_default_misses": 0,
+          "groups": [
+            {
+              "count": 1,
+              "op": "replay_coverage_cpu_control",
+              "source": "memory",
+              "status": "hit",
+              "tactic_repr": "-1"
+            }
+          ],
+          "hits": 1,
+          "intended_fp8_gemm_records": 0,
+          "lookups": 1,
+          "misses": 0,
+          "skipped": 0
+        }
+      ],
+      "result_file": "warm.json",
+      "result_sha256": "a0f087049b0ad4893ac0dbe7314ee1d4531954eebc5e1a7f102fd44a050e5fcf",
+      "startup_profile_count": 0,
+      "unobserved_protocol_calls": 0
+    }
+  ]
+}

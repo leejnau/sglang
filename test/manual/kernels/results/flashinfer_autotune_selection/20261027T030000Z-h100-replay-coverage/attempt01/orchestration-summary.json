@@ -1,0 +1,57 @@
+{
+  "status": "completed",
+  "execution_commit": "b2b52b4b6b109941e8df34df59f19b6f437445fa",
+  "allocation": {
+    "id": 2867587,
+    "node": "1u1g-gen-0100",
+    "start_utc": "2026-10-27T03:32:34Z",
+    "end_utc": "2026-10-27T03:50:44Z",
+    "elapsed": "00:18:10",
+    "released": true,
+    "queue_empty": true
+  },
+  "processes": [
+    {
+      "phase": "cold",
+      "startup_profiles": 36,
+      "post_startup_profiles": 0,
+      "eligible_linears": 128,
+      "observed_forwards": 3,
+      "lookups": 384,
+      "hits": 384,
+      "misses": 0,
+      "container_id": "b4d5cd2ff4169239959c0b7f1cdd840857674fb5bed9ce7d43541f027bf7f5c2",
+      "result_sha256": "6b13d49cc3c7de83b18704704134c8bc92ec6b782b887e264a17ac8d8fed1724"
+    },
+    {
+      "phase": "warm",
+      "startup_profiles": 0,
+      "post_startup_profiles": 0,
+      "eligible_linears": 128,
+      "observed_forwards": 3,
+      "lookups": 384,
+      "hits": 384,
+      "misses": 0,
+      "container_id": "311d11c5af396bd5bf3583106f3146969800e68fa6cba9bf68bacf083b93ee79",
+      "result_sha256": "a0f087049b0ad4893ac0dbe7314ee1d4531954eebc5e1a7f102fd44a050e5fcf"
+    }
+  ],
+  "coverage_complete": true,
+  "findings": [],
+  "final_archive": {
+    "sha256": "4b170853ea7d44f8d4299b51be994933dd186419ea05cb587bbe810bb2568308",
+    "size_bytes": 2470254,
+    "preserved_files_verified": 80,
+    "local_raw_root": "/private/tmp/fi-replay-coverage-20261027/coordinator/raw-warm/attempt01"
+  },
+  "setup_events": [
+    "Pinned-host key alias used after initial lookup failure; no trust bypass.",
+    "Transport prefixes and all range responses preserved; one short HTTP range resumed only at its missing suffix; both full LFS hashes and all nine files verified.",
+    "Slow duplicate login assembly stopped only after recorded PID/start/owned-FD check; preserved partial. Logical piece streaming adopted before frozen source commit; node rehashed complete files.",
+    "Source pack delta transfer emitted one retry warning; final remote pack and all helpers matched frozen hashes before allocation.",
+    "Archive-copy srun consumed remote coordinator stdin before cold was invoked; empty log and zero-cold-file receipt preserved. Parent-reviewed direct --input=none invocation ran the first cold worker."
+  ],
+  "experiment_retries": 0,
+  "additional_experiments": 0,
+  "performance_claim": false
+}

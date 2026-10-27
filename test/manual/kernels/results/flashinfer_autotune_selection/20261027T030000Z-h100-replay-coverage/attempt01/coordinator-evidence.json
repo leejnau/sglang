@@ -1,0 +1,106 @@
+{
+  "archive": "coordinator-evidence.tar.gz",
+  "sha256": "d8b2abf9d7c72f649104c27322a5d90715e1f04caacfd5482484b08819475b76",
+  "files": [
+    {
+      "path": "coordination/allocation-request.log",
+      "size_bytes": 342,
+      "sha256": "adfc6d0a7a1a02c86ffc5d13f3b54c104a8f7b1a34fd300c801fd765905fe478"
+    },
+    {
+      "path": "coordination/allocation-state.txt",
+      "size_bytes": 2363,
+      "sha256": "c48e15c738db131ee3a7381a6f0f3e47f1a91ec236d074c8c589a9bbd4431aba"
+    },
+    {
+      "path": "coordination/cold-audit-preserve.log",
+      "size_bytes": 333,
+      "sha256": "c1104b9b619079edc4cf6dc21f92aa9ff23648bf2fa7174a9f76f1ab42fc9f24"
+    },
+    {
+      "path": "coordination/cold-launch-actual.log",
+      "size_bytes": 38,
+      "sha256": "5197fd2daa5a497d5a50cc37004e563a35ec62215328bd044ce6c66413d8ea39"
+    },
+    {
+      "path": "coordination/cold-launch-boundary-check.json",
+      "size_bytes": 340,
+      "sha256": "507da4ca25a8887561b3ce480912b46f3c52d9829edc0afbbefc683bb6de19ac"
+    },
+    {
+      "path": "coordination/cold-launch.log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "coordination/durable-preservation.json",
+      "size_bytes": 481,
+      "sha256": "0878f6313b75ef0ad4a937ffb34e8fcc07d7dfde2f763d474a07d94af30526c0"
+    },
+    {
+      "path": "coordination/queue-after-release.txt",
+      "size_bytes": 211,
+      "sha256": "f85a3b9f60f38b6f0ab7df37c46c70ae25535a9392eef03087a1ad0c21b37100"
+    },
+    {
+      "path": "coordination/resource-release.txt",
+      "size_bytes": 3069,
+      "sha256": "2558a364f90b460a3268bc507c29dae81c565c46ac02321f63517404faee887b"
+    },
+    {
+      "path": "coordination/source-transfer.log",
+      "size_bytes": 422,
+      "sha256": "1b1c7e4185e0e83ef46cddba2acd739cb2b6f852ce9de178aa6ab5bbf660f846"
+    },
+    {
+      "path": "coordination/stage.log",
+      "size_bytes": 900,
+      "sha256": "40f5d9c39d4db37b021c11c88a2305109c95aa75d25ea6dfffbedf22d48f2515"
+    },
+    {
+      "path": "independent/audit_raw.py",
+      "size_bytes": 9901,
+      "sha256": "afed271ab36ff16c8c20d275ea6cb3ffaacee117e58d66a1be22de7688f6b078"
+    },
+    {
+      "path": "independent/cold-audit.json",
+      "size_bytes": 2437,
+      "sha256": "b81b041c45e0be0e136e68f00a1f136207a8ad1f101653651f7bd1bd51aa18cb"
+    },
+    {
+      "path": "independent/verify_final_evidence.py",
+      "size_bytes": 2176,
+      "sha256": "7d668f3461cabf89d26b82e0b0e9c118ef5ca24dfc45d70490f240fcbd188468"
+    },
+    {
+      "path": "publication/assemble_public.py",
+      "size_bytes": 6483,
+      "sha256": "c96c507702ab345cc4ac7bad36aef857788acda9982b54d3dae2faa01ab028a0"
+    },
+    {
+      "path": "publication/check_publication.py",
+      "size_bytes": 6057,
+      "sha256": "696da761542a429316b042796a6c29c0e89743b908a44e68d13a1799b6a449e6"
+    },
+    {
+      "path": "publication/package_base.py",
+      "size_bytes": 13991,
+      "sha256": "7324863cb8598251d977dfdb71102621562ee828deb0ab50fdc1ad1cd97bd33c"
+    },
+    {
+      "path": "publication/preparation.json",
+      "size_bytes": 1370,
+      "sha256": "9040fb6c1d9e10081065f3728e10f1b71906eba9ac9ae386ebc03e107c9d3589"
+    },
+    {
+      "path": "publication/prepare_public.py",
+      "size_bytes": 6063,
+      "sha256": "af814aabee3debab96a479d9fc5866af5bb1654064192e13d87923913fb6b975"
+    },
+    {
+      "path": "publication/publication_controls.py",
+      "size_bytes": 4599,
+      "sha256": "79fd1898413b0e0bce3af3f189c8787eac1975f430068152b04f954f54cd4ac9"
+    }
+  ]
+}

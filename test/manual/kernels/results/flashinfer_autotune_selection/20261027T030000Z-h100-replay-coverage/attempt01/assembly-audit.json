@@ -1,0 +1,131 @@
+{
+  "status": "passed",
+  "assembly_source_sha256": "c96c507702ab345cc4ac7bad36aef857788acda9982b54d3dae2faa01ab028a0",
+  "master_archive_sha256": "f3ad634b0b94a4fc04ef91d0851562eb8deff0e2f04a29aeed12be612737d05c",
+  "master_archive_size_bytes": 268116,
+  "lossless_parts": 1,
+  "maximum_repository_file_bytes": 268116,
+  "copied_reports": [
+    {
+      "path": "coverage-analysis.json",
+      "source_sha256": "a0f4def753b5903a022501a98a2722866f681a87cd06c511778d4e134da13afb",
+      "source_size_bytes": 14790
+    },
+    {
+      "path": "independent-audit.json",
+      "source_sha256": "21e3567f5b32c5ef95a49470747b16ed995cb7632e7adc4fc9d4eb924ffc712a",
+      "source_size_bytes": 4380
+    },
+    {
+      "path": "independent-cache-verification.json",
+      "source_sha256": "0f02f7f5c23e2c8b3dba79963c746be8b43c8fa84fc45f687bc476339bef9d7c",
+      "source_size_bytes": 3124
+    },
+    {
+      "path": "independent-publication-audit.json",
+      "source_sha256": "02d8ce3d6e75dfcb30693cbe5b696b8dcf39eec11f0cb05569dc147376760536",
+      "source_size_bytes": 741
+    },
+    {
+      "path": "independent-summary.json",
+      "source_sha256": "b7b891ebd0e6e8acb338720139f5c01269c137f0c010b27eef89d5679c67ed12",
+      "source_size_bytes": 2144
+    },
+    {
+      "path": "orchestration-summary.json",
+      "source_sha256": "4f3300e36340ecd20111cc7984c86fcb0e1e131475c7d7f6ca56f2a5573dd950",
+      "source_size_bytes": 2358
+    },
+    {
+      "path": "package-audit.json",
+      "source_sha256": "13438e17ade1ce6fde54abe31034aff2c16e7faa7011c2d5832222b99365e29f",
+      "source_size_bytes": 514
+    },
+    {
+      "path": "public-manifest.json",
+      "source_sha256": "a16600b1807389d2f2349b04468e88da3542f7236509c5462da4a8813fd61372",
+      "source_size_bytes": 39184
+    },
+    {
+      "path": "publication-audit.json",
+      "source_sha256": "3bd413b0bc2ef56fcd2dd14c670fe6b54836fa11b130f3c6bae8577445538f5d",
+      "source_size_bytes": 3580
+    },
+    {
+      "path": "runtime-audit.json",
+      "source_sha256": "4ae9729aabf9541b6abe61e1835b00a3a775fceef089468e13acdd648e46a203",
+      "source_size_bytes": 1553
+    }
+  ],
+  "coordinator_members": 20,
+  "files": [
+    {
+      "path": "coordinator-evidence.json",
+      "size_bytes": 3573,
+      "sha256": "22fb4a9d1f24d367d2ad476c8f302dadcf047823f87d43157cf33becb5fdeddb"
+    },
+    {
+      "path": "coordinator-evidence.tar.gz",
+      "size_bytes": 17207,
+      "sha256": "d8b2abf9d7c72f649104c27322a5d90715e1f04caacfd5482484b08819475b76"
+    },
+    {
+      "path": "coverage-analysis.json",
+      "size_bytes": 14790,
+      "sha256": "a0f4def753b5903a022501a98a2722866f681a87cd06c511778d4e134da13afb"
+    },
+    {
+      "path": "independent-audit.json",
+      "size_bytes": 4380,
+      "sha256": "21e3567f5b32c5ef95a49470747b16ed995cb7632e7adc4fc9d4eb924ffc712a"
+    },
+    {
+      "path": "independent-cache-verification.json",
+      "size_bytes": 3124,
+      "sha256": "0f02f7f5c23e2c8b3dba79963c746be8b43c8fa84fc45f687bc476339bef9d7c"
+    },
+    {
+      "path": "independent-publication-audit.json",
+      "size_bytes": 741,
+      "sha256": "02d8ce3d6e75dfcb30693cbe5b696b8dcf39eec11f0cb05569dc147376760536"
+    },
+    {
+      "path": "independent-summary.json",
+      "size_bytes": 2144,
+      "sha256": "b7b891ebd0e6e8acb338720139f5c01269c137f0c010b27eef89d5679c67ed12"
+    },
+    {
+      "path": "orchestration-summary.json",
+      "size_bytes": 2358,
+      "sha256": "4f3300e36340ecd20111cc7984c86fcb0e1e131475c7d7f6ca56f2a5573dd950"
+    },
+    {
+      "path": "package-audit.json",
+      "size_bytes": 514,
+      "sha256": "13438e17ade1ce6fde54abe31034aff2c16e7faa7011c2d5832222b99365e29f"
+    },
+    {
+      "path": "public-manifest.json",
+      "size_bytes": 39184,
+      "sha256": "a16600b1807389d2f2349b04468e88da3542f7236509c5462da4a8813fd61372"
+    },
+    {
+      "path": "publication-audit.json",
+      "size_bytes": 3580,
+      "sha256": "3bd413b0bc2ef56fcd2dd14c670fe6b54836fa11b130f3c6bae8577445538f5d"
+    },
+    {
+      "path": "raw-public.tar.gz",
+      "size_bytes": 268116,
+      "sha256": "f3ad634b0b94a4fc04ef91d0851562eb8deff0e2f04a29aeed12be612737d05c"
+    },
+    {
+      "path": "runtime-audit.json",
+      "size_bytes": 1553,
+      "sha256": "4ae9729aabf9541b6abe61e1835b00a3a775fceef089468e13acdd648e46a203"
+    }
+  ],
+  "limits": [
+    "Artifact assembly only; no scientific inference or timing selection. Final result summary and repository hooks are separate root-owned steps."
+  ]
+}

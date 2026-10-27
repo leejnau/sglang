@@ -1,0 +1,31 @@
+{
+  "analysis_result_sha256": "a0f4def753b5903a022501a98a2722866f681a87cd06c511778d4e134da13afb",
+  "analyzer_sha256": "a0f4def753b5903a022501a98a2722866f681a87cd06c511778d4e134da13afb",
+  "cache_keys_reused_exactly": 4,
+  "cold_cache_sha256": {
+    "flashinfer/autotune/0.0.0+unknown/sm90/17a026c01f4e2d07/rank_tp0_pp0_dp0.json": "d7a954302abde6e1aa1a49d1ec93d2299311cb0af018969fb3a187537d4b8f24"
+  },
+  "frozen_analyzer_byte_equal": true,
+  "model_files_verified_at_each_node_snapshot": 9,
+  "native_file_sha256": {
+    "current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/gemm/.ninja_deps": "77e547c142e1dff008a4e95b1e16d6bacbb51dc84f9bd4ca75c81de94b34dc7c",
+    "current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/gemm/.ninja_log": "e3eb5e49a500247ce35bc01a52399ec26b1524019324b3f4d33fa401969330e8",
+    "current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/gemm/build.ninja": "c266936a2901b659bb369302afab28ce6af44dbcd567b25449699a428c7e6a42",
+    "current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/gemm/csrc_bmm_fp8.cuda.o": "aba14097d6dd39314447f0f1e133ec60b672d2c5629717886e1a13e4c5fa3908",
+    "current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/gemm/csrc_flashinfer_gemm_binding.cuda.o": "9f85c0faed87bf767858d1ea2b0772e6dc76dd959c99bd40820de41be5761cda",
+    "current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/gemm/csrc_group_gemm.cuda.o": "672abb5f14e198704d260143f8f44e5832624d88348ba42de7b2f954e52378ba",
+    "current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/gemm/gemm.so": "72690cacca4ce1d69ccaa6b9190475483d984bd58de0962d06c874c801c678d6",
+    "current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/trtllm_utils/.ninja_deps": "9cc72e344bea16b6d4edd8b51f1b7a5997b96ac52b7f78fb9a1b42e9b697bda1",
+    "current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/trtllm_utils/.ninja_log": "5bd98033d2ea1162e60e00a2d694e52e03f5882bb08387446ec78931c79c4079",
+    "current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/trtllm_utils/build.ninja": "feee2d051c956b9f8a3c2eba733b54b42ec7bbf1814cc4f52d367bd28cf9d05b",
+    "current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/trtllm_utils/common_envUtils.o": "69a7814c1783852eb2717bd5aa5e2fdb9e7af6394f325fff19102c53074a97a7",
+    "current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/trtllm_utils/common_logger.o": "3efcb7ffec4c55266ac445be3055e59dfcfcefee4033c0606a71bb521761c010",
+    "current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/trtllm_utils/common_stringUtils.o": "54822a3d31c26ee26e02631aeb71725d95082f8b97d9378d9bcf663eb5e2bde2",
+    "current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/trtllm_utils/common_tllmException.o": "0cc3a3e5dc3054a69030d224cb316b23c476cf529a2459ee94d1dc8cbb69e5ba",
+    "current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/trtllm_utils/kernels_delayStream.cuda.o": "b2560d6d45127a64c055300bd533e63f4bc92a000e16f9d55bfdb91ea54da7de",
+    "current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/trtllm_utils/trtllm_utils.so": "e442a689064fe3af4ab46510b2d5aaf3597b072949b84f13d14e9e53352109e4"
+  },
+  "native_files_verified": 16,
+  "saved_file_bytes_unchanged": true,
+  "status": "passed"
+}

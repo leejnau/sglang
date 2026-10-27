@@ -1,0 +1,178 @@
+{
+  "checks": 179,
+  "coverage_gaps_preserved": true,
+  "execution_commit": "b2b52b4b6b109941e8df34df59f19b6f437445fa",
+  "limits": [
+    "One cold/warm pair on one dense FP8 model and one decode shape.",
+    "Coverage describes tuner choices; no performance or every-backend kernel-identity claim.",
+    "Numerics compare eager and retained graph execution, not an independent model-quality oracle."
+  ],
+  "scope": "independent_raw_scientific_audit",
+  "status": "passed",
+  "workers": [
+    {
+      "changed_output": true,
+      "eligible_linears": 128,
+      "numerical_consistent": true,
+      "numerical_max_abs_errors": {
+        "changed": 0.0,
+        "original": 0.0,
+        "restored": 0.0
+      },
+      "numerical_profile_deltas": {
+        "changed": {
+          "eager": 0,
+          "graph": 0
+        },
+        "original": {
+          "eager": 0,
+          "graph": 0
+        },
+        "restored": {
+          "eager": 0,
+          "graph": 0
+        }
+      },
+      "observed": [
+        {
+          "cached_default_hits": 0,
+          "fallback_default_misses": 0,
+          "operators": {
+            "fp8_gemm": 128
+          },
+          "sources": {
+            "memory": 128
+          },
+          "stage": "capture_warmup",
+          "totals": {
+            "dropped_records": 0,
+            "hits": 128,
+            "misses": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "cached_default_hits": 0,
+          "fallback_default_misses": 0,
+          "operators": {
+            "fp8_gemm": 128
+          },
+          "sources": {
+            "memory": 128
+          },
+          "stage": "capture_warmup",
+          "totals": {
+            "dropped_records": 0,
+            "hits": 128,
+            "misses": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "cached_default_hits": 0,
+          "fallback_default_misses": 0,
+          "operators": {
+            "fp8_gemm": 128
+          },
+          "sources": {
+            "memory": 128
+          },
+          "stage": "capture",
+          "totals": {
+            "dropped_records": 0,
+            "hits": 128,
+            "misses": 0,
+            "skipped": 0
+          }
+        }
+      ],
+      "phase": "cold",
+      "post_startup_profiles": 0,
+      "restored_output": true,
+      "result_sha256": "6b13d49cc3c7de83b18704704134c8bc92ec6b782b887e264a17ac8d8fed1724",
+      "startup_profiles": 36
+    },
+    {
+      "changed_output": true,
+      "eligible_linears": 128,
+      "numerical_consistent": true,
+      "numerical_max_abs_errors": {
+        "changed": 0.0,
+        "original": 0.0,
+        "restored": 0.0
+      },
+      "numerical_profile_deltas": {
+        "changed": {
+          "eager": 0,
+          "graph": 0
+        },
+        "original": {
+          "eager": 0,
+          "graph": 0
+        },
+        "restored": {
+          "eager": 0,
+          "graph": 0
+        }
+      },
+      "observed": [
+        {
+          "cached_default_hits": 0,
+          "fallback_default_misses": 0,
+          "operators": {
+            "fp8_gemm": 128
+          },
+          "sources": {
+            "legacy": 128
+          },
+          "stage": "capture_warmup",
+          "totals": {
+            "dropped_records": 0,
+            "hits": 128,
+            "misses": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "cached_default_hits": 0,
+          "fallback_default_misses": 0,
+          "operators": {
+            "fp8_gemm": 128
+          },
+          "sources": {
+            "legacy": 128
+          },
+          "stage": "capture_warmup",
+          "totals": {
+            "dropped_records": 0,
+            "hits": 128,
+            "misses": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "cached_default_hits": 0,
+          "fallback_default_misses": 0,
+          "operators": {
+            "fp8_gemm": 128
+          },
+          "sources": {
+            "legacy": 128
+          },
+          "stage": "capture",
+          "totals": {
+            "dropped_records": 0,
+            "hits": 128,
+            "misses": 0,
+            "skipped": 0
+          }
+        }
+      ],
+      "phase": "warm",
+      "post_startup_profiles": 0,
+      "restored_output": true,
+      "result_sha256": "a0f087049b0ad4893ac0dbe7314ee1d4531954eebc5e1a7f102fd44a050e5fcf",
+      "startup_profiles": 0
+    }
+  ]
+}
