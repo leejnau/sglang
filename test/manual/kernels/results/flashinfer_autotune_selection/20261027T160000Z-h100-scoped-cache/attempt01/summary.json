@@ -68,7 +68,7 @@
     "independent_raw_checks": 517
   },
   "scope_details": [
-    "Actual legacy startup finishes before graph-scoped tuning. Existing two backend warmups and actual capture remain intact; extra prepared calls restore supplied attention state.",
+    "Actual legacy startup finishes before graph-scoped tuning. Existing two backend warmups and actual capture remain intact; extra prepared calls invoke the supplied attention reset hook when present.",
     "Explicit graph policy identifies the research managed store; production policy and v1 persistence are unchanged.",
     "Numerical execution is outside the identified graph scope. Legacy lookup reports use a nonpersistent no-policy diagnostic scope whose effective legacy identity and controls are checked; this is not a literally context-free Python call.",
     "Fresh identical prefix/KV state, changed/restored tokens, output poisoning and original graph/output owner checks prevent stale-output numerical passes.",
