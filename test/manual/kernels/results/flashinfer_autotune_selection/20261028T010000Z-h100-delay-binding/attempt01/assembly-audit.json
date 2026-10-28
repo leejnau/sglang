@@ -1,0 +1,71 @@
+{
+  "status": "passed",
+  "assembly_source_sha256": "c96c507702ab345cc4ac7bad36aef857788acda9982b54d3dae2faa01ab028a0",
+  "master_archive_sha256": "c847e71a4c17d2b85ade138258270691d4b12350df3de243d151b6b3b6da2bff",
+  "master_archive_size_bytes": 279943,
+  "lossless_parts": 1,
+  "maximum_repository_file_bytes": 279943,
+  "copied_reports": [
+    {
+      "path": "package-audit.json",
+      "source_sha256": "79341dac83bf91b481f8b2c845ef545074448b288c8144151c920b68da55aa4b",
+      "source_size_bytes": 514
+    },
+    {
+      "path": "public-manifest.json",
+      "source_sha256": "aa1c1aa8c106c3c0b273206e225cc250f1008547f64488b7f95fbe7549ded251",
+      "source_size_bytes": 38386
+    },
+    {
+      "path": "publication-audit.json",
+      "source_sha256": "aae2e537c8e498b8f1c2d775815afbcc4e414e14ff848172139f70c92f313aa8",
+      "source_size_bytes": 641
+    },
+    {
+      "path": "result.json",
+      "source_sha256": "9efafab28bea5d5e5666daba033b7447048f23b48336f8695485f3b7da698f36",
+      "source_size_bytes": 4626
+    }
+  ],
+  "coordinator_members": 17,
+  "files": [
+    {
+      "path": "coordinator-evidence.json",
+      "size_bytes": 3158,
+      "sha256": "7cf86270d37926833aface85070b55424b97be31b5b181ae5550dbc9a4320601"
+    },
+    {
+      "path": "coordinator-evidence.tar.gz",
+      "size_bytes": 47320,
+      "sha256": "d580bd7ef89666c71bf4cf4c8213c337cbc292e425ea442eceef29a905079fe4"
+    },
+    {
+      "path": "package-audit.json",
+      "size_bytes": 514,
+      "sha256": "79341dac83bf91b481f8b2c845ef545074448b288c8144151c920b68da55aa4b"
+    },
+    {
+      "path": "public-manifest.json",
+      "size_bytes": 38386,
+      "sha256": "aa1c1aa8c106c3c0b273206e225cc250f1008547f64488b7f95fbe7549ded251"
+    },
+    {
+      "path": "publication-audit.json",
+      "size_bytes": 641,
+      "sha256": "aae2e537c8e498b8f1c2d775815afbcc4e414e14ff848172139f70c92f313aa8"
+    },
+    {
+      "path": "raw-public.tar.gz",
+      "size_bytes": 279943,
+      "sha256": "c847e71a4c17d2b85ade138258270691d4b12350df3de243d151b6b3b6da2bff"
+    },
+    {
+      "path": "result.json",
+      "size_bytes": 4626,
+      "sha256": "9efafab28bea5d5e5666daba033b7447048f23b48336f8695485f3b7da698f36"
+    }
+  ],
+  "limits": [
+    "Artifact assembly only; no scientific inference or timing selection. Final result summary and repository hooks are separate root-owned steps."
+  ]
+}

@@ -1,0 +1,3722 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "mode": "timing",
+  "inputs": {
+    "master_plan_sha256": "9dace904908d9024535d3373a9220a16ec72aa43d0343a3f55b14830f139c06b",
+    "master_schedule_sha256": "dcc46b3c967a4d4a3b3278b482397baaf5ca274d82c6e89197c4daf23917cb3d",
+    "analyzer_sha256": "f2d9bc249c59625a3fd31713740094f621cf8a0f74df0723af1d1528ce411131",
+    "manifest_sha256": "0c9a9432ed24786253e94de498f58ca2d945b690804fa0dff397651dfed601fc",
+    "ordering_gate_sha256": "66b23ae377015e150c17e47a55767e5eb384ff729df3c5076dce746fcef878a1",
+    "admission_launches_sha256": "d782e43648a7939c0bb341b285e17e56a5cbfb145b3db302868d687a973184b4",
+    "admission_provenance": {
+      "ordering/baseline.json": {
+        "result_sha256": "e544db6ee519dca0854e77e608efa6a2f25893997c9ca15adaf5c56be2deb7b4",
+        "bootstrap_sha256": "e02a1a2d6e8abd70f8cfd13ab20d5cf67e02f58d6ffef9f8252e38307a05afbe"
+      },
+      "ordering/patched.json": {
+        "result_sha256": "0c2b1c5007333cb7fbc77b3b8beb7266b101842512aa64438d7b14b5f265db22",
+        "bootstrap_sha256": "974eb10e75e666e366500cdc1c0241790f3be6d968f54a0bd6bacfe40caea2cd"
+      },
+      "baseline/admission-auto_synthetic.json": {
+        "result_sha256": "2e48f3ba7ffd4334ee3609c2970ffe885f40e56b4f07052372d05e3716f1a6e0",
+        "bootstrap_sha256": "78d4c9322ba6f3d994e603820fdda7fee66b705f6b57b3788a3cf16c1c74d9ba"
+      },
+      "patched/admission-auto_synthetic.json": {
+        "result_sha256": "df02d35c0d6b1597a4d71f91c86bef8a9a50818cfcb957ac8396555430670c76",
+        "bootstrap_sha256": "561ba3265c47f0a13ecc3682f34ac6a673311b103538b6326ecfbe54621b8072"
+      }
+    }
+  },
+  "execution_commit": "f22b1866c352d18ca5b3f162c90c9ba2d2d22a41",
+  "per_arm_integrity": {
+    "baseline": {
+      "status": "passed",
+      "mode": "timing",
+      "plan_sha256": "33444f5372ebcf5e9813ea32f914cb9729c7a465ff4b616dfa434b5fc0f196e8",
+      "schedule_sha256": "028d527022b448bd5bc95a8723a9f2ce92dd0d4bf713a611074676b102659543",
+      "historical_contract_sha256": "8518320ae4089c97861759b0145b6b12d99941c03001d38c5450d4940d44e4b9",
+      "worker_sha256": "a8532276afc70ae1b70e12eaf9fc722fa7b29ed6102407360dd93708a7789157",
+      "analyzer_sha256": "1fa9a5ea7312dc4fb3e5fb5766c95fc9c64b5ac9d91095a59a72655f3847542e",
+      "prior_analyzer_sha256": "b73acfc80a676ad24bb0358a6d66880531947f628783cba6fb1765c5154269ec",
+      "leaf_helpers_sha256": "cf72c74cf2e9c343e46af1b1b74a232a8b201de06dc2cd01bef6552f0981ce4f",
+      "distinct_container_ids": [
+        "10e44199e8f46622680b8a00ea1401d06b99daa28e2bebed32ea2a46eb3363f7",
+        "5d79dd6abaebe1801c2ff405d04fffca7f89913baccf3d2c0a3ca5ff35d0e56d",
+        "6d63449f30c5513e9614660de19bdbbc480ab3eb5d728742441808ae905dda67",
+        "8dc789b26a76d4847530b82d1336fca76c18695d619b1b74a87abf1a1ef7da50",
+        "540ed39d7dc79451aa5e3bb7e4a0c0b707a0f41f81cd1cebbf48e50d5b46fc16",
+        "e2c73df79b2e7a10cd5e3c4c1854280a0aed89a36fce8a576d6c862fc4152ed4",
+        "3b254e3f7882a8b3c5966abd0a8a803b0cfa50cf14e9a31cce6f290d4593b761",
+        "be564bb20e83a530e66ece92a47723676d90c479ee4d072e3bead4962cf4cb50",
+        "7dbfc14ad06f759990e3d4a2504124810b11033ebdf161c0c0bb3337cb7a3bbf"
+      ],
+      "parent_confirmation_analyzer_sha256": "0369f0d952fc9f519c6a0d5511ab280afbe6065224b6a0d34db3f7fab0b74d98"
+    },
+    "patched": {
+      "status": "passed",
+      "mode": "timing",
+      "plan_sha256": "33444f5372ebcf5e9813ea32f914cb9729c7a465ff4b616dfa434b5fc0f196e8",
+      "schedule_sha256": "028d527022b448bd5bc95a8723a9f2ce92dd0d4bf713a611074676b102659543",
+      "historical_contract_sha256": "8518320ae4089c97861759b0145b6b12d99941c03001d38c5450d4940d44e4b9",
+      "worker_sha256": "a8532276afc70ae1b70e12eaf9fc722fa7b29ed6102407360dd93708a7789157",
+      "analyzer_sha256": "1fa9a5ea7312dc4fb3e5fb5766c95fc9c64b5ac9d91095a59a72655f3847542e",
+      "prior_analyzer_sha256": "b73acfc80a676ad24bb0358a6d66880531947f628783cba6fb1765c5154269ec",
+      "leaf_helpers_sha256": "cf72c74cf2e9c343e46af1b1b74a232a8b201de06dc2cd01bef6552f0981ce4f",
+      "distinct_container_ids": [
+        "cea5f570adeb6b98f811ed6931126576d3d123feb749b7afb429ead4bc36a3b8",
+        "f12f866caca955887997fc3dd1d4a578ed17c1aee082104c16cf9eef24571148",
+        "69a4e4b3274091f8d3c731f29ace91936529fc6f0a6293835992350269c336d4",
+        "5f20afda10fe3a85979d92ad284a4ded9a31787ca2ca04b1298e007975d94d66",
+        "5ac79c49a09555649a365e396c511b6cc358a74f6e68f9cb09c1c665ee125367",
+        "4bc84f25ea5b48ca5e1e9d2287f89681d227c43d2d3e1df1afb11f1012f0c57b",
+        "463c50de76436c4ccf81b39dea0834ee09601501279bc3feed6fd5d244beef53",
+        "dadeb04a9625910ea6850a6fa4845ad10ccd1c3eb97ac542ee55795609e033fc",
+        "402533f52f7342c7cce8f58dc10602995de13f3d60e829048ac5631f683a9b31"
+      ],
+      "parent_confirmation_analyzer_sha256": "0369f0d952fc9f519c6a0d5511ab280afbe6065224b6a0d34db3f7fab0b74d98"
+    }
+  },
+  "process_integrity": null,
+  "ordering_gate": {
+    "schema_version": 1,
+    "status": "passed",
+    "upstream_head": "e6bcdebdefff9ad6dd635cb357ead72b0e7f9da6",
+    "arms": {
+      "baseline": {
+        "result_sha256": "e544db6ee519dca0854e77e608efa6a2f25893997c9ca15adaf5c56be2deb7b4",
+        "bootstrap_sha256": "e02a1a2d6e8abd70f8cfd13ab20d5cf67e02f58d6ffef9f8252e38307a05afbe",
+        "pid": 1,
+        "attestation": {
+          "arm": "baseline",
+          "upstream_head": "e6bcdebdefff9ad6dd635cb357ead72b0e7f9da6",
+          "wrapper_path": "/study/input/current/source/flashinfer/tllm_utils.py",
+          "wrapper_sha256": "5eaaa6773f5d7b5bc00de2183eef488f5b2497d7efc687ebf45f97d7f2fd3593",
+          "callable_matches_source": true,
+          "callable_comparison": {
+            "code_matches": true,
+            "filename_matches": true,
+            "line_table_matches": true,
+            "exception_table_matches": true,
+            "profiler_alias_matches": true
+          },
+          "profiler_alias_matches": true,
+          "native_identity_passthrough": true,
+          "native": {
+            "gemm": {
+              "library_path": "/study/runtime-attempt01/cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/gemm/gemm.so",
+              "library_sha256": "72690cacca4ce1d69ccaa6b9190475483d984bd58de0962d06c874c801c678d6"
+            },
+            "trtllm_utils": {
+              "library_path": "/study/runtime-attempt01/cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/trtllm_utils/trtllm_utils.so",
+              "library_sha256": "e442a689064fe3af4ab46510b2d5aaf3597b072949b84f13d14e9e53352109e4"
+            }
+          },
+          "torch_version": "2.14.1+cu130",
+          "tvm_ffi_version": "0.1.11",
+          "ffi_init": {
+            "path": "/opt/sglang/lib/python3.12/site-packages/tvm_ffi/__init__.py",
+            "sha256": "bdb390cbf41acf57ef4a21f27b868dc2f607f0009c302922e67a7da7e118cf15"
+          },
+          "ffi_stream_source": {
+            "path": "/opt/sglang/lib/python3.12/site-packages/tvm_ffi/stream.py",
+            "sha256": "586413f5558bd8682f31280743cf7fe6581a17b7e2eb270e19ffcceba12c2f0c"
+          },
+          "ffi_stream_function_sha256": "ada42f7bb736dc1784ba71d95938d0f3099f45d6aa7ebce6d5cece81d8da5b17",
+          "ffi_libraries": [
+            {
+              "path": "/opt/sglang/lib/python3.12/site-packages/tvm_ffi/core.abi3.so",
+              "sha256": "65d37902457e94d5d822e59738918f604648236389801891ca9d00dc5c224fec"
+            },
+            {
+              "path": "/opt/sglang/lib/python3.12/site-packages/tvm_ffi/lib/libtvm_ffi.so",
+              "sha256": "8cb7bdda84545ad7eb5294198bb02fe16930e47e4c3c6de67ab87cad19f6bb7e"
+            },
+            {
+              "path": "/opt/sglang/lib/python3.12/site-packages/tvm_ffi/lib/libtvm_ffi_testing.so",
+              "sha256": "83fac978636c8def292c45753a71f2d2225f993d593bfa408905844c6083f8ea"
+            }
+          ],
+          "device": "cuda:0",
+          "torch_stream": 0,
+          "ambient_ffi_stream": 0
+        }
+      },
+      "patched": {
+        "result_sha256": "0c2b1c5007333cb7fbc77b3b8beb7266b101842512aa64438d7b14b5f265db22",
+        "bootstrap_sha256": "974eb10e75e666e366500cdc1c0241790f3be6d968f54a0bd6bacfe40caea2cd",
+        "pid": 1,
+        "attestation": {
+          "arm": "patched",
+          "upstream_head": "e6bcdebdefff9ad6dd635cb357ead72b0e7f9da6",
+          "wrapper_path": "/study/input/current/source/flashinfer/tllm_utils.py",
+          "wrapper_sha256": "4a41c26b8dc5537707ae292c75d6069e59fae73ed881f73d083c15b5a0eb2722",
+          "callable_matches_source": true,
+          "callable_comparison": {
+            "code_matches": true,
+            "filename_matches": true,
+            "line_table_matches": true,
+            "exception_table_matches": true,
+            "profiler_alias_matches": true
+          },
+          "profiler_alias_matches": true,
+          "native_identity_passthrough": true,
+          "native": {
+            "gemm": {
+              "library_path": "/study/runtime-attempt01/cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/gemm/gemm.so",
+              "library_sha256": "72690cacca4ce1d69ccaa6b9190475483d984bd58de0962d06c874c801c678d6"
+            },
+            "trtllm_utils": {
+              "library_path": "/study/runtime-attempt01/cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/trtllm_utils/trtllm_utils.so",
+              "library_sha256": "e442a689064fe3af4ab46510b2d5aaf3597b072949b84f13d14e9e53352109e4"
+            }
+          },
+          "torch_version": "2.14.1+cu130",
+          "tvm_ffi_version": "0.1.11",
+          "ffi_init": {
+            "path": "/opt/sglang/lib/python3.12/site-packages/tvm_ffi/__init__.py",
+            "sha256": "bdb390cbf41acf57ef4a21f27b868dc2f607f0009c302922e67a7da7e118cf15"
+          },
+          "ffi_stream_source": {
+            "path": "/opt/sglang/lib/python3.12/site-packages/tvm_ffi/stream.py",
+            "sha256": "586413f5558bd8682f31280743cf7fe6581a17b7e2eb270e19ffcceba12c2f0c"
+          },
+          "ffi_stream_function_sha256": "ada42f7bb736dc1784ba71d95938d0f3099f45d6aa7ebce6d5cece81d8da5b17",
+          "ffi_libraries": [
+            {
+              "path": "/opt/sglang/lib/python3.12/site-packages/tvm_ffi/core.abi3.so",
+              "sha256": "65d37902457e94d5d822e59738918f604648236389801891ca9d00dc5c224fec"
+            },
+            {
+              "path": "/opt/sglang/lib/python3.12/site-packages/tvm_ffi/lib/libtvm_ffi.so",
+              "sha256": "8cb7bdda84545ad7eb5294198bb02fe16930e47e4c3c6de67ab87cad19f6bb7e"
+            },
+            {
+              "path": "/opt/sglang/lib/python3.12/site-packages/tvm_ffi/lib/libtvm_ffi_testing.so",
+              "sha256": "83fac978636c8def292c45753a71f2d2225f993d593bfa408905844c6083f8ea"
+            }
+          ],
+          "device": "cuda:0",
+          "torch_stream": 0,
+          "ambient_ffi_stream": 0
+        }
+      }
+    },
+    "limits": "Forced conflict reproduces susceptibility; natural observations do not retroactively identify the historical binding or prove the ranking cause."
+  },
+  "provenance": {
+    "ordering/baseline.json": {
+      "result_sha256": "e544db6ee519dca0854e77e608efa6a2f25893997c9ca15adaf5c56be2deb7b4",
+      "bootstrap_sha256": "e02a1a2d6e8abd70f8cfd13ab20d5cf67e02f58d6ffef9f8252e38307a05afbe"
+    },
+    "ordering/patched.json": {
+      "result_sha256": "0c2b1c5007333cb7fbc77b3b8beb7266b101842512aa64438d7b14b5f265db22",
+      "bootstrap_sha256": "974eb10e75e666e366500cdc1c0241790f3be6d968f54a0bd6bacfe40caea2cd"
+    },
+    "baseline/admission-auto_synthetic.json": {
+      "result_sha256": "2e48f3ba7ffd4334ee3609c2970ffe885f40e56b4f07052372d05e3716f1a6e0",
+      "bootstrap_sha256": "78d4c9322ba6f3d994e603820fdda7fee66b705f6b57b3788a3cf16c1c74d9ba"
+    },
+    "patched/admission-auto_synthetic.json": {
+      "result_sha256": "df02d35c0d6b1597a4d71f91c86bef8a9a50818cfcb957ac8396555430670c76",
+      "bootstrap_sha256": "561ba3265c47f0a13ecc3682f34ac6a673311b103538b6326ecfbe54621b8072"
+    },
+    "baseline/block0-auto_synthetic-timing.json": {
+      "result_sha256": "6b72d9b995265d19079a3901b1dfc07f0e23ce2fe7fff4521ef6a29f121eee36",
+      "bootstrap_sha256": "e849b5c21b769f36b31d23b2c16a3801a9490562895a8af2ceabaa4ede208d2d"
+    },
+    "patched/block0-auto_synthetic-timing.json": {
+      "result_sha256": "a9fc31647d9405125299e9285e192df623fa7acfc75b5ded31e6d3eabca3637e",
+      "bootstrap_sha256": "0d60d3bfbd8d876e68ee75c8241db922161bf33c0bd7ea52bcf7005cdafd42cd"
+    },
+    "patched/block1-auto_synthetic-timing.json": {
+      "result_sha256": "62abdbd9b3fceebe7924c57f022764648aa74a06c8589b46c2d380b1c9e3c870",
+      "bootstrap_sha256": "148262a91d78998f4962c25424c34a8139916b3da0082807dcdf0873f945c492"
+    },
+    "baseline/block1-auto_synthetic-timing.json": {
+      "result_sha256": "501aa43047fff4bfe9ad8c5bb8a246d54500fb79a11539f81d8cb4270b40c0ef",
+      "bootstrap_sha256": "5b575cb652b13619734b915e151c30856a1ec3f8f317efd7c85eb15a9988902b"
+    },
+    "baseline/block2-auto_synthetic-timing.json": {
+      "result_sha256": "a62870de8244cf6533570ea1899a5d1bb6d02d5ddf7fb043fd9a6000b17d86e7",
+      "bootstrap_sha256": "d7e3cbc8d729797104256e09e1abbb9ee77186facb6ed8a4660f9b2c55904fd8"
+    },
+    "patched/block2-auto_synthetic-timing.json": {
+      "result_sha256": "acc235567e413cf4b496c33140edc87b3f86debc1807b7dbef1ec4e60e5761f5",
+      "bootstrap_sha256": "c129b5f3b77f1bfd4b89ae76450f1d3d057644650e9b584f8d7b36736f6ae964"
+    },
+    "patched/block3-auto_synthetic-timing.json": {
+      "result_sha256": "62a04bf293f494c8ab93c59d4edd2ef7fae7aadcae7ec3c454fe6a7f227ec122",
+      "bootstrap_sha256": "8fb5f15296ed6173e50b6520a64766bd256501834f2700a6527216e67c92e7cc"
+    },
+    "baseline/block3-auto_synthetic-timing.json": {
+      "result_sha256": "6a12ed913348f412289500c6a925fb28254719b44b75651e90aacc4ea2a07dca",
+      "bootstrap_sha256": "4f5767171c27af89f45bc2394ef661f5f12f46e8b6dc518d878a7f228636bb96"
+    },
+    "baseline/block4-auto_synthetic-timing.json": {
+      "result_sha256": "89abda83bd377b734db5d4431365b7916d718bd68669d72fbc5f4dd5f019d553",
+      "bootstrap_sha256": "29462827920088955f8eec4441ce305c80b938adaa4e02ca3486a15c633d70f0"
+    },
+    "patched/block4-auto_synthetic-timing.json": {
+      "result_sha256": "696f53de6ac344eb21a548990bd6db8db715430448030218b5db1016307f4fae",
+      "bootstrap_sha256": "d8662f3ba29e6a7c9f2b23d4c56da228d21993e49c3edc9486cb1f7817d86cb1"
+    },
+    "patched/block5-auto_synthetic-timing.json": {
+      "result_sha256": "29da2a2040ee3fd2163f179073562325fddf34781c923d5b4e6e3ab10adc5e0b",
+      "bootstrap_sha256": "523bace647ceb04bad2aa85af3f551a688e8ba7dfa112a978e9eb4150ba78dac"
+    },
+    "baseline/block5-auto_synthetic-timing.json": {
+      "result_sha256": "663b39693c46db4a12906cf2314a7254e7f2f4c26049d349ab68a63a64341c4d",
+      "bootstrap_sha256": "e02712f982949041cc3c034206a5db5f88d92b9c22ef8b0355491843f19d3737"
+    },
+    "baseline/block6-auto_synthetic-timing.json": {
+      "result_sha256": "38fb5a0f7e2405019d1437d9a1bc181d230724c9123710eb7a5002f92a5e6295",
+      "bootstrap_sha256": "a67af143dd0d8c02e8f28fcb00c1cb12788430e687e61ae469790853629d1942"
+    },
+    "patched/block6-auto_synthetic-timing.json": {
+      "result_sha256": "1c6181b745c9d0ec8f224768ec0cd4fd46506923292f41f7f9191dd33d03771a",
+      "bootstrap_sha256": "0cdef4531d460199fca7b2793a1d1c3ca0f3078e9136c3f34d5bbbfcc21310c6"
+    },
+    "patched/block7-auto_synthetic-timing.json": {
+      "result_sha256": "27022ff5842d98fde190ade09a97bbea409324fff9c57cb1ac041a2660406f9c",
+      "bootstrap_sha256": "c5f75fbbbf286b8d2d52724ebc854e6f189f496fe4ec84d96fb579c70d69c335"
+    },
+    "baseline/block7-auto_synthetic-timing.json": {
+      "result_sha256": "40c9ed509680d8f2da29b3d6f1f24a6f03cef472fcf9364c5cc8db4a81726f4e",
+      "bootstrap_sha256": "0d9cf5ab42269bac0db9fd7b59c8632fa31d05c962f238c7420e80f0f1670f4f"
+    }
+  },
+  "performance_inference": true,
+  "primary_metric": "patched_over_baseline.original_selected_over_default",
+  "metrics": {
+    "baseline.original_selected_over_default": {
+      "paired_blocks": 8,
+      "unit": "ratio",
+      "geometric_mean": 1.0,
+      "values_by_block": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": 1.0,
+      "max": 1.0,
+      "below_one": 0,
+      "above_one": 0,
+      "equal_one": 8,
+      "exploratory_paired_block_bootstrap_95pct": [
+        1.0,
+        1.0
+      ]
+    },
+    "patched.original_selected_over_default": {
+      "paired_blocks": 8,
+      "unit": "ratio",
+      "geometric_mean": 0.9882720597633002,
+      "values_by_block": [
+        0.9860555198763914,
+        0.9843328251453616,
+        0.9933381771244826,
+        0.985522445248184,
+        0.9854887302538426,
+        0.9931549845136681,
+        0.9936165942956124,
+        0.9847310446192061
+      ],
+      "min": 0.9843328251453616,
+      "max": 0.9936165942956124,
+      "below_one": 8,
+      "above_one": 0,
+      "equal_one": 0,
+      "exploratory_paired_block_bootstrap_95pct": [
+        0.9858189475996821,
+        0.9912797936183353
+      ]
+    },
+    "patched_over_baseline.original_selected_over_default": {
+      "paired_blocks": 8,
+      "unit": "ratio",
+      "geometric_mean": 0.9882720597633002,
+      "values_by_block": [
+        0.9860555198763914,
+        0.9843328251453616,
+        0.9933381771244826,
+        0.985522445248184,
+        0.9854887302538426,
+        0.9931549845136681,
+        0.9936165942956124,
+        0.9847310446192061
+      ],
+      "min": 0.9843328251453616,
+      "max": 0.9936165942956124,
+      "below_one": 8,
+      "above_one": 0,
+      "equal_one": 0,
+      "exploratory_paired_block_bootstrap_95pct": [
+        0.9858189475996821,
+        0.9912797936183353
+      ]
+    },
+    "baseline.confirmed_selected_over_default": {
+      "paired_blocks": 8,
+      "unit": "ratio",
+      "geometric_mean": 1.0,
+      "values_by_block": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": 1.0,
+      "max": 1.0,
+      "below_one": 0,
+      "above_one": 0,
+      "equal_one": 8,
+      "exploratory_paired_block_bootstrap_95pct": [
+        1.0,
+        1.0
+      ]
+    },
+    "patched.confirmed_selected_over_default": {
+      "paired_blocks": 8,
+      "unit": "ratio",
+      "geometric_mean": 0.9882720597633002,
+      "values_by_block": [
+        0.9860555198763914,
+        0.9843328251453616,
+        0.9933381771244826,
+        0.985522445248184,
+        0.9854887302538426,
+        0.9931549845136681,
+        0.9936165942956124,
+        0.9847310446192061
+      ],
+      "min": 0.9843328251453616,
+      "max": 0.9936165942956124,
+      "below_one": 8,
+      "above_one": 0,
+      "equal_one": 0,
+      "exploratory_paired_block_bootstrap_95pct": [
+        0.9858189475996821,
+        0.9912797936183353
+      ]
+    },
+    "patched_over_baseline.confirmed_selected_over_default": {
+      "paired_blocks": 8,
+      "unit": "ratio",
+      "geometric_mean": 0.9882720597633002,
+      "values_by_block": [
+        0.9860555198763914,
+        0.9843328251453616,
+        0.9933381771244826,
+        0.985522445248184,
+        0.9854887302538426,
+        0.9931549845136681,
+        0.9936165942956124,
+        0.9847310446192061
+      ],
+      "min": 0.9843328251453616,
+      "max": 0.9936165942956124,
+      "below_one": 8,
+      "above_one": 0,
+      "equal_one": 0,
+      "exploratory_paired_block_bootstrap_95pct": [
+        0.9858189475996821,
+        0.9912797936183353
+      ]
+    },
+    "baseline.confirmation_over_original": {
+      "paired_blocks": 8,
+      "unit": "ratio",
+      "geometric_mean": 1.0,
+      "values_by_block": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": 1.0,
+      "max": 1.0,
+      "below_one": 0,
+      "above_one": 0,
+      "equal_one": 8,
+      "exploratory_paired_block_bootstrap_95pct": [
+        1.0,
+        1.0
+      ]
+    },
+    "patched.confirmation_over_original": {
+      "paired_blocks": 8,
+      "unit": "ratio",
+      "geometric_mean": 1.0,
+      "values_by_block": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": 1.0,
+      "max": 1.0,
+      "below_one": 0,
+      "above_one": 0,
+      "equal_one": 8,
+      "exploratory_paired_block_bootstrap_95pct": [
+        1.0,
+        1.0
+      ]
+    },
+    "patched_over_baseline.confirmation_over_original": {
+      "paired_blocks": 8,
+      "unit": "ratio",
+      "geometric_mean": 1.0,
+      "values_by_block": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": 1.0,
+      "max": 1.0,
+      "below_one": 0,
+      "above_one": 0,
+      "equal_one": 8,
+      "exploratory_paired_block_bootstrap_95pct": [
+        1.0,
+        1.0
+      ]
+    },
+    "baseline.default_graph_absolute_ms": {
+      "paired_blocks": 8,
+      "unit": "ms",
+      "geometric_mean": 0.008609048805816403,
+      "values_by_block": [
+        0.00864200014621019,
+        0.00862099923156702,
+        0.008534998565507603,
+        0.008640999847873549,
+        0.008631999604403971,
+        0.008632999786903963,
+        0.008570999313459024,
+        0.008597999811172482
+      ],
+      "min": 0.008534998565507603,
+      "max": 0.00864200014621019,
+      "exploratory_paired_block_bootstrap_95pct": [
+        0.008581917585683512,
+        0.008631614294927339
+      ]
+    },
+    "patched.default_graph_absolute_ms": {
+      "paired_blocks": 8,
+      "unit": "ms",
+      "geometric_mean": 0.00860229670016091,
+      "values_by_block": [
+        0.008626000024378298,
+        0.00862000044435263,
+        0.008568000048398975,
+        0.008654998568228482,
+        0.008626000024378298,
+        0.00861400016648197,
+        0.008460999873072061,
+        0.008650000207126142
+      ],
+      "min": 0.008460999873072061,
+      "max": 0.008654998568228482,
+      "exploratory_paired_block_bootstrap_95pct": [
+        0.008556532283244447,
+        0.008635578788356114
+      ]
+    },
+    "patched_over_baseline.default_graph_absolute_ms": {
+      "paired_blocks": 8,
+      "unit": "ratio",
+      "geometric_mean": 0.999215696668959,
+      "values_by_block": [
+        0.9981485626520258,
+        0.9998841448435892,
+        1.0038666067297002,
+        1.0016200347878002,
+        0.9993049605768505,
+        0.9977991867379847,
+        0.9871660892313653,
+        1.0060479643051503
+      ],
+      "min": 0.9871660892313653,
+      "max": 1.0060479643051503,
+      "below_one": 5,
+      "above_one": 3,
+      "equal_one": 0,
+      "exploratory_paired_block_bootstrap_95pct": [
+        0.9952299931148485,
+        1.0024985758848686
+      ]
+    }
+  },
+  "counts": {
+    "baseline": {
+      "startup_default_winners": 8,
+      "confirmed_default_winners": 8,
+      "startup_explicit_faster_confirmation_explicit_slower": 0,
+      "startup_explicit_slower_confirmation_explicit_faster": 0,
+      "startup_explicit_faster_graph_explicit_slower": 0,
+      "startup_profile_point_ties": 0,
+      "confirmation_point_ties": 0,
+      "transitions": {
+        "default->default": 8
+      },
+      "original_slow": 0,
+      "confirmed_slow": 0,
+      "corrected": 0,
+      "introduced": 0,
+      "remaining_slow": 0,
+      "neither_slow": 8,
+      "graph_point_ties": 0
+    },
+    "patched": {
+      "startup_default_winners": 0,
+      "confirmed_default_winners": 0,
+      "startup_explicit_faster_confirmation_explicit_slower": 0,
+      "startup_explicit_slower_confirmation_explicit_faster": 0,
+      "startup_explicit_faster_graph_explicit_slower": 0,
+      "startup_profile_point_ties": 0,
+      "confirmation_point_ties": 0,
+      "transitions": {
+        "winner->winner": 8
+      },
+      "original_slow": 0,
+      "confirmed_slow": 0,
+      "corrected": 0,
+      "introduced": 0,
+      "remaining_slow": 0,
+      "neither_slow": 8,
+      "graph_point_ties": 0
+    }
+  },
+  "cold_startup_and_confirmation_host_costs": {
+    "baseline": {
+      "startup_host_ms": {
+        "values_by_block": [
+          545.966472,
+          544.876299,
+          545.716749,
+          544.892257,
+          544.154145,
+          546.034126,
+          545.261064,
+          545.932523
+        ],
+        "median_ms": 545.4889065,
+        "min_ms": 544.154145,
+        "max_ms": 546.034126
+      },
+      "confirmation_profiler_host_ms": {
+        "values_by_block": [
+          6.570486,
+          6.774124,
+          6.560124,
+          6.514141,
+          6.541896,
+          6.571338,
+          6.481087,
+          6.612919
+        ],
+        "median_ms": 6.565305,
+        "min_ms": 6.481087,
+        "max_ms": 6.774124
+      },
+      "confirmation_host_ms": {
+        "values_by_block": [
+          178.06451,
+          178.636689,
+          178.393449,
+          178.558549,
+          177.577938,
+          178.513478,
+          178.575017,
+          178.070596
+        ],
+        "median_ms": 178.4534635,
+        "min_ms": 177.577938,
+        "max_ms": 178.636689
+      }
+    },
+    "patched": {
+      "startup_host_ms": {
+        "values_by_block": [
+          608.956456,
+          611.334608,
+          611.432096,
+          610.142674,
+          610.050732,
+          610.440091,
+          611.29048,
+          609.903738
+        ],
+        "median_ms": 610.2913825,
+        "min_ms": 608.956456,
+        "max_ms": 611.432096
+      },
+      "confirmation_profiler_host_ms": {
+        "values_by_block": [
+          128.88374100000001,
+          128.94752,
+          129.096024,
+          129.214413,
+          129.016931,
+          129.388111,
+          129.043202,
+          128.973209
+        ],
+        "median_ms": 129.0300665,
+        "min_ms": 128.88374100000001,
+        "max_ms": 129.388111
+      },
+      "confirmation_host_ms": {
+        "values_by_block": [
+          182.067674,
+          181.089363,
+          182.184353,
+          182.326313,
+          182.700734,
+          182.640523,
+          182.473572,
+          182.368992
+        ],
+        "median_ms": 182.34765249999998,
+        "min_ms": 181.089363,
+        "max_ms": 182.700734
+      }
+    }
+  },
+  "process_rows": {
+    "baseline": [
+      {
+        "block": 0,
+        "pid_namespace_local": 1,
+        "result_sha256": "6b72d9b995265d19079a3901b1dfc07f0e23ce2fe7fff4521ef6a29f121eee36",
+        "capture_order": "default-first",
+        "finalist": [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        "finalist_profile_index": 75,
+        "original_role": "default",
+        "confirmed_role": "default",
+        "original_profiler_ratio": 1.0113144843049293,
+        "confirmation_log_ratio": 0.08237890663255709,
+        "confirmation_ratio": 1.085867174164657,
+        "decision_sha256": "4385d2db561bd985216560b9a33b54ff69b9b5c2d661292723636d4a38ae5f7e",
+        "trace": {
+          "sha256": "b6736e5c5f4880d1928b52bf52c2382dd74de157bc8bcb1231933c5eda88eec3",
+          "original_graphs": {
+            "winner": {
+              "cuda_graph_id": 5,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+                  "grid": [
+                    8,
+                    14,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 229844,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "default": {
+              "cuda_graph_id": 2,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+                  "grid": [
+                    8,
+                    12,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 213460,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "winner_default_signatures_equal": false
+          },
+          "timing_inference": false
+        },
+        "confirmation_first_position_median_logs": {
+          "winner": 0.07531640437161788,
+          "default": 0.08630188909144709
+        },
+        "graph_log_ratio": 0.08169818519282619,
+        "graph_ratio": 1.085128252626903,
+        "graph_first_position_median_logs": {
+          "winner": 0.08196389442007167,
+          "default": 0.08030153044566515
+        },
+        "queue_outcomes_all_retained": {
+          "start_pending_after_enqueue": 48
+        },
+        "graph_log_ratios": [
+          0.07872486672339593,
+          0.08368715422306183,
+          0.08303795933430701,
+          0.07841072860721332,
+          0.07817516724762535,
+          0.08198211094225545,
+          0.08485339976563816,
+          0.08236563548739885,
+          0.08415033514975537,
+          0.07599714685247086,
+          0.08786352621115774,
+          0.08194567789788788,
+          0.07951063189200658,
+          0.0814506924877645,
+          0.07414093423725464,
+          0.08078925235675462,
+          0.077996228705013,
+          0.08480217630663757,
+          0.09043301664541027,
+          0.08109242899932374,
+          0.08364134720299572,
+          0.07634580925982049,
+          0.0866438992265323,
+          0.07713167367663734
+        ],
+        "log_hypothetical_over_original": 0.0,
+        "hypothetical_over_original": 1.0,
+        "original_log_regret_two_candidate_only": 0.0,
+        "confirmed_log_regret_two_candidate_only": 0.0,
+        "outcome": "unchanged_choice",
+        "transition": "default->default",
+        "original_selected_log_over_default": 0.0,
+        "original_selected_over_default": 1.0,
+        "confirmed_selected_log_over_default": 0.0,
+        "confirmed_selected_over_default": 1.0,
+        "startup_explicit_faster_confirmation_explicit_slower": false,
+        "startup_explicit_slower_confirmation_explicit_faster": false,
+        "startup_explicit_faster_graph_explicit_slower": false,
+        "startup_profile_point_tie": false,
+        "confirmation_point_tie": false,
+        "startup_host_ms": 545.966472,
+        "confirmation_host_ms": 178.06451,
+        "confirmation_profiler_host_ms": 6.570486,
+        "default_graph_log_ms": -4.751121224553836,
+        "default_graph_ms": 0.00864200014621019
+      },
+      {
+        "block": 1,
+        "pid_namespace_local": 1,
+        "result_sha256": "501aa43047fff4bfe9ad8c5bb8a246d54500fb79a11539f81d8cb4270b40c0ef",
+        "capture_order": "winner-first",
+        "finalist": [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        "finalist_profile_index": 75,
+        "original_role": "default",
+        "confirmed_role": "default",
+        "original_profiler_ratio": 1.0182361364440105,
+        "confirmation_log_ratio": 0.08523178759841701,
+        "confirmation_ratio": 1.0889694470608335,
+        "decision_sha256": "59f06698c58342b6b6045a51eed3b61039b73c78057f34b803b088ce497f9dc3",
+        "trace": {
+          "sha256": "217f4b71fa0a6b266266f077cd7731455f8f678c42a5b928c4756a8570e5faac",
+          "original_graphs": {
+            "winner": {
+              "cuda_graph_id": 2,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+                  "grid": [
+                    8,
+                    14,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 229844,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "default": {
+              "cuda_graph_id": 5,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+                  "grid": [
+                    8,
+                    12,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 213460,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "winner_default_signatures_equal": false
+          },
+          "timing_inference": false
+        },
+        "confirmation_first_position_median_logs": {
+          "winner": 0.07907605886679947,
+          "default": 0.0929195768606342
+        },
+        "graph_log_ratio": 0.0641831774371697,
+        "graph_ratio": 1.0662877007218066,
+        "graph_first_position_median_logs": {
+          "winner": 0.06366935718505387,
+          "default": 0.0641831774371697
+        },
+        "queue_outcomes_all_retained": {
+          "start_pending_after_enqueue": 48
+        },
+        "graph_log_ratios": [
+          0.06648157363680855,
+          0.06136066694210639,
+          0.06516228511629439,
+          0.06648014742935027,
+          0.061689543695997065,
+          0.05847782996544295,
+          0.0662105623042816,
+          0.05764570490572493,
+          0.06699994410652534,
+          0.06043387571698881,
+          0.05898629396177829,
+          0.0645529617621386,
+          0.0662939946049631,
+          0.06398772473647696,
+          0.06580439723290551,
+          0.06319302346117667,
+          0.06160640277630138,
+          0.06947238006759524,
+          0.06736025991082521,
+          0.05957867775294826,
+          0.05694043697911786,
+          0.06217642925381334,
+          0.06437863013786242,
+          0.06924189640433268
+        ],
+        "log_hypothetical_over_original": 0.0,
+        "hypothetical_over_original": 1.0,
+        "original_log_regret_two_candidate_only": 0.0,
+        "confirmed_log_regret_two_candidate_only": 0.0,
+        "outcome": "unchanged_choice",
+        "transition": "default->default",
+        "original_selected_log_over_default": 0.0,
+        "original_selected_over_default": 1.0,
+        "confirmed_selected_log_over_default": 0.0,
+        "confirmed_selected_over_default": 1.0,
+        "startup_explicit_faster_confirmation_explicit_slower": false,
+        "startup_explicit_slower_confirmation_explicit_faster": false,
+        "startup_explicit_faster_graph_explicit_slower": false,
+        "startup_profile_point_tie": false,
+        "confirmation_point_tie": false,
+        "startup_host_ms": 544.876299,
+        "confirmation_host_ms": 178.636689,
+        "confirmation_profiler_host_ms": 6.774124,
+        "default_graph_log_ms": -4.75355428088937,
+        "default_graph_ms": 0.00862099923156702
+      },
+      {
+        "block": 2,
+        "pid_namespace_local": 1,
+        "result_sha256": "a62870de8244cf6533570ea1899a5d1bb6d02d5ddf7fb043fd9a6000b17d86e7",
+        "capture_order": "winner-first",
+        "finalist": [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        "finalist_profile_index": 75,
+        "original_role": "default",
+        "confirmed_role": "default",
+        "original_profiler_ratio": 1.0346008338511337,
+        "confirmation_log_ratio": 0.08168125766911084,
+        "confirmation_ratio": 1.0851098842481386,
+        "decision_sha256": "cf9299fa8e8856995983c8228644eb43822c493dd7ef83226ca759057ef423f1",
+        "trace": {
+          "sha256": "f6b83f3d8cd73e213ae66d88bc228d613218589ce57db3302841c828d60e9551",
+          "original_graphs": {
+            "winner": {
+              "cuda_graph_id": 2,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+                  "grid": [
+                    8,
+                    14,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 229844,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "default": {
+              "cuda_graph_id": 5,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+                  "grid": [
+                    8,
+                    12,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 213460,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "winner_default_signatures_equal": false
+          },
+          "timing_inference": false
+        },
+        "confirmation_first_position_median_logs": {
+          "winner": 0.08646397299717376,
+          "default": 0.0755025217484616
+        },
+        "graph_log_ratio": 0.06665383813121051,
+        "graph_ratio": 1.0689253929119857,
+        "graph_first_position_median_logs": {
+          "winner": 0.06696421071628943,
+          "default": 0.06661140608850917
+        },
+        "queue_outcomes_all_retained": {
+          "start_pending_after_enqueue": 48
+        },
+        "graph_log_ratios": [
+          0.06654843211697087,
+          0.06320754443463969,
+          0.06646356803156818,
+          0.07165350848795626,
+          0.06618653805877983,
+          0.06534414401887421,
+          0.07012064482924274,
+          0.06933694130829841,
+          0.06831918412410559,
+          0.05947268441116743,
+          0.06786863569174821,
+          0.06395293331022713,
+          0.0620249043972551,
+          0.06039153089147598,
+          0.07146714364830838,
+          0.06675924414545016,
+          0.06420290436970083,
+          0.06816173010127123,
+          0.06496376600394684,
+          0.06836586024293921,
+          0.06812102521362552,
+          0.06737998931560799,
+          0.06908697811289567,
+          0.06437750014802703
+        ],
+        "log_hypothetical_over_original": 0.0,
+        "hypothetical_over_original": 1.0,
+        "original_log_regret_two_candidate_only": 0.0,
+        "confirmed_log_regret_two_candidate_only": 0.0,
+        "outcome": "unchanged_choice",
+        "transition": "default->default",
+        "original_selected_log_over_default": 0.0,
+        "original_selected_over_default": 1.0,
+        "confirmed_selected_log_over_default": 0.0,
+        "confirmed_selected_over_default": 1.0,
+        "startup_explicit_faster_confirmation_explicit_slower": false,
+        "startup_explicit_slower_confirmation_explicit_faster": false,
+        "startup_explicit_faster_graph_explicit_slower": false,
+        "startup_profile_point_tie": false,
+        "confirmation_point_tie": false,
+        "startup_host_ms": 545.716749,
+        "confirmation_host_ms": 178.393449,
+        "confirmation_profiler_host_ms": 6.560124,
+        "default_graph_log_ms": -4.763580090807499,
+        "default_graph_ms": 0.008534998565507603
+      },
+      {
+        "block": 3,
+        "pid_namespace_local": 1,
+        "result_sha256": "6a12ed913348f412289500c6a925fb28254719b44b75651e90aacc4ea2a07dca",
+        "capture_order": "default-first",
+        "finalist": [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        "finalist_profile_index": 75,
+        "original_role": "default",
+        "confirmed_role": "default",
+        "original_profiler_ratio": 1.0090120069426431,
+        "confirmation_log_ratio": 0.04881404930449868,
+        "confirmation_ratio": 1.0500250796913346,
+        "decision_sha256": "35b17bdd58040e649faa93bf2b2673b2549c9cb15436b88dd328b8b368b95dda",
+        "trace": {
+          "sha256": "658155b0285899a038850f0f79856cb87e3c4a2a312ca174215848537a2b2f22",
+          "original_graphs": {
+            "winner": {
+              "cuda_graph_id": 5,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+                  "grid": [
+                    8,
+                    14,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 229844,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "default": {
+              "cuda_graph_id": 2,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+                  "grid": [
+                    8,
+                    12,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 213460,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "winner_default_signatures_equal": false
+          },
+          "timing_inference": false
+        },
+        "confirmation_first_position_median_logs": {
+          "winner": 0.05649381735810456,
+          "default": 0.04540104713250226
+        },
+        "graph_log_ratio": 0.07462137353056583,
+        "graph_ratio": 1.0774761126660328,
+        "graph_first_position_median_logs": {
+          "winner": 0.07424212591068206,
+          "default": 0.07537985172232656
+        },
+        "queue_outcomes_all_retained": {
+          "start_pending_after_enqueue": 48
+        },
+        "graph_log_ratios": [
+          0.06489476554283566,
+          0.0792029655945922,
+          0.07490370012660318,
+          0.07564663282938007,
+          0.07358055169476095,
+          0.07255687661605241,
+          0.07899137150287283,
+          0.07875991536188866,
+          0.08048785928744684,
+          0.07057055611125251,
+          0.07642065651012463,
+          0.07858087976438152,
+          0.06863909970757111,
+          0.07278376787610168,
+          0.08041838569530255,
+          0.07012995186130906,
+          0.0655023362322783,
+          0.0743390469345285,
+          0.07316522080636269,
+          0.07743347346485481,
+          0.06682511111349981,
+          0.07516322650395883,
+          0.07827466882917578,
+          0.06770171304326138
+        ],
+        "log_hypothetical_over_original": 0.0,
+        "hypothetical_over_original": 1.0,
+        "original_log_regret_two_candidate_only": 0.0,
+        "confirmed_log_regret_two_candidate_only": 0.0,
+        "outcome": "unchanged_choice",
+        "transition": "default->default",
+        "original_selected_log_over_default": 0.0,
+        "original_selected_over_default": 1.0,
+        "confirmed_selected_log_over_default": 0.0,
+        "confirmed_selected_over_default": 1.0,
+        "startup_explicit_faster_confirmation_explicit_slower": false,
+        "startup_explicit_slower_confirmation_explicit_faster": false,
+        "startup_explicit_faster_graph_explicit_slower": false,
+        "startup_profile_point_tie": false,
+        "confirmation_point_tie": false,
+        "startup_host_ms": 544.892257,
+        "confirmation_host_ms": 178.558549,
+        "confirmation_profiler_host_ms": 6.514141,
+        "default_graph_log_ms": -4.751236979728065,
+        "default_graph_ms": 0.008640999847873549
+      },
+      {
+        "block": 4,
+        "pid_namespace_local": 1,
+        "result_sha256": "89abda83bd377b734db5d4431365b7916d718bd68669d72fbc5f4dd5f019d553",
+        "capture_order": "default-first",
+        "finalist": [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        "finalist_profile_index": 75,
+        "original_role": "default",
+        "confirmed_role": "default",
+        "original_profiler_ratio": 1.004347859266255,
+        "confirmation_log_ratio": 0.07359091141066487,
+        "confirmation_ratio": 1.0763663862105672,
+        "decision_sha256": "d9e748c2fd8aee813ec8d2c50fcbe01d435a8cb27af45212029705dd35332e6a",
+        "trace": {
+          "sha256": "be9eaca479634786dc4c7c8c3d9b190632b898a15c8c62293777f5928d3d05b8",
+          "original_graphs": {
+            "winner": {
+              "cuda_graph_id": 5,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+                  "grid": [
+                    8,
+                    14,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 229844,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "default": {
+              "cuda_graph_id": 2,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+                  "grid": [
+                    8,
+                    12,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 213460,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "winner_default_signatures_equal": false
+          },
+          "timing_inference": false
+        },
+        "confirmation_first_position_median_logs": {
+          "winner": 0.07909158174239,
+          "default": 0.07359091141066487
+        },
+        "graph_log_ratio": 0.0782767472284138,
+        "graph_ratio": 1.081421897774332,
+        "graph_first_position_median_logs": {
+          "winner": 0.07664013012496718,
+          "default": 0.07858806448404931
+        },
+        "queue_outcomes_all_retained": {
+          "start_pending_after_enqueue": 48
+        },
+        "graph_log_ratios": [
+          0.08453221098911565,
+          0.07811238088670426,
+          0.08011408804661573,
+          0.07702957461894522,
+          0.07582250854177104,
+          0.07884756988852575,
+          0.07873501539797527,
+          0.07376100445120423,
+          0.07719230145546364,
+          0.07804278321740556,
+          0.07886180424129992,
+          0.07625068563098915,
+          0.08150513394880764,
+          0.0751831298490782,
+          0.08048914916268551,
+          0.07611515310108909,
+          0.08286127393573169,
+          0.07559158700733332,
+          0.07749254110838748,
+          0.07934655342743845,
+          0.0716816918544255,
+          0.07844111357012334,
+          0.08197460868898739,
+          0.0788301063936305
+        ],
+        "log_hypothetical_over_original": 0.0,
+        "hypothetical_over_original": 1.0,
+        "original_log_regret_two_candidate_only": 0.0,
+        "confirmed_log_regret_two_candidate_only": 0.0,
+        "outcome": "unchanged_choice",
+        "transition": "default->default",
+        "original_selected_log_over_default": 0.0,
+        "original_selected_over_default": 1.0,
+        "confirmed_selected_log_over_default": 0.0,
+        "confirmed_selected_over_default": 1.0,
+        "startup_explicit_faster_confirmation_explicit_slower": false,
+        "startup_explicit_slower_confirmation_explicit_faster": false,
+        "startup_explicit_faster_graph_explicit_slower": false,
+        "startup_profile_point_tie": false,
+        "confirmation_point_tie": false,
+        "startup_host_ms": 544.154145,
+        "confirmation_host_ms": 177.577938,
+        "confirmation_profiler_host_ms": 6.541896,
+        "default_graph_log_ms": -4.752279096855316,
+        "default_graph_ms": 0.008631999604403971
+      },
+      {
+        "block": 5,
+        "pid_namespace_local": 1,
+        "result_sha256": "663b39693c46db4a12906cf2314a7254e7f2f4c26049d349ab68a63a64341c4d",
+        "capture_order": "winner-first",
+        "finalist": [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        "finalist_profile_index": 75,
+        "original_role": "default",
+        "confirmed_role": "default",
+        "original_profiler_ratio": 1.011812363802323,
+        "confirmation_log_ratio": 0.0606982603306255,
+        "confirmation_ratio": 1.062578243802171,
+        "decision_sha256": "6bc5432fae83cfa6787dfc1eeeace967c39b79d9654ee651d8fd9c4533afc68f",
+        "trace": {
+          "sha256": "1088cb14e7d5be1e858b3f3ab7a13efbaea60d30fb5ab5e8acf14ef361b2d341",
+          "original_graphs": {
+            "winner": {
+              "cuda_graph_id": 2,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+                  "grid": [
+                    8,
+                    14,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 229844,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "default": {
+              "cuda_graph_id": 5,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+                  "grid": [
+                    8,
+                    12,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 213460,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "winner_default_signatures_equal": false
+          },
+          "timing_inference": false
+        },
+        "confirmation_first_position_median_logs": {
+          "winner": 0.0606982603306255,
+          "default": 0.05990150021350939
+        },
+        "graph_log_ratio": 0.061902976458724175,
+        "graph_ratio": 1.0638591203412429,
+        "graph_first_position_median_logs": {
+          "winner": 0.061902976458724175,
+          "default": 0.06298650528226332
+        },
+        "queue_outcomes_all_retained": {
+          "start_pending_after_enqueue": 48
+        },
+        "graph_log_ratios": [
+          0.06326403587313031,
+          0.0626049174366903,
+          0.06896176172927937,
+          0.06635366240520252,
+          0.06138550014800361,
+          0.06176882029177241,
+          0.0578635919733963,
+          0.058787599970332304,
+          0.06560100575764034,
+          0.06340622238920668,
+          0.06829288544287786,
+          0.05604325572802519,
+          0.06937905296234276,
+          0.0644805211745218,
+          0.06149248939000485,
+          0.06017692367771498,
+          0.061197620730669325,
+          0.058979068561293146,
+          0.05953876346058952,
+          0.05660829723219062,
+          0.06203713262567594,
+          0.06340622238920668,
+          0.06131930326903984,
+          0.06843353096889897
+        ],
+        "log_hypothetical_over_original": 0.0,
+        "hypothetical_over_original": 1.0,
+        "original_log_regret_two_candidate_only": 0.0,
+        "confirmed_log_regret_two_candidate_only": 0.0,
+        "outcome": "unchanged_choice",
+        "transition": "default->default",
+        "original_selected_log_over_default": 0.0,
+        "original_selected_over_default": 1.0,
+        "confirmed_selected_log_over_default": 0.0,
+        "confirmed_selected_over_default": 1.0,
+        "startup_explicit_faster_confirmation_explicit_slower": false,
+        "startup_explicit_slower_confirmation_explicit_faster": false,
+        "startup_explicit_faster_graph_explicit_slower": false,
+        "startup_profile_point_tie": false,
+        "confirmation_point_tie": false,
+        "startup_host_ms": 546.034126,
+        "confirmation_host_ms": 178.513478,
+        "confirmation_profiler_host_ms": 6.571338,
+        "default_graph_log_ms": -4.752163234412643,
+        "default_graph_ms": 0.008632999786903963
+      },
+      {
+        "block": 6,
+        "pid_namespace_local": 1,
+        "result_sha256": "38fb5a0f7e2405019d1437d9a1bc181d230724c9123710eb7a5002f92a5e6295",
+        "capture_order": "winner-first",
+        "finalist": [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        "finalist_profile_index": 75,
+        "original_role": "default",
+        "confirmed_role": "default",
+        "original_profiler_ratio": 1.0197278827521912,
+        "confirmation_log_ratio": 0.05792872948621204,
+        "confirmation_ratio": 1.0596394719694144,
+        "decision_sha256": "c1e03eed4598a33ed36ca1c55fb64cce02a79dbf208a0059ef7692852b084eb9",
+        "trace": {
+          "sha256": "3705fd4d7c32ad951a3b8fe56aaa3989035bacf5a3c3496acf049dfd0bfce7c9",
+          "original_graphs": {
+            "winner": {
+              "cuda_graph_id": 2,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+                  "grid": [
+                    8,
+                    14,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 229844,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "default": {
+              "cuda_graph_id": 5,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+                  "grid": [
+                    8,
+                    12,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 213460,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "winner_default_signatures_equal": false
+          },
+          "timing_inference": false
+        },
+        "confirmation_first_position_median_logs": {
+          "winner": 0.049209743619487746,
+          "default": 0.06403239558244092
+        },
+        "graph_log_ratio": 0.07148297100039859,
+        "graph_ratio": 1.0740998596994928,
+        "graph_first_position_median_logs": {
+          "winner": 0.07056195866140436,
+          "default": 0.07295148497163856
+        },
+        "queue_outcomes_all_retained": {
+          "start_pending_after_enqueue": 48
+        },
+        "graph_log_ratios": [
+          0.07153106986505389,
+          0.06785705732070225,
+          0.07494225574609385,
+          0.07042149216031077,
+          0.07852905226202644,
+          0.0708719538774733,
+          0.07714278247973153,
+          0.07440893116897253,
+          0.07247267524406156,
+          0.07540976747274407,
+          0.07342538986197264,
+          0.07562652081046582,
+          0.07031081639079094,
+          0.06805959320615013,
+          0.07247758008130449,
+          0.0705911125333176,
+          0.07143487213574329,
+          0.07400799620712281,
+          0.06738065578030256,
+          0.0705645434481591,
+          0.07029921733422434,
+          0.06669879792507823,
+          0.07055937387464961,
+          0.07576300835092291
+        ],
+        "log_hypothetical_over_original": 0.0,
+        "hypothetical_over_original": 1.0,
+        "original_log_regret_two_candidate_only": 0.0,
+        "confirmed_log_regret_two_candidate_only": 0.0,
+        "outcome": "unchanged_choice",
+        "transition": "default->default",
+        "original_selected_log_over_default": 0.0,
+        "original_selected_over_default": 1.0,
+        "confirmed_selected_log_over_default": 0.0,
+        "confirmed_selected_over_default": 1.0,
+        "startup_explicit_faster_confirmation_explicit_slower": false,
+        "startup_explicit_slower_confirmation_explicit_faster": false,
+        "startup_explicit_faster_graph_explicit_slower": false,
+        "startup_profile_point_tie": false,
+        "confirmation_point_tie": false,
+        "startup_host_ms": 545.261064,
+        "confirmation_host_ms": 178.575017,
+        "confirmation_profiler_host_ms": 6.481087,
+        "default_graph_log_ms": -4.759370947165847,
+        "default_graph_ms": 0.008570999313459024
+      },
+      {
+        "block": 7,
+        "pid_namespace_local": 1,
+        "result_sha256": "40c9ed509680d8f2da29b3d6f1f24a6f03cef472fcf9364c5cc8db4a81726f4e",
+        "capture_order": "default-first",
+        "finalist": [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        "finalist_profile_index": 75,
+        "original_role": "default",
+        "confirmed_role": "default",
+        "original_profiler_ratio": 1.0248722624451152,
+        "confirmation_log_ratio": 0.08641611690789179,
+        "confirmation_ratio": 1.0902599095095231,
+        "decision_sha256": "77698baea7288145aeb6e2ebe2d1c001d64e9234d9759796e2db324d1c05b601",
+        "trace": {
+          "sha256": "d8509c7130a21c79681f27e394f75f68eba6ca813a4811484830b636431a5a5f",
+          "original_graphs": {
+            "winner": {
+              "cuda_graph_id": 5,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+                  "grid": [
+                    8,
+                    14,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 229844,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "default": {
+              "cuda_graph_id": 2,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+                  "grid": [
+                    8,
+                    12,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 213460,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "winner_default_signatures_equal": false
+          },
+          "timing_inference": false
+        },
+        "confirmation_first_position_median_logs": {
+          "winner": 0.08256542770548378,
+          "default": 0.08863123622157357
+        },
+        "graph_log_ratio": 0.06490171958636691,
+        "graph_ratio": 1.0670541487075607,
+        "graph_first_position_median_logs": {
+          "winner": 0.06490171958636691,
+          "default": 0.0649883770263281
+        },
+        "queue_outcomes_all_retained": {
+          "start_pending_after_enqueue": 48
+        },
+        "graph_log_ratios": [
+          0.07224979299587389,
+          0.06308393050139996,
+          0.06494614256206835,
+          0.06484374997633106,
+          0.06986395830643194,
+          0.06785705732070225,
+          0.07185345214646648,
+          0.06293654827093675,
+          0.05895261984738095,
+          0.06513300407632515,
+          0.06207022778325027,
+          0.0692106636243395,
+          0.06571540630629882,
+          0.06485729661066547,
+          0.06226030799512311,
+          0.06964620703550792,
+          0.06185219817595652,
+          0.06021589363624264,
+          0.0658294150046314,
+          0.06700638856802281,
+          0.06410132540293864,
+          0.06832144409048369,
+          0.06445119228622777,
+          0.056337079701993385
+        ],
+        "log_hypothetical_over_original": 0.0,
+        "hypothetical_over_original": 1.0,
+        "original_log_regret_two_candidate_only": 0.0,
+        "confirmed_log_regret_two_candidate_only": 0.0,
+        "outcome": "unchanged_choice",
+        "transition": "default->default",
+        "original_selected_log_over_default": 0.0,
+        "original_selected_over_default": 1.0,
+        "confirmed_selected_log_over_default": 0.0,
+        "confirmed_selected_over_default": 1.0,
+        "startup_explicit_faster_confirmation_explicit_slower": false,
+        "startup_explicit_slower_confirmation_explicit_faster": false,
+        "startup_explicit_faster_graph_explicit_slower": false,
+        "startup_profile_point_tie": false,
+        "confirmation_point_tie": false,
+        "startup_host_ms": 545.932523,
+        "confirmation_host_ms": 178.070596,
+        "confirmation_profiler_host_ms": 6.612919,
+        "default_graph_log_ms": -4.756225682869843,
+        "default_graph_ms": 0.008597999811172482
+      }
+    ],
+    "patched": [
+      {
+        "block": 0,
+        "pid_namespace_local": 1,
+        "result_sha256": "a9fc31647d9405125299e9285e192df623fa7acfc75b5ded31e6d3eabca3637e",
+        "capture_order": "default-first",
+        "finalist": [
+          1348619731010,
+          4294967332,
+          0,
+          1125899906842625,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        "finalist_profile_index": 80,
+        "original_role": "winner",
+        "confirmed_role": "winner",
+        "original_profiler_ratio": 0.9536393903269388,
+        "confirmation_log_ratio": -0.054097253570579984,
+        "confirmation_ratio": 0.9473399698269418,
+        "decision_sha256": "f48b89d5520f4fb9dcbdfb240a3e9d47d193de801a22f8e935680abf9f86118a",
+        "trace": {
+          "sha256": "ebfa856be100c5cd77c7105ae7ea8da74022504e305f3b86ac224b62b06dc941",
+          "original_graphs": {
+            "winner": {
+              "cuda_graph_id": 5,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_64x40_128x16_4x1_v_bz_TNT",
+                  "grid": [
+                    4,
+                    16,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 229844,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "default": {
+              "cuda_graph_id": 2,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+                  "grid": [
+                    8,
+                    12,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 213460,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "winner_default_signatures_equal": false
+          },
+          "timing_inference": false
+        },
+        "confirmation_first_position_median_logs": {
+          "winner": -0.05642551866228887,
+          "default": -0.0520565273703059
+        },
+        "graph_log_ratio": -0.014042617773682025,
+        "graph_ratio": 0.9860555198763914,
+        "graph_first_position_median_logs": {
+          "winner": -0.01634802907888746,
+          "default": -0.011904975229943774
+        },
+        "queue_outcomes_all_retained": {
+          "start_pending_after_enqueue": 48
+        },
+        "graph_log_ratios": [
+          -0.013770728051290171,
+          -0.007968120952573139,
+          -0.008861957065183234,
+          -0.010980164936010771,
+          -0.016101112790187045,
+          -0.011426063668263113,
+          -0.015619918489048548,
+          -0.017070414733108392,
+          -0.01142329129949561,
+          -0.01821632064936969,
+          -0.01960840317929242,
+          -0.016594945367587877,
+          -0.009104782169809101,
+          -0.022720275767301918,
+          -0.019576521815153174,
+          -0.011690659465183531,
+          -0.018123094449501907,
+          -0.01431450749607388,
+          -0.011884132859084729,
+          -0.011925817600802817,
+          -0.0028011435930435052,
+          -0.00911755361742009,
+          -0.014482743389897293,
+          -0.016157669462795673
+        ],
+        "log_hypothetical_over_original": -0.0,
+        "hypothetical_over_original": 1.0,
+        "original_log_regret_two_candidate_only": 0.0,
+        "confirmed_log_regret_two_candidate_only": 0.0,
+        "outcome": "unchanged_choice",
+        "transition": "winner->winner",
+        "original_selected_log_over_default": -0.014042617773682025,
+        "original_selected_over_default": 0.9860555198763914,
+        "confirmed_selected_log_over_default": -0.014042617773682025,
+        "confirmed_selected_over_default": 0.9860555198763914,
+        "startup_explicit_faster_confirmation_explicit_slower": false,
+        "startup_explicit_slower_confirmation_explicit_faster": false,
+        "startup_explicit_faster_graph_explicit_slower": false,
+        "startup_profile_point_tie": false,
+        "confirmation_point_tie": false,
+        "startup_host_ms": 608.956456,
+        "confirmation_host_ms": 182.067674,
+        "confirmation_profiler_host_ms": 128.88374100000001,
+        "default_graph_log_ms": -4.752974377930344,
+        "default_graph_ms": 0.008626000024378298
+      },
+      {
+        "block": 1,
+        "pid_namespace_local": 1,
+        "result_sha256": "62abdbd9b3fceebe7924c57f022764648aa74a06c8589b46c2d380b1c9e3c870",
+        "capture_order": "winner-first",
+        "finalist": [
+          1348619731010,
+          4294967332,
+          0,
+          1125899906842625,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        "finalist_profile_index": 80,
+        "original_role": "winner",
+        "confirmed_role": "winner",
+        "original_profiler_ratio": 0.9396985624807813,
+        "confirmation_log_ratio": -0.049400680875930754,
+        "confirmation_ratio": 0.951799685353243,
+        "decision_sha256": "816054a4eee5ae0eb9168ef634b6f6874b1411ac959be7c45b590bb2b5da8cba",
+        "trace": {
+          "sha256": "791a3dd050c6b33c7ab783bc2cf93906ad43a761d52414fa6ef157d0ea2a202a",
+          "original_graphs": {
+            "winner": {
+              "cuda_graph_id": 2,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_64x40_128x16_4x1_v_bz_TNT",
+                  "grid": [
+                    4,
+                    16,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 229844,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "default": {
+              "cuda_graph_id": 5,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+                  "grid": [
+                    8,
+                    12,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 213460,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "winner_default_signatures_equal": false
+          },
+          "timing_inference": false
+        },
+        "confirmation_first_position_median_logs": {
+          "winner": -0.050180856287088016,
+          "default": -0.049012062119378974
+        },
+        "graph_log_ratio": -0.015791202182757848,
+        "graph_ratio": 0.9843328251453616,
+        "graph_first_position_median_logs": {
+          "winner": -0.013512960400609956,
+          "default": -0.016494532857496302
+        },
+        "queue_outcomes_all_retained": {
+          "start_pending_after_enqueue": 48
+        },
+        "graph_log_ratios": [
+          -0.019504774135316125,
+          -0.0072337274485099416,
+          -0.010005922802752126,
+          -0.018199318815239094,
+          -0.022051151049146293,
+          -0.017022755463730922,
+          -0.010024584495802982,
+          -0.01771197821405386,
+          -0.009106907764008932,
+          -0.017480895749828473,
+          -0.008876556611134108,
+          -0.014032032961366776,
+          -0.01661058349283265,
+          -0.009790253830599702,
+          -0.010949360337612775,
+          -0.01637848222215995,
+          -0.020169584250056657,
+          -0.011914672930421064,
+          -0.015111247870798846,
+          -0.017185660507317294,
+          -0.017367274439264373,
+          -0.01541716386091779,
+          -0.016165240504597903,
+          -0.011209917806381815
+        ],
+        "log_hypothetical_over_original": -0.0,
+        "hypothetical_over_original": 1.0,
+        "original_log_regret_two_candidate_only": 0.0,
+        "confirmed_log_regret_two_candidate_only": 0.0,
+        "outcome": "unchanged_choice",
+        "transition": "winner->winner",
+        "original_selected_log_over_default": -0.015791202182757848,
+        "original_selected_over_default": 0.9843328251453616,
+        "confirmed_selected_log_over_default": -0.015791202182757848,
+        "confirmed_selected_over_default": 0.9843328251453616,
+        "startup_explicit_faster_confirmation_explicit_slower": false,
+        "startup_explicit_slower_confirmation_explicit_faster": false,
+        "startup_explicit_faster_graph_explicit_slower": false,
+        "startup_profile_point_tie": false,
+        "confirmation_point_tie": false,
+        "startup_host_ms": 611.334608,
+        "confirmation_host_ms": 181.089363,
+        "confirmation_profiler_host_ms": 128.94752,
+        "default_graph_log_ms": -4.753670142757508,
+        "default_graph_ms": 0.00862000044435263
+      },
+      {
+        "block": 2,
+        "pid_namespace_local": 1,
+        "result_sha256": "acc235567e413cf4b496c33140edc87b3f86debc1807b7dbef1ec4e60e5761f5",
+        "capture_order": "winner-first",
+        "finalist": [
+          1348619731010,
+          4294967332,
+          0,
+          1125899906842625,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        "finalist_profile_index": 80,
+        "original_role": "winner",
+        "confirmed_role": "winner",
+        "original_profiler_ratio": 0.9534884412269293,
+        "confirmation_log_ratio": -0.050933734120890285,
+        "confirmation_ratio": 0.9503416436703911,
+        "decision_sha256": "369201ef4bef7dbc1373815ba7b79f8cfc7fc627919d45fc82b4bed88a8ca66b",
+        "trace": {
+          "sha256": "86dcc05e795bc1eeb99923503dcf8d4d800121c97129cbf7a96f24870acc8b8c",
+          "original_graphs": {
+            "winner": {
+              "cuda_graph_id": 2,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_64x40_128x16_4x1_v_bz_TNT",
+                  "grid": [
+                    4,
+                    16,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 229844,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "default": {
+              "cuda_graph_id": 5,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+                  "grid": [
+                    8,
+                    12,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 213460,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "winner_default_signatures_equal": false
+          },
+          "timing_inference": false
+        },
+        "confirmation_first_position_median_logs": {
+          "winner": -0.0444120032027973,
+          "default": -0.05240452302815653
+        },
+        "graph_log_ratio": -0.006684111862871018,
+        "graph_ratio": 0.9933381771244826,
+        "graph_first_position_median_logs": {
+          "winner": -0.006091905256022683,
+          "default": -0.0072642424723361266
+        },
+        "queue_outcomes_all_retained": {
+          "start_pending_after_enqueue": 48
+        },
+        "graph_log_ratios": [
+          -0.0007023892697085306,
+          -0.009600732528699274,
+          -0.007269349229207141,
+          -0.013338257974767636,
+          -0.002579401347839822,
+          -0.00911755361742009,
+          -0.006074722501768442,
+          -0.0016398786464625944,
+          -0.007938463067166838,
+          -0.008649977514657192,
+          -0.003517387004178628,
+          -0.0023463351766038402,
+          -0.006109088010276924,
+          -0.008897340365142333,
+          -0.005153482472118862,
+          -0.007259135715465112,
+          -0.014032032961366776,
+          -0.004919862945643429,
+          -0.009145347878562594,
+          -0.004210564641173171,
+          -0.0039705520184559594,
+          -0.009385296032226565,
+          -0.008428944563521135,
+          -0.002111894663773043
+        ],
+        "log_hypothetical_over_original": -0.0,
+        "hypothetical_over_original": 1.0,
+        "original_log_regret_two_candidate_only": 0.0,
+        "confirmed_log_regret_two_candidate_only": 0.0,
+        "outcome": "unchanged_choice",
+        "transition": "winner->winner",
+        "original_selected_log_over_default": -0.006684111862871018,
+        "original_selected_over_default": 0.9933381771244826,
+        "confirmed_selected_log_over_default": -0.006684111862871018,
+        "confirmed_selected_over_default": 0.9933381771244826,
+        "startup_explicit_faster_confirmation_explicit_slower": false,
+        "startup_explicit_slower_confirmation_explicit_faster": false,
+        "startup_explicit_faster_graph_explicit_slower": false,
+        "startup_profile_point_tie": false,
+        "confirmation_point_tie": false,
+        "startup_host_ms": 611.432096,
+        "confirmation_host_ms": 182.184353,
+        "confirmation_profiler_host_ms": 129.096024,
+        "default_graph_log_ms": -4.759720940187883,
+        "default_graph_ms": 0.008568000048398975
+      },
+      {
+        "block": 3,
+        "pid_namespace_local": 1,
+        "result_sha256": "62a04bf293f494c8ab93c59d4edd2ef7fae7aadcae7ec3c454fe6a7f227ec122",
+        "capture_order": "default-first",
+        "finalist": [
+          1348619731010,
+          4294967332,
+          0,
+          1125899906842625,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        "finalist_profile_index": 80,
+        "original_role": "winner",
+        "confirmed_role": "winner",
+        "original_profiler_ratio": 0.9577725185305631,
+        "confirmation_log_ratio": -0.050282268982383395,
+        "confirmation_ratio": 0.9509609598304543,
+        "decision_sha256": "33ecebe8e9571e357bbf3e5f3d9eb0fc4f45b6a0479fb5ad62adcf9876413626",
+        "trace": {
+          "sha256": "b57984b9a1fc13f70642ab46027f7f6bc2d33b86a7c6166641935c003c0579cb",
+          "original_graphs": {
+            "winner": {
+              "cuda_graph_id": 5,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_64x40_128x16_4x1_v_bz_TNT",
+                  "grid": [
+                    4,
+                    16,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 229844,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "default": {
+              "cuda_graph_id": 2,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+                  "grid": [
+                    8,
+                    12,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 213460,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "winner_default_signatures_equal": false
+          },
+          "timing_inference": false
+        },
+        "confirmation_first_position_median_logs": {
+          "winner": -0.0467102688715402,
+          "default": -0.05526173267370372
+        },
+        "graph_log_ratio": -0.014583377155889697,
+        "graph_ratio": 0.985522445248184,
+        "graph_first_position_median_logs": {
+          "winner": -0.013288002880161813,
+          "default": -0.015832488291775575
+        },
+        "queue_outcomes_all_retained": {
+          "start_pending_after_enqueue": 48
+        },
+        "graph_log_ratios": [
+          -0.016045058094502598,
+          -0.01069277572409442,
+          -0.017922126028314785,
+          -0.01394722566916441,
+          -0.008654023895745447,
+          -0.009102656578294812,
+          -0.010242145068560506,
+          -0.012567060178301292,
+          -0.021606140358835593,
+          -0.011609119340282189,
+          -0.014476089721243902,
+          -0.01604868181298348,
+          -0.009567236178626605,
+          -0.02066236652476259,
+          -0.01535986412958796,
+          -0.017695481788025574,
+          -0.014690664590535491,
+          -0.019991303835579045,
+          -0.014946461304838479,
+          -0.012315644074856408,
+          -0.01001524495599558,
+          -0.016056151036200724,
+          -0.012628780091159217,
+          -0.015619918489048548
+        ],
+        "log_hypothetical_over_original": -0.0,
+        "hypothetical_over_original": 1.0,
+        "original_log_regret_two_candidate_only": 0.0,
+        "confirmed_log_regret_two_candidate_only": 0.0,
+        "outcome": "unchanged_choice",
+        "transition": "winner->winner",
+        "original_selected_log_over_default": -0.014583377155889697,
+        "original_selected_over_default": 0.985522445248184,
+        "confirmed_selected_log_over_default": -0.014583377155889697,
+        "confirmed_selected_over_default": 0.985522445248184,
+        "startup_explicit_faster_confirmation_explicit_slower": false,
+        "startup_explicit_slower_confirmation_explicit_faster": false,
+        "startup_explicit_faster_graph_explicit_slower": false,
+        "startup_profile_point_tie": false,
+        "confirmation_point_tie": false,
+        "startup_host_ms": 610.142674,
+        "confirmation_host_ms": 182.326313,
+        "confirmation_profiler_host_ms": 129.214413,
+        "default_graph_log_ms": -4.749618255781074,
+        "default_graph_ms": 0.008654998568228482
+      },
+      {
+        "block": 4,
+        "pid_namespace_local": 1,
+        "result_sha256": "696f53de6ac344eb21a548990bd6db8db715430448030218b5db1016307f4fae",
+        "capture_order": "default-first",
+        "finalist": [
+          1348619731010,
+          4294967332,
+          0,
+          1125899906842625,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        "finalist_profile_index": 80,
+        "original_role": "winner",
+        "confirmed_role": "winner",
+        "original_profiler_ratio": 0.9449838288725938,
+        "confirmation_log_ratio": -0.04847941643406925,
+        "confirmation_ratio": 0.9526769485928017,
+        "decision_sha256": "b86a20a7f55e94c95ae0921ed9811587bf5cd0d19d0297e7fd99c3ff5537d521",
+        "trace": {
+          "sha256": "f4b17158403f4d284d498506acbf59ae0d3a0ff3d9ee77b424610aae6fdfc9bd",
+          "original_graphs": {
+            "winner": {
+              "cuda_graph_id": 5,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_64x40_128x16_4x1_v_bz_TNT",
+                  "grid": [
+                    4,
+                    16,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 229844,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "default": {
+              "cuda_graph_id": 2,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+                  "grid": [
+                    8,
+                    12,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 213460,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "winner_default_signatures_equal": false
+          },
+          "timing_inference": false
+        },
+        "confirmation_first_position_median_logs": {
+          "winner": -0.05427572858780741,
+          "default": -0.04540281308189889
+        },
+        "graph_log_ratio": -0.014617588016552234,
+        "graph_ratio": 0.9854887302538426,
+        "graph_first_position_median_logs": {
+          "winner": -0.014489622518908547,
+          "default": -0.015074669341630535
+        },
+        "queue_outcomes_all_retained": {
+          "start_pending_after_enqueue": 48
+        },
+        "graph_log_ratios": [
+          -0.014731996976307461,
+          -0.016598824261651386,
+          -0.014503179056797008,
+          -0.01448623615762788,
+          -0.01001524495599558,
+          -0.0175094633640177,
+          -0.016540818025147508,
+          -0.012169570038527342,
+          -0.01748904867977815,
+          -0.011731696436428803,
+          -0.012118519165141716,
+          -0.015442524400220776,
+          -0.017968022606787426,
+          -0.016401508474931988,
+          -0.013276015603017121,
+          -0.014493008880189213,
+          -0.009089926801909455,
+          -0.019788784220019912,
+          -0.013532631960174164,
+          -0.01612745608294013,
+          -0.012115696218556127,
+          -0.010762828547032432,
+          -0.014971045075460042,
+          -0.01517829360780103
+        ],
+        "log_hypothetical_over_original": -0.0,
+        "hypothetical_over_original": 1.0,
+        "original_log_regret_two_candidate_only": 0.0,
+        "confirmed_log_regret_two_candidate_only": 0.0,
+        "outcome": "unchanged_choice",
+        "transition": "winner->winner",
+        "original_selected_log_over_default": -0.014617588016552234,
+        "original_selected_over_default": 0.9854887302538426,
+        "confirmed_selected_log_over_default": -0.014617588016552234,
+        "confirmed_selected_over_default": 0.9854887302538426,
+        "startup_explicit_faster_confirmation_explicit_slower": false,
+        "startup_explicit_slower_confirmation_explicit_faster": false,
+        "startup_explicit_faster_graph_explicit_slower": false,
+        "startup_profile_point_tie": false,
+        "confirmation_point_tie": false,
+        "startup_host_ms": 610.050732,
+        "confirmation_host_ms": 182.700734,
+        "confirmation_profiler_host_ms": 129.016931,
+        "default_graph_log_ms": -4.752974377930344,
+        "default_graph_ms": 0.008626000024378298
+      },
+      {
+        "block": 5,
+        "pid_namespace_local": 1,
+        "result_sha256": "29da2a2040ee3fd2163f179073562325fddf34781c923d5b4e6e3ab10adc5e0b",
+        "capture_order": "winner-first",
+        "finalist": [
+          1348619731010,
+          4294967332,
+          0,
+          1125899906842625,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        "finalist_profile_index": 80,
+        "original_role": "winner",
+        "confirmed_role": "winner",
+        "original_profiler_ratio": 0.9556159213977261,
+        "confirmation_log_ratio": -0.04990736347056839,
+        "confirmation_ratio": 0.9513175471749193,
+        "decision_sha256": "565acccb05627b9f870aaac366edb5b2e60be7f2bb3adfcb172387e1c00129e4",
+        "trace": {
+          "sha256": "5bb8a0d299e3b39ea60a21c058c89082e4f700d0ca1b081d42f2b3f62a1ac0ed",
+          "original_graphs": {
+            "winner": {
+              "cuda_graph_id": 2,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_64x40_128x16_4x1_v_bz_TNT",
+                  "grid": [
+                    4,
+                    16,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 229844,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "default": {
+              "cuda_graph_id": 5,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+                  "grid": [
+                    8,
+                    12,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 213460,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "winner_default_signatures_equal": false
+          },
+          "timing_inference": false
+        },
+        "confirmation_first_position_median_logs": {
+          "winner": -0.05083554551601549,
+          "default": -0.048478099533362656
+        },
+        "graph_log_ratio": -0.006868550062681085,
+        "graph_ratio": 0.9931549845136681,
+        "graph_first_position_median_logs": {
+          "winner": -0.006285912948095709,
+          "default": -0.007333836599264215
+        },
+        "queue_outcomes_all_retained": {
+          "start_pending_after_enqueue": 48
+        },
+        "graph_log_ratios": [
+          -0.011420737296401182,
+          -0.008174758728764265,
+          -0.009319694738091801,
+          -0.008163318618734155,
+          -0.002795922402885564,
+          0.0,
+          -0.005839081595844822,
+          -0.0023304778583763054,
+          -0.010962238236277797,
+          -0.0035009677213173555,
+          -0.001869173658147076,
+          -0.011906328734687928,
+          -0.007455822755891968,
+          -0.00886413290164528,
+          -0.005119901081304556,
+          -0.0030285093016002482,
+          -0.006062083754352117,
+          -0.007211850442636463,
+          -0.016097465003025824,
+          -0.00837989294914505,
+          -0.006525249682725708,
+          -0.00604657621346571,
+          -0.01234156330429616,
+          -0.005582750781480418
+        ],
+        "log_hypothetical_over_original": -0.0,
+        "hypothetical_over_original": 1.0,
+        "original_log_regret_two_candidate_only": 0.0,
+        "confirmed_log_regret_two_candidate_only": 0.0,
+        "outcome": "unchanged_choice",
+        "transition": "winner->winner",
+        "original_selected_log_over_default": -0.006868550062681085,
+        "original_selected_over_default": 0.9931549845136681,
+        "confirmed_selected_log_over_default": -0.006868550062681085,
+        "confirmed_selected_over_default": 0.9931549845136681,
+        "startup_explicit_faster_confirmation_explicit_slower": false,
+        "startup_explicit_slower_confirmation_explicit_faster": false,
+        "startup_explicit_faster_graph_explicit_slower": false,
+        "startup_profile_point_tie": false,
+        "confirmation_point_tie": false,
+        "startup_host_ms": 610.440091,
+        "confirmation_host_ms": 182.640523,
+        "confirmation_profiler_host_ms": 129.388111,
+        "default_graph_log_ms": -4.754366473023312,
+        "default_graph_ms": 0.00861400016648197
+      },
+      {
+        "block": 6,
+        "pid_namespace_local": 1,
+        "result_sha256": "1c6181b745c9d0ec8f224768ec0cd4fd46506923292f41f7f9191dd33d03771a",
+        "capture_order": "winner-first",
+        "finalist": [
+          1348619731010,
+          4294967332,
+          0,
+          1125899906842625,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        "finalist_profile_index": 80,
+        "original_role": "winner",
+        "confirmed_role": "winner",
+        "original_profiler_ratio": 0.9542091463245873,
+        "confirmation_log_ratio": -0.048725259130293366,
+        "confirmation_ratio": 0.9524427687100155,
+        "decision_sha256": "39762f23128b7c7792c13a27f130f0a2eebc1a867025674b67fb155af0eb2123",
+        "trace": {
+          "sha256": "365c6018e6995195a34893a86195b562bf6a5a5308306c73cd1e8068ef640aeb",
+          "original_graphs": {
+            "winner": {
+              "cuda_graph_id": 2,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_64x40_128x16_4x1_v_bz_TNT",
+                  "grid": [
+                    4,
+                    16,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 229844,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "default": {
+              "cuda_graph_id": 5,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+                  "grid": [
+                    8,
+                    12,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 213460,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "winner_default_signatures_equal": false
+          },
+          "timing_inference": false
+        },
+        "confirmation_first_position_median_logs": {
+          "winner": -0.04971815051616897,
+          "default": -0.048725259130293366
+        },
+        "graph_log_ratio": -0.006403866759201082,
+        "graph_ratio": 0.9936165942956124,
+        "graph_first_position_median_logs": {
+          "winner": -0.007829413075740201,
+          "default": -0.004973722107815734
+        },
+        "queue_outcomes_all_retained": {
+          "start_pending_after_enqueue": 48
+        },
+        "graph_log_ratios": [
+          -0.01116802024601108,
+          -0.00520961807811873,
+          -0.006654067754226427,
+          -0.009264840218935741,
+          -0.012104025550692702,
+          -0.004730413738099995,
+          -0.004757419262470141,
+          -0.0037886988427732375,
+          -0.0016648405484723278,
+          -0.005217030477531472,
+          -0.011157415296980206,
+          -0.010429075191927421,
+          -0.006650906629472713,
+          -0.00615682688892945,
+          -0.00809716084397539,
+          -0.003317453500623604,
+          -0.0030926315070189136,
+          -0.0026044411918413352,
+          0.004267353904392517,
+          -0.012817631734524217,
+          -0.015441632754750013,
+          -0.009004758397253976,
+          -0.011588196567402393,
+          -0.004264431247540092
+        ],
+        "log_hypothetical_over_original": -0.0,
+        "hypothetical_over_original": 1.0,
+        "original_log_regret_two_candidate_only": 0.0,
+        "confirmed_log_regret_two_candidate_only": 0.0,
+        "outcome": "unchanged_choice",
+        "transition": "winner->winner",
+        "original_selected_log_over_default": -0.006403866759201082,
+        "original_selected_over_default": 0.9936165942956124,
+        "confirmed_selected_log_over_default": -0.006403866759201082,
+        "confirmed_selected_over_default": 0.9936165942956124,
+        "startup_explicit_faster_confirmation_explicit_slower": false,
+        "startup_explicit_slower_confirmation_explicit_faster": false,
+        "startup_explicit_faster_graph_explicit_slower": false,
+        "startup_profile_point_tie": false,
+        "confirmation_point_tie": false,
+        "startup_host_ms": 611.29048,
+        "confirmation_host_ms": 182.473572,
+        "confirmation_profiler_host_ms": 129.043202,
+        "default_graph_log_ms": -4.7722879240413025,
+        "default_graph_ms": 0.008460999873072061
+      },
+      {
+        "block": 7,
+        "pid_namespace_local": 1,
+        "result_sha256": "27022ff5842d98fde190ade09a97bbea409324fff9c57cb1ac041a2660406f9c",
+        "capture_order": "default-first",
+        "finalist": [
+          1348619731010,
+          4294967332,
+          0,
+          1125899906842625,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        "finalist_profile_index": 80,
+        "original_role": "winner",
+        "confirmed_role": "winner",
+        "original_profiler_ratio": 0.942497733143652,
+        "confirmation_log_ratio": -0.0416835541230894,
+        "confirmation_ratio": 0.9591732589757531,
+        "decision_sha256": "88db5b083682c827e010bb04c22fe7bac4379ad6397a2608e0630641da3e1a04",
+        "trace": {
+          "sha256": "6d74a59ed51771f7bbd36c3d8034e68ca110da7986d63954f96051a4a9426f59",
+          "original_graphs": {
+            "winner": {
+              "cuda_graph_id": 5,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_64x40_128x16_4x1_v_bz_TNT",
+                  "grid": [
+                    4,
+                    16,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 229844,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "default": {
+              "cuda_graph_id": 2,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+                  "grid": [
+                    8,
+                    12,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 213460,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "winner_default_signatures_equal": false
+          },
+          "timing_inference": false
+        },
+        "confirmation_first_position_median_logs": {
+          "winner": -0.03946829876097277,
+          "default": -0.04250826740030007
+        },
+        "graph_log_ratio": -0.015386726243314323,
+        "graph_ratio": 0.9847310446192061,
+        "graph_first_position_median_logs": {
+          "winner": -0.015390319340477174,
+          "default": -0.01466983912870367
+        },
+        "queue_outcomes_all_retained": {
+          "start_pending_after_enqueue": 48
+        },
+        "graph_log_ratios": [
+          -0.01608609758532538,
+          -0.009996617987567135,
+          -0.00420750304911923,
+          -0.010710203878150507,
+          -0.016979093075419324,
+          -0.014260961818231629,
+          -0.019097030482956603,
+          -0.012987186410223258,
+          -0.014439003762556312,
+          -0.015395694752035735,
+          -0.017926190170699484,
+          -0.01701481992856157,
+          -0.017407860020885516,
+          -0.015377757734592911,
+          -0.01678754312437969,
+          -0.012590501517707561,
+          -0.01672126355497466,
+          -0.016764090098891658,
+          -0.013943983505371604,
+          -0.015402880946361434,
+          -0.013741969295424336,
+          -0.014701057684358034,
+          -0.017472750417888948,
+          -0.012161031048778146
+        ],
+        "log_hypothetical_over_original": -0.0,
+        "hypothetical_over_original": 1.0,
+        "original_log_regret_two_candidate_only": 0.0,
+        "confirmed_log_regret_two_candidate_only": 0.0,
+        "outcome": "unchanged_choice",
+        "transition": "winner->winner",
+        "original_selected_log_over_default": -0.015386726243314323,
+        "original_selected_over_default": 0.9847310446192061,
+        "confirmed_selected_log_over_default": -0.015386726243314323,
+        "confirmed_selected_over_default": 0.9847310446192061,
+        "startup_explicit_faster_confirmation_explicit_slower": false,
+        "startup_explicit_slower_confirmation_explicit_faster": false,
+        "startup_explicit_faster_graph_explicit_slower": false,
+        "startup_profile_point_tie": false,
+        "confirmation_point_tie": false,
+        "startup_host_ms": 609.903738,
+        "confirmation_host_ms": 182.368992,
+        "confirmation_profiler_host_ms": 128.973209,
+        "default_graph_log_ms": -4.750195934093131,
+        "default_graph_ms": 0.008650000207126142
+      }
+    ]
+  },
+  "paired_rows": [
+    {
+      "block": 0,
+      "first_arm": "baseline",
+      "capture_order": "default-first",
+      "baseline_finalist": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "patched_finalist": [
+        1348619731010,
+        4294967332,
+        0,
+        1125899906842625,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "same_finalist": false,
+      "log_patched_over_baseline": {
+        "original_selected_over_default": -0.014042617773682025,
+        "confirmed_selected_over_default": -0.014042617773682025,
+        "confirmation_over_original": -0.0,
+        "default_graph_absolute_ms": -0.0018531533765075991
+      }
+    },
+    {
+      "block": 1,
+      "first_arm": "patched",
+      "capture_order": "winner-first",
+      "baseline_finalist": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "patched_finalist": [
+        1348619731010,
+        4294967332,
+        0,
+        1125899906842625,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "same_finalist": false,
+      "log_patched_over_baseline": {
+        "original_selected_over_default": -0.015791202182757848,
+        "confirmed_selected_over_default": -0.015791202182757848,
+        "confirmation_over_original": -0.0,
+        "default_graph_absolute_ms": -0.00011586186813783428
+      }
+    },
+    {
+      "block": 2,
+      "first_arm": "baseline",
+      "capture_order": "winner-first",
+      "baseline_finalist": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "patched_finalist": [
+        1348619731010,
+        4294967332,
+        0,
+        1125899906842625,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "same_finalist": false,
+      "log_patched_over_baseline": {
+        "original_selected_over_default": -0.006684111862871018,
+        "confirmed_selected_over_default": -0.006684111862871018,
+        "confirmation_over_original": -0.0,
+        "default_graph_absolute_ms": 0.0038591506196157255
+      }
+    },
+    {
+      "block": 3,
+      "first_arm": "patched",
+      "capture_order": "default-first",
+      "baseline_finalist": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "patched_finalist": [
+        1348619731010,
+        4294967332,
+        0,
+        1125899906842625,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "same_finalist": false,
+      "log_patched_over_baseline": {
+        "original_selected_over_default": -0.014583377155889697,
+        "confirmed_selected_over_default": -0.014583377155889697,
+        "confirmation_over_original": -0.0,
+        "default_graph_absolute_ms": 0.0016187239469909187
+      }
+    },
+    {
+      "block": 4,
+      "first_arm": "baseline",
+      "capture_order": "default-first",
+      "baseline_finalist": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "patched_finalist": [
+        1348619731010,
+        4294967332,
+        0,
+        1125899906842625,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "same_finalist": false,
+      "log_patched_over_baseline": {
+        "original_selected_over_default": -0.014617588016552234,
+        "confirmed_selected_over_default": -0.014617588016552234,
+        "confirmation_over_original": -0.0,
+        "default_graph_absolute_ms": -0.0006952810750275873
+      }
+    },
+    {
+      "block": 5,
+      "first_arm": "patched",
+      "capture_order": "winner-first",
+      "baseline_finalist": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "patched_finalist": [
+        1348619731010,
+        4294967332,
+        0,
+        1125899906842625,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "same_finalist": false,
+      "log_patched_over_baseline": {
+        "original_selected_over_default": -0.006868550062681085,
+        "confirmed_selected_over_default": -0.006868550062681085,
+        "confirmation_over_original": -0.0,
+        "default_graph_absolute_ms": -0.002203238610668734
+      }
+    },
+    {
+      "block": 6,
+      "first_arm": "baseline",
+      "capture_order": "winner-first",
+      "baseline_finalist": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "patched_finalist": [
+        1348619731010,
+        4294967332,
+        0,
+        1125899906842625,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "same_finalist": false,
+      "log_patched_over_baseline": {
+        "original_selected_over_default": -0.006403866759201082,
+        "confirmed_selected_over_default": -0.006403866759201082,
+        "confirmation_over_original": -0.0,
+        "default_graph_absolute_ms": -0.012916976875455788
+      }
+    },
+    {
+      "block": 7,
+      "first_arm": "patched",
+      "capture_order": "default-first",
+      "baseline_finalist": [
+        343597383746,
+        4294967332,
+        0,
+        1970324836974594,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "patched_finalist": [
+        1348619731010,
+        4294967332,
+        0,
+        1125899906842625,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "same_finalist": false,
+      "log_patched_over_baseline": {
+        "original_selected_over_default": -0.015386726243314323,
+        "confirmed_selected_over_default": -0.015386726243314323,
+        "confirmation_over_original": -0.0,
+        "default_graph_absolute_ms": 0.0060297487767124736
+      }
+    }
+  ],
+  "strata": {
+    "first_arm": {
+      "baseline": {
+        "blocks": [
+          0,
+          2,
+          4,
+          6
+        ],
+        "geometric_mean_patched_over_baseline": {
+          "original_selected_over_default": 0.989617230868064,
+          "confirmed_selected_over_default": 0.989617230868064,
+          "confirmation_over_original": 1.0,
+          "default_graph_absolute_ms": 0.9971026402949271
+        }
+      },
+      "patched": {
+        "blocks": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "geometric_mean_patched_over_baseline": {
+          "original_selected_over_default": 0.9869287171284182,
+          "confirmed_selected_over_default": 0.9869287171284182,
+          "confirmation_over_original": 1.0,
+          "default_graph_absolute_ms": 1.0013332310245542
+        }
+      }
+    },
+    "capture_order": {
+      "default-first": {
+        "blocks": [
+          0,
+          3,
+          4,
+          7
+        ],
+        "geometric_mean_patched_over_baseline": {
+          "original_selected_over_default": 0.985449322056234,
+          "confirmed_selected_over_default": 0.985449322056234,
+          "confirmation_over_original": 1.0,
+          "default_graph_absolute_ms": 1.0012758227383045
+        }
+      },
+      "winner-first": {
+        "blocks": [
+          1,
+          2,
+          5,
+          6
+        ],
+        "geometric_mean_patched_over_baseline": {
+          "original_selected_over_default": 0.9911028829680014,
+          "confirmed_selected_over_default": 0.9911028829680014,
+          "confirmation_over_original": 1.0,
+          "default_graph_absolute_ms": 0.9971598093111904
+        }
+      }
+    }
+  },
+  "bootstrap_resamples": 100000,
+  "bootstrap_seed": 202610280100,
+  "inference_unit": "Eight complete paired blocks on one GPU/fixture; all within-process repetitions retained.",
+  "limits": [
+    "Original and hypothetical choices share post-confirmation graphs; this is not untouched startup or full-model serving.",
+    "Baseline and patched finalists can differ. Normalized scores compare the declared protocols, not one fixed kernel.",
+    "Absolute default graph timing is a context diagnostic, not an isolated candidate-selection effect.",
+    "Directional reversals and slower-choice counts use point estimates without significance thresholds or margins.",
+    "No historical/admission pooling, performance-sign exclusions, retries or adaptive sample expansion.",
+    "Exploratory intervals from eight pairs do not establish equivalence, universal safety or a serving speedup."
+  ],
+  "automatic_production_change_or_pr": false,
+  "comparable": true
+}

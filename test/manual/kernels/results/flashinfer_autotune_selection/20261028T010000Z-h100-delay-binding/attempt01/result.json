@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "status": "incomplete",
+  "attempt": "attempt01",
+  "source_commit": "b687aecf9e1a4e1dd0e7ae407b239b60759dfd8c",
+  "scope": "Baseline-only H100 ordering observations; no patched diagnostic or MLP comparison was executed.",
+  "completed_processes": {
+    "baseline_ordering": 1,
+    "patched_ordering": 0,
+    "mlp_admission": 0,
+    "mlp_timing": 0
+  },
+  "failure": {
+    "phase": "bootstrap",
+    "error": "RuntimeError('delay callable or profiler import differs from loaded source')",
+    "classification": "Research-harness code-identity guard false positive, reproduced independently on CPU.",
+    "cause": "Equal code objects compiled from exact source produced unequal marshal encodings. Marshal bytes are not a canonical semantic identity.",
+    "patched_runtime_diagnostics_executed": false,
+    "paired_ordering_gate_passed": false
+  },
+  "baseline_observations": {
+    "controlled_streams": [
+      {
+        "stream_kind": "default",
+        "forced_conflict": true,
+        "ordering_observed": false,
+        "reference_ms": 5.127007961273193,
+        "medians": {
+          "event_ms": 0.013248000293970108,
+          "host_ms": 0.01653,
+          "residual_sync_ms": 5.112085
+        }
+      },
+      {
+        "stream_kind": "nondefault",
+        "forced_conflict": true,
+        "ordering_observed": false,
+        "reference_ms": 5.126143932342529,
+        "medians": {
+          "event_ms": 0.011392000131309032,
+          "host_ms": 0.01545,
+          "residual_sync_ms": 5.111954
+        }
+      }
+    ],
+    "natural_streams": [
+      {
+        "stream_kind": "default",
+        "forced_conflict": false,
+        "ordering_observed": true,
+        "reference_ms": 5.127007961273193,
+        "medians": {
+          "event_ms": 5.127903938293457,
+          "host_ms": 5.133164,
+          "residual_sync_ms": 0.00949
+        }
+      },
+      {
+        "stream_kind": "nondefault",
+        "forced_conflict": false,
+        "ordering_observed": false,
+        "reference_ms": 5.126143932342529,
+        "medians": {
+          "event_ms": 0.011615999974310398,
+          "host_ms": 0.01565,
+          "residual_sync_ms": 5.112524
+        }
+      }
+    ],
+    "actual_profiler": {
+      "settings": {
+        "warmup": 3,
+        "repeat": 10,
+        "stream_delay_micro_secs": 5000,
+        "measurement_policy": null,
+        "use_cuda_graph": false,
+        "cold_l2": false
+      },
+      "forced_conflict": false,
+      "samples": 5,
+      "medians": {
+        "profiler_ms": 0.005382400006055832,
+        "host_ms": 0.16768,
+        "residual_sync_ms": 5.028234
+      },
+      "all_numerics_passed": true
+    }
+  },
+  "interpretation": [
+    "The baseline observed the intended forced-conflict negative control on both streams.",
+    "With natural ambient state, baseline default-stream ordering succeeded and nondefault-stream ordering failed in this process.",
+    "The actual-profiler probe left about 5 ms of device-wide residual synchronization work while profiling on the natural nondefault Torch stream. This is diagnostic evidence about the delay ordering, not an MLP ranking or serving-performance measurement."
+  ],
+  "limitations": [
+    "No patched diagnostic result exists, so this attempt does not qualify the proposed fix.",
+    "No admission, timing block, finalist confirmation, or MLP performance estimate exists.",
+    "Baseline graph replay was deliberately excluded from the negative control; patched graph replay did not execute.",
+    "The CPU reproduction used no GPU or native imports and cannot replace CUDA qualification."
+  ],
+  "raw_private_sha256": {
+    "ordering/baseline.json": "ebcac4c619ce9a866d8f10ddd24a893718fb981c3a6613701ec28b1973e98f1f",
+    "ordering/baseline.bootstrap.json": "3eb20c0d91375c3643e1588794d6b197d9fd3de9ceb6327179b46c0c9b1a250d",
+    "ordering/patched.bootstrap.json": "ea671ccf93db1599b9379b5528ab78d9e0ad1779bd8fb73eae9fbf2758c541e1",
+    "ordering/patched.log": "861d0e4384b1c026789a80e22acb3ed2ceba6ccf4c563a75383ff3227f2a2002",
+    "launch-ledger.json": "66ca86ee574ae0b1e6f16ab35ceb63da171a8444f93ae45ee9e92d0070b5c6f1",
+    "manifest.json": "66abc41ed9cfeb00af065dc321f7858965dbef6a53ac107cad41f6b783689829",
+    "source-snapshot.json": "991f9dee35e4928b50b46787a394dde5c43a0e505bc7cc9e982ef93d60c712ab"
+  },
+  "cpu_reproduction_sha256": "c8135fe2bb0b4bbdd9bf42924dcbe51a7c79c5c71576b1b5915a388f2e33ffba",
+  "summary_source_sha256": "5b9bb59a8dd9bbc8ddc57166b8ee43e9c245d770ad899d69a92a66a7358ee497",
+  "publication_difference_audit_sha256": "aae2e537c8e498b8f1c2d775815afbcc4e414e14ff848172139f70c92f313aa8"
+}

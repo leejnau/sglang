@@ -1,0 +1,91 @@
+{
+  "archive": "coordinator-evidence.tar.gz",
+  "sha256": "d580bd7ef89666c71bf4cf4c8213c337cbc292e425ea442eceef29a905079fe4",
+  "files": [
+    {
+      "path": "independent-review/attempt01-baseline-partial.json",
+      "size_bytes": 1648,
+      "sha256": "e782cc56787b6df9a1faad1f114be9701e55f9f5553bf07d130154ea3b099a60"
+    },
+    {
+      "path": "independent-review/audit_partial_baseline.py",
+      "size_bytes": 2481,
+      "sha256": "66aded50d26eed423296b2fdeaa03cc494c863f94c3a89187f52e14583f7a2f4"
+    },
+    {
+      "path": "independent-review/code-attestation-reproduction.json",
+      "size_bytes": 1543,
+      "sha256": "c8135fe2bb0b4bbdd9bf42924dcbe51a7c79c5c71576b1b5915a388f2e33ffba"
+    },
+    {
+      "path": "independent-review/reproduce_code_attestation.py",
+      "size_bytes": 3578,
+      "sha256": "1fb50d9b1601c77ea7e7eef3805da49922d1fd1067deead669127edd5db396a5"
+    },
+    {
+      "path": "independent-review/source-review.json",
+      "size_bytes": 3032,
+      "sha256": "351e335f4c5784ed0a2df0969c43c9dc7c4e4b302ee03ad65120882e226edf3e"
+    },
+    {
+      "path": "independent-review/source_review.py",
+      "size_bytes": 2463,
+      "sha256": "50f448f8019ee51798672c5b8380109bf0d05f042e7dd925d117592dd35a2315"
+    },
+    {
+      "path": "operational/evidence.tgz",
+      "size_bytes": 26110,
+      "sha256": "9fc5cd8e85f11ebe5e0c283b1f9d85a207ff2675ef1bed7d2de890935ad513c2"
+    },
+    {
+      "path": "operational/manifest.json",
+      "size_bytes": 13660,
+      "sha256": "712b6b6a9af4556ce3ed7ed756323e27e7ec1188911b7739d6b2f0d26135c49e"
+    },
+    {
+      "path": "operational/receipt.json",
+      "size_bytes": 231,
+      "sha256": "63638a75899d176be36fe3e6d2255c4f7e0431141277363454120ab6ee3fc6c0"
+    },
+    {
+      "path": "publication/preparation-controls.json",
+      "size_bytes": 1700,
+      "sha256": "155a62d2b19668c57467c3eaa0a417bb33f10d0b4e5dc6c650ecac827aa2206a"
+    },
+    {
+      "path": "publication/publication-policy.json",
+      "size_bytes": 827,
+      "sha256": "3640000af9e2630a69019db87aaa879301afa79a84ad80054dd752f641620615"
+    },
+    {
+      "path": "publication/tooling-provenance.json",
+      "size_bytes": 575,
+      "sha256": "73a0fa4940e06ff89f89c3909143fa791312bb30cdeae72ded789f95eedfc83b"
+    },
+    {
+      "path": "publication/tools/assemble_public.py",
+      "size_bytes": 6483,
+      "sha256": "c96c507702ab345cc4ac7bad36aef857788acda9982b54d3dae2faa01ab028a0"
+    },
+    {
+      "path": "publication/tools/check_publication.py",
+      "size_bytes": 6506,
+      "sha256": "f18d4fbbbbcab5ca38155388f5fe53303cb9f17b30bc62fec70e02d5f39d556a"
+    },
+    {
+      "path": "publication/tools/package_base.py",
+      "size_bytes": 13991,
+      "sha256": "7324863cb8598251d977dfdb71102621562ee828deb0ab50fdc1ad1cd97bd33c"
+    },
+    {
+      "path": "publication/tools/prepare_public.py",
+      "size_bytes": 2925,
+      "sha256": "095e543e5d283149f9007b5844e8c59613edab45555c708d5fccfc7c3316e1f1"
+    },
+    {
+      "path": "publication/tools/summarize_failed_attempt.py",
+      "size_bytes": 6442,
+      "sha256": "5b9bb59a8dd9bbc8ddc57166b8ee43e9c245d770ad899d69a92a66a7358ee497"
+    }
+  ]
+}

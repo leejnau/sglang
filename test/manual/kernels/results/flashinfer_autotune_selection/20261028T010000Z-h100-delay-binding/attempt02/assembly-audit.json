@@ -1,0 +1,111 @@
+{
+  "status": "passed",
+  "assembly_source_sha256": "c96c507702ab345cc4ac7bad36aef857788acda9982b54d3dae2faa01ab028a0",
+  "master_archive_sha256": "48bdd0e4891ae51fb2f8598b0313b358eb422526b2ebd5970ecf1a79ffa8badb",
+  "master_archive_size_bytes": 1790298,
+  "lossless_parts": 2,
+  "maximum_repository_file_bytes": 1400000,
+  "copied_reports": [
+    {
+      "path": "admission-analysis.json",
+      "source_sha256": "d3a5d0053ab978ec5d4e117a95ccf813c4057619e9462ef402e45247ee0c8cbe",
+      "source_size_bytes": 17716
+    },
+    {
+      "path": "package-audit.json",
+      "source_sha256": "3268074ebea58241cae28c75ae13c5db9173169ce570b29d01b8845ed0fdc321",
+      "source_size_bytes": 518
+    },
+    {
+      "path": "paired-analysis.json",
+      "source_sha256": "aed328fe487c68f21e4c38461dd47e141e675f708fe7366132a2b0ff51c0af7f",
+      "source_size_bytes": 124367
+    },
+    {
+      "path": "public-manifest.json",
+      "source_sha256": "1abd1d3b0b7ca12bbfc8825c5c96508c3cea601fdcfe498d38f688bbe710a4a4",
+      "source_size_bytes": 161362
+    },
+    {
+      "path": "public-scientific-reanalysis-audit.json",
+      "source_sha256": "2f89df306caa7fdcc54ab689a177ccba28ac2d78da2e46f20b399e5a332013eb",
+      "source_size_bytes": 15002
+    },
+    {
+      "path": "publication-audit.json",
+      "source_sha256": "9e23682ad77d4527baf5c4a0bbd8a07595c3770ae4ebabab4d5a0275e0f06ce1",
+      "source_size_bytes": 646
+    },
+    {
+      "path": "result.json",
+      "source_sha256": "967f6aab33aa20de79e179963d4deb7e7bc7d74891740fbd6929cf750dd58ad7",
+      "source_size_bytes": 32587
+    }
+  ],
+  "coordinator_members": 25,
+  "files": [
+    {
+      "path": "admission-analysis.json",
+      "size_bytes": 17716,
+      "sha256": "d3a5d0053ab978ec5d4e117a95ccf813c4057619e9462ef402e45247ee0c8cbe"
+    },
+    {
+      "path": "coordinator-evidence.json",
+      "size_bytes": 4626,
+      "sha256": "372066fe75ea91f6d076be3c7c6e6edd345e747ef96aa2a5cc22e418754b1bff"
+    },
+    {
+      "path": "coordinator-evidence.tar.gz",
+      "size_bytes": 78829,
+      "sha256": "ca45e7af6875e0acf6918c3e9ef1b9f2b9219d46f937672500d28661b9129317"
+    },
+    {
+      "path": "package-audit.json",
+      "size_bytes": 518,
+      "sha256": "3268074ebea58241cae28c75ae13c5db9173169ce570b29d01b8845ed0fdc321"
+    },
+    {
+      "path": "paired-analysis.json",
+      "size_bytes": 124367,
+      "sha256": "aed328fe487c68f21e4c38461dd47e141e675f708fe7366132a2b0ff51c0af7f"
+    },
+    {
+      "path": "public-manifest.json",
+      "size_bytes": 161362,
+      "sha256": "1abd1d3b0b7ca12bbfc8825c5c96508c3cea601fdcfe498d38f688bbe710a4a4"
+    },
+    {
+      "path": "public-scientific-reanalysis-audit.json",
+      "size_bytes": 15002,
+      "sha256": "2f89df306caa7fdcc54ab689a177ccba28ac2d78da2e46f20b399e5a332013eb"
+    },
+    {
+      "path": "publication-audit.json",
+      "size_bytes": 646,
+      "sha256": "9e23682ad77d4527baf5c4a0bbd8a07595c3770ae4ebabab4d5a0275e0f06ce1"
+    },
+    {
+      "path": "raw-public-parts.json",
+      "size_bytes": 599,
+      "sha256": "2dfc1d896ae3d379b5626381dc75b98e53dcfc59d020677ee4ef97a69320e51e"
+    },
+    {
+      "path": "raw-public.tar.gz.part-00",
+      "size_bytes": 1400000,
+      "sha256": "9dbd6c08d79a38c609b83d8effa9c9433834604b1ac9153c5ee666ad23e4f420"
+    },
+    {
+      "path": "raw-public.tar.gz.part-01",
+      "size_bytes": 390298,
+      "sha256": "03e01e82c83c9e37613ec411e62346ba73294df9bef68efc56b141940a808e61"
+    },
+    {
+      "path": "result.json",
+      "size_bytes": 32587,
+      "sha256": "967f6aab33aa20de79e179963d4deb7e7bc7d74891740fbd6929cf750dd58ad7"
+    }
+  ],
+  "limits": [
+    "Artifact assembly only; no scientific inference or timing selection. Final result summary and repository hooks are separate root-owned steps."
+  ]
+}

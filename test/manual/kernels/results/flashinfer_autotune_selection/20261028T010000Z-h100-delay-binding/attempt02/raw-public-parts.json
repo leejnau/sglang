@@ -1,0 +1,18 @@
+{
+  "format": "Concatenate parts in listed order to reconstruct the audited gzip tar archive.",
+  "reconstructed_name": "raw-public.tar.gz",
+  "sha256": "48bdd0e4891ae51fb2f8598b0313b358eb422526b2ebd5970ecf1a79ffa8badb",
+  "size_bytes": 1790298,
+  "parts": [
+    {
+      "path": "raw-public.tar.gz.part-00",
+      "size_bytes": 1400000,
+      "sha256": "9dbd6c08d79a38c609b83d8effa9c9433834604b1ac9153c5ee666ad23e4f420"
+    },
+    {
+      "path": "raw-public.tar.gz.part-01",
+      "size_bytes": 390298,
+      "sha256": "03e01e82c83c9e37613ec411e62346ba73294df9bef68efc56b141940a808e61"
+    }
+  ]
+}

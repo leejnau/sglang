@@ -1,0 +1,441 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "mode": "admission",
+  "inputs": {
+    "master_plan_sha256": "9dace904908d9024535d3373a9220a16ec72aa43d0343a3f55b14830f139c06b",
+    "master_schedule_sha256": "dcc46b3c967a4d4a3b3278b482397baaf5ca274d82c6e89197c4daf23917cb3d",
+    "analyzer_sha256": "f2d9bc249c59625a3fd31713740094f621cf8a0f74df0723af1d1528ce411131",
+    "manifest_sha256": "0c9a9432ed24786253e94de498f58ca2d945b690804fa0dff397651dfed601fc",
+    "ordering_gate_sha256": "66b23ae377015e150c17e47a55767e5eb384ff729df3c5076dce746fcef878a1",
+    "admission_launches_sha256": "d782e43648a7939c0bb341b285e17e56a5cbfb145b3db302868d687a973184b4",
+    "admission_provenance": {
+      "ordering/baseline.json": {
+        "result_sha256": "e544db6ee519dca0854e77e608efa6a2f25893997c9ca15adaf5c56be2deb7b4",
+        "bootstrap_sha256": "e02a1a2d6e8abd70f8cfd13ab20d5cf67e02f58d6ffef9f8252e38307a05afbe"
+      },
+      "ordering/patched.json": {
+        "result_sha256": "0c2b1c5007333cb7fbc77b3b8beb7266b101842512aa64438d7b14b5f265db22",
+        "bootstrap_sha256": "974eb10e75e666e366500cdc1c0241790f3be6d968f54a0bd6bacfe40caea2cd"
+      },
+      "baseline/admission-auto_synthetic.json": {
+        "result_sha256": "2e48f3ba7ffd4334ee3609c2970ffe885f40e56b4f07052372d05e3716f1a6e0",
+        "bootstrap_sha256": "78d4c9322ba6f3d994e603820fdda7fee66b705f6b57b3788a3cf16c1c74d9ba"
+      },
+      "patched/admission-auto_synthetic.json": {
+        "result_sha256": "df02d35c0d6b1597a4d71f91c86bef8a9a50818cfcb957ac8396555430670c76",
+        "bootstrap_sha256": "561ba3265c47f0a13ecc3682f34ac6a673311b103538b6326ecfbe54621b8072"
+      }
+    }
+  },
+  "execution_commit": "f22b1866c352d18ca5b3f162c90c9ba2d2d22a41",
+  "per_arm_integrity": {
+    "baseline": {
+      "status": "passed",
+      "mode": "admission",
+      "plan_sha256": "33444f5372ebcf5e9813ea32f914cb9729c7a465ff4b616dfa434b5fc0f196e8",
+      "schedule_sha256": "028d527022b448bd5bc95a8723a9f2ce92dd0d4bf713a611074676b102659543",
+      "historical_contract_sha256": "8518320ae4089c97861759b0145b6b12d99941c03001d38c5450d4940d44e4b9",
+      "worker_sha256": "a8532276afc70ae1b70e12eaf9fc722fa7b29ed6102407360dd93708a7789157",
+      "analyzer_sha256": "1fa9a5ea7312dc4fb3e5fb5766c95fc9c64b5ac9d91095a59a72655f3847542e",
+      "prior_analyzer_sha256": "b73acfc80a676ad24bb0358a6d66880531947f628783cba6fb1765c5154269ec",
+      "leaf_helpers_sha256": "cf72c74cf2e9c343e46af1b1b74a232a8b201de06dc2cd01bef6552f0981ce4f",
+      "distinct_container_ids": [
+        "7dbfc14ad06f759990e3d4a2504124810b11033ebdf161c0c0bb3337cb7a3bbf"
+      ],
+      "parent_confirmation_analyzer_sha256": "0369f0d952fc9f519c6a0d5511ab280afbe6065224b6a0d34db3f7fab0b74d98"
+    },
+    "patched": {
+      "status": "passed",
+      "mode": "admission",
+      "plan_sha256": "33444f5372ebcf5e9813ea32f914cb9729c7a465ff4b616dfa434b5fc0f196e8",
+      "schedule_sha256": "028d527022b448bd5bc95a8723a9f2ce92dd0d4bf713a611074676b102659543",
+      "historical_contract_sha256": "8518320ae4089c97861759b0145b6b12d99941c03001d38c5450d4940d44e4b9",
+      "worker_sha256": "a8532276afc70ae1b70e12eaf9fc722fa7b29ed6102407360dd93708a7789157",
+      "analyzer_sha256": "1fa9a5ea7312dc4fb3e5fb5766c95fc9c64b5ac9d91095a59a72655f3847542e",
+      "prior_analyzer_sha256": "b73acfc80a676ad24bb0358a6d66880531947f628783cba6fb1765c5154269ec",
+      "leaf_helpers_sha256": "cf72c74cf2e9c343e46af1b1b74a232a8b201de06dc2cd01bef6552f0981ce4f",
+      "distinct_container_ids": [
+        "402533f52f7342c7cce8f58dc10602995de13f3d60e829048ac5631f683a9b31"
+      ],
+      "parent_confirmation_analyzer_sha256": "0369f0d952fc9f519c6a0d5511ab280afbe6065224b6a0d34db3f7fab0b74d98"
+    }
+  },
+  "process_integrity": {
+    "baseline": [
+      {
+        "block": 0,
+        "pid_namespace_local": 1,
+        "result_sha256": "2e48f3ba7ffd4334ee3609c2970ffe885f40e56b4f07052372d05e3716f1a6e0",
+        "capture_order": "default-first",
+        "finalist": [
+          343597383746,
+          4294967332,
+          0,
+          1970324836974594,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        "finalist_profile_index": 75,
+        "original_role": "default",
+        "confirmed_role": "default",
+        "original_profiler_ratio": 1.0413699536683616,
+        "confirmation_log_ratio": 0.06728947542980543,
+        "confirmation_ratio": 1.0696050577484122,
+        "decision_sha256": "d9806b1243e14a15930b9fb32e97277fd138df763e817b477ab19f14718184f9",
+        "trace": {
+          "sha256": "5ec84d2cf4eff12561af71ef45403a110f482948b6ed9fad4bb1a98977a31fff",
+          "original_graphs": {
+            "winner": {
+              "cuda_graph_id": 5,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_40x64_128x16_4x2_h_bz_TNN",
+                  "grid": [
+                    8,
+                    14,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 229844,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "default": {
+              "cuda_graph_id": 2,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+                  "grid": [
+                    8,
+                    12,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 213460,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "winner_default_signatures_equal": false
+          },
+          "timing_inference": false
+        },
+        "confirmation_first_position_median_logs": {
+          "winner": 0.06709196541019263,
+          "default": 0.07107173690820848
+        }
+      }
+    ],
+    "patched": [
+      {
+        "block": 0,
+        "pid_namespace_local": 1,
+        "result_sha256": "df02d35c0d6b1597a4d71f91c86bef8a9a50818cfcb957ac8396555430670c76",
+        "capture_order": "default-first",
+        "finalist": [
+          1348619731010,
+          4294967332,
+          0,
+          1125899906842625,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        "finalist_profile_index": 80,
+        "original_role": "winner",
+        "confirmed_role": "winner",
+        "original_profiler_ratio": 0.9485662581232408,
+        "confirmation_log_ratio": -0.045167276500888504,
+        "confirmation_ratio": 0.9558375792938222,
+        "decision_sha256": "9ebc7dacc7a86ca849aa65bdf711ba43ffa63187cea5f64a48261bcdd1d5ca6f",
+        "trace": {
+          "sha256": "8004f4089129396cdfea1a42327f8a8e86a8dac93c5ba9bc066b46cca5063112",
+          "original_graphs": {
+            "winner": {
+              "cuda_graph_id": 5,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_64x40_128x16_4x1_v_bz_TNT",
+                  "grid": [
+                    4,
+                    16,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 229844,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "default": {
+              "cuda_graph_id": 2,
+              "graph_launches": 3,
+              "ordered_launch_signature": [
+                {
+                  "name": "_static_quant_fp8",
+                  "grid": [
+                    144,
+                    1,
+                    1
+                  ],
+                  "block": [
+                    256,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 32,
+                  "shared memory": 0,
+                  "device": 0
+                },
+                {
+                  "name": "nvjet_sm90_qqtst_64x32_128x16_4x2_h_bz_TNT",
+                  "grid": [
+                    8,
+                    12,
+                    1
+                  ],
+                  "block": [
+                    384,
+                    1,
+                    1
+                  ],
+                  "registers per thread": 168,
+                  "shared memory": 213460,
+                  "device": 0
+                }
+              ],
+              "kernel_events": 6
+            },
+            "winner_default_signatures_equal": false
+          },
+          "timing_inference": false
+        },
+        "confirmation_first_position_median_logs": {
+          "winner": -0.04791361020004299,
+          "default": -0.043503657359065265
+        }
+      }
+    ]
+  },
+  "ordering_gate": {
+    "schema_version": 1,
+    "status": "passed",
+    "upstream_head": "e6bcdebdefff9ad6dd635cb357ead72b0e7f9da6",
+    "arms": {
+      "baseline": {
+        "result_sha256": "e544db6ee519dca0854e77e608efa6a2f25893997c9ca15adaf5c56be2deb7b4",
+        "bootstrap_sha256": "e02a1a2d6e8abd70f8cfd13ab20d5cf67e02f58d6ffef9f8252e38307a05afbe",
+        "pid": 1,
+        "attestation": {
+          "arm": "baseline",
+          "upstream_head": "e6bcdebdefff9ad6dd635cb357ead72b0e7f9da6",
+          "wrapper_path": "/study/input/current/source/flashinfer/tllm_utils.py",
+          "wrapper_sha256": "5eaaa6773f5d7b5bc00de2183eef488f5b2497d7efc687ebf45f97d7f2fd3593",
+          "callable_matches_source": true,
+          "callable_comparison": {
+            "code_matches": true,
+            "filename_matches": true,
+            "line_table_matches": true,
+            "exception_table_matches": true,
+            "profiler_alias_matches": true
+          },
+          "profiler_alias_matches": true,
+          "native_identity_passthrough": true,
+          "native": {
+            "gemm": {
+              "library_path": "/study/runtime-attempt01/cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/gemm/gemm.so",
+              "library_sha256": "72690cacca4ce1d69ccaa6b9190475483d984bd58de0962d06c874c801c678d6"
+            },
+            "trtllm_utils": {
+              "library_path": "/study/runtime-attempt01/cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/trtllm_utils/trtllm_utils.so",
+              "library_sha256": "e442a689064fe3af4ab46510b2d5aaf3597b072949b84f13d14e9e53352109e4"
+            }
+          },
+          "torch_version": "2.14.1+cu130",
+          "tvm_ffi_version": "0.1.11",
+          "ffi_init": {
+            "path": "/opt/sglang/lib/python3.12/site-packages/tvm_ffi/__init__.py",
+            "sha256": "bdb390cbf41acf57ef4a21f27b868dc2f607f0009c302922e67a7da7e118cf15"
+          },
+          "ffi_stream_source": {
+            "path": "/opt/sglang/lib/python3.12/site-packages/tvm_ffi/stream.py",
+            "sha256": "586413f5558bd8682f31280743cf7fe6581a17b7e2eb270e19ffcceba12c2f0c"
+          },
+          "ffi_stream_function_sha256": "ada42f7bb736dc1784ba71d95938d0f3099f45d6aa7ebce6d5cece81d8da5b17",
+          "ffi_libraries": [
+            {
+              "path": "/opt/sglang/lib/python3.12/site-packages/tvm_ffi/core.abi3.so",
+              "sha256": "65d37902457e94d5d822e59738918f604648236389801891ca9d00dc5c224fec"
+            },
+            {
+              "path": "/opt/sglang/lib/python3.12/site-packages/tvm_ffi/lib/libtvm_ffi.so",
+              "sha256": "8cb7bdda84545ad7eb5294198bb02fe16930e47e4c3c6de67ab87cad19f6bb7e"
+            },
+            {
+              "path": "/opt/sglang/lib/python3.12/site-packages/tvm_ffi/lib/libtvm_ffi_testing.so",
+              "sha256": "83fac978636c8def292c45753a71f2d2225f993d593bfa408905844c6083f8ea"
+            }
+          ],
+          "device": "cuda:0",
+          "torch_stream": 0,
+          "ambient_ffi_stream": 0
+        }
+      },
+      "patched": {
+        "result_sha256": "0c2b1c5007333cb7fbc77b3b8beb7266b101842512aa64438d7b14b5f265db22",
+        "bootstrap_sha256": "974eb10e75e666e366500cdc1c0241790f3be6d968f54a0bd6bacfe40caea2cd",
+        "pid": 1,
+        "attestation": {
+          "arm": "patched",
+          "upstream_head": "e6bcdebdefff9ad6dd635cb357ead72b0e7f9da6",
+          "wrapper_path": "/study/input/current/source/flashinfer/tllm_utils.py",
+          "wrapper_sha256": "4a41c26b8dc5537707ae292c75d6069e59fae73ed881f73d083c15b5a0eb2722",
+          "callable_matches_source": true,
+          "callable_comparison": {
+            "code_matches": true,
+            "filename_matches": true,
+            "line_table_matches": true,
+            "exception_table_matches": true,
+            "profiler_alias_matches": true
+          },
+          "profiler_alias_matches": true,
+          "native_identity_passthrough": true,
+          "native": {
+            "gemm": {
+              "library_path": "/study/runtime-attempt01/cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/gemm/gemm.so",
+              "library_sha256": "72690cacca4ce1d69ccaa6b9190475483d984bd58de0962d06c874c801c678d6"
+            },
+            "trtllm_utils": {
+              "library_path": "/study/runtime-attempt01/cache/current/.cache/flashinfer/0.0.0+unknown/90a/cached_ops/trtllm_utils/trtllm_utils.so",
+              "library_sha256": "e442a689064fe3af4ab46510b2d5aaf3597b072949b84f13d14e9e53352109e4"
+            }
+          },
+          "torch_version": "2.14.1+cu130",
+          "tvm_ffi_version": "0.1.11",
+          "ffi_init": {
+            "path": "/opt/sglang/lib/python3.12/site-packages/tvm_ffi/__init__.py",
+            "sha256": "bdb390cbf41acf57ef4a21f27b868dc2f607f0009c302922e67a7da7e118cf15"
+          },
+          "ffi_stream_source": {
+            "path": "/opt/sglang/lib/python3.12/site-packages/tvm_ffi/stream.py",
+            "sha256": "586413f5558bd8682f31280743cf7fe6581a17b7e2eb270e19ffcceba12c2f0c"
+          },
+          "ffi_stream_function_sha256": "ada42f7bb736dc1784ba71d95938d0f3099f45d6aa7ebce6d5cece81d8da5b17",
+          "ffi_libraries": [
+            {
+              "path": "/opt/sglang/lib/python3.12/site-packages/tvm_ffi/core.abi3.so",
+              "sha256": "65d37902457e94d5d822e59738918f604648236389801891ca9d00dc5c224fec"
+            },
+            {
+              "path": "/opt/sglang/lib/python3.12/site-packages/tvm_ffi/lib/libtvm_ffi.so",
+              "sha256": "8cb7bdda84545ad7eb5294198bb02fe16930e47e4c3c6de67ab87cad19f6bb7e"
+            },
+            {
+              "path": "/opt/sglang/lib/python3.12/site-packages/tvm_ffi/lib/libtvm_ffi_testing.so",
+              "sha256": "83fac978636c8def292c45753a71f2d2225f993d593bfa408905844c6083f8ea"
+            }
+          ],
+          "device": "cuda:0",
+          "torch_stream": 0,
+          "ambient_ffi_stream": 0
+        }
+      }
+    },
+    "limits": "Forced conflict reproduces susceptibility; natural observations do not retroactively identify the historical binding or prove the ranking cause."
+  },
+  "provenance": {
+    "ordering/baseline.json": {
+      "result_sha256": "e544db6ee519dca0854e77e608efa6a2f25893997c9ca15adaf5c56be2deb7b4",
+      "bootstrap_sha256": "e02a1a2d6e8abd70f8cfd13ab20d5cf67e02f58d6ffef9f8252e38307a05afbe"
+    },
+    "ordering/patched.json": {
+      "result_sha256": "0c2b1c5007333cb7fbc77b3b8beb7266b101842512aa64438d7b14b5f265db22",
+      "bootstrap_sha256": "974eb10e75e666e366500cdc1c0241790f3be6d968f54a0bd6bacfe40caea2cd"
+    },
+    "baseline/admission-auto_synthetic.json": {
+      "result_sha256": "2e48f3ba7ffd4334ee3609c2970ffe885f40e56b4f07052372d05e3716f1a6e0",
+      "bootstrap_sha256": "78d4c9322ba6f3d994e603820fdda7fee66b705f6b57b3788a3cf16c1c74d9ba"
+    },
+    "patched/admission-auto_synthetic.json": {
+      "result_sha256": "df02d35c0d6b1597a4d71f91c86bef8a9a50818cfcb957ac8396555430670c76",
+      "bootstrap_sha256": "561ba3265c47f0a13ecc3682f34ac6a673311b103538b6326ecfbe54621b8072"
+    }
+  },
+  "performance_inference": false,
+  "primary_metric": null,
+  "comparable": false
+}

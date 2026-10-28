@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "audit_source_sha256": "f18d4fbbbbcab5ca38155388f5fe53303cb9f17b30bc62fec70e02d5f39d556a",
+  "private_archive_sha256": "5918848dc630e5419cbcc1f11cb205d739576b45f91657c37742471d71ec1407",
+  "public_archive_sha256": "48bdd0e4891ae51fb2f8598b0313b358eb422526b2ebd5970ecf1a79ffa8badb",
+  "original_files": 277,
+  "public_members": 244,
+  "byte_exact_files": 220,
+  "derived_bootstraps": 23,
+  "omitted_inventory_entries": 138,
+  "indexed_private_exclusions": 34,
+  "scientific_fields_modified": 0,
+  "limitations": [
+    "Publication accounting and exact-difference verification only; no scientific reinterpretation."
+  ]
+}

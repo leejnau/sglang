@@ -1,0 +1,247 @@
+{
+  "status": "passed",
+  "execution_commit": "f22b1866c352d18ca5b3f162c90c9ba2d2d22a41",
+  "reproduction_source_sha256": "bdc78989534afd708ed95af5c3806e2313735ca949d90ad1b510e0afcd839a4f",
+  "frozen_analyzer_sha256": "f2d9bc249c59625a3fd31713740094f621cf8a0f74df0723af1d1528ce411131",
+  "public_archive_sha256": "48bdd0e4891ae51fb2f8598b0313b358eb422526b2ebd5970ecf1a79ffa8badb",
+  "public_manifest_sha256": "1abd1d3b0b7ca12bbfc8825c5c96508c3cea601fdcfe498d38f688bbe710a4a4",
+  "private_archive_sha256": "5918848dc630e5419cbcc1f11cb205d739576b45f91657c37742471d71ec1407",
+  "original_analysis_sha256": "aed328fe487c68f21e4c38461dd47e141e675f708fe7366132a2b0ff51c0af7f",
+  "scientific_reanalysis_sha256": "c22afcd8231b4e6c7fcc7cd2eca4e6b90f1d9f65a59bf413aac68724b4df2cdb",
+  "ordering_observations_revalidated": true,
+  "launch_and_original_cache_accounting_revalidated": true,
+  "per_arm_scientific_validation": {
+    "admission.baseline": {
+      "status": "passed",
+      "mode": "admission",
+      "plan_sha256": "33444f5372ebcf5e9813ea32f914cb9729c7a465ff4b616dfa434b5fc0f196e8",
+      "schedule_sha256": "028d527022b448bd5bc95a8723a9f2ce92dd0d4bf713a611074676b102659543",
+      "historical_contract_sha256": "8518320ae4089c97861759b0145b6b12d99941c03001d38c5450d4940d44e4b9",
+      "worker_sha256": "a8532276afc70ae1b70e12eaf9fc722fa7b29ed6102407360dd93708a7789157",
+      "analyzer_sha256": "1fa9a5ea7312dc4fb3e5fb5766c95fc9c64b5ac9d91095a59a72655f3847542e",
+      "prior_analyzer_sha256": "b73acfc80a676ad24bb0358a6d66880531947f628783cba6fb1765c5154269ec",
+      "leaf_helpers_sha256": "cf72c74cf2e9c343e46af1b1b74a232a8b201de06dc2cd01bef6552f0981ce4f",
+      "distinct_container_ids": [
+        "7dbfc14ad06f759990e3d4a2504124810b11033ebdf161c0c0bb3337cb7a3bbf"
+      ],
+      "parent_confirmation_analyzer_sha256": "0369f0d952fc9f519c6a0d5511ab280afbe6065224b6a0d34db3f7fab0b74d98"
+    },
+    "admission.patched": {
+      "status": "passed",
+      "mode": "admission",
+      "plan_sha256": "33444f5372ebcf5e9813ea32f914cb9729c7a465ff4b616dfa434b5fc0f196e8",
+      "schedule_sha256": "028d527022b448bd5bc95a8723a9f2ce92dd0d4bf713a611074676b102659543",
+      "historical_contract_sha256": "8518320ae4089c97861759b0145b6b12d99941c03001d38c5450d4940d44e4b9",
+      "worker_sha256": "a8532276afc70ae1b70e12eaf9fc722fa7b29ed6102407360dd93708a7789157",
+      "analyzer_sha256": "1fa9a5ea7312dc4fb3e5fb5766c95fc9c64b5ac9d91095a59a72655f3847542e",
+      "prior_analyzer_sha256": "b73acfc80a676ad24bb0358a6d66880531947f628783cba6fb1765c5154269ec",
+      "leaf_helpers_sha256": "cf72c74cf2e9c343e46af1b1b74a232a8b201de06dc2cd01bef6552f0981ce4f",
+      "distinct_container_ids": [
+        "402533f52f7342c7cce8f58dc10602995de13f3d60e829048ac5631f683a9b31"
+      ],
+      "parent_confirmation_analyzer_sha256": "0369f0d952fc9f519c6a0d5511ab280afbe6065224b6a0d34db3f7fab0b74d98"
+    },
+    "timing.baseline": {
+      "status": "passed",
+      "mode": "timing",
+      "plan_sha256": "33444f5372ebcf5e9813ea32f914cb9729c7a465ff4b616dfa434b5fc0f196e8",
+      "schedule_sha256": "028d527022b448bd5bc95a8723a9f2ce92dd0d4bf713a611074676b102659543",
+      "historical_contract_sha256": "8518320ae4089c97861759b0145b6b12d99941c03001d38c5450d4940d44e4b9",
+      "worker_sha256": "a8532276afc70ae1b70e12eaf9fc722fa7b29ed6102407360dd93708a7789157",
+      "analyzer_sha256": "1fa9a5ea7312dc4fb3e5fb5766c95fc9c64b5ac9d91095a59a72655f3847542e",
+      "prior_analyzer_sha256": "b73acfc80a676ad24bb0358a6d66880531947f628783cba6fb1765c5154269ec",
+      "leaf_helpers_sha256": "cf72c74cf2e9c343e46af1b1b74a232a8b201de06dc2cd01bef6552f0981ce4f",
+      "distinct_container_ids": [
+        "10e44199e8f46622680b8a00ea1401d06b99daa28e2bebed32ea2a46eb3363f7",
+        "5d79dd6abaebe1801c2ff405d04fffca7f89913baccf3d2c0a3ca5ff35d0e56d",
+        "6d63449f30c5513e9614660de19bdbbc480ab3eb5d728742441808ae905dda67",
+        "8dc789b26a76d4847530b82d1336fca76c18695d619b1b74a87abf1a1ef7da50",
+        "540ed39d7dc79451aa5e3bb7e4a0c0b707a0f41f81cd1cebbf48e50d5b46fc16",
+        "e2c73df79b2e7a10cd5e3c4c1854280a0aed89a36fce8a576d6c862fc4152ed4",
+        "3b254e3f7882a8b3c5966abd0a8a803b0cfa50cf14e9a31cce6f290d4593b761",
+        "be564bb20e83a530e66ece92a47723676d90c479ee4d072e3bead4962cf4cb50",
+        "7dbfc14ad06f759990e3d4a2504124810b11033ebdf161c0c0bb3337cb7a3bbf"
+      ],
+      "parent_confirmation_analyzer_sha256": "0369f0d952fc9f519c6a0d5511ab280afbe6065224b6a0d34db3f7fab0b74d98"
+    },
+    "timing.patched": {
+      "status": "passed",
+      "mode": "timing",
+      "plan_sha256": "33444f5372ebcf5e9813ea32f914cb9729c7a465ff4b616dfa434b5fc0f196e8",
+      "schedule_sha256": "028d527022b448bd5bc95a8723a9f2ce92dd0d4bf713a611074676b102659543",
+      "historical_contract_sha256": "8518320ae4089c97861759b0145b6b12d99941c03001d38c5450d4940d44e4b9",
+      "worker_sha256": "a8532276afc70ae1b70e12eaf9fc722fa7b29ed6102407360dd93708a7789157",
+      "analyzer_sha256": "1fa9a5ea7312dc4fb3e5fb5766c95fc9c64b5ac9d91095a59a72655f3847542e",
+      "prior_analyzer_sha256": "b73acfc80a676ad24bb0358a6d66880531947f628783cba6fb1765c5154269ec",
+      "leaf_helpers_sha256": "cf72c74cf2e9c343e46af1b1b74a232a8b201de06dc2cd01bef6552f0981ce4f",
+      "distinct_container_ids": [
+        "cea5f570adeb6b98f811ed6931126576d3d123feb749b7afb429ead4bc36a3b8",
+        "f12f866caca955887997fc3dd1d4a578ed17c1aee082104c16cf9eef24571148",
+        "69a4e4b3274091f8d3c731f29ace91936529fc6f0a6293835992350269c336d4",
+        "5f20afda10fe3a85979d92ad284a4ded9a31787ca2ca04b1298e007975d94d66",
+        "5ac79c49a09555649a365e396c511b6cc358a74f6e68f9cb09c1c665ee125367",
+        "4bc84f25ea5b48ca5e1e9d2287f89681d227c43d2d3e1df1afb11f1012f0c57b",
+        "463c50de76436c4ccf81b39dea0834ee09601501279bc3feed6fd5d244beef53",
+        "dadeb04a9625910ea6850a6fa4845ad10ccd1c3eb97ac542ee55795609e033fc",
+        "402533f52f7342c7cce8f58dc10602995de13f3d60e829048ac5631f683a9b31"
+      ],
+      "parent_confirmation_analyzer_sha256": "0369f0d952fc9f519c6a0d5511ab280afbe6065224b6a0d34db3f7fab0b74d98"
+    }
+  },
+  "scientific_fields_compared": [
+    "automatic_production_change_or_pr",
+    "bootstrap_resamples",
+    "bootstrap_seed",
+    "cold_startup_and_confirmation_host_costs",
+    "counts",
+    "inference_unit",
+    "limits",
+    "metrics",
+    "paired_rows",
+    "process_rows",
+    "strata"
+  ],
+  "all_scientific_fields_exactly_equal": false,
+  "all_aggregate_count_and_interval_fields_exactly_equal": true,
+  "scientific_values_equal_with_declared_platform_rounding": true,
+  "one_ulp_diagnostic_differences": [
+    {
+      "path": [
+        "process_rows",
+        "baseline",
+        3,
+        "graph_log_ratios",
+        20
+      ],
+      "original": 0.06682511111349981,
+      "reproduced": 0.06682511111349983,
+      "original_hex": "0x1.11b7352c8b75cp-4",
+      "reproduced_hex": "0x1.11b7352c8b75dp-4",
+      "difference_ulps": 1
+    },
+    {
+      "path": [
+        "process_rows",
+        "baseline",
+        4,
+        "graph_log_ratios",
+        14
+      ],
+      "original": 0.08048914916268551,
+      "reproduced": 0.08048914916268553,
+      "original_hex": "0x1.49aefd7562b6cp-4",
+      "reproduced_hex": "0x1.49aefd7562b6dp-4",
+      "difference_ulps": 1
+    }
+  ],
+  "raw_records_rewritten": 0,
+  "bootstrap_identity_mapping": {
+    "ordering/baseline.bootstrap.json": {
+      "original_sha256": "e02a1a2d6e8abd70f8cfd13ab20d5cf67e02f58d6ffef9f8252e38307a05afbe",
+      "public_sha256": "1d70d73ce5cbdc0e04f498267cfbcffc358511eb4444dfcb7a060fe7cae082e7",
+      "scope": "Bootstrap inventory-only publication derivative; no record or hash field rewritten."
+    },
+    "ordering/patched.bootstrap.json": {
+      "original_sha256": "974eb10e75e666e366500cdc1c0241790f3be6d968f54a0bd6bacfe40caea2cd",
+      "public_sha256": "46bb9ba9c56ff08eece2d3fe8cb511f249a4b0988d4667b01cf873b4dfb3528e",
+      "scope": "Bootstrap inventory-only publication derivative; no record or hash field rewritten."
+    },
+    "baseline/admission-auto_synthetic.bootstrap.json": {
+      "original_sha256": "78d4c9322ba6f3d994e603820fdda7fee66b705f6b57b3788a3cf16c1c74d9ba",
+      "public_sha256": "297dbb1b29abadeb3feef52c6b87aa433a4989c0df59c62581763af43f84d8f2",
+      "scope": "Bootstrap inventory-only publication derivative; no record or hash field rewritten."
+    },
+    "patched/admission-auto_synthetic.bootstrap.json": {
+      "original_sha256": "561ba3265c47f0a13ecc3682f34ac6a673311b103538b6326ecfbe54621b8072",
+      "public_sha256": "17aa53f41e3d7bb8ca10ae64a1656d1ce80ca7bc07a76805a10bb179e5af9436",
+      "scope": "Bootstrap inventory-only publication derivative; no record or hash field rewritten."
+    },
+    "baseline/block0-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "e849b5c21b769f36b31d23b2c16a3801a9490562895a8af2ceabaa4ede208d2d",
+      "public_sha256": "59d5949904c5e92ac96bb0ad59d5257365b1b97fb3e04bddc152e42edc757bae",
+      "scope": "Bootstrap inventory-only publication derivative; no record or hash field rewritten."
+    },
+    "patched/block0-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "0d60d3bfbd8d876e68ee75c8241db922161bf33c0bd7ea52bcf7005cdafd42cd",
+      "public_sha256": "14485a37c8cd2bd36d9126017c1606f52af0f8fe94be3fadf0683ff56d00601b",
+      "scope": "Bootstrap inventory-only publication derivative; no record or hash field rewritten."
+    },
+    "patched/block1-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "148262a91d78998f4962c25424c34a8139916b3da0082807dcdf0873f945c492",
+      "public_sha256": "82446e4a9371ebcda27eade43d36dd537f7faf0b9f92f5696099b43f7c31cee3",
+      "scope": "Bootstrap inventory-only publication derivative; no record or hash field rewritten."
+    },
+    "baseline/block1-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "5b575cb652b13619734b915e151c30856a1ec3f8f317efd7c85eb15a9988902b",
+      "public_sha256": "df5a40a75a8e3ecda31f1587763f1dfaf50805ad85a690f50c25d8d43e6fe409",
+      "scope": "Bootstrap inventory-only publication derivative; no record or hash field rewritten."
+    },
+    "baseline/block2-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "d7e3cbc8d729797104256e09e1abbb9ee77186facb6ed8a4660f9b2c55904fd8",
+      "public_sha256": "b3f4ddf4b93764e07a2151519c519513dc1b51e9a3d4c4e8d07ee472feef8f87",
+      "scope": "Bootstrap inventory-only publication derivative; no record or hash field rewritten."
+    },
+    "patched/block2-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "c129b5f3b77f1bfd4b89ae76450f1d3d057644650e9b584f8d7b36736f6ae964",
+      "public_sha256": "d0668da55939f9c60c6b2380d7c779305ce2d72bedbe75cbcdc01ebcfddab17a",
+      "scope": "Bootstrap inventory-only publication derivative; no record or hash field rewritten."
+    },
+    "patched/block3-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "8fb5f15296ed6173e50b6520a64766bd256501834f2700a6527216e67c92e7cc",
+      "public_sha256": "a06236cf97abdf69b11688ceee2364a3ca6b4221a02bd684f29b1a762a9b4e50",
+      "scope": "Bootstrap inventory-only publication derivative; no record or hash field rewritten."
+    },
+    "baseline/block3-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "4f5767171c27af89f45bc2394ef661f5f12f46e8b6dc518d878a7f228636bb96",
+      "public_sha256": "2961d44e005d0b825a584991d5653709bad89d51f5b9702076ce3c892d7ddd32",
+      "scope": "Bootstrap inventory-only publication derivative; no record or hash field rewritten."
+    },
+    "baseline/block4-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "29462827920088955f8eec4441ce305c80b938adaa4e02ca3486a15c633d70f0",
+      "public_sha256": "3bf3f76bd2972e1bb6dc60c134398a370588c1ae0b3f360fa852d4ee2e4ae7e9",
+      "scope": "Bootstrap inventory-only publication derivative; no record or hash field rewritten."
+    },
+    "patched/block4-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "d8662f3ba29e6a7c9f2b23d4c56da228d21993e49c3edc9486cb1f7817d86cb1",
+      "public_sha256": "d64423176589869049e8af81e3efbb2bddedf7000b0f261c299aa0a001fd581e",
+      "scope": "Bootstrap inventory-only publication derivative; no record or hash field rewritten."
+    },
+    "patched/block5-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "523bace647ceb04bad2aa85af3f551a688e8ba7dfa112a978e9eb4150ba78dac",
+      "public_sha256": "702d24dc80ddbb2612872cf22ba6116b3863dda24cf701544846979575b64c89",
+      "scope": "Bootstrap inventory-only publication derivative; no record or hash field rewritten."
+    },
+    "baseline/block5-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "e02712f982949041cc3c034206a5db5f88d92b9c22ef8b0355491843f19d3737",
+      "public_sha256": "17e52c18fa1bcad8cfd16c7e450e675e7171de9839d17361f6bc1fd3da9ea9d2",
+      "scope": "Bootstrap inventory-only publication derivative; no record or hash field rewritten."
+    },
+    "baseline/block6-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "a67af143dd0d8c02e8f28fcb00c1cb12788430e687e61ae469790853629d1942",
+      "public_sha256": "18a493e8b8c4b245b0cff1fc04f503cafbbd8e99d1b929fadcd9251bbc99da48",
+      "scope": "Bootstrap inventory-only publication derivative; no record or hash field rewritten."
+    },
+    "patched/block6-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "0cdef4531d460199fca7b2793a1d1c3ca0f3078e9136c3f34d5bbbfcc21310c6",
+      "public_sha256": "78227a3ab46c57f3dac4c6c6e66f6375adca7fbdd6ca4d843f18ef74c91680da",
+      "scope": "Bootstrap inventory-only publication derivative; no record or hash field rewritten."
+    },
+    "patched/block7-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "c5f75fbbbf286b8d2d52724ebc854e6f189f496fe4ec84d96fb579c70d69c335",
+      "public_sha256": "8e956ae191b1b966186efae255cf0ad75c292bea303384d6a31679ea0ff26eb6",
+      "scope": "Bootstrap inventory-only publication derivative; no record or hash field rewritten."
+    },
+    "baseline/block7-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "0d9cf5ab42269bac0db9fd7b59c8632fa31d05c962f238c7420e80f0f1670f4f",
+      "public_sha256": "673109ecf727042530c8d89d112abbee19dee89de8d7d90f3565003fb2ea06cf",
+      "scope": "Bootstrap inventory-only publication derivative; no record or hash field rewritten."
+    }
+  },
+  "private_outer_integrity_revalidated": false,
+  "limits": [
+    "This reanalysis excludes private full-source/native payload checks, whose exact original audit and archive hashes remain recorded.",
+    "Bootstrap identity mapping is restricted to verified inventory-only derivatives; original hash references and all scientific records remain byte-exact.",
+    "Two identified per-window logarithm leaves may differ by one ULP across platform math libraries. All other values, including every aggregate, count and interval, must compare exactly.",
+    "Reproducing a fixed finite cohort does not add observations or establish a broader serving-performance result."
+  ]
+}
