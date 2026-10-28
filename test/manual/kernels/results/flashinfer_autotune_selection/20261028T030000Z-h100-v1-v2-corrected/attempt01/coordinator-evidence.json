@@ -1,0 +1,241 @@
+{
+  "archive": "coordinator-evidence.tar.gz",
+  "sha256": "ff27a995cc3a881333a8903112b9c0e23908dcf22e91f16132b8b0270a758723",
+  "files": [
+    {
+      "path": "cpu-controls/analyzer-controls.json",
+      "size_bytes": 2731,
+      "sha256": "9bf7b3d7b6819a3c327459e593edd28252ab916fa81a22b9d80a30e86058ea24"
+    },
+    {
+      "path": "cpu-controls/worker-controls.json",
+      "size_bytes": 2062,
+      "sha256": "0fb3fe6aaaa054cc828514e2ae1bb941a962940630de3ee8892d4951d924be27"
+    },
+    {
+      "path": "independent-review/audit_admission_raw.py",
+      "size_bytes": 3549,
+      "sha256": "341e9c13a5dcfd4cfa82d81568e54c658a399984b6ebe62b00fe9e171150dbb0"
+    },
+    {
+      "path": "independent-review/audit_final_integrity.py",
+      "size_bytes": 5293,
+      "sha256": "86b2b6090cc76c1dabe45bdf6f486b0d6ad9a9767c4b09acb469d949d7efdf72"
+    },
+    {
+      "path": "independent-review/audit_fixed_ordering.py",
+      "size_bytes": 8162,
+      "sha256": "ffdae7dc29a0a824e4a87269d91356062c67fb4b49d9ba619a9d6268005393ec"
+    },
+    {
+      "path": "independent-review/audit_matched_raw.py",
+      "size_bytes": 14458,
+      "sha256": "e469661a1c21394bfa03d2c0f939d3a0f444e2655f27cb52e020296c35360651"
+    },
+    {
+      "path": "independent-review/cold-admission-expanded-review.json",
+      "size_bytes": 4718,
+      "sha256": "e0a65c023945f246342078180cc1d6170df8d01cfe9f822ee6fcc6f969e8db16"
+    },
+    {
+      "path": "independent-review/compare_final_analysis.py",
+      "size_bytes": 5987,
+      "sha256": "2bbf28f35597da867147d283824ce0957fe3062a0915a1a2937899854e773976"
+    },
+    {
+      "path": "independent-review/final-comparison-review.json",
+      "size_bytes": 1531,
+      "sha256": "8ec3a0d24a0a89d82994e840cb33db7c0817d27a50ae08f40835b54fd3d9dc55"
+    },
+    {
+      "path": "independent-review/final-integrity-review.json",
+      "size_bytes": 578,
+      "sha256": "b7f21886b901455cc02235996f29d33fafebcef555f7a186575c1c349bf2c128"
+    },
+    {
+      "path": "independent-review/final-mlp-review.json",
+      "size_bytes": 16231,
+      "sha256": "91139b823789f7355b17e006736f3fbe74b1ce4632c971fda659288525d91a76"
+    },
+    {
+      "path": "independent-review/final-ordering-review.json",
+      "size_bytes": 2331,
+      "sha256": "d0346dd4b7a09006839144077e6ebb5c462eef93f03ac3bad5a6c63bf26fd592"
+    },
+    {
+      "path": "independent-review/final-summary-review.json",
+      "size_bytes": 1548,
+      "sha256": "379e13fa8e9944e51277a10a49c37bbc46f2e1ff18406ccd3a8e117e4ef3c75a"
+    },
+    {
+      "path": "independent-review/floating-point-comparison.json",
+      "size_bytes": 448,
+      "sha256": "52cb473d53ddf2a8655beedc7dd3fa05a436363e644fe69ead38e3e137e57836"
+    },
+    {
+      "path": "independent-review/frozen-launch-review.json",
+      "size_bytes": 2064,
+      "sha256": "8105a7186e4ee66d4d88c94513cca022b9ff572783ba584460cf61b80dea4bf4"
+    },
+    {
+      "path": "independent-review/interpretation-review.json",
+      "size_bytes": 4097,
+      "sha256": "8beb0ce047d9f9890a24e8c008a06ce0558bed358539d1d54cb6cd521f8e3287"
+    },
+    {
+      "path": "independent-review/ordering-provenance-review.json",
+      "size_bytes": 3177,
+      "sha256": "6d443a15dbb3cc2fb7d509b227b1ebea490335c65f7755ebfdc5d6d98de165d7"
+    },
+    {
+      "path": "independent-review/ordering-review.json",
+      "size_bytes": 2335,
+      "sha256": "8dca67176ca002b9f43ee698d92159d6baa08a0673206b3a3050ff11d35e6f02"
+    },
+    {
+      "path": "independent-review/source-design-review.json",
+      "size_bytes": 2067,
+      "sha256": "de9e01a11a600afe28b5626cc73b6ccccd12ec4c8971409ab1b9a47f68eb2663"
+    },
+    {
+      "path": "independent-review/warm-admission-review.json",
+      "size_bytes": 9187,
+      "sha256": "11f265ed6359236fc38928cf0617ccc12c6bfdfb06d13543dd7257fad2d1f7e9"
+    },
+    {
+      "path": "operations/attempt01-operational-evidence.tgz",
+      "size_bytes": 47645,
+      "sha256": "b7f5cea4d75f91360e6d65bdb07b6dedf3207d22869cc64c7e108187c0d4c2b1"
+    },
+    {
+      "path": "operations/attempt01-operational-manifest.json",
+      "size_bytes": 34865,
+      "sha256": "a80a84080069c48b92fdf0f57fee11524d68beb0de6e6cfbe5ec891b14835aa3"
+    },
+    {
+      "path": "operations/attempt01-operational-receipt.json",
+      "size_bytes": 321,
+      "sha256": "bd4f69597338f556d31b86ff46ca09cfc426f9516d0c1a5c1674a4b7130386c3"
+    },
+    {
+      "path": "publication/assemble_completed.py",
+      "size_bytes": 3899,
+      "sha256": "3b086bc8486b2f8f6aa74732e38db7668cc7812551234c2e8e8bf7fef95578e9"
+    },
+    {
+      "path": "publication/assemble_public.py",
+      "size_bytes": 6483,
+      "sha256": "c96c507702ab345cc4ac7bad36aef857788acda9982b54d3dae2faa01ab028a0"
+    },
+    {
+      "path": "publication/assembly-revision.json",
+      "size_bytes": 608,
+      "sha256": "6595df81d244bfb1e5f1254339e805c2c2594909be1f833efd4c4a437ee405cd"
+    },
+    {
+      "path": "publication/bootstrap-rounding-python312.json",
+      "size_bytes": 4623,
+      "sha256": "000e8c592a2368b8173d006a02f189cf4fb7497eeaaac1c64bea2df024560154"
+    },
+    {
+      "path": "publication/bootstrap-rounding-python314.json",
+      "size_bytes": 4651,
+      "sha256": "7bff67bd122b4ced600ba319351e81635402d3c6e255f9237f43e95cdc82702d"
+    },
+    {
+      "path": "publication/check_publication.py",
+      "size_bytes": 6506,
+      "sha256": "f18d4fbbbbcab5ca38155388f5fe53303cb9f17b30bc62fec70e02d5f39d556a"
+    },
+    {
+      "path": "publication/check_reproduction_controls.py",
+      "size_bytes": 3479,
+      "sha256": "9778e423a7379b5e66aa6841c443e5a8849f31c406a9a27c06b92d33f0d3f0dc"
+    },
+    {
+      "path": "publication/final-public-reanalysis-failure.json",
+      "size_bytes": 411,
+      "sha256": "6460d04bc7cdd9e1804cfa5b390134bb311554cb642ba53aff8580a344d34ae6"
+    },
+    {
+      "path": "publication/final-public-reanalysis-json-failure.json",
+      "size_bytes": 485,
+      "sha256": "aa7d28128abd6a4f2086d0a73c550cc9ba19c01d8411efd7eca2bf1d010982e2"
+    },
+    {
+      "path": "publication/inspect_bootstrap_rounding.py",
+      "size_bytes": 2349,
+      "sha256": "d7d49e6206c1136b24aaf9ca53edb379b764cd45378e58e9e77672b8e5b4889b"
+    },
+    {
+      "path": "publication/package_base.py",
+      "size_bytes": 13991,
+      "sha256": "7324863cb8598251d977dfdb71102621562ee828deb0ab50fdc1ad1cd97bd33c"
+    },
+    {
+      "path": "publication/prepare_public.py",
+      "size_bytes": 2925,
+      "sha256": "095e543e5d283149f9007b5844e8c59613edab45555c708d5fccfc7c3316e1f1"
+    },
+    {
+      "path": "publication/private-reanalysis-comparison.json",
+      "size_bytes": 318,
+      "sha256": "cfe8128cf54a325162388669136ebb95eddbda376a3284cbfbcda90cf3ec3f90"
+    },
+    {
+      "path": "publication/publication-policy.json",
+      "size_bytes": 827,
+      "sha256": "6d2533f77d946ba6c996ab8cd4fb81c3a503924672f62dc16efaca01e9b6ded5"
+    },
+    {
+      "path": "publication/reproduce_public.py",
+      "size_bytes": 12796,
+      "sha256": "72e45ed0b400b1f7787314e9c0c5f2c2cd53968a0855bd31fc3059c41c50c549"
+    },
+    {
+      "path": "publication/reproduce_public_before_jsonroundtrip.py",
+      "size_bytes": 11518,
+      "sha256": "c70df9e1cfce1b62d01d29c4acf30e2213bc7bb204543bc244e51b85fcd36be8"
+    },
+    {
+      "path": "publication/reproduce_public_strict_json.py",
+      "size_bytes": 11520,
+      "sha256": "a9f8fdbea1a298d5226a3502c6d7217fe6727f0ef796c04756195d2b7e745895"
+    },
+    {
+      "path": "publication/reproduction-controls-final.json",
+      "size_bytes": 786,
+      "sha256": "26393f66903d7b0382eb7727956aba96ff32ca9b83e9860160e3a9fb29e21332"
+    },
+    {
+      "path": "publication/tooling-provenance.json",
+      "size_bytes": 1085,
+      "sha256": "1b7d3b5cf4f35de1afff7d58a989efe2c79d123ad1a96f07a0c6e661c115973b"
+    },
+    {
+      "path": "resource-review/check_master.py",
+      "size_bytes": 5299,
+      "sha256": "5aed6514aa09a0a0b4a70d7ae09121d6b2cd5763d4d30cafa8269e62cd178dc5"
+    },
+    {
+      "path": "resource-review/check_originals.py",
+      "size_bytes": 5658,
+      "sha256": "c1f7ea20a64ab5e6aac654145f7c53730f729765481b09a5ea4171b9cba1cc4f"
+    },
+    {
+      "path": "resource-review/original-resource-audit.json",
+      "size_bytes": 1260,
+      "sha256": "e87f870401c845ee8d2ad53dbc22636aa3326284b2c96ba78668dfd42e7fbe8b"
+    },
+    {
+      "path": "resource-review/public-master-audit.json",
+      "size_bytes": 589,
+      "sha256": "9f421c73a3e9ce16b2d8a75003dda452b1e173c1aa0fe6703d0005dbbcb1c701"
+    },
+    {
+      "path": "root-report/build_result.py",
+      "size_bytes": 8844,
+      "sha256": "121af858efcc02b0e24b1d5aec75d1b15f3389d600ed2db3ef1e08d99eef1d6f"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "candidate": "/private/tmp/fi-v1-v2-corrected-20261028/publication/assembled/attempt01-final",
+  "summary_sha256": "49a9d0f02e0e7e05226ff50dc86f72f782ca3864316112490ce3b2312216b314",
+  "generator_sha256": "121af858efcc02b0e24b1d5aec75d1b15f3389d600ed2db3ef1e08d99eef1d6f",
+  "summary_review_sha256": "379e13fa8e9944e51277a10a49c37bbc46f2e1ff18406ccd3a8e117e4ef3c75a",
+  "checks": [
+    "Final summary matches approved root report byte-for-byte.",
+    "Coordinator evidence includes exact approved generator and final scientific approval report.",
+    "Canonical raw scientific metrics remain those independently audited; summary rounding, shape, serving and cold-cost wording is correct."
+  ],
+  "scope": "Final scientific/package identity check; full transformation audit belongs to separate publication audit."
+}

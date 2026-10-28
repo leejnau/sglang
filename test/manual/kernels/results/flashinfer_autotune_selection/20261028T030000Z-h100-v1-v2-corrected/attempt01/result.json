@@ -1,0 +1,239 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "batch": "20261028T030000Z-h100-v1-v2-corrected",
+  "execution_commit": "1e3056eac034ffdcce288b2f4257c232af379a8c",
+  "plan_sha256": "af5f521e73804373cc58b7c7f33a56dfe9ef598a04dbc1f2835ccd6f7c32e62d",
+  "schedule_sha256": "d57abbde94e6cd70f95c460aee1786f661292c8c0c3bb4260d8cf1cec39f4dd0",
+  "question": "Does v2 add candidate-selection value when both actual APIs use the corrected shared delay helper?",
+  "conclusion": "No demonstrated incremental v2 benefit on this fixture; no equivalence or general regression claim.",
+  "scope": {
+    "fixture_m_n_k": [
+      144,
+      1024,
+      3072
+    ],
+    "layer": "Qwen3-0.6B first MLP down projection",
+    "physical_gpus": 1,
+    "gpu": "NVIDIA H100 NVL",
+    "driver": "580.196.07",
+    "paired_timing_blocks": 8,
+    "fresh_timing_processes": 16,
+    "total_processes": 21,
+    "measurement_policy": "unspecified",
+    "persistence": "existing v1 save/load",
+    "confirmation_performed": false,
+    "profiling_inputs": "Original synthetic activations; target tensors have M144, while the normalized cache key uses bucket256.",
+    "serving_inputs": "Captured real model activations and weights through the actual SGLang FP8 layer facade.",
+    "hardware_amendment": "Original GPU under administrator maintenance; replacement H100 NVL and newer driver declared before source freeze and measurements. Exact image/source/native providers retained; fresh ordering gate passed. No historical pooling."
+  },
+  "selection_counts": {
+    "v1": {
+      "default_winners": 0,
+      "explicit_winners": 8
+    },
+    "v2": {
+      "default_winners": 2,
+      "explicit_winners": 6
+    }
+  },
+  "same_tactic_pairs": 6,
+  "same_natural_native_trace_pairs": 6,
+  "default_winning_profile_margins": [
+    {
+      "block": 0,
+      "arm": "v2",
+      "default_profile_ms": 0.006764800101518631,
+      "fastest_explicit_profile_ms": 0.0067840002477169035,
+      "margin_ns": 19.200146198272705,
+      "margin_percent_of_explicit": 0.28302101263534274
+    },
+    {
+      "block": 1,
+      "arm": "v2",
+      "default_profile_ms": 0.0069760002195835115,
+      "fastest_explicit_profile_ms": 0.006982400268316269,
+      "margin_ns": 6.400048732757568,
+      "margin_percent_of_explicit": 0.09165972282910717
+    }
+  ],
+  "primary": {
+    "metric": "v2_over_v1.cuda_graph.measured_normalized",
+    "paired_blocks": 8,
+    "geometric_mean": 1.002394775186613,
+    "values_by_block": [
+      1.009641137096907,
+      1.0109185587528469,
+      0.9998052741805922,
+      1.0012462839967777,
+      1.001670405114612,
+      1.0031125559972622,
+      0.9917486958651488,
+      1.0011396453582673
+    ],
+    "exploratory_paired_block_bootstrap_95pct": [
+      0.9985623611272988,
+      1.0061152065801786
+    ],
+    "percent_change": 0.23947751866129074,
+    "interpretation": "A ratio above1 means longer v2 graph time after normalization to each process's independently measured default. All measured ratios retained, including default/default controls."
+  },
+  "secondary": {
+    "v2_over_v1.eager.measured_normalized": {
+      "paired_blocks": 8,
+      "geometric_mean": 0.99574625245403,
+      "values_by_block": [
+        0.9831180048438829,
+        0.9832188502512184,
+        1.0040858111139068,
+        0.9965805024343626,
+        1.0025172515029919,
+        1.0038282783668395,
+        0.9985437860402518,
+        0.9943333099772055
+      ],
+      "exploratory_paired_block_bootstrap_95pct": [
+        0.9899938529895332,
+        1.0009501254748039
+      ]
+    },
+    "v1.cuda_graph.absolute_natural_ms": {
+      "paired_blocks": 8,
+      "geometric_mean": 0.008558219201116012,
+      "values_by_block": [
+        0.00852699996903539,
+        0.008609000127762558,
+        0.00849600043147802,
+        0.008509999606758358,
+        0.008527999743819238,
+        0.00862100021913648,
+        0.008638000115752218,
+        0.00853800028562546
+      ],
+      "exploratory_paired_block_bootstrap_95pct": [
+        0.008524429844536876,
+        0.00859535005150461
+      ]
+    },
+    "v2.cuda_graph.absolute_natural_ms": {
+      "paired_blocks": 8,
+      "geometric_mean": 0.00857254242232476,
+      "values_by_block": [
+        0.008543000090867283,
+        0.008525999728590253,
+        0.008603999856859446,
+        0.00864499993622303,
+        0.008634999860078096,
+        0.008487000130116941,
+        0.00863399961963296,
+        0.00850799959152937
+      ],
+      "exploratory_paired_block_bootstrap_95pct": [
+        0.008531253129693857,
+        0.008613252681632851
+      ]
+    },
+    "v1.cuda_graph.measured_natural_over_default": {
+      "paired_blocks": 8,
+      "geometric_mean": 0.9910541243593668,
+      "values_by_block": [
+        0.9932432226206357,
+        0.9843412968313427,
+        0.9862075766393891,
+        0.9945054188424501,
+        0.9957977963465366,
+        0.9834724424553765,
+        0.9958586988802107,
+        0.9951100301876294
+      ],
+      "exploratory_paired_block_bootstrap_95pct": [
+        0.9873573012241446,
+        0.9942759452266352
+      ]
+    },
+    "v2.cuda_graph.measured_natural_over_default": {
+      "paired_blocks": 8,
+      "geometric_mean": 0.993427476184973,
+      "values_by_block": [
+        1.0028192167004948,
+        0.9950888851136492,
+        0.9860155365609218,
+        0.9957448550306623,
+        0.9974611820786731,
+        0.9865335555042831,
+        0.9876415658804129,
+        0.9962441027144979
+      ],
+      "exploratory_paired_block_bootstrap_95pct": [
+        0.9895012497695357,
+        0.9973622513234575
+      ]
+    }
+  },
+  "cold_tuning_cost": {
+    "v1_profiles": 72,
+    "v2_profiles": 81,
+    "v1_median_ms": 554.3979420000001,
+    "v2_median_ms": 602.0097955,
+    "median_difference_ms": 47.61185349999994,
+    "ratio_of_medians": 1.0858802854286207,
+    "scope": "Instrumented cold startup-tuning slice; neither full-model startup nor recurring serving cost."
+  },
+  "validation": {
+    "mlp_numerical_checks": 4140,
+    "ordering_numerical_checks": 7,
+    "total_numerical_checks": 4147,
+    "warm_restarts": 2,
+    "warm_profiles": 0,
+    "post_startup_profiles": 0,
+    "warm_persistence": "Fresh processes loaded byte-identical saved explicit winners through real file hits. Both admission winners were explicit; this cohort does not newly establish default-winner reload.",
+    "independent_raw_checks": 17155,
+    "independent_metrics": 21,
+    "independent_scalar_comparisons": 231,
+    "bit_exact_scalar_comparisons": 230,
+    "rounding_disclosure": {
+      "field": "metrics.v2_over_v1.eager.measured_normalized.exploratory_paired_block_bootstrap_95pct[0]",
+      "canonical_linux": 0.9899938529895332,
+      "macos_python312_and314": 0.9899938529895334,
+      "ulp_difference": 1,
+      "primary_exact": true,
+      "explanation": "One endpoint difference consistent with platform exponentiation rounding; no direct per-draw Linux witness. Canonical report unchanged; strict failures and numerical witnesses preserved. Public reanalysis permits only this exact leaf/value pair, not general tolerances."
+    }
+  },
+  "resources": {
+    "allocation": "2888333",
+    "start_utc": "2026-10-28T03:01:37Z",
+    "released_utc": "2026-10-28T03:16:46Z",
+    "elapsed_seconds": 909,
+    "containers_exited_and_cleaned": 21,
+    "final_queue_empty": true,
+    "final_gpu_processes_empty": true,
+    "release_receipts": "Initial scheduler teardown observation and subsequent empty-queue confirmation both preserved."
+  },
+  "evidence": {
+    "private_final_archive_sha256": "b2a2a74e702d3f6fc9e28ae05c1c6b1f9d5cd2060ecaff7a82012dc968cf7cbc",
+    "private_final_archive_members": 330,
+    "private_final_archive_regular_files": 285,
+    "private_final_archive_indexed_payload_files": 284,
+    "operational_archive_sha256": "b7f5cea4d75f91360e6d65bdb07b6dedf3207d22869cc64c7e108187c0d4c2b1",
+    "preservation": "All four phase archives and operational evidence durably copied and hash-verified locally. Public scientific results, traces, logs and caches remain byte-exact; inventory-only derivatives and private payload exclusions have explicit original hashes."
+  },
+  "interpretation_and_next_action": [
+    "Six same-choice pairs use identical selected descriptors and native kernel signatures; small timing differences there are not improved candidate selection.",
+    "Two default choices won near-tie synthetic profiles. No repeat-level profiling uncertainty or same-process forced-explicit serving counterfactual was measured; no wrong-choice or confirmation-heuristic conclusion follows.",
+    "Eager wall time includes host and cache-lookup behavior; it does not isolate GPU tactic execution.",
+    "This comparison is separate from the earlier delay-correction study. That study's 1.17% estimate must not be attributed to v2 over v1.",
+    "Present both bounded findings to the owner. Keep production policy and v1 persistence unchanged, the scoped prototype parked, and do not automatically expand the matrix or open a PR."
+  ],
+  "additional_limits": [
+    "Eight fresh-process pairs on one fixed GPU and fixture; intervals are exploratory, not equivalence or safety claims.",
+    "Primary uses every actual graph ratio, including independent default/default graphs. Choice-identity normalization is a separate secondary diagnostic.",
+    "Identical selected descriptors do not establish a candidate-selection benefit from noisy latency differences.",
+    "Eager wall time is secondary; graph wall time includes prequeue delay and is diagnostic only.",
+    "No confirmation, retuning, historical pooling, admission pooling, performance-sign exclusions or adaptive retries."
+  ],
+  "external_message_sent": false,
+  "new_pr_opened": false,
+  "canonical_analysis_sha256": "5a88cb99f3554684feed71560e373f5353b6319ff70bbbab90f78746649c5f5f",
+  "summary_generator_sha256": "121af858efcc02b0e24b1d5aec75d1b15f3389d600ed2db3ef1e08d99eef1d6f"
+}

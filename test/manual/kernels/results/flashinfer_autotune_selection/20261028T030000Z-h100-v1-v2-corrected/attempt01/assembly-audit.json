@@ -1,0 +1,121 @@
+{
+  "status": "passed",
+  "assembly_source_sha256": "c96c507702ab345cc4ac7bad36aef857788acda9982b54d3dae2faa01ab028a0",
+  "master_archive_sha256": "66432cb1e2fe9c3032f8bb32b46aad645eba8ffe4ad575029b640b68257ad5a3",
+  "master_archive_size_bytes": 2106431,
+  "lossless_parts": 2,
+  "maximum_repository_file_bytes": 1400000,
+  "copied_reports": [
+    {
+      "path": "admission-analysis.json",
+      "source_sha256": "bc045136ab8a85b632cc8fa20b553bfe63be7074e3e5b8b7e3bb84b822527c3d",
+      "source_size_bytes": 61640
+    },
+    {
+      "path": "package-audit.json",
+      "source_sha256": "00fdcdd0709da1aa37e271f6717f97f65a3743689ba44266536117a9816d8e74",
+      "source_size_bytes": 518
+    },
+    {
+      "path": "paired-analysis.json",
+      "source_sha256": "5a88cb99f3554684feed71560e373f5353b6319ff70bbbab90f78746649c5f5f",
+      "source_size_bytes": 528475
+    },
+    {
+      "path": "public-manifest.json",
+      "source_sha256": "c363ef922e6d74d817ed46350c2d065d13fb1e0b4b011f5e466d924af1e383b9",
+      "source_size_bytes": 165436
+    },
+    {
+      "path": "public-scientific-reanalysis-audit.json",
+      "source_sha256": "6a37f9bacb56a742143c4f134d20a1c62260a5c254dd85fd2c24545cd701248a",
+      "source_size_bytes": 8782
+    },
+    {
+      "path": "publication-audit.json",
+      "source_sha256": "d785dbea2ed3053ea510990ebba2b6be74a582693cc31620449d52770ab1299f",
+      "source_size_bytes": 646
+    },
+    {
+      "path": "result.json",
+      "source_sha256": "49a9d0f02e0e7e05226ff50dc86f72f782ca3864316112490ce3b2312216b314",
+      "source_size_bytes": 9915
+    },
+    {
+      "path": "warm-analysis.json",
+      "source_sha256": "fe209aa4ab5b82e3105f0ec14ea66bbcf0a8c86d342d1ce3d5391d7c864778a9",
+      "source_size_bytes": 67774
+    }
+  ],
+  "coordinator_members": 47,
+  "files": [
+    {
+      "path": "admission-analysis.json",
+      "size_bytes": 61640,
+      "sha256": "bc045136ab8a85b632cc8fa20b553bfe63be7074e3e5b8b7e3bb84b822527c3d"
+    },
+    {
+      "path": "coordinator-evidence.json",
+      "size_bytes": 8648,
+      "sha256": "29d9bec5283f9f8a0ad296353e3e0ec4a3ee2f615693d0e11964f52800139d82"
+    },
+    {
+      "path": "coordinator-evidence.tar.gz",
+      "size_bytes": 105834,
+      "sha256": "ff27a995cc3a881333a8903112b9c0e23908dcf22e91f16132b8b0270a758723"
+    },
+    {
+      "path": "package-audit.json",
+      "size_bytes": 518,
+      "sha256": "00fdcdd0709da1aa37e271f6717f97f65a3743689ba44266536117a9816d8e74"
+    },
+    {
+      "path": "paired-analysis.json",
+      "size_bytes": 528475,
+      "sha256": "5a88cb99f3554684feed71560e373f5353b6319ff70bbbab90f78746649c5f5f"
+    },
+    {
+      "path": "public-manifest.json",
+      "size_bytes": 165436,
+      "sha256": "c363ef922e6d74d817ed46350c2d065d13fb1e0b4b011f5e466d924af1e383b9"
+    },
+    {
+      "path": "public-scientific-reanalysis-audit.json",
+      "size_bytes": 8782,
+      "sha256": "6a37f9bacb56a742143c4f134d20a1c62260a5c254dd85fd2c24545cd701248a"
+    },
+    {
+      "path": "publication-audit.json",
+      "size_bytes": 646,
+      "sha256": "d785dbea2ed3053ea510990ebba2b6be74a582693cc31620449d52770ab1299f"
+    },
+    {
+      "path": "raw-public-parts.json",
+      "size_bytes": 599,
+      "sha256": "061cb4b434e0d3d5b8502d778bd6549d68f354e72601b662f50729c620bd2c95"
+    },
+    {
+      "path": "raw-public.tar.gz.part-00",
+      "size_bytes": 1400000,
+      "sha256": "5c115ae7f2dbd2c5142bdb52a9322a556c16549836ca3d74f0f1333183a74adf"
+    },
+    {
+      "path": "raw-public.tar.gz.part-01",
+      "size_bytes": 706431,
+      "sha256": "c236dfa5ddfb7c620511aa3584145eeab06d4614a2eb508376cf0f5661139f08"
+    },
+    {
+      "path": "result.json",
+      "size_bytes": 9915,
+      "sha256": "49a9d0f02e0e7e05226ff50dc86f72f782ca3864316112490ce3b2312216b314"
+    },
+    {
+      "path": "warm-analysis.json",
+      "size_bytes": 67774,
+      "sha256": "fe209aa4ab5b82e3105f0ec14ea66bbcf0a8c86d342d1ce3d5391d7c864778a9"
+    }
+  ],
+  "limits": [
+    "Artifact assembly only; no scientific inference or timing selection. Final result summary and repository hooks are separate root-owned steps."
+  ]
+}

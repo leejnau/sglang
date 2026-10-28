@@ -1,0 +1,154 @@
+{
+  "status": "passed",
+  "phase": "timing",
+  "execution_commit": "1e3056eac034ffdcce288b2f4257c232af379a8c",
+  "reproduction_source_sha256": "72e45ed0b400b1f7787314e9c0c5f2c2cd53968a0855bd31fc3059c41c50c549",
+  "frozen_analyzer_sha256": "937cedc06c6d3ec28a9c0a51bdfa25f79aea23e900da6233e18076465a5bd00c",
+  "public_archive_sha256": "66432cb1e2fe9c3032f8bb32b46aad645eba8ffe4ad575029b640b68257ad5a3",
+  "public_manifest_sha256": "c363ef922e6d74d817ed46350c2d065d13fb1e0b4b011f5e466d924af1e383b9",
+  "private_archive_sha256": "b2a2a74e702d3f6fc9e28ae05c1c6b1f9d5cd2060ecaff7a82012dc968cf7cbc",
+  "original_analysis_sha256": "5a88cb99f3554684feed71560e373f5353b6319ff70bbbab90f78746649c5f5f",
+  "scientific_reanalysis_sha256": "b13e4eb77f2d2969ea370cb2874b08653fa11fb703f4b2acf7622fa82b485104",
+  "all_scientific_fields_exactly_equal": false,
+  "all_other_scientific_fields_exactly_equal": true,
+  "all_primary_count_and_sample_fields_exactly_equal": true,
+  "one_ulp_secondary_endpoint_deviations": [
+    {
+      "path": [
+        "metrics",
+        "v2_over_v1.eager.measured_normalized",
+        "exploratory_paired_block_bootstrap_95pct",
+        0
+      ],
+      "frozen": 0.9899938529895332,
+      "reproduced": 0.9899938529895334,
+      "frozen_hex": "0x1.fae0796ba982fp-1",
+      "reproduced_hex": "0x1.fae0796ba9830p-1",
+      "difference_ulps": 1,
+      "scope": "One secondary eager bootstrap lower endpoint; all other fields compare exactly."
+    }
+  ],
+  "ordering_observations_revalidated": true,
+  "launch_and_original_cache_accounting_revalidated": true,
+  "scientific_processes_revalidated": [
+    "ordering/patched.json",
+    "v1/admission-auto_synthetic.json",
+    "v2/admission-auto_synthetic.json",
+    "v1/warm-auto_synthetic.json",
+    "v2/warm-auto_synthetic.json",
+    "v1/block0-auto_synthetic-timing.json",
+    "v2/block0-auto_synthetic-timing.json",
+    "v2/block1-auto_synthetic-timing.json",
+    "v1/block1-auto_synthetic-timing.json",
+    "v1/block2-auto_synthetic-timing.json",
+    "v2/block2-auto_synthetic-timing.json",
+    "v2/block3-auto_synthetic-timing.json",
+    "v1/block3-auto_synthetic-timing.json",
+    "v1/block4-auto_synthetic-timing.json",
+    "v2/block4-auto_synthetic-timing.json",
+    "v2/block5-auto_synthetic-timing.json",
+    "v1/block5-auto_synthetic-timing.json",
+    "v1/block6-auto_synthetic-timing.json",
+    "v2/block6-auto_synthetic-timing.json",
+    "v2/block7-auto_synthetic-timing.json",
+    "v1/block7-auto_synthetic-timing.json"
+  ],
+  "raw_records_rewritten": 0,
+  "bootstrap_identity_mapping": {
+    "ordering/patched.bootstrap.json": {
+      "original_sha256": "b106051b53957edbeb32d8c333b2f5e503fba3302d94ea6ece09ca970a875d43",
+      "public_sha256": "48b950e8094e108070e42b9a41e71a7295b06e0802db5c3d6d7498086a733637"
+    },
+    "v1/admission-auto_synthetic.bootstrap.json": {
+      "original_sha256": "3a645432e36fb231404cd177b12b6df7d1fed46ef433275c0789b20d6bd6a8f8",
+      "public_sha256": "b169cf6821073795a2b2fa6ac0a5b29630e62102138d01bafd505b5eee16f64f"
+    },
+    "v2/admission-auto_synthetic.bootstrap.json": {
+      "original_sha256": "2afb8bae69da54bf573f25c72af8b004ad7b6f7c5bf6801c63dfc6a399149bf1",
+      "public_sha256": "1a46cd9707f1d537e952d80260107f73f62b6b601f548d7b537cef3b2abd118a"
+    },
+    "v1/warm-auto_synthetic.bootstrap.json": {
+      "original_sha256": "a180494db2bd98858f7997a300671b3081954a71ebfedb059069597fb5a789a2",
+      "public_sha256": "5fbdd7901b834f8f3d79cf122ef8ffc26edc7aa146186741f1215b927153bfbe"
+    },
+    "v2/warm-auto_synthetic.bootstrap.json": {
+      "original_sha256": "bb6d651d1ee5ddb97dca9a2edb41ca29c73f638d4a6411b76a3532626c3199bf",
+      "public_sha256": "e4ef03ece04b6ab72e4a95b991547bb63ecc7f783de5f8b60a3a4ac855dfbee9"
+    },
+    "v1/block0-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "3e5e23d4f762272744c3da62fda3cf5037904cda5bbd13e45cf4334bf87e3235",
+      "public_sha256": "7206c19eb6c9380e2f548ec3d22cec6c331648ea32e9df78ad3d8ac890e86677"
+    },
+    "v2/block0-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "62dcd02c8cae579bc7704059833f8c38c28a9fe99f48ae583fb055ba38f41058",
+      "public_sha256": "1bcca6ad7eb1ea11067b711a3d2ec09c4c8c46407270d27c01a8c491550b007f"
+    },
+    "v2/block1-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "a56b8475d4b7b73d031137d7091072debdba77e703cf661152fba14f3aa4a7b3",
+      "public_sha256": "ecf40a21bcf999aeb5ccb7cb30b9d6bfd85dfbb0f61986a3a7183b0429d8a846"
+    },
+    "v1/block1-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "2d8e8642b8cb0dd69df85ea012bee86dca5f18c0839a37c4a6ef2c66f3194898",
+      "public_sha256": "a19b26bd428761db17627264c31a1641b8846c98ec386a042730f65db76d93a9"
+    },
+    "v1/block2-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "e40a94657cab7bd3802608b387a097baaade871d6fdbb56d117d5627dac4f684",
+      "public_sha256": "e5d53f2a0aaa56a8deadb1c2e917b72953c607af46952f7873c85fd695e453a8"
+    },
+    "v2/block2-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "79b7a83ff54848887626d7ebab9e993934e11a25710fbd6bb9b50bbf6e5a7963",
+      "public_sha256": "33dd4cdbd0dfb0ab3dc35599b718b6f7a1fd986cdd6445d4482ce6b55e384974"
+    },
+    "v2/block3-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "13e6fa14df5e23325e00565ff73300caeba93bc4b7f25d4fcf3b3ad14bcae200",
+      "public_sha256": "fe6a1b50d62c8acbfb57c6a2ed60b807d7d2f9b9f9dd26fbb0a3843573193afb"
+    },
+    "v1/block3-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "1aaf8b0712f11fbd973640d1b738925636a0799cfa5cefd06fa70ac279974c20",
+      "public_sha256": "cc10cf0e6a0aa5518a2792a69fd2e7de1e02e27bd8bdc4e57de3849cbdeb88c6"
+    },
+    "v1/block4-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "1824113bab1235314d25f2ab9a1809e09505f6ae3365d070f5c6ec5f24f50e79",
+      "public_sha256": "dc97c2bf75808b166e9326bfa9a873d62d907790986607da41b871ed9f2d7883"
+    },
+    "v2/block4-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "f1f94890a439fede8027e93bb1ed76ce20901bac2f5eac30fa8a4a63caf53cb2",
+      "public_sha256": "0a1650463bb3b1b159c155de984bc1644654a4c68348f7fdc098bc09665a7b78"
+    },
+    "v2/block5-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "f26b9badd6275af66dc6948b66ea3128073f0b0c105823d8d6aa8de17be36cc9",
+      "public_sha256": "a8c80575372799dc73f5318ba07e01d2669fb74119622f0b3b45ac66c7b0d903"
+    },
+    "v1/block5-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "fa84811cb7f647c7fb26ca2fa1cfe25b8596fc14f5e77b8f8133610a6f3d55a3",
+      "public_sha256": "de2c737d0187ebb91f6af088450e745c9041b03368fe821fe6a8853951ce0eb7"
+    },
+    "v1/block6-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "28d3f71ca27cc385055a3743390fa243f6273670f0f2b10cca21d26b54aeafec",
+      "public_sha256": "b821db681d905e257eee22157cd3660ad2cd88e0a108bc1a88da6b53a7992df2"
+    },
+    "v2/block6-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "7aefc29763f5e9201fdb54a0096da63465fa769b5d18e0bc5cc943d7c739c570",
+      "public_sha256": "1683633a8e20bddacf5e70fd7e982424de933cb7823d6ca8fb72c4a1bbbc958a"
+    },
+    "v2/block7-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "8c4a0c177eece26e96d2ebe7c8d36ba7bfe41a7144cd8c4611f0f8492b70217c",
+      "public_sha256": "c52d9c671f26045454cd4fe9bc42eba738f5bd27541334caa2e286e35d3a21f1"
+    },
+    "v1/block7-auto_synthetic-timing.bootstrap.json": {
+      "original_sha256": "d2305a302c330f69a265f8c8804a68ec76df6ac975676bed37925ace9eb9d8ea",
+      "public_sha256": "82cbfb5704603abb51eac45dd18b7e672946b5e0a3ea457d6b0f9291e2513cfd"
+    },
+    "native-reference.bootstrap.json": {
+      "original_sha256": "7c4727aca3d99adcb3fe2f35d06f4408b512baa4fe9a91b975bdf77358fe205d",
+      "public_sha256": "a453c7038793f41fbae0132eb5b5bb2b63899aec511809f772ffc3358fc224ef"
+    }
+  },
+  "private_outer_integrity_revalidated": false,
+  "limits": [
+    "The complete frozen scientific analyzer is reproduced. Private source/native payload checks are replaced by retained metadata checks and are explicitly not repeated.",
+    "Only verified bootstrap inventory derivatives receive original file identities. Original ledger and result fields remain byte-exact.",
+    "One specifically enumerated secondary eager lower interval endpoint may differ by exactly the observed one ULP. The exact log-mean input and 100-digit exponential receipts isolate rounding consistent with platform math implementations; general libm causality is not established. All primary metrics, samples, counts and every other value compare exactly.",
+    "Reanalysis of the same finite cohort adds no observations and establishes no broader serving-performance claim."
+  ]
+}

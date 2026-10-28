@@ -1,0 +1,96 @@
+{
+  "status": "passed",
+  "assembly_directory": "/private/tmp/fi-v1-v2-corrected-20261028/publication/assembled/attempt01-final",
+  "assembly_files": 14,
+  "assembly_inventory_sha256": "cc6b5c0d097ca5608c3a0b03a4a448e93e1e8e6fd9773429650c621e794ee23c",
+  "files": [
+    {
+      "path": "admission-analysis.json",
+      "size_bytes": 61640,
+      "sha256": "bc045136ab8a85b632cc8fa20b553bfe63be7074e3e5b8b7e3bb84b822527c3d"
+    },
+    {
+      "path": "assembly-audit.json",
+      "size_bytes": 4093,
+      "sha256": "d88f81cb20617c024fe93919f2ab3b15394572127a020b41620ff3d55280ae97"
+    },
+    {
+      "path": "coordinator-evidence.json",
+      "size_bytes": 8648,
+      "sha256": "29d9bec5283f9f8a0ad296353e3e0ec4a3ee2f615693d0e11964f52800139d82"
+    },
+    {
+      "path": "coordinator-evidence.tar.gz",
+      "size_bytes": 105834,
+      "sha256": "ff27a995cc3a881333a8903112b9c0e23908dcf22e91f16132b8b0270a758723"
+    },
+    {
+      "path": "package-audit.json",
+      "size_bytes": 518,
+      "sha256": "00fdcdd0709da1aa37e271f6717f97f65a3743689ba44266536117a9816d8e74"
+    },
+    {
+      "path": "paired-analysis.json",
+      "size_bytes": 528475,
+      "sha256": "5a88cb99f3554684feed71560e373f5353b6319ff70bbbab90f78746649c5f5f"
+    },
+    {
+      "path": "public-manifest.json",
+      "size_bytes": 165436,
+      "sha256": "c363ef922e6d74d817ed46350c2d065d13fb1e0b4b011f5e466d924af1e383b9"
+    },
+    {
+      "path": "public-scientific-reanalysis-audit.json",
+      "size_bytes": 8782,
+      "sha256": "6a37f9bacb56a742143c4f134d20a1c62260a5c254dd85fd2c24545cd701248a"
+    },
+    {
+      "path": "publication-audit.json",
+      "size_bytes": 646,
+      "sha256": "d785dbea2ed3053ea510990ebba2b6be74a582693cc31620449d52770ab1299f"
+    },
+    {
+      "path": "raw-public-parts.json",
+      "size_bytes": 599,
+      "sha256": "061cb4b434e0d3d5b8502d778bd6549d68f354e72601b662f50729c620bd2c95"
+    },
+    {
+      "path": "raw-public.tar.gz.part-00",
+      "size_bytes": 1400000,
+      "sha256": "5c115ae7f2dbd2c5142bdb52a9322a556c16549836ca3d74f0f1333183a74adf"
+    },
+    {
+      "path": "raw-public.tar.gz.part-01",
+      "size_bytes": 706431,
+      "sha256": "c236dfa5ddfb7c620511aa3584145eeab06d4614a2eb508376cf0f5661139f08"
+    },
+    {
+      "path": "result.json",
+      "size_bytes": 9915,
+      "sha256": "49a9d0f02e0e7e05226ff50dc86f72f782ca3864316112490ce3b2312216b314"
+    },
+    {
+      "path": "warm-analysis.json",
+      "size_bytes": 67774,
+      "sha256": "fe209aa4ab5b82e3105f0ec14ea66bbcf0a8c86d342d1ce3d5391d7c864778a9"
+    }
+  ],
+  "reconstructed_master_sha256": "66432cb1e2fe9c3032f8bb32b46aad645eba8ffe4ad575029b640b68257ad5a3",
+  "coordinator_archive_sha256": "ff27a995cc3a881333a8903112b9c0e23908dcf22e91f16132b8b0270a758723",
+  "root_result_sha256": "49a9d0f02e0e7e05226ff50dc86f72f782ca3864316112490ce3b2312216b314",
+  "recursive_payloads_scanned": 518,
+  "recursive_archives_scanned": 3,
+  "forbidden_occurrences": 0,
+  "all_four_originals_and_durable_receipts_verified": true,
+  "original_final_archive_counts": {
+    "total_tar_entries": 330,
+    "regular_files": 285,
+    "directories": 45,
+    "manifest_indexed_payload_files": 284,
+    "preservation_manifest_files": 1
+  },
+  "successful_unique_containers": 21,
+  "owned_jobs_released_and_final_gpu_process_list_empty": true,
+  "initial_teardown_and_final_release_both_retained": true,
+  "audit_source_sha256": "ae9fa72e78d83206c6f18433a6e74c6dc8f4f1a8b59a40eca6997b5dac3dd4a4"
+}
