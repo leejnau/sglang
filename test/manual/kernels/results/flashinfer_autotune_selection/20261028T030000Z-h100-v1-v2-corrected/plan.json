@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "batch_id": "20261028T030000Z-h100-v1-v2-corrected",
+  "study": "mlp_v1_v2_corrected",
+  "status": "frozen_before_admission",
+  "starting_research_commit": "3a330f1b1a5b44d27581907699afcbb53597a7d6",
+  "scope": "Actual legacy and v2 candidate selection through the same SGLang startup wrapper, both using the corrected delay helper; no shadow confirmation or production change.",
+  "source_contract": {
+    "flashinfer_commit": "27c62fdf0ab1cd4014df8a15b66a975541fda83c",
+    "variant": "The same qualified FP8-only descriptor port plus fixture-owned validation callback in every cell; no configured-timer guard or old scoped-cache prototype.",
+    "runtime_sha256": {
+      "flashinfer/autotuner/autotuner.py": "0db42ad90d1a3fec6f81509a2c520c1892cea0a433f5dbd7f43468a2a10243ca",
+      "flashinfer/autotune_cache.py": "1ab2ed7208ed1bf1007b1f74de29fc818c93a5ab091beea0833474177fbb29ad",
+      "flashinfer/autotuner/_graph_timing.py": "5f3be31e17501ba11ee95327176ac4a4b95eeaee7be92c2bc7795bcbd30cefe3",
+      "flashinfer/gemm/gemm_base.py": "0bba9240029a5e09f331e7a2267f7067e126d57a7a341ca535f7c9557599adca"
+    },
+    "fixture": {
+      "schema_version": 2,
+      "model": "Qwen/Qwen3-0.6B",
+      "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "layer": "model.layers.0.mlp.down_proj",
+      "shape_m_n_k": [
+        144,
+        1024,
+        3072
+      ],
+      "seed": 19,
+      "selection": "Prespecified first-layer MLP down projection from the same checkpoint and exact prior 144 input token IDs, before observing any tuning or execution timing. Verify actual dimensions and capture provenance.",
+      "source": "Dense BF16 reference forward with actual captured post-nonlinearity activation; benchmark uses static per-tensor FP8 weights/activations through the SGLang linear facade.",
+      "sha256": "0e456c2d371906be235c5fb405fc20c0a969f672ee26722264ae6761b1838809"
+    },
+    "no_historical_pooling": "Prior cohorts provide source/protocol context only; no historical or admission observations enter current estimates."
+  },
+  "environment": {
+    "image": "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
+    "gpu": "NVIDIA H100 NVL",
+    "uuid": "46f5ee90-8ac3-b4e7-007a-457db9a8b5ee",
+    "driver": "580.196.07",
+    "power_limit_watts": 310,
+    "torch": "2.14.1+cu130",
+    "exclusive": true,
+    "image_id": "sha256:2e152727f0a5ce999172ec48203b2b292d41b3cb370976827718870557899caa",
+    "node": "a1u1g-mil-0837"
+  },
+  "native_reuse": {
+    "source_archive": "fp8-current-source-private.tar.gz",
+    "source_archive_sha256": "209b2de9e76c358b94407202a4670613055e963200184e716b50eb67aad71c91",
+    "native_archive": "20261026T220000Z-h100-fixed-pair-attempt01-timing-full-raw.tgz",
+    "native_archive_sha256": "84e44c807d2a897723e793eeb0dd676d1c254491fdf2c95149511953ee4272f5",
+    "restoration": "Restore exact source archive plus the already-qualified tools and Python-only callback patch; restore entire native cache from the prior private archive. Never rebuild or change native artifact contents.",
+    "timestamp_amendment": "Archive extraction loses subsecond cache mtimes. Restore eight object mtimes from their unchanged .ninja_deps records. Reconstruct two library filesystem mtimes from build-log timestamps; these are explicitly not claimed original library stat mtimes. Source archive mtimes remain unchanged; every source-owned dependency must precede its recorded build timestamp.",
+    "reason": "Restore the already-qualified artifacts from durable archives without rebuilding; reuse the independently audited MLP fixture from the completed comparison.",
+    "container_source": "/study/input/current/source",
+    "container_cache": "/study/runtime-attempt01/cache",
+    "required_library_sha256": {
+      "gemm": "72690cacca4ce1d69ccaa6b9190475483d984bd58de0962d06c874c801c678d6",
+      "trtllm_utils": "e442a689064fe3af4ab46510b2d5aaf3597b072949b84f13d14e9e53352109e4"
+    },
+    "isolation": "Fresh process, home and tuner cache per worker; only compiled native artifacts are reused.",
+    "failure": "Stop before measurement if archive/source/native hashes differ, a dependency timestamp is inconsistent, or actual pinned-container Ninja requires work. No implicit rebuild or load-only fallback.",
+    "fixture_archive": "20261027T000000Z-h100-mlp-selection-attempt01-capture-full-raw.tgz"
+  },
+  "fixture_sha256": "0e456c2d371906be235c5fb405fc20c0a969f672ee26722264ae6761b1838809",
+  "fixture_manifest_sha256": "e5e39380e83c45c9f4678b0c9b76aa04c1bae6523d434a275f7fc8955c5bd518",
+  "schedule_sha256": "d57abbde94e6cd70f95c460aee1786f661292c8c0c3bb4260d8cf1cec39f4dd0",
+  "source_files_sha256": {
+    "test/manual/kernels/bench_flashinfer_v1_v2_corrected.py": "31567e1d43af399bbb9f522a0652af48d49048764fa3e0b20e68dd4ec0d26241",
+    "test/manual/kernels/bench_flashinfer_mlp_selection.py": "ffd68fd070fc330d46d876f1892a236748aed781c5f8d2097542465e910a6ae4",
+    "test/manual/kernels/bench_flashinfer_objective_values.py": "979e28aeb3248b27cb27df21b98cf274442c0e6b92c4df3444c48f7214ce90ba",
+    "test/manual/kernels/flashinfer_autotune_linear_layer.py": "3512bcb15ed9806ad6ce0b8e144943a0d92a384bd1b735210c7346836adf14e8",
+    "test/manual/kernels/flashinfer_autotune_descriptor_selection.py": "f59e97ae90792c976e01473d4d5cfa59402fe370febb8cede8b89cf03b6ce658",
+    "test/manual/kernels/flashinfer_autotune_eager_setup.py": "eab998110006ae0e9698e55f62a03268ec30d44b418c4a62b15bc73f4e7fe253",
+    "test/manual/kernels/flashinfer_autotune_delay_binding.py": "9d6aff29863d076560fa37642da0f73a5f4c70a7b92222059af43965a1047f6b"
+  },
+  "candidate_contract": {
+    "path": "test/manual/kernels/results/flashinfer_autotune_selection/20261027T020000Z-h100-mlp-confirmation/historical-contract.json",
+    "sha256": "8518320ae4089c97861759b0145b6b12d99941c03001d38c5450d4940d44e4b9",
+    "use": "Candidate descriptors/order/keys only. For v1 the actual enumeration is checked against the same explicit list; no search result or candidate list is altered."
+  },
+  "binding": {
+    "patched_sha256": "4a41c26b8dc5537707ae292c75d6069e59fae73ed881f73d083c15b5a0eb2722",
+    "upstream_head": "e6bcdebdefff9ad6dd635cb357ead72b0e7f9da6",
+    "merge_commit": "93ab5d91038eb79a11c97dec81b7c5e31730105a",
+    "both_arms": "Use the identical fixed source and compiled native providers; verify loaded callable, profiler alias, FFI and library identity per process.",
+    "ordering_qualification": "One fresh patched-only ordering process on the replacement H100/driver before admission. Use unchanged qualified helper to verify default/nondefault Torch streams, conflicting FFI context restoration, actual profiler ordering and changed-input graph replay. Preserve prior two-arm qualification separately; do not pool timings."
+  },
+  "protocol": {
+    "blocks": 8,
+    "arms": [
+      "v1",
+      "v2"
+    ],
+    "admission_processes": 2,
+    "warm_processes": 2,
+    "fresh_timing_processes": 16,
+    "total_processes": 21,
+    "seed": 19,
+    "phase_order": [
+      "ordering",
+      "admission",
+      "warm",
+      "timing"
+    ],
+    "arm_intervention": {
+      "v1": "The actual legacy autotune context, SGLang stream/skip/synchronization/load/save behavior, with only the inner autotune_v2 factory replaced by a strict-options null context.",
+      "v2": "The actual legacy persistence context plus the original autotune_v2(mode=tune,persistent_cache=False). No measurement policy is supplied."
+    },
+    "cache": "Fresh process, container home and isolated empty tuner cache per cold worker. Warm admission processes load an exact copied cache from their own cold admission arm in a fresh process. Reuse only verified compiled native artifacts between arms.",
+    "admission": "One independent cold numerical/capture process per arm, then one fresh warm restart per arm. No performance windows. Require same winner/file bytes, real file hits, zero warm profiling and no managed store. Both gates must pass before timing.",
+    "timing": "Eight complete paired cold blocks with alternating arm order; each process captures actual cached natural selection and an independent default graph. Twelve eager wall-time pairs and24 queued graph-event pairs. No confirmation, reranking, profiler calls or cache reload after startup.",
+    "serving": "Natural serving remains bare outside all tuner contexts. Default control temporarily hides winner/file/managed caches with exact restoration; never writes a control into the selected cache. Independent graph/output allocations even for identical tactics.",
+    "capture_order": "Eight blocks cover all eight combinations of first arm, natural/default capture order and eager/graph measurement order. Each paired arm uses identical capture/mode/within-process orders.",
+    "timing_settings": {
+      "eager_pairs": 12,
+      "graph_pairs": 24,
+      "graph_replays_per_sample": 16,
+      "graph_prequeue_cycles": 10000000,
+      "initial_warmup_ms": 500,
+      "rewarm_ms": 20,
+      "eager_min_sample_ms": 20,
+      "eager_initial_iterations": 20,
+      "profiler_warmup": 3,
+      "profiler_repeat": 10,
+      "stream_delay_micro_secs": 5000,
+      "cold_l2": false,
+      "graph_profile_replays": 1
+    },
+    "measurement_policy": "Unspecified in both arms; actual operation uses the existing non-graph hot-L2 event profiler.",
+    "expected_startup_profiles": {
+      "v1": 72,
+      "v2": 81,
+      "warm": 0
+    },
+    "all_attempts_preserved": true,
+    "ordering_processes": 1,
+    "ordering": "Separate fresh process with exact corrected helper/native providers. All ordering/FFI restoration/profiler/numerical graph checks must pass and dependency witnesses must match subsequent workers. Excluded from selection/performance estimates."
+  },
+  "analysis": {
+    "unit": "Eight complete paired cold blocks. Within-process windows are dependent repetitions. Admission and warm verification do not enter performance estimates.",
+    "primary": "Each process: median paired log(natural/default) over24 graph windows, retaining independently measured ratios even when natural is default. Pair v2 minus v1 log ratios, then exponentiate the mean across8 blocks.",
+    "secondary": [
+      "Same calculation for eager synchronized wall time over12 pairs; GPU-event eager time is contextual.",
+      "Absolute natural/default graph timings and v2/v1 absolute timings, plus capture/mode/launch-position strata.",
+      "Choice-only normalized graph score assigns ratio1 to a selected default; report separately from measured primary.",
+      "All selected descriptors, shared explicit candidate/order/key agreement, first-pass candidate timings and ranks; do not infer v1 by dropping -1 from a v2 run.",
+      "Cold startup host duration and profile count as separate costs. No runtime overhead claim from startup cost.",
+      "Fresh warm cache winner and zero profiling as correctness/reuse evidence only."
+    ],
+    "uncertainty": {
+      "resamples": 100000,
+      "seed": 202610280300,
+      "unit": "Resample whole paired blocks with shared indices across metrics.",
+      "interval": "Exploratory95% percentile interval, type7 interpolation."
+    },
+    "interpretation": "If both arms choose identical descriptors/native signatures, report that directly; measured timing differences alone do not demonstrate improved candidate selection. Preserve neutral/adverse outcomes. No equivalence/safety/universal claim.",
+    "no_pooling": "No prior corrected-helper, historical, admission or warm result enters the new timing estimates."
+  },
+  "stopping": {
+    "integrity": "Stop and preserve all attempted data on source/native/cache/numerical/protocol failure. Any amendment gets a new explicit source identity and attempt; no silent retry.",
+    "performance": "Complete8paired blocks regardless of timing sign. No adaptive sample expansion, candidate margin or exclusions.",
+    "resource": "Prepare exact pinned image and freeze/push source before one exclusive30-minute H100 experiment allocation. Re-admit recorded GPU/driver/image/native identities; stop on mismatch. Release after exact local archive verification; GPU never waits for publication.",
+    "storage": "Preserve exact private archives/receipts in durable local /Users/lnau/flashinfer-autotune-evidence outside SGLang; remote home is nearly full. Do not delete prior evidence to make room."
+  },
+  "limits": [
+    "One retained first-layer MLP projection, physical GPU and contiguous time window; no full-model serving throughput or quantized model-quality claim.",
+    "Instrumented ordinary SGLang startup/serving APIs, including numerical and descriptor-acceptance guards before capture. No shadow confirmation; this is not byte-identical uninstrumented startup history.",
+    "Profiling uses original synthetic dynamic activations; serving uses captured real-model activations plus actual quantization.",
+    "Fixed source plus recorded FP8 descriptor/benchmark validation overlays and corrected delay wrapper; not qualification of an unrelated nightly or stock release.",
+    "Graph capture/allocation/history remain part of the protocol; independently measured identical choices may still differ. No candidate-selection improvement claim from that difference.",
+    "Warm persistence is qualified on the two independent admission winners; it does not cover every timing winner or prove default persistence if neither admission selected -1.",
+    "V1 persistence remains unchanged. Production measurement policy, managed-store migration, scoped-cache adoption, TP/EP, MegaMoE and CI are outside this checkpoint.",
+    "The original host was unavailable. This cohort uses a replacement H100NVL and newer driver580.196.07, qualified before measurement. It does not isolate driver or physical-host effects relative to historical cohorts."
+  ],
+  "protocol_amendments": [
+    {
+      "stage": "Before source freeze and all scientific execution",
+      "reason": "Original physical H100 is under administrator maintenance reservation DLR-6276 with no usable release estimate. A bounded metadata-only allocation inventoried an idle replacement.",
+      "inventory_allocation": "2888158",
+      "inventory_result_sha256": "ae528bd03e654f1b1ab35e247b88c4e11ec223f4a22790e13a7a269baaf8dab2",
+      "original_environment": {
+        "node": "1u1g-gen-0100",
+        "uuid": "240958a2-e8e1-3bac-b767-365c9e0b97bd",
+        "driver": "580.159.04"
+      },
+      "change": "Use replacement H100NVL at same310W, newer driver580.196.07 and exact original pinned container. Add fresh patched-only ordering prerequisite; both v1/v2 arms share this environment. No native rebuild or alternative image.",
+      "scientific_measurements_observed": false,
+      "historical_pooling": false,
+      "inventory_cleanup_confirmed": true
+    }
+  ]
+}

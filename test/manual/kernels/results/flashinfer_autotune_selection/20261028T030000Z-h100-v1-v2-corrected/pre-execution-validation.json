@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "status": "source_ready_gpu_pending",
+  "cpu_controls": [
+    {
+      "name": "worker",
+      "status": "passed",
+      "cases": 64,
+      "python_versions": [
+        "3.12.12",
+        "3.14.6"
+      ],
+      "report_sha256": "0fb3fe6aaaa054cc828514e2ae1bb941a962940630de3ee8892d4951d924be27"
+    },
+    {
+      "name": "analyzer",
+      "status": "passed",
+      "cases": 62,
+      "python_versions": [
+        "3.12.12",
+        "3.14.6"
+      ],
+      "report_sha256": "22eba7be1fb646ade1018a56b71294646b0283b8f79e41ed822201bc40773470"
+    },
+    {
+      "name": "launcher",
+      "status": "passed",
+      "cases": 9,
+      "python_versions": [
+        "3.12.12",
+        "3.14.6"
+      ],
+      "report_sha256": "776d2d348c9de39a6e307e91f060496d5504789a666811a11c98a71898c11d8d"
+    }
+  ],
+  "private_operational_controls": {
+    "admission": 10,
+    "coordinator": 4,
+    "status": "passed",
+    "python": "3.12"
+  },
+  "repository_checks": {
+    "pre_commit": "passed",
+    "log_sha256": "50943a9aadeb7872d8343caaa8e1bffe7e08433b17e14120976347228e56a7fe",
+    "python_312_syntax": "passed",
+    "forbidden_content_scan": "passed",
+    "diff_check": "passed",
+    "staged_hook_correction": "Initial staged commit hook rejected missing executable bit on stage.sh; corrected the file mode before source freeze. All other staged hooks passed. Final commit is gated on the complete staged hook suite."
+  },
+  "independent_review": {
+    "status": "no source blocker found",
+    "boundary": "Source/protocol review only; runtime gates still required."
+  },
+  "hardware_preparation": {
+    "inventory": {
+      "status": "inventoried",
+      "allocation": "2888158",
+      "hardware": {
+        "node": "a1u1g-mil-0837",
+        "architecture": "x86_64",
+        "tmp_free_bytes": 592469495808,
+        "queries": {
+          "gpus": {
+            "returncode": 0,
+            "stdout": "0, NVIDIA H100 NVL, GPU-46f5ee90-8ac3-b4e7-007a-457db9a8b5ee, 580.196.07, 310.00, 0, 95830, Disabled\n",
+            "stderr": ""
+          },
+          "processes": {
+            "returncode": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          "image": {
+            "returncode": 1,
+            "stdout": "\n",
+            "stderr": "Error response from daemon: No such image: lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0\n"
+          }
+        },
+        "gpus": [
+          {
+            "index": "0",
+            "name": "NVIDIA H100 NVL",
+            "uuid": "GPU-46f5ee90-8ac3-b4e7-007a-457db9a8b5ee",
+            "driver": "580.196.07",
+            "power_watts": "310.00",
+            "memory_used_mib": "0",
+            "memory_total_mib": "95830",
+            "mig": "Disabled"
+          }
+        ],
+        "compatible": false
+      },
+      "cleanup_confirmed": true
+    },
+    "image": {
+      "status": "prepared",
+      "allocation": "2888180",
+      "image": {
+        "Id": "sha256:2e152727f0a5ce999172ec48203b2b292d41b3cb370976827718870557899caa",
+        "RepoDigests": [
+          "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0"
+        ],
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Created": "2026-10-19T00:48:17.586753916Z"
+      },
+      "cleanup_confirmed": true
+    },
+    "experiments_started": false
+  },
+  "pending": [
+    "Patched-helper ordering on replacement GPU/driver.",
+    "Actual cold and fresh warm tuner/cache/graph numerical checks.",
+    "Sixteen paired timing processes and independent analysis."
+  ],
+  "source_files_sha256": {
+    "test/manual/kernels/bench_flashinfer_v1_v2_corrected.py": "31567e1d43af399bbb9f522a0652af48d49048764fa3e0b20e68dd4ec0d26241",
+    "test/manual/kernels/bench_flashinfer_v1_v2_corrected_controls.py": "6381951cfc48b59c7eb5cde3c2e325460e03c3c3df3a023b81373383d200dd4a",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261028T030000Z-h100-v1-v2-corrected/analyze.py": "937cedc06c6d3ec28a9c0a51bdfa25f79aea23e900da6233e18076465a5bd00c",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261028T030000Z-h100-v1-v2-corrected/analyzer_controls.py": "7e67ec10bb29321a0edbef1ec8415d5f2a78aa2df3515bbf129f4b481381f589",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261028T030000Z-h100-v1-v2-corrected/launch.py": "1087bcc4404a79f4b54ce76bcb2f18211666fcbc616a629924537628dbdf7494",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261028T030000Z-h100-v1-v2-corrected/launch.sh": "4ac3f2fec6ce76d8f140679baefc8447b9d04079e18d4731e3bc0d5f4e7c366e",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261028T030000Z-h100-v1-v2-corrected/launcher_controls.py": "b4c0e1936a2865a188619afa8be60e273a53a0db6532d4b579a8d87852c22890",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261028T030000Z-h100-v1-v2-corrected/plan.json": "af5f521e73804373cc58b7c7f33a56dfe9ef598a04dbc1f2835ccd6f7c32e62d",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261028T030000Z-h100-v1-v2-corrected/preserve.py": "6451a00370185909a133198da94e06c92f76cfc64dd31e74c1ede561edae9289",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261028T030000Z-h100-v1-v2-corrected/run_current.py": "0efca0eb558e8c6c56b96b470b7b9d23de4e79ea887349df5f51c6903228d62e",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261028T030000Z-h100-v1-v2-corrected/schedule.json": "d57abbde94e6cd70f95c460aee1786f661292c8c0c3bb4260d8cf1cec39f4dd0",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261028T030000Z-h100-v1-v2-corrected/stage.sh": "ed24e5806daed0285123ccc17c44f375f8e8059c164d773505eda533001e41dd"
+  }
+}
