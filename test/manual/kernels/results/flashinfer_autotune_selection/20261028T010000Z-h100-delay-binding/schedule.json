@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "blocks": 8,
+  "entries": [
+    {
+      "block": 0,
+      "arm": "baseline",
+      "position": 0,
+      "cell": "auto_synthetic",
+      "capture_order": "default-first",
+      "sequence": 0
+    },
+    {
+      "block": 0,
+      "arm": "patched",
+      "position": 1,
+      "cell": "auto_synthetic",
+      "capture_order": "default-first",
+      "sequence": 1
+    },
+    {
+      "block": 1,
+      "arm": "patched",
+      "position": 0,
+      "cell": "auto_synthetic",
+      "capture_order": "winner-first",
+      "sequence": 2
+    },
+    {
+      "block": 1,
+      "arm": "baseline",
+      "position": 1,
+      "cell": "auto_synthetic",
+      "capture_order": "winner-first",
+      "sequence": 3
+    },
+    {
+      "block": 2,
+      "arm": "baseline",
+      "position": 0,
+      "cell": "auto_synthetic",
+      "capture_order": "winner-first",
+      "sequence": 4
+    },
+    {
+      "block": 2,
+      "arm": "patched",
+      "position": 1,
+      "cell": "auto_synthetic",
+      "capture_order": "winner-first",
+      "sequence": 5
+    },
+    {
+      "block": 3,
+      "arm": "patched",
+      "position": 0,
+      "cell": "auto_synthetic",
+      "capture_order": "default-first",
+      "sequence": 6
+    },
+    {
+      "block": 3,
+      "arm": "baseline",
+      "position": 1,
+      "cell": "auto_synthetic",
+      "capture_order": "default-first",
+      "sequence": 7
+    },
+    {
+      "block": 4,
+      "arm": "baseline",
+      "position": 0,
+      "cell": "auto_synthetic",
+      "capture_order": "default-first",
+      "sequence": 8
+    },
+    {
+      "block": 4,
+      "arm": "patched",
+      "position": 1,
+      "cell": "auto_synthetic",
+      "capture_order": "default-first",
+      "sequence": 9
+    },
+    {
+      "block": 5,
+      "arm": "patched",
+      "position": 0,
+      "cell": "auto_synthetic",
+      "capture_order": "winner-first",
+      "sequence": 10
+    },
+    {
+      "block": 5,
+      "arm": "baseline",
+      "position": 1,
+      "cell": "auto_synthetic",
+      "capture_order": "winner-first",
+      "sequence": 11
+    },
+    {
+      "block": 6,
+      "arm": "baseline",
+      "position": 0,
+      "cell": "auto_synthetic",
+      "capture_order": "winner-first",
+      "sequence": 12
+    },
+    {
+      "block": 6,
+      "arm": "patched",
+      "position": 1,
+      "cell": "auto_synthetic",
+      "capture_order": "winner-first",
+      "sequence": 13
+    },
+    {
+      "block": 7,
+      "arm": "patched",
+      "position": 0,
+      "cell": "auto_synthetic",
+      "capture_order": "default-first",
+      "sequence": 14
+    },
+    {
+      "block": 7,
+      "arm": "baseline",
+      "position": 1,
+      "cell": "auto_synthetic",
+      "capture_order": "default-first",
+      "sequence": 15
+    }
+  ],
+  "inherited_schedule": "test/manual/kernels/results/flashinfer_autotune_selection/20261027T020000Z-h100-mlp-confirmation/schedule.json",
+  "inherited_schedule_sha256": "028d527022b448bd5bc95a8723a9f2ce92dd0d4bf713a611074676b102659543",
+  "within_worker_schedule": "Original confirmation-pair and serving-graph schedules retained unchanged in both arms; same block has same capture order.",
+  "seed": 202610280100
+}

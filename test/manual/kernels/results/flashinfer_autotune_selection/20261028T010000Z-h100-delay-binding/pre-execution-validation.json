@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "cpu_cases": 53,
+  "commands": [
+    {
+      "name": "ordering",
+      "argv": [
+        "python3",
+        "test/manual/kernels/flashinfer_autotune_delay_binding_controls.py"
+      ],
+      "cases": 18,
+      "returncode": 0,
+      "stdout": "{\"status\": \"passed\", \"wrapper_protocol_cases\": 4, \"valid_gate_cases\": 2, \"rejected_evidence_cases\": [\"unreproduced old-wrapper control\", \"patched ordering fails\", \"natural binding fails\", \"profiler returns before delay\", \"stale graph output\", \"source replaced\", \"native replaced\", \"context leaked\", \"duplicate stream\", \"forged reference\", \"incomplete repetitions\", \"nonfinite measurement\"], \"limits\": \"CPU boundary simulation and evidence validation only; CUDA ordering remains untested.\"}\n",
+      "stderr": ""
+    },
+    {
+      "name": "launcher",
+      "argv": [
+        "python3",
+        "test/manual/kernels/results/flashinfer_autotune_selection/20261028T010000Z-h100-delay-binding/launcher_controls.py"
+      ],
+      "cases": 7,
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_actual_frozen_schedule (__main__.Controls.test_actual_frozen_schedule) ... ok\ntest_actual_winner_cache_is_preserved_exactly (__main__.Controls.test_actual_winner_cache_is_preserved_exactly) ... ok\ntest_cleanup_only_removes_matching_owned_container (__main__.Controls.test_cleanup_only_removes_matching_owned_container) ... ok\ntest_deadline_reserves_preservation_time (__main__.Controls.test_deadline_reserves_preservation_time) ... ok\ntest_gate_rejects_changed_result_or_failed_gate (__main__.Controls.test_gate_rejects_changed_result_or_failed_gate) ... ok\ntest_preservation_is_exact_and_never_overwrites (__main__.Controls.test_preservation_is_exact_and_never_overwrites) ... ok\ntest_source_inventory_rejects_added_or_modified_files (__main__.Controls.test_source_inventory_rejects_added_or_modified_files) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.044s\n\nOK\n"
+    },
+    {
+      "name": "analyzer",
+      "argv": [
+        "python3",
+        "test/manual/kernels/results/flashinfer_autotune_selection/20261028T010000Z-h100-delay-binding/analyzer_controls.py"
+      ],
+      "cases": 28,
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"passed\",\n  \"count\": 28,\n  \"checks\": [\n    \"unchanged inherited worker, schedule and analysis sources\",\n    \"missing paired arm rejected\",\n    \"reordered launch rejected\",\n    \"capture-order mismatch rejected\",\n    \"real historical schema yields only actually recorded host intervals\",\n    \"nonpositive startup host interval rejected\",\n    \"known improvement, startup reversals and default counts computed independently\",\n    \"adverse choices remain in the comparison\",\n    \"default winner scores exactly one despite different explicit graphs\",\n    \"whole paired-block resampling preserves cross-arm covariance\",\n    \"missing process rejected\",\n    \"duplicate block rejected\",\n    \"nonfinite score rejected\",\n    \"invented default score rejected\",\n    \"invented confirmation effect rejected\",\n    \"ties are retained without adding a threshold\",\n    \"wrong wrapper bytes rejected\",\n    \"stale profiler alias rejected\",\n    \"native substitution rejected\",\n    \"FFI dependency drift rejected\",\n    \"process-local stream handles do not masquerade as dependency drift\",\n    \"separate containers across ordering, admission and all paired workers\",\n    \"reused container rejected\",\n    \"overlapping workers rejected\",\n    \"unrecorded extra attempt rejected\",\n    \"reordered phase rejected\",\n    \"raw artifact substitution rejected\",\n    \"changed original winner cache rejected\"\n  ],\n  \"analyzer_sha256\": \"f2d9bc249c59625a3fd31713740094f621cf8a0f74df0723af1d1528ce411131\",\n  \"historical_schema_only\": true,\n  \"gpu_qualification\": false,\n  \"performance_inference\": false\n}\n",
+      "stderr": ""
+    }
+  ],
+  "checks": [
+    "All applicable repository pre-commit hooks passed.",
+    "Bash syntax passed for launch/stage scripts.",
+    "Python source parses with Python 3.11 grammar.",
+    "Inherited MLP worker, plan, schedule and analyzers remain byte-identical.",
+    "All new file contents pass the user-requested token exclusion scan."
+  ],
+  "scope": "CPU protocol, evidence-validation and launcher controls only; CUDA qualification has not run.",
+  "code_sha256": {
+    "test/manual/kernels/flashinfer_autotune_delay_binding.py": "c1bbd9e4c31678dc65d65b9226504c6a250202795c452f2ae392a33a67a05290",
+    "test/manual/kernels/flashinfer_autotune_delay_binding_controls.py": "0f8034235c6b8ffe95f52a8d38a4ae168e424b4d4e58c1f623656464562d4488",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261028T010000Z-h100-delay-binding/analyze.py": "f2d9bc249c59625a3fd31713740094f621cf8a0f74df0723af1d1528ce411131",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261028T010000Z-h100-delay-binding/analyzer_controls.py": "f6d665e348036c1073800115124baa6922b3d85c5920d0558c506ba4a63f413c",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261028T010000Z-h100-delay-binding/launch.py": "970c3f3f9bf91e63d38b72685ef61d4fcdff849e186158cfd6fd5c762cb662a4",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261028T010000Z-h100-delay-binding/launch.sh": "4ac3f2fec6ce76d8f140679baefc8447b9d04079e18d4731e3bc0d5f4e7c366e",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261028T010000Z-h100-delay-binding/launcher_controls.py": "97fa6c4b8e794d671ef9aa6a6eab4337a628eabaae757800214fe4d544a5277d",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261028T010000Z-h100-delay-binding/preserve.py": "7d4980c282363e629c7f1f7e7316295874150af08d60059d4a6fa4f13e4ad856",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261028T010000Z-h100-delay-binding/run_current.py": "b73dc48965be7bbd3a04392bb8061171c5459a86ce84d17f8f7315a95a8e9161",
+    "test/manual/kernels/results/flashinfer_autotune_selection/20261028T010000Z-h100-delay-binding/stage.sh": "83ab3129de89c5bdd35facf355092a7c7a722355e956419b1fd9fb45b48b802f"
+  }
+}

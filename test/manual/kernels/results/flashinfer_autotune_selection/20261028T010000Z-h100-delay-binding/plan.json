@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "batch_id": "20261028T010000Z-h100-delay-binding",
+  "scope": "Qualify the delay stream correction, then compare original selection and benchmark-only shadow confirmation on the frozen MLP fixture with only the delay wrapper binding changed.",
+  "starting_research_commit": "047aa07cd90d070ac15bd2558d947189f42915a2",
+  "upstream": {
+    "pr": "https://github.com/flashinfer-ai/flashinfer/pull/7619",
+    "head": "e6bcdebdefff9ad6dd635cb357ead72b0e7f9da6",
+    "base": "b4b38b0ba2e83fb273697cf01535293ea1c4a587",
+    "delta": "Import tvm_ffi and bind the scalar native delay invocation with tvm_ffi.use_torch_stream(); no native changes."
+  },
+  "inherited": {
+    "batch": "test/manual/kernels/results/flashinfer_autotune_selection/20261027T020000Z-h100-mlp-confirmation",
+    "files_sha256": {
+      "plan.json": "33444f5372ebcf5e9813ea32f914cb9729c7a465ff4b616dfa434b5fc0f196e8",
+      "schedule.json": "028d527022b448bd5bc95a8723a9f2ce92dd0d4bf713a611074676b102659543",
+      "analysis-protocol.json": "46652941d0749af30d8ce4204b8328de6a5074be3f727f667684dd23a1bba268",
+      "historical-contract.json": "8518320ae4089c97861759b0145b6b12d99941c03001d38c5450d4940d44e4b9",
+      "analyzer.py": "1fa9a5ea7312dc4fb3e5fb5766c95fc9c64b5ac9d91095a59a72655f3847542e",
+      "outer_audit.py": "21688b2ca4c325f96394669ebe67a3dc6fe170bb40472a503197291230c2c88a",
+      "run_current.py": "6e127764cdce1398e924d451ecdb8ebb557623ea5dd05f1181a6d5c775660781"
+    },
+    "worker": "test/manual/kernels/bench_flashinfer_mlp_confirmation.py",
+    "worker_sha256": "a8532276afc70ae1b70e12eaf9fc722fa7b29ed6102407360dd93708a7789157",
+    "use": "Use original plan, fixture, worker, candidate enumeration, measurement settings, confirmation order and graph replay recipe. Historical results are excluded from new estimates."
+  },
+  "environment": {
+    "image": "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
+    "gpu": "NVIDIA H100 NVL",
+    "uuid": "240958a2-e8e1-3bac-b767-365c9e0b97bd",
+    "driver": "580.159.04",
+    "power_limit_watts": 310,
+    "torch": "2.14.1+cu130",
+    "exclusive": true,
+    "image_id": "sha256:2e152727f0a5ce999172ec48203b2b292d41b3cb370976827718870557899caa"
+  },
+  "source_contract": {
+    "flashinfer_commit": "27c62fdf0ab1cd4014df8a15b66a975541fda83c",
+    "variant": "The same qualified FP8-only descriptor port plus fixture-owned validation callback in every cell; no configured-timer guard or old scoped-cache prototype.",
+    "runtime_sha256": {
+      "flashinfer/autotuner/autotuner.py": "0db42ad90d1a3fec6f81509a2c520c1892cea0a433f5dbd7f43468a2a10243ca",
+      "flashinfer/autotune_cache.py": "1ab2ed7208ed1bf1007b1f74de29fc818c93a5ab091beea0833474177fbb29ad",
+      "flashinfer/autotuner/_graph_timing.py": "5f3be31e17501ba11ee95327176ac4a4b95eeaee7be92c2bc7795bcbd30cefe3",
+      "flashinfer/gemm/gemm_base.py": "0bba9240029a5e09f331e7a2267f7067e126d57a7a341ca535f7c9557599adca"
+    },
+    "fixture": {
+      "schema_version": 2,
+      "model": "Qwen/Qwen3-0.6B",
+      "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "layer": "model.layers.0.mlp.down_proj",
+      "shape_m_n_k": [
+        144,
+        1024,
+        3072
+      ],
+      "seed": 19,
+      "selection": "Prespecified first-layer MLP down projection from the same checkpoint and exact prior 144 input token IDs, before observing any tuning or execution timing. Verify actual dimensions and capture provenance.",
+      "source": "Dense BF16 reference forward with actual captured post-nonlinearity activation; benchmark uses static per-tensor FP8 weights/activations through the SGLang linear facade.",
+      "sha256": "0e456c2d371906be235c5fb405fc20c0a969f672ee26722264ae6761b1838809"
+    },
+    "no_historical_pooling": "Prior cohorts provide source/protocol context only; no historical or admission observations enter current estimates."
+  },
+  "native_reuse": {
+    "source_archive": "fp8-current-source-private.tar.gz",
+    "source_archive_sha256": "209b2de9e76c358b94407202a4670613055e963200184e716b50eb67aad71c91",
+    "native_archive": "20261026T220000Z-h100-fixed-pair-attempt01-timing-full-raw.tgz",
+    "native_archive_sha256": "84e44c807d2a897723e793eeb0dd676d1c254491fdf2c95149511953ee4272f5",
+    "restoration": "Restore exact source archive plus the already-qualified tools and Python-only callback patch; restore entire native cache from the prior private archive. Never rebuild or change native artifact contents.",
+    "timestamp_amendment": "Archive extraction loses subsecond cache mtimes. Restore eight object mtimes from their unchanged .ninja_deps records. Reconstruct two library filesystem mtimes from build-log timestamps; these are explicitly not claimed original library stat mtimes. Source archive mtimes remain unchanged; every source-owned dependency must precede its recorded build timestamp.",
+    "reason": "Restore the already-qualified artifacts from durable archives without rebuilding; reuse the independently audited MLP fixture from the completed comparison.",
+    "container_source": "/study/input/current/source",
+    "container_cache": "/study/runtime-attempt01/cache",
+    "required_library_sha256": {
+      "gemm": "72690cacca4ce1d69ccaa6b9190475483d984bd58de0962d06c874c801c678d6",
+      "trtllm_utils": "e442a689064fe3af4ab46510b2d5aaf3597b072949b84f13d14e9e53352109e4"
+    },
+    "isolation": "Fresh process, home and tuner cache per worker; only compiled native artifacts are reused.",
+    "failure": "Stop before measurement if archive/source/native hashes differ, a dependency timestamp is inconsistent, or actual pinned-container Ninja requires work. No implicit rebuild or load-only fallback.",
+    "fixture_archive": "20261027T000000Z-h100-mlp-selection-attempt01-capture-full-raw.tgz"
+  },
+  "fixture_sha256": "0e456c2d371906be235c5fb405fc20c0a969f672ee26722264ae6761b1838809",
+  "fixture_manifest_sha256": "e5e39380e83c45c9f4678b0c9b76aa04c1bae6523d434a275f7fc8955c5bd518",
+  "schedule_sha256": "dcc46b3c967a4d4a3b3278b482397baaf5ca274d82c6e89197c4daf23917cb3d",
+  "protocol": {
+    "blocks": 8,
+    "fresh_timing_processes": 16,
+    "arms": [
+      "baseline",
+      "patched"
+    ],
+    "launch_order": "Alternating baseline-first and patched-first; same block uses identical inherited schedules.",
+    "admission_processes": 2,
+    "ordering_processes": 2,
+    "seed": 19,
+    "cache": "Fresh process, container home and isolated empty tuner cache per worker. Reuse only verified identical compiled native artifacts.",
+    "ordering_gate": "Before admission or timing: verify current Torch default/nondefault stream ordering and ambient FFI restoration with conflicting FFI stream against same-native explicit-binding reference. Old wrapper must expose the ordering defect; patched wrapper must pass eager and graph replay/numerical checks. Preserve all observations if the gate fails; do not run ranking cohort.",
+    "diagnostic_isolation": "Ordering diagnostics run in dedicated processes and never inside a timing worker. Identify actual imported wrapper/FFI and native providers before measurement.",
+    "admission": "One independent disposable inherited MLP admission worker per arm. Both must satisfy source/native/cache/numerical integrity, with their own wrapper identity. Exclude admissions from timing estimates.",
+    "timing": "Eight complete pairs using unchanged inherited worker. Original winner and v1 cache remain immutable; confirmation is a hypothetical comparison only.",
+    "timing_settings": {
+      "confirmation_pairs": 12,
+      "profiler_warmup": 3,
+      "profiler_repeat": 10,
+      "cold_l2": false,
+      "graph_profile_replays": 1,
+      "graph_rounds": 24,
+      "graph_replays_per_sample": 16,
+      "graph_prequeue_cycles": 10000000,
+      "initial_warmup_ms": 500,
+      "rewarm_ms": 20
+    },
+    "measurement_policy": "Unspecified, inherited auto/non-graph hot-L2 event timing. Requested delay remains 5000 us; native reference duration is measured rather than assumed."
+  },
+  "analysis": {
+    "unit": "Eight complete paired blocks; within-process profiler pairs and graph windows are dependent repetitions.",
+    "primary": "For each process let L be median(log(explicit_graph/default_graph)) over all 24 graph windows, and O=1 for original explicit choice, 0 for default. Compare exp(O_fixed*L_fixed - O_baseline*L_baseline); geometric mean over eight paired blocks. Default choices score exactly 1 relative to their own default.",
+    "secondary": [
+      "Shadow-confirmed/default normalized score and shadow/original score from the same retained post-confirmation graphs.",
+      "Every original and shadow tactic, first-pass profile margin, confirmation ratio, graph ratio, original-to-shadow reversal, corrected/introduced/remaining slower choice.",
+      "Absolute default graph timings and capture-order/launch-position strata as contextual diagnostics, without treating absolute timing differences as isolated selection effects.",
+      "Cold startup host elapsed time and available confirmation-profiler host intervals separately from graph replay timing. Original startup profiles have GPU event times but no per-call host intervals."
+    ],
+    "uncertainty": {
+      "resamples": 100000,
+      "seed": 202610280100,
+      "unit": "Complete paired blocks resampled with shared indices across metrics.",
+      "interval": "Exploratory 95% percentile interval, type7 interpolation."
+    },
+    "no_pooling": "No historical or admission observation enters new timing estimates. No adaptive margins, retries, exclusions or sample expansion.",
+    "decision": "This fixed cohort tests the causal effect of the wrapper correction on this measurement/selection protocol only. Correct ordering is independently useful even if no selection improvement is demonstrated. No automatic production change or PR."
+  },
+  "stopping": {
+    "integrity": "Stop and preserve every attempted artifact on ordering, source, provider, cache or numerical failure. Any amended attempt requires explicit new source/protocol identity; no silent retries.",
+    "performance": "Complete all eight paired blocks irrespective of timing sign. Retain neutral/adverse outcomes.",
+    "resource": "One original exclusive H100 node, 30-minute allocation bound after source staging; release after durable preservation. No full model download."
+  },
+  "limits": [
+    "Both original and shadow decisions are scored on graphs captured after confirmation work. This is not untouched startup or full-model serving performance.",
+    "Dynamic explicit finalists may differ by process. Pairing identifies the effect of the wrapper intervention on the whole declared protocol, not a single fixed-kernel comparison.",
+    "One fixture, physical GPU and contiguous time window do not establish universal safety, rare-error rate, equivalence or a broad serving speedup.",
+    "An enforced conflicting-FFI-stream negative control proves susceptibility. Record natural loaded binding behavior separately; do not retroactively claim the historical trace proved a stream mismatch.",
+    "Preserve original evidence and inconclusive stopping decisions. No SGLang production change, policy change, managed-store migration, scoped-cache adoption, PR or CI trigger."
+  ],
+  "binding": {
+    "wrapper": "flashinfer/tllm_utils.py",
+    "baseline_sha256": "5eaaa6773f5d7b5bc00de2183eef488f5b2497d7efc687ebf45f97d7f2fd3593",
+    "patched_sha256": "4a41c26b8dc5537707ae292c75d6069e59fae73ed881f73d083c15b5a0eb2722",
+    "native_changed": false,
+    "application": "Separate source-file overlays mounted at the same canonical source path before imports. Every other qualified source and native artifact must remain byte-identical.",
+    "control": "Baseline file matches qualified source27c62; patched file is byte-identical to upstream head e6bcdebdefff9ad6dd635cb357ead72b0e7f9da6."
+  }
+}
