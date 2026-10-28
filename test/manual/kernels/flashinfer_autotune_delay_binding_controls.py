@@ -3,9 +3,12 @@
 from __future__ import annotations
 
 import copy
+import importlib.util
 import json
+import tempfile
 from contextlib import contextmanager
-from types import ModuleType, SimpleNamespace
+from pathlib import Path
+from types import FunctionType, ModuleType, SimpleNamespace
 from unittest.mock import patch
 
 import flashinfer_autotune_delay_binding as binding
@@ -129,8 +132,52 @@ def wrapper_control(arm, fail):
     assert namespace["get_trtllm_utils_module"]() is native
 
 
+def callable_control(arm):
+    jit = ModuleType("delay_fixture.jit.tllm_utils")
+    jit.gen_trtllm_utils_module = lambda: None
+    ffi = ModuleType("tvm_ffi")
+    with (
+        tempfile.TemporaryDirectory() as directory,
+        patch.dict(
+            "sys.modules", {"delay_fixture.jit.tllm_utils": jit, "tvm_ffi": ffi}
+        ),
+    ):
+        source = Path(directory) / "tllm_utils.py"
+        source.write_bytes(binding.wrapper_source(arm))
+        spec = importlib.util.spec_from_file_location(
+            "delay_fixture.tllm_utils", source
+        )
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        function = module.delay_kernel
+        assert all(binding.verify_delay_callable(source, function, function).values())
+
+        changed = binding.wrapper_source(arm).replace(
+            b".delay_kernel(stream_delay_micro_secs)",
+            b".delay_kernel(stream_delay_micro_secs + 1)",
+        )
+        namespace = {
+            "__name__": "delay_fixture.changed",
+            "__package__": "delay_fixture",
+        }
+        exec(compile(changed, str(source), "exec", dont_inherit=True), namespace)
+        other_function = namespace["delay_kernel"]
+        same_code_alias = FunctionType(function.__code__, function.__globals__)
+        for actual, alias, failed_field in (
+            (other_function, other_function, "code_matches"),
+            (function, same_code_alias, "profiler_alias_matches"),
+        ):
+            try:
+                binding.verify_delay_callable(source, actual, alias)
+            except RuntimeError as error:
+                assert f'"{failed_field}": false' in str(error)
+            else:
+                raise AssertionError("modified callable accepted: " + failed_field)
+
+
 def main():
     for arm in ("baseline", "patched"):
+        callable_control(arm)
         for fail in (False, True):
             wrapper_control(arm, fail)
         binding.validate_ordering(fixture(arm))
@@ -229,6 +276,7 @@ def main():
             {
                 "status": "passed",
                 "wrapper_protocol_cases": 4,
+                "callable_identity_cases": 6,
                 "valid_gate_cases": 2,
                 "rejected_evidence_cases": [row[0] for row in controls],
                 "limits": "CPU boundary simulation and evidence validation only; CUDA ordering remains untested.",

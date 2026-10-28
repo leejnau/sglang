@@ -148,5 +148,14 @@
     "native_changed": false,
     "application": "Separate source-file overlays mounted at the same canonical source path before imports. Every other qualified source and native artifact must remain byte-identical.",
     "control": "Baseline file matches qualified source27c62; patched file is byte-identical to upstream head e6bcdebdefff9ad6dd635cb357ead72b0e7f9da6."
+  },
+  "execution_attempt": 2,
+  "attempt_history": {
+    "previous_execution_commit": "b687aecf9e1a4e1dd0e7ae407b239b60759dfd8c",
+    "previous_status": "Baseline ordering diagnostics passed; patched process stopped during bootstrap before diagnostics. No admission or MLP timing ran.",
+    "preserved_archive_sha256": "8a63be2eb6c9c5b5ec2afb040fa312eaf164e215cc558549625af073c9db3ba4",
+    "correction": "The harness compared marshal serialization of code objects. Native-free CPython3.12 reproduction accepts baseline but rejects byte-identical patched source despite equal code objects and all semantic fields. Replace serialization equality with structural code equality, explicit location metadata and unchanged profiler-alias identity. No FlashInfer patch, native code, measurement settings, fixture, schedules or cohort size changed.",
+    "isolation": "Use a fresh allocation and staging tree. Internal container source/runtime/raw paths retain historical attempt01 names solely for native build-path compatibility; execution commit, master-plan hash, coordinator root, archive filenames and publication attempt02 distinguish this attempt. No earlier result is overwritten or pooled.",
+    "transport": "Use compute-local streamed staging; retain the original failed login-local transport record."
   }
 }

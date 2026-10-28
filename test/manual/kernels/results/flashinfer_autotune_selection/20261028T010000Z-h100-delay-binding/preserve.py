@@ -11,9 +11,11 @@ def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def preserve(study, phase, destination):
+def preserve(study, phase, destination, attempt=1):
+    if attempt not in (1, 2):
+        raise ValueError("unknown experiment attempt")
     root = study / "results/delay-binding/attempt01"
-    stem = "20261028T010000Z-h100-delay-binding-attempt01-" + phase
+    stem = f"20261028T010000Z-h100-delay-binding-attempt{attempt:02d}-" + phase
     archive = destination / (stem + "-full-raw.tgz")
     receipt = destination / (stem + "-preservation.json")
     manifest = root / ("preservation-manifest-" + phase + ".json")
@@ -72,8 +74,13 @@ def main():
         "--phase", choices=("ordering", "admission", "timing"), required=True
     )
     parser.add_argument("--destination", type=Path, required=True)
+    parser.add_argument("--attempt", type=int, choices=(1, 2), default=1)
     args = parser.parse_args()
-    print(json.dumps(preserve(args.study, args.phase, args.destination), indent=2))
+    print(
+        json.dumps(
+            preserve(args.study, args.phase, args.destination, args.attempt), indent=2
+        )
+    )
 
 
 if __name__ == "__main__":

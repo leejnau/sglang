@@ -11,7 +11,6 @@ import hashlib
 import importlib.metadata
 import inspect
 import json
-import marshal
 import math
 import os
 import statistics
@@ -86,6 +85,29 @@ def write_json(path, data):
         output.write("\n")
 
 
+def verify_delay_callable(source, function, profiler_alias):
+    compiled = compile(source.read_bytes(), str(source), "exec", dont_inherit=True)
+    expected = next(
+        item
+        for item in compiled.co_consts
+        if isinstance(item, CodeType) and item.co_name == "delay_kernel"
+    )
+    actual = function.__code__
+    comparison = {
+        "code_matches": expected == actual,
+        "filename_matches": expected.co_filename == actual.co_filename,
+        "line_table_matches": expected.co_linetable == actual.co_linetable,
+        "exception_table_matches": expected.co_exceptiontable
+        == actual.co_exceptiontable,
+        "profiler_alias_matches": profiler_alias is function,
+    }
+    require(
+        all(comparison.values()),
+        "delay callable identity differs: " + json.dumps(comparison, sort_keys=True),
+    )
+    return comparison
+
+
 def attest(arm):
     import objective_values_bootstrap as bootstrap
     import torch
@@ -99,16 +121,8 @@ def attest(arm):
         and source.read_bytes() == wrapper_source(arm),
         "loaded delay wrapper source differs",
     )
-    compiled = compile(source.read_bytes(), str(source), "exec", dont_inherit=True)
-    code = next(
-        item
-        for item in compiled.co_consts
-        if isinstance(item, CodeType) and item.co_name == "delay_kernel"
-    )
-    require(
-        marshal.dumps(code) == marshal.dumps(tllm_utils.delay_kernel.__code__)
-        and autotuner.delay_kernel is tllm_utils.delay_kernel,
-        "delay callable or profiler import differs from loaded source",
+    callable_comparison = verify_delay_callable(
+        source, tllm_utils.delay_kernel, autotuner.delay_kernel
     )
     require(
         tllm_utils.get_trtllm_utils_module() is bootstrap.native_delay,
@@ -147,6 +161,7 @@ def attest(arm):
         "wrapper_path": str(source),
         "wrapper_sha256": sha(source),
         "callable_matches_source": True,
+        "callable_comparison": callable_comparison,
         "profiler_alias_matches": True,
         "native_identity_passthrough": True,
         "native": native,
