@@ -12,17 +12,14 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("--mode", choices=["legacy", "scoped", "disabled"], required=True)
     p.add_argument("--output", type=Path, required=True)
+    p.add_argument("--cache", type=Path, required=True)
     args = p.parse_args()
     assert not args.output.exists()
     result = {"mode": args.mode, "status": "started", "started": time.time()}
     os.environ["SGLANG_ENABLE_FLASHINFER_GRAPH_AUTOTUNE"] = (
         "0" if args.mode == "legacy" else "1"
     )
-    os.environ["SGLANG_CACHE_DIR"] = (
-        "/study/pilot-scoped-cache"
-        if args.mode == "scoped"
-        else "/study/pilot-legacy-cache"
-    )
+    os.environ["SGLANG_CACHE_DIR"] = str(args.cache)
     os.environ["SGLANG_FLASHINFER_AUTOTUNE_CACHE"] = "1"
     engine = None
     try:

@@ -57,5 +57,11 @@
     16
   ],
   "numerical_padding": "3->4 and 7->16 additionally check padding; performance matrix remains batches 1/4/16",
-  "shared_compilation_caches": "Triton and CUDA driver compile caches shared from admitted pilot for both arms; FlashInfer autotune stores remain isolated per arm/seed. Cold means cold tactic cache; initial full-JIT pilot is recorded separately."
+  "shared_compilation_caches": "Triton and CUDA driver compile caches shared from admitted pilot for both arms; FlashInfer autotune stores remain isolated per arm/seed. Cold means cold tactic cache; initial full-JIT pilot is recorded separately.",
+  "measurement_policy": "Unspecified in both arms; preserve operation-owned timing settings.",
+  "design_refinement": {
+    "superseded_production_commit": "24c91103d2",
+    "reason": "Forced graph policy produced a reproducible approximately 0.6% batch-16 slowdown against one baseline cache. Narrow this integration to scoped ownership/persistence and retain operation measurement settings. Preserve the complete original cohort separately.",
+    "new_cohort": "Fresh tactic caches, same ABBA/BAAB ordering, geometry, source dependency and hardware. No pooling with prior forced-policy results."
+  }
 }

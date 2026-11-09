@@ -49,8 +49,7 @@ def run():
         profiles, resets = [], []
 
         def profile(runner, inputs, tactic, config, **kwargs):
-            policy = tuner._effective_measure_policy
-            winner = 2 if policy is not None else 1
+            winner = 2 if tuner._winner_cache_identity() is not None else 1
             profiles.append(tactic)
             return 1.0 if tactic == winner else 10.0
 
@@ -81,6 +80,10 @@ def run():
             with scope.capture_context(choose, reset):
                 check(choose() == 2, "graph winner differs from legacy")
                 check(tuner._v2_local.strict_replay, "strict capture lookup")
+                check(
+                    tuner._effective_measure_policy is None,
+                    "measurement policy unchanged",
+                )
             check(state() == before and choose() == 1, "bare legacy lookup restored")
             check(len(resets) == 1, "preparation resets attention state")
             tuner.save_configs(str(root / "after.json"))

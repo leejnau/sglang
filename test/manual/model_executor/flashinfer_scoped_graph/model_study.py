@@ -118,6 +118,7 @@ def run(args, result):
 
     def profile(t, runner, inputs, tactic, config, **kwargs):
         assert stage[0] == "startup", "profiling after startup"
+        assert t._effective_measure_policy is None, "measurement policy changed"
         start = time.perf_counter()
         value = original_profile(t, runner, inputs, tactic, config, **kwargs)
         profiles.append(
@@ -157,6 +158,7 @@ def run(args, result):
         return winner
 
     def capture(backend, key, forward, *a, **k):
+        assert tuner._effective_measure_policy is None, "measurement policy changed"
         before = len(profiles)
         report = tuner._v2_local.replay_report
         answer = original_capture(backend, key, forward, *a, **k)

@@ -12,8 +12,8 @@ sg = control_tests.sg
 source = inspect.getsource(sg.FlashInferGraphAutotune)
 changes = {
     "policy": (
-        'measurement_policy=MeasurementPolicy(execution_mode="cuda_graph"),',
-        "measurement_policy=None,",
+        'cache_scope="context",',
+        'cache_scope="context", measurement_policy=__import__("flashinfer.autotune_cache", fromlist=["MeasurementPolicy"]).MeasurementPolicy(execution_mode="cuda_graph"),',
     ),
     "scope": ('cache_scope="context",', 'cache_scope="process",'),
     "skip": ("skip_ops=self.skip_ops,", "skip_ops=(),"),
@@ -27,7 +27,7 @@ try:
     control_tests.run()
 except (AssertionError, RuntimeError, ValueError) as error:
     expected = {
-        "policy": "graph winner differs from legacy",
+        "policy": "measurement policy unchanged",
         "scope": "strict_replay requires an identified context-scoped cache",
         "skip": "skip overrides populated graph winner",
         "reuse": "reuse-off isolates each capture session",
