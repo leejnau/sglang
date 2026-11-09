@@ -48,5 +48,14 @@
     "criterion": "For every tested shape, paired median scoped/baseline latency <=1.03; if excess or CI includes >1.03, investigate and repeat only the ambiguous case. No statistically supported regression accepted. Neutral within noise is sufficient. Separate cold startup from serving."
   },
   "publication": "source and results on leejnau fork; no PR until user requests",
-  "created_before_measurements": true
+  "created_before_measurements": true,
+  "numerical_batches": [
+    1,
+    3,
+    4,
+    7,
+    16
+  ],
+  "numerical_padding": "3->4 and 7->16 additionally check padding; performance matrix remains batches 1/4/16",
+  "shared_compilation_caches": "Triton and CUDA driver compile caches shared from admitted pilot for both arms; FlashInfer autotune stores remain isolated per arm/seed. Cold means cold tactic cache; initial full-JIT pilot is recorded separately."
 }

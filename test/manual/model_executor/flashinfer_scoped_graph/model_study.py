@@ -192,6 +192,13 @@ def run(args, result):
             assert result["cache_before"] == result["cache_after_startup"], (
                 "warm boot rewrote caches"
             )
+        if args.no_reuse and result["cache_before"]:
+            stable = lambda inventory: {
+                k: v for k, v in inventory.items() if "/runs/" not in k
+            }
+            assert stable(result["cache_before"]) == stable(
+                result["cache_after_startup"]
+            ), "reuse-off replaced stable winners"
         graph = bench.torch_runner.decode_cuda_graph_runner
         assert len(graph.backend._graphs) == 3
         tokens = [
@@ -221,7 +228,7 @@ def run(args, result):
             return batch
 
         with patch.object(AutoTuner, "_profile_single_kernel", forbidden):
-            for bs in (1, 4, 16):
+            for bs in (1, 3, 4, 7, 16):
                 for length in (32, 256):
                     outputs = []
                     for label, token in zip(
@@ -272,7 +279,7 @@ def run(args, result):
                         "changed input ineffective"
                     )
                     assert torch.allclose(outputs[0], outputs[2], atol=0.05, rtol=0.01)
-                    if args.no_perf:
+                    if args.no_perf or bs not in (1, 4, 16):
                         continue
                     batch = setup(bs, length)
                     token = torch.full(
