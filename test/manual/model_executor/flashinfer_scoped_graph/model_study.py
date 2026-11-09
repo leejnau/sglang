@@ -15,7 +15,7 @@ from unittest.mock import patch
 def files(root):
     return {
         str(p.relative_to(root)): hashlib.sha256(p.read_bytes()).hexdigest()
-        for p in root.rglob("*.json")
+        for p in (root / "flashinfer" / "autotune").rglob("*.json")
     }
 
 
