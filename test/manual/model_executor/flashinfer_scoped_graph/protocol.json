@@ -1,0 +1,52 @@
+{
+  "baseline_sglang": "78e6e9fc4dd5eecf19fd76f5393a1ae683ee83b0",
+  "flashinfer": "0.7.3 stock pinned release; verify loaded wheel and native providers",
+  "hardware": "one exclusive H100; same allocation for both arms",
+  "model": "nvidia/Llama-3.1-8B-Instruct-FP8",
+  "revision": "42d9515ebd69eea3a87351d079c671c3c5ff0a31",
+  "arms": [
+    "default legacy startup/cache",
+    "opt-in scoped decode graph cache"
+  ],
+  "capture_batches": [
+    1,
+    4,
+    16
+  ],
+  "prompt_lengths": [
+    32,
+    256
+  ],
+  "checks": [
+    "cold/fresh-process warm cache",
+    "eager vs graph logits original/changed/restored inputs",
+    "default path retains legacy cache",
+    "no new profiling in serving or warm process",
+    "skip-op, disable tuning, disable graphs, cache reuse off",
+    "strict miss and error restoration controls"
+  ],
+  "numerics": {
+    "atol": 0.05,
+    "rtol": 0.01,
+    "argmax_equal": true,
+    "finite": true
+  },
+  "performance": {
+    "order": "ABBA then BAAB; two independent cold seeds per arm, fresh warm serving processes",
+    "warmup_replays": 30,
+    "graph_replay_blocks": 20,
+    "replays_per_block": 50,
+    "decode_steps": 64,
+    "repeat_requests": 5,
+    "metrics": [
+      "CUDA event direct graph latency",
+      "synchronized full decode path wall time",
+      "fresh-process startup seconds",
+      "GPU memory",
+      "selected tactics"
+    ],
+    "criterion": "For every tested shape, paired median scoped/baseline latency <=1.03; if excess or CI includes >1.03, investigate and repeat only the ambiguous case. No statistically supported regression accepted. Neutral within noise is sufficient. Separate cold startup from serving."
+  },
+  "publication": "source and results on leejnau fork; no PR until user requests",
+  "created_before_measurements": true
+}
