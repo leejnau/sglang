@@ -1,0 +1,12 @@
+{
+  "status": "superseded_design",
+  "production_commit": "24c91103d2",
+  "benchmark_harness_commit": "e6e9fa54ee",
+  "analysis_commit": "7271519882",
+  "baseline": "78e6e9fc4dd5eecf19fd76f5393a1ae683ee83b0",
+  "decision": "Keep these complete results as evidence. Remove the explicit graph measurement policy from the proposed integration and requalify the narrower ownership/persistence change in a separate cohort.",
+  "observation": "All numerical and persistence checks passed. Batch 16 was consistently approximately 0.51-0.59% slower against baseline cache seed 0. Aggregate +0.25-0.28% hid that per-seed tradeoff. This did not exceed the predeclared 3% threshold, but motivated the smaller scope.",
+  "attribution_limit": "Captured choices changed; these data do not isolate a single tactic as the cause. Baseline cache seed 1 was approximately neutral at batch 16.",
+  "comparison": "Existing SGLang startup already uses v2 default-candidate selection plus v1 persistence. This is not a pure v1 versus v2 tuner comparison.",
+  "remaining_evidence": "Raw per-lookup records, cache files, logits and logs retained in the private qualification archive; each compact record includes its raw-file SHA256."
+}

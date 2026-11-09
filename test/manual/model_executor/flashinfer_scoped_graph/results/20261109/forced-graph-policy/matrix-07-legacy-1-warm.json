@@ -1,0 +1,1421 @@
+{
+  "status": "passed",
+  "arguments": {
+    "model": "/study/model",
+    "cache": "/study/matrix-legacy-1-cache",
+    "output": "/study/matrix-07-legacy-1-warm.json",
+    "arm": "legacy",
+    "phase": "warm",
+    "skip": "False",
+    "disable": "False",
+    "no_reuse": "False",
+    "no_perf": "False"
+  },
+  "started": 1794266925.8577254,
+  "environment": {
+    "torch": "2.14.1+cu130",
+    "cuda": "13.0",
+    "flashinfer": "0.7.3",
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "pid": 77,
+    "sglang_source": "/study/sglang/python/sglang/benchmark/one_batch.py"
+  },
+  "source_files": {
+    "one_batch": {
+      "path": "/study/sglang/python/sglang/benchmark/one_batch.py",
+      "sha256": "3d49a34df58d73c4d518e1a9a98395808190e494645cab2c298713bf95769be4"
+    },
+    "sglang_autotune": {
+      "path": "/study/sglang/python/sglang/srt/model_executor/runner/flashinfer_autotune.py",
+      "sha256": "55d115b836330b580fcf5b2139483304f5d0ac88ac68436adadac10e1d4cb4e0"
+    },
+    "flashinfer_cache": {
+      "path": "/study/deps/flashinfer/autotune_cache.py",
+      "sha256": "f720a6ad2cb232bdb3dd396690ea3a3cb6cc9f099642bbcae8c6d956bdecdfb7"
+    },
+    "flashinfer_tuner": {
+      "path": "/study/deps/flashinfer/autotuner/autotuner.py",
+      "sha256": "6d92bcd26f5e3213c5bc3e340a5f3b4c8e9b7b5bd214144396b6f1fa396bab4d"
+    }
+  },
+  "cache_before": {
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.json": "47906e73eae06e1c5b841565ada36348c1e8203fa68053a6f4633fce8144fb9e"
+  },
+  "config": {
+    "model_path": "/study/model",
+    "tokenizer_path": "/study/model",
+    "quantization": "modelopt_fp8",
+    "dtype": "bfloat16",
+    "device": "cuda",
+    "tp_size": 1,
+    "max_running_requests": 16,
+    "max_total_tokens": 8192,
+    "context_length": 512,
+    "mem_fraction_static": 0.7,
+    "disable_overlap_schedule": true,
+    "attention_backend": "triton",
+    "kv_cache_dtype": "bfloat16",
+    "cuda_graph_config": {
+      "decode": {
+        "backend": "full",
+        "bs": [
+          1,
+          4,
+          16
+        ],
+        "max_bs": 16
+      },
+      "prefill": {
+        "backend": "disabled"
+      }
+    }
+  },
+  "profiles": [],
+  "captures": [
+    {
+      "key": "ShapeKey(size=16, variant_label=None, attention_variant=None, logits_variant=None)",
+      "profile_delta": 0,
+      "coverage": null
+    },
+    {
+      "key": "ShapeKey(size=4, variant_label=None, attention_variant=None, logits_variant=None)",
+      "profile_delta": 0,
+      "coverage": null
+    },
+    {
+      "key": "ShapeKey(size=1, variant_label=None, attention_variant=None, logits_variant=None)",
+      "profile_delta": 0,
+      "coverage": null
+    }
+  ],
+  "startup_seconds": 33.336506977910176,
+  "startup_peak_memory_bytes": 10348950016,
+  "loaded_native_paths": [
+    "/opt/sglang/lib/python3.12/site-packages/cudnn/_compiled_module.cpython-312-x86_64-linux-gnu.so",
+    "/opt/sglang/lib/python3.12/site-packages/nvidia/cu13/lib/libcublas.so.13",
+    "/opt/sglang/lib/python3.12/site-packages/nvidia/cu13/lib/libcublasLt.so.13",
+    "/opt/sglang/lib/python3.12/site-packages/nvidia/cudnn/lib/libcudnn.so.9",
+    "/opt/sglang/lib/python3.12/site-packages/nvidia/cudnn/lib/libcudnn_graph.so.9",
+    "/study/workspace/.cache/flashinfer/0.7.3/90a/cached_ops/gemm/gemm.so",
+    "/usr/local/cuda-13.0/targets/x86_64-linux/lib/libcublas.so.13.1.1.3"
+  ],
+  "cache_after_startup": {
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.json": "47906e73eae06e1c5b841565ada36348c1e8203fa68053a6f4633fce8144fb9e"
+  },
+  "bare_identity": "None",
+  "numerics": [
+    {
+      "batch": 1,
+      "length": 32,
+      "case": "original",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 1,
+      "length": 32,
+      "case": "changed",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 1,
+      "length": 32,
+      "case": "restored",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 1,
+      "length": 256,
+      "case": "original",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 1,
+      "length": 256,
+      "case": "changed",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 1,
+      "length": 256,
+      "case": "restored",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 3,
+      "length": 32,
+      "case": "original",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 3,
+      "length": 32,
+      "case": "changed",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 3,
+      "length": 32,
+      "case": "restored",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 3,
+      "length": 256,
+      "case": "original",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 3,
+      "length": 256,
+      "case": "changed",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 3,
+      "length": 256,
+      "case": "restored",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 4,
+      "length": 32,
+      "case": "original",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 4,
+      "length": 32,
+      "case": "changed",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 4,
+      "length": 32,
+      "case": "restored",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 4,
+      "length": 256,
+      "case": "original",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 4,
+      "length": 256,
+      "case": "changed",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 4,
+      "length": 256,
+      "case": "restored",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 7,
+      "length": 32,
+      "case": "original",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 7,
+      "length": 32,
+      "case": "changed",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 7,
+      "length": 32,
+      "case": "restored",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 7,
+      "length": 256,
+      "case": "original",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 7,
+      "length": 256,
+      "case": "changed",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 7,
+      "length": 256,
+      "case": "restored",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 16,
+      "length": 32,
+      "case": "original",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 16,
+      "length": 32,
+      "case": "changed",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 16,
+      "length": 32,
+      "case": "restored",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 16,
+      "length": 256,
+      "case": "original",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 16,
+      "length": 256,
+      "case": "changed",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 16,
+      "length": 256,
+      "case": "restored",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    }
+  ],
+  "performance": [
+    {
+      "batch": 1,
+      "length": 32,
+      "graph_ms": [
+        4.1440478515625,
+        4.138341064453125,
+        4.140453186035156,
+        4.139046325683593,
+        4.1396826171875,
+        4.138871765136718,
+        4.139463806152344,
+        4.1394195556640625,
+        4.138426208496094,
+        4.139486694335938,
+        4.139162902832031,
+        4.139684448242187,
+        4.140313720703125,
+        4.139370727539062,
+        4.138175354003907,
+        4.138561401367188,
+        4.138965759277344,
+        4.13884033203125,
+        4.140466003417969,
+        4.140484619140625
+      ],
+      "decode_ms": [
+        4.209237406030297,
+        4.197214562736917,
+        4.195738343696576,
+        4.197689031570917,
+        4.19621654873481
+      ]
+    },
+    {
+      "batch": 1,
+      "length": 256,
+      "graph_ms": [
+        4.232051086425781,
+        4.2288427734375,
+        4.227607116699219,
+        4.227803649902344,
+        4.228373718261719,
+        4.2283328247070315,
+        4.227747192382813,
+        4.228712463378907,
+        4.228218994140625,
+        4.229525756835938,
+        4.228721923828125,
+        4.228721313476562,
+        4.228179931640625,
+        4.228388366699218,
+        4.227813720703125,
+        4.228887634277344,
+        4.228928527832031,
+        4.228839111328125,
+        4.226952819824219,
+        4.227319641113281
+      ],
+      "decode_ms": [
+        4.282485719159013,
+        4.279463093553204,
+        4.280540029867552,
+        4.280204047972802,
+        4.279710516129853
+      ]
+    },
+    {
+      "batch": 4,
+      "length": 32,
+      "graph_ms": [
+        4.239491882324219,
+        4.233515014648438,
+        4.233229370117187,
+        4.23223876953125,
+        4.232275695800781,
+        4.234745483398438,
+        4.2320556640625,
+        4.2334356689453125,
+        4.232183532714844,
+        4.232371215820312,
+        4.233145751953125,
+        4.234117126464843,
+        4.233141784667969,
+        4.233057861328125,
+        4.233575134277344,
+        4.234046630859375,
+        4.232993774414062,
+        4.232366638183594,
+        4.234223937988281,
+        4.232318725585937
+      ],
+      "decode_ms": [
+        4.292077283025719,
+        4.292650610295823,
+        4.293268233595882,
+        4.292940029699821,
+        4.293352485547075
+      ]
+    },
+    {
+      "batch": 4,
+      "length": 256,
+      "graph_ms": [
+        4.351412353515625,
+        4.340686645507812,
+        4.337558898925781,
+        4.339613342285157,
+        4.339713134765625,
+        4.339407348632813,
+        4.338130493164062,
+        4.338649597167969,
+        4.338733520507812,
+        4.3391571044921875,
+        4.33960693359375,
+        4.340509338378906,
+        4.33877197265625,
+        4.338068542480468,
+        4.339488525390625,
+        4.339637145996094,
+        4.339548950195312,
+        4.339861755371094,
+        4.339682006835938,
+        4.339905395507812
+      ],
+      "decode_ms": [
+        4.418040778546128,
+        4.417363328684587,
+        4.4159405151731335,
+        4.416742842295207,
+        4.418741827976191
+      ]
+    },
+    {
+      "batch": 16,
+      "length": 32,
+      "graph_ms": [
+        4.377679443359375,
+        4.371892395019532,
+        4.372384033203125,
+        4.372529907226562,
+        4.372203369140625,
+        4.3724212646484375,
+        4.373099670410157,
+        4.373804016113281,
+        4.372890930175782,
+        4.372897338867188,
+        4.372839660644531,
+        4.37361083984375,
+        4.372707214355469,
+        4.373062438964844,
+        4.372357177734375,
+        4.373004760742187,
+        4.3727200317382815,
+        4.373006591796875,
+        4.3725106811523435,
+        4.371806640625
+      ],
+      "decode_ms": [
+        4.4925406109541655,
+        4.490020281082252,
+        4.492035001021577,
+        4.4909611278853845,
+        4.473576998861972
+      ]
+    },
+    {
+      "batch": 16,
+      "length": 256,
+      "graph_ms": [
+        4.591465454101563,
+        4.583644104003906,
+        4.583960266113281,
+        4.583865661621093,
+        4.5834521484375,
+        4.582799377441407,
+        4.5838861083984375,
+        4.584031372070313,
+        4.583598022460937,
+        4.584810791015625,
+        4.5833956909179685,
+        4.583713989257813,
+        4.583619079589844,
+        4.584389038085938,
+        4.584151000976562,
+        4.58421875,
+        4.584256591796875,
+        4.584722595214844,
+        4.58372802734375,
+        4.584340515136719
+      ],
+      "decode_ms": [
+        4.724667080154177,
+        4.7313315626524854,
+        4.737441733595915,
+        4.719224187283544,
+        4.725569531728979
+      ]
+    }
+  ],
+  "cache_after_serving": {
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.json": "47906e73eae06e1c5b841565ada36348c1e8203fa68053a6f4633fce8144fb9e"
+  },
+  "finished": 1794267030.55306,
+  "raw_file_sha256": "cb7e8e6b3a38d3aa4f08bb8d3667f81b31013cbc3c65f21e1a72298878d575a1",
+  "raw_file_bytes": 696447,
+  "selection_record_count": 1280,
+  "counted_selections": [
+    {
+      "capturing": false,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          1,
+          14336
+        ],
+        [
+          1,
+          14336,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "0",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          1,
+          4096,
+          28672
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          28672
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "2",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          1,
+          4096,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "0",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          1,
+          4096,
+          6144
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          6144
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "1",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          16,
+          14336
+        ],
+        [
+          1,
+          14336,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "0",
+      "count": 96
+    },
+    {
+      "capturing": false,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          1,
+          4096,
+          28672
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          28672
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "1",
+      "count": 96
+    },
+    {
+      "capturing": false,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          1,
+          4096,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "-1",
+      "count": 96
+    },
+    {
+      "capturing": false,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          1,
+          4096,
+          6144
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          6144
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "1",
+      "count": 96
+    },
+    {
+      "capturing": false,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          4,
+          14336
+        ],
+        [
+          1,
+          14336,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "0",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          1,
+          4096,
+          28672
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          28672
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "2",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          1,
+          4096,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "0",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          1,
+          4096,
+          6144
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          6144
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "1",
+      "count": 64
+    },
+    {
+      "capturing": true,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          1,
+          14336
+        ],
+        [
+          1,
+          14336,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "0",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          1,
+          4096,
+          28672
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          28672
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "2",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          1,
+          4096,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "0",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          1,
+          4096,
+          6144
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          6144
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "1",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          16,
+          14336
+        ],
+        [
+          1,
+          14336,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "0",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          1,
+          4096,
+          28672
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          28672
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "1",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          1,
+          4096,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "-1",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          1,
+          4096,
+          6144
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          6144
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "1",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          4,
+          14336
+        ],
+        [
+          1,
+          14336,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "0",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          1,
+          4096,
+          28672
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          28672
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "2",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          1,
+          4096,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "0",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          1,
+          4096,
+          6144
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          6144
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "1",
+      "count": 32
+    }
+  ]
+}

@@ -1,0 +1,2084 @@
+{
+  "status": "passed",
+  "arguments": {
+    "model": "/study/model",
+    "cache": "/study/matrix-scoped-0-cache",
+    "output": "/study/matrix-03-scoped-0-warm.json",
+    "arm": "scoped",
+    "phase": "warm",
+    "skip": "False",
+    "disable": "False",
+    "no_reuse": "False",
+    "no_perf": "False"
+  },
+  "started": 1794266494.3421001,
+  "environment": {
+    "torch": "2.14.1+cu130",
+    "cuda": "13.0",
+    "flashinfer": "0.7.3",
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "pid": 75,
+    "sglang_source": "/study/sglang/python/sglang/benchmark/one_batch.py"
+  },
+  "source_files": {
+    "one_batch": {
+      "path": "/study/sglang/python/sglang/benchmark/one_batch.py",
+      "sha256": "3d49a34df58d73c4d518e1a9a98395808190e494645cab2c298713bf95769be4"
+    },
+    "sglang_autotune": {
+      "path": "/study/sglang/python/sglang/srt/model_executor/runner/flashinfer_autotune.py",
+      "sha256": "55d115b836330b580fcf5b2139483304f5d0ac88ac68436adadac10e1d4cb4e0"
+    },
+    "flashinfer_cache": {
+      "path": "/study/deps/flashinfer/autotune_cache.py",
+      "sha256": "f720a6ad2cb232bdb3dd396690ea3a3cb6cc9f099642bbcae8c6d956bdecdfb7"
+    },
+    "flashinfer_tuner": {
+      "path": "/study/deps/flashinfer/autotuner/autotuner.py",
+      "sha256": "6d92bcd26f5e3213c5bc3e340a5f3b4c8e9b7b5bd214144396b6f1fa396bab4d"
+    }
+  },
+  "cache_before": {
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.json": "ae94f9f18097242c866ede6eed991d1044b92c2b574b3cb73939d2b950794a3d",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/manifest.json": "5f78c481193a16d3e8c0aac14c1748ca1a1fb4c0604c5e5be14c34f3a2d8d326",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/d9f1a6ac1026953e9960e24e.json": "d45a7e896b473b326bb5e24be57577c34c717bc6686fda601a2417cd16096c80",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/eef11f476aed4bbdda256c02.json": "37266b86a962deb1ba50f134646cd078760ad241eb7b3498a4b16933cc3e8337",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/a9fde641697e2870bec801e2.json": "4844c41aa3f99577bb4d84e7256b4e9454ee4a80482981f0533259dbdedd5ce0",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/c0d7f12a314997f748436dfc.json": "43be987da09e55340842ec539bf28e7a233e892d7abfd043996ee379f382501b",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/50cf908289a68d95eb237cac.json": "8c537407b2cd3ef7134747638f850a04c78d6b550142f2ebb841cc73e43c0d86",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/8b48fd7fc61b81ff351bd405.json": "5a9587d4cddea947498ef41e429ceafaf41f7e028ffb110f71fadc8cfa7e8630",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/fb67b57357ce06be64b78c10.json": "8e22f0e9813a614ecfdba7388fa59ec813f8bbb809da92adc4877f5caf6b202b",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/00c7d5409a3a5b07b7265c28.json": "07aa59789dde9b897e34c729085a6f67863b880683245a32ed92cdaba7ddb015",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/402d0d6c1908a56bedc5123e.json": "00e9b8f2f05338811e88175692a845324b580f5a756855da2751bc30810b0913",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/9385e8cab4a230231a7f99a4.json": "dcee226fb55ec776c638a690b4238ccea01665eabfa4411f01a33da7dfdc00f7",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/ec0b40d5b274ce3f8c7993e8.json": "1dc0bbf4d31563d2caaa1c83f079173aaef2eb8073ff057797e78bf24a07ff50",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/bccfcb560410ca5e96cb1c15.json": "abd2307cbe8fbacc52c130114931a4f48e259ca8c881f4c59b8ab45452b13d1e",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/89f8bf5672198970d300619b.json": "61174bf2fbf2c02f554728535534116e2caef461124e81d03ed3c88ee2961713",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/5c5673ad0a0dd4f5bb49e4b2.json": "73c2979a8bdd07a42d54f46bc42e158db703f94f7d9936d7686b7de17df8c8c9",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/10150c9cf43d7b6b297e6ced.json": "990746c1803ae94bf6cf611deb18f2dd8423e08c5c684cdee4f93857e53e2ccb",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/f03cfa7b49cfb21210060136.json": "1220c358fdd870b5436258c8aef5881430b39da57f18cb4ae18dd9d55f7c5f3a",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/4e5f76e412d369c6ae1239b5.json": "600674fd669b7cd3bdcc6781c3755f12804dbf4eac0593c35d49acaec216c180",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/e778186b3f8fa6df3578d25f.json": "f9a317d7f58907c44d9fd48d8dcc717d0fb9a92bfad062c47c05201bab851e1f",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/9e7e4eeaf7d2513a6e2ff209.json": "c811d386c94b7bbb700acc04ff054db1ee18fd887509d0ecda40d2bbad67ac6d",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/09ef8a723aa07486eb026106.json": "105cccc40fb42ade4b9daaf40faca476260040382afeb20c4fa4f2d397a46c67"
+  },
+  "config": {
+    "model_path": "/study/model",
+    "tokenizer_path": "/study/model",
+    "quantization": "modelopt_fp8",
+    "dtype": "bfloat16",
+    "device": "cuda",
+    "tp_size": 1,
+    "max_running_requests": 16,
+    "max_total_tokens": 8192,
+    "context_length": 512,
+    "mem_fraction_static": 0.7,
+    "disable_overlap_schedule": true,
+    "attention_backend": "triton",
+    "kv_cache_dtype": "bfloat16",
+    "cuda_graph_config": {
+      "decode": {
+        "backend": "full",
+        "bs": [
+          1,
+          4,
+          16
+        ],
+        "max_bs": 16
+      },
+      "prefill": {
+        "backend": "disabled"
+      }
+    }
+  },
+  "profiles": [],
+  "captures": [
+    {
+      "key": "ShapeKey(size=16, variant_label=None, attention_variant=None, logits_variant=None)",
+      "profile_delta": 0,
+      "coverage": {
+        "max_records": 64,
+        "hits": 384,
+        "misses": 0,
+        "skipped": 0,
+        "dropped_records": 320,
+        "record_count": 64,
+        "records_sha256": "b071e088a4adf117b518b6e6de53c816be27650d13dcee5b6989354df85da5d4"
+      }
+    },
+    {
+      "key": "ShapeKey(size=4, variant_label=None, attention_variant=None, logits_variant=None)",
+      "profile_delta": 0,
+      "coverage": {
+        "max_records": 64,
+        "hits": 384,
+        "misses": 0,
+        "skipped": 0,
+        "dropped_records": 320,
+        "record_count": 64,
+        "records_sha256": "349d9a7df4308a6456523f1748656a79a7afa06f193a33d1821648e425188e72"
+      }
+    },
+    {
+      "key": "ShapeKey(size=1, variant_label=None, attention_variant=None, logits_variant=None)",
+      "profile_delta": 0,
+      "coverage": {
+        "max_records": 64,
+        "hits": 384,
+        "misses": 0,
+        "skipped": 0,
+        "dropped_records": 320,
+        "record_count": 64,
+        "records_sha256": "e90cf05b676de2e44d83bdc09e893add9f2de46281642d3708ea51b0918dcf2a"
+      }
+    }
+  ],
+  "startup_seconds": 32.17095025093295,
+  "startup_peak_memory_bytes": 10348950016,
+  "loaded_native_paths": [
+    "/opt/sglang/lib/python3.12/site-packages/cudnn/_compiled_module.cpython-312-x86_64-linux-gnu.so",
+    "/opt/sglang/lib/python3.12/site-packages/nvidia/cu13/lib/libcublas.so.13",
+    "/opt/sglang/lib/python3.12/site-packages/nvidia/cu13/lib/libcublasLt.so.13",
+    "/opt/sglang/lib/python3.12/site-packages/nvidia/cudnn/lib/libcudnn.so.9",
+    "/opt/sglang/lib/python3.12/site-packages/nvidia/cudnn/lib/libcudnn_graph.so.9",
+    "/study/workspace/.cache/flashinfer/0.7.3/90a/cached_ops/gemm/gemm.so",
+    "/usr/local/cuda-13.0/targets/x86_64-linux/lib/libcublas.so.13.1.1.3"
+  ],
+  "cache_after_startup": {
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.json": "ae94f9f18097242c866ede6eed991d1044b92c2b574b3cb73939d2b950794a3d",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/manifest.json": "5f78c481193a16d3e8c0aac14c1748ca1a1fb4c0604c5e5be14c34f3a2d8d326",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/d9f1a6ac1026953e9960e24e.json": "d45a7e896b473b326bb5e24be57577c34c717bc6686fda601a2417cd16096c80",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/eef11f476aed4bbdda256c02.json": "37266b86a962deb1ba50f134646cd078760ad241eb7b3498a4b16933cc3e8337",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/a9fde641697e2870bec801e2.json": "4844c41aa3f99577bb4d84e7256b4e9454ee4a80482981f0533259dbdedd5ce0",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/c0d7f12a314997f748436dfc.json": "43be987da09e55340842ec539bf28e7a233e892d7abfd043996ee379f382501b",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/50cf908289a68d95eb237cac.json": "8c537407b2cd3ef7134747638f850a04c78d6b550142f2ebb841cc73e43c0d86",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/8b48fd7fc61b81ff351bd405.json": "5a9587d4cddea947498ef41e429ceafaf41f7e028ffb110f71fadc8cfa7e8630",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/fb67b57357ce06be64b78c10.json": "8e22f0e9813a614ecfdba7388fa59ec813f8bbb809da92adc4877f5caf6b202b",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/00c7d5409a3a5b07b7265c28.json": "07aa59789dde9b897e34c729085a6f67863b880683245a32ed92cdaba7ddb015",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/402d0d6c1908a56bedc5123e.json": "00e9b8f2f05338811e88175692a845324b580f5a756855da2751bc30810b0913",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/9385e8cab4a230231a7f99a4.json": "dcee226fb55ec776c638a690b4238ccea01665eabfa4411f01a33da7dfdc00f7",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/ec0b40d5b274ce3f8c7993e8.json": "1dc0bbf4d31563d2caaa1c83f079173aaef2eb8073ff057797e78bf24a07ff50",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/bccfcb560410ca5e96cb1c15.json": "abd2307cbe8fbacc52c130114931a4f48e259ca8c881f4c59b8ab45452b13d1e",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/89f8bf5672198970d300619b.json": "61174bf2fbf2c02f554728535534116e2caef461124e81d03ed3c88ee2961713",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/5c5673ad0a0dd4f5bb49e4b2.json": "73c2979a8bdd07a42d54f46bc42e158db703f94f7d9936d7686b7de17df8c8c9",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/10150c9cf43d7b6b297e6ced.json": "990746c1803ae94bf6cf611deb18f2dd8423e08c5c684cdee4f93857e53e2ccb",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/f03cfa7b49cfb21210060136.json": "1220c358fdd870b5436258c8aef5881430b39da57f18cb4ae18dd9d55f7c5f3a",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/4e5f76e412d369c6ae1239b5.json": "600674fd669b7cd3bdcc6781c3755f12804dbf4eac0593c35d49acaec216c180",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/e778186b3f8fa6df3578d25f.json": "f9a317d7f58907c44d9fd48d8dcc717d0fb9a92bfad062c47c05201bab851e1f",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/9e7e4eeaf7d2513a6e2ff209.json": "c811d386c94b7bbb700acc04ff054db1ee18fd887509d0ecda40d2bbad67ac6d",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/09ef8a723aa07486eb026106.json": "105cccc40fb42ade4b9daaf40faca476260040382afeb20c4fa4f2d397a46c67"
+  },
+  "bare_identity": "None",
+  "numerics": [
+    {
+      "batch": 1,
+      "length": 32,
+      "case": "original",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 1,
+      "length": 32,
+      "case": "changed",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 1,
+      "length": 32,
+      "case": "restored",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 1,
+      "length": 256,
+      "case": "original",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 1,
+      "length": 256,
+      "case": "changed",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 1,
+      "length": 256,
+      "case": "restored",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 3,
+      "length": 32,
+      "case": "original",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 3,
+      "length": 32,
+      "case": "changed",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 3,
+      "length": 32,
+      "case": "restored",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 3,
+      "length": 256,
+      "case": "original",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 3,
+      "length": 256,
+      "case": "changed",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 3,
+      "length": 256,
+      "case": "restored",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 4,
+      "length": 32,
+      "case": "original",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 4,
+      "length": 32,
+      "case": "changed",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 4,
+      "length": 32,
+      "case": "restored",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 4,
+      "length": 256,
+      "case": "original",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 4,
+      "length": 256,
+      "case": "changed",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 4,
+      "length": 256,
+      "case": "restored",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 7,
+      "length": 32,
+      "case": "original",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 7,
+      "length": 32,
+      "case": "changed",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 7,
+      "length": 32,
+      "case": "restored",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 7,
+      "length": 256,
+      "case": "original",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 7,
+      "length": 256,
+      "case": "changed",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 7,
+      "length": 256,
+      "case": "restored",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 16,
+      "length": 32,
+      "case": "original",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 16,
+      "length": 32,
+      "case": "changed",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 16,
+      "length": 32,
+      "case": "restored",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 16,
+      "length": 256,
+      "case": "original",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 16,
+      "length": 256,
+      "case": "changed",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 16,
+      "length": 256,
+      "case": "restored",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    }
+  ],
+  "performance": [
+    {
+      "batch": 1,
+      "length": 32,
+      "graph_ms": [
+        4.086702575683594,
+        4.083669738769531,
+        4.084236755371093,
+        4.084044799804688,
+        4.083701782226562,
+        4.0835205078125,
+        4.083376770019531,
+        4.082980346679688,
+        4.082887573242187,
+        4.083394470214844,
+        4.08226806640625,
+        4.0832177734375,
+        4.083469543457031,
+        4.08337158203125,
+        4.083137817382813,
+        4.0841976928710935,
+        4.082574768066406,
+        4.084352111816406,
+        4.08336181640625,
+        4.082970275878906
+      ],
+      "decode_ms": [
+        4.144787231780356,
+        4.137323518079938,
+        4.13807364020613,
+        4.137278388952836,
+        4.13639290491119
+      ]
+    },
+    {
+      "batch": 1,
+      "length": 256,
+      "graph_ms": [
+        4.177326049804687,
+        4.172908020019531,
+        4.172752685546875,
+        4.172325134277344,
+        4.171956481933594,
+        4.172958679199219,
+        4.1727685546875,
+        4.172133178710937,
+        4.172626647949219,
+        4.172465209960937,
+        4.172318725585938,
+        4.172181091308594,
+        4.1734130859375,
+        4.1725595092773435,
+        4.172488403320313,
+        4.172287902832031,
+        4.17239501953125,
+        4.171757507324219,
+        4.172229614257812,
+        4.172613220214844
+      ],
+      "decode_ms": [
+        4.222858704451937,
+        4.222096282319399,
+        4.224148560751928,
+        4.222513362037716,
+        4.2229572172800545
+      ]
+    },
+    {
+      "batch": 4,
+      "length": 32,
+      "graph_ms": [
+        4.242590026855469,
+        4.236965637207032,
+        4.236483764648438,
+        4.2362738037109375,
+        4.2357330322265625,
+        4.235875854492187,
+        4.237584533691407,
+        4.235545043945312,
+        4.237077026367188,
+        4.236622009277344,
+        4.236805725097656,
+        4.236058959960937,
+        4.235832214355469,
+        4.236651611328125,
+        4.237060546875,
+        4.236605529785156,
+        4.236475524902343,
+        4.236636657714843,
+        4.236494140625,
+        4.236662292480469
+      ],
+      "decode_ms": [
+        4.291810266295215,
+        4.291844783438137,
+        4.291919594834326,
+        4.292117453587707,
+        4.2899978725472465
+      ]
+    },
+    {
+      "batch": 4,
+      "length": 256,
+      "graph_ms": [
+        4.347326049804687,
+        4.343066101074219,
+        4.342238159179687,
+        4.343412475585938,
+        4.3431790161132815,
+        4.341817626953125,
+        4.341969299316406,
+        4.342529296875,
+        4.342390441894532,
+        4.342549743652344,
+        4.342009582519531,
+        4.3434970092773435,
+        4.342372436523437,
+        4.342881164550781,
+        4.343516845703125,
+        4.342362976074218,
+        4.342978515625,
+        4.3414990234375,
+        4.342503051757813,
+        4.342076110839844
+      ],
+      "decode_ms": [
+        4.42857031521271,
+        4.4145906722405925,
+        4.41578593745362,
+        4.4148074521217495,
+        4.412706268340116
+      ]
+    },
+    {
+      "batch": 16,
+      "length": 32,
+      "graph_ms": [
+        4.376793518066406,
+        4.373583374023437,
+        4.373082885742187,
+        4.372819213867188,
+        4.373395080566406,
+        4.374313049316406,
+        4.372695007324219,
+        4.3732147216796875,
+        4.372759704589844,
+        4.374593811035156,
+        4.375974426269531,
+        4.374044799804688,
+        4.373121948242187,
+        4.374302673339844,
+        4.372908020019532,
+        4.374605407714844,
+        4.3732736206054685,
+        4.37458740234375,
+        4.373545532226562,
+        4.374521484375
+      ],
+      "decode_ms": [
+        4.4896055915160105,
+        4.4900676257384475,
+        4.490830655413447,
+        4.490197079576319,
+        4.488870985369431
+      ]
+    },
+    {
+      "batch": 16,
+      "length": 256,
+      "graph_ms": [
+        4.590794982910157,
+        4.583432922363281,
+        4.584039611816406,
+        4.5848825073242185,
+        4.583072509765625,
+        4.584378967285156,
+        4.584831848144531,
+        4.583774719238281,
+        4.584460754394531,
+        4.5829293823242185,
+        4.585261535644531,
+        4.5842962646484375,
+        4.584227905273438,
+        4.584223937988281,
+        4.584365539550781,
+        4.5848696899414065,
+        4.5846490478515625,
+        4.585416870117188,
+        4.585100708007812,
+        4.584359741210937
+      ],
+      "decode_ms": [
+        4.719895405287389,
+        4.721625780803151,
+        4.718596159364097,
+        4.718179501651321,
+        4.733422843855806
+      ]
+    }
+  ],
+  "cache_after_serving": {
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.json": "ae94f9f18097242c866ede6eed991d1044b92c2b574b3cb73939d2b950794a3d",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/manifest.json": "5f78c481193a16d3e8c0aac14c1748ca1a1fb4c0604c5e5be14c34f3a2d8d326",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/d9f1a6ac1026953e9960e24e.json": "d45a7e896b473b326bb5e24be57577c34c717bc6686fda601a2417cd16096c80",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/eef11f476aed4bbdda256c02.json": "37266b86a962deb1ba50f134646cd078760ad241eb7b3498a4b16933cc3e8337",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/a9fde641697e2870bec801e2.json": "4844c41aa3f99577bb4d84e7256b4e9454ee4a80482981f0533259dbdedd5ce0",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/c0d7f12a314997f748436dfc.json": "43be987da09e55340842ec539bf28e7a233e892d7abfd043996ee379f382501b",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/50cf908289a68d95eb237cac.json": "8c537407b2cd3ef7134747638f850a04c78d6b550142f2ebb841cc73e43c0d86",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/8b48fd7fc61b81ff351bd405.json": "5a9587d4cddea947498ef41e429ceafaf41f7e028ffb110f71fadc8cfa7e8630",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/fb67b57357ce06be64b78c10.json": "8e22f0e9813a614ecfdba7388fa59ec813f8bbb809da92adc4877f5caf6b202b",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/00c7d5409a3a5b07b7265c28.json": "07aa59789dde9b897e34c729085a6f67863b880683245a32ed92cdaba7ddb015",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/402d0d6c1908a56bedc5123e.json": "00e9b8f2f05338811e88175692a845324b580f5a756855da2751bc30810b0913",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/9385e8cab4a230231a7f99a4.json": "dcee226fb55ec776c638a690b4238ccea01665eabfa4411f01a33da7dfdc00f7",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/ec0b40d5b274ce3f8c7993e8.json": "1dc0bbf4d31563d2caaa1c83f079173aaef2eb8073ff057797e78bf24a07ff50",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/bccfcb560410ca5e96cb1c15.json": "abd2307cbe8fbacc52c130114931a4f48e259ca8c881f4c59b8ab45452b13d1e",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/89f8bf5672198970d300619b.json": "61174bf2fbf2c02f554728535534116e2caef461124e81d03ed3c88ee2961713",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/5c5673ad0a0dd4f5bb49e4b2.json": "73c2979a8bdd07a42d54f46bc42e158db703f94f7d9936d7686b7de17df8c8c9",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/10150c9cf43d7b6b297e6ced.json": "990746c1803ae94bf6cf611deb18f2dd8423e08c5c684cdee4f93857e53e2ccb",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/f03cfa7b49cfb21210060136.json": "1220c358fdd870b5436258c8aef5881430b39da57f18cb4ae18dd9d55f7c5f3a",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/4e5f76e412d369c6ae1239b5.json": "600674fd669b7cd3bdcc6781c3755f12804dbf4eac0593c35d49acaec216c180",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/e778186b3f8fa6df3578d25f.json": "f9a317d7f58907c44d9fd48d8dcc717d0fb9a92bfad062c47c05201bab851e1f",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/9e7e4eeaf7d2513a6e2ff209.json": "c811d386c94b7bbb700acc04ff054db1ee18fd887509d0ecda40d2bbad67ac6d",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/8cda53d905dfc7c9/entries/09ef8a723aa07486eb026106.json": "105cccc40fb42ade4b9daaf40faca476260040382afeb20c4fa4f2d397a46c67"
+  },
+  "finished": 1794266596.3299727,
+  "raw_file_sha256": "1d0a948cfc9cf86faf6bf2c1e56b55d07f49e6a2b35ad5704a2b8542ea80e17b",
+  "raw_file_bytes": 1344702,
+  "selection_record_count": 1664,
+  "counted_selections": [
+    {
+      "capturing": false,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          1,
+          14336
+        ],
+        [
+          1,
+          14336,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "0",
+      "count": 32
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          1,
+          14336
+        ],
+        [
+          1,
+          14336,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "0",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          1,
+          4096,
+          28672
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          28672
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "0",
+      "count": 32
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          1,
+          4096,
+          28672
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          28672
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "0",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          1,
+          4096,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "0",
+      "count": 32
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          1,
+          4096,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "0",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          1,
+          4096,
+          6144
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          6144
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "1",
+      "count": 32
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          1,
+          4096,
+          6144
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          6144
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "1",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          16,
+          14336
+        ],
+        [
+          1,
+          14336,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "0",
+      "count": 32
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          16,
+          14336
+        ],
+        [
+          1,
+          14336,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "0",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          1,
+          4096,
+          28672
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          28672
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "0",
+      "count": 32
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          1,
+          4096,
+          28672
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          28672
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "0",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          1,
+          4096,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "0",
+      "count": 32
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          1,
+          4096,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "0",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          1,
+          4096,
+          6144
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          6144
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "0",
+      "count": 32
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          1,
+          4096,
+          6144
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          6144
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "0",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          4,
+          14336
+        ],
+        [
+          1,
+          14336,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "0",
+      "count": 32
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          4,
+          14336
+        ],
+        [
+          1,
+          14336,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "0",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          1,
+          4096,
+          28672
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          28672
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "2",
+      "count": 32
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          1,
+          4096,
+          28672
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          28672
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "2",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          1,
+          4096,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "0",
+      "count": 32
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          1,
+          4096,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "0",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          1,
+          4096,
+          6144
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          6144
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "1",
+      "count": 32
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          1,
+          4096,
+          6144
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          6144
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "1",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          16,
+          14336
+        ],
+        [
+          1,
+          14336,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "0",
+      "count": 32
+    },
+    {
+      "capturing": false,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          1,
+          4096,
+          28672
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          28672
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "1",
+      "count": 32
+    },
+    {
+      "capturing": false,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          1,
+          4096,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "-1",
+      "count": 32
+    },
+    {
+      "capturing": false,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          1,
+          4096,
+          6144
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          6144
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "1",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          1,
+          14336
+        ],
+        [
+          1,
+          14336,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "0",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          1,
+          4096,
+          28672
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          28672
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "0",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          1,
+          4096,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "0",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          1,
+          4096,
+          6144
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          6144
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "1",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          16,
+          14336
+        ],
+        [
+          1,
+          14336,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "0",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          1,
+          4096,
+          28672
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          28672
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "0",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          1,
+          4096,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "0",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          1,
+          4096,
+          6144
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          6144
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "0",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          4,
+          14336
+        ],
+        [
+          1,
+          14336,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "0",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          1,
+          4096,
+          28672
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          28672
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "2",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          1,
+          4096,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "0",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "('/study/matrix-scoped-0-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '8cda53d905dfc7c9')",
+      "input_shapes": [
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          1,
+          4096,
+          6144
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          6144
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "1",
+      "count": 32
+    }
+  ]
+}
