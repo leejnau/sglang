@@ -134,14 +134,24 @@ def run(args, result):
 
     def choose(t, *a, **k):
         winner = original_choose(t, *a, **k)
+        inputs = a[3] if len(a) > 3 else k["inputs"]
+        capturing = torch.cuda.is_current_stream_capturing()
+        native_tactic_count = None
+        if capturing and winner[1] >= 0 and hasattr(winner[0], "_get_algos"):
+            _, native_tactic_count = winner[0]._get_algos(inputs)
+            assert winner[1] < native_tactic_count, (
+                "capture would fall back from an invalid tactic"
+            )
         selections.append(
             {
                 "op": a[0],
                 "runner": type(winner[0]).__name__,
                 "tactic": repr(winner[1]),
                 "identity": repr(t._winner_cache_identity()),
-                "capturing": torch.cuda.is_current_stream_capturing(),
+                "capturing": capturing,
                 "strict": t._v2_local.strict_replay,
+                "input_shapes": [list(x.shape) for x in inputs if hasattr(x, "shape")],
+                "native_tactic_count": native_tactic_count,
             }
         )
         return winner
