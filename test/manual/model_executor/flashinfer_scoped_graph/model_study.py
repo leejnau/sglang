@@ -45,6 +45,27 @@ def run(args, result):
         "pid": os.getpid(),
         "sglang_source": b.__file__,
     }
+    import inspect
+
+    import flashinfer.autotune_cache as fi_cache
+    import flashinfer.autotuner.autotuner as fi_tuner
+
+    from sglang.srt.model_executor.runner import flashinfer_autotune as sg_tuner
+
+    result["source_files"] = {
+        name: {
+            "path": str(Path(inspect.getfile(obj))),
+            "sha256": hashlib.sha256(
+                Path(inspect.getfile(obj)).read_bytes()
+            ).hexdigest(),
+        }
+        for name, obj in (
+            ("one_batch", b),
+            ("sglang_autotune", sg_tuner),
+            ("flashinfer_cache", fi_cache),
+            ("flashinfer_tuner", fi_tuner),
+        )
+    }
     result["cache_before"] = files(args.cache)
     if args.phase == "cold":
         assert not result["cache_before"], "cold cache must be empty"
@@ -152,6 +173,14 @@ def run(args, result):
         torch.cuda.synchronize()
         result["startup_seconds"] = time.perf_counter() - start
         result["startup_peak_memory_bytes"] = torch.cuda.max_memory_allocated()
+        result["loaded_native_paths"] = sorted(
+            {
+                line.split()[-1]
+                for line in Path("/proc/self/maps").read_text().splitlines()
+                if ".so" in line
+                and any(name in line for name in ("flashinfer", "cublas", "cudnn"))
+            }
+        )
         result["cache_after_startup"] = files(args.cache)
         result["bare_identity"] = repr(tuner._winner_cache_identity())
         assert not tuner.is_tuning_mode and not tuner._v2_local.active
