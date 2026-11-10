@@ -1,0 +1,14 @@
+{
+  "source_commit": "0bdafda8f721aaa4981c017a61b99f1122267edf",
+  "version": "0.7.3+g0bdafda8f721.qualification",
+  "source_archive_sha256": "98d0c38587e72d487018a2840271332b4a2f9e7920b6bc5ae34b511efe2e797f",
+  "third_party": "cutlass/cccl/spdlog supplied by the 0.7.3 wheel; source submodule refs and patch directory match the pinned upstream commit.",
+  "files": {
+    "flashinfer/gemm/gemm_base.py": "7288482246d4f04d2343f5cb41f9451bab116fed110a51e702def018f609b229",
+    "flashinfer/autotuner/autotuner.py": "3489d1492f4b4ebbd37f4783aed3788716dc60a6cca60dfcee270411813df2ed",
+    "flashinfer/autotune_cache.py": "360bfb526325633c3af612f0eaffef5c2d3a7655024a1790a6db3bee3c8996ae",
+    "include/flashinfer/gemm/bmm_fp8.cuh": "8076ae705f91cda553c9d9ce9b44ae42cef2c496c1d145f2474a50e78ac951ea",
+    "csrc/bmm_fp8.cu": "ac00c1cdba76e653ead25a77d2b1ca9d07f35a89f65221334fbbab1a695a4709",
+    "flashinfer/_build_meta.py": "9ee4c7f9f952931d81b6930dfd4cf8fbca6d97fad7f378889d289e1383a2ce63"
+  }
+}

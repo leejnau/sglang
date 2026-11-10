@@ -1,0 +1,44 @@
+{
+  "scope": "Manual research harness; no registered test or production source added by this evidence commit.",
+  "layout": {
+    "/study/sglang-reviewed": "Exact production commit f3a84556e5994f2082ac043a33a36df6b8915e40",
+    "/study/deps": "flashinfer-python==0.7.3 installed with --no-deps --target",
+    "/study/observer": "registered_accuracy_observer directory",
+    "/study/hf": "Pinned model files/cache, revision recorded in completed-qualification.json"
+  },
+  "step1": {
+    "setup": "Immutable image and package versions are recorded in completed-qualification.json. Build the source-overlay Rust radix extension using its repository torch_build_configuration helper; retain the default backend. Source hashes must match production-source-hashes.json.",
+    "environment": {
+      "PYTHONPATH": "/study/observer:/study/deps:/study/sglang-reviewed/python",
+      "FLASHINFER_WORKSPACE_BASE": "/study/workspace",
+      "HF_HOME": "/study/hf",
+      "HF_HUB_OFFLINE": "1",
+      "TRANSFORMERS_OFFLINE": "1",
+      "SGLANG_FLASHINFER_AUTOTUNE_CACHE": "1",
+      "SGLANG_TEST_MAX_RETRY": "0"
+    },
+    "sequence": "Run legacy then scoped in separate fresh containers, each with its own SCOPED_QUAL_OUTPUT and SGLANG_CACHE_DIR. Set SGLANG_ENABLE_FLASHINFER_GRAPH_AUTOTUNE=0 then 1. Execute registered_accuracy.py. Do not alter test arguments, prompts, accuracy floor or default scheduler/graph settings.",
+    "analyze": "python analyze_registered_accuracy.py --results RESULTS --source EXACT_SGLANG_SOURCE --dataset GSM8K_TEST_JSONL --output SUMMARY_JSON",
+    "throughput": "Observer timings and logged accuracy throughput are not performance evidence."
+  },
+  "step2": {
+    "setup": "Export exact FlashInfer source 0bdafda8f721aaa4981c017a61b99f1122267edf into /study/flashinfer-main, generate the recorded local build metadata and isolate FLASHINFER_WORKSPACE_BASE=/study/descriptor-workspace. Build the native sources from this tree; keep normal provider version checks enabled. Verified matching cutlass/cccl/spdlog dependencies from the 0.7.3 wheel can supply submodules.",
+    "environment": {
+      "PYTHONPATH": "/study/flashinfer-main:/study/sglang-reviewed/python",
+      "MAX_JOBS": "4",
+      "FLASHINFER_NVCC_THREADS": "1"
+    },
+    "existing_tests": "pytest -q tests/autotuner/test_autotuner_cublaslt_tactics.py --junitxml=upstream-tests.xml",
+    "cold": "python descriptor_probe.py --phase cold --cache /study/step2/probe-cache --output /study/step2/probe-cold.json --cold-result /study/step2/probe-cold.json",
+    "warm": "In a fresh process/container with the same cache and source: python descriptor_probe.py --phase warm --cache /study/step2/probe-cache --output /study/step2/probe-warm.json --cold-result /study/step2/probe-cold.json",
+    "scope": "Explicit descriptor fixture uses real profiling and rank_tactics(k=2) only to exercise descriptor persistence; natural fixture retains ordinary default-inclusive selection."
+  },
+  "artifact_hashes": {
+    "step1-evidence.tar.gz": "f3d4a0fc4304fd1fd08727151dd1ef68e9abb40fdc41328d9c5f7435219ea7bc",
+    "step2-evidence.tar.gz": "2a71754366b17c8c7e85055eb4900ad94ea7f6989ecb8d66d81dc6a05b616805",
+    "native-build-artifacts.tar.gz": "9f823a15adf8fa1c26857d7a57b17c45ff5baa638a7261e9bb74bca9917fb467",
+    "sglang-source.tar.gz": "1e88ece4b3d7cd807735a67093b4b2199fef0196ff478bab393b928598da672c",
+    "flashinfer-source.tar.gz": "98d0c38587e72d487018a2840271332b4a2f9e7920b6bc5ae34b511efe2e797f"
+  },
+  "raw_evidence": "Full local evidence retains failed setup attempts, server logs, prompts/outputs, source, exact executed harnesses, caches, build logs, native binaries and hashes. Compact results are published here; no raw internal-cluster logs are published."
+}

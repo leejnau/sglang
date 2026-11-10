@@ -1,0 +1,12 @@
+{
+  "steps": [
+    "Existing TestModeloptFP8.test_gsm8k unchanged on production f3a84556e5 and FlashInfer 0.7.3, legacy then scoped, independent fresh caches; same pinned model files and container; record answers and real scoped/capture/replay paths.",
+    "After step 1 completes, native descriptor checks with pinned source containing merged #6148; cold and fresh-process warm, eager and graph, explicit descriptor acceptance and fallback counts; keep default selection and measurement policy unchanged.",
+    "Review all numerical, cache, accuracy and existing performance evidence; add timings only for an identified unresolved concern; report draft readiness and limitations."
+  ],
+  "accuracy_floor": 0.70,
+  "accuracy_rule": "Existing test requires score strictly greater than the floor; paired answer comparison is additional evidence, not a new pass threshold.",
+  "original_numerical_failures": "Preserved; new results do not relabel the old allclose failures.",
+  "no_pr": true,
+  "no_external_ci": true
+}

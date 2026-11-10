@@ -1,0 +1,324 @@
+{
+  "phase": "cold",
+  "cases": [
+    {
+      "fixture": "natural",
+      "label": "exact_m1",
+      "shape": [
+        1,
+        4096,
+        14336
+      ],
+      "bare_before_cosine": 0.9993069767951965,
+      "winner": [
+        42949673026,
+        8589934628,
+        2,
+        844424930131969,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "initial_profile_count": 9,
+      "eager_cosine": 0.9993069767951965,
+      "graph_cosine": 0.9993069767951965,
+      "changed_input_graph_cosine": 0.9993069767951965,
+      "restored_input_graph_cosine": 0.9993069767951965,
+      "native_consumption": [
+        {
+          "used_descriptor": 1,
+          "tactic": [
+            42949673026,
+            8589934628,
+            2,
+            844424930131969,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ]
+        },
+        {
+          "used_descriptor": 1,
+          "tactic": [
+            42949673026,
+            8589934628,
+            2,
+            844424930131969,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ]
+        },
+        {
+          "used_descriptor": 1,
+          "tactic": [
+            42949673026,
+            8589934628,
+            2,
+            844424930131969,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ]
+        }
+      ],
+      "bare_after_cosine": 0.9993069767951965,
+      "strict_capture_no_profiles": true,
+      "graph_matches_eager_exactly": true,
+      "legacy_identity_restored": true
+    },
+    {
+      "fixture": "natural",
+      "label": "bucket_m500",
+      "shape": [
+        500,
+        1024,
+        2048
+      ],
+      "bare_before_cosine": 0.9992984533309937,
+      "winner": -1,
+      "initial_profile_count": 90,
+      "eager_cosine": 0.9992984533309937,
+      "graph_cosine": 0.9992984533309937,
+      "changed_input_graph_cosine": 0.9992984533309937,
+      "restored_input_graph_cosine": 0.9992984533309937,
+      "native_consumption": [],
+      "bare_after_cosine": 0.9992984533309937,
+      "strict_capture_no_profiles": true,
+      "graph_matches_eager_exactly": true,
+      "legacy_identity_restored": true
+    },
+    {
+      "fixture": "explicit_descriptor",
+      "label": "exact_m1",
+      "shape": [
+        1,
+        4096,
+        14336
+      ],
+      "bare_before_cosine": 0.9993069767951965,
+      "ranking_fixture": [
+        [
+          42949673026,
+          8589934628,
+          2,
+          844424930131969,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        [
+          1687922147394,
+          17179869220,
+          2,
+          844424930131969,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      ],
+      "winner": [
+        42949673026,
+        8589934628,
+        2,
+        844424930131969,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "initial_profile_count": 8,
+      "eager_cosine": 0.9993069767951965,
+      "graph_cosine": 0.9993069767951965,
+      "changed_input_graph_cosine": 0.9993069767951965,
+      "restored_input_graph_cosine": 0.9993069767951965,
+      "native_consumption": [
+        {
+          "used_descriptor": 1,
+          "tactic": [
+            42949673026,
+            8589934628,
+            2,
+            844424930131969,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ]
+        },
+        {
+          "used_descriptor": 1,
+          "tactic": [
+            42949673026,
+            8589934628,
+            2,
+            844424930131969,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ]
+        },
+        {
+          "used_descriptor": 1,
+          "tactic": [
+            42949673026,
+            8589934628,
+            2,
+            844424930131969,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ]
+        }
+      ],
+      "bare_after_cosine": 0.9993069767951965,
+      "strict_capture_no_profiles": true,
+      "graph_matches_eager_exactly": true,
+      "legacy_identity_restored": true
+    },
+    {
+      "fixture": "explicit_descriptor",
+      "label": "bucket_m500",
+      "shape": [
+        500,
+        1024,
+        2048
+      ],
+      "bare_before_cosine": 0.9992984533309937,
+      "ranking_fixture": [
+        [
+          64424509506,
+          4294967332,
+          0,
+          1407374883553283,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ],
+        [
+          575525617730,
+          4294967332,
+          0,
+          2533274790395906,
+          558779540176897,
+          120259084316,
+          292058693646,
+          0
+        ]
+      ],
+      "winner": [
+        64424509506,
+        4294967332,
+        0,
+        1407374883553283,
+        558779540176897,
+        120259084316,
+        292058693646,
+        0
+      ],
+      "initial_profile_count": 89,
+      "eager_cosine": 0.9992984533309937,
+      "graph_cosine": 0.9992984533309937,
+      "changed_input_graph_cosine": 0.9992984533309937,
+      "restored_input_graph_cosine": 0.9992984533309937,
+      "native_consumption": [
+        {
+          "used_descriptor": 1,
+          "tactic": [
+            64424509506,
+            4294967332,
+            0,
+            1407374883553283,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ]
+        },
+        {
+          "used_descriptor": 1,
+          "tactic": [
+            64424509506,
+            4294967332,
+            0,
+            1407374883553283,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ]
+        },
+        {
+          "used_descriptor": 1,
+          "tactic": [
+            64424509506,
+            4294967332,
+            0,
+            1407374883553283,
+            558779540176897,
+            120259084316,
+            292058693646,
+            0
+          ]
+        }
+      ],
+      "bare_after_cosine": 0.9992984533309937,
+      "strict_capture_no_profiles": true,
+      "graph_matches_eager_exactly": true,
+      "legacy_identity_restored": true
+    }
+  ],
+  "status": "passed",
+  "environment": {
+    "torch": "2.14.1+cu130",
+    "cuda": "13.0",
+    "flashinfer": "0.7.3+g0bdafda8f721.qualification",
+    "git_commit": "0bdafda8f721aaa4981c017a61b99f1122267edf",
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "source": "/study/flashinfer-main/flashinfer/__init__.py"
+  },
+  "cache_before": {},
+  "profile_count": 196,
+  "fallback_count": 0,
+  "cache_after": {
+    "explicit_descriptor-bucket_m500/v2/16eaf6c125974d46/manifest.json": "5dcb595c58db465417385de5712c802cacc58eb3b88e335cf9f679af3c2ffb15",
+    "explicit_descriptor-bucket_m500/v2/16eaf6c125974d46/entries/414580d27f081c4f11643c2f.json": "156f13612f2935fd3df3c87b81b2dda3d143b3fe02d96e366da189ac89812ccf",
+    "explicit_descriptor-bucket_m500/v2/16eaf6c125974d46/entries/70c7ac143e99154b36f9d7c0.json": "f80157bd8b02ed0a56ae8011f9be56af7166af5235fe4d0b75c82fa60f5900ed",
+    "explicit_descriptor-bucket_m500/v2/16eaf6c125974d46/entries/a9c10fc4702776995d93efec.json": "894627fd853e87d96d1f9d4c308a1e44baaac30645c67daa779050ad86249147",
+    "explicit_descriptor-bucket_m500/v2/16eaf6c125974d46/entries/51bb1c5751d13fd09ddc439a.json": "63eed2ea12951b48fefc8f6c47259d263aeb8c183495168031770ab6d2d6921b",
+    "explicit_descriptor-bucket_m500/v2/16eaf6c125974d46/entries/e39803ea3539250856a0df3b.json": "0e1bb0656c5ccac557677847747c595e044f707e021b1cb202b823aa8b27ea47",
+    "explicit_descriptor-bucket_m500/v2/16eaf6c125974d46/entries/b3858a4b194b3b6507f667cb.json": "353b063a32f0a582fd760b6b50f107fe1dcc356b439daa6745d3906ee0a94188",
+    "explicit_descriptor-bucket_m500/v2/16eaf6c125974d46/entries/c3e6cae62ed215e171a8ca2c.json": "265ee16b72409a8af3dabe25e260d97c9e716bdd7d47a19dc4895b7e191962f7",
+    "explicit_descriptor-bucket_m500/v2/16eaf6c125974d46/entries/963afb50e8635bad20844ba3.json": "a9e74d6d2c2e6e471d7315ff22b99f2cfd164692fe9ba17d5f6327c8384782a4",
+    "explicit_descriptor-bucket_m500/v2/16eaf6c125974d46/entries/45edcfbf277aeeb7d9a52dea.json": "ae1c1432a90697ffdaaa62d769457a0c57ce17a1ea1414be131f5ce07d82b56f",
+    "explicit_descriptor-bucket_m500/v2/16eaf6c125974d46/entries/13f1f5e2db170deb85d68d9e.json": "57d24b3b2913a460128f2743cf38b5372855306be4f8320e190787b1addbfc01",
+    "natural-bucket_m500/v2/16eaf6c125974d46/manifest.json": "5dcb595c58db465417385de5712c802cacc58eb3b88e335cf9f679af3c2ffb15",
+    "natural-bucket_m500/v2/16eaf6c125974d46/entries/414580d27f081c4f11643c2f.json": "156f13612f2935fd3df3c87b81b2dda3d143b3fe02d96e366da189ac89812ccf",
+    "natural-bucket_m500/v2/16eaf6c125974d46/entries/70c7ac143e99154b36f9d7c0.json": "7a1ee55afb615120d175c25b727f4bf1be73958351e9ffb646269f1aec04d73a",
+    "natural-bucket_m500/v2/16eaf6c125974d46/entries/a9c10fc4702776995d93efec.json": "172c8d06cd1004de0dbb4cbda9e48c4582190be6f8a4ba8e064f7050ac9f96fe",
+    "natural-bucket_m500/v2/16eaf6c125974d46/entries/51bb1c5751d13fd09ddc439a.json": "054350e8efdb8e2528d8cb4e37188ac58bf5ab086ed8b865747aabd7a37fa648",
+    "natural-bucket_m500/v2/16eaf6c125974d46/entries/e39803ea3539250856a0df3b.json": "a1f3c2ec25503f9a2746fc3bd281d24f29e7be3cf31da035b151e1b0ed774c3e",
+    "natural-bucket_m500/v2/16eaf6c125974d46/entries/b3858a4b194b3b6507f667cb.json": "09b87c524f9d6f4c1f2819b43db2573a570fb12b55c32ed9859ae70b571fe6b9",
+    "natural-bucket_m500/v2/16eaf6c125974d46/entries/c3e6cae62ed215e171a8ca2c.json": "ef869d034d847511c1c5e0770b5615845019eb4f838958fc616836594f21bff1",
+    "natural-bucket_m500/v2/16eaf6c125974d46/entries/963afb50e8635bad20844ba3.json": "a4b95813cdbf4e6b208160e06514fa35c5bdfaae24751f290baa0357d73e2a7d",
+    "natural-bucket_m500/v2/16eaf6c125974d46/entries/45edcfbf277aeeb7d9a52dea.json": "9f0ca4f3532c7d8abf5808a87860cca1da42f8323bb104abd9cda861bba82437",
+    "natural-bucket_m500/v2/16eaf6c125974d46/entries/13f1f5e2db170deb85d68d9e.json": "57d24b3b2913a460128f2743cf38b5372855306be4f8320e190787b1addbfc01",
+    "natural-exact_m1/v2/16eaf6c125974d46/manifest.json": "5dcb595c58db465417385de5712c802cacc58eb3b88e335cf9f679af3c2ffb15",
+    "natural-exact_m1/v2/16eaf6c125974d46/entries/1569460a76556dd42c58e347.json": "f1cf77a461b85f2c9606a61dd247372efe77feea5e935000900d6d7174852a68",
+    "explicit_descriptor-exact_m1/v2/16eaf6c125974d46/manifest.json": "5dcb595c58db465417385de5712c802cacc58eb3b88e335cf9f679af3c2ffb15",
+    "explicit_descriptor-exact_m1/v2/16eaf6c125974d46/entries/1569460a76556dd42c58e347.json": "f1cf77a461b85f2c9606a61dd247372efe77feea5e935000900d6d7174852a68"
+  },
+  "native_libraries": {
+    "/study/descriptor-workspace/.cache/flashinfer/0.7.3+g0bdafda8f721.qualification/90a/cached_ops/gemm/gemm.so": "07a4eaadfbef6a90013cfab08f7b7806c3cc1a79c77352fac5b995d06f421f6f",
+    "/study/descriptor-workspace/.cache/flashinfer/0.7.3+g0bdafda8f721.qualification/90a/cached_ops/trtllm_utils/trtllm_utils.so": "0955aec97a110354924caa6f5e7d215a5edfcc0a872546c42fc95c1321cf89a3"
+  }
+}

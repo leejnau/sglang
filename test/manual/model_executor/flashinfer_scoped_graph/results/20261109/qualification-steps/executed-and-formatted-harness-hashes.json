@@ -1,0 +1,9 @@
+{
+  "semantics_match_except_import_order": true,
+  "files": {
+    "sglang-scoped-qualification-20261109/run_registered_accuracy.py": "b263dc4e2d63fd5987424472f60b4f4af971338a1f90aefcef8d5f777a5ed04d",
+    "sglang-scoped-graph-evidence-20261109/test/manual/model_executor/flashinfer_scoped_graph/registered_accuracy.py": "227fb686b4bcd248b81e2f0004cc1cc7b60903b2b41805534e2e8a9dd4fde685",
+    "sglang-scoped-qualification-20261109/observer/sitecustomize.py": "01b7d54899e77e15849dca9fa8e5035c17f9bf2946699b748233837105f329a3",
+    "sglang-scoped-graph-evidence-20261109/test/manual/model_executor/flashinfer_scoped_graph/registered_accuracy_observer/sitecustomize.py": "839faba9ff318bb0fdd038e212d47d04743c9751767ff0f22fc550d665064769"
+  }
+}

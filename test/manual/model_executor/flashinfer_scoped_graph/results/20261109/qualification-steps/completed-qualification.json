@@ -1,0 +1,341 @@
+{
+  "status": "Three requested checkpoints completed in order; ready for bounded opt-in draft review, no PR opened",
+  "production_commit": "f3a84556e5994f2082ac043a33a36df6b8915e40",
+  "baseline_commit": "78e6e9fc4dd5eecf19fd76f5393a1ae683ee83b0",
+  "production_changed_during_qualification": false,
+  "step1": {
+    "flashinfer": "0.7.3",
+    "test": "test/registered/e2e/quantization/test_modelopt_fp8.py::TestModeloptFP8.test_gsm8k",
+    "existing_test_unchanged": true,
+    "legacy_correct": 149,
+    "scoped_correct": 150,
+    "questions": 200,
+    "gains": 3,
+    "losses": 2,
+    "identical_parsed_answers": 192,
+    "default_test_accuracy_floor": ">0.70",
+    "both_tests_passed": true,
+    "captures_per_arm": 36,
+    "profiles_during_capture": 0,
+    "scoped_strict_selection_records": 144,
+    "limits": "One cold launch per arm with independent selection and default server seeds; observer instrumentation is not a serving-performance measurement. The established floor does not prove statistical equivalence."
+  },
+  "step2": {
+    "flashinfer_commit": "0bdafda8f721aaa4981c017a61b99f1122267edf",
+    "flashinfer_test_version": "0.7.3+g0bdafda8f721.qualification",
+    "merged_descriptor_fix": "f5c6aa76b9bc0997c4f727f91a4c5f3af2d5fc18",
+    "upstream_file": "tests/autotuner/test_autotuner_cublaslt_tactics.py",
+    "upstream_passed": 26,
+    "upstream_skipped": 0,
+    "independent_scenarios": 8,
+    "reference_comparisons": 48,
+    "minimum_cosine": 0.9992984533309937,
+    "reference_rule": "cosine > 0.99 against unquantized BF16 reference, matching the existing native test convention",
+    "graph_eager_exact_matches": 8,
+    "restored_input_graph_exact_matches": 8,
+    "changed_input_graph_checks": 8,
+    "cold_profiles": 196,
+    "fresh_warm_profiles": 0,
+    "native_fallbacks": 0,
+    "native_descriptor_acceptances": 18,
+    "persisted_json_files_unchanged": 26,
+    "gemm_library_sha256": "07a4eaadfbef6a90013cfab08f7b7806c3cc1a79c77352fac5b995d06f421f6f",
+    "limits": "Two FP8 shapes, real cuBLAS backend, actual SGLang wrapper. The explicit-descriptor fixture uses real rank_tactics(k=2); it is test-only and does not change production selection. No full-model or performance comparison on this newer FlashInfer build; no proof #6148 causes or cures prior logit differences."
+  },
+  "step3": {
+    "new_timing_runs": 0,
+    "reason": "Production source is unchanged; new registered model-quality and native identity checks expose no specific new serving-time concern requiring an additional campaign. Existing matched-tactic control and warm ABBA timing evidence remain applicable to their exact tested build.",
+    "performance_source": "../final-qualification/qualification-summary.json, prior preserved caches and four warm ABBA processes",
+    "performance": [
+      {
+        "batch": 1,
+        "length": 32,
+        "metric": "graph_ms",
+        "scoped_percent_change": 0.2400313598666326,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.135151062011719,
+            "scoped_ms": 4.146771545410156,
+            "ratio": 1.0028101714361033
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.136673278808594,
+            "scoped_ms": 4.144907836914063,
+            "ratio": 1.0019906232739368
+          }
+        ]
+      },
+      {
+        "batch": 1,
+        "length": 32,
+        "metric": "decode_ms",
+        "scoped_percent_change": 0.25953954344206664,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.1893401903507765,
+            "scoped_ms": 4.20191123339464,
+            "ratio": 1.003000721467504
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.191021937003825,
+            "scoped_ms": 4.200201252388069,
+            "ratio": 1.0021902331990193
+          }
+        ]
+      },
+      {
+        "batch": 1,
+        "length": 256,
+        "metric": "graph_ms",
+        "scoped_percent_change": 0.18596191164719222,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.225236206054688,
+            "scoped_ms": 4.234785003662109,
+            "ratio": 1.0022599440934776
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.2264883422851565,
+            "scoped_ms": 4.232656707763672,
+            "ratio": 1.0014594540381911
+          }
+        ]
+      },
+      {
+        "batch": 1,
+        "length": 256,
+        "metric": "decode_ms",
+        "scoped_percent_change": 0.20328835106810939,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.2753649067890365,
+            "scoped_ms": 4.2843875162361655,
+            "ratio": 1.0021103717796818
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.276294970622985,
+            "scoped_ms": 4.284656843083212,
+            "ratio": 1.0019554012334675
+          }
+        ]
+      },
+      {
+        "batch": 4,
+        "length": 32,
+        "metric": "graph_ms",
+        "scoped_percent_change": -0.6434119884819123,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.231164245605469,
+            "scoped_ms": 4.204720764160156,
+            "ratio": 0.9937503060835376
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.2318771362304695,
+            "scoped_ms": 4.203868408203125,
+            "ratio": 0.9933814883736692
+          }
+        ]
+      },
+      {
+        "batch": 4,
+        "length": 32,
+        "metric": "decode_ms",
+        "scoped_percent_change": -0.538820085263847,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.290422686608508,
+            "scoped_ms": 4.265946499799611,
+            "ratio": 0.9942951572381683
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.29028523285524,
+            "scoped_ms": 4.268527231033659,
+            "ratio": 0.9949285418939148
+          }
+        ]
+      },
+      {
+        "batch": 4,
+        "length": 256,
+        "metric": "graph_ms",
+        "scoped_percent_change": -0.6291555990483699,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.337832641601563,
+            "scoped_ms": 4.310885467529297,
+            "ratio": 0.9937878714328829
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.338172454833984,
+            "scoped_ms": 4.310534057617188,
+            "ratio": 0.9936290229343007
+          }
+        ]
+      },
+      {
+        "batch": 4,
+        "length": 256,
+        "metric": "decode_ms",
+        "scoped_percent_change": -0.5695667144315353,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.414108905621106,
+            "scoped_ms": 4.387922279420309,
+            "ratio": 0.994067516964194
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.414472998178098,
+            "scoped_ms": 4.390375295770355,
+            "ratio": 0.9945412051636313
+          }
+        ]
+      },
+      {
+        "batch": 16,
+        "length": 32,
+        "metric": "graph_ms",
+        "scoped_percent_change": 0.08701650416351736,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.3728172302246096,
+            "scoped_ms": 4.375131530761719,
+            "ratio": 1.0005292470312075
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.371535034179688,
+            "scoped_ms": 4.376829833984376,
+            "ratio": 1.0012111992156734
+          }
+        ]
+      },
+      {
+        "batch": 16,
+        "length": 32,
+        "metric": "decode_ms",
+        "scoped_percent_change": 0.08000034650204046,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.490091512707295,
+            "scoped_ms": 4.491901767323725,
+            "ratio": 1.0004031665304163
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.488909329666058,
+            "scoped_ms": 4.494282544328598,
+            "ratio": 1.0011969978157123
+          }
+        ]
+      },
+      {
+        "batch": 16,
+        "length": 256,
+        "metric": "graph_ms",
+        "scoped_percent_change": 0.09414685358910546,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.584194183349609,
+            "scoped_ms": 4.586653747558594,
+            "ratio": 1.0005365314187427
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.582499542236328,
+            "scoped_ms": 4.588670196533203,
+            "ratio": 1.0013465695391783
+          }
+        ]
+      },
+      {
+        "batch": 16,
+        "length": 256,
+        "metric": "decode_ms",
+        "scoped_percent_change": 0.18395012455487691,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.725646278529894,
+            "scoped_ms": 4.7303141400334425,
+            "ratio": 1.000987772090509
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.726067312731175,
+            "scoped_ms": 4.73878967386554,
+            "ratio": 1.0026919551272775
+          }
+        ]
+      }
+    ],
+    "limits": "Two process observations per arm, one preserved cache pair; descriptive warm timings, no independent retuning trials, HTTP throughput or statistical equivalence claim. Logit differences remain explicitly flagged.",
+    "original_parity_failure_retained": true,
+    "max_observed_model_logit_difference": 1.15625,
+    "max_observed_engine_logprob_difference": 0.1478935,
+    "interpretation": "Independent FP8 choices produce numerical differences; the existing model accuracy floor passes in both arms. This supports a default-off, single-rank draft for review, not numerical equivalence, universal quality parity, a serving-speedup claim, or merge readiness."
+  },
+  "next": "User decision to open a bounded draft. Normal repository CI and maintainer review would follow. Keep existing dependency, unspecified measurement policy, and legacy path outside the opt-in scope. Broader model/hardware/distributed adoption requires separate qualification.",
+  "setup_failures": {
+    "initial_registered_attempts": "Both arms failed in server setup before evaluation: source overlay lacked the exact-source Rust radix module; immutable image disables runtime Rust builds. Preserved failures, built the native module using the repository Torch configuration and reran the same unchanged tests/default cache backend.",
+    "initial_rust_build": "Generic helper invocation lacked Torch configuration; corrected to the repository build configuration. Both build logs retained.",
+    "rust_module_sha256": "cf3a409237f0dffdc4afe186e7b4176d96c5965894c865b035ffa547266a4e97",
+    "no_tolerance_or_test_relaxation": true
+  },
+  "environment": {
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "exclusive_gpu_shared_host": true,
+    "torch": "2.14.1+cu130",
+    "cuda": "13.0",
+    "driver": "580.196.07",
+    "model": "nvidia/Llama-3.1-8B-Instruct-FP8",
+    "model_revision": "42d9515ebd69eea3a87351d079c671c3c5ff0a31",
+    "image": "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0"
+  },
+  "no_pr_opened": true,
+  "no_external_ci_launched": true,
+  "no_external_message_sent": true
+}
