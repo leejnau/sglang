@@ -18,8 +18,8 @@ def digest(path):
 def main():
     root = Path("/study/final-study")
     source = root / "matrix-legacy-1-cache"
-    legacy = root / "matched-legacy-cache"
-    scoped = root / "matched-scoped-cache"
+    legacy = root / "matched-attempt02-legacy-cache"
+    scoped = root / "matched-attempt02-scoped-cache"
     assert not legacy.exists() and not scoped.exists()
     shutil.copytree(source, legacy)
     shutil.copytree(root / "matrix-scoped-1-cache", scoped)
@@ -48,11 +48,17 @@ def main():
                 "after": digest(path),
             }
         )
-    assert len(changes) == len(original) - 1 == 20
+    expected = {
+        key
+        for key, value in original.items()
+        if isinstance(value, list) and value and value[0] == "CublasFp8GemmRunner"
+    }
+    assert {entry["key"] for entry in changes} == expected and len(expected) == 20
     assert digest(src) == digest(legacy / relative) == digest(scoped / relative)
     receipt = {
         "purpose": "diagnostic only; matched winners are deliberately seeded",
         "source_v1_sha256": digest(src),
+        "untouched_v1_metadata_keys": sorted(set(original) - expected),
         "entries": changes,
     }
     (root / "matched-cache-receipt.json").write_text(
