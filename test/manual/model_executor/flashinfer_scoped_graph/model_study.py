@@ -301,6 +301,10 @@ def run(args, result):
                             ),
                         }
                         numerics.append(row)
+                        if not (row["allclose"] and row["argmax_equal"]):
+                            np.savez_compressed(
+                                args.output.with_suffix(".npz"), **logits_out
+                            )
                         assert row["allclose"] and row["argmax_equal"], row
                         outputs.append(arms["graph"])
                     assert not torch.equal(outputs[0], outputs[1]), (
