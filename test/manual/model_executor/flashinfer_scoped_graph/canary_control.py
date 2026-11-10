@@ -67,6 +67,7 @@ if __name__ == "__main__":
             compile(
                 ast.Module(body=[method], type_ignores=[]), str(args.before), "exec"
             ),
+            base_runner.__dict__,
             namespace,
         )
         with patch.object(
