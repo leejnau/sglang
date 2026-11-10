@@ -63,5 +63,12 @@
     "superseded_production_commit": "24c91103d2",
     "reason": "Forced graph policy produced a reproducible approximately 0.6% batch-16 slowdown against one baseline cache. Narrow this integration to scoped ownership/persistence and retain operation measurement settings. Preserve the complete original cohort separately.",
     "new_cohort": "Fresh tactic caches, same ABBA/BAAB ordering, geometry, source dependency and hardware. No pooling with prior forced-policy results."
+  },
+  "startup_placement_refinement": {
+    "production_commit": "5e29e28454",
+    "reason": "The measurement-unchanged cohort retained a reproducible approximately 1% batch-16 loss for one cache pair. Same-stream preparation did not fix it. A copied-cache matched-winner control was neutral, and preparing beside original warmup recovered the faster timings in a separate diagnostic.",
+    "scope": "Managed decode cache prepared alongside existing startup warmup; no measurement-policy override. Reuse disabled retains the existing legacy path.",
+    "final_cohort": "Independent fresh caches, ABBA/BAAB order, unchanged sizes/timing protocol; preserve both prior cohorts separately.",
+    "ready": "Pending final-head controls, numerical comparisons and performance analysis; do not infer readiness from a diagnostic."
   }
 }
