@@ -1,0 +1,49 @@
+{
+  "cold_result_sha256": "217fae9d209aac7821da921015f6dcb61597d8b0149af07a63ea06ef18503fb9",
+  "warm_result_sha256": "bb8e33d69aa6bc524e982591b9f989a5036c72ed9fb3557a83e9716d22854210",
+  "upstream_tuner_sha256": "3489d1492f4b4ebbd37f4783aed3788716dc60a6cca60dfcee270411813df2ed",
+  "recorded_release_source_hashes_match": true,
+  "results": [
+    {
+      "phase": "legacy startup",
+      "chosen_tactic": -1,
+      "best_us": 26.003199815750122,
+      "runner_up_us": 26.019200682640076,
+      "margin_ns": 16.000866889954306,
+      "margin_percent": 0.061534222723858,
+      "times_us": {
+        "-1": 26.003199815750122,
+        "0": 26.019200682640076,
+        "1": 26.29440128803253,
+        "2": 28.921601176261902,
+        "3": 26.956799626350403,
+        "4": 27.423998713493347,
+        "5": 29.824000597000122,
+        "6": 34.937599301338196,
+        "7": 28.34239900112152
+      },
+      "upstream_default_matches_release_argmin": true
+    },
+    {
+      "phase": "scoped startup",
+      "chosen_tactic": 1,
+      "best_us": 26.291200518608093,
+      "runner_up_us": 26.3264000415802,
+      "margin_ns": 35.19952297210624,
+      "margin_percent": 0.1338832851972338,
+      "times_us": {
+        "-1": 26.51839852333069,
+        "0": 26.3264000415802,
+        "1": 26.291200518608093,
+        "2": 28.630399703979492,
+        "3": 26.93440020084381,
+        "4": 27.638399600982666,
+        "5": 29.75040078163147,
+        "6": 39.35680091381073,
+        "7": 28.195199370384216
+      },
+      "upstream_default_matches_release_argmin": true
+    }
+  ],
+  "limits": "Offline replay through an extracted production method; no new profiling, CUDA execution, or evidence that an optional positive tie tolerance improves serving."
+}
