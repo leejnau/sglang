@@ -12,6 +12,7 @@ from flashinfer import autotune_v2
 from flashinfer.autotuner import AutoTuner, TunableRunner, TuningConfig
 
 from sglang.srt.environ import envs
+from sglang.srt.model_executor.cuda_graph_config import CudaGraphConfig
 from sglang.srt.model_executor.forward_mode import ForwardMode
 from sglang.srt.model_executor.runner import flashinfer_autotune as sg
 from sglang.srt.model_executor.runner_backend.full_cuda_graph_backend import (
@@ -158,7 +159,10 @@ def run():
             )
             ctx = get_context()
             with ctx.override_server_args(
-                model_path="dummy", device="cuda", quantization="modelopt_fp8"
+                model_path="dummy",
+                device="cuda",
+                quantization="modelopt_fp8",
+                cuda_graph_config=CudaGraphConfig(),
             ):
                 with envs.SGLANG_ENABLE_FLASHINFER_GRAPH_AUTOTUNE.override(False):
                     check(
