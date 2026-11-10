@@ -177,20 +177,16 @@ def run():
                         "stable deployment cache",
                     )
                     with envs.SGLANG_FLASHINFER_AUTOTUNE_CACHE.override(False):
-                        a, b = (
-                            sg.FlashInferGraphAutotune.create(graph) for _ in range(2)
-                        )
                         check(
-                            a.cache_root != b.cache_root
-                            and a.cache_root.parent.name == "runs",
-                            "reuse-off isolates each capture session",
+                            sg.FlashInferGraphAutotune.create(graph) is None
+                            and sg.FlashInferGraphAutotune.for_model(mr) is None,
+                            "reuse-off retains the v1 path",
                         )
-                        with a.capture_context(choose, reset):
-                            check(choose() == 2, "reuse-off graph scope works")
-                        check(
-                            snapshot(root / "graph") == cold_files,
-                            "reuse-off stable store untouched",
-                        )
+                    check(
+                        sg.FlashInferGraphAutotune.for_model(mr).cache_root
+                        == sg.FlashInferGraphAutotune.create(graph).cache_root,
+                        "startup and capture resolve the same scope",
+                    )
                     for field, value in [
                         ("disable_flashinfer_autotune", True),
                         ("enable_deterministic_inference", True),

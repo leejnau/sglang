@@ -114,6 +114,19 @@ def run(args, result):
         AutoTuner.choose_one,
     )
     original_capture = FullCudaGraphBackend.capture_one
+    original_scope_capture = sg_tuner.FlashInferGraphAutotune.capture_context
+    preparation_profiles = []
+    result["capture_preparation_profile_deltas"] = preparation_profiles
+
+    @contextlib.contextmanager
+    def scoped_capture(scope, forward, reset):
+        before = len(profiles)
+        with original_scope_capture(scope, forward, reset):
+            yield
+        delta = len(profiles) - before
+        preparation_profiles.append(delta)
+        assert delta == 0, "startup preparation missed a tested capture shape"
+
     stage = ["startup"]
 
     def profile(t, runner, inputs, tactic, config, **kwargs):
@@ -169,7 +182,7 @@ def run(args, result):
         }
         captures.append(row)
         assert row["profile_delta"] == 0
-        if args.arm == "scoped" and not args.disable:
+        if args.arm == "scoped" and not args.disable and not args.no_reuse:
             assert report is not None and report.misses == 0
             assert report.hits + report.skipped > 0
         return answer
@@ -180,6 +193,9 @@ def run(args, result):
             patch.object(AutoTuner, "_profile_single_kernel", profile),
             patch.object(AutoTuner, "choose_one", choose),
             patch.object(FullCudaGraphBackend, "capture_one", capture),
+            patch.object(
+                sg_tuner.FlashInferGraphAutotune, "capture_context", scoped_capture
+            ),
         ):
             bench, tokenizer = b.load_model(server, ports, 0, 0)
         torch.cuda.synchronize()

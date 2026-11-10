@@ -17,7 +17,7 @@ changes = {
     ),
     "scope": ('cache_scope="context",', 'cache_scope="process",'),
     "skip": ("skip_ops=self.skip_ops,", "skip_ops=(),"),
-    "reuse": ("if not envs.SGLANG_FLASHINFER_AUTOTUNE_CACHE.get():", "if False:"),
+    "reuse": ("and envs.SGLANG_FLASHINFER_AUTOTUNE_CACHE.get()", "and True"),
 }
 a, b = changes[case]
 assert source.count(a) == 1
@@ -30,7 +30,7 @@ except (AssertionError, RuntimeError, ValueError) as error:
         "policy": "measurement policy unchanged",
         "scope": "strict_replay requires an identified context-scoped cache",
         "skip": "skip overrides populated graph winner",
-        "reuse": "reuse-off isolates each capture session",
+        "reuse": "reuse-off retains the v1 path",
     }
     assert expected[case] in str(error), str(error)
     print(
