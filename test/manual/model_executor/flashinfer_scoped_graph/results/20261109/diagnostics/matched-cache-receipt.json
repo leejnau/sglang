@@ -1,0 +1,154 @@
+{
+  "purpose": "diagnostic only; matched winners are deliberately seeded",
+  "source_v1_sha256": "11fd989f077b4ed0058c3e3fc20f1b487b92ffecf0ff6ea1a7f5bb743c7724ac",
+  "untouched_v1_metadata_keys": [
+    "_generation",
+    "_metadata"
+  ],
+  "entries": [
+    {
+      "key": "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 4, 4096), (1, 4096, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+      "old_tactic": 0,
+      "new_tactic": -1,
+      "before": "206bec659c677a073cc86cbabf89627c203ceeba938cf8cde7be131dead24747",
+      "after": "1ad2c8ac05c1b16e2e43be46ccfeb16d0a969f52671935f73c8554de4ff6ae23"
+    },
+    {
+      "key": "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 4, 14336), (1, 14336, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+      "old_tactic": 0,
+      "new_tactic": 0,
+      "before": "f2c8d9ab6440fd8665e6469f8f2143a338e5b2d54a3a58af9a050c3f93ae2027",
+      "after": "94b2a09c8300eb33dc517e57da995ad5190cec4ad8a99bf97f434e7d0501295b"
+    },
+    {
+      "key": "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 16, 14336), (1, 14336, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+      "old_tactic": 0,
+      "new_tactic": 0,
+      "before": "74c897ffe9d2fd055936445ad89540f88f0067d6e7536db8c0136e27f6174354",
+      "after": "e16159feeaabe596ccb87c09bfc9788f619a27c94ca74cabfc813119c4958577"
+    },
+    {
+      "key": "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 1, 14336), (1, 14336, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+      "old_tactic": 0,
+      "new_tactic": 0,
+      "before": "35999c3318bb8da622eccad60059a005ca0fb3fe60e9ec9da9002e1ea02e9efe",
+      "after": "fbee6b52095d2c84e9705fbf09dfe506e450a1e7da73fd0e2ea9c0ca8039facd"
+    },
+    {
+      "key": "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 2, 4096), (1, 4096, 28672), (1,), (1,), (1, -1, 28672), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+      "old_tactic": 2,
+      "new_tactic": 2,
+      "before": "852862757a0f43b25c2bb5e7b08af4a23608279f185009a5021f6c0503d4c729",
+      "after": "37199cd4739ac9f95b2723012d4ef4852965b09a293dfe855a76c62687f42a29"
+    },
+    {
+      "key": "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 1, 4096), (1, 4096, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+      "old_tactic": 0,
+      "new_tactic": 0,
+      "before": "1c2057833c55593462e3ca20447618bb30b88137dfe7add188eb8686c449b073",
+      "after": "e12648c4b9b03c673a6d848c8ae62efdad2051f7b576ab77cbf9d14378d567f2"
+    },
+    {
+      "key": "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 16, 4096), (1, 4096, 28672), (1,), (1,), (1, -1, 28672), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+      "old_tactic": 1,
+      "new_tactic": 0,
+      "before": "dace4d7ceabad1d63cffe4868e6d8ea5f1d708d811715c5e7a344ae4715703eb",
+      "after": "45893966952cc66940a8e840965b4cf6ea3df3571f8bc913b68e362e1f089141"
+    },
+    {
+      "key": "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 8, 4096), (1, 4096, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+      "old_tactic": 0,
+      "new_tactic": -1,
+      "before": "5d1729208b1bde2179582204bae280be2c59ee21c34f0378af9ec7aa0170ad0c",
+      "after": "ff3e2ee2ff7ef4130d4ac43e6ca50dc8ebba031129406000825157fe65644b37"
+    },
+    {
+      "key": "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 16, 4096), (1, 4096, 6144), (1,), (1,), (1, -1, 6144), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+      "old_tactic": -1,
+      "new_tactic": 1,
+      "before": "79e96d8d69b5583426c5c290dbaecadf248d0082be0f4c7f0bdcfb9a5081e60d",
+      "after": "7484390f68f510a9e661bf6dd5b46ebc326262e182370ea8eb170c1fc516248c"
+    },
+    {
+      "key": "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 16, 4096), (1, 4096, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+      "old_tactic": 0,
+      "new_tactic": -1,
+      "before": "0c593b339ff0a672a29f3417ddffe10ac042c8e53fdfa61e186cea29b85a50d4",
+      "after": "67b399b065f88895be42d23bfa90af6410eceacf40486b1cbebf979442e394a2"
+    },
+    {
+      "key": "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 1, 4096), (1, 4096, 28672), (1,), (1,), (1, -1, 28672), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+      "old_tactic": 2,
+      "new_tactic": 2,
+      "before": "22fefefaeb19d5ab1010eed0ac878ea43d120cf8e622361e22eb3937126e2c24",
+      "after": "54e4a6ca4637a8a2f7189603c6a912fb11d4a815117d3466646c04e40be1e8b4"
+    },
+    {
+      "key": "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 1, 4096), (1, 4096, 6144), (1,), (1,), (1, -1, 6144), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+      "old_tactic": 1,
+      "new_tactic": 1,
+      "before": "15c6804996c9d412bb7e1d868d2b2f955e863e4aa7f2470476a34a3e59dd6e2a",
+      "after": "c5af014801c0305d4f1fd5f4a95fd8eaba02bc2b830d24fdbddb1b7760617c60"
+    },
+    {
+      "key": "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 8, 4096), (1, 4096, 6144), (1,), (1,), (1, -1, 6144), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+      "old_tactic": -1,
+      "new_tactic": -1,
+      "before": "15d3904d1fbbc7ec0997ba74e2c64df2803da04eb1ff4546ecf64b27c82a3363",
+      "after": "745e9acc3b0a3b74c06c7a65afcb074ce56ae896fa4e84979be66ba04049a103"
+    },
+    {
+      "key": "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 2, 14336), (1, 14336, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+      "old_tactic": 0,
+      "new_tactic": 0,
+      "before": "20f9e29f184b5e550d824fe460a22cb6ab28a49d5832857294ed6905c945cc0a",
+      "after": "09b9ca5a564256bca2c1f2277f52fabcf39c0f1a33b5acd45f4526e130675615"
+    },
+    {
+      "key": "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 4, 4096), (1, 4096, 6144), (1,), (1,), (1, -1, 6144), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+      "old_tactic": 1,
+      "new_tactic": 1,
+      "before": "d8ddd6167857b8ec3b795043fb5de79ef9d33f61867bb2bd3c855a786f18fac1",
+      "after": "81e84bc2794046662030ead45cc95c366e74d32623dbbcfdf139ebaa21d8f6da"
+    },
+    {
+      "key": "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 2, 4096), (1, 4096, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+      "old_tactic": -1,
+      "new_tactic": 0,
+      "before": "8801b45190c963bd8843605c1aa4e6489617630487e1068eb107e261b4a5f3ca",
+      "after": "94265a41b34350153f5c4f863433b592d30c976eaddea385cf9dff8788d72cfb"
+    },
+    {
+      "key": "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 4, 4096), (1, 4096, 28672), (1,), (1,), (1, -1, 28672), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+      "old_tactic": 2,
+      "new_tactic": 2,
+      "before": "4eb3dc008236276f994a3ea532871a0fffab77c3fe28843a4f6bae9d4c1fd75c",
+      "after": "83fa986e621f2bd05c6d188cd6ff6b71794174350a683e33e26ae1bcad8a8900"
+    },
+    {
+      "key": "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 2, 4096), (1, 4096, 6144), (1,), (1,), (1, -1, 6144), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+      "old_tactic": 1,
+      "new_tactic": 1,
+      "before": "6ef59d04c3d29dceafaedbace2210990102a00b540ef0b22c8e0ad7dd6b9c8bc",
+      "after": "c1f0513504e509dd072e9e15906747ff682266e55ef5c0fba2ce1a187ff63ef2"
+    },
+    {
+      "key": "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 8, 4096), (1, 4096, 28672), (1,), (1,), (1, -1, 28672), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+      "old_tactic": -1,
+      "new_tactic": 2,
+      "before": "a6432196deaeea8acec17d4909b1f9539ea264e098f7a4efe6974baac402b0ec",
+      "after": "9cfd43899e27207fcf741e9ca16d61ad4703de684a190ed8cb26cca39d9087b3"
+    },
+    {
+      "key": "('fp8_gemm', 'CublasFp8GemmRunner', ((1, 8, 14336), (1, 14336, 4096), (1,), (1,), (1, -1, 4096), (-1,)), (torch.float8_e4m3fn, torch.float8_e4m3fn, torch.bfloat16))",
+      "old_tactic": -1,
+      "new_tactic": -1,
+      "before": "e95b37006879799bc4715670ef4507a0c1abe905df2bf7ce167a4e9b74c1ebf7",
+      "after": "075a32ef116009e3bebd437320592a844b739cdbdb878d34c5aa023b84eacca7"
+    }
+  ],
+  "raw_file_sha256": "71aaf9826401af2ea1758ab7db1d7d0dc710ff42d2ed65d0e54576dc43e62403",
+  "raw_file_bytes": 8373,
+  "selection_record_count": 0,
+  "counted_selections": []
+}

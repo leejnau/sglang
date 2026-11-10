@@ -1,0 +1,109 @@
+{
+  "production_commit": "f3a84556e5994f2082ac043a33a36df6b8915e40",
+  "registered_units": [
+    {
+      "test": "test_flashinfer_autotune_sync",
+      "passed": 10,
+      "log_sha256": "ed64acb37fa7bc938028e5fe1dc5e722c9f6a0f0153ba7c14a6d1391068889f4"
+    },
+    {
+      "test": "test_decode_cuda_graph_runner",
+      "passed": 26,
+      "log_sha256": "1f853b2d06a5ae53f87760296e629cf1fb9c2fa541e310fa0c759af0fb4821f8"
+    },
+    {
+      "test": "test_full_cuda_graph_backend",
+      "passed": 7,
+      "log_sha256": "b387e3933c219632f9372c37ed191f321adfdd1706ec24b6e5ee31123e3f3d9d"
+    }
+  ],
+  "unit_total": 43,
+  "actual_tuner_cache_controls": {
+    "checks": [
+      "legacy winner selected",
+      "graph winner differs from legacy",
+      "strict capture lookup",
+      "measurement policy unchanged",
+      "bare legacy lookup restored",
+      "preparation resets attention state",
+      "v1 persistence excludes graph winner",
+      "graph winner persisted",
+      "fresh tuner restores graph winner",
+      "warm preparation and capture do not profile",
+      "warm cache bytes unchanged",
+      "fresh bare serving still uses v1",
+      "strict miss restores state without profiling",
+      "prepare error restores scope and resets preparation",
+      "capture error restores scope and resets preparation",
+      "skip overrides populated graph winner",
+      "skip restores legacy without profiling",
+      "opt-out has no scope",
+      "stable deployment cache",
+      "reuse-off retains the v1 path",
+      "startup and capture resolve the same scope",
+      "disable_flashinfer_autotune preserves existing path",
+      "enable_deterministic_inference preserves existing path",
+      "tp_size preserves existing path",
+      "pp_size preserves existing path",
+      "enable_lora preserves existing path",
+      "moe_runner_backend preserves existing path",
+      "enable_torch_compile remains outside scope",
+      "enable_two_batch_overlap remains outside scope",
+      "capture_forward_mode remains outside scope",
+      "tuning forbidden during active capture"
+    ],
+    "count": 31,
+    "status": "passed"
+  },
+  "canary_actual_caller": {
+    "status": "passed",
+    "canary_events": [
+      [
+        "enter",
+        0
+      ],
+      [
+        "forward",
+        0
+      ],
+      [
+        "exit",
+        0
+      ],
+      [
+        "enter",
+        0
+      ],
+      [
+        "forward",
+        0
+      ],
+      [
+        "exit",
+        0
+      ]
+    ],
+    "before_control": {
+      "status": "expected_failure",
+      "error": "'_GeneratorContextManager' object has no attribute 'args'"
+    }
+  },
+  "negative_controls": {
+    "negative-reuse-attempt02.log": {
+      "log_sha256": "ee041575b29c1494926f3550dc688c29f0407d5385a8b1c8e8ef3956f63c7baf",
+      "result_tail": "NFO - autotuner.py:1121 - flashinfer.jit: [Autotuner]: Autotuning process starts ...\n2026-11-10 00:52:16,992 - INFO - autotuner.py:1146 - flashinfer.jit: [Autotuner]: Autotuning process ends\n{\n  \"case\": \"reuse\",\n  \"status\": \"expected_failure\",\n  \"error_type\": \"AssertionError\",\n  \"error\": \"reuse-off retains the v1 path\",\n  \"original_sha256\": \"8f130ad4754f0c56a1fba46874392d86fca0e73930b30481aeb81939fcbf39ba\",\n  \"mutated_sha256\": \"175348cd9c79dbf0d3041e090d3e18e4b8f9afd6e29de40ec136ae518abbd914\"\n}\n"
+    },
+    "negative-policy-attempt02.log": {
+      "log_sha256": "fbecd863f4a8c83d8c611c89cfb1d4a513a96de008389a8c2bc6fc81299705cd",
+      "result_tail": ": Tuning sglang_scoped_control: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:00<00:00, 1935.53profile/s]\n2026-11-10 00:51:43,303 - INFO - autotuner.py:1146 - flashinfer.jit: [Autotuner]: Autotuning process ends\n{\n  \"case\": \"policy\",\n  \"status\": \"expected_failure\",\n  \"error_type\": \"AssertionError\",\n  \"error\": \"measurement policy unchanged\",\n  \"original_sha256\": \"8f130ad4754f0c56a1fba46874392d86fca0e73930b30481aeb81939fcbf39ba\",\n  \"mutated_sha256\": \"c53716e9506963a1ed0289aa611c7ce2a9fda3a999d28d457526938f942be4aa\"\n}\n"
+    },
+    "negative-skip-attempt02.log": {
+      "log_sha256": "920df5e5a93fc3cf9aad96bb654c6c78eaf15056e60e7a7688756095ee3a5ee6",
+      "result_tail": "utotuner.py:1121 - flashinfer.jit: [Autotuner]: Autotuning process starts ...\n2026-11-10 00:52:05,912 - INFO - autotuner.py:1146 - flashinfer.jit: [Autotuner]: Autotuning process ends\n{\n  \"case\": \"skip\",\n  \"status\": \"expected_failure\",\n  \"error_type\": \"AssertionError\",\n  \"error\": \"skip overrides populated graph winner\",\n  \"original_sha256\": \"8f130ad4754f0c56a1fba46874392d86fca0e73930b30481aeb81939fcbf39ba\",\n  \"mutated_sha256\": \"91d710bfa55cf4897cbc9be67b385279b266ed5cefeb952e6236931c10791de4\"\n}\n"
+    },
+    "negative-scope-attempt02.log": {
+      "log_sha256": "47635378032181e6894c2773d71159fa766c49caa990b52526ab8a43bb7d1d1c",
+      "result_tail": "ontrol: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:00<00:00, 2094.01profile/s]\n2026-11-10 00:51:54,576 - INFO - autotuner.py:1146 - flashinfer.jit: [Autotuner]: Autotuning process ends\n{\n  \"case\": \"scope\",\n  \"status\": \"expected_failure\",\n  \"error_type\": \"ValueError\",\n  \"error\": \"strict_replay requires an identified context-scoped cache\",\n  \"original_sha256\": \"8f130ad4754f0c56a1fba46874392d86fca0e73930b30481aeb81939fcbf39ba\",\n  \"mutated_sha256\": \"4ca594fa519c965c1d5e939be14f9f7ef29d2038084a843e3f0445fb3daf7d4d\"\n}\n"
+    }
+  }
+}

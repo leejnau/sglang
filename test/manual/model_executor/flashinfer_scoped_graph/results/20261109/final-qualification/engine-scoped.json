@@ -1,0 +1,419 @@
+{
+  "mode": "scoped",
+  "status": "passed",
+  "started": 1794272830.844743,
+  "config": {
+    "model_path": "/study/model",
+    "tokenizer_path": "/study/model",
+    "quantization": "modelopt_fp8",
+    "dtype": "bfloat16",
+    "device": "cuda",
+    "tp_size": 1,
+    "max_running_requests": 16,
+    "max_total_tokens": 8192,
+    "context_length": 512,
+    "mem_fraction_static": 0.7,
+    "disable_overlap_schedule": true,
+    "disable_radix_cache": true,
+    "attention_backend": "triton",
+    "kv_cache_dtype": "bfloat16",
+    "cuda_graph_config": {
+      "decode": {
+        "backend": "full",
+        "bs": [
+          1,
+          4,
+          16
+        ],
+        "max_bs": 16
+      },
+      "prefill": {
+        "backend": "disabled"
+      }
+    }
+  },
+  "startup_seconds": 60.53673608903773,
+  "requests": [
+    {
+      "batch": 1,
+      "prompt": 0,
+      "response": {
+        "text": "The capital of France is Paris.",
+        "output_ids": [
+          791,
+          6864,
+          315,
+          9822,
+          374,
+          12366,
+          13,
+          128009
+        ],
+        "meta_info": {
+          "id": "b69b5ef70e604004a3674ab803aaf3ba",
+          "finish_reason": {
+            "type": "stop",
+            "matched": 128009
+          },
+          "prompt_tokens": 17,
+          "weight_version": "default",
+          "num_retractions": 0,
+          "input_token_logprobs": [],
+          "output_token_logprobs": [
+            [
+              -0.2818029820919037,
+              791,
+              null
+            ],
+            [
+              -0.001424132497049868,
+              6864,
+              null
+            ],
+            [
+              -0.00011967896716669202,
+              315,
+              null
+            ],
+            [
+              -1.8596476365928538e-05,
+              9822,
+              null
+            ],
+            [
+              -2.7418097943154862e-06,
+              374,
+              null
+            ],
+            [
+              -0.004989909008145332,
+              12366,
+              null
+            ],
+            [
+              -0.018928727135062218,
+              13,
+              null
+            ],
+            [
+              -3.0874729418428615e-05,
+              128009,
+              null
+            ]
+          ],
+          "output_token_logprobs_length": 8,
+          "reasoning_tokens": 0,
+          "completion_tokens": 8,
+          "cached_tokens": 0,
+          "weight_versions": [
+            {
+              "version": "default",
+              "start": 0,
+              "end": 8
+            }
+          ],
+          "cached_tokens_details": null,
+          "dp_rank": null,
+          "e2e_latency": 10.41268101008609,
+          "response_sent_to_client_ts": 1794272912.2268772
+        }
+      }
+    },
+    {
+      "batch": 3,
+      "prompt": 0,
+      "response": {
+        "text": "The capital of France is Paris.",
+        "output_ids": [
+          791,
+          6864,
+          315,
+          9822,
+          374,
+          12366,
+          13,
+          128009
+        ],
+        "meta_info": {
+          "id": "866b70188b8f431eb7aba27f7941d040",
+          "finish_reason": {
+            "type": "stop",
+            "matched": 128009
+          },
+          "prompt_tokens": 17,
+          "weight_version": "default",
+          "num_retractions": 0,
+          "input_token_logprobs": [],
+          "output_token_logprobs": [
+            [
+              -0.2818029820919037,
+              791,
+              null
+            ],
+            [
+              -0.001625765347853303,
+              6864,
+              null
+            ],
+            [
+              -0.00013219437096267939,
+              315,
+              null
+            ],
+            [
+              -1.6689160474925302e-05,
+              9822,
+              null
+            ],
+            [
+              -1.7881377516459906e-06,
+              374,
+              null
+            ],
+            [
+              -0.005171019118279219,
+              12366,
+              null
+            ],
+            [
+              -0.016675492748618126,
+              13,
+              null
+            ],
+            [
+              -2.2291887944447808e-05,
+              128009,
+              null
+            ]
+          ],
+          "output_token_logprobs_length": 8,
+          "reasoning_tokens": 0,
+          "completion_tokens": 8,
+          "cached_tokens": 0,
+          "weight_versions": [
+            {
+              "version": "default",
+              "start": 0,
+              "end": 8
+            }
+          ],
+          "cached_tokens_details": null,
+          "dp_rank": null,
+          "e2e_latency": 0.15841479203663766,
+          "response_sent_to_client_ts": 1794272912.38586
+        }
+      }
+    },
+    {
+      "batch": 3,
+      "prompt": 1,
+      "response": {
+        "text": "2 + 3 = 5",
+        "output_ids": [
+          17,
+          489,
+          220,
+          18,
+          284,
+          220,
+          20,
+          128009
+        ],
+        "meta_info": {
+          "id": "8127476c79314db4b25465215bc2a379",
+          "finish_reason": {
+            "type": "stop",
+            "matched": 128009
+          },
+          "prompt_tokens": 17,
+          "weight_version": "default",
+          "num_retractions": 0,
+          "input_token_logprobs": [],
+          "output_token_logprobs": [
+            [
+              -0.6493272185325623,
+              17,
+              null
+            ],
+            [
+              -0.00021908267808612436,
+              489,
+              null
+            ],
+            [
+              -4.768370445162873e-07,
+              220,
+              null
+            ],
+            [
+              -2.50339189733495e-06,
+              18,
+              null
+            ],
+            [
+              -0.0010564705589786172,
+              284,
+              null
+            ],
+            [
+              -5.960446742392378e-06,
+              220,
+              null
+            ],
+            [
+              0.0,
+              20,
+              null
+            ],
+            [
+              -0.25271663069725037,
+              128009,
+              null
+            ]
+          ],
+          "output_token_logprobs_length": 8,
+          "reasoning_tokens": 0,
+          "completion_tokens": 8,
+          "cached_tokens": 0,
+          "weight_versions": [
+            {
+              "version": "default",
+              "start": 0,
+              "end": 8
+            }
+          ],
+          "cached_tokens_details": null,
+          "dp_rank": null,
+          "e2e_latency": 0.15843866718932986,
+          "response_sent_to_client_ts": 1794272912.385873
+        }
+      }
+    },
+    {
+      "batch": 3,
+      "prompt": 2,
+      "response": {
+        "text": "The two primary colors are:\n\n1. Red\n2. Blue",
+        "output_ids": [
+          791,
+          1403,
+          6156,
+          8146,
+          527,
+          1473,
+          16,
+          13,
+          3816,
+          198,
+          17,
+          13,
+          8868,
+          128009
+        ],
+        "meta_info": {
+          "id": "72be3248d3224c1796ee1b31edb34bfe",
+          "finish_reason": {
+            "type": "stop",
+            "matched": 128009
+          },
+          "prompt_tokens": 16,
+          "weight_version": "default",
+          "num_retractions": 0,
+          "input_token_logprobs": [],
+          "output_token_logprobs": [
+            [
+              -0.7554198503494263,
+              791,
+              null
+            ],
+            [
+              -0.038613785058259964,
+              1403,
+              null
+            ],
+            [
+              -0.007278947159647942,
+              6156,
+              null
+            ],
+            [
+              -0.00011705666838679463,
+              8146,
+              null
+            ],
+            [
+              -0.011527832597494125,
+              527,
+              null
+            ],
+            [
+              -0.004863930866122246,
+              1473,
+              null
+            ],
+            [
+              -0.000386640167562291,
+              16,
+              null
+            ],
+            [
+              -0.00010358751023886725,
+              13,
+              null
+            ],
+            [
+              -0.028511036187410355,
+              3816,
+              null
+            ],
+            [
+              -0.0007680088747292757,
+              198,
+              null
+            ],
+            [
+              -1.0728830375228426e-06,
+              17,
+              null
+            ],
+            [
+              -1.1444026313256472e-05,
+              13,
+              null
+            ],
+            [
+              -0.002830191981047392,
+              8868,
+              null
+            ],
+            [
+              -0.6199336051940918,
+              128009,
+              null
+            ]
+          ],
+          "output_token_logprobs_length": 14,
+          "reasoning_tokens": 0,
+          "completion_tokens": 14,
+          "cached_tokens": 0,
+          "weight_versions": [
+            {
+              "version": "default",
+              "start": 0,
+              "end": 14
+            }
+          ],
+          "cached_tokens_details": null,
+          "dp_rank": null,
+          "e2e_latency": 0.19010927993804216,
+          "response_sent_to_client_ts": 1794272912.4175286
+        }
+      }
+    }
+  ],
+  "finished": 1794272912.4244034,
+  "raw_file_sha256": "96ac1a4ca9ed3fdbdf5cdf18532ed5eb101649624c59b01c78b1832f76a2a04f",
+  "raw_file_bytes": 9439,
+  "selection_record_count": 0,
+  "counted_selections": []
+}

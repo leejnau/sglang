@@ -1,0 +1,358 @@
+{
+  "status": "hold_draft",
+  "production_commit": "f3a84556e5994f2082ac043a33a36df6b8915e40",
+  "baseline_commit": "78e6e9fc4dd5eecf19fd76f5393a1ae683ee83b0",
+  "baseline_behavior": "v2 candidate selection with existing v1 persistence; not a pure-v1 versus pure-v2 engine comparison",
+  "scope": "Opt-in single-rank ordinary full decode graphs; existing startup/eager persistence outside context; measurement policy unspecified; reuse-off retains legacy path",
+  "qualification": "Implementation and bounded experiment campaign completed; no PR opened. Original numerical parity admission did not pass for one natural cold cache. Descriptive warm performance shows small consistent per-shape tradeoffs, not a statistically established regression or equivalence.",
+  "passed": [
+    "43 registered unit tests in three separate processes",
+    "31 actual tuner/cache control assertions",
+    "Four expected-failure mutations and actual canary lifecycle pre-fix failure control",
+    "Fresh-process cache reuse without profiling; exact cache bytes retained",
+    "Real-model skip, disable and reuse-off controls",
+    "Native FP8 candidates -1/0/1 pass against FP32 on captured serving input",
+    "Bounded paired answer accuracy: 146/200 legacy, 155/200 scoped; 14 gains and 5 losses"
+  ],
+  "not_passed": [
+    "Original eager/graph allclose screen: one cold seed failed and unchanged warm cache reproduces it",
+    "Public Engine strict logprob comparison: one paired request exceeds original tolerance, despite identical generated token IDs/text"
+  ],
+  "performance_summary": {
+    "runs": [
+      {
+        "file": "timing-01-legacy.json",
+        "status": "passed",
+        "allclose_failures": 0,
+        "max_abs_logit_difference": 0.0,
+        "profile_count": 0,
+        "capture_preparation_profile_deltas": []
+      },
+      {
+        "file": "timing-02-scoped.json",
+        "status": "completed_with_numerical_differences",
+        "allclose_failures": 6,
+        "max_abs_logit_difference": 1.15625,
+        "profile_count": 0,
+        "capture_preparation_profile_deltas": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "file": "timing-03-scoped.json",
+        "status": "completed_with_numerical_differences",
+        "allclose_failures": 6,
+        "max_abs_logit_difference": 1.15625,
+        "profile_count": 0,
+        "capture_preparation_profile_deltas": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "file": "timing-04-legacy.json",
+        "status": "passed",
+        "allclose_failures": 0,
+        "max_abs_logit_difference": 0.0,
+        "profile_count": 0,
+        "capture_preparation_profile_deltas": []
+      }
+    ],
+    "metrics": [
+      {
+        "batch": 1,
+        "length": 32,
+        "metric": "graph_ms",
+        "paired_geomean_ratio": 1.0024003135986663,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.135151062011719,
+            "scoped_ms": 4.146771545410156,
+            "ratio": 1.0028101714361033
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.136673278808594,
+            "scoped_ms": 4.144907836914063,
+            "ratio": 1.0019906232739368
+          }
+        ]
+      },
+      {
+        "batch": 1,
+        "length": 32,
+        "metric": "decode_ms",
+        "paired_geomean_ratio": 1.0025953954344207,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.1893401903507765,
+            "scoped_ms": 4.20191123339464,
+            "ratio": 1.003000721467504
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.191021937003825,
+            "scoped_ms": 4.200201252388069,
+            "ratio": 1.0021902331990193
+          }
+        ]
+      },
+      {
+        "batch": 1,
+        "length": 256,
+        "metric": "graph_ms",
+        "paired_geomean_ratio": 1.001859619116472,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.225236206054688,
+            "scoped_ms": 4.234785003662109,
+            "ratio": 1.0022599440934776
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.2264883422851565,
+            "scoped_ms": 4.232656707763672,
+            "ratio": 1.0014594540381911
+          }
+        ]
+      },
+      {
+        "batch": 1,
+        "length": 256,
+        "metric": "decode_ms",
+        "paired_geomean_ratio": 1.002032883510681,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.2753649067890365,
+            "scoped_ms": 4.2843875162361655,
+            "ratio": 1.0021103717796818
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.276294970622985,
+            "scoped_ms": 4.284656843083212,
+            "ratio": 1.0019554012334675
+          }
+        ]
+      },
+      {
+        "batch": 4,
+        "length": 32,
+        "metric": "graph_ms",
+        "paired_geomean_ratio": 0.9935658801151809,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.231164245605469,
+            "scoped_ms": 4.204720764160156,
+            "ratio": 0.9937503060835376
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.2318771362304695,
+            "scoped_ms": 4.203868408203125,
+            "ratio": 0.9933814883736692
+          }
+        ]
+      },
+      {
+        "batch": 4,
+        "length": 32,
+        "metric": "decode_ms",
+        "paired_geomean_ratio": 0.9946117991473615,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.290422686608508,
+            "scoped_ms": 4.265946499799611,
+            "ratio": 0.9942951572381683
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.29028523285524,
+            "scoped_ms": 4.268527231033659,
+            "ratio": 0.9949285418939148
+          }
+        ]
+      },
+      {
+        "batch": 4,
+        "length": 256,
+        "metric": "graph_ms",
+        "paired_geomean_ratio": 0.9937084440095163,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.337832641601563,
+            "scoped_ms": 4.310885467529297,
+            "ratio": 0.9937878714328829
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.338172454833984,
+            "scoped_ms": 4.310534057617188,
+            "ratio": 0.9936290229343007
+          }
+        ]
+      },
+      {
+        "batch": 4,
+        "length": 256,
+        "metric": "decode_ms",
+        "paired_geomean_ratio": 0.9943043328556846,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.414108905621106,
+            "scoped_ms": 4.387922279420309,
+            "ratio": 0.994067516964194
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.414472998178098,
+            "scoped_ms": 4.390375295770355,
+            "ratio": 0.9945412051636313
+          }
+        ]
+      },
+      {
+        "batch": 16,
+        "length": 32,
+        "metric": "graph_ms",
+        "paired_geomean_ratio": 1.0008701650416352,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.3728172302246096,
+            "scoped_ms": 4.375131530761719,
+            "ratio": 1.0005292470312075
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.371535034179688,
+            "scoped_ms": 4.376829833984376,
+            "ratio": 1.0012111992156734
+          }
+        ]
+      },
+      {
+        "batch": 16,
+        "length": 32,
+        "metric": "decode_ms",
+        "paired_geomean_ratio": 1.0008000034650204,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.490091512707295,
+            "scoped_ms": 4.491901767323725,
+            "ratio": 1.0004031665304163
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.488909329666058,
+            "scoped_ms": 4.494282544328598,
+            "ratio": 1.0011969978157123
+          }
+        ]
+      },
+      {
+        "batch": 16,
+        "length": 256,
+        "metric": "graph_ms",
+        "paired_geomean_ratio": 1.000941468535891,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.584194183349609,
+            "scoped_ms": 4.586653747558594,
+            "ratio": 1.0005365314187427
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.582499542236328,
+            "scoped_ms": 4.588670196533203,
+            "ratio": 1.0013465695391783
+          }
+        ]
+      },
+      {
+        "batch": 16,
+        "length": 256,
+        "metric": "decode_ms",
+        "paired_geomean_ratio": 1.0018395012455488,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.725646278529894,
+            "scoped_ms": 4.7303141400334425,
+            "ratio": 1.000987772090509
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.726067312731175,
+            "scoped_ms": 4.73878967386554,
+            "ratio": 1.0026919551272775
+          }
+        ]
+      }
+    ],
+    "limits": "Two process observations per arm, one preserved cache pair; descriptive warm timings, no independent retuning trials, HTTP throughput or statistical equivalence claim. Logit differences remain explicitly flagged."
+  },
+  "accuracy_summary": {
+    "questions": 200,
+    "legacy_correct": 146,
+    "scoped_correct": 155,
+    "legacy_score": 0.73,
+    "scoped_score": 0.775,
+    "scoped_gains": 14,
+    "scoped_losses": 5,
+    "same_answers": 168,
+    "same_texts": 67,
+    "limits": "One preserved natural cache pair, one model and a fixed 200-question subset. Different from the repository CI benchmark; no general accuracy superiority or equivalence claim."
+  },
+  "interpretation": "Native tactic1 was closer to FP32 on one sample; model-level divergence is not established as incorrect computation or v2-specific. Scope isolation permits independently selected winners. Do not blacklist tactic1, replace the failed seed, silently relax tolerance, or attribute a cache-replay overhead solely from these timings.",
+  "next_decision": "Agree on numerical/task-quality acceptance for independently selected FP8 tactics and whether the small per-shape timing tradeoffs require selection-policy work. Preserve current production defaults; do not broaden experiments or draft a PR automatically.",
+  "limits": [
+    "One H100 on a shared host, one FP8 model",
+    "Final timings: one natural cache pair, two process observations per arm, no statistical equivalence claim",
+    "200-question fixed subset with four disjoint demonstrations, not repository CI accuracy benchmark",
+    "CUDA graph event time and full ModelRunner decode wall time, not HTTP throughput",
+    "Other models, hardware, distributed execution and excluded paths unqualified"
+  ],
+  "raw_archive": {
+    "files": 752,
+    "bytes": 4414646194,
+    "sha256": "37365f2f221b2b3ff88005e1929aacd22b7e147630dbb67f41f6a4e58e4b63f2"
+  }
+}

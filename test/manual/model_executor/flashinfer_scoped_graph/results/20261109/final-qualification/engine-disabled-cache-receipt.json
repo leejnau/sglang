@@ -1,0 +1,9 @@
+{
+  "source": "/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.json",
+  "destination": "/study/reviewed-study/engine-disabled-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.json",
+  "sha256": "0e2dfe94b85e21493be632960b8bd24c5ccf8011136d2c84eb9495df2c22539a",
+  "raw_file_sha256": "f2d8db4010a84402ba0e0828b35a33df6988377a129a245f8e65311e0fadfa4f",
+  "raw_file_bytes": 346,
+  "selection_record_count": 0,
+  "counted_selections": []
+}

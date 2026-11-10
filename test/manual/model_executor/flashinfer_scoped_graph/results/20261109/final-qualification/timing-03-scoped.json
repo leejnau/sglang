@@ -1,0 +1,2091 @@
+{
+  "status": "completed_with_numerical_differences",
+  "arguments": {
+    "model": "/study/model",
+    "cache": "/study/prepared-study/matrix-scoped-1-cache",
+    "output": "/study/reviewed-study/timing-03-scoped.json",
+    "arm": "scoped",
+    "phase": "warm",
+    "skip": "False",
+    "disable": "False",
+    "no_reuse": "False",
+    "no_perf": "False",
+    "observe_logit_differences": "True"
+  },
+  "started": 1794273815.8980808,
+  "environment": {
+    "torch": "2.14.1+cu130",
+    "cuda": "13.0",
+    "flashinfer": "0.7.3",
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "pid": 77,
+    "sglang_source": "/study/sglang-reviewed/python/sglang/benchmark/one_batch.py"
+  },
+  "source_files": {
+    "one_batch": {
+      "path": "/study/sglang-reviewed/python/sglang/benchmark/one_batch.py",
+      "sha256": "3d49a34df58d73c4d518e1a9a98395808190e494645cab2c298713bf95769be4"
+    },
+    "sglang_autotune": {
+      "path": "/study/sglang-reviewed/python/sglang/srt/model_executor/runner/flashinfer_autotune.py",
+      "sha256": "825c99e7a30d40327de87f0549a7e9e16971bf6094c5562ad883c0adf28ae4a3"
+    },
+    "flashinfer_cache": {
+      "path": "/study/deps/flashinfer/autotune_cache.py",
+      "sha256": "f720a6ad2cb232bdb3dd396690ea3a3cb6cc9f099642bbcae8c6d956bdecdfb7"
+    },
+    "flashinfer_tuner": {
+      "path": "/study/deps/flashinfer/autotuner/autotuner.py",
+      "sha256": "6d92bcd26f5e3213c5bc3e340a5f3b4c8e9b7b5bd214144396b6f1fa396bab4d"
+    }
+  },
+  "cache_before": {
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.json": "0e2dfe94b85e21493be632960b8bd24c5ccf8011136d2c84eb9495df2c22539a",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/manifest.json": "e1dede168c9e5b95c3693dd958ef0413836cd09e083884907d59b2d9bd5f0734",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/d9f1a6ac1026953e9960e24e.json": "d8ddd6167857b8ec3b795043fb5de79ef9d33f61867bb2bd3c855a786f18fac1",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/eef11f476aed4bbdda256c02.json": "6ef59d04c3d29dceafaedbace2210990102a00b540ef0b22c8e0ad7dd6b9c8bc",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/a9fde641697e2870bec801e2.json": "15c6804996c9d412bb7e1d868d2b2f955e863e4aa7f2470476a34a3e59dd6e2a",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/c0d7f12a314997f748436dfc.json": "20f9e29f184b5e550d824fe460a22cb6ab28a49d5832857294ed6905c945cc0a",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/50cf908289a68d95eb237cac.json": "aaeb67ae8c7b150499b643c5a1303747fb93766378faf9e642ff260d941a78e4",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/8b48fd7fc61b81ff351bd405.json": "55de57ef37970493091c7795917736c3e1419baab2ac0eb13ed97bec23318259",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/fb67b57357ce06be64b78c10.json": "bcabfc8649fec8a58f58550ba4b06c51df0460a187c220610662cb366422d440",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/00c7d5409a3a5b07b7265c28.json": "206bec659c677a073cc86cbabf89627c203ceeba938cf8cde7be131dead24747",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/402d0d6c1908a56bedc5123e.json": "84b4813e150d6a142c0960c39aec9fb8c79ffc94e25519f925776c5bfef030ca",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/9385e8cab4a230231a7f99a4.json": "c752ecbcc7064274e7d6131c5a6cdaabb12560bf1e04a0d3499720ee9bf8eaaf",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/ec0b40d5b274ce3f8c7993e8.json": "2b94e3324f4e66a1d978721491ec6516ce9f2b6b3a52af5ff7a1b3f8aac2f981",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/bccfcb560410ca5e96cb1c15.json": "15d3904d1fbbc7ec0997ba74e2c64df2803da04eb1ff4546ecf64b27c82a3363",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/89f8bf5672198970d300619b.json": "4549795fed0f4cb2ebbf0878aa5d162ba8ef13fec5bc319720b112f8de77b824",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/5c5673ad0a0dd4f5bb49e4b2.json": "dace4d7ceabad1d63cffe4868e6d8ea5f1d708d811715c5e7a344ae4715703eb",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/10150c9cf43d7b6b297e6ced.json": "74c897ffe9d2fd055936445ad89540f88f0067d6e7536db8c0136e27f6174354",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/f03cfa7b49cfb21210060136.json": "e0899b858338bb6f2a9cbbd7aa56b365c1188daaa0a30e9abd79b82cb6cae45c",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/4e5f76e412d369c6ae1239b5.json": "852862757a0f43b25c2bb5e7b08af4a23608279f185009a5021f6c0503d4c729",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/e778186b3f8fa6df3578d25f.json": "8801b45190c963bd8843605c1aa4e6489617630487e1068eb107e261b4a5f3ca",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/9e7e4eeaf7d2513a6e2ff209.json": "22fefefaeb19d5ab1010eed0ac878ea43d120cf8e622361e22eb3937126e2c24",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/09ef8a723aa07486eb026106.json": "f2c8d9ab6440fd8665e6469f8f2143a338e5b2d54a3a58af9a050c3f93ae2027"
+  },
+  "config": {
+    "model_path": "/study/model",
+    "tokenizer_path": "/study/model",
+    "quantization": "modelopt_fp8",
+    "dtype": "bfloat16",
+    "device": "cuda",
+    "tp_size": 1,
+    "max_running_requests": 16,
+    "max_total_tokens": 8192,
+    "context_length": 512,
+    "mem_fraction_static": 0.7,
+    "disable_overlap_schedule": true,
+    "attention_backend": "triton",
+    "kv_cache_dtype": "bfloat16",
+    "cuda_graph_config": {
+      "decode": {
+        "backend": "full",
+        "bs": [
+          1,
+          4,
+          16
+        ],
+        "max_bs": 16
+      },
+      "prefill": {
+        "backend": "disabled"
+      }
+    }
+  },
+  "profiles": [],
+  "captures": [
+    {
+      "key": "ShapeKey(size=16, variant_label=None, attention_variant=None, logits_variant=None)",
+      "profile_delta": 0,
+      "coverage": {
+        "max_records": 64,
+        "hits": 384,
+        "misses": 0,
+        "skipped": 0,
+        "dropped_records": 320,
+        "record_count": 64,
+        "records_sha256": "b51c66b5295922122012ae600beb356b0e6f18d66c2c1b211b5e684a9b013f53"
+      }
+    },
+    {
+      "key": "ShapeKey(size=4, variant_label=None, attention_variant=None, logits_variant=None)",
+      "profile_delta": 0,
+      "coverage": {
+        "max_records": 64,
+        "hits": 384,
+        "misses": 0,
+        "skipped": 0,
+        "dropped_records": 320,
+        "record_count": 64,
+        "records_sha256": "dcbc263509354a40b5d8125efaae330b0f7655f79a12111a47d3f6da2ec94fb2"
+      }
+    },
+    {
+      "key": "ShapeKey(size=1, variant_label=None, attention_variant=None, logits_variant=None)",
+      "profile_delta": 0,
+      "coverage": {
+        "max_records": 64,
+        "hits": 384,
+        "misses": 0,
+        "skipped": 0,
+        "dropped_records": 320,
+        "record_count": 64,
+        "records_sha256": "a7decc6497cc46ee57a8142e7b91652269431939aa2a389fb2466a7b5b1d17c0"
+      }
+    }
+  ],
+  "capture_preparation_profile_deltas": [
+    0,
+    0,
+    0
+  ],
+  "startup_seconds": 32.32032414106652,
+  "startup_peak_memory_bytes": 10348950016,
+  "loaded_native_paths": [
+    "/opt/sglang/lib/python3.12/site-packages/cudnn/_compiled_module.cpython-312-x86_64-linux-gnu.so",
+    "/opt/sglang/lib/python3.12/site-packages/nvidia/cu13/lib/libcublas.so.13",
+    "/opt/sglang/lib/python3.12/site-packages/nvidia/cu13/lib/libcublasLt.so.13",
+    "/opt/sglang/lib/python3.12/site-packages/nvidia/cudnn/lib/libcudnn.so.9",
+    "/opt/sglang/lib/python3.12/site-packages/nvidia/cudnn/lib/libcudnn_graph.so.9",
+    "/study/workspace/.cache/flashinfer/0.7.3/90a/cached_ops/gemm/gemm.so",
+    "/usr/local/cuda-13.0/targets/x86_64-linux/lib/libcublas.so.13.1.1.3"
+  ],
+  "cache_after_startup": {
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.json": "0e2dfe94b85e21493be632960b8bd24c5ccf8011136d2c84eb9495df2c22539a",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/manifest.json": "e1dede168c9e5b95c3693dd958ef0413836cd09e083884907d59b2d9bd5f0734",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/d9f1a6ac1026953e9960e24e.json": "d8ddd6167857b8ec3b795043fb5de79ef9d33f61867bb2bd3c855a786f18fac1",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/eef11f476aed4bbdda256c02.json": "6ef59d04c3d29dceafaedbace2210990102a00b540ef0b22c8e0ad7dd6b9c8bc",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/a9fde641697e2870bec801e2.json": "15c6804996c9d412bb7e1d868d2b2f955e863e4aa7f2470476a34a3e59dd6e2a",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/c0d7f12a314997f748436dfc.json": "20f9e29f184b5e550d824fe460a22cb6ab28a49d5832857294ed6905c945cc0a",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/50cf908289a68d95eb237cac.json": "aaeb67ae8c7b150499b643c5a1303747fb93766378faf9e642ff260d941a78e4",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/8b48fd7fc61b81ff351bd405.json": "55de57ef37970493091c7795917736c3e1419baab2ac0eb13ed97bec23318259",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/fb67b57357ce06be64b78c10.json": "bcabfc8649fec8a58f58550ba4b06c51df0460a187c220610662cb366422d440",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/00c7d5409a3a5b07b7265c28.json": "206bec659c677a073cc86cbabf89627c203ceeba938cf8cde7be131dead24747",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/402d0d6c1908a56bedc5123e.json": "84b4813e150d6a142c0960c39aec9fb8c79ffc94e25519f925776c5bfef030ca",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/9385e8cab4a230231a7f99a4.json": "c752ecbcc7064274e7d6131c5a6cdaabb12560bf1e04a0d3499720ee9bf8eaaf",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/ec0b40d5b274ce3f8c7993e8.json": "2b94e3324f4e66a1d978721491ec6516ce9f2b6b3a52af5ff7a1b3f8aac2f981",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/bccfcb560410ca5e96cb1c15.json": "15d3904d1fbbc7ec0997ba74e2c64df2803da04eb1ff4546ecf64b27c82a3363",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/89f8bf5672198970d300619b.json": "4549795fed0f4cb2ebbf0878aa5d162ba8ef13fec5bc319720b112f8de77b824",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/5c5673ad0a0dd4f5bb49e4b2.json": "dace4d7ceabad1d63cffe4868e6d8ea5f1d708d811715c5e7a344ae4715703eb",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/10150c9cf43d7b6b297e6ced.json": "74c897ffe9d2fd055936445ad89540f88f0067d6e7536db8c0136e27f6174354",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/f03cfa7b49cfb21210060136.json": "e0899b858338bb6f2a9cbbd7aa56b365c1188daaa0a30e9abd79b82cb6cae45c",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/4e5f76e412d369c6ae1239b5.json": "852862757a0f43b25c2bb5e7b08af4a23608279f185009a5021f6c0503d4c729",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/e778186b3f8fa6df3578d25f.json": "8801b45190c963bd8843605c1aa4e6489617630487e1068eb107e261b4a5f3ca",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/9e7e4eeaf7d2513a6e2ff209.json": "22fefefaeb19d5ab1010eed0ac878ea43d120cf8e622361e22eb3937126e2c24",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/09ef8a723aa07486eb026106.json": "f2c8d9ab6440fd8665e6469f8f2143a338e5b2d54a3a58af9a050c3f93ae2027"
+  },
+  "bare_identity": "None",
+  "numerics": [
+    {
+      "batch": 1,
+      "length": 32,
+      "case": "original",
+      "max_abs_error": 0.546875,
+      "allclose": false,
+      "argmax_equal": true
+    },
+    {
+      "batch": 1,
+      "length": 32,
+      "case": "changed",
+      "max_abs_error": 1.15625,
+      "allclose": false,
+      "argmax_equal": true
+    },
+    {
+      "batch": 1,
+      "length": 32,
+      "case": "restored",
+      "max_abs_error": 0.546875,
+      "allclose": false,
+      "argmax_equal": true
+    },
+    {
+      "batch": 1,
+      "length": 256,
+      "case": "original",
+      "max_abs_error": 0.55078125,
+      "allclose": false,
+      "argmax_equal": true
+    },
+    {
+      "batch": 1,
+      "length": 256,
+      "case": "changed",
+      "max_abs_error": 0.46875,
+      "allclose": false,
+      "argmax_equal": true
+    },
+    {
+      "batch": 1,
+      "length": 256,
+      "case": "restored",
+      "max_abs_error": 0.55078125,
+      "allclose": false,
+      "argmax_equal": true
+    },
+    {
+      "batch": 3,
+      "length": 32,
+      "case": "original",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 3,
+      "length": 32,
+      "case": "changed",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 3,
+      "length": 32,
+      "case": "restored",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 3,
+      "length": 256,
+      "case": "original",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 3,
+      "length": 256,
+      "case": "changed",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 3,
+      "length": 256,
+      "case": "restored",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 4,
+      "length": 32,
+      "case": "original",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 4,
+      "length": 32,
+      "case": "changed",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 4,
+      "length": 32,
+      "case": "restored",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 4,
+      "length": 256,
+      "case": "original",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 4,
+      "length": 256,
+      "case": "changed",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 4,
+      "length": 256,
+      "case": "restored",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 7,
+      "length": 32,
+      "case": "original",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 7,
+      "length": 32,
+      "case": "changed",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 7,
+      "length": 32,
+      "case": "restored",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 7,
+      "length": 256,
+      "case": "original",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 7,
+      "length": 256,
+      "case": "changed",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 7,
+      "length": 256,
+      "case": "restored",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 16,
+      "length": 32,
+      "case": "original",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 16,
+      "length": 32,
+      "case": "changed",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 16,
+      "length": 32,
+      "case": "restored",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 16,
+      "length": 256,
+      "case": "original",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 16,
+      "length": 256,
+      "case": "changed",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    },
+    {
+      "batch": 16,
+      "length": 256,
+      "case": "restored",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true
+    }
+  ],
+  "performance": [
+    {
+      "batch": 1,
+      "length": 32,
+      "graph_ms": [
+        4.146403198242187,
+        4.144026184082032,
+        4.1432666015625,
+        4.145183410644531,
+        4.146296997070312,
+        4.14492919921875,
+        4.144852600097656,
+        4.144533081054687,
+        4.144649658203125,
+        4.14494140625,
+        4.144937744140625,
+        4.144774475097656,
+        4.145578308105469,
+        4.144886474609375,
+        4.1446316528320315,
+        4.143977661132812,
+        4.144795532226563,
+        4.1449368286132815,
+        4.146383361816406,
+        4.1450283813476565
+      ],
+      "decode_ms": [
+        4.205902936519124,
+        4.199015595077071,
+        4.2011600962723605,
+        4.200201252388069,
+        4.198735092359129
+      ]
+    },
+    {
+      "batch": 1,
+      "length": 256,
+      "graph_ms": [
+        4.233968505859375,
+        4.232513427734375,
+        4.2334375,
+        4.233306884765625,
+        4.233016357421875,
+        4.2323980712890625,
+        4.233504028320312,
+        4.232799987792969,
+        4.232438354492188,
+        4.233949584960937,
+        4.232196350097656,
+        4.232442932128906,
+        4.232451171875,
+        4.2331021118164065,
+        4.233545532226563,
+        4.232441101074219,
+        4.23245361328125,
+        4.2311532592773435,
+        4.2344384765625,
+        4.232005004882812
+      ],
+      "decode_ms": [
+        4.292345955036581,
+        4.283984861103818,
+        4.284304814063944,
+        4.284656843083212,
+        4.285858685761923
+      ]
+    },
+    {
+      "batch": 4,
+      "length": 32,
+      "graph_ms": [
+        4.211500244140625,
+        4.205028381347656,
+        4.205656433105469,
+        4.203440551757812,
+        4.203697204589844,
+        4.203052673339844,
+        4.2034695434570315,
+        4.204508056640625,
+        4.204103088378906,
+        4.204039611816406,
+        4.204394836425781,
+        4.203458557128906,
+        4.203419494628906,
+        4.202570190429688,
+        4.202966918945313,
+        4.202759704589844,
+        4.207454833984375,
+        4.205555114746094,
+        4.207253112792968,
+        4.203367004394531
+      ],
+      "decode_ms": [
+        4.2708079527074005,
+        4.268527231033659,
+        4.268688593583647,
+        4.268437420250848,
+        4.267238797183381
+      ]
+    },
+    {
+      "batch": 4,
+      "length": 256,
+      "graph_ms": [
+        4.3163385009765625,
+        4.31175048828125,
+        4.308967590332031,
+        4.310039672851563,
+        4.310219421386718,
+        4.311800231933594,
+        4.312421264648438,
+        4.313672180175781,
+        4.308780822753906,
+        4.311110534667969,
+        4.312860717773438,
+        4.312472229003906,
+        4.30981689453125,
+        4.310454406738281,
+        4.310613708496094,
+        4.3093414306640625,
+        4.309927062988281,
+        4.30834228515625,
+        4.311542358398437,
+        4.308919067382813
+      ],
+      "decode_ms": [
+        4.400022251502378,
+        4.390375295770355,
+        4.388185312564019,
+        4.390678299387218,
+        4.38605215458665
+      ]
+    },
+    {
+      "batch": 16,
+      "length": 32,
+      "graph_ms": [
+        4.380830078125,
+        4.376490173339843,
+        4.376087646484375,
+        4.376638793945313,
+        4.376771240234375,
+        4.376908264160156,
+        4.376997680664062,
+        4.376759643554688,
+        4.376538391113281,
+        4.376937561035156,
+        4.376771240234375,
+        4.377360534667969,
+        4.377297973632812,
+        4.377471313476563,
+        4.376888427734375,
+        4.376286010742188,
+        4.377048950195313,
+        4.376662902832031,
+        4.377399597167969,
+        4.376681518554688
+      ],
+      "decode_ms": [
+        4.494282544328598,
+        4.494242904911516,
+        4.494159595196834,
+        4.495785029575927,
+        4.494531891396036
+      ]
+    },
+    {
+      "batch": 16,
+      "length": 256,
+      "graph_ms": [
+        4.596094055175781,
+        4.589204406738281,
+        4.588458862304687,
+        4.588673400878906,
+        4.5886669921875,
+        4.588110046386719,
+        4.589584655761719,
+        4.588858947753907,
+        4.588956909179688,
+        4.589596252441407,
+        4.588822326660156,
+        4.588200988769532,
+        4.5880078125,
+        4.588551025390625,
+        4.587821350097657,
+        4.589190979003906,
+        4.589986572265625,
+        4.588451232910156,
+        4.588655395507812,
+        4.588421020507813
+      ],
+      "decode_ms": [
+        4.731148532300722,
+        4.755791545903776,
+        4.719787422800437,
+        4.73878967386554,
+        4.741996719531016
+      ]
+    }
+  ],
+  "cache_after_serving": {
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.json": "0e2dfe94b85e21493be632960b8bd24c5ccf8011136d2c84eb9495df2c22539a",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/manifest.json": "e1dede168c9e5b95c3693dd958ef0413836cd09e083884907d59b2d9bd5f0734",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/d9f1a6ac1026953e9960e24e.json": "d8ddd6167857b8ec3b795043fb5de79ef9d33f61867bb2bd3c855a786f18fac1",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/eef11f476aed4bbdda256c02.json": "6ef59d04c3d29dceafaedbace2210990102a00b540ef0b22c8e0ad7dd6b9c8bc",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/a9fde641697e2870bec801e2.json": "15c6804996c9d412bb7e1d868d2b2f955e863e4aa7f2470476a34a3e59dd6e2a",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/c0d7f12a314997f748436dfc.json": "20f9e29f184b5e550d824fe460a22cb6ab28a49d5832857294ed6905c945cc0a",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/50cf908289a68d95eb237cac.json": "aaeb67ae8c7b150499b643c5a1303747fb93766378faf9e642ff260d941a78e4",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/8b48fd7fc61b81ff351bd405.json": "55de57ef37970493091c7795917736c3e1419baab2ac0eb13ed97bec23318259",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/fb67b57357ce06be64b78c10.json": "bcabfc8649fec8a58f58550ba4b06c51df0460a187c220610662cb366422d440",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/00c7d5409a3a5b07b7265c28.json": "206bec659c677a073cc86cbabf89627c203ceeba938cf8cde7be131dead24747",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/402d0d6c1908a56bedc5123e.json": "84b4813e150d6a142c0960c39aec9fb8c79ffc94e25519f925776c5bfef030ca",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/9385e8cab4a230231a7f99a4.json": "c752ecbcc7064274e7d6131c5a6cdaabb12560bf1e04a0d3499720ee9bf8eaaf",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/ec0b40d5b274ce3f8c7993e8.json": "2b94e3324f4e66a1d978721491ec6516ce9f2b6b3a52af5ff7a1b3f8aac2f981",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/bccfcb560410ca5e96cb1c15.json": "15d3904d1fbbc7ec0997ba74e2c64df2803da04eb1ff4546ecf64b27c82a3363",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/89f8bf5672198970d300619b.json": "4549795fed0f4cb2ebbf0878aa5d162ba8ef13fec5bc319720b112f8de77b824",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/5c5673ad0a0dd4f5bb49e4b2.json": "dace4d7ceabad1d63cffe4868e6d8ea5f1d708d811715c5e7a344ae4715703eb",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/10150c9cf43d7b6b297e6ced.json": "74c897ffe9d2fd055936445ad89540f88f0067d6e7536db8c0136e27f6174354",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/f03cfa7b49cfb21210060136.json": "e0899b858338bb6f2a9cbbd7aa56b365c1188daaa0a30e9abd79b82cb6cae45c",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/4e5f76e412d369c6ae1239b5.json": "852862757a0f43b25c2bb5e7b08af4a23608279f185009a5021f6c0503d4c729",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/e778186b3f8fa6df3578d25f.json": "8801b45190c963bd8843605c1aa4e6489617630487e1068eb107e261b4a5f3ca",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/9e7e4eeaf7d2513a6e2ff209.json": "22fefefaeb19d5ab1010eed0ac878ea43d120cf8e622361e22eb3937126e2c24",
+    "flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph/v2/62b801f4904dae00/entries/09ef8a723aa07486eb026106.json": "f2c8d9ab6440fd8665e6469f8f2143a338e5b2d54a3a58af9a050c3f93ae2027"
+  },
+  "numerical_parity_passed": false,
+  "finished": 1794273919.5828178,
+  "raw_file_sha256": "b221b7e50943018ba11ccaa72cb2b213c9afd6a4188a8a9642976be921d7cb76",
+  "raw_file_bytes": 1459402,
+  "selection_record_count": 1792,
+  "counted_selections": [
+    {
+      "capturing": false,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          1,
+          14336
+        ],
+        [
+          1,
+          14336,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "1",
+      "count": 32
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          1,
+          14336
+        ],
+        [
+          1,
+          14336,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "1",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          1,
+          4096,
+          28672
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          28672
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "2",
+      "count": 32
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          1,
+          4096,
+          28672
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          28672
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "2",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          1,
+          4096,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "-1",
+      "count": 32
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          1,
+          4096,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "-1",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          1,
+          4096,
+          6144
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          6144
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "1",
+      "count": 32
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          1,
+          4096,
+          6144
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          6144
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "1",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          16,
+          14336
+        ],
+        [
+          1,
+          14336,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "0",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          16,
+          14336
+        ],
+        [
+          1,
+          14336,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "0",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          1,
+          4096,
+          28672
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          28672
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "1",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          1,
+          4096,
+          28672
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          28672
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "1",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          1,
+          4096,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "-1",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          1,
+          4096,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "-1",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          1,
+          4096,
+          6144
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          6144
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "1",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          1,
+          4096,
+          6144
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          6144
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "1",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          4,
+          14336
+        ],
+        [
+          1,
+          14336,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "0",
+      "count": 32
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          4,
+          14336
+        ],
+        [
+          1,
+          14336,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "0",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          1,
+          4096,
+          28672
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          28672
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "-1",
+      "count": 32
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          1,
+          4096,
+          28672
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          28672
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "-1",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          1,
+          4096,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "0",
+      "count": 32
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          1,
+          4096,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "0",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          1,
+          4096,
+          6144
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          6144
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "1",
+      "count": 32
+    },
+    {
+      "capturing": false,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          1,
+          4096,
+          6144
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          6144
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "1",
+      "count": 64
+    },
+    {
+      "capturing": false,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          16,
+          14336
+        ],
+        [
+          1,
+          14336,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "0",
+      "count": 32
+    },
+    {
+      "capturing": false,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          1,
+          4096,
+          28672
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          28672
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "1",
+      "count": 32
+    },
+    {
+      "capturing": false,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          1,
+          4096,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "0",
+      "count": 32
+    },
+    {
+      "capturing": false,
+      "identity": "None",
+      "input_shapes": [
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          1,
+          4096,
+          6144
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          6144
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": false,
+      "tactic": "1",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          1,
+          14336
+        ],
+        [
+          1,
+          14336,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "1",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          1,
+          4096,
+          28672
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          28672
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "2",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          1,
+          4096,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "-1",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          1,
+          4096
+        ],
+        [
+          1,
+          4096,
+          6144
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          6144
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "1",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          16,
+          14336
+        ],
+        [
+          1,
+          14336,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "0",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          1,
+          4096,
+          28672
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          28672
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "1",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          1,
+          4096,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "-1",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          16,
+          4096
+        ],
+        [
+          1,
+          4096,
+          6144
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          16,
+          6144
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "1",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          4,
+          14336
+        ],
+        [
+          1,
+          14336,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "0",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          1,
+          4096,
+          28672
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          28672
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": null,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "-1",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          1,
+          4096,
+          4096
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "0",
+      "count": 32
+    },
+    {
+      "capturing": true,
+      "identity": "('/study/prepared-study/matrix-scoped-1-cache/flashinfer/autotune/0.7.3/sm90/bd810876eab12c6d/rank_tp0_pp0_dp0.decode_graph', '62b801f4904dae00')",
+      "input_shapes": [
+        [
+          1,
+          4,
+          4096
+        ],
+        [
+          1,
+          4096,
+          6144
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          4,
+          6144
+        ],
+        [
+          41943040
+        ]
+      ],
+      "native_tactic_count": 8,
+      "op": "fp8_gemm",
+      "runner": "CublasFp8GemmRunner",
+      "strict": true,
+      "tactic": "1",
+      "count": 32
+    }
+  ]
+}

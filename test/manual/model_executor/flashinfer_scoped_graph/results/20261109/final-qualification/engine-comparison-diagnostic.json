@@ -1,0 +1,81 @@
+{
+  "status": "failed_original_logprob_criterion",
+  "comparisons": [
+    {
+      "mode": "scoped",
+      "batch": 1,
+      "prompt": 0,
+      "text_equal": true,
+      "token_ids_equal": true,
+      "max_logprob_abs_error": 0.002253234386444092,
+      "logprob_allclose_005_001": true
+    },
+    {
+      "mode": "scoped",
+      "batch": 3,
+      "prompt": 0,
+      "text_equal": true,
+      "token_ids_equal": true,
+      "max_logprob_abs_error": 0.0,
+      "logprob_allclose_005_001": true
+    },
+    {
+      "mode": "scoped",
+      "batch": 3,
+      "prompt": 1,
+      "text_equal": true,
+      "token_ids_equal": true,
+      "max_logprob_abs_error": 0.0,
+      "logprob_allclose_005_001": true
+    },
+    {
+      "mode": "scoped",
+      "batch": 3,
+      "prompt": 2,
+      "text_equal": true,
+      "token_ids_equal": true,
+      "max_logprob_abs_error": 0.147893488407135,
+      "logprob_allclose_005_001": false
+    },
+    {
+      "mode": "disabled",
+      "batch": 1,
+      "prompt": 0,
+      "text_equal": true,
+      "token_ids_equal": true,
+      "max_logprob_abs_error": 0.0,
+      "logprob_allclose_005_001": true
+    },
+    {
+      "mode": "disabled",
+      "batch": 3,
+      "prompt": 0,
+      "text_equal": true,
+      "token_ids_equal": true,
+      "max_logprob_abs_error": 0.0,
+      "logprob_allclose_005_001": true
+    },
+    {
+      "mode": "disabled",
+      "batch": 3,
+      "prompt": 1,
+      "text_equal": true,
+      "token_ids_equal": true,
+      "max_logprob_abs_error": 0.0,
+      "logprob_allclose_005_001": true
+    },
+    {
+      "mode": "disabled",
+      "batch": 3,
+      "prompt": 2,
+      "text_equal": true,
+      "token_ids_equal": true,
+      "max_logprob_abs_error": 0.0,
+      "logprob_allclose_005_001": true
+    }
+  ],
+  "raw_file_sha256": "859bed7845467c105309344f553be731900b65e324a2f7c2e8a0b886d78e544c",
+  "raw_file_bytes": 1763,
+  "selection_record_count": 0,
+  "counted_selections": []
+}

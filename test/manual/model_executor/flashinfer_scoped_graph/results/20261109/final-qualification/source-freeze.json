@@ -1,0 +1,25 @@
+{
+  "production_commit": "f3a84556e5994f2082ac043a33a36df6b8915e40",
+  "research_commit": "b5c214866e74350f7055974447afe77d3de9aeb3",
+  "harness_files": {
+    "test/manual/model_executor/flashinfer_scoped_graph/analyze.py": "871e885c97f2445379edf543170521d8035749e05e100f70b8159031892d1d3d",
+    "test/manual/model_executor/flashinfer_scoped_graph/answer_accuracy.py": "2cfa753e9f05d0b851fc0f6952567b5420d7c67e57744f392feab2c7663f9bd1",
+    "test/manual/model_executor/flashinfer_scoped_graph/canary_control.py": "f1af1f250440fe34eb64aa536c2d8c81f8fc4c20ed1797fee529038480099fcd",
+    "test/manual/model_executor/flashinfer_scoped_graph/compact_results.py": "c5451807b55d9098b4a8698eef7d67cbb6810121726fe9e20a1e94acc736d46c",
+    "test/manual/model_executor/flashinfer_scoped_graph/compare_outputs.py": "7a8e17b3a653c3be6b14bcc98aa7e9c58fd275d5c60983e2f35498d74abd7216",
+    "test/manual/model_executor/flashinfer_scoped_graph/control_tests.py": "851d5df1a5a9b33e6cbe3e3090a55ae2481310ac7a108ded9bbcee319b3e4378",
+    "test/manual/model_executor/flashinfer_scoped_graph/engine_smoke.py": "ac94a9274b9c1f0d69d054de35eb8bfd9e9741e1ebbf8ff26bf8ec40b6d9f19e",
+    "test/manual/model_executor/flashinfer_scoped_graph/kernel_numerics.py": "d39a7319a1a6934131207147d7a19c15c14694fc1790d59b54c49a92b8310874",
+    "test/manual/model_executor/flashinfer_scoped_graph/match_cached_tactics.py": "3df2d4944540243d590e32554f38ebe2810d84b5346609ec5813c6139d2481fd",
+    "test/manual/model_executor/flashinfer_scoped_graph/model_study.py": "421d02e5292688eedd7da14122daa6bf93063f64de093081fffb2218c524385b",
+    "test/manual/model_executor/flashinfer_scoped_graph/negative_controls.py": "59d60ab080af15b289dabc07478dfc04cea4c03511b20dfd684f14c863a90182",
+    "test/manual/model_executor/flashinfer_scoped_graph/numerical_cache_control.py": "ff452fd4a42fb1d79d4453dedf0ace300a3bef07bcbfeb6bbf25df9224a29f0e",
+    "test/manual/model_executor/flashinfer_scoped_graph/numerical_summary.py": "bcb7aef3dc5147c427340fe4430ec420dd4c34eec1b547f49b41526007363e6c",
+    "test/manual/model_executor/flashinfer_scoped_graph/protocol.json": "f0d38fd19a03aae8c2bb5830115a72b13a6100b4f0ba3fe29e5c944d138b8d44",
+    "test/manual/model_executor/flashinfer_scoped_graph/qualification_summary.py": "6f1eabac9d456d0fd86b89831e244e684a84f64726af6a8949090064cc15e306",
+    "test/manual/model_executor/flashinfer_scoped_graph/route_check.py": "42aa134eba6cb14915319a58643c92fba0ee2766d8513143efe19334fd85c9c6",
+    "test/manual/model_executor/flashinfer_scoped_graph/stream_probe.py": "133cce2e67d191bc588ec1a55034e9a74050d76866cb1b2f8749f3b80fd26a7c",
+    "test/manual/model_executor/flashinfer_scoped_graph/warmup_probe.py": "0a34ba5000ac348375da3d24eeef844dc3582a4b7c7a0b0ebca74807b9942abc"
+  },
+  "notes": "Final research source freeze. Per-run source hashes and previous freezes distinguish earlier cohorts. Original failed cache retained. No PR opened."
+}

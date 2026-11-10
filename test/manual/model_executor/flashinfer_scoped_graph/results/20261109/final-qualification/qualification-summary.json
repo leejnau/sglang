@@ -1,0 +1,1731 @@
+{
+  "accuracy": {
+    "questions": 200,
+    "legacy_correct": 146,
+    "scoped_correct": 155,
+    "legacy_score": 0.73,
+    "scoped_score": 0.775,
+    "scoped_gains": 14,
+    "scoped_losses": 5,
+    "same_answers": 168,
+    "same_texts": 67,
+    "paired_results": [
+      {
+        "index": 0,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 1,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 2,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 3,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 4,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 5,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 6,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 7,
+        "legacy_correct": true,
+        "scoped_correct": false,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 8,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 9,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 10,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 11,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 12,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 13,
+        "legacy_correct": false,
+        "scoped_correct": true,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 14,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 15,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 16,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 17,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 18,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 19,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 20,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 21,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 22,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 23,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 24,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 25,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 26,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 27,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 28,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 29,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 30,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 31,
+        "legacy_correct": true,
+        "scoped_correct": false,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 32,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 33,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 34,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 35,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 36,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 37,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 38,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 39,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 40,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 41,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 42,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 43,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 44,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 45,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 46,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 47,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 48,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 49,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 50,
+        "legacy_correct": false,
+        "scoped_correct": true,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 51,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 52,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 53,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 54,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 55,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 56,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 57,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 58,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 59,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 60,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 61,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 62,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 63,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 64,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 65,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 66,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 67,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 68,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 69,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 70,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 71,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 72,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 73,
+        "legacy_correct": false,
+        "scoped_correct": true,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 74,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 75,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 76,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 77,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 78,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 79,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 80,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 81,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 82,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 83,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 84,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 85,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 86,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 87,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 88,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 89,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 90,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 91,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 92,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 93,
+        "legacy_correct": true,
+        "scoped_correct": false,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 94,
+        "legacy_correct": true,
+        "scoped_correct": false,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 95,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 96,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 97,
+        "legacy_correct": false,
+        "scoped_correct": true,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 98,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 99,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 100,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 101,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 102,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 103,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 104,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 105,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 106,
+        "legacy_correct": false,
+        "scoped_correct": true,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 107,
+        "legacy_correct": false,
+        "scoped_correct": true,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 108,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 109,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 110,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 111,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 112,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 113,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 114,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 115,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 116,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 117,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 118,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 119,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 120,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 121,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 122,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 123,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 124,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 125,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 126,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 127,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 128,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 129,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 130,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 131,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 132,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 133,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 134,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 135,
+        "legacy_correct": false,
+        "scoped_correct": true,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 136,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 137,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 138,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 139,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 140,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 141,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 142,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 143,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 144,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 145,
+        "legacy_correct": true,
+        "scoped_correct": false,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 146,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 147,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 148,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 149,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 150,
+        "legacy_correct": false,
+        "scoped_correct": true,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 151,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 152,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 153,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 154,
+        "legacy_correct": false,
+        "scoped_correct": true,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 155,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 156,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 157,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 158,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 159,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 160,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 161,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 162,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 163,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 164,
+        "legacy_correct": false,
+        "scoped_correct": true,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 165,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 166,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 167,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 168,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 169,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 170,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 171,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 172,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 173,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 174,
+        "legacy_correct": false,
+        "scoped_correct": true,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 175,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 176,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 177,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 178,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 179,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 180,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 181,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 182,
+        "legacy_correct": false,
+        "scoped_correct": true,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 183,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 184,
+        "legacy_correct": false,
+        "scoped_correct": true,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 185,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 186,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 187,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 188,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 189,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 190,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 191,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 192,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 193,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 194,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 195,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 196,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": true
+      },
+      {
+        "index": 197,
+        "legacy_correct": false,
+        "scoped_correct": true,
+        "same_answer": false,
+        "same_text": false
+      },
+      {
+        "index": 198,
+        "legacy_correct": true,
+        "scoped_correct": true,
+        "same_answer": true,
+        "same_text": false
+      },
+      {
+        "index": 199,
+        "legacy_correct": false,
+        "scoped_correct": false,
+        "same_answer": true,
+        "same_text": false
+      }
+    ],
+    "limits": "One preserved natural cache pair, one model and a fixed 200-question subset. Different from the repository CI benchmark; no general accuracy superiority or equivalence claim."
+  },
+  "timing": {
+    "runs": [
+      {
+        "file": "timing-01-legacy.json",
+        "status": "passed",
+        "allclose_failures": 0,
+        "max_abs_logit_difference": 0.0,
+        "profile_count": 0,
+        "capture_preparation_profile_deltas": []
+      },
+      {
+        "file": "timing-02-scoped.json",
+        "status": "completed_with_numerical_differences",
+        "allclose_failures": 6,
+        "max_abs_logit_difference": 1.15625,
+        "profile_count": 0,
+        "capture_preparation_profile_deltas": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "file": "timing-03-scoped.json",
+        "status": "completed_with_numerical_differences",
+        "allclose_failures": 6,
+        "max_abs_logit_difference": 1.15625,
+        "profile_count": 0,
+        "capture_preparation_profile_deltas": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "file": "timing-04-legacy.json",
+        "status": "passed",
+        "allclose_failures": 0,
+        "max_abs_logit_difference": 0.0,
+        "profile_count": 0,
+        "capture_preparation_profile_deltas": []
+      }
+    ],
+    "metrics": [
+      {
+        "batch": 1,
+        "length": 32,
+        "metric": "graph_ms",
+        "paired_geomean_ratio": 1.0024003135986663,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.135151062011719,
+            "scoped_ms": 4.146771545410156,
+            "ratio": 1.0028101714361033
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.136673278808594,
+            "scoped_ms": 4.144907836914063,
+            "ratio": 1.0019906232739368
+          }
+        ]
+      },
+      {
+        "batch": 1,
+        "length": 32,
+        "metric": "decode_ms",
+        "paired_geomean_ratio": 1.0025953954344207,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.1893401903507765,
+            "scoped_ms": 4.20191123339464,
+            "ratio": 1.003000721467504
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.191021937003825,
+            "scoped_ms": 4.200201252388069,
+            "ratio": 1.0021902331990193
+          }
+        ]
+      },
+      {
+        "batch": 1,
+        "length": 256,
+        "metric": "graph_ms",
+        "paired_geomean_ratio": 1.001859619116472,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.225236206054688,
+            "scoped_ms": 4.234785003662109,
+            "ratio": 1.0022599440934776
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.2264883422851565,
+            "scoped_ms": 4.232656707763672,
+            "ratio": 1.0014594540381911
+          }
+        ]
+      },
+      {
+        "batch": 1,
+        "length": 256,
+        "metric": "decode_ms",
+        "paired_geomean_ratio": 1.002032883510681,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.2753649067890365,
+            "scoped_ms": 4.2843875162361655,
+            "ratio": 1.0021103717796818
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.276294970622985,
+            "scoped_ms": 4.284656843083212,
+            "ratio": 1.0019554012334675
+          }
+        ]
+      },
+      {
+        "batch": 4,
+        "length": 32,
+        "metric": "graph_ms",
+        "paired_geomean_ratio": 0.9935658801151809,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.231164245605469,
+            "scoped_ms": 4.204720764160156,
+            "ratio": 0.9937503060835376
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.2318771362304695,
+            "scoped_ms": 4.203868408203125,
+            "ratio": 0.9933814883736692
+          }
+        ]
+      },
+      {
+        "batch": 4,
+        "length": 32,
+        "metric": "decode_ms",
+        "paired_geomean_ratio": 0.9946117991473615,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.290422686608508,
+            "scoped_ms": 4.265946499799611,
+            "ratio": 0.9942951572381683
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.29028523285524,
+            "scoped_ms": 4.268527231033659,
+            "ratio": 0.9949285418939148
+          }
+        ]
+      },
+      {
+        "batch": 4,
+        "length": 256,
+        "metric": "graph_ms",
+        "paired_geomean_ratio": 0.9937084440095163,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.337832641601563,
+            "scoped_ms": 4.310885467529297,
+            "ratio": 0.9937878714328829
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.338172454833984,
+            "scoped_ms": 4.310534057617188,
+            "ratio": 0.9936290229343007
+          }
+        ]
+      },
+      {
+        "batch": 4,
+        "length": 256,
+        "metric": "decode_ms",
+        "paired_geomean_ratio": 0.9943043328556846,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.414108905621106,
+            "scoped_ms": 4.387922279420309,
+            "ratio": 0.994067516964194
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.414472998178098,
+            "scoped_ms": 4.390375295770355,
+            "ratio": 0.9945412051636313
+          }
+        ]
+      },
+      {
+        "batch": 16,
+        "length": 32,
+        "metric": "graph_ms",
+        "paired_geomean_ratio": 1.0008701650416352,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.3728172302246096,
+            "scoped_ms": 4.375131530761719,
+            "ratio": 1.0005292470312075
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.371535034179688,
+            "scoped_ms": 4.376829833984376,
+            "ratio": 1.0012111992156734
+          }
+        ]
+      },
+      {
+        "batch": 16,
+        "length": 32,
+        "metric": "decode_ms",
+        "paired_geomean_ratio": 1.0008000034650204,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.490091512707295,
+            "scoped_ms": 4.491901767323725,
+            "ratio": 1.0004031665304163
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.488909329666058,
+            "scoped_ms": 4.494282544328598,
+            "ratio": 1.0011969978157123
+          }
+        ]
+      },
+      {
+        "batch": 16,
+        "length": 256,
+        "metric": "graph_ms",
+        "paired_geomean_ratio": 1.000941468535891,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.584194183349609,
+            "scoped_ms": 4.586653747558594,
+            "ratio": 1.0005365314187427
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.582499542236328,
+            "scoped_ms": 4.588670196533203,
+            "ratio": 1.0013465695391783
+          }
+        ]
+      },
+      {
+        "batch": 16,
+        "length": 256,
+        "metric": "decode_ms",
+        "paired_geomean_ratio": 1.0018395012455488,
+        "pairs": [
+          {
+            "legacy_file": "timing-01-legacy.json",
+            "scoped_file": "timing-02-scoped.json",
+            "legacy_ms": 4.725646278529894,
+            "scoped_ms": 4.7303141400334425,
+            "ratio": 1.000987772090509
+          },
+          {
+            "legacy_file": "timing-04-legacy.json",
+            "scoped_file": "timing-03-scoped.json",
+            "legacy_ms": 4.726067312731175,
+            "scoped_ms": 4.73878967386554,
+            "ratio": 1.0026919551272775
+          }
+        ]
+      }
+    ],
+    "limits": "Two process observations per arm, one preserved cache pair; descriptive warm timings, no independent retuning trials, HTTP throughput or statistical equivalence claim. Logit differences remain explicitly flagged."
+  },
+  "raw_file_sha256": "9c72095e9dd21ed17407cb0e7d5b56a9868894014d50b2aac5ae2d605cbc1138",
+  "raw_file_bytes": 41830,
+  "selection_record_count": 0,
+  "counted_selections": []
+}

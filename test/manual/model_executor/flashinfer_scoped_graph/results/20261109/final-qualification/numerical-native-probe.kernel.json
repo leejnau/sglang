@@ -1,0 +1,61 @@
+{
+  "probes": [
+    {
+      "selected": -1,
+      "native_tactic_count": 8,
+      "a_shape": [
+        1,
+        1,
+        14336
+      ],
+      "b_shape": [
+        1,
+        14336,
+        4096
+      ],
+      "a_stride": [
+        14336,
+        14336,
+        1
+      ],
+      "b_stride": [
+        14336,
+        1,
+        14336
+      ],
+      "results": [
+        {
+          "tactic": -1,
+          "finite": true,
+          "max_abs_error_vs_fp32": 0.0006499290466308594,
+          "relative_l2_vs_fp32": 0.0024589456152170897,
+          "cosine_vs_fp32": 0.9999971389770508,
+          "allclose_vs_fp32_005_001": true,
+          "max_abs_vs_default": 0.0
+        },
+        {
+          "tactic": 0,
+          "finite": true,
+          "max_abs_error_vs_fp32": 0.0006499290466308594,
+          "relative_l2_vs_fp32": 0.0024589456152170897,
+          "cosine_vs_fp32": 0.9999971389770508,
+          "allclose_vs_fp32_005_001": true,
+          "max_abs_vs_default": 0.0
+        },
+        {
+          "tactic": 1,
+          "finite": true,
+          "max_abs_error_vs_fp32": 0.0003266334533691406,
+          "relative_l2_vs_fp32": 0.002034927951171994,
+          "cosine_vs_fp32": 0.9999979734420776,
+          "allclose_vs_fp32_005_001": true,
+          "max_abs_vs_default": 0.0009765625
+        }
+      ]
+    }
+  ],
+  "raw_file_sha256": "f92e430395e56738ded9ce067b2e82a900e950456bae5a120faab4c015221577",
+  "raw_file_bytes": 1328,
+  "selection_record_count": 0,
+  "counted_selections": []
+}

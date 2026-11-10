@@ -1,0 +1,17 @@
+{
+  "production_commit": "5e29e28454",
+  "status": "stopped_on_numerical_failure",
+  "completed": [
+    "matrix-01-legacy-0-cold",
+    "matrix-02-scoped-0-cold",
+    "matrix-03-scoped-0-warm",
+    "matrix-04-legacy-0-warm"
+  ],
+  "failed": "matrix-05-scoped-1-cold",
+  "not_run": [
+    "matrix-06-legacy-1-cold",
+    "matrix-07-legacy-1-warm",
+    "matrix-08-scoped-1-warm"
+  ],
+  "reason": "Original eager/graph logit parity failed for the second independent scoped cold seed. Preserve that seed and follow-up on latest source; do not pool this incomplete cohort with earlier complete cohorts."
+}
