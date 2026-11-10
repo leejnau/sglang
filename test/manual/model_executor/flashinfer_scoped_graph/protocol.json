@@ -70,5 +70,20 @@
     "scope": "Managed decode cache prepared alongside existing startup warmup; no measurement-policy override. Reuse disabled retains the existing legacy path.",
     "final_cohort": "Independent fresh caches, ABBA/BAAB order, unchanged sizes/timing protocol; preserve both prior cohorts separately.",
     "ready": "Pending final-head controls, numerical comparisons and performance analysis; do not infer readiness from a diagnostic."
+  },
+  "numerical_follow_up": {
+    "trigger": "A second scoped cold seed failed predeclared pointwise logit parity; fresh warm reuse reproduces it. One-entry change recovers parity.",
+    "native_reference": "On one real down-projection input, -1/0/1 pass against FP32; 1 has smaller maximum and relative-L2 error. This is not evidence of a native correctness defect.",
+    "accuracy_plan": {
+      "dataset_commit": "3101c7d5072418e28b9008a6636bde82a006892c",
+      "test_indices": "0..199",
+      "train_demonstrations": "0..3 (disjoint train split)",
+      "batch_size": 1,
+      "max_new_tokens": 512,
+      "temperature": 0,
+      "arms": "same preserved failed cache; legacy versus scoped; no retuning or new selections",
+      "purpose": "Quantify model-answer impact of the implicated candidate, preserving the failed pointwise check. Report paired answer changes and total scores; not the repository CI benchmark or proof of general equivalence."
+    },
+    "readiness": "Withheld; neither relaxed tolerance nor copied-cache recovery counts as natural-selection success."
   }
 }
