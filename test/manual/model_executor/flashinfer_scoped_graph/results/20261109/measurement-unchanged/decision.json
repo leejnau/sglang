@@ -1,0 +1,9 @@
+{
+  "status": "functional_checks_passed_performance_unresolved",
+  "production_commit": "0177056d81a9370fbe60c13da6ab192bda142ac6",
+  "harness_commit": "b1c9cefafd",
+  "measurement_policy": "Unspecified; wrapper asserts that the effective policy stays None in both profiling and capture.",
+  "observations": "All 240 eager/graph and 480 cross-process numerical comparisons are exact. Warm processes profile zero times. Batch 16 remains approximately 0.9-1.1% slower against baseline cache seed 1 in both cold and warm processes, despite unchanged measurement policy. The other cache pair is approximately neutral.",
+  "decision": "Do not declare performance qualification complete. The result passes the coarse 3% screen, but warrants investigation of the per-seed candidate changes. A separate two-run stream/context diagnostic is authorized and running; it does not change production.",
+  "comparison": "Current SGLang v2 selection with v1 persistence versus scoped managed persistence; not a pure v1/v2 tuner comparison."
+}
