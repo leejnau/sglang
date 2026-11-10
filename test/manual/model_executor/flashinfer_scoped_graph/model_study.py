@@ -301,11 +301,15 @@ def run(args, result):
                             ),
                         }
                         numerics.append(row)
-                        if not (row["allclose"] and row["argmax_equal"]):
+                        if not args.observe_logit_differences and not (
+                            row["allclose"] and row["argmax_equal"]
+                        ):
                             np.savez_compressed(
                                 args.output.with_suffix(".npz"), **logits_out
                             )
-                        assert row["allclose"] and row["argmax_equal"], row
+                        assert row["argmax_equal"] and (
+                            row["allclose"] or args.observe_logit_differences
+                        ), row
                         outputs.append(arms["graph"])
                     assert not torch.equal(outputs[0], outputs[1]), (
                         "changed input ineffective"
@@ -353,7 +357,14 @@ def run(args, result):
         np.savez(args.output.with_suffix(".npz"), **logits_out)
         result["cache_after_serving"] = files(args.cache)
         assert result["cache_after_serving"] == result["cache_after_startup"]
-        result["status"] = "passed"
+        result["numerical_parity_passed"] = all(
+            r["allclose"] and r["argmax_equal"] for r in numerics
+        )
+        result["status"] = (
+            "passed"
+            if result["numerical_parity_passed"]
+            else "completed_with_numerical_differences"
+        )
         if torch.distributed.is_initialized():
             torch.distributed.destroy_process_group()
 
@@ -364,7 +375,7 @@ def main():
         parser.add_argument("--" + name, type=Path, required=True)
     parser.add_argument("--arm", choices=("legacy", "scoped"), required=True)
     parser.add_argument("--phase", choices=("cold", "warm"), required=True)
-    for name in ("skip", "disable", "no-reuse", "no-perf"):
+    for name in ("skip", "disable", "no-reuse", "no-perf", "observe-logit-differences"):
         parser.add_argument("--" + name, action="store_true")
     args = parser.parse_args()
     args.output.parent.mkdir(parents=True, exist_ok=True)

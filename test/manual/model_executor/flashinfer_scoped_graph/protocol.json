@@ -85,5 +85,14 @@
       "purpose": "Quantify model-answer impact of the implicated candidate, preserving the failed pointwise check. Report paired answer changes and total scores; not the repository CI benchmark or proof of general equivalence."
     },
     "readiness": "Withheld; neither relaxed tolerance nor copied-cache recovery counts as natural-selection success."
+  },
+  "final_preserved_winner_timing": {
+    "source_commit": "f3a84556e5994f2082ac043a33a36df6b8915e40",
+    "reason": "All native probes pass vs FP32 and fixed answer accuracy is 146/200 legacy vs 155/200 scoped. Measure the actual preserved choices without silently passing the failed pointwise-parity screen.",
+    "order": "ABBA, four fresh warm processes on the same natural cold cache pair",
+    "cache": "original failed scoped seed 1, unchanged v1 and managed files",
+    "numerics": "Retain all error flags; still require finite output, exact top1, changed/restored-input checks and no profiling. Mark runs with failed allclose completed_with_numerical_differences, never passed.",
+    "timing": "Same six shapes, 20x50 replay blocks and 5x64 decode steps; no new tuning or candidate search.",
+    "limits": "One cache pair, two process observations per arm; descriptive timings only, no equivalence or serving-throughput claim."
   }
 }
