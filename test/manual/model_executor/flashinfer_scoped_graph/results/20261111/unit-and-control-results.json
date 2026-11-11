@@ -1,0 +1,93 @@
+{
+  "registered_suites": {
+    "test_flashinfer_autotune_sync": 10,
+    "test_decode_cuda_graph_runner": 26,
+    "test_full_cuda_graph_backend": 8
+  },
+  "registered_total": 44,
+  "manual": {
+    "control_tests": {
+      "checks": [
+        "legacy winner selected",
+        "graph winner differs from legacy",
+        "strict capture lookup",
+        "measurement policy unchanged",
+        "bare legacy lookup restored",
+        "preparation resets attention state",
+        "v1 persistence excludes graph winner",
+        "graph winner persisted",
+        "fresh tuner restores graph winner",
+        "warm preparation and capture do not profile",
+        "warm cache bytes unchanged",
+        "fresh bare serving still uses v1",
+        "strict miss restores state without profiling",
+        "prepare error restores scope and resets preparation",
+        "capture error restores scope and resets preparation",
+        "skip overrides populated graph winner",
+        "skip restores legacy without profiling",
+        "opt-out has no scope",
+        "stable deployment cache",
+        "reuse-off retains the v1 path",
+        "startup and capture resolve the same scope",
+        "disable_flashinfer_autotune preserves existing path",
+        "enable_deterministic_inference preserves existing path",
+        "tp_size preserves existing path",
+        "pp_size preserves existing path",
+        "enable_lora preserves existing path",
+        "moe_runner_backend preserves existing path",
+        "enable_torch_compile remains outside scope",
+        "enable_two_batch_overlap remains outside scope",
+        "capture_forward_mode remains outside scope",
+        "tuning forbidden during active capture"
+      ],
+      "count": 31,
+      "status": "passed"
+    },
+    "varied_startup_check": {
+      "status": "passed",
+      "cases": [
+        {
+          "fail_on": null,
+          "forwards": 2,
+          "events": [
+            "enter",
+            "forward",
+            "exit",
+            "enter",
+            "forward",
+            "exit"
+          ]
+        },
+        {
+          "fail_on": 1,
+          "forwards": 1,
+          "events": [
+            "enter",
+            "forward",
+            "exit"
+          ]
+        },
+        {
+          "fail_on": 2,
+          "forwards": 2,
+          "events": [
+            "enter",
+            "forward",
+            "exit",
+            "enter",
+            "forward",
+            "exit"
+          ]
+        }
+      ],
+      "negative_control": "expected_failure"
+    }
+  },
+  "log_hashes": {
+    "control_tests.log": "a3dcd2264f91f18894b3c64ff7e064f7f7474ea64d411697ab73c253605a7d9a",
+    "test_decode_cuda_graph_runner.log": "b8bf2373c3a9705fffdb69b03344d7e90816f8f635ae8a3bebd7869a88cc5146",
+    "test_flashinfer_autotune_sync.log": "1fb39c3ff83dc5247fab592eb0294cc52655d804c2f44a65fb0be1fe4b118493",
+    "test_full_cuda_graph_backend.log": "b5f0ae1c29c3f3fc07a9b33e80467ed1f7ae1f828f3e0ba07c2add27d15f1c19",
+    "varied_startup_check.log": "397556e044034f794af080aab4c44887e9df26cb4856661d1fcffffba318eb4f"
+  }
+}

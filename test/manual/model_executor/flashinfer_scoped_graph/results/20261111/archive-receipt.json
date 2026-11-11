@@ -1,0 +1,6 @@
+{
+  "raw_archive_sha256": "694ac3ffa400ae33dae643f2adcfdce00eab48377ba79eaf51701e7ef1cf9a95",
+  "hashed_members": 1235,
+  "hashed_member_bytes": 1759401326,
+  "retention": "Complete raw logs, cache files, arrays, executed harnesses and loaded locally built native binaries retained privately. Published compact records preserve raw-file hashes; JSON formatting may add a final newline. Internal infrastructure identifiers and full binary tensors are not published."
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "head": "78d04c3f3f12654579c294e3a3342d23c7fcd805",
+    "base": "94a4c4481372fca9bd24d1a20f6af1269b9af1aa",
+    "sha256": {
+      "python/sglang/srt/environ.py": "5a3fee0974bff6e29b13644d0b0e66bc506f794875d29c75ecd66c5cf195c1c4",
+      "python/sglang/srt/model_executor/runner/base_runner.py": "0f30536010db5cab3c5f09d58769a4563203131a37314c319f87d9fffa9c0fe9",
+      "python/sglang/srt/model_executor/runner/decode_cuda_graph_runner.py": "9cc9574ee57219fa24164245f1a44651697afa9ed5494c51502c12c0f27f626f",
+      "python/sglang/srt/model_executor/runner/flashinfer_autotune.py": "36ebcaacfa7348ce8b8f3e0f34249faf0e82ff28d7c67d277f33f9949ebb2b2e",
+      "test/registered/e2e/quantization/test_modelopt_fp8.py": "fb0d216f41d18e009e7f8397c673b03228d8b87792c0fb8bdeb77c1ef97a1769"
+    }
+  },
+  "torch": "2.14.1+cu130",
+  "cuda": "13.0",
+  "flashinfer": "0.7.3",
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "model_revision": "42d9515ebd69eea3a87351d079c671c3c5ff0a31",
+  "model_files": {
+    "tokenizer.json": "0803c172634381f61d26d56949fa9d2ddfaccdb6a840b0a9e70b21fc593e8750",
+    "generation_config.json": "480863d702952a5ab17e65bb8f78cc3733edf3679f8570459ee9b0d54653da24",
+    "tokenizer_config.json": "90e7e4aeeb12f9a8d882bdab84283d20a33813d7acff36227cc6042682d39ad7",
+    "special_tokens_map.json": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+    "model-00001-of-00002.safetensors": "499ce93537438acbb81ac5bf6f6890d0501b572d85405866705b700f08644a24",
+    "model-00002-of-00002.safetensors": "62e7244fe8487c09413cd9ed683d94d580dca68a4562549f7b62c8f8c0ba5246",
+    "config.json": "60c4b66789dfbb8a44e5fc7664b572250337bc2d372defce618c990c5b261d78",
+    "hf_quant_config.json": "67af064d00f30442be00b6b0296f0cc9ede7ffef22b31d3c0b809895a792a7a9",
+    "model.safetensors.index.json": "3e691ab73ae0c10cb57703169d31d14c72b13dbcda46d495c53e294457c09ac1"
+  }
+}

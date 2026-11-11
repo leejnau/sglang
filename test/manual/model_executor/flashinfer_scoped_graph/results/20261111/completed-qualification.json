@@ -1,0 +1,66 @@
+{
+  "production_head": "78d04c3f3f12654579c294e3a3342d23c7fcd805",
+  "integration_change": "Refresh against main including varied-token startup helper; fresh helper context for each forward. Measurement policy unspecified and existing FlashInfer 0.7.3 pin retained.",
+  "registered_unit_tests": 44,
+  "actual_tuner_cache_assertions": 31,
+  "varied_startup_cases": 3,
+  "varied_startup_negative_control": "Expected failure when one context is reused for two forwards",
+  "natural_cache_runs": 6,
+  "natural_eager_graph_comparisons": 180,
+  "natural_eager_graph_failures": 0,
+  "natural_cross_process_comparisons": 360,
+  "natural_cross_process_allclose_failures": 24,
+  "natural_cross_process_argmax_failures": 0,
+  "numerical_findings": "All 24 cross-process allclose failures are batch-one cross-arm comparisons; max absolute logit error 1.15625. Cold/warm and warm/warm within each arm are exact. Capture choices differ in six of twelve observed GEMM shapes; no native correctness defect established.",
+  "warm_profile_calls": 0,
+  "capture_profile_calls": 0,
+  "serving_profile_calls": 0,
+  "cache_bytes_preserved": true,
+  "legacy_identity_restored": true,
+  "accuracy": {
+    "legacy": {
+      "correct_count": 150,
+      "score": 0.75,
+      "capture_count": 36,
+      "strict_selection_count": 0,
+      "graph_replays_observed_at_least": 256
+    },
+    "scoped": {
+      "correct_count": 148,
+      "score": 0.74,
+      "capture_count": 36,
+      "strict_selection_count": 144,
+      "graph_replays_observed_at_least": 256
+    }
+  },
+  "paired_accuracy": {
+    "gains": 5,
+    "losses": 7,
+    "identical_answers": 175,
+    "all_200_prompts_match_in_both_arms": true
+  },
+  "paired_accuracy_inspection": "All 12 discordant outcomes have valid numeric parsed answers; no prompt/scoring mismatch. The scoped score is two questions lower. One pair does not establish equivalence or a systematic quality regression.",
+  "natural_graph_change_percent": [
+    0.007355693164545762,
+    1.1574351437082742
+  ],
+  "natural_decode_change_percent": [
+    -0.2171575069060072,
+    1.0010481629515011
+  ],
+  "matched_diagnostic": {
+    "seeded_caches": true,
+    "runs": 3,
+    "within_run_comparisons": 90,
+    "cross_process_exact": 180,
+    "cross_process_comparisons": 180,
+    "original_caches_unchanged": true
+  },
+  "readiness": "Ready for maintainer review as default-off single-rank integration, with original lower accuracy/slower timing points and parity failures disclosed; no general numerical-equivalence, accuracy or speedup claim.",
+  "pending": [
+    "Current-head targeted and normal Base CI",
+    "Maintainer review, including permanent test coverage and user documentation",
+    "Broader models, hardware, parallel and excluded execution paths remain unqualified"
+  ],
+  "limits": "One exclusive H100 on a shared host, one public dense FP8 model, independent natural cache pair. Matched winners are a diagnostic only. Startup times include JIT and model I/O and are not a matched cold-cost benchmark. Accuracy-observer throughput is not performance evidence."
+}

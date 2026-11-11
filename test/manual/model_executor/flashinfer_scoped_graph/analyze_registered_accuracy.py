@@ -9,6 +9,7 @@ from pathlib import Path
 
 p = argparse.ArgumentParser()
 p.add_argument("--results", type=Path, required=True)
+p.add_argument("--prefix", default="step1")
 p.add_argument("--source", type=Path, required=True)
 p.add_argument("--dataset", type=Path, required=True)
 p.add_argument("--output", type=Path, required=True)
@@ -27,7 +28,7 @@ prefix = namespace["get_few_shot_examples"](rows, 5)
 expected = rows[5:205]
 results = {}
 for arm in ["legacy", "scoped"]:
-    root = a.results / f"step1-{arm}"
+    root = a.results / f"{a.prefix}-{arm}"
     test = json.loads((root / "test-result.json").read_text())
     data = json.loads((root / "evaluation.json").read_text())
     assert test["tests_run"] == 1 and not test["skipped"]

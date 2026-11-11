@@ -1,0 +1,13 @@
+{
+  "source": "78d04c3f3f12654579c294e3a3342d23c7fcd805",
+  "sha256": "cf3a409237f0dffdc4afe186e7b4176d96c5965894c865b035ffa547266a4e97",
+  "build_fingerprint": {
+    "torch_version": "2.14.1+cu130",
+    "torch_root": "/opt/sglang/lib/python3.12/site-packages/torch",
+    "torch_cxx11_abi": true,
+    "torch_cuda": "13.0",
+    "torch_hip": null,
+    "include_absolute_rpath": true,
+    "compat_header_sha256": "f619ac5d2a4b279a1808d6588118872de0800c954a8e0a97888460bd80cfdc71"
+  }
+}

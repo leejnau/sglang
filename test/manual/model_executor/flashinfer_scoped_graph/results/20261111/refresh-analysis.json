@@ -1,0 +1,3596 @@
+{
+  "runs": [
+    {
+      "ordinal": "01",
+      "arm": "legacy",
+      "phase": "cold",
+      "status": "passed",
+      "startup_seconds": 58.59467836190015,
+      "profiles": 180,
+      "captures": 3,
+      "cache_files": 1,
+      "numerical_comparisons": 30,
+      "allclose_failures": 0,
+      "max_eager_graph_abs_error": 0.0,
+      "strict_capture_hits": 0,
+      "source_files": {
+        "one_batch": {
+          "path": "/study/sglang-reviewed/python/sglang/benchmark/one_batch.py",
+          "sha256": "3d49a34df58d73c4d518e1a9a98395808190e494645cab2c298713bf95769be4"
+        },
+        "sglang_autotune": {
+          "path": "/study/sglang-reviewed/python/sglang/srt/model_executor/runner/flashinfer_autotune.py",
+          "sha256": "36ebcaacfa7348ce8b8f3e0f34249faf0e82ff28d7c67d277f33f9949ebb2b2e"
+        },
+        "flashinfer_cache": {
+          "path": "/study/deps/flashinfer/autotune_cache.py",
+          "sha256": "f720a6ad2cb232bdb3dd396690ea3a3cb6cc9f099642bbcae8c6d956bdecdfb7"
+        },
+        "flashinfer_tuner": {
+          "path": "/study/deps/flashinfer/autotuner/autotuner.py",
+          "sha256": "6d92bcd26f5e3213c5bc3e340a5f3b4c8e9b7b5bd214144396b6f1fa396bab4d"
+        }
+      }
+    },
+    {
+      "ordinal": "02",
+      "arm": "scoped",
+      "phase": "cold",
+      "status": "passed",
+      "startup_seconds": 34.52834206982516,
+      "profiles": 360,
+      "captures": 3,
+      "cache_files": 22,
+      "numerical_comparisons": 30,
+      "allclose_failures": 0,
+      "max_eager_graph_abs_error": 0.0,
+      "strict_capture_hits": 1152,
+      "source_files": {
+        "one_batch": {
+          "path": "/study/sglang-reviewed/python/sglang/benchmark/one_batch.py",
+          "sha256": "3d49a34df58d73c4d518e1a9a98395808190e494645cab2c298713bf95769be4"
+        },
+        "sglang_autotune": {
+          "path": "/study/sglang-reviewed/python/sglang/srt/model_executor/runner/flashinfer_autotune.py",
+          "sha256": "36ebcaacfa7348ce8b8f3e0f34249faf0e82ff28d7c67d277f33f9949ebb2b2e"
+        },
+        "flashinfer_cache": {
+          "path": "/study/deps/flashinfer/autotune_cache.py",
+          "sha256": "f720a6ad2cb232bdb3dd396690ea3a3cb6cc9f099642bbcae8c6d956bdecdfb7"
+        },
+        "flashinfer_tuner": {
+          "path": "/study/deps/flashinfer/autotuner/autotuner.py",
+          "sha256": "6d92bcd26f5e3213c5bc3e340a5f3b4c8e9b7b5bd214144396b6f1fa396bab4d"
+        }
+      }
+    },
+    {
+      "ordinal": "03",
+      "arm": "legacy",
+      "phase": "warm",
+      "status": "passed",
+      "startup_seconds": 30.218051969073713,
+      "profiles": 0,
+      "captures": 3,
+      "cache_files": 1,
+      "numerical_comparisons": 30,
+      "allclose_failures": 0,
+      "max_eager_graph_abs_error": 0.0,
+      "strict_capture_hits": 0,
+      "source_files": {
+        "one_batch": {
+          "path": "/study/sglang-reviewed/python/sglang/benchmark/one_batch.py",
+          "sha256": "3d49a34df58d73c4d518e1a9a98395808190e494645cab2c298713bf95769be4"
+        },
+        "sglang_autotune": {
+          "path": "/study/sglang-reviewed/python/sglang/srt/model_executor/runner/flashinfer_autotune.py",
+          "sha256": "36ebcaacfa7348ce8b8f3e0f34249faf0e82ff28d7c67d277f33f9949ebb2b2e"
+        },
+        "flashinfer_cache": {
+          "path": "/study/deps/flashinfer/autotune_cache.py",
+          "sha256": "f720a6ad2cb232bdb3dd396690ea3a3cb6cc9f099642bbcae8c6d956bdecdfb7"
+        },
+        "flashinfer_tuner": {
+          "path": "/study/deps/flashinfer/autotuner/autotuner.py",
+          "sha256": "6d92bcd26f5e3213c5bc3e340a5f3b4c8e9b7b5bd214144396b6f1fa396bab4d"
+        }
+      }
+    },
+    {
+      "ordinal": "04",
+      "arm": "scoped",
+      "phase": "warm",
+      "status": "passed",
+      "startup_seconds": 31.08106497116387,
+      "profiles": 0,
+      "captures": 3,
+      "cache_files": 22,
+      "numerical_comparisons": 30,
+      "allclose_failures": 0,
+      "max_eager_graph_abs_error": 0.0,
+      "strict_capture_hits": 1152,
+      "source_files": {
+        "one_batch": {
+          "path": "/study/sglang-reviewed/python/sglang/benchmark/one_batch.py",
+          "sha256": "3d49a34df58d73c4d518e1a9a98395808190e494645cab2c298713bf95769be4"
+        },
+        "sglang_autotune": {
+          "path": "/study/sglang-reviewed/python/sglang/srt/model_executor/runner/flashinfer_autotune.py",
+          "sha256": "36ebcaacfa7348ce8b8f3e0f34249faf0e82ff28d7c67d277f33f9949ebb2b2e"
+        },
+        "flashinfer_cache": {
+          "path": "/study/deps/flashinfer/autotune_cache.py",
+          "sha256": "f720a6ad2cb232bdb3dd396690ea3a3cb6cc9f099642bbcae8c6d956bdecdfb7"
+        },
+        "flashinfer_tuner": {
+          "path": "/study/deps/flashinfer/autotuner/autotuner.py",
+          "sha256": "6d92bcd26f5e3213c5bc3e340a5f3b4c8e9b7b5bd214144396b6f1fa396bab4d"
+        }
+      }
+    },
+    {
+      "ordinal": "05",
+      "arm": "scoped",
+      "phase": "warm",
+      "status": "passed",
+      "startup_seconds": 31.348603600170463,
+      "profiles": 0,
+      "captures": 3,
+      "cache_files": 22,
+      "numerical_comparisons": 30,
+      "allclose_failures": 0,
+      "max_eager_graph_abs_error": 0.0,
+      "strict_capture_hits": 1152,
+      "source_files": {
+        "one_batch": {
+          "path": "/study/sglang-reviewed/python/sglang/benchmark/one_batch.py",
+          "sha256": "3d49a34df58d73c4d518e1a9a98395808190e494645cab2c298713bf95769be4"
+        },
+        "sglang_autotune": {
+          "path": "/study/sglang-reviewed/python/sglang/srt/model_executor/runner/flashinfer_autotune.py",
+          "sha256": "36ebcaacfa7348ce8b8f3e0f34249faf0e82ff28d7c67d277f33f9949ebb2b2e"
+        },
+        "flashinfer_cache": {
+          "path": "/study/deps/flashinfer/autotune_cache.py",
+          "sha256": "f720a6ad2cb232bdb3dd396690ea3a3cb6cc9f099642bbcae8c6d956bdecdfb7"
+        },
+        "flashinfer_tuner": {
+          "path": "/study/deps/flashinfer/autotuner/autotuner.py",
+          "sha256": "6d92bcd26f5e3213c5bc3e340a5f3b4c8e9b7b5bd214144396b6f1fa396bab4d"
+        }
+      }
+    },
+    {
+      "ordinal": "06",
+      "arm": "legacy",
+      "phase": "warm",
+      "status": "passed",
+      "startup_seconds": 31.803714622044936,
+      "profiles": 0,
+      "captures": 3,
+      "cache_files": 1,
+      "numerical_comparisons": 30,
+      "allclose_failures": 0,
+      "max_eager_graph_abs_error": 0.0,
+      "strict_capture_hits": 0,
+      "source_files": {
+        "one_batch": {
+          "path": "/study/sglang-reviewed/python/sglang/benchmark/one_batch.py",
+          "sha256": "3d49a34df58d73c4d518e1a9a98395808190e494645cab2c298713bf95769be4"
+        },
+        "sglang_autotune": {
+          "path": "/study/sglang-reviewed/python/sglang/srt/model_executor/runner/flashinfer_autotune.py",
+          "sha256": "36ebcaacfa7348ce8b8f3e0f34249faf0e82ff28d7c67d277f33f9949ebb2b2e"
+        },
+        "flashinfer_cache": {
+          "path": "/study/deps/flashinfer/autotune_cache.py",
+          "sha256": "f720a6ad2cb232bdb3dd396690ea3a3cb6cc9f099642bbcae8c6d956bdecdfb7"
+        },
+        "flashinfer_tuner": {
+          "path": "/study/deps/flashinfer/autotuner/autotuner.py",
+          "sha256": "6d92bcd26f5e3213c5bc3e340a5f3b4c8e9b7b5bd214144396b6f1fa396bab4d"
+        }
+      }
+    }
+  ],
+  "metrics": [
+    {
+      "batch": 1,
+      "length": 32,
+      "metric": "graph_ms",
+      "paired_ratios": [
+        1.0090478074126135,
+        1.008795650558679
+      ],
+      "geomean_ratio": 1.0089217211080432,
+      "change_percent": 0.8921721108043235,
+      "investigate": false
+    },
+    {
+      "batch": 1,
+      "length": 32,
+      "metric": "decode_ms",
+      "paired_ratios": [
+        0.9988128336983649,
+        0.9982510886828863
+      ],
+      "geomean_ratio": 0.9985319216879506,
+      "change_percent": -0.14680783120494256,
+      "investigate": false
+    },
+    {
+      "batch": 1,
+      "length": 256,
+      "metric": "graph_ms",
+      "paired_ratios": [
+        1.0091890234212104,
+        1.008771828634184
+      ],
+      "geomean_ratio": 1.0089804044649038,
+      "change_percent": 0.898040446490378,
+      "investigate": false
+    },
+    {
+      "batch": 1,
+      "length": 256,
+      "metric": "decode_ms",
+      "paired_ratios": [
+        0.9980225316727307,
+        0.9976343559412298
+      ],
+      "geomean_ratio": 0.9978284249309399,
+      "change_percent": -0.2171575069060072,
+      "investigate": false
+    },
+    {
+      "batch": 4,
+      "length": 32,
+      "metric": "graph_ms",
+      "paired_ratios": [
+        1.000127626429662,
+        1.0002665814278555
+      ],
+      "geomean_ratio": 1.000197101515673,
+      "change_percent": 0.019710151567298162,
+      "investigate": false
+    },
+    {
+      "batch": 4,
+      "length": 32,
+      "metric": "decode_ms",
+      "paired_ratios": [
+        1.0012253781399245,
+        1.001046002812668
+      ],
+      "geomean_ratio": 1.0011356864589203,
+      "change_percent": 0.11356864589202598,
+      "investigate": false
+    },
+    {
+      "batch": 4,
+      "length": 256,
+      "metric": "graph_ms",
+      "paired_ratios": [
+        1.0000399755285128,
+        1.000107139462444
+      ],
+      "geomean_ratio": 1.0000735569316455,
+      "change_percent": 0.007355693164545762,
+      "investigate": false
+    },
+    {
+      "batch": 4,
+      "length": 256,
+      "metric": "decode_ms",
+      "paired_ratios": [
+        1.0005427837219913,
+        1.0004724282952024
+      ],
+      "geomean_ratio": 1.0005076053901751,
+      "change_percent": 0.05076053901751365,
+      "investigate": false
+    },
+    {
+      "batch": 16,
+      "length": 32,
+      "metric": "graph_ms",
+      "paired_ratios": [
+        1.0113107019204666,
+        1.0117621382506894
+      ],
+      "geomean_ratio": 1.0115363949017637,
+      "change_percent": 1.1536394901763725,
+      "investigate": false
+    },
+    {
+      "batch": 16,
+      "length": 32,
+      "metric": "decode_ms",
+      "paired_ratios": [
+        1.00845257806261,
+        1.0095493737761747
+      ],
+      "geomean_ratio": 1.0090008268906805,
+      "change_percent": 0.9000826890680491,
+      "investigate": false
+    },
+    {
+      "batch": 16,
+      "length": 256,
+      "metric": "graph_ms",
+      "paired_ratios": [
+        1.0113419121917815,
+        1.0118068441044779
+      ],
+      "geomean_ratio": 1.0115743514370827,
+      "change_percent": 1.1574351437082742,
+      "investigate": false
+    },
+    {
+      "batch": 16,
+      "length": 256,
+      "metric": "decode_ms",
+      "paired_ratios": [
+        1.0112565082588592,
+        1.008765990300412
+      ],
+      "geomean_ratio": 1.010010481629515,
+      "change_percent": 1.0010481629515011,
+      "investigate": false
+    }
+  ],
+  "comparisons": [
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b16_l256_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b16_l256_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b16_l256_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b16_l256_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b16_l256_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b16_l256_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b16_l32_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b16_l32_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b16_l32_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b16_l32_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b16_l32_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b16_l32_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b1_l256_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b1_l256_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b1_l256_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b1_l256_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b1_l256_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b1_l256_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b1_l32_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b1_l32_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b1_l32_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b1_l32_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b1_l32_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b1_l32_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b3_l256_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b3_l256_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b3_l256_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b3_l256_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b3_l256_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b3_l256_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b3_l32_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b3_l32_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b3_l32_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b3_l32_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b3_l32_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b3_l32_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b4_l256_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b4_l256_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b4_l256_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b4_l256_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b4_l256_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b4_l256_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b4_l32_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b4_l32_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b4_l32_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b4_l32_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b4_l32_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b4_l32_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b7_l256_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b7_l256_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b7_l256_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b7_l256_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b7_l256_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b7_l256_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b7_l32_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b7_l32_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b7_l32_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b7_l32_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b7_l32_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "01",
+      "right": "03",
+      "key": "b7_l32_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b16_l256_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b16_l256_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b16_l256_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b16_l256_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b16_l256_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b16_l256_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b16_l32_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b16_l32_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b16_l32_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b16_l32_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b16_l32_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b16_l32_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b1_l256_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b1_l256_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b1_l256_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b1_l256_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b1_l256_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b1_l256_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b1_l32_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b1_l32_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b1_l32_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b1_l32_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b1_l32_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b1_l32_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b3_l256_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b3_l256_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b3_l256_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b3_l256_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b3_l256_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b3_l256_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b3_l32_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b3_l32_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b3_l32_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b3_l32_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b3_l32_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b3_l32_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b4_l256_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b4_l256_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b4_l256_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b4_l256_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b4_l256_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b4_l256_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b4_l32_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b4_l32_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b4_l32_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b4_l32_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b4_l32_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b4_l32_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b7_l256_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b7_l256_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b7_l256_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b7_l256_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b7_l256_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b7_l256_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b7_l32_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b7_l32_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b7_l32_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b7_l32_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b7_l32_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "06",
+      "key": "b7_l32_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b16_l256_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b16_l256_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b16_l256_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b16_l256_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b16_l256_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b16_l256_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b16_l32_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b16_l32_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b16_l32_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b16_l32_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b16_l32_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b16_l32_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b1_l256_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b1_l256_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b1_l256_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b1_l256_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b1_l256_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b1_l256_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b1_l32_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b1_l32_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b1_l32_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b1_l32_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b1_l32_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b1_l32_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b3_l256_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b3_l256_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b3_l256_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b3_l256_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b3_l256_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b3_l256_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b3_l32_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b3_l32_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b3_l32_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b3_l32_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b3_l32_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b3_l32_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b4_l256_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b4_l256_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b4_l256_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b4_l256_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b4_l256_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b4_l256_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b4_l32_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b4_l32_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b4_l32_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b4_l32_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b4_l32_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b4_l32_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b7_l256_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b7_l256_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b7_l256_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b7_l256_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b7_l256_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b7_l256_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b7_l32_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b7_l32_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b7_l32_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b7_l32_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b7_l32_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "02",
+      "right": "04",
+      "key": "b7_l32_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b16_l256_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b16_l256_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b16_l256_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b16_l256_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b16_l256_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b16_l256_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b16_l32_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b16_l32_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b16_l32_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b16_l32_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b16_l32_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b16_l32_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b1_l256_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b1_l256_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b1_l256_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b1_l256_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b1_l256_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b1_l256_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b1_l32_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b1_l32_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b1_l32_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b1_l32_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b1_l32_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b1_l32_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b3_l256_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b3_l256_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b3_l256_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b3_l256_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b3_l256_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b3_l256_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b3_l32_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b3_l32_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b3_l32_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b3_l32_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b3_l32_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b3_l32_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b4_l256_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b4_l256_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b4_l256_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b4_l256_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b4_l256_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b4_l256_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b4_l32_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b4_l32_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b4_l32_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b4_l32_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b4_l32_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b4_l32_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b7_l256_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b7_l256_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b7_l256_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b7_l256_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b7_l256_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b7_l256_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b7_l32_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b7_l32_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b7_l32_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b7_l32_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b7_l32_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "04",
+      "right": "05",
+      "key": "b7_l32_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b16_l256_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b16_l256_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b16_l256_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b16_l256_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b16_l256_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b16_l256_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b16_l32_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b16_l32_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b16_l32_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b16_l32_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b16_l32_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b16_l32_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b1_l256_changed_eager",
+      "max_abs_error": 0.46875,
+      "allclose": false,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b1_l256_changed_graph",
+      "max_abs_error": 0.46875,
+      "allclose": false,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b1_l256_original_eager",
+      "max_abs_error": 0.55078125,
+      "allclose": false,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b1_l256_original_graph",
+      "max_abs_error": 0.55078125,
+      "allclose": false,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b1_l256_restored_eager",
+      "max_abs_error": 0.55078125,
+      "allclose": false,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b1_l256_restored_graph",
+      "max_abs_error": 0.55078125,
+      "allclose": false,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b1_l32_changed_eager",
+      "max_abs_error": 1.15625,
+      "allclose": false,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b1_l32_changed_graph",
+      "max_abs_error": 1.15625,
+      "allclose": false,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b1_l32_original_eager",
+      "max_abs_error": 0.546875,
+      "allclose": false,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b1_l32_original_graph",
+      "max_abs_error": 0.546875,
+      "allclose": false,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b1_l32_restored_eager",
+      "max_abs_error": 0.546875,
+      "allclose": false,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b1_l32_restored_graph",
+      "max_abs_error": 0.546875,
+      "allclose": false,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b3_l256_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b3_l256_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b3_l256_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b3_l256_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b3_l256_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b3_l256_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b3_l32_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b3_l32_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b3_l32_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b3_l32_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b3_l32_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b3_l32_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b4_l256_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b4_l256_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b4_l256_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b4_l256_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b4_l256_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b4_l256_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b4_l32_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b4_l32_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b4_l32_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b4_l32_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b4_l32_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b4_l32_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b7_l256_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b7_l256_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b7_l256_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b7_l256_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b7_l256_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b7_l256_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b7_l32_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b7_l32_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b7_l32_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b7_l32_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b7_l32_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "03",
+      "right": "04",
+      "key": "b7_l32_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b16_l256_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b16_l256_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b16_l256_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b16_l256_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b16_l256_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b16_l256_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b16_l32_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b16_l32_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b16_l32_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b16_l32_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b16_l32_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b16_l32_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b1_l256_changed_eager",
+      "max_abs_error": 0.46875,
+      "allclose": false,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b1_l256_changed_graph",
+      "max_abs_error": 0.46875,
+      "allclose": false,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b1_l256_original_eager",
+      "max_abs_error": 0.55078125,
+      "allclose": false,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b1_l256_original_graph",
+      "max_abs_error": 0.55078125,
+      "allclose": false,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b1_l256_restored_eager",
+      "max_abs_error": 0.55078125,
+      "allclose": false,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b1_l256_restored_graph",
+      "max_abs_error": 0.55078125,
+      "allclose": false,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b1_l32_changed_eager",
+      "max_abs_error": 1.15625,
+      "allclose": false,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b1_l32_changed_graph",
+      "max_abs_error": 1.15625,
+      "allclose": false,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b1_l32_original_eager",
+      "max_abs_error": 0.546875,
+      "allclose": false,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b1_l32_original_graph",
+      "max_abs_error": 0.546875,
+      "allclose": false,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b1_l32_restored_eager",
+      "max_abs_error": 0.546875,
+      "allclose": false,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b1_l32_restored_graph",
+      "max_abs_error": 0.546875,
+      "allclose": false,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b3_l256_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b3_l256_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b3_l256_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b3_l256_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b3_l256_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b3_l256_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b3_l32_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b3_l32_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b3_l32_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b3_l32_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b3_l32_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b3_l32_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b4_l256_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b4_l256_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b4_l256_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b4_l256_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b4_l256_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b4_l256_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b4_l32_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b4_l32_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b4_l32_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b4_l32_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b4_l32_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b4_l32_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b7_l256_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b7_l256_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b7_l256_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b7_l256_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b7_l256_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b7_l256_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b7_l32_changed_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b7_l32_changed_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b7_l32_original_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b7_l32_original_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b7_l32_restored_eager",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    {
+      "left": "06",
+      "right": "05",
+      "key": "b7_l32_restored_graph",
+      "max_abs_error": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "exact_equal": true
+    }
+  ],
+  "performance_investigation": false,
+  "cross_process_allclose_failures": 24,
+  "cross_process_argmax_failures": 0,
+  "limits": "One H100/shared host, one model, one cold cache pair, two warm process observations per arm. Descriptive latency; no equivalence, universal quality or serving-throughput claim.",
+  "source_result_hashes": {
+    "refresh-06-legacy-warm.json": "b6079b0bb7962e731524469578a6b821f21d1c64373cca18d171f58be21fb246",
+    "refresh-05-scoped-warm.json": "451ef1c93efdc8ee30604f2fd292ad1a1d6da4af020a1fec356f84c17f2fa6d1",
+    "refresh-01-legacy-cold.json": "5a1f4cb71efbdd7cb021dfff68b1ca829ba3808e0370c743486b63daada548d4",
+    "refresh-03-legacy-warm.json": "583add760f1f65455eccdfd5d851d3dc1c3b95a11c38b8a881c69fa51d0ab2d1",
+    "refresh-04-scoped-warm.json": "66e658ef13cc6cb87cb24ae671f64fde960d47c30b13a220159e529d6b3695ce",
+    "refresh-02-scoped-cold.json": "ccb8e8e40fac959de71bae7bdda3c3d0320745b687dcdb4f96b3f45311bd44ce"
+  }
+}

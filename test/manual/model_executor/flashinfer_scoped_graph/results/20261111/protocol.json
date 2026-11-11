@@ -1,0 +1,13 @@
+{
+  "production_head": "78d04c3f3f12654579c294e3a3342d23c7fcd805",
+  "upstream_base": "94a4c4481372fca9bd24d1a20f6af1269b9af1aa",
+  "flashinfer": "0.7.3",
+  "steps": [
+    "Existing three registered unit files, existing actual-tuner cache controls, and varied-token/canary lifetime probe including exceptional exits and a hoisted-context negative control.",
+    "One independent cold process per legacy/scoped arm, then four fresh warm processes in legacy/scoped/scoped/legacy order. Same source, image, model, hardware and serving shapes. Cold runs omit performance; warm runs measure the existing six shapes. Verify cache bytes, zero warm/capture/serving profiling, restored legacy identity, changed-input graph behavior, and record original parity checks without dropping discrepancies.",
+    "Unchanged registered TestModeloptFP8.test_gsm8k with opt-in off/on and separate fresh caches. Existing >0.70 floor, paired answers and capture/replay observation. Preserve original cross-tactic parity failures and record new differences independently.",
+    "Publish the refreshed production head and separate research evidence; mark ready only if qualification supports review, with limitations explicit. Trigger applicable SGLang CI on that head."
+  ],
+  "performance_scope": "Bounded warm ABBA latency comparison, no full serving-throughput claim. Investigate any consistent regression above 3%; smaller measurements remain descriptive, not proof of equivalence.",
+  "accuracy_scope": "Both arms must pass the existing floor; a lower scoped paired score still merits inspection. No weakened parity tolerances or selection of favorable restarts."
+}

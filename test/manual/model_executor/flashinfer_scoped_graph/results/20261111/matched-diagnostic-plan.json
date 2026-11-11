@@ -1,0 +1,5 @@
+{
+  "reason": "Natural-cache batch-one cross-arm allclose failures and approximately 1% slower timings at batch16 merit a bounded attribution check before readiness. Do not replace original results or tune until favorable.",
+  "method": "Copy original caches, seed all20 observed legacy winners into only the copies of managed entries and legacy file; verify original hashes unchanged. Run three fresh warm processes legacy/scoped/legacy with original strict allclose and original latency harness. No retuning.",
+  "qualification_limit": "Diagnostic for selection versus integration only; does not establish natural selection quality, full serving performance, or model-accuracy equivalence."
+}

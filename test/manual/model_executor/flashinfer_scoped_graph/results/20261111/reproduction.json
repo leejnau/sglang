@@ -1,0 +1,58 @@
+{
+  "image": "lmsysorg/sglang@sha256:c1f4d9fc6fcf50c2269adbc757ce7b1778883af04155edb888fa9eea3b6648c0",
+  "production_head": "78d04c3f3f12654579c294e3a3342d23c7fcd805",
+  "flashinfer": "0.7.3",
+  "torch": "2.14.1+cu130",
+  "model": "nvidia/Llama-3.1-8B-Instruct-FP8",
+  "model_revision": "42d9515ebd69eea3a87351d079c671c3c5ff0a31",
+  "hardware": "One exclusive NVIDIA H100 80GB HBM3 on a shared host; 8 allocated CPU cores",
+  "source_setup": "Overlay exact production source, build its Rust radix extension with repository Torch configuration, install FlashInfer 0.7.3 without dependencies. Keep native version checks enabled; incompatible image cubin/JIT packages are ignored and matching code is downloaded/compiled.",
+  "model_order": [
+    "01:legacy:cold",
+    "02:scoped:cold",
+    "03:legacy:warm",
+    "04:scoped:warm",
+    "05:scoped:warm",
+    "06:legacy:warm"
+  ],
+  "model_command": "python3 model_study.py --model /study/model --cache /study/results/model-<arm>-cache --arm <arm> --phase <phase> --observe-logit-differences --output /study/results/refresh-<ordinal>-<arm>-<phase>.json; add --no-perf for cold runs only",
+  "model_env": {
+    "PYTHONPATH": "/study/deps:/study/sglang-reviewed/python",
+    "FLASHINFER_WORKSPACE_BASE": "/study/workspace",
+    "HF_HOME": "/study/hf",
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "SGLANG_ENABLE_ASYNC_ASSERT": "1"
+  },
+  "accuracy_order": [
+    "legacy",
+    "scoped"
+  ],
+  "accuracy_command": "python3 registered_accuracy.py",
+  "accuracy_env": {
+    "PYTHONPATH": "/study/harness/registered_accuracy_observer:/study/deps:/study/sglang-reviewed/python",
+    "SGLANG_CACHE_DIR": "/study/results/accuracy-<arm>/cache",
+    "SGLANG_FLASHINFER_AUTOTUNE_CACHE": "1",
+    "SGLANG_ENABLE_FLASHINFER_GRAPH_AUTOTUNE": "0 for legacy, 1 for scoped",
+    "SCOPED_QUAL_OUTPUT": "/study/results/accuracy-<arm>",
+    "SGLANG_TEST_MAX_RETRY": "0"
+  },
+  "analysis": [
+    "python3 analyze_refresh.py <raw-results> --output refresh-analysis.json",
+    "python3 analyze_registered_accuracy.py --results <raw-results> --prefix accuracy --source <production-source> --dataset gsm8k-test.jsonl --output registered-accuracy.json"
+  ],
+  "setup_incident": "Initial remote-home artifact upload failed due storage/quota. Only our partial upload was removed; staging moved to node scratch before tests. No experiment results discarded.",
+  "limits": "Bounded warm ABBA latency comparison, no full serving-throughput claim. Investigate any consistent regression above 3%; smaller measurements remain descriptive, not proof of equivalence. Both arms must pass the existing floor; a lower scoped paired score still merits inspection. No weakened parity tolerances or selection of favorable restarts.",
+  "matched_diagnostic": {
+    "order": [
+      "01:legacy:warm",
+      "02:scoped:warm",
+      "03:legacy:warm"
+    ],
+    "cache_preparation": "python3 match_refresh_cache.py; disposable copies of original 20 baseline winners only; original hashes checked before and after",
+    "model_command": "Same model_study.py warm command with --cache /study/results/matched-<arm>-cache and matched-<ordinal>-<arm>-warm output names; no --observe-logit-differences override",
+    "analysis": "python3 analyze_matched.py <raw-results> --output matched-analysis.json",
+    "reason": "Diagnose cross-arm numerical differences and approximately 1% slower observed natural-cache timing; keep original results separate."
+  },
+  "archive_incident": "Initial host-side archive hashing could not read container-owned cache files. Final archive is made inside the same container context; test results are unchanged."
+}
