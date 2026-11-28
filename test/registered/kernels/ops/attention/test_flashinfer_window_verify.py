@@ -107,6 +107,8 @@ class TestFlashInferWindowForward(CustomTestCase):
                 wrapper = BatchPrefillWithPagedKVCacheWrapper.__new__(
                     BatchPrefillWithPagedKVCacheWrapper
                 )
+                # __new__ skips __init__, and FlashInfer 0.7.5's forward() reads these.
+                wrapper._batch_invariant = None
                 # Replace the external planner/kernel, retaining FlashInfer's
                 # real forward adapters and SGLang's planning/dispatch methods.
                 wrapper.begin_forward = lambda *a, window_left=-1, **kw: setattr(
@@ -179,6 +181,8 @@ class TestFlashInferWindowForward(CustomTestCase):
                 suffix = BatchPrefillWithRaggedKVCacheWrapper.__new__(
                     BatchPrefillWithRaggedKVCacheWrapper
                 )
+                suffix._batch_invariant = None
+                suffix._backend = "fa2"
                 suffix.run_return_lse = lambda q, *a, **kw: (
                     torch.full_like(q, suffix._window_left),
                     None,
